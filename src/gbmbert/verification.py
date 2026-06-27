@@ -97,6 +97,16 @@ def run_local_verification(
             ],
         ),
         (
+            "launcher_menu_check",
+            [
+                _console_script("gbmbert-check-launcher-menu"),
+                "--markdown-output",
+                str(reports_path / "launcher_menu_check.md"),
+                "--json-output",
+                str(reports_path / "launcher_menu_check.json"),
+            ],
+        ),
+        (
             "artifact_policy",
             [
                 _console_script("gbmbert-check-artifact-policy"),

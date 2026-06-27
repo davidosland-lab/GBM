@@ -3,8 +3,8 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Output directory: `reports\training\governance\bundle`
-- Artifacts: 257
-- Total bytes: 774982
+- Artifacts: 261
+- Total bytes: 800856
 
 ## Artifacts
 - `data\training\curated_expansion\evidence_full_label.jsonl` -> `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims)
@@ -121,6 +121,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\training\relation_pack\label_maps\ner_label_map.json` -> `data\training\relation_pack\label_maps\ner_label_map.json` (label_map)
 - `data\training\relation_pack\label_maps\relation_label_map.json` -> `data\training\relation_pack\label_maps\relation_label_map.json` (label_map)
 - `data\training\relation_training_pack.jsonl` -> `data\training\relation_training_pack.jsonl` (relation_training_dataset)
+- `reports\training\curated_fixture_import.json` -> `reports\training\curated_fixture_import.json` (curated_fixture_import_report)
+- `reports\training\curated_fixture_import.md` -> `reports\training\curated_fixture_import.md` (curated_fixture_import_report)
 - `reports\training\dashboard_training_manifest.json` -> `reports\training\dashboard_training_manifest.json` (dashboard_training_manifest)
 - `reports\training\dashboard_training_manifest.md` -> `reports\training\dashboard_training_manifest.md` (dashboard_training_manifest)
 - `reports\training\evidence_label_repair.json` -> `reports\training\evidence_label_repair.json` (evidence_label_repair_report)
@@ -154,6 +156,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\gold_pack\evidence_label_repair.md` -> `reports\training\gold_pack\evidence_label_repair.md` (evidence_label_repair_report)
 - `reports\training\gold_pack\gold_pack_expansion_plan.json` -> `reports\training\gold_pack\gold_pack_expansion_plan.json` (json_report)
 - `reports\training\gold_pack\gold_pack_expansion_plan.md` -> `reports\training\gold_pack\gold_pack_expansion_plan.md` (markdown_report)
+- `reports\training\gold_pack\gold_pack_promotion_review.json` -> `reports\training\gold_pack\gold_pack_promotion_review.json` (gold_pack_promotion_review)
+- `reports\training\gold_pack\gold_pack_promotion_review.md` -> `reports\training\gold_pack\gold_pack_promotion_review.md` (gold_pack_promotion_review)
 - `reports\training\gold_pack\gold_seed_manifest.json` -> `reports\training\gold_pack\gold_seed_manifest.json` (gold_seed_manifest)
 - `reports\training\gold_pack\gold_training_pack.json` -> `reports\training\gold_pack\gold_training_pack.json` (gold_training_pack_report)
 - `reports\training\gold_pack\gold_training_pack.md` -> `reports\training\gold_pack\gold_training_pack.md` (gold_training_pack_report)

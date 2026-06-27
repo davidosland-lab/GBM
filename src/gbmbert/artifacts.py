@@ -403,6 +403,10 @@ def _artifact_type_for_path(path: Path) -> str:
         return "model_registry_remediation_plan"
     if "training_label_drift" in name:
         return "training_label_drift_report"
+    if "curated_fixture_import" in name:
+        return "curated_fixture_import_report"
+    if "gold_pack_promotion_review" in name:
+        return "gold_pack_promotion_review"
     if "training_provenance_audit" in name:
         return "training_provenance_audit_report"
     if "training_readiness_snapshot" in name:
@@ -477,6 +481,8 @@ def _artifact_type_for_path(path: Path) -> str:
         return "local_verification_report"
     if "artifact_policy" in name:
         return "artifact_policy_report"
+    if "launcher_menu_check" in name:
+        return "launcher_menu_check_report"
     if "artifact_detail" in name:
         return "artifact_detail_report"
     if "active_learning_batch_status" in name:

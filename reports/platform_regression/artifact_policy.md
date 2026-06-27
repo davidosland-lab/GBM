@@ -4,9 +4,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Root: `.`
 - Safe: True
-- Required artifacts: 18
+- Required artifacts: 24
 - Missing required artifacts: 0
-- Tracked paths checked: 600
+- Tracked paths checked: 610
 - Findings: 0
 
 ## Findings

@@ -126,6 +126,9 @@ if /I "%choice%"=="16BG" goto training_governance_suite
 if /I "%choice%"=="16BH" goto strict_training_governance
 if /I "%choice%"=="16BI" goto local_verification
 if /I "%choice%"=="16BJ" goto artifact_policy_check
+if /I "%choice%"=="16BK" goto launcher_menu_check
+if /I "%choice%"=="16BL" goto curated_fixture_import
+if /I "%choice%"=="16BM" goto gold_pack_promotion_review
 if "%choice%"=="17" goto run_explorer_sample
 if /I "%choice%"=="17A" goto run_explorer_artifact
 if /I "%choice%"=="17B" goto run_explorer_baseline
@@ -184,6 +187,7 @@ echo 16AO. Run scope drift monitor
 echo 16AP. Run platform regression
 echo 16BI. Run canonical local verification
 echo 16BJ. Check tracked artifact policy
+echo 16BK. Check launcher menu structure
 echo M. Main menu
 echo Q. Exit
 echo.
@@ -195,6 +199,7 @@ if /I "%choice%"=="16AO" goto scope_drift_monitor
 if /I "%choice%"=="16AP" goto platform_regression
 if /I "%choice%"=="16BI" goto local_verification
 if /I "%choice%"=="16BJ" goto artifact_policy_check
+if /I "%choice%"=="16BK" goto launcher_menu_check
 if /I "%choice%"=="M" goto menu
 if /I "%choice%"=="Q" goto end
 echo.
@@ -307,6 +312,8 @@ echo 16BB. Review training config gate
 echo 16BG. Run training governance suite
 echo 16BH. Run strict training governance audit
 echo 16BI. Run canonical local verification
+echo 16BL. Import curated training fixture
+echo 16BM. Review gold-pack promotion thresholds
 echo T. Advanced training commands
 echo M. Main menu
 echo Q. Exit
@@ -323,6 +330,8 @@ if /I "%choice%"=="16BB" goto review_training_config
 if /I "%choice%"=="16BG" goto training_governance_suite
 if /I "%choice%"=="16BH" goto strict_training_governance
 if /I "%choice%"=="16BI" goto local_verification
+if /I "%choice%"=="16BL" goto curated_fixture_import
+if /I "%choice%"=="16BM" goto gold_pack_promotion_review
 if /I "%choice%"=="T" goto advanced_training_menu
 if /I "%choice%"=="M" goto menu
 if /I "%choice%"=="Q" goto end
@@ -421,8 +430,8 @@ echo Setup: 1, 1R, 2, 3, 4, 5, 6
 echo Pipeline: 7, 8, 9, 12, 13, 14, 14A, 16B, 16AS, 16AT
 echo Review: 10, 11, 11R, 11S, 11C, 11D
 echo Curation: 16O-16AG, plus 16AH-16AM for run/batch operations
-echo Training: 16C-16N and 16AQ-16BI
-echo Verification: 15, 16, 16AO, 16AP, 16BI, 16BJ
+echo Training: 16C-16N and 16AQ-16BM
+echo Verification: 15, 16, 16AO, 16AP, 16BI, 16BJ, 16BK
 echo Explorer: 17, 17A, 17B, 18
 echo.
 echo Old shortcuts still work from the main menu prompt.
@@ -2147,6 +2156,55 @@ echo Checking tracked artifact policy...
 if errorlevel 1 goto command_failed
 echo.
 echo Artifact policy check complete.
+pause
+goto menu
+
+:launcher_menu_check
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Checking launcher menu structure...
+"%VENV_DIR%\Scripts\gbmbert-check-launcher-menu.exe" --markdown-output reports\platform_regression\launcher_menu_check.md --json-output reports\platform_regression\launcher_menu_check.json
+if errorlevel 1 goto command_failed
+echo.
+echo Launcher menu check complete.
+pause
+goto menu
+
+:curated_fixture_import
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+set /p "evidence_path=Curated evidence JSONL [data\training\curated_expansion\evidence_full_label.jsonl]: "
+set /p "entity_path=Curated entity JSONL [data\training\curated_expansion\gold_entities.jsonl]: "
+set /p "reviewed_path=Reviewed queue JSONL [data\training\curated_expansion\gold_reviewed_queue.jsonl]: "
+set /p "output_dir=Import output dir [data\training\curated_import]: "
+if "%evidence_path%"=="" set "evidence_path=data\training\curated_expansion\evidence_full_label.jsonl"
+if "%entity_path%"=="" set "entity_path=data\training\curated_expansion\gold_entities.jsonl"
+if "%reviewed_path%"=="" set "reviewed_path=data\training\curated_expansion\gold_reviewed_queue.jsonl"
+if "%output_dir%"=="" set "output_dir=data\training\curated_import"
+"%VENV_DIR%\Scripts\gbmbert-import-curated-training-fixture.exe" --evidence-jsonl "%evidence_path%" --entity-jsonl "%entity_path%" --reviewed-queue-jsonl "%reviewed_path%" --output-dir "%output_dir%" --markdown-output reports\training\curated_fixture_import.md --json-output reports\training\curated_fixture_import.json
+if errorlevel 1 goto command_failed
+echo.
+echo Curated fixture import check complete.
+pause
+goto menu
+
+:gold_pack_promotion_review
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Reviewing gold-pack promotion thresholds...
+"%VENV_DIR%\Scripts\gbmbert-review-gold-pack-promotion.exe" --markdown-output reports\training\gold_pack\gold_pack_promotion_review.md --json-output reports\training\gold_pack\gold_pack_promotion_review.json --allow-blockers
+if errorlevel 1 goto command_failed
+echo.
+echo Gold-pack promotion review complete.
 pause
 goto menu
 

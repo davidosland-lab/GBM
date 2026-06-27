@@ -21,16 +21,22 @@ REQUIRED_ARTIFACTS = (
     Path("reports/artifact_index.md"),
     Path("reports/platform_regression/local_verification.json"),
     Path("reports/platform_regression/local_verification.md"),
+    Path("reports/platform_regression/launcher_menu_check.json"),
+    Path("reports/platform_regression/launcher_menu_check.md"),
     Path("reports/training/training_config_suite_review.json"),
     Path("reports/training/training_config_suite_review.md"),
     Path("reports/training/governance/training_governance_suite.json"),
     Path("reports/training/governance/training_governance_suite.md"),
     Path("reports/training/governance_strict/training_governance_suite.json"),
     Path("reports/training/governance_strict/training_governance_suite.md"),
+    Path("reports/training/curated_fixture_import.json"),
+    Path("reports/training/curated_fixture_import.md"),
     Path("reports/training/evidence_pack/full_label_coverage_plan.json"),
     Path("reports/training/evidence_pack/full_label_coverage_plan.md"),
     Path("reports/training/gold_pack/gold_pack_expansion_plan.json"),
     Path("reports/training/gold_pack/gold_pack_expansion_plan.md"),
+    Path("reports/training/gold_pack/gold_pack_promotion_review.json"),
+    Path("reports/training/gold_pack/gold_pack_promotion_review.md"),
 )
 FORBIDDEN_TRACKED_PARTS = {".venv", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}
 FORBIDDEN_MODEL_SUFFIXES = {".bin", ".ckpt", ".h5", ".onnx", ".pt", ".pth", ".safetensors"}

@@ -124,6 +124,9 @@ class RegistryRemediationPlan:
 @dataclass(frozen=True)
 class LabelDriftRow:
     name: str
+    config_path: str
+    governance_profile: str
+    dataset_dir: str
     dataset_labels: dict[str, list[str]]
     config_labels: list[str]
     missing_from_config: list[str]
@@ -396,28 +399,40 @@ def build_training_label_drift_report(
     evidence_pack_report: str | Path | None = DEFAULT_EVIDENCE_PACK,
     relation_pack_report: str | Path | None = DEFAULT_RELATION_PACK,
     gold_pack_report: str | Path | None = DEFAULT_GOLD_PACK,
+    config_paths: list[str | Path] | None = None,
 ) -> TrainingLabelDriftReport:
-    comparison = compare_training_packs(
-        evidence_pack_report=evidence_pack_report if evidence_pack_report and Path(evidence_pack_report).exists() else None,
-        relation_pack_report=relation_pack_report if relation_pack_report and Path(relation_pack_report).exists() else None,
-        gold_pack_report=gold_pack_report if gold_pack_report and Path(gold_pack_report).exists() else None,
-    )
-    config_labels_by_task = _config_labels_by_task()
+    if config_paths is None and evidence_pack_report is None and relation_pack_report is None and gold_pack_report is None:
+        return TrainingLabelDriftReport(rows=[], warning_count=0, warnings=[])
+
+    selected_paths = sorted(Path("configs/training").glob("*.json")) if config_paths is None else [Path(path) for path in config_paths]
     rows: list[LabelDriftRow] = []
     warnings: list[str] = []
-    for pack in comparison.packs:
-        config_labels = config_labels_by_task.get(pack.name, [])
-        dataset_labels = {task: sorted(labels) for task, labels in ((task, counts.keys()) for task, counts in pack.label_counts.items())}
+    for config_path in selected_paths:
+        metadata = _config_governance_metadata(config_path)
+        try:
+            config = load_training_config(config_path)
+        except Exception as exc:
+            warnings.append(f"{config_path}: unable to load config: {exc}")
+            continue
+        dataset_dir, _ = _default_dataset_and_label_maps_for_task(config.task.value)
+        if metadata["dataset_dir"]:
+            dataset_dir = Path(metadata["dataset_dir"])
+        prepared_task = _prepared_task_for_config_task(config.task.value)
+        dataset_labels = _labels_by_split(dataset_dir, prepared_task)
         active_dataset_labels = sorted({label for labels in dataset_labels.values() for label in labels})
+        config_labels = list(config.label_set)
         missing_from_config = sorted(set(active_dataset_labels) - set(config_labels)) if config_labels else []
         missing_from_dataset = sorted(set(config_labels) - set(active_dataset_labels)) if active_dataset_labels else []
         if missing_from_config:
-            warnings.append(f"{pack.name}: dataset labels missing from config: {', '.join(missing_from_config)}")
+            warnings.append(f"{config_path}: dataset labels missing from config: {', '.join(missing_from_config)}")
         if missing_from_dataset:
-            warnings.append(f"{pack.name}: config labels missing from dataset: {', '.join(missing_from_dataset)}")
+            warnings.append(f"{config_path}: config labels missing from dataset: {', '.join(missing_from_dataset)}")
         rows.append(
             LabelDriftRow(
-                name=pack.name,
+                name=config.name,
+                config_path=str(config_path),
+                governance_profile=metadata["profile"],
+                dataset_dir=str(dataset_dir),
                 dataset_labels=dataset_labels,
                 config_labels=config_labels,
                 missing_from_config=missing_from_config,
@@ -515,6 +530,8 @@ def run_training_governance_suite(
     save_config_suite_review_markdown(suite, output_root / "training_config_suite_review.md")
     warnings.extend(suite.warnings)
     if strict_scaffolds:
+        if suite.scaffold_count:
+            warnings.append(f"strict audit includes {suite.scaffold_count} scaffold config(s) that are not promotion-ready by default")
         warnings.extend(suite.scaffold_warnings)
 
     registry = audit_checkpoint_registry(DEFAULT_REGISTRY)
@@ -714,13 +731,17 @@ def save_training_label_drift_markdown(report: TrainingLabelDriftReport, path: s
         "",
         f"- Warnings: {report.warning_count}",
         "",
-        "## Packs",
+        "## Configs",
     ]
     for row in report.rows:
         lines.extend(
             [
                 f"### {row.name}",
+                f"- Config: `{row.config_path}`",
+                f"- Governance profile: {row.governance_profile}",
+                f"- Dataset: `{row.dataset_dir}`",
                 f"- Config labels: {', '.join(row.config_labels) if row.config_labels else 'none'}",
+                f"- Dataset labels: {_format_dataset_label_summary(row.dataset_labels)}",
                 f"- Missing from config: {', '.join(row.missing_from_config) if row.missing_from_config else 'none'}",
                 f"- Missing from dataset: {', '.join(row.missing_from_dataset) if row.missing_from_dataset else 'none'}",
                 "",
@@ -1030,6 +1051,28 @@ def _default_dataset_and_label_maps_for_task(task: str) -> tuple[Path, Path]:
     return Path("data/training/ncbi_env_smoke_annotation_splits"), Path("data/training/ncbi_env_smoke_label_maps")
 
 
+def _prepared_task_for_config_task(task: str) -> str:
+    if task == "evidence_classification":
+        return "evidence"
+    if task == "relation_extraction":
+        return "relation"
+    return "ner"
+
+
+def _labels_by_split(dataset_dir: Path, prepared_task: str) -> dict[str, list[str]]:
+    labels: dict[str, list[str]] = {}
+    for split in ("train", "validation", "test"):
+        rows = _read_jsonl(dataset_dir / f"{prepared_task}_{split}.jsonl")
+        labels[split] = sorted(
+            {
+                str(row.get("label")).strip()
+                for row in rows
+                if row.get("label") is not None and str(row.get("label")).strip()
+            }
+        )
+    return labels
+
+
 def _config_governance_metadata(path: str | Path) -> dict[str, str]:
     config_path = Path(path)
     try:
@@ -1070,6 +1113,11 @@ def _config_labels_by_task() -> dict[str, list[str]]:
             labels[task_key] = list(config.label_set)
             profiles[task_key] = profile
     return labels
+
+
+def _format_dataset_label_summary(labels_by_split: dict[str, list[str]]) -> str:
+    parts = [f"{split}=[{', '.join(labels) if labels else 'none'}]" for split, labels in sorted(labels_by_split.items())]
+    return "; ".join(parts) if parts else "none"
 
 
 def _suggest_registry_action(finding: str) -> str:

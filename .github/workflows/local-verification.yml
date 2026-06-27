@@ -30,3 +30,18 @@ jobs:
 
       - name: Run strict training governance audit
         run: gbmbert-run-strict-training-governance --output-dir reports/training/governance_strict --allow-findings
+
+      - name: Upload verification reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gbm-verification-reports
+          path: |
+            reports/platform_regression/*.json
+            reports/platform_regression/*.md
+            reports/training/governance/*.json
+            reports/training/governance/*.md
+            reports/training/governance_strict/*.json
+            reports/training/governance_strict/*.md
+            reports/training/gold_pack/gold_pack_promotion_review.*
+          if-no-files-found: warn

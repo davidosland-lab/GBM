@@ -16,6 +16,6 @@
   "step_count": 10,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": [
-    "evidence: dataset labels missing from config: 2, 3, 4, 5"
+    "strict audit includes 2 scaffold config(s) that are not promotion-ready by default"
   ]
 }

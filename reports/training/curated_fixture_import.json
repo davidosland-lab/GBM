@@ -1,0 +1,21 @@
+{
+  "copied_files": {},
+  "entity_path": "data\\training\\curated_expansion\\gold_entities.jsonl",
+  "entity_rows": 24,
+  "evidence_path": "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+  "evidence_rows": 12,
+  "missing_pmid_count": 0,
+  "missing_review_metadata_count": 0,
+  "output_dir": "data\\training\\curated_import",
+  "pmid_count": 12,
+  "reviewed_item_types": {
+    "evidence_claim": 12,
+    "graph_relation": 12
+  },
+  "reviewed_queue_path": "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+  "reviewed_queue_rows": 24,
+  "safe": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 0,
+  "warnings": []
+}

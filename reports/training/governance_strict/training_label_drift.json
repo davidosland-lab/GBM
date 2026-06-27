@@ -3,52 +3,19 @@
     {
       "config_labels": [
         "0",
-        "1"
-      ],
-      "dataset_labels": {
-        "evidence": [
-          "0",
-          "1",
-          "2",
-          "3",
-          "4",
-          "5"
-        ],
-        "ner": [],
-        "relation": []
-      },
-      "missing_from_config": [
+        "1",
         "2",
         "3",
         "4",
         "5"
       ],
-      "missing_from_dataset": [],
-      "name": "evidence"
-    },
-    {
-      "config_labels": [
-        "ASSOCIATED_WITH",
-        "NO_RELATION",
-        "PREDICTS"
-      ],
+      "config_path": "configs\\training\\gbmbert_evidence_pubmedbert.json",
+      "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
       "dataset_labels": {
-        "evidence": [],
-        "ner": [],
-        "relation": [
-          "ASSOCIATED_WITH",
-          "NO_RELATION",
-          "PREDICTS"
-        ]
-      },
-      "missing_from_config": [],
-      "missing_from_dataset": [],
-      "name": "relation"
-    },
-    {
-      "config_labels": [],
-      "dataset_labels": {
-        "evidence": [
+        "test": [
+          "1"
+        ],
+        "train": [
           "0",
           "1",
           "2",
@@ -56,7 +23,62 @@
           "4",
           "5"
         ],
-        "ner": [
+        "validation": [
+          "4"
+        ]
+      },
+      "governance_profile": "scaffold",
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gbmbert_evidence_pubmedbert"
+    },
+    {
+      "config_labels": [
+        "0",
+        "1"
+      ],
+      "config_path": "configs\\training\\gbmbert_evidence_smoke_pubmedbert.json",
+      "dataset_dir": "data\\training\\evidence_smoke_fixture\\splits",
+      "dataset_labels": {
+        "test": [
+          "0",
+          "1"
+        ],
+        "train": [
+          "0"
+        ],
+        "validation": [
+          "1"
+        ]
+      },
+      "governance_profile": "current",
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gbmbert_evidence_smoke_pubmedbert"
+    },
+    {
+      "config_labels": [
+        "GENE",
+        "DRUG",
+        "DISEASE",
+        "PATHWAY",
+        "BIOMARKER",
+        "CELL_TYPE",
+        "CELL_STATE",
+        "TREATMENT",
+        "DELIVERY_MODIFIER",
+        "OUTCOME",
+        "TRIAL_PHASE",
+        "UNKNOWN"
+      ],
+      "config_path": "configs\\training\\gbmbert_ner_pubmedbert.json",
+      "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
+      "dataset_labels": {
+        "test": [
+          "OUTCOME",
+          "PATHWAY"
+        ],
+        "train": [
           "BIOMARKER",
           "CELL_STATE",
           "CELL_TYPE",
@@ -64,26 +86,96 @@
           "DISEASE",
           "DRUG",
           "GENE",
-          "OUTCOME",
-          "PATHWAY",
           "TREATMENT",
           "TRIAL_PHASE",
           "UNKNOWN"
         ],
-        "relation": [
+        "validation": [
+          "OUTCOME",
+          "PATHWAY"
+        ]
+      },
+      "governance_profile": "scaffold",
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gbmbert_ner_pubmedbert"
+    },
+    {
+      "config_labels": [
+        "BIOMARKER",
+        "CELL_TYPE",
+        "DELIVERY_MODIFIER",
+        "DISEASE",
+        "DRUG",
+        "GENE",
+        "OUTCOME",
+        "TREATMENT"
+      ],
+      "config_path": "configs\\training\\gbmbert_ner_smoke_pubmedbert.json",
+      "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+      "dataset_labels": {
+        "test": [
+          "BIOMARKER",
+          "CELL_TYPE",
+          "DELIVERY_MODIFIER",
+          "DISEASE",
+          "DRUG",
+          "GENE",
+          "OUTCOME",
+          "TREATMENT"
+        ],
+        "train": [
+          "BIOMARKER",
+          "CELL_TYPE",
+          "DELIVERY_MODIFIER",
+          "DISEASE",
+          "DRUG",
+          "GENE",
+          "OUTCOME",
+          "TREATMENT"
+        ],
+        "validation": [
+          "BIOMARKER",
+          "CELL_TYPE",
+          "DELIVERY_MODIFIER",
+          "DISEASE",
+          "DRUG",
+          "GENE",
+          "OUTCOME",
+          "TREATMENT"
+        ]
+      },
+      "governance_profile": "current",
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gbmbert_ner_smoke_pubmedbert"
+    },
+    {
+      "config_labels": [
+        "ASSOCIATED_WITH",
+        "NO_RELATION",
+        "PREDICTS"
+      ],
+      "config_path": "configs\\training\\gbmbert_relation_biobert.json",
+      "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+      "dataset_labels": {
+        "test": [],
+        "train": [
           "ASSOCIATED_WITH",
+          "NO_RELATION"
+        ],
+        "validation": [
           "NO_RELATION",
           "PREDICTS"
         ]
       },
+      "governance_profile": "current",
       "missing_from_config": [],
       "missing_from_dataset": [],
-      "name": "gold"
+      "name": "gbmbert_relation_biobert"
     }
   ],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 1,
-  "warnings": [
-    "evidence: dataset labels missing from config: 2, 3, 4, 5"
-  ]
+  "warning_count": 0,
+  "warnings": []
 }

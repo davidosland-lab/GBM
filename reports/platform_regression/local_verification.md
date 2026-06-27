@@ -2,16 +2,16 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Created UTC: 2026-06-27T09:17:19.176528+00:00
+- Created UTC: 2026-06-27T09:41:25.928506+00:00
 - Passed: True
-- Steps: 7/7 passed
+- Steps: 8/8 passed
 
 ## Ordered Steps
 ### pytest
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\python.exe -m pytest -q`
-- Detail: ........................................................................ [ 34%] | ........................................................................ [ 69%] | ................................................................         [100%] | 208 passed in 11.52s
+- Detail: ........................................................................ [ 33%] | ........................................................................ [ 67%] | ....................................................................     [100%] | 212 passed in 11.90s
 
 ### pip_check
 - Status: pass
@@ -35,13 +35,19 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\gbmbert-platform-regression.exe --skip-tests --skip-pip-check --reports-dir reports\platform_regression`
-- Detail: - scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=461) | ## Warnings | - none
+- Detail: - scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=467) | ## Warnings | - none
+
+### launcher_menu_check
+- Status: pass
+- Return code: 0
+- Command: `C:\Users\david\GBM\.venv\Scripts\gbmbert-check-launcher-menu.exe --markdown-output reports\platform_regression\launcher_menu_check.md --json-output reports\platform_regression\launcher_menu_check.json`
+- Detail: ## Missing Goto Targets | - none | ## Warnings | - none
 
 ### artifact_policy
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\gbmbert-check-artifact-policy.exe --markdown-output reports\platform_regression\artifact_policy.md --json-output reports\platform_regression\artifact_policy.json`
-- Detail: - Tracked paths checked: 600 | - Findings: 0 | ## Findings | - none
+- Detail: - Tracked paths checked: 610 | - Findings: 0 | ## Findings | - none
 
 ### artifact_index
 - Status: pass

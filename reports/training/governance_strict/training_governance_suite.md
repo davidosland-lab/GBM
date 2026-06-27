@@ -19,4 +19,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - registry_remediation: `reports\training\governance_strict\model_registry_remediation_plan.json`
 
 ## Warnings
-- evidence: dataset labels missing from config: 2, 3, 4, 5
+- strict audit includes 2 scaffold config(s) that are not promotion-ready by default

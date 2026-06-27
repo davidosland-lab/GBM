@@ -9,10 +9,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 | Group | Use it for | Typical commands |
 | --- | --- | --- |
 | Setup and environment | Creating `.venv`, installing dependencies, opening an activated shell, and checking installed packages. | `1`, `1R`, `2`, `3`, `5`, `6` |
-| Verify, reports, and handoff checks | Running tests, preflight, scope drift, platform regression, artifact index, local verification, and artifact policy checks. | `4`, `15`, `16`, `16AO`, `16AP`, `16BI`, `16BJ` |
+| Verify, reports, and handoff checks | Running tests, preflight, scope drift, platform regression, artifact index, local verification, artifact policy checks, and launcher structure checks. | `4`, `15`, `16`, `16AO`, `16AP`, `16BI`, `16BJ`, `16BK` |
 | Literature and graph pipeline | Building source-derived PubMed, ClinicalTrials.gov, corpus, entity, and graph artifacts. | `7`, `8`, `9`, `12`, `13`, `14`, `14A`, `16B` |
 | Review and curation workflow | Creating review queues, reviewed queues, curated graph outputs, curation bundles, overlays, and regression packs. | `10`, `11`, `11R`, `11S`, `11C`, `11D`, `16O`, `16P`, `16R`, `16S`, `16Z` |
-| Training data and governance | Building annotation packs, gold/evidence/relation training packs, readiness reports, and governance audits. | `16C`, `16D`, `16AQ`, `16AX`, `16BA`, `16AZ`, `16BE`, `16BB`, `16BG`, `16BH` |
+| Training data and governance | Building annotation packs, gold/evidence/relation training packs, readiness reports, import checks, promotion review, and governance audits. | `16C`, `16D`, `16AQ`, `16AX`, `16BA`, `16AZ`, `16BE`, `16BB`, `16BG`, `16BH`, `16BL`, `16BM` |
 | Knowledge Graph Explorer | Starting the local browser explorer with sample, baseline, artifact-index-selected, or Neo4j-backed data. | `17`, `17A`, `17B`, `18` |
 | Advanced command index | A compact map of the legacy flat menu for people who already know the old shortcut. | All legacy shortcuts |
 

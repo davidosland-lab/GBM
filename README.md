@@ -311,11 +311,16 @@ gbmbert-training-readiness-snapshot --markdown-output reports/training/training_
 gbmbert-dashboard-training-manifest --output reports/training/dashboard_training_manifest.json --markdown-output reports/training/dashboard_training_manifest.md
 gbmbert-run-training-governance-suite --output-dir reports/training/governance
 gbmbert-run-strict-training-governance --output-dir reports/training/governance_strict --allow-findings
+gbmbert-import-curated-training-fixture --evidence-jsonl data/training/curated_expansion/evidence_full_label.jsonl --entity-jsonl data/training/curated_expansion/gold_entities.jsonl --reviewed-queue-jsonl data/training/curated_expansion/gold_reviewed_queue.jsonl --output-dir data/training/curated_import --no-copy --markdown-output reports/training/curated_fixture_import.md --json-output reports/training/curated_fixture_import.json
+gbmbert-review-gold-pack-promotion --markdown-output reports/training/gold_pack/gold_pack_promotion_review.md --json-output reports/training/gold_pack/gold_pack_promotion_review.json --allow-blockers
+gbmbert-check-launcher-menu --markdown-output reports/platform_regression/launcher_menu_check.md --json-output reports/platform_regression/launcher_menu_check.json
 ```
 
 The default governance suite treats `governance_profile=current` configs as blocking and `governance_profile=scaffold` configs as visible but nonblocking future scaffolds. Use `gbmbert-run-strict-training-governance` or `--strict-scaffolds` on the lower-level review commands when scaffold gaps should fail the audit profile.
+Label drift checks use each config's governance dataset paths when present, so current smoke configs are not compared against larger scaffold packs.
 
 Planning artifacts for the next training-data expansion are tracked at `reports/training/gold_pack/gold_pack_expansion_plan.md` and `reports/training/evidence_pack/full_label_coverage_plan.md`.
+Promotion thresholds are tracked at `reports/training/gold_pack/gold_pack_promotion_review.md`; the current minimal fixture is not promotion-ready.
 
 Build an evidence-only training pack for evidence classification experiments:
 
@@ -488,7 +493,7 @@ gbmbert-check-artifact-policy --markdown-output reports/platform_regression/arti
 gbmbert-verify-local
 ```
 
-`gbmbert-verify-local` is the canonical handoff check. It runs pytest, pip check, scope drift, the default training governance suite, compact platform regression, tracked artifact policy, and artifact indexing in that order.
+`gbmbert-verify-local` is the canonical handoff check. It runs pytest, pip check, scope drift, the default training governance suite, compact platform regression, launcher menu structure checks, tracked artifact policy, and artifact indexing in that order.
 
 Normalize graph entities with the scaffold synonym table and enrich missing relation qualifiers:
 

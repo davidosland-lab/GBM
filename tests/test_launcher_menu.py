@@ -75,6 +75,9 @@ def test_launcher_menu_lists_operational_commands() -> None:
     assert "gbmbert-run-training-governance-suite.exe" in text
     assert "gbmbert-run-strict-training-governance.exe" in text
     assert "gbmbert-check-artifact-policy.exe" in text
+    assert "gbmbert-check-launcher-menu.exe" in text
+    assert "gbmbert-import-curated-training-fixture.exe" in text
+    assert "gbmbert-review-gold-pack-promotion.exe" in text
     assert "gbmbert-run-smoke-baseline.exe" in text
     assert "Setup and environment" in text
     assert "Verify, reports, and handoff checks" in text

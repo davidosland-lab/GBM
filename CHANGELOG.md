@@ -4,6 +4,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Unreleased
 
+- Aligned strict label-drift checks to config-specific governance datasets so smoke configs are not compared against scaffold packs.
+- Added a curated training fixture import validator for larger reviewed evidence, NER, and relation batches.
+- Added CI report upload for verification and governance artifacts.
+- Added a non-interactive launcher menu structure check and wired it into local verification.
+- Added a gold-pack promotion review with explicit thresholds that keep the minimal fixture scaffold-only.
 - Expanded the curated local training fixtures to cover all evidence labels, broad NER labels, and relation labels across PMID-safe splits.
 - Added tracked artifact policy enforcement and wired it into canonical local verification.
 - Simplified `launcher_menu.bat` into workflow groups while preserving legacy command shortcuts, with a new launcher guide in `docs/LAUNCHER_MENU.md`.

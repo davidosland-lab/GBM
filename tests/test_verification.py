@@ -21,6 +21,7 @@ def test_local_verification_runs_ordered_commands(tmp_path):
         "scope_drift_monitor",
         "training_governance_suite",
         "platform_regression",
+        "launcher_menu_check",
         "artifact_policy",
         "artifact_index",
     ]
@@ -28,7 +29,8 @@ def test_local_verification_runs_ordered_commands(tmp_path):
     assert commands[1] == [sys.executable, "-m", "pip", "check"]
     assert "gbmbert-run-training-governance-suite" in commands[3][0]
     assert "--skip-tests" in commands[4]
-    assert "gbmbert-check-artifact-policy" in commands[5][0]
+    assert "gbmbert-check-launcher-menu" in commands[5][0]
+    assert "gbmbert-check-artifact-policy" in commands[6][0]
     assert "Research-use only. Not medical advice." in markdown
 
 
