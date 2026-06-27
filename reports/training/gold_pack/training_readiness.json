@@ -8,21 +8,21 @@
     {
       "dominant_label_fraction": 0.08333333333333333,
       "duplicate_count": 0,
-      "example_count": 24,
+      "example_count": 36,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "BIOMARKER": 2,
-        "CELL_STATE": 2,
-        "CELL_TYPE": 2,
-        "DELIVERY_MODIFIER": 2,
-        "DISEASE": 2,
-        "DRUG": 2,
-        "GENE": 2,
-        "OUTCOME": 2,
-        "PATHWAY": 2,
-        "TREATMENT": 2,
-        "TRIAL_PHASE": 2,
-        "UNKNOWN": 2
+        "BIOMARKER": 3,
+        "CELL_STATE": 3,
+        "CELL_TYPE": 3,
+        "DELIVERY_MODIFIER": 3,
+        "DISEASE": 3,
+        "DRUG": 3,
+        "GENE": 3,
+        "OUTCOME": 3,
+        "PATHWAY": 3,
+        "TREATMENT": 3,
+        "TRIAL_PHASE": 3,
+        "UNKNOWN": 3
       },
       "ready": true,
       "task": "ner",
@@ -31,15 +31,15 @@
     {
       "dominant_label_fraction": 0.16666666666666666,
       "duplicate_count": 0,
-      "example_count": 12,
+      "example_count": 18,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "0": 2,
-        "1": 2,
-        "2": 2,
-        "3": 2,
-        "4": 2,
-        "5": 2
+        "0": 3,
+        "1": 3,
+        "2": 3,
+        "3": 3,
+        "4": 3,
+        "5": 3
       },
       "ready": true,
       "task": "evidence",
@@ -48,12 +48,12 @@
     {
       "dominant_label_fraction": 0.3333333333333333,
       "duplicate_count": 0,
-      "example_count": 12,
+      "example_count": 18,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "ASSOCIATED_WITH": 4,
-        "NO_RELATION": 4,
-        "PREDICTS": 4
+        "ASSOCIATED_WITH": 6,
+        "NO_RELATION": 6,
+        "PREDICTS": 6
       },
       "ready": true,
       "task": "relation",

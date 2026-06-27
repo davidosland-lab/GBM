@@ -25,6 +25,7 @@ DEFAULT_RELATION_PACK = Path("reports/training/relation_pack/relation_training_p
 DEFAULT_GOLD_PACK = Path("reports/training/gold_pack/gold_training_pack.json")
 DEFAULT_REGISTRY = Path("models/checkpoint_registry.json")
 DEFAULT_ARTIFACT_INDEX = Path("reports/artifact_index.json")
+TRAINING_CONFIG_REQUIRED_KEYS = {"name", "task", "base_model", "train_path", "output_dir"}
 
 
 @dataclass(frozen=True)
@@ -333,7 +334,7 @@ def audit_training_pack_leakage(
 
 
 def review_training_config_suite(config_paths: list[str | Path] | None = None) -> ConfigSuiteReviewReport:
-    selected_paths = sorted(Path("configs/training").glob("*.json")) if config_paths is None else config_paths
+    selected_paths = _default_training_config_paths() if config_paths is None else config_paths
     paths = [Path(path) for path in selected_paths]
     reviews: list[dict[str, Any]] = []
     warnings: list[str] = []
@@ -404,7 +405,7 @@ def build_training_label_drift_report(
     if config_paths is None and evidence_pack_report is None and relation_pack_report is None and gold_pack_report is None:
         return TrainingLabelDriftReport(rows=[], warning_count=0, warnings=[])
 
-    selected_paths = sorted(Path("configs/training").glob("*.json")) if config_paths is None else [Path(path) for path in config_paths]
+    selected_paths = _default_training_config_paths() if config_paths is None else [Path(path) for path in config_paths]
     rows: list[LabelDriftRow] = []
     warnings: list[str] = []
     for config_path in selected_paths:
@@ -1095,7 +1096,7 @@ def _config_governance_metadata(path: str | Path) -> dict[str, str]:
 def _config_labels_by_task() -> dict[str, list[str]]:
     labels: dict[str, list[str]] = {}
     profiles: dict[str, str] = {}
-    for path in Path("configs/training").glob("*.json"):
+    for path in _default_training_config_paths():
         try:
             config = load_training_config(path)
         except Exception:
@@ -1113,6 +1114,18 @@ def _config_labels_by_task() -> dict[str, list[str]]:
             labels[task_key] = list(config.label_set)
             profiles[task_key] = profile
     return labels
+
+
+def _default_training_config_paths() -> list[Path]:
+    return [path for path in sorted(Path("configs/training").glob("*.json")) if _looks_like_training_config(path)]
+
+
+def _looks_like_training_config(path: Path) -> bool:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return False
+    return isinstance(payload, dict) and TRAINING_CONFIG_REQUIRED_KEYS.issubset(payload)
 
 
 def _format_dataset_label_summary(labels_by_split: dict[str, list[str]]) -> str:

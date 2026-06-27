@@ -22,7 +22,11 @@ class CuratedFixtureImportReport:
     evidence_path: str
     entity_path: str
     reviewed_queue_path: str
+    evidence_paths: list[str]
+    entity_paths: list[str]
+    reviewed_queue_paths: list[str]
     copied_files: dict[str, str]
+    combined_files: dict[str, str]
     evidence_rows: int
     entity_rows: int
     reviewed_queue_rows: int
@@ -41,23 +45,23 @@ class CuratedFixtureImportReport:
 
 def import_curated_training_fixture(
     *,
-    evidence_jsonl: str | Path,
-    entity_jsonl: str | Path,
-    reviewed_queue_jsonl: str | Path,
+    evidence_jsonl: str | Path | list[str | Path],
+    entity_jsonl: str | Path | list[str | Path],
+    reviewed_queue_jsonl: str | Path | list[str | Path],
     output_dir: str | Path,
     copy_files: bool = True,
 ) -> CuratedFixtureImportReport:
     """Validate and optionally copy a curated evidence/NER/relation fixture batch."""
 
-    evidence_path = Path(evidence_jsonl)
-    entity_path = Path(entity_jsonl)
-    reviewed_path = Path(reviewed_queue_jsonl)
+    evidence_paths = _paths(evidence_jsonl)
+    entity_paths = _paths(entity_jsonl)
+    reviewed_paths = _paths(reviewed_queue_jsonl)
     output_root = Path(output_dir)
     output_root.mkdir(parents=True, exist_ok=True)
 
-    evidence_rows = _read_jsonl(evidence_path)
-    entity_rows = _read_jsonl(entity_path)
-    reviewed_rows = _read_jsonl(reviewed_path)
+    evidence_rows = _read_jsonl_many(evidence_paths)
+    entity_rows = _read_jsonl_many(entity_paths)
+    reviewed_rows = _read_jsonl_many(reviewed_paths)
     warnings: list[str] = []
     pmids: set[str] = set()
     missing_pmid_count = 0
@@ -79,24 +83,38 @@ def import_curated_training_fixture(
                 missing_review_metadata_count += 1
                 warnings.append(f"{source_name} row {index} is missing review metadata: {', '.join(missing)}")
 
-    for source_name, path in (("evidence", evidence_path), ("entities", entity_path), ("reviewed_queue", reviewed_path)):
-        if not path.exists():
-            warnings.append(f"{source_name} source file not found: {path}")
+    for source_name, paths in (("evidence", evidence_paths), ("entities", entity_paths), ("reviewed_queue", reviewed_paths)):
+        if not paths:
+            warnings.append(f"{source_name} source file list is empty")
+        for path in paths:
+            if not path.exists():
+                warnings.append(f"{source_name} source file not found: {path}")
 
     copied_files: dict[str, str] = {}
     if copy_files:
-        for key, source in (("evidence", evidence_path), ("entities", entity_path), ("reviewed_queue", reviewed_path)):
-            if source.exists():
-                target = output_root / source.name
-                shutil.copy2(source, target)
-                copied_files[key] = str(target)
+        for key, paths in (("evidence", evidence_paths), ("entities", entity_paths), ("reviewed_queue", reviewed_paths)):
+            for source in paths:
+                if source.exists():
+                    target = output_root / _unique_target_name(output_root, source.name)
+                    shutil.copy2(source, target)
+                    copied_files[f"{key}:{source.name}"] = str(target)
+
+    combined_files = {
+        "evidence": str(_write_jsonl(output_root / "combined_evidence.jsonl", evidence_rows)),
+        "entities": str(_write_jsonl(output_root / "combined_entities.jsonl", entity_rows)),
+        "reviewed_queue": str(_write_jsonl(output_root / "combined_reviewed_queue.jsonl", reviewed_rows)),
+    }
 
     report = CuratedFixtureImportReport(
         output_dir=str(output_root),
-        evidence_path=str(evidence_path),
-        entity_path=str(entity_path),
-        reviewed_queue_path=str(reviewed_path),
+        evidence_path=str(evidence_paths[0]) if evidence_paths else "",
+        entity_path=str(entity_paths[0]) if entity_paths else "",
+        reviewed_queue_path=str(reviewed_paths[0]) if reviewed_paths else "",
+        evidence_paths=[str(path) for path in evidence_paths],
+        entity_paths=[str(path) for path in entity_paths],
+        reviewed_queue_paths=[str(path) for path in reviewed_paths],
         copied_files=copied_files,
+        combined_files=combined_files,
         evidence_rows=len(evidence_rows),
         entity_rows=sum(len(row.get("entities") or []) for row in entity_rows),
         reviewed_queue_rows=len(reviewed_rows),
@@ -147,6 +165,9 @@ def format_curated_fixture_import_markdown(report: CuratedFixtureImportReport) -
         "## Copied Files",
         *([f"- {name}: `{path}`" for name, path in sorted(report.copied_files.items())] or ["- none"]),
         "",
+        "## Combined Files",
+        *([f"- {name}: `{path}`" for name, path in sorted(report.combined_files.items())] or ["- none"]),
+        "",
         "## Warnings",
         *([f"- {warning}" for warning in report.warnings] if report.warnings else ["- none"]),
     ]
@@ -155,9 +176,9 @@ def format_curated_fixture_import_markdown(report: CuratedFixtureImportReport) -
 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Import and validate a curated training fixture batch.")
-    parser.add_argument("--evidence-jsonl", type=Path, required=True)
-    parser.add_argument("--entity-jsonl", type=Path, required=True)
-    parser.add_argument("--reviewed-queue-jsonl", type=Path, required=True)
+    parser.add_argument("--evidence-jsonl", type=Path, action="append", required=True)
+    parser.add_argument("--entity-jsonl", type=Path, action="append", required=True)
+    parser.add_argument("--reviewed-queue-jsonl", type=Path, action="append", required=True)
     parser.add_argument("--output-dir", type=Path, default=Path("data/training/curated_import"))
     parser.add_argument("--json-output", type=Path, default=Path("reports/training/curated_fixture_import.json"))
     parser.add_argument("--markdown-output", type=Path, default=Path("reports/training/curated_fixture_import.md"))
@@ -198,6 +219,37 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
                 raise ValueError(f"JSONL record must be an object on line {line_number}: {path}")
             rows.append(payload)
     return rows
+
+
+def _read_jsonl_many(paths: list[Path]) -> list[dict[str, Any]]:
+    rows: list[dict[str, Any]] = []
+    for path in paths:
+        rows.extend(_read_jsonl(path))
+    return rows
+
+
+def _write_jsonl(path: Path, rows: list[dict[str, Any]]) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("".join(json.dumps(row, sort_keys=True) + "\n" for row in rows), encoding="utf-8")
+    return path
+
+
+def _paths(value: str | Path | list[str | Path]) -> list[Path]:
+    if isinstance(value, list):
+        return [Path(item) for item in value]
+    return [Path(value)]
+
+
+def _unique_target_name(output_root: Path, name: str) -> str:
+    target = output_root / name
+    if not target.exists():
+        return name
+    stem = target.stem
+    suffix = target.suffix
+    index = 2
+    while (output_root / f"{stem}_{index}{suffix}").exists():
+        index += 1
+    return f"{stem}_{index}{suffix}"
 
 
 def _row_pmid(row: dict[str, Any]) -> str:

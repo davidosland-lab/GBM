@@ -56,9 +56,9 @@
       "prepared_task": "evidence",
       "raw_status": "passed",
       "split_counts": {
-        "test": 1,
-        "train": 10,
-        "validation": 1
+        "test": 2,
+        "train": 14,
+        "validation": 2
       },
       "status": "scaffold_ready",
       "task": "evidence_classification",
@@ -196,9 +196,9 @@
       "prepared_task": "ner",
       "raw_status": "passed",
       "split_counts": {
-        "test": 2,
-        "train": 20,
-        "validation": 2
+        "test": 4,
+        "train": 28,
+        "validation": 4
       },
       "status": "scaffold_ready",
       "task": "ner",

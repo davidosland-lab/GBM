@@ -31,6 +31,13 @@ jobs:
       - name: Run strict training governance audit
         run: gbmbert-run-strict-training-governance --output-dir reports/training/governance_strict --allow-findings
 
+      - name: Build CI report summary
+        if: always()
+        run: |
+          gbmbert-review-gold-pack-promotion --markdown-output reports/training/gold_pack/gold_pack_promotion_review.md --json-output reports/training/gold_pack/gold_pack_promotion_review.json --allow-blockers
+          gbmbert-ci-report-summary --output reports/platform_regression/ci_report_summary.md
+          cat reports/platform_regression/ci_report_summary.md >> "$GITHUB_STEP_SUMMARY"
+
       - name: Upload verification reports
         if: always()
         uses: actions/upload-artifact@v4

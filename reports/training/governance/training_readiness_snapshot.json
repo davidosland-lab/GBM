@@ -1,8 +1,8 @@
 {
-  "created_at_utc": "2026-06-27T09:41:14.927497+00:00",
+  "created_at_utc": "2026-06-27T10:08:20.447399+00:00",
   "current_config_failed_count": 0,
   "current_config_passed_count": 3,
-  "dashboard_report_count": 8,
+  "dashboard_report_count": 12,
   "ready_pack_count": 3,
   "registry_audit_passed": true,
   "relation_config_status": "passed",

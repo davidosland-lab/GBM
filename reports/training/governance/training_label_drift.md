@@ -28,7 +28,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Governance profile: scaffold
 - Dataset: `data\training\gold_pack\annotation_splits`
 - Config labels: GENE, DRUG, DISEASE, PATHWAY, BIOMARKER, CELL_TYPE, CELL_STATE, TREATMENT, DELIVERY_MODIFIER, OUTCOME, TRIAL_PHASE, UNKNOWN
-- Dataset labels: test=[OUTCOME, PATHWAY]; train=[BIOMARKER, CELL_STATE, CELL_TYPE, DELIVERY_MODIFIER, DISEASE, DRUG, GENE, TREATMENT, TRIAL_PHASE, UNKNOWN]; validation=[OUTCOME, PATHWAY]
+- Dataset labels: test=[CELL_TYPE, DRUG, OUTCOME, PATHWAY]; train=[BIOMARKER, CELL_STATE, CELL_TYPE, DELIVERY_MODIFIER, DISEASE, DRUG, GENE, OUTCOME, PATHWAY, TREATMENT, TRIAL_PHASE, UNKNOWN]; validation=[DELIVERY_MODIFIER, OUTCOME, PATHWAY, TRIAL_PHASE]
 - Missing from config: none
 - Missing from dataset: none
 

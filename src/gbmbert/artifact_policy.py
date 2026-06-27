@@ -23,6 +23,7 @@ REQUIRED_ARTIFACTS = (
     Path("reports/platform_regression/local_verification.md"),
     Path("reports/platform_regression/launcher_menu_check.json"),
     Path("reports/platform_regression/launcher_menu_check.md"),
+    Path("reports/platform_regression/ci_report_summary.md"),
     Path("reports/training/training_config_suite_review.json"),
     Path("reports/training/training_config_suite_review.md"),
     Path("reports/training/governance/training_governance_suite.json"),

@@ -20,6 +20,7 @@ DEFAULT_REQUIRED_TASKS = ("evidence", "ner", "relation")
 @dataclass(frozen=True)
 class GoldPackPromotionReview:
     gold_pack_report: str
+    threshold_config: str
     pack_ready: bool
     promotable: bool
     min_examples_per_task: int
@@ -38,6 +39,7 @@ class GoldPackPromotionReview:
 def review_gold_pack_promotion(
     *,
     gold_pack_report: str | Path = Path("reports/training/gold_pack/gold_training_pack.json"),
+    threshold_config: str | Path | None = Path("configs/training/gold_pack_promotion_thresholds.json"),
     min_examples_per_task: int = DEFAULT_MIN_EXAMPLES_PER_TASK,
     min_examples_per_label: int = DEFAULT_MIN_EXAMPLES_PER_LABEL,
     min_source_pmids: int = DEFAULT_MIN_SOURCE_PMIDS,
@@ -45,6 +47,12 @@ def review_gold_pack_promotion(
     """Review whether the gold pack is large enough to consider scaffold promotion."""
 
     report_path = Path(gold_pack_report)
+    threshold_path = Path(threshold_config) if threshold_config else None
+    if threshold_path and threshold_path.exists():
+        thresholds = _read_json(threshold_path)
+        min_examples_per_task = int(thresholds.get("min_examples_per_task") or min_examples_per_task)
+        min_examples_per_label = int(thresholds.get("min_examples_per_label") or min_examples_per_label)
+        min_source_pmids = int(thresholds.get("min_source_pmids") or min_source_pmids)
     payload = _read_json(report_path)
     split_dir = Path(str(payload.get("split_dir") or payload.get("split_dataset_dir") or ""))
     pack_ready = bool(payload.get("ready"))
@@ -84,6 +92,7 @@ def review_gold_pack_promotion(
 
     return GoldPackPromotionReview(
         gold_pack_report=str(report_path),
+        threshold_config=str(threshold_path) if threshold_path else "",
         pack_ready=pack_ready,
         promotable=not blockers,
         min_examples_per_task=min_examples_per_task,
@@ -117,6 +126,7 @@ def format_gold_pack_promotion_review_markdown(report: GoldPackPromotionReview) 
         RESEARCH_WARNING,
         "",
         f"- Gold pack report: `{report.gold_pack_report}`",
+        f"- Threshold config: `{report.threshold_config or 'not provided'}`",
         f"- Pack ready: {report.pack_ready}",
         f"- Promotable: {report.promotable}",
         f"- Minimum examples per task: {report.min_examples_per_task}",
@@ -140,6 +150,7 @@ def format_gold_pack_promotion_review_markdown(report: GoldPackPromotionReview) 
 def build_arg_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Review whether the local gold pack can be considered for scaffold promotion.")
     parser.add_argument("--gold-pack-report", type=Path, default=Path("reports/training/gold_pack/gold_training_pack.json"))
+    parser.add_argument("--threshold-config", type=Path, default=Path("configs/training/gold_pack_promotion_thresholds.json"))
     parser.add_argument("--min-examples-per-task", type=int, default=DEFAULT_MIN_EXAMPLES_PER_TASK)
     parser.add_argument("--min-examples-per-label", type=int, default=DEFAULT_MIN_EXAMPLES_PER_LABEL)
     parser.add_argument("--min-source-pmids", type=int, default=DEFAULT_MIN_SOURCE_PMIDS)
@@ -154,6 +165,7 @@ def main(argv: list[str] | None = None) -> int:
     args = build_arg_parser().parse_args(argv)
     report = review_gold_pack_promotion(
         gold_pack_report=args.gold_pack_report,
+        threshold_config=args.threshold_config,
         min_examples_per_task=args.min_examples_per_task,
         min_examples_per_label=args.min_examples_per_label,
         min_source_pmids=args.min_source_pmids,

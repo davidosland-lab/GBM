@@ -3,7 +3,7 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Overlay graph: `data\processed\curation_regression_pack\evidence_overlay_graph_records.jsonl`
-- Created UTC: 2026-06-27T09:41:23.139994+00:00
+- Created UTC: 2026-06-27T10:08:28.757518+00:00
 - Safe to promote: True
 - Checks: 5/5 passed
 

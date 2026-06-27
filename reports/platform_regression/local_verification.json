@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-06-27T09:41:25.928506+00:00",
+  "created_at_utc": "2026-06-27T10:08:31.745218+00:00",
   "failed_step_count": 0,
   "passed": true,
   "passed_step_count": 8,
@@ -12,7 +12,7 @@
         "pytest",
         "-q"
       ],
-      "detail": "........................................................................ [ 33%] | ........................................................................ [ 67%] | ....................................................................     [100%] | 212 passed in 11.90s",
+      "detail": "........................................................................ [ 33%] | ........................................................................ [ 66%] | ........................................................................ [100%] | 216 passed in 12.07s",
       "name": "pytest",
       "passed": true,
       "returncode": 0
@@ -61,7 +61,7 @@
         "--reports-dir",
         "reports\\platform_regression"
       ],
-      "detail": "- scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=467) | ## Warnings | - none",
+      "detail": "- scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=474) | ## Warnings | - none",
       "name": "platform_regression",
       "passed": true,
       "returncode": 0

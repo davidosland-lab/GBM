@@ -475,6 +475,8 @@ def _artifact_type_for_path(path: Path) -> str:
         return "relation_extraction_audit_report"
     if "scope_drift" in name:
         return "scope_drift_report"
+    if "ci_report_summary" in name:
+        return "ci_report_summary"
     if "platform_regression" in name:
         return "platform_regression_report"
     if "local_verification" in name:

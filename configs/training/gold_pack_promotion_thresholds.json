@@ -1,0 +1,12 @@
+{
+  "min_examples_per_label": 10,
+  "min_examples_per_task": 100,
+  "min_source_pmids": 50,
+  "promotion_note": "Research scaffold promotion thresholds. Do not promote configs from scaffold to current based only on the minimal fixture.",
+  "required_tasks": [
+    "evidence",
+    "ner",
+    "relation"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

@@ -6,6 +6,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Aligned strict label-drift checks to config-specific governance datasets so smoke configs are not compared against scaffold packs.
 - Added a curated training fixture import validator for larger reviewed evidence, NER, and relation batches.
+- Extended curated training fixture import to accept repeated evidence, entity, and reviewed-queue JSONL inputs and write combined JSONL outputs.
+- Added reviewable gold-pack promotion thresholds in `configs/training/gold_pack_promotion_thresholds.json`.
+- Added a compact CI Markdown summary report for local verification, artifact policy, launcher, governance, and promotion-review state.
+- Refreshed the dashboard training context with label-drift, launcher, curated-import, and promotion-review governance status.
+- Added a second curated local curation round and rebuilt evidence, NER, and relation gold-pack reports from the combined import.
 - Added CI report upload for verification and governance artifacts.
 - Added a non-interactive launcher menu structure check and wired it into local verification.
 - Added a gold-pack promotion review with explicit thresholds that keep the minimal fixture scaffold-only.

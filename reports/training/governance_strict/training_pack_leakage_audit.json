@@ -11,21 +11,21 @@
   ],
   "rows": [
     {
-      "example_count": 1,
+      "example_count": 2,
       "pack": "evidence",
       "pmid_count": 1,
       "split": "test",
       "task": "evidence"
     },
     {
-      "example_count": 10,
+      "example_count": 14,
       "pack": "evidence",
       "pmid_count": 10,
       "split": "train",
       "task": "evidence"
     },
     {
-      "example_count": 1,
+      "example_count": 2,
       "pack": "evidence",
       "pmid_count": 1,
       "split": "validation",
@@ -137,63 +137,63 @@
       "task": "relation"
     },
     {
-      "example_count": 1,
+      "example_count": 2,
       "pack": "gold",
       "pmid_count": 1,
       "split": "test",
       "task": "evidence"
     },
     {
-      "example_count": 10,
+      "example_count": 14,
       "pack": "gold",
       "pmid_count": 10,
       "split": "train",
-      "task": "evidence"
-    },
-    {
-      "example_count": 1,
-      "pack": "gold",
-      "pmid_count": 1,
-      "split": "validation",
       "task": "evidence"
     },
     {
       "example_count": 2,
       "pack": "gold",
       "pmid_count": 1,
+      "split": "validation",
+      "task": "evidence"
+    },
+    {
+      "example_count": 4,
+      "pack": "gold",
+      "pmid_count": 1,
       "split": "test",
       "task": "ner"
     },
     {
-      "example_count": 20,
+      "example_count": 28,
       "pack": "gold",
       "pmid_count": 10,
       "split": "train",
       "task": "ner"
     },
     {
-      "example_count": 2,
+      "example_count": 4,
       "pack": "gold",
       "pmid_count": 1,
       "split": "validation",
       "task": "ner"
     },
     {
-      "example_count": 1,
+      "example_count": 2,
       "pack": "gold",
       "pmid_count": 1,
       "split": "test",
       "task": "relation"
     },
     {
-      "example_count": 10,
+      "example_count": 14,
       "pack": "gold",
       "pmid_count": 10,
       "split": "train",
       "task": "relation"
     },
     {
-      "example_count": 1,
+      "example_count": 2,
       "pack": "gold",
       "pmid_count": 1,
       "split": "validation",

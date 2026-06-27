@@ -4,7 +4,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Output directory: `reports\training\governance_strict\bundle`
 - Artifacts: 261
-- Total bytes: 798927
+- Total bytes: 800856
 
 ## Artifacts
 - `data\training\curated_expansion\evidence_full_label.jsonl` -> `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims)

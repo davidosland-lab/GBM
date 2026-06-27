@@ -1,5 +1,5 @@
 {
-  "artifact_count": 261,
+  "artifact_count": 267,
   "entries": [
     {
       "artifact_type": "evidence_claims",
@@ -9,11 +9,25 @@
       "source_path": "data\\training\\curated_expansion\\evidence_full_label.jsonl"
     },
     {
+      "artifact_type": "evidence_claims",
+      "bundled_path": "data\\training\\curated_expansion\\evidence_round2.jsonl",
+      "byte_count": 3001,
+      "sha256": "3EF8903471172B5AEBAA4534B737EEB9D83E373B81B4260CA387A8851A555F6F",
+      "source_path": "data\\training\\curated_expansion\\evidence_round2.jsonl"
+    },
+    {
       "artifact_type": "entities",
       "bundled_path": "data\\training\\curated_expansion\\gold_entities.jsonl",
       "byte_count": 3088,
       "sha256": "D61754B7457C23F278E354BF71C3FAD8ED1C84B0141F26B2C407C02F8D12E6EA",
       "source_path": "data\\training\\curated_expansion\\gold_entities.jsonl"
+    },
+    {
+      "artifact_type": "entities",
+      "bundled_path": "data\\training\\curated_expansion\\gold_entities_round2.jsonl",
+      "byte_count": 1490,
+      "sha256": "28D18414A858193A3CDB4773B1D679EFD334231F68F028BF2EDE4FBC98ED75B2",
+      "source_path": "data\\training\\curated_expansion\\gold_entities_round2.jsonl"
     },
     {
       "artifact_type": "reviewed_queue",
@@ -23,10 +37,38 @@
       "source_path": "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl"
     },
     {
+      "artifact_type": "reviewed_queue",
+      "bundled_path": "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl",
+      "byte_count": 7276,
+      "sha256": "3056AB326E6B0CBFD5CB7A4F4357241D9E92B38405E92F59DF4A04D8A254EF0F",
+      "source_path": "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl"
+    },
+    {
+      "artifact_type": "entities",
+      "bundled_path": "data\\training\\curated_import\\combined_entities.jsonl",
+      "byte_count": 5064,
+      "sha256": "1D730B6DF5086DF2ABC826D5B57274579589553D2140FBBEB48FAAE1A10E5126",
+      "source_path": "data\\training\\curated_import\\combined_entities.jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "bundled_path": "data\\training\\curated_import\\combined_evidence.jsonl",
+      "byte_count": 9066,
+      "sha256": "32597F7A24E304B10358044A36358BF60840DD944B3FD797E17EEF2CEF820F94",
+      "source_path": "data\\training\\curated_import\\combined_evidence.jsonl"
+    },
+    {
+      "artifact_type": "reviewed_queue",
+      "bundled_path": "data\\training\\curated_import\\combined_reviewed_queue.jsonl",
+      "byte_count": 23158,
+      "sha256": "5E0AB6D60622651566DE03A01D60F8A4C558D993B89C2C90CBB81F6BE62378AC",
+      "source_path": "data\\training\\curated_import\\combined_reviewed_queue.jsonl"
+    },
+    {
       "artifact_type": "evidence_claims",
       "bundled_path": "data\\training\\evidence_pack\\annotation_dataset\\evidence.jsonl",
-      "byte_count": 5957,
-      "sha256": "B309B60373A39B4AE5E05D19CD2EAEFABC898BF7962D5217D9AD79775CA519A3",
+      "byte_count": 9066,
+      "sha256": "32597F7A24E304B10358044A36358BF60840DD944B3FD797E17EEF2CEF820F94",
       "source_path": "data\\training\\evidence_pack\\annotation_dataset\\evidence.jsonl"
     },
     {
@@ -46,22 +88,22 @@
     {
       "artifact_type": "evidence_claims",
       "bundled_path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
-      "byte_count": 5957,
-      "sha256": "B309B60373A39B4AE5E05D19CD2EAEFABC898BF7962D5217D9AD79775CA519A3",
+      "byte_count": 9066,
+      "sha256": "32597F7A24E304B10358044A36358BF60840DD944B3FD797E17EEF2CEF820F94",
       "source_path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl"
     },
     {
       "artifact_type": "evidence_label_repair_report",
       "bundled_path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence_label_repair.json",
       "byte_count": 1398,
-      "sha256": "11DD08149000B37B5A02A8BE59497B6AEB6DD7CE2721C22EBD3ED7777518CF5E",
+      "sha256": "F8A68A12C2AC5CAB43684DB45F2F04BF319CAFC124900A62ADB5B5B28C45CEFC",
       "source_path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence_label_repair.json"
     },
     {
       "artifact_type": "evidence_label_repair_report",
       "bundled_path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence_label_repair.md",
       "byte_count": 659,
-      "sha256": "1CC8FC80F859FEF39B8EBE77962CFBFEBF8DF47C41754F8D12F7D4FEF55B67E1",
+      "sha256": "7C4007E6DC7A22469D660A3A131EB656C006E635DB3D582FE21E1F2D7166634A",
       "source_path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence_label_repair.md"
     },
     {
@@ -81,22 +123,22 @@
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",
-      "byte_count": 476,
-      "sha256": "70EFAF4FFDDA4C628B628F9E43FEF8A5BEB2D8461C1B283D0D550D63BCAF5D44",
+      "byte_count": 979,
+      "sha256": "119042211944856E9BB217AF2AA2110AB90D5ECA34358E26F80E8A9D7ECBCFC7",
       "source_path": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\evidence_pack\\annotation_splits\\evidence_train.jsonl",
-      "byte_count": 4999,
-      "sha256": "5C36D9181E52E9FDCB1BE0BA118EBF632473CD5575406A49BC2C3EFEACB49BEF",
+      "byte_count": 7082,
+      "sha256": "14C79F64E380B9718580B0516E76065533C4D01F427BDA675B15249B537F01BB",
       "source_path": "data\\training\\evidence_pack\\annotation_splits\\evidence_train.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\evidence_pack\\annotation_splits\\evidence_validation.jsonl",
-      "byte_count": 482,
-      "sha256": "C7CA2981FE2091B06BF9449A5AEE97E94C87C7D5BB44A79ABAC311853097D19E",
+      "byte_count": 1005,
+      "sha256": "9D1212176F49C0F2C6CA4FB67B4DBAC9D38CB90CCBBA0B06193AD504E2B92EEB",
       "source_path": "data\\training\\evidence_pack\\annotation_splits\\evidence_validation.jsonl"
     },
     {
@@ -124,7 +166,7 @@
       "artifact_type": "pmid_split_manifest",
       "bundled_path": "data\\training\\evidence_pack\\annotation_splits\\pmid_split_manifest.json",
       "byte_count": 2652,
-      "sha256": "103A1FC3495177481F2754094FC4E42F802A9F4581459F27D9C52DB033CC8A85",
+      "sha256": "E0059C9580EBD178394CE576AC7EFFD84892852703CEC75676FF841B5D88C257",
       "source_path": "data\\training\\evidence_pack\\annotation_splits\\pmid_split_manifest.json"
     },
     {
@@ -214,162 +256,162 @@
     {
       "artifact_type": "evidence_claims",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset\\evidence.jsonl",
-      "byte_count": 5835,
-      "sha256": "F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2",
+      "byte_count": 8798,
+      "sha256": "42E8696A875E6C98BF5839B25EDDE6440FC6BE101324BCDB297B50C1C6221DFC",
       "source_path": "data\\training\\gold_pack\\annotation_dataset\\evidence.jsonl"
     },
     {
       "artifact_type": "annotation_dataset",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset\\ner.jsonl",
-      "byte_count": 7132,
-      "sha256": "EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183",
+      "byte_count": 10644,
+      "sha256": "6B26E51F5536ACA8514C49960F5FF367354A9C70F68191E890AE3EF2DE808300",
       "source_path": "data\\training\\gold_pack\\annotation_dataset\\ner.jsonl"
     },
     {
       "artifact_type": "annotation_dataset",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset\\relations.jsonl",
-      "byte_count": 10392,
-      "sha256": "179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2",
+      "byte_count": 15249,
+      "sha256": "4B67BD9AC0A48F125BD549047C2D7F1B3673825E5B6F9821F60189193F8963FA",
       "source_path": "data\\training\\gold_pack\\annotation_dataset\\relations.jsonl"
     },
     {
       "artifact_type": "evidence_claims",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl",
-      "byte_count": 5835,
-      "sha256": "F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2",
+      "byte_count": 8798,
+      "sha256": "42E8696A875E6C98BF5839B25EDDE6440FC6BE101324BCDB297B50C1C6221DFC",
       "source_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl"
     },
     {
       "artifact_type": "evidence_label_repair_report",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence_label_repair.json",
       "byte_count": 1757,
-      "sha256": "643A95CE231CE050F2981931A6F692C1A0F17BB99B87A891ADE64764CF7447F8",
+      "sha256": "AD0314FBCF4DAF15D7594B9E4FFDFE85676A285DE2229D7EC6FD6BE80756D6E3",
       "source_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence_label_repair.json"
     },
     {
       "artifact_type": "evidence_label_repair_report",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence_label_repair.md",
       "byte_count": 877,
-      "sha256": "10412FEBC54E86BC31F9EA7691F575196641DEF6E155F96EB0E822954478585A",
+      "sha256": "286284A0D8DA53A5BCC5AF886F6B3E8C5D94C7DDCC8A5F772407CBD67A236EBF",
       "source_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence_label_repair.md"
     },
     {
       "artifact_type": "annotation_dataset",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl",
-      "byte_count": 7132,
-      "sha256": "EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183",
+      "byte_count": 10644,
+      "sha256": "6B26E51F5536ACA8514C49960F5FF367354A9C70F68191E890AE3EF2DE808300",
       "source_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl"
     },
     {
       "artifact_type": "annotation_dataset",
       "bundled_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl",
-      "byte_count": 10392,
-      "sha256": "179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2",
+      "byte_count": 15249,
+      "sha256": "4B67BD9AC0A48F125BD549047C2D7F1B3673825E5B6F9821F60189193F8963FA",
       "source_path": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
-      "byte_count": 476,
-      "sha256": "10FA7852E4B4679A90B4CA118B902510523319F01955E652A17AD9EFB6657B01",
+      "byte_count": 958,
+      "sha256": "6609D0E3B9F9BCA50BDD6115C31C43D28BCE2289BB590F590E2AEF5F5AB7184D",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\evidence_train.jsonl",
-      "byte_count": 4889,
-      "sha256": "E5471F060F13FE7E545886B0F1099A43F4C3E93E0178211E80A359171D90A369",
+      "byte_count": 6874,
+      "sha256": "E8B9DF7984B025F2F6D92B1E0BB2AA5EBD8244D469A0E5D74F40223A8348AFFA",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\evidence_train.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\evidence_validation.jsonl",
-      "byte_count": 470,
-      "sha256": "4927961CBA87C623B809BC5268894E85AFBB7BC4920FF6C100084531DC2570BF",
+      "byte_count": 966,
+      "sha256": "13E984199D5A4A849E973D1E96C4EBB17631E9597630457CE23FA72C133DBE50",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\evidence_validation.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
-      "byte_count": 585,
-      "sha256": "2BC391FD32979426BE795BD80CE44018EEBE02493C289CA10AABF5B8479E30F7",
+      "byte_count": 1177,
+      "sha256": "9C5BB7BA2FBFEF41769642E8FCF7139DC5D6714D32E02EDCC88EBC577E0F79E4",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\ner_train.jsonl",
-      "byte_count": 5946,
-      "sha256": "5FE6EB091B3C68E1604037A8CFD6240897BB6CFE47B8B7CCCBFF04D6048DF534",
+      "byte_count": 8260,
+      "sha256": "DD60D6441B99517CDCB9F390C74EFF8C62A202B8BBFCF54210D8CC19C19C4AFD",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\ner_train.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\ner_validation.jsonl",
-      "byte_count": 601,
-      "sha256": "D95F9E9F7B33EE6151D732568685898BE83C357E30605F73A9909F568DEFF320",
+      "byte_count": 1207,
+      "sha256": "4E2CDAF136C2F5CEF5D3DE69039EA7A1EB72BC8BD5DF0E619EA1A64A5A59637F",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\ner_validation.jsonl"
     },
     {
       "artifact_type": "pmid_split_manifest",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\pmid_split_manifest.json",
-      "byte_count": 3162,
-      "sha256": "404814B14A91E21409FEAD90363C423FAA000E0184742DB83ABFF7C93B5B8CED",
+      "byte_count": 3351,
+      "sha256": "155EAA5485B819031D9673CC8833C69BE464F67C595790C7E92C76EF6E5B3579",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\pmid_split_manifest.json"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",
-      "byte_count": 839,
-      "sha256": "A1DF1278B77C99A1303732FB7A969E3EB5924AD46A53A367FF489B4FB2CEF352",
+      "byte_count": 1646,
+      "sha256": "736D2EB2DBF926488A5367D84B539E2AF76B7833001F9E8B91012B3D65ADE949",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\relation_train.jsonl",
-      "byte_count": 8684,
-      "sha256": "3016EDB1F6171C626E22A06E61212F3E78897B0462B0F828991FAD8C57AB5A27",
+      "byte_count": 11926,
+      "sha256": "C8383319B0A57EB883C7698FDD7DD3284F87A6D6C96C6CF880B8095D469E0546",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\relation_train.jsonl"
     },
     {
       "artifact_type": "training_split",
       "bundled_path": "data\\training\\gold_pack\\annotation_splits\\relation_validation.jsonl",
-      "byte_count": 869,
-      "sha256": "3AD090D308AC221D9E778811528A80656A81F29BF820FF7E37E8D022CE90B7BA",
+      "byte_count": 1677,
+      "sha256": "3DF2A9EFAC3985E30AE338F3D28AF8FCFB7A7AD8FCA65499465FB409E1992979",
       "source_path": "data\\training\\gold_pack\\annotation_splits\\relation_validation.jsonl"
     },
     {
       "artifact_type": "gold_seed_dataset",
       "bundled_path": "data\\training\\gold_pack\\gold_seed\\gold_evidence.jsonl",
-      "byte_count": 5835,
-      "sha256": "F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2",
+      "byte_count": 8798,
+      "sha256": "42E8696A875E6C98BF5839B25EDDE6440FC6BE101324BCDB297B50C1C6221DFC",
       "source_path": "data\\training\\gold_pack\\gold_seed\\gold_evidence.jsonl"
     },
     {
       "artifact_type": "gold_seed_dataset",
       "bundled_path": "data\\training\\gold_pack\\gold_seed\\gold_ner.jsonl",
-      "byte_count": 7132,
-      "sha256": "EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183",
+      "byte_count": 10644,
+      "sha256": "6B26E51F5536ACA8514C49960F5FF367354A9C70F68191E890AE3EF2DE808300",
       "source_path": "data\\training\\gold_pack\\gold_seed\\gold_ner.jsonl"
     },
     {
       "artifact_type": "gold_seed_dataset",
       "bundled_path": "data\\training\\gold_pack\\gold_seed\\gold_relations.jsonl",
-      "byte_count": 10392,
-      "sha256": "179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2",
+      "byte_count": 15249,
+      "sha256": "4B67BD9AC0A48F125BD549047C2D7F1B3673825E5B6F9821F60189193F8963FA",
       "source_path": "data\\training\\gold_pack\\gold_seed\\gold_relations.jsonl"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.json",
-      "byte_count": 965,
-      "sha256": "4D3004881760BDB13DD65947AE61052C49F9F1DDF2E33FE8DED7885649A97159",
+      "byte_count": 967,
+      "sha256": "B4725724630B29FC995418D582F078A964FC2773DDBBC0D97DD57575F35E555B",
       "source_path": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.json"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.md",
       "byte_count": 699,
-      "sha256": "220AC2620F85710965FB36B46FF899E936EE744ECEF7BC8A4C5C59C2457F1272",
+      "sha256": "53B0D5A78D24FBA65EBD4C3080FD363DBAFD5184A1A52CE1EBA3EC7C72827BFD",
       "source_path": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.md"
     },
     {
@@ -403,36 +445,36 @@
     {
       "artifact_type": "gold_seed_dataset",
       "bundled_path": "data\\training\\gold_seed\\gold_evidence.jsonl",
-      "byte_count": 5835,
-      "sha256": "F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2",
+      "byte_count": 8798,
+      "sha256": "42E8696A875E6C98BF5839B25EDDE6440FC6BE101324BCDB297B50C1C6221DFC",
       "source_path": "data\\training\\gold_seed\\gold_evidence.jsonl"
     },
     {
       "artifact_type": "gold_seed_dataset",
       "bundled_path": "data\\training\\gold_seed\\gold_ner.jsonl",
-      "byte_count": 7132,
-      "sha256": "EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183",
+      "byte_count": 10644,
+      "sha256": "6B26E51F5536ACA8514C49960F5FF367354A9C70F68191E890AE3EF2DE808300",
       "source_path": "data\\training\\gold_seed\\gold_ner.jsonl"
     },
     {
       "artifact_type": "gold_seed_dataset",
       "bundled_path": "data\\training\\gold_seed\\gold_relations.jsonl",
-      "byte_count": 10392,
-      "sha256": "179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2",
+      "byte_count": 15249,
+      "sha256": "4B67BD9AC0A48F125BD549047C2D7F1B3673825E5B6F9821F60189193F8963FA",
       "source_path": "data\\training\\gold_seed\\gold_relations.jsonl"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "data\\training\\gold_seed\\gold_seed_manifest.json",
-      "byte_count": 899,
-      "sha256": "934C101B9A0BF0B711F0A4AD886ADE4153DBD2522FDE9A46925416FDFDA0A432",
+      "byte_count": 901,
+      "sha256": "2518A4B5C12A85F90CC3F731C4AE467EB69B4D575CE3F5D93CC4CD1D4175240C",
       "source_path": "data\\training\\gold_seed\\gold_seed_manifest.json"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "data\\training\\gold_seed\\gold_seed_manifest.md",
       "byte_count": 639,
-      "sha256": "02AA0FB521DFAEBF17FDFF3ACCEE4840A956835B8B515A96B4E591295EF97B93",
+      "sha256": "D7380ABE149F0F17EB17A95064CB222B8C9E49939CA26C68AB57D8727DF17114",
       "source_path": "data\\training\\gold_seed\\gold_seed_manifest.md"
     },
     {
@@ -802,15 +844,15 @@
     {
       "artifact_type": "curated_fixture_import_report",
       "bundled_path": "reports\\training\\curated_fixture_import.json",
-      "byte_count": 771,
-      "sha256": "E1C52B3F7ED4E183BBA163CD64E844CF75F498027BE97B9C9E0831B4C2FADB9A",
+      "byte_count": 1539,
+      "sha256": "9FB4F8DCE5021E93C2C9E13DAD4BC87D15DBACFD7E0953D5ED0EE84CA9D8F935",
       "source_path": "reports\\training\\curated_fixture_import.json"
     },
     {
       "artifact_type": "curated_fixture_import_report",
       "bundled_path": "reports\\training\\curated_fixture_import.md",
-      "byte_count": 504,
-      "sha256": "E80C928C7BAB6244DBAF7A895074D6DF72E59B14CE29B5A4E05E11CE670BF103",
+      "byte_count": 741,
+      "sha256": "388AE248DD1D378826B2C8EF8ECBF131319166C3BA542C269475C3558B71345F",
       "source_path": "reports\\training\\curated_fixture_import.md"
     },
     {
@@ -844,57 +886,57 @@
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
-      "byte_count": 694,
-      "sha256": "E6A49867FFD195C01BFCB01471607AD23C5A769384ED13965B842CE0985899E4",
+      "byte_count": 689,
+      "sha256": "FB16918141503ABEE7F545CA77CC0E30015EF1F7C2498E5E9301F8AFF6B6C160",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack.json"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack.md",
-      "byte_count": 688,
-      "sha256": "B84110B4DAC7B15EB8FA848012C1DDF3F98E0B8502C989371732F1A2EC3415EF",
+      "byte_count": 683,
+      "sha256": "35305C92B1B0D04FE787B248F6D4B23B1F30CE6330247508AA0FE2D9AC2F20F7",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack.md"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack_baseline.json",
       "byte_count": 965,
-      "sha256": "E7C7A1BCF8961B7C38F8ACC8050F5B18A41437E536F0CE8CE6F92BD9C990E55D",
+      "sha256": "FF4B1F25B09974D1FDC745B6F7A67863972F5BFAFBC8C883B83ED0EDCC784885",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_baseline.json"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack_baseline.md",
       "byte_count": 882,
-      "sha256": "15FE09132B0549FBB4ED0885E3472E8CB00A6B22651924C06E593E9CEDBC7FE6",
+      "sha256": "54EC30C4BED58B012DAD323945AF0A6285F59B3435F224709827544F13FF2A8B",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_baseline.md"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack_dataset_card.json",
       "byte_count": 2321,
-      "sha256": "40896AAF16E7714DDC85C3E2D7479846C319008F515272224666EFDF658E8C48",
+      "sha256": "75EB32D9B965FB0FE18F10E9E3F4EF1F3A115003ECBA92B66B4CCDD9786DE77B",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_dataset_card.json"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack_dataset_card.md",
       "byte_count": 1948,
-      "sha256": "946B501A6DF03C0E7D2A85CA322C2181B7A4A628C45A8D3FCCBC3919DF8D9B25",
+      "sha256": "4019E4E441AEC4FE4495EA089412555B09E672D379C3869AF69256CBA367E535",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_dataset_card.md"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.json",
       "byte_count": 754,
-      "sha256": "B0F04A856D694294BEA3A74710065CA02D9EA40F4A5BE825482DAB8305B8F7A5",
+      "sha256": "1C08C4FF05118FE20A9889E60D4843D2A47B237A6C5FA28EDED1AD19578B32DA",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.json"
     },
     {
       "artifact_type": "evidence_training_pack_report",
       "bundled_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.md",
       "byte_count": 583,
-      "sha256": "2EE4AAA33426ADE30B91ED82EE9FA95E9D187094375010C2C5E3D371CC2E5AA3",
+      "sha256": "5AC8841AE150BAEA5B3B52E7CCEC7D9B39B591127D4515FCFDAC3EEC29EB4BC6",
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.md"
     },
     {
@@ -991,43 +1033,43 @@
     {
       "artifact_type": "baseline_report",
       "bundled_path": "reports\\training\\gold_pack\\baseline_report.json",
-      "byte_count": 962,
-      "sha256": "B91AC3470EF181228919FD005FDB8CE324D372881C6B77E096EC2685AF804077",
+      "byte_count": 1008,
+      "sha256": "4D4F01F3D308C5C51E95D5FB7BE0C3D6742A092F62ACE64B0C5BB605298EEB7A",
       "source_path": "reports\\training\\gold_pack\\baseline_report.json"
     },
     {
       "artifact_type": "baseline_report",
       "bundled_path": "reports\\training\\gold_pack\\baseline_report.md",
-      "byte_count": 847,
-      "sha256": "135D38A15EE6F545C28B73E8509B9914A95FD45F5EAC8C18BD0121B90051ECC2",
+      "byte_count": 874,
+      "sha256": "A3BF143380E8CA5E62B19B3E82320BD91B5095DA2C567A2A26C60B1928798259",
       "source_path": "reports\\training\\gold_pack\\baseline_report.md"
     },
     {
       "artifact_type": "dataset_card",
       "bundled_path": "reports\\training\\gold_pack\\dataset_card.json",
-      "byte_count": 2585,
-      "sha256": "22750F35160A7D3CBC4F65BDE45A3990742CA6C5EACFCD1CE7FA07BA2C9E689E",
+      "byte_count": 2760,
+      "sha256": "83349BC6C56608A4BD2F8EC06C0BB29CB8CC8C5A7C814B1BBA564638AA54919A",
       "source_path": "reports\\training\\gold_pack\\dataset_card.json"
     },
     {
       "artifact_type": "dataset_card",
       "bundled_path": "reports\\training\\gold_pack\\dataset_card.md",
-      "byte_count": 1992,
-      "sha256": "709C2DE8B187F03DEFF4C7F556DE35E3BB2A4AC4311E27F29E389AF58DD45126",
+      "byte_count": 2104,
+      "sha256": "6D9840AFDA94857578709E3DA28CCD04BA9233853DF0886F2CEE0E3C3FB65A34",
       "source_path": "reports\\training\\gold_pack\\dataset_card.md"
     },
     {
       "artifact_type": "evidence_label_repair_report",
       "bundled_path": "reports\\training\\gold_pack\\evidence_label_repair.json",
       "byte_count": 1757,
-      "sha256": "643A95CE231CE050F2981931A6F692C1A0F17BB99B87A891ADE64764CF7447F8",
+      "sha256": "AD0314FBCF4DAF15D7594B9E4FFDFE85676A285DE2229D7EC6FD6BE80756D6E3",
       "source_path": "reports\\training\\gold_pack\\evidence_label_repair.json"
     },
     {
       "artifact_type": "evidence_label_repair_report",
       "bundled_path": "reports\\training\\gold_pack\\evidence_label_repair.md",
       "byte_count": 877,
-      "sha256": "10412FEBC54E86BC31F9EA7691F575196641DEF6E155F96EB0E822954478585A",
+      "sha256": "286284A0D8DA53A5BCC5AF886F6B3E8C5D94C7DDCC8A5F772407CBD67A236EBF",
       "source_path": "reports\\training\\gold_pack\\evidence_label_repair.md"
     },
     {
@@ -1047,22 +1089,22 @@
     {
       "artifact_type": "gold_pack_promotion_review",
       "bundled_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.json",
-      "byte_count": 1575,
-      "sha256": "5F2A7AD1836F66A3278FE13EB58E6674A18C58B3CA1F2B1F09596FE3546B14F5",
+      "byte_count": 1656,
+      "sha256": "A94E027D2456616AF0254536E0B0FF671570EAFD071272C759FDD521CE3C0E62",
       "source_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.json"
     },
     {
       "artifact_type": "gold_pack_promotion_review",
       "bundled_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.md",
-      "byte_count": 1332,
-      "sha256": "2AFAF847CB5D3CB8FB02AADC03AD6AF1EC6BF3F328FB774996F2A0C7DA0F81C7",
+      "byte_count": 1408,
+      "sha256": "D2D2109A6DE1204882081E69DEA512028E6EAFD8FE20A375CEA7F14FDDD55068",
       "source_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.md"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "reports\\training\\gold_pack\\gold_seed_manifest.json",
-      "byte_count": 965,
-      "sha256": "4D3004881760BDB13DD65947AE61052C49F9F1DDF2E33FE8DED7885649A97159",
+      "byte_count": 967,
+      "sha256": "B4725724630B29FC995418D582F078A964FC2773DDBBC0D97DD57575F35E555B",
       "source_path": "reports\\training\\gold_pack\\gold_seed_manifest.json"
     },
     {
@@ -1082,99 +1124,99 @@
     {
       "artifact_type": "pmid_split_manifest",
       "bundled_path": "reports\\training\\gold_pack\\pmid_split_manifest.json",
-      "byte_count": 3162,
-      "sha256": "404814B14A91E21409FEAD90363C423FAA000E0184742DB83ABFF7C93B5B8CED",
+      "byte_count": 3351,
+      "sha256": "155EAA5485B819031D9673CC8833C69BE464F67C595790C7E92C76EF6E5B3579",
       "source_path": "reports\\training\\gold_pack\\pmid_split_manifest.json"
     },
     {
       "artifact_type": "pmid_split_manifest",
       "bundled_path": "reports\\training\\gold_pack\\pmid_split_manifest.md",
       "byte_count": 612,
-      "sha256": "B33697F629B23E3E67B4E479BB02BC07866CBC90BF89A1117CE4DDF3619D9658",
+      "sha256": "C416DB6DB5539FBF7AA01F3EBDC86C22489178AE8AB98890C9075E93CA3A9E50",
       "source_path": "reports\\training\\gold_pack\\pmid_split_manifest.md"
     },
     {
       "artifact_type": "relation_dataset_quality_report",
       "bundled_path": "reports\\training\\gold_pack\\relation_dataset_quality.json",
-      "byte_count": 511,
-      "sha256": "64533D443D26498B09A2213EFD43AB71A04709A145E212A73E76F081350A3E52",
+      "byte_count": 512,
+      "sha256": "01512E205D58F5C39D14FF4CC8444D9C2A6424D1FC7A42FB2E6B9FAD4B794C98",
       "source_path": "reports\\training\\gold_pack\\relation_dataset_quality.json"
     },
     {
       "artifact_type": "relation_dataset_quality_report",
       "bundled_path": "reports\\training\\gold_pack\\relation_dataset_quality.md",
-      "byte_count": 475,
-      "sha256": "54763E5382A46FC736B7445D3E5DC2434793A8EDA2F5D3FB3542E77474C2C3D1",
+      "byte_count": 476,
+      "sha256": "82E372168B57ECB70A36B71B192057A8B60E98D72936DE47ABDB63C16F7AA5C6",
       "source_path": "reports\\training\\gold_pack\\relation_dataset_quality.md"
     },
     {
       "artifact_type": "training_provenance_audit_report",
       "bundled_path": "reports\\training\\gold_pack\\relation_training_provenance_audit.json",
       "byte_count": 441,
-      "sha256": "730629C103C23E27507EB2E400FA0F759FB4179213D96E99A449AF56A6F7914B",
+      "sha256": "3FC1F2D308AEBC0A4141DB65307106ED224F31F91C500D710DA5C23B79DF5182",
       "source_path": "reports\\training\\gold_pack\\relation_training_provenance_audit.json"
     },
     {
       "artifact_type": "training_provenance_audit_report",
       "bundled_path": "reports\\training\\gold_pack\\relation_training_provenance_audit.md",
       "byte_count": 363,
-      "sha256": "ACEBD87FB5BB042EED5B822D80070F1193B72777DA64A91B16E06C1848F3EBA7",
+      "sha256": "1EF9C86418F47799506FCB9179808E3666C261B11886C5354138FC1703865EF9",
       "source_path": "reports\\training\\gold_pack\\relation_training_provenance_audit.md"
     },
     {
       "artifact_type": "training_readiness_report",
       "bundled_path": "reports\\training\\gold_pack\\training_readiness.json",
       "byte_count": 1655,
-      "sha256": "65A0774DACA69310A73C7155D389A0FF24403AD3F25E057ED99543B3A582F17F",
+      "sha256": "5ADCC6C11BA452912EF482B250FF1DF61AF89525DF08C96C32CA184EDB7CE816",
       "source_path": "reports\\training\\gold_pack\\training_readiness.json"
     },
     {
       "artifact_type": "training_readiness_report",
       "bundled_path": "reports\\training\\gold_pack\\training_readiness.md",
       "byte_count": 1122,
-      "sha256": "ADD1A3DAD8244CEADC5E389F516A5814F2E64C481AF8F01640A81AFD02458BC8",
+      "sha256": "CA3EDDE41B74E14A3C8176AE384D7F310E495639D5D12343C1B1DFA66E227649",
       "source_path": "reports\\training\\gold_pack\\training_readiness.md"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "reports\\training\\gold_seed_manifest.json",
-      "byte_count": 899,
-      "sha256": "934C101B9A0BF0B711F0A4AD886ADE4153DBD2522FDE9A46925416FDFDA0A432",
+      "byte_count": 901,
+      "sha256": "2518A4B5C12A85F90CC3F731C4AE467EB69B4D575CE3F5D93CC4CD1D4175240C",
       "source_path": "reports\\training\\gold_seed_manifest.json"
     },
     {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "reports\\training\\gold_seed_manifest.md",
       "byte_count": 639,
-      "sha256": "02AA0FB521DFAEBF17FDFF3ACCEE4840A956835B8B515A96B4E591295EF97B93",
+      "sha256": "D7380ABE149F0F17EB17A95064CB222B8C9E49939CA26C68AB57D8727DF17114",
       "source_path": "reports\\training\\gold_seed_manifest.md"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
       "byte_count": 92318,
-      "sha256": "62BCC509C71F583BB2BB8AA36D66DB5925906C95AF4C16358286BC022228C8C6",
+      "sha256": "8CD40CBC177813EE2D63BCCB3B5140FFAC5AA31F78D5DE94EC7114C0E8A32DC8",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md",
       "byte_count": 40695,
-      "sha256": "C5D361D1308609A1A624AFFCD4D6F33656D5A2007C5695F34517EE04D42336B6",
+      "sha256": "A38F629CBC9FAF71A3DBB71585942724B386E503AAA51F9B9CB1113A7F62351D",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md"
     },
     {
       "artifact_type": "dashboard_training_manifest",
       "bundled_path": "reports\\training\\governance\\dashboard_training_manifest.json",
-      "byte_count": 488,
-      "sha256": "1D060ECF8262F4E7C898E0459A26664AD978FBEF9EBE7CB527B8D867F7B17A53",
+      "byte_count": 489,
+      "sha256": "EF55E6EE5DDDB090C4033C772A0119A6AA2B445843AA64821EFBD519EBBE78FA",
       "source_path": "reports\\training\\governance\\dashboard_training_manifest.json"
     },
     {
       "artifact_type": "dashboard_training_manifest",
       "bundled_path": "reports\\training\\governance\\dashboard_training_manifest.md",
-      "byte_count": 371,
-      "sha256": "F7F5BD085D6F9DB2438C6496C224043315C1CD76B4FF002DAF4FFFB1F6031216",
+      "byte_count": 372,
+      "sha256": "2B858A7B646D4B6D203B1374BB1A445D25ACE6324CC37F97E0C0C6FBCCE52E5A",
       "source_path": "reports\\training\\governance\\dashboard_training_manifest.md"
     },
     {
@@ -1209,7 +1251,7 @@
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\governance\\training_config_suite_review.json",
       "byte_count": 12687,
-      "sha256": "3134A427E4CD2C7F648BDCCBCAD8023E4DBE2F6713346A11B71D1D0912CF5AF5",
+      "sha256": "35F03581A36767037FAB1116198963CCF96E3347B76B97E3537F6EA6B2F44720",
       "source_path": "reports\\training\\governance\\training_config_suite_review.json"
     },
     {
@@ -1236,43 +1278,43 @@
     {
       "artifact_type": "training_label_drift_report",
       "bundled_path": "reports\\training\\governance\\training_label_drift.json",
-      "byte_count": 4414,
-      "sha256": "693B099206FFBA9AC69E73E5E86EA91E3F2DE3551BD14E602E70DF36F59FC4FC",
+      "byte_count": 4559,
+      "sha256": "867BE5AA1ADA10998A280E437E03F41DE9EDC4093E5AE1977D95238C6C6E7180",
       "source_path": "reports\\training\\governance\\training_label_drift.json"
     },
     {
       "artifact_type": "training_label_drift_report",
       "bundled_path": "reports\\training\\governance\\training_label_drift.md",
-      "byte_count": 2517,
-      "sha256": "9448005CC1205BE5178D67C816BE964B68D4D0476BD5A6F61FAD64A378FDACE1",
+      "byte_count": 2584,
+      "sha256": "FC98A3C6B514F378C258F0A820AF18B59DD9FE021667CE750534C342B83D1FED",
       "source_path": "reports\\training\\governance\\training_label_drift.md"
     },
     {
       "artifact_type": "training_pack_comparison_report",
       "bundled_path": "reports\\training\\governance\\training_pack_comparison.json",
       "byte_count": 2830,
-      "sha256": "AA6DEFAE36D57150CD47A6CDEA5FDC8E7F0A74471D93AE2E8AE69BE738A1CCB0",
+      "sha256": "D79A363B5C890F928BDE1E7874F4154F98BF8BB8627963811340FF284C3D9102",
       "source_path": "reports\\training\\governance\\training_pack_comparison.json"
     },
     {
       "artifact_type": "training_pack_comparison_report",
       "bundled_path": "reports\\training\\governance\\training_pack_comparison.md",
       "byte_count": 1803,
-      "sha256": "DFBC8A20B77486AADFEDB41B4932D4553A7389963AAD638406EF4626C3F413ED",
+      "sha256": "CBF6278E990636B8F736E4115864F2DD8F832344E0F5DE5DA9425F0BB80AEB8E",
       "source_path": "reports\\training\\governance\\training_pack_comparison.md"
     },
     {
       "artifact_type": "training_pack_leakage_audit_report",
       "bundled_path": "reports\\training\\governance\\training_pack_leakage_audit.json",
       "byte_count": 4391,
-      "sha256": "9BF0361A2B1F939F6C9C3BDB0187AEDC56C7EFCA9D12BFB1907C567F7117BFC1",
+      "sha256": "773911637BC441A2426672C045FCACE5B78627636188664814920CF331A3161F",
       "source_path": "reports\\training\\governance\\training_pack_leakage_audit.json"
     },
     {
       "artifact_type": "training_pack_leakage_audit_report",
       "bundled_path": "reports\\training\\governance\\training_pack_leakage_audit.md",
       "byte_count": 1764,
-      "sha256": "C3BD56D1E8DBB36061D837CC3569F240D5AB86E1900CA9AD247A7E16FA5488DD",
+      "sha256": "C8816472938DF37D42F1075C57124662E96CE24CDDBFB56156F4EBC462642562",
       "source_path": "reports\\training\\governance\\training_pack_leakage_audit.md"
     },
     {
@@ -1292,43 +1334,43 @@
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.json",
-      "byte_count": 475,
-      "sha256": "D1378B95B1909446B84027AE85B01EF8A8AC46CD74558F801E5ABFDB64B3BC36",
+      "byte_count": 476,
+      "sha256": "5A4492265DF3EB7D1876B3D0DCB983792D2D161B7577A8C04A3EF745E3435FEA",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.json"
     },
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.md",
-      "byte_count": 422,
-      "sha256": "E7EDA44CC0F188EF0A87205ACECB69C4A5FA1B24B77E5ACE445BB354CBA7F9D8",
+      "byte_count": 423,
+      "sha256": "30E6210E9E4732CB941F006443D45660EF30FE96213D0F475A2FE05BC97CB418",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.md"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json",
       "byte_count": 92332,
-      "sha256": "A8F3815BF42483E777E12413896CAE256EA0DFE8921468C15ED7817ABAD9A907",
+      "sha256": "D2D08CD05F9F3BC43CBE6F4032142D22AF10ED6976FB3E59C14ED7FF89553EB2",
       "source_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.md",
       "byte_count": 40702,
-      "sha256": "71B5C8BA85EBF1345D04F7ADEFBABF9CA3F4515560F1E719C3A6B9F8F9259436",
+      "sha256": "7A565620DA2C4032026D4BC42A839C6F4295AAFE7DC36E82349B5B692BB5E5F6",
       "source_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.md"
     },
     {
       "artifact_type": "dashboard_training_manifest",
       "bundled_path": "reports\\training\\governance_strict\\dashboard_training_manifest.json",
-      "byte_count": 495,
-      "sha256": "AC2F92D346EC553706E6096B77403FAF2F819B24F3566A7373112ECEDBEFB7D1",
+      "byte_count": 496,
+      "sha256": "ACC173F90F911AEBD425A80FECF039E9842885955A18116C6F0DF181E0472E12",
       "source_path": "reports\\training\\governance_strict\\dashboard_training_manifest.json"
     },
     {
       "artifact_type": "dashboard_training_manifest",
       "bundled_path": "reports\\training\\governance_strict\\dashboard_training_manifest.md",
-      "byte_count": 371,
-      "sha256": "F7F5BD085D6F9DB2438C6496C224043315C1CD76B4FF002DAF4FFFB1F6031216",
+      "byte_count": 372,
+      "sha256": "2B858A7B646D4B6D203B1374BB1A445D25ACE6324CC37F97E0C0C6FBCCE52E5A",
       "source_path": "reports\\training\\governance_strict\\dashboard_training_manifest.md"
     },
     {
@@ -1363,7 +1405,7 @@
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\governance_strict\\training_config_suite_review.json",
       "byte_count": 12687,
-      "sha256": "3134A427E4CD2C7F648BDCCBCAD8023E4DBE2F6713346A11B71D1D0912CF5AF5",
+      "sha256": "35F03581A36767037FAB1116198963CCF96E3347B76B97E3537F6EA6B2F44720",
       "source_path": "reports\\training\\governance_strict\\training_config_suite_review.json"
     },
     {
@@ -1390,43 +1432,43 @@
     {
       "artifact_type": "training_label_drift_report",
       "bundled_path": "reports\\training\\governance_strict\\training_label_drift.json",
-      "byte_count": 4414,
-      "sha256": "693B099206FFBA9AC69E73E5E86EA91E3F2DE3551BD14E602E70DF36F59FC4FC",
+      "byte_count": 4559,
+      "sha256": "867BE5AA1ADA10998A280E437E03F41DE9EDC4093E5AE1977D95238C6C6E7180",
       "source_path": "reports\\training\\governance_strict\\training_label_drift.json"
     },
     {
       "artifact_type": "training_label_drift_report",
       "bundled_path": "reports\\training\\governance_strict\\training_label_drift.md",
-      "byte_count": 2517,
-      "sha256": "9448005CC1205BE5178D67C816BE964B68D4D0476BD5A6F61FAD64A378FDACE1",
+      "byte_count": 2584,
+      "sha256": "FC98A3C6B514F378C258F0A820AF18B59DD9FE021667CE750534C342B83D1FED",
       "source_path": "reports\\training\\governance_strict\\training_label_drift.md"
     },
     {
       "artifact_type": "training_pack_comparison_report",
       "bundled_path": "reports\\training\\governance_strict\\training_pack_comparison.json",
       "byte_count": 2830,
-      "sha256": "AA6DEFAE36D57150CD47A6CDEA5FDC8E7F0A74471D93AE2E8AE69BE738A1CCB0",
+      "sha256": "D79A363B5C890F928BDE1E7874F4154F98BF8BB8627963811340FF284C3D9102",
       "source_path": "reports\\training\\governance_strict\\training_pack_comparison.json"
     },
     {
       "artifact_type": "training_pack_comparison_report",
       "bundled_path": "reports\\training\\governance_strict\\training_pack_comparison.md",
       "byte_count": 1803,
-      "sha256": "DFBC8A20B77486AADFEDB41B4932D4553A7389963AAD638406EF4626C3F413ED",
+      "sha256": "CBF6278E990636B8F736E4115864F2DD8F832344E0F5DE5DA9425F0BB80AEB8E",
       "source_path": "reports\\training\\governance_strict\\training_pack_comparison.md"
     },
     {
       "artifact_type": "training_pack_leakage_audit_report",
       "bundled_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.json",
       "byte_count": 4391,
-      "sha256": "9BF0361A2B1F939F6C9C3BDB0187AEDC56C7EFCA9D12BFB1907C567F7117BFC1",
+      "sha256": "773911637BC441A2426672C045FCACE5B78627636188664814920CF331A3161F",
       "source_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.json"
     },
     {
       "artifact_type": "training_pack_leakage_audit_report",
       "bundled_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.md",
       "byte_count": 1764,
-      "sha256": "C3BD56D1E8DBB36061D837CC3569F240D5AB86E1900CA9AD247A7E16FA5488DD",
+      "sha256": "C8816472938DF37D42F1075C57124662E96CE24CDDBFB56156F4EBC462642562",
       "source_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.md"
     },
     {
@@ -1446,15 +1488,15 @@
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance_strict\\training_readiness_snapshot.json",
-      "byte_count": 475,
-      "sha256": "44F2DBA6630499B4008314BE67BF9B5BECF242F01D7BA2F57922ACC02978B9C0",
+      "byte_count": 476,
+      "sha256": "5A4492265DF3EB7D1876B3D0DCB983792D2D161B7577A8C04A3EF745E3435FEA",
       "source_path": "reports\\training\\governance_strict\\training_readiness_snapshot.json"
     },
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance_strict\\training_readiness_snapshot.md",
-      "byte_count": 422,
-      "sha256": "CEC0ED9B23722A81E56C525B23E07249E48EB38F3E8A1EBC2920969FFB0C71DB",
+      "byte_count": 423,
+      "sha256": "30E6210E9E4732CB941F006443D45660EF30FE96213D0F475A2FE05BC97CB418",
       "source_path": "reports\\training\\governance_strict\\training_readiness_snapshot.md"
     },
     {
@@ -1727,7 +1769,7 @@
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\training_config_suite_review.json",
       "byte_count": 12687,
-      "sha256": "3134A427E4CD2C7F648BDCCBCAD8023E4DBE2F6713346A11B71D1D0912CF5AF5",
+      "sha256": "35F03581A36767037FAB1116198963CCF96E3347B76B97E3537F6EA6B2F44720",
       "source_path": "reports\\training\\training_config_suite_review.json"
     },
     {
@@ -1740,29 +1782,29 @@
     {
       "artifact_type": "training_label_drift_report",
       "bundled_path": "reports\\training\\training_label_drift.json",
-      "byte_count": 4414,
-      "sha256": "693B099206FFBA9AC69E73E5E86EA91E3F2DE3551BD14E602E70DF36F59FC4FC",
+      "byte_count": 4559,
+      "sha256": "867BE5AA1ADA10998A280E437E03F41DE9EDC4093E5AE1977D95238C6C6E7180",
       "source_path": "reports\\training\\training_label_drift.json"
     },
     {
       "artifact_type": "training_label_drift_report",
       "bundled_path": "reports\\training\\training_label_drift.md",
-      "byte_count": 2517,
-      "sha256": "9448005CC1205BE5178D67C816BE964B68D4D0476BD5A6F61FAD64A378FDACE1",
+      "byte_count": 2584,
+      "sha256": "FC98A3C6B514F378C258F0A820AF18B59DD9FE021667CE750534C342B83D1FED",
       "source_path": "reports\\training\\training_label_drift.md"
     },
     {
       "artifact_type": "training_pack_comparison_report",
       "bundled_path": "reports\\training\\training_pack_comparison.json",
       "byte_count": 2830,
-      "sha256": "AA6DEFAE36D57150CD47A6CDEA5FDC8E7F0A74471D93AE2E8AE69BE738A1CCB0",
+      "sha256": "D79A363B5C890F928BDE1E7874F4154F98BF8BB8627963811340FF284C3D9102",
       "source_path": "reports\\training\\training_pack_comparison.json"
     },
     {
       "artifact_type": "training_pack_comparison_report",
       "bundled_path": "reports\\training\\training_pack_comparison.md",
       "byte_count": 1803,
-      "sha256": "DFBC8A20B77486AADFEDB41B4932D4553A7389963AAD638406EF4626C3F413ED",
+      "sha256": "CBF6278E990636B8F736E4115864F2DD8F832344E0F5DE5DA9425F0BB80AEB8E",
       "source_path": "reports\\training\\training_pack_comparison.md"
     },
     {
@@ -1831,7 +1873,7 @@
   ],
   "manifest_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
   "output_dir": "reports\\training\\governance\\bundle",
-  "total_bytes": 800856,
+  "total_bytes": 918442,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": []
 }

@@ -2,7 +2,7 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Created UTC: 2026-06-27T09:41:25.928506+00:00
+- Created UTC: 2026-06-27T10:08:31.745218+00:00
 - Passed: True
 - Steps: 8/8 passed
 
@@ -11,7 +11,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\python.exe -m pytest -q`
-- Detail: ........................................................................ [ 33%] | ........................................................................ [ 67%] | ....................................................................     [100%] | 212 passed in 11.90s
+- Detail: ........................................................................ [ 33%] | ........................................................................ [ 66%] | ........................................................................ [100%] | 216 passed in 12.07s
 
 ### pip_check
 - Status: pass
@@ -35,7 +35,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\gbmbert-platform-regression.exe --skip-tests --skip-pip-check --reports-dir reports\platform_regression`
-- Detail: - scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=467) | ## Warnings | - none
+- Detail: - scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=474) | ## Warnings | - none
 
 ### launcher_menu_check
 - Status: pass

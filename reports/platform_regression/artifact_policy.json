@@ -2,9 +2,9 @@
   "finding_count": 0,
   "findings": [],
   "missing_required_count": 0,
-  "required_count": 24,
+  "required_count": 25,
   "root": ".",
   "safe": true,
-  "tracked_count": 610,
+  "tracked_count": 619,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }

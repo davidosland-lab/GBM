@@ -195,6 +195,10 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "Relation config review": base / "reports/training/relation_training_config_review.md",
         "Training pack comparison": base / "reports/training/training_pack_comparison.md",
         "Training config suite": base / "reports/training/training_config_suite_review.md",
+        "Training label drift": base / "reports/training/training_label_drift.md",
+        "Curated fixture import": base / "reports/training/curated_fixture_import.md",
+        "Gold-pack promotion review": base / "reports/training/gold_pack/gold_pack_promotion_review.md",
+        "Launcher menu check": base / "reports/platform_regression/launcher_menu_check.md",
         "Model registry audit": base / "reports/training/model_registry_audit.md",
         "Evidence smoke model card": base / "reports/training/evidence_smoke_fixture/evidence_smoke_model_card.md",
     }
@@ -208,6 +212,10 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "Relation config review": base / "reports/training/relation_training_config_review.json",
         "Training pack comparison": base / "reports/training/training_pack_comparison.json",
         "Training config suite": base / "reports/training/training_config_suite_review.json",
+        "Training label drift": base / "reports/training/training_label_drift.json",
+        "Curated fixture import": base / "reports/training/curated_fixture_import.json",
+        "Gold-pack promotion review": base / "reports/training/gold_pack/gold_pack_promotion_review.json",
+        "Launcher menu check": base / "reports/platform_regression/launcher_menu_check.json",
         "Model registry audit": base / "reports/training/model_registry_audit.json",
         "Checkpoint registry": base / "models/checkpoint_registry.json",
     }
@@ -249,6 +257,10 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         current_config_passed = int(suite.get("passed_count") or 0)
         current_config_failed = int(suite.get("blocking_failed_count") or suite.get("failed_count") or 0)
         scaffold_config_count = int(suite.get("scaffold_count") or 0)
+    label_drift_warnings = int(payloads.get("Training label drift", {}).get("warning_count") or 0) if isinstance(payloads.get("Training label drift"), dict) else 0
+    launcher_menu_safe = payloads.get("Launcher menu check", {}).get("safe") if isinstance(payloads.get("Launcher menu check"), dict) else None
+    curated_fixture_safe = payloads.get("Curated fixture import", {}).get("safe") if isinstance(payloads.get("Curated fixture import"), dict) else None
+    gold_pack_promotable = payloads.get("Gold-pack promotion review", {}).get("promotable") if isinstance(payloads.get("Gold-pack promotion review"), dict) else None
     return {
         "reports": reports,
         "payloads": payloads,
@@ -260,6 +272,10 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "current_config_passed_count": current_config_passed,
         "current_config_failed_count": current_config_failed,
         "scaffold_config_count": scaffold_config_count,
+        "label_drift_warning_count": label_drift_warnings,
+        "launcher_menu_safe": launcher_menu_safe,
+        "curated_fixture_safe": curated_fixture_safe,
+        "gold_pack_promotable": gold_pack_promotable,
     }
 
 
@@ -271,6 +287,13 @@ def render_training_artifacts_page(st: object) -> None:
         st.metric("Relation config review", context["relation_config_status"])
     st.metric("Current config failures", context["current_config_failed_count"])
     st.metric("Scaffold configs", context["scaffold_config_count"])
+    st.metric("Label drift warnings", context["label_drift_warning_count"])
+    if context["launcher_menu_safe"] is not None:
+        st.metric("Launcher check", "safe" if context["launcher_menu_safe"] else "findings")
+    if context["curated_fixture_safe"] is not None:
+        st.metric("Curated import", "safe" if context["curated_fixture_safe"] else "findings")
+    if context["gold_pack_promotable"] is not None:
+        st.metric("Gold-pack promotion", "ready" if context["gold_pack_promotable"] else "blocked")
     if context["registry_entry_count"]:
         st.metric("Registry entries", context["registry_entry_count"])
     if context["registry_audit_passed"] is not None:

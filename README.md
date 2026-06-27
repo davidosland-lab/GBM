@@ -33,6 +33,8 @@ This repository currently implements the Phase 1-3 research scaffold plus a loca
 - GBM-BERT evidence-classifier training execution with evaluation metrics, run manifests, and registry integration.
 - GBM-BERT research batch scoring, model-card generation, and no-download training smoke fixture.
 - GBM-BERT prediction review queues, active learning candidate exports, reviewed CSV import, curation summaries, quality/audit reports, curated evidence exports, overlay diffs, load guards, and graph evidence-tier overlays.
+- GBM-BERT curated training fixture import across repeated evidence/entity/reviewed-queue files with combined JSONL outputs for evidence, NER, and relation pack rebuilds.
+- Gold-pack promotion review with thresholds tracked in `configs/training/gold_pack_promotion_thresholds.json`.
 - Local environment preflight checks.
 - Neo4j-oriented knowledge graph schema, loader, query helpers, and read-only inspection.
 - Dry-run graph load reports in Markdown and JSON.
@@ -311,16 +313,18 @@ gbmbert-training-readiness-snapshot --markdown-output reports/training/training_
 gbmbert-dashboard-training-manifest --output reports/training/dashboard_training_manifest.json --markdown-output reports/training/dashboard_training_manifest.md
 gbmbert-run-training-governance-suite --output-dir reports/training/governance
 gbmbert-run-strict-training-governance --output-dir reports/training/governance_strict --allow-findings
-gbmbert-import-curated-training-fixture --evidence-jsonl data/training/curated_expansion/evidence_full_label.jsonl --entity-jsonl data/training/curated_expansion/gold_entities.jsonl --reviewed-queue-jsonl data/training/curated_expansion/gold_reviewed_queue.jsonl --output-dir data/training/curated_import --no-copy --markdown-output reports/training/curated_fixture_import.md --json-output reports/training/curated_fixture_import.json
-gbmbert-review-gold-pack-promotion --markdown-output reports/training/gold_pack/gold_pack_promotion_review.md --json-output reports/training/gold_pack/gold_pack_promotion_review.json --allow-blockers
+gbmbert-import-curated-training-fixture --evidence-jsonl data/training/curated_expansion/evidence_full_label.jsonl --evidence-jsonl data/training/curated_expansion/evidence_round2.jsonl --entity-jsonl data/training/curated_expansion/gold_entities.jsonl --entity-jsonl data/training/curated_expansion/gold_entities_round2.jsonl --reviewed-queue-jsonl data/training/curated_expansion/gold_reviewed_queue.jsonl --reviewed-queue-jsonl data/training/curated_expansion/gold_reviewed_queue_round2.jsonl --output-dir data/training/curated_import --no-copy --markdown-output reports/training/curated_fixture_import.md --json-output reports/training/curated_fixture_import.json
+gbmbert-review-gold-pack-promotion --threshold-config configs/training/gold_pack_promotion_thresholds.json --markdown-output reports/training/gold_pack/gold_pack_promotion_review.md --json-output reports/training/gold_pack/gold_pack_promotion_review.json --allow-blockers
 gbmbert-check-launcher-menu --markdown-output reports/platform_regression/launcher_menu_check.md --json-output reports/platform_regression/launcher_menu_check.json
+gbmbert-ci-report-summary --output reports/platform_regression/ci_report_summary.md
 ```
 
 The default governance suite treats `governance_profile=current` configs as blocking and `governance_profile=scaffold` configs as visible but nonblocking future scaffolds. Use `gbmbert-run-strict-training-governance` or `--strict-scaffolds` on the lower-level review commands when scaffold gaps should fail the audit profile.
 Label drift checks use each config's governance dataset paths when present, so current smoke configs are not compared against larger scaffold packs.
 
 Planning artifacts for the next training-data expansion are tracked at `reports/training/gold_pack/gold_pack_expansion_plan.md` and `reports/training/evidence_pack/full_label_coverage_plan.md`.
-Promotion thresholds are tracked at `reports/training/gold_pack/gold_pack_promotion_review.md`; the current minimal fixture is not promotion-ready.
+Promotion thresholds are configured at `configs/training/gold_pack_promotion_thresholds.json` and reported at `reports/training/gold_pack/gold_pack_promotion_review.md`; the current fixture is not promotion-ready.
+The CI workflow writes a compact Markdown summary to `reports/platform_regression/ci_report_summary.md` and appends it to the GitHub Actions step summary.
 
 Build an evidence-only training pack for evidence classification experiments:
 

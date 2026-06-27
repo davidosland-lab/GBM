@@ -7,9 +7,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Warnings: 3
 
 ## Split PMIDs
-- evidence/evidence/test: PMIDs=1, examples=1
-- evidence/evidence/train: PMIDs=10, examples=10
-- evidence/evidence/validation: PMIDs=1, examples=1
+- evidence/evidence/test: PMIDs=1, examples=2
+- evidence/evidence/train: PMIDs=10, examples=14
+- evidence/evidence/validation: PMIDs=1, examples=2
 - evidence/ner/test: PMIDs=0, examples=0
 - evidence/ner/train: PMIDs=0, examples=0
 - evidence/ner/validation: PMIDs=0, examples=0
@@ -25,15 +25,15 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - relation/relation/test: PMIDs=0, examples=0
 - relation/relation/train: PMIDs=1, examples=4
 - relation/relation/validation: PMIDs=1, examples=2
-- gold/evidence/test: PMIDs=1, examples=1
-- gold/evidence/train: PMIDs=10, examples=10
-- gold/evidence/validation: PMIDs=1, examples=1
-- gold/ner/test: PMIDs=1, examples=2
-- gold/ner/train: PMIDs=10, examples=20
-- gold/ner/validation: PMIDs=1, examples=2
-- gold/relation/test: PMIDs=1, examples=1
-- gold/relation/train: PMIDs=10, examples=10
-- gold/relation/validation: PMIDs=1, examples=1
+- gold/evidence/test: PMIDs=1, examples=2
+- gold/evidence/train: PMIDs=10, examples=14
+- gold/evidence/validation: PMIDs=1, examples=2
+- gold/ner/test: PMIDs=1, examples=4
+- gold/ner/train: PMIDs=10, examples=28
+- gold/ner/validation: PMIDs=1, examples=4
+- gold/relation/test: PMIDs=1, examples=2
+- gold/relation/train: PMIDs=10, examples=14
+- gold/relation/validation: PMIDs=1, examples=2
 
 ## Within-Pack Warnings
 - none

@@ -1153,14 +1153,14 @@
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
       "byte_count": 92318,
-      "sha256": "62BCC509C71F583BB2BB8AA36D66DB5925906C95AF4C16358286BC022228C8C6",
+      "sha256": "647C25D615AA4DC72B6F608F9C5FA01ECB202EF37216460B0EA54E8CDD1E3200",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md",
       "byte_count": 40695,
-      "sha256": "C5D361D1308609A1A624AFFCD4D6F33656D5A2007C5695F34517EE04D42336B6",
+      "sha256": "A38F629CBC9FAF71A3DBB71585942724B386E503AAA51F9B9CB1113A7F62351D",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md"
     },
     {
@@ -1293,28 +1293,28 @@
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.json",
       "byte_count": 475,
-      "sha256": "D1378B95B1909446B84027AE85B01EF8A8AC46CD74558F801E5ABFDB64B3BC36",
+      "sha256": "36D2EC1BBC1CBB6524B878A6982CA92FC6C3DDCFF150206801C9511691F4D766",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.json"
     },
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.md",
       "byte_count": 422,
-      "sha256": "E7EDA44CC0F188EF0A87205ACECB69C4A5FA1B24B77E5ACE445BB354CBA7F9D8",
+      "sha256": "3049E6D3A9E0157114A1135C9BA9A3198ADB67F36A90C3E9CC03A5AF2030DEF7",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.md"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json",
-      "byte_count": 90973,
-      "sha256": "51FA636EC23E3C37DCEAB09FEFE9FA283A6F1FFB9C11E9C0FFBF5A2DC69A1F25",
+      "byte_count": 92332,
+      "sha256": "A8F3815BF42483E777E12413896CAE256EA0DFE8921468C15ED7817ABAD9A907",
       "source_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.md",
-      "byte_count": 40132,
-      "sha256": "D13F28586F5BF377EDCC90F2763418D528E2AFAD63A4DA854E77D6ACF3F41E07",
+      "byte_count": 40702,
+      "sha256": "71B5C8BA85EBF1345D04F7ADEFBABF9CA3F4515560F1E719C3A6B9F8F9259436",
       "source_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.md"
     },
     {
@@ -1447,14 +1447,14 @@
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance_strict\\training_readiness_snapshot.json",
       "byte_count": 475,
-      "sha256": "1E37DF14ADE67255BB42A2706571697CA88FFD8AB3C25C3A405EC0E2E7E8D73E",
+      "sha256": "44F2DBA6630499B4008314BE67BF9B5BECF242F01D7BA2F57922ACC02978B9C0",
       "source_path": "reports\\training\\governance_strict\\training_readiness_snapshot.json"
     },
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance_strict\\training_readiness_snapshot.md",
       "byte_count": 422,
-      "sha256": "6709D1B07424A3BBB761BEA47C82923D67D39970020D7CE2A978413CEDF8E7E1",
+      "sha256": "CEC0ED9B23722A81E56C525B23E07249E48EB38F3E8A1EBC2920969FFB0C71DB",
       "source_path": "reports\\training\\governance_strict\\training_readiness_snapshot.md"
     },
     {
@@ -1831,7 +1831,7 @@
   ],
   "manifest_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json",
   "output_dir": "reports\\training\\governance_strict\\bundle",
-  "total_bytes": 798927,
+  "total_bytes": 800856,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": []
 }

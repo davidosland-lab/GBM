@@ -1,41 +1,41 @@
 {
   "blockers": [
-    "evidence has 12 examples; needs at least 100",
-    "evidence labels below 10 examples: 0=2, 1=2, 2=2, 3=2, 4=2, 5=2",
-    "ner has 24 examples; needs at least 100",
-    "ner labels below 10 examples: BIOMARKER=2, CELL_STATE=2, CELL_TYPE=2, DELIVERY_MODIFIER=2, DISEASE=2, DRUG=2, GENE=2, OUTCOME=2, PATHWAY=2, TREATMENT=2, TRIAL_PHASE=2, UNKNOWN=2",
-    "relation has 12 examples; needs at least 100",
-    "relation labels below 10 examples: ASSOCIATED_WITH=4, NO_RELATION=4, PREDICTS=4",
+    "evidence has 18 examples; needs at least 100",
+    "evidence labels below 10 examples: 0=3, 1=3, 2=3, 3=3, 4=3, 5=3",
+    "ner has 36 examples; needs at least 100",
+    "ner labels below 10 examples: BIOMARKER=3, CELL_STATE=3, CELL_TYPE=3, DELIVERY_MODIFIER=3, DISEASE=3, DRUG=3, GENE=3, OUTCOME=3, PATHWAY=3, TREATMENT=3, TRIAL_PHASE=3, UNKNOWN=3",
+    "relation has 18 examples; needs at least 100",
+    "relation labels below 10 examples: ASSOCIATED_WITH=6, NO_RELATION=6, PREDICTS=6",
     "source PMID count is 12; needs at least 50"
   ],
   "gold_pack_report": "reports\\training\\gold_pack\\gold_training_pack.json",
   "label_counts": {
     "evidence": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2,
-      "5": 2
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3
     },
     "ner": {
-      "BIOMARKER": 2,
-      "CELL_STATE": 2,
-      "CELL_TYPE": 2,
-      "DELIVERY_MODIFIER": 2,
-      "DISEASE": 2,
-      "DRUG": 2,
-      "GENE": 2,
-      "OUTCOME": 2,
-      "PATHWAY": 2,
-      "TREATMENT": 2,
-      "TRIAL_PHASE": 2,
-      "UNKNOWN": 2
+      "BIOMARKER": 3,
+      "CELL_STATE": 3,
+      "CELL_TYPE": 3,
+      "DELIVERY_MODIFIER": 3,
+      "DISEASE": 3,
+      "DRUG": 3,
+      "GENE": 3,
+      "OUTCOME": 3,
+      "PATHWAY": 3,
+      "TREATMENT": 3,
+      "TRIAL_PHASE": 3,
+      "UNKNOWN": 3
     },
     "relation": {
-      "ASSOCIATED_WITH": 4,
-      "NO_RELATION": 4,
-      "PREDICTS": 4
+      "ASSOCIATED_WITH": 6,
+      "NO_RELATION": 6,
+      "PREDICTS": 6
     }
   },
   "min_examples_per_label": 10,
@@ -45,9 +45,10 @@
   "promotable": false,
   "source_pmid_count": 12,
   "task_counts": {
-    "evidence": 12,
-    "ner": 24,
-    "relation": 12
+    "evidence": 18,
+    "ner": 36,
+    "relation": 18
   },
+  "threshold_config": "configs\\training\\gold_pack_promotion_thresholds.json",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }

@@ -75,6 +75,8 @@
       "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
+          "CELL_TYPE",
+          "DRUG",
           "OUTCOME",
           "PATHWAY"
         ],
@@ -86,13 +88,17 @@
           "DISEASE",
           "DRUG",
           "GENE",
+          "OUTCOME",
+          "PATHWAY",
           "TREATMENT",
           "TRIAL_PHASE",
           "UNKNOWN"
         ],
         "validation": [
+          "DELIVERY_MODIFIER",
           "OUTCOME",
-          "PATHWAY"
+          "PATHWAY",
+          "TRIAL_PHASE"
         ]
       },
       "governance_profile": "scaffold",

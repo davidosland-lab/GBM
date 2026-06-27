@@ -11,9 +11,9 @@
     },
     {
       "evaluation_file": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",
-      "examples": 1,
+      "examples": 2,
       "label_counts": {
-        "1": 1
+        "1": 2
       },
       "majority_accuracy": 1.0,
       "majority_label": "1",

@@ -2,33 +2,33 @@
   "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
   "files": {
     "evidence_test.jsonl": {
-      "examples": 1,
+      "examples": 2,
       "label_counts": {
-        "1": 1
+        "1": 2
       },
       "missing_text": 0,
-      "sha256": "70EFAF4FFDDA4C628B628F9E43FEF8A5BEB2D8461C1B283D0D550D63BCAF5D44"
+      "sha256": "119042211944856E9BB217AF2AA2110AB90D5ECA34358E26F80E8A9D7ECBCFC7"
     },
     "evidence_train.jsonl": {
-      "examples": 10,
+      "examples": 14,
       "label_counts": {
-        "0": 2,
+        "0": 3,
         "1": 1,
-        "2": 2,
-        "3": 2,
+        "2": 3,
+        "3": 3,
         "4": 1,
-        "5": 2
+        "5": 3
       },
       "missing_text": 0,
-      "sha256": "5C36D9181E52E9FDCB1BE0BA118EBF632473CD5575406A49BC2C3EFEACB49BEF"
+      "sha256": "14C79F64E380B9718580B0516E76065533C4D01F427BDA675B15249B537F01BB"
     },
     "evidence_validation.jsonl": {
-      "examples": 1,
+      "examples": 2,
       "label_counts": {
-        "4": 1
+        "4": 2
       },
       "missing_text": 0,
-      "sha256": "C7CA2981FE2091B06BF9449A5AEE97E94C87C7D5BB44A79ABAC311853097D19E"
+      "sha256": "9D1212176F49C0F2C6CA4FB67B4DBAC9D38CB90CCBBA0B06193AD504E2B92EEB"
     },
     "ner_test.jsonl": {
       "examples": 0,
@@ -67,7 +67,7 @@
       "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
     }
   },
-  "total_examples": 12,
+  "total_examples": 18,
   "warnings": [
     "ner_test.jsonl: no examples",
     "ner_train.jsonl: no examples",

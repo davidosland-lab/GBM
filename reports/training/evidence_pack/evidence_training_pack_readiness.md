@@ -11,17 +11,17 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ## Tasks
 ### evidence
 - Ready: True
-- Examples: 12
+- Examples: 18
 - Duplicates: 0
 - Invalid NER spans: 0
 - Dominant label fraction: 0.167
 - Labels:
-- 0: 2
-- 1: 2
-- 2: 2
-- 3: 2
-- 4: 2
-- 5: 2
+- 0: 3
+- 1: 3
+- 2: 3
+- 3: 3
+- 4: 3
+- 5: 3
 - Warnings:
 - none
 

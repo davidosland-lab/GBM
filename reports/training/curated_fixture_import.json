@@ -1,19 +1,36 @@
 {
+  "combined_files": {
+    "entities": "data\\training\\curated_import\\combined_entities.jsonl",
+    "evidence": "data\\training\\curated_import\\combined_evidence.jsonl",
+    "reviewed_queue": "data\\training\\curated_import\\combined_reviewed_queue.jsonl"
+  },
   "copied_files": {},
   "entity_path": "data\\training\\curated_expansion\\gold_entities.jsonl",
-  "entity_rows": 24,
+  "entity_paths": [
+    "data\\training\\curated_expansion\\gold_entities.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round2.jsonl"
+  ],
+  "entity_rows": 36,
   "evidence_path": "data\\training\\curated_expansion\\evidence_full_label.jsonl",
-  "evidence_rows": 12,
+  "evidence_paths": [
+    "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+    "data\\training\\curated_expansion\\evidence_round2.jsonl"
+  ],
+  "evidence_rows": 18,
   "missing_pmid_count": 0,
   "missing_review_metadata_count": 0,
   "output_dir": "data\\training\\curated_import",
   "pmid_count": 12,
   "reviewed_item_types": {
-    "evidence_claim": 12,
-    "graph_relation": 12
+    "evidence_claim": 18,
+    "graph_relation": 18
   },
   "reviewed_queue_path": "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
-  "reviewed_queue_rows": 24,
+  "reviewed_queue_paths": [
+    "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl"
+  ],
+  "reviewed_queue_rows": 36,
   "safe": true,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warning_count": 0,

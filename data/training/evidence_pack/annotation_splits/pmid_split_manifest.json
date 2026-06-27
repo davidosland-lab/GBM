@@ -36,25 +36,25 @@
     {
       "label_counts": {
         "test": {
-          "1": 1
+          "1": 2
         },
         "train": {
-          "0": 2,
+          "0": 3,
           "1": 1,
-          "2": 2,
-          "3": 2,
+          "2": 3,
+          "3": 3,
           "4": 1,
-          "5": 2
+          "5": 3
         },
         "validation": {
-          "4": 1
+          "4": 2
         }
       },
       "source_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
       "split_counts": {
-        "test": 1,
-        "train": 10,
-        "validation": 1
+        "test": 2,
+        "train": 14,
+        "validation": 2
       },
       "split_files": {
         "test": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",

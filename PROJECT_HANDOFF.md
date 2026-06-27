@@ -49,7 +49,7 @@ The project has working local scaffolding and CLI workflows for:
 - Streamlit dashboard shell
 - GBM-BERT training scaffold, dataset splitting, label maps, dataset cards, baseline reports, experiment manifests, checkpoint registry metadata, gated training runner, HF dataset loaders, tokenizer pipeline, evidence classifier training execution, evaluation reports, run manifests, evidence batch inference, model cards, and smoke fixture
 
-## Recently Implemented PR111-134
+## Recently Implemented PR111-139
 
 PR111 NER Registry Retirement:
 
@@ -184,6 +184,35 @@ PR134 Gold Pack Promotion Review:
 - Promotion thresholds are currently 100 examples per task, 10 examples per label, and 50 source PMIDs.
 - The current minimal fixture is explicitly not promotion-ready.
 
+PR135 Curated Import Batch Scaling:
+
+- `gbmbert-import-curated-training-fixture` now accepts repeated evidence, entity, and reviewed-queue JSONL inputs.
+- The importer writes combined evidence, entity, and reviewed queue JSONL files under `data\training\curated_import`.
+- Source PMID and review metadata validation remain mandatory.
+
+PR136 Promotion Threshold Configuration:
+
+- Added `configs\training\gold_pack_promotion_thresholds.json`.
+- `gbmbert-review-gold-pack-promotion` now reads reviewable thresholds from that config by default.
+- Governance scans now ignore non-training threshold JSON when selecting model training configs.
+
+PR137 CI Markdown Summary:
+
+- Added `gbmbert-ci-report-summary`.
+- GitHub Actions appends `reports\platform_regression\ci_report_summary.md` to the step summary after verification and strict governance.
+- The CI summary is now a required handoff/platform artifact.
+
+PR138 Dashboard Governance Context Refresh:
+
+- Dashboard training context now surfaces label drift warnings, launcher menu safety, curated import safety, and gold-pack promotion state.
+- Training artifact dashboard links now include the refreshed governance reports.
+
+PR139 Larger Gold-Pack Curation Round:
+
+- Added second-round curated fixture files under `data\training\curated_expansion`.
+- Rebuilt the combined curated import, evidence pack, gold seed, gold pack, relation quality, provenance, drift, comparison, and promotion-review reports.
+- Current gold pack is locally ready with 18 evidence, 36 NER, and 18 relation examples, while promotion remains blocked by threshold config.
+
 ## Latest Verification
 
 Last verified from `C:\Users\david\GBM` using the project `.venv`:
@@ -198,17 +227,18 @@ Last verified from `C:\Users\david\GBM` using the project `.venv`:
 
 Results:
 
-- Tests: `212 passed`
+- Tests: `216 passed`
 - `pip check`: no broken requirements
 - Scope drift monitor: safe, 0 findings
 - Platform regression: passed
-- Artifact policy: safe, 0 findings
-- Artifact index refreshed: 467 artifacts
+- Artifact policy: safe, 25 required artifacts, 0 findings
+- Artifact index refreshed: 474 artifacts
 - Default training governance suite: passed, 10/10, no blocking warnings
 - Strict training governance audit: ran with `--allow-findings`; scaffold findings remain visible for unpromoted full-label evidence coverage
 - Label drift: 0 warnings, using config-specific governance datasets
 - Launcher menu check: safe, 0 findings
-- Gold-pack promotion review: not promotable; current fixture is below promotion thresholds
+- CI report summary: tracked at `reports\platform_regression\ci_report_summary.md`
+- Gold-pack promotion review: not promotable; current fixture has 18 evidence, 36 NER, 18 relation examples and 12 source PMIDs, below promotion thresholds
 - Training config suite: 5 configs, 3 current passed, 0 current failed, 2 scaffold configs
 - Model registry audit: passed, 1 checkpoint, 0 findings
 
@@ -255,13 +285,19 @@ Run launcher menu check:
 Validate curated fixture import:
 
 ```powershell
-.\.venv\Scripts\gbmbert-import-curated-training-fixture.exe --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --output-dir data\training\curated_import --no-copy --markdown-output reports\training\curated_fixture_import.md --json-output reports\training\curated_fixture_import.json
+.\.venv\Scripts\gbmbert-import-curated-training-fixture.exe --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --output-dir data\training\curated_import --no-copy --markdown-output reports\training\curated_fixture_import.md --json-output reports\training\curated_fixture_import.json
 ```
 
 Review gold-pack promotion thresholds:
 
 ```powershell
-.\.venv\Scripts\gbmbert-review-gold-pack-promotion.exe --markdown-output reports\training\gold_pack\gold_pack_promotion_review.md --json-output reports\training\gold_pack\gold_pack_promotion_review.json --allow-blockers
+.\.venv\Scripts\gbmbert-review-gold-pack-promotion.exe --threshold-config configs\training\gold_pack_promotion_thresholds.json --markdown-output reports\training\gold_pack\gold_pack_promotion_review.md --json-output reports\training\gold_pack\gold_pack_promotion_review.json --allow-blockers
+```
+
+Build CI summary:
+
+```powershell
+.\.venv\Scripts\gbmbert-ci-report-summary.exe --output reports\platform_regression\ci_report_summary.md
 ```
 
 Run strict training governance audit:
@@ -319,6 +355,7 @@ Knowledge Graph Explorer:
 - `src\gbmbert\training\readiness.py`
 - `src\gbmbert\training\preparation.py`
 - `src\gbmbert\artifact_policy.py`
+- `src\gbmbert\ci_report_summary.py`
 - `src\gbmbert\launcher_check.py`
 - `src\gbmbert\verification.py`
 - `src\gbmbert\training\curated_fixture_import.py`
@@ -330,26 +367,30 @@ Knowledge Graph Explorer:
 
 ## Recommended Next PR Series
 
-PR135 Curated Import Batch Scaling:
+PR140 Multi-Batch Curation Provenance Diff:
 
-- Add support for validating multiple curated fixture files in one import manifest.
-- Keep source PMID and review metadata mandatory.
+- Add a report that compares curated import batches by source file, PMID, task, label, reviewer, and review status.
+- Highlight duplicate, changed, or withdrawn reviewed examples before pack rebuilds.
 
-PR136 Promotion Threshold Configuration:
+PR141 Promotion Threshold Review UX:
 
-- Move gold-pack promotion thresholds into a config file so thresholds are reviewable without code edits.
+- Add a small CLI/report that explains configured promotion thresholds, observed pack counts, and the exact delta to promotion readiness.
+- Keep the output explicitly research-use-only and nonclinical.
 
-PR137 CI Report Summary:
+PR142 CI Summary Hardening:
 
-- Add a compact Markdown summary to GitHub Actions output in addition to uploaded artifacts.
+- Add tests and workflow guardrails that fail when the CI summary cannot read required verification or governance reports.
+- Keep promotion-review and strict-governance findings as review signals rather than default failures.
 
-PR138 Governance Dashboard Refresh:
+PR143 Dashboard Governance Detail Links:
 
-- Surface label drift, launcher check, curated import, and promotion-review state in the dashboard training context.
+- Add dashboard detail rows for each governance report path and status.
+- Make missing report files visible without implying model or clinical readiness.
 
-PR139 Larger Gold-Pack Curation Round:
+PR144 Third Curated Expansion Round:
 
-- Use the curated fixture importer for the next reviewed batch and rebuild evidence, NER, and relation packs.
+- Add the next reviewed fixture batch to increase PMIDs and per-label counts toward promotion thresholds.
+- Rebuild combined import, evidence, NER, relation, quality, provenance, comparison, drift, and promotion-review reports.
 
 ## Suggested Prompt For New Chat
 
@@ -360,5 +401,5 @@ Project root is C:\Users\david\GBM. Use the local .venv only.
 
 This is the GBM-AI Platform, a research-use-only glioblastoma literature intelligence platform. Persistent boundary: Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, docs\ARTIFACT_POLICY.md, docs\LAUNCHER_MENU.md, CHANGELOG.md, and the latest reports\artifact_index.md. Then continue from PR135. First verify the current state with gbmbert-verify-local unless the handoff says it was just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
+Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, docs\ARTIFACT_POLICY.md, docs\LAUNCHER_MENU.md, CHANGELOG.md, and the latest reports\artifact_index.md. Then continue from PR140. First verify the current state with gbmbert-verify-local unless the handoff says it was just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
 ```

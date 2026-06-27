@@ -145,6 +145,7 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     (review_report_dir / "local_verification.md").write_text("# Verification\n", encoding="utf-8")
     (review_report_dir / "artifact_policy.md").write_text("# Artifact Policy\n", encoding="utf-8")
     (review_report_dir / "launcher_menu_check.md").write_text("# Launcher\n", encoding="utf-8")
+    (review_report_dir / "ci_report_summary.md").write_text("# CI Summary\n", encoding="utf-8")
     (review_report_dir / "adjudication_report.md").write_text("# Adjudication\n", encoding="utf-8")
     (review_report_dir / "curation_regression_pack.md").write_text("# Regression\n", encoding="utf-8")
     (review_report_dir / "gold_seed_manifest.md").write_text("# Gold\n", encoding="utf-8")
@@ -200,6 +201,7 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     assert by_name["training_governance_suite.md"].artifact_type == "training_governance_suite_report"
     assert by_name["evidence_training_pack.md"].artifact_type == "evidence_training_pack_report"
     assert by_name["training_config_review.md"].artifact_type == "training_config_review_report"
+    assert by_name["ci_report_summary.md"].artifact_type == "ci_report_summary"
     assert by_name["relation_negatives.jsonl"].artifact_type == "relation_negative_dataset"
     assert by_name["relation_training_pack.jsonl"].artifact_type == "relation_training_dataset"
     assert by_name["active_learning_candidates.jsonl"].artifact_type == "active_learning_candidates"

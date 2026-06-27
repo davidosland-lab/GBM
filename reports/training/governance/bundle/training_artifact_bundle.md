@@ -3,13 +3,19 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Output directory: `reports\training\governance\bundle`
-- Artifacts: 261
-- Total bytes: 800856
+- Artifacts: 267
+- Total bytes: 918442
 
 ## Artifacts
 - `data\training\curated_expansion\evidence_full_label.jsonl` -> `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims)
+- `data\training\curated_expansion\evidence_round2.jsonl` -> `data\training\curated_expansion\evidence_round2.jsonl` (evidence_claims)
 - `data\training\curated_expansion\gold_entities.jsonl` -> `data\training\curated_expansion\gold_entities.jsonl` (entities)
+- `data\training\curated_expansion\gold_entities_round2.jsonl` -> `data\training\curated_expansion\gold_entities_round2.jsonl` (entities)
 - `data\training\curated_expansion\gold_reviewed_queue.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue)
+- `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` (reviewed_queue)
+- `data\training\curated_import\combined_entities.jsonl` -> `data\training\curated_import\combined_entities.jsonl` (entities)
+- `data\training\curated_import\combined_evidence.jsonl` -> `data\training\curated_import\combined_evidence.jsonl` (evidence_claims)
+- `data\training\curated_import\combined_reviewed_queue.jsonl` -> `data\training\curated_import\combined_reviewed_queue.jsonl` (reviewed_queue)
 - `data\training\evidence_pack\annotation_dataset\evidence.jsonl` -> `data\training\evidence_pack\annotation_dataset\evidence.jsonl` (evidence_claims)
 - `data\training\evidence_pack\annotation_dataset\ner.jsonl` -> `data\training\evidence_pack\annotation_dataset\ner.jsonl` (annotation_dataset)
 - `data\training\evidence_pack\annotation_dataset\relations.jsonl` -> `data\training\evidence_pack\annotation_dataset\relations.jsonl` (annotation_dataset)

@@ -14,21 +14,21 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ## Tasks
 ### ner
 - Split counts:
-- test: 2
-- train: 20
-- validation: 2
+- test: 4
+- train: 28
+- validation: 4
 
 ### evidence
 - Split counts:
-- test: 1
-- train: 10
-- validation: 1
+- test: 2
+- train: 14
+- validation: 2
 
 ### relation
 - Split counts:
-- test: 1
-- train: 10
-- validation: 1
+- test: 2
+- train: 14
+- validation: 2
 
 ## Leakage
 - none

@@ -3,20 +3,22 @@
   "tasks": [
     {
       "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
-      "examples": 2,
+      "examples": 4,
       "label_counts": {
+        "CELL_TYPE": 1,
+        "DRUG": 1,
         "OUTCOME": 1,
         "PATHWAY": 1
       },
-      "majority_accuracy": 0.5,
+      "majority_accuracy": 0.25,
       "majority_label": "PATHWAY",
       "task": "ner"
     },
     {
       "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
-      "examples": 1,
+      "examples": 2,
       "label_counts": {
-        "1": 1
+        "1": 2
       },
       "majority_accuracy": 1.0,
       "majority_label": "1",
@@ -24,9 +26,9 @@
     },
     {
       "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",
-      "examples": 1,
+      "examples": 2,
       "label_counts": {
-        "PREDICTS": 1
+        "PREDICTS": 2
       },
       "majority_accuracy": 1.0,
       "majority_label": "PREDICTS",

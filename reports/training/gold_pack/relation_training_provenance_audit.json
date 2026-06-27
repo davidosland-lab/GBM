@@ -2,11 +2,11 @@
   "dataset_path": "data\\training\\gold_pack\\annotation_splits\\relation_train.jsonl",
   "missing_pmid_count": 0,
   "missing_warning_count": 0,
-  "row_count": 10,
+  "row_count": 14,
   "safe": true,
   "source_type_counts": {
-    "curated_no_relation": 3,
-    "human_or_curated_positive": 7
+    "curated_no_relation": 5,
+    "human_or_curated_positive": 9
   },
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": []
