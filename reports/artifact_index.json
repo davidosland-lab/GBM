@@ -1,0 +1,4907 @@
+{
+  "artifact_count": 424,
+  "artifacts": [
+    {
+      "artifact_type": "clinicaltrials_raw",
+      "byte_count": 3967,
+      "category": "raw",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T00:32:00+00:00",
+      "path": "data\\raw\\clinicaltrials_gbm_smoke_2026-06-23.jsonl",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "925DC40B5F85A5C2CE02AC81A693398C5FB8780399CA6EF0848F335503C6F24C",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "jsonl_artifact",
+      "byte_count": 25846,
+      "category": "raw",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-22T23:39:57+00:00",
+      "path": "data\\raw\\ncbi_env_smoke_2026-06-23.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "8E9BA49933D152A7FDBDDFF8835DDF73A781DC5C805F58F8DD8E98E486877107",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "jsonl_artifact",
+      "byte_count": 74760,
+      "category": "raw",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-22T22:42:03+00:00",
+      "path": "data\\raw\\pubmed_gbm_v1_small_2026-06-23.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "1D45FEF4DB5EDFBE3B3AF36E698DAD176396DC4C28EFC4670E5E37C73DB3EF21",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "jsonl_artifact",
+      "byte_count": 54149,
+      "category": "raw",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-22T22:42:27+00:00",
+      "path": "data\\raw\\pubmed_gbm_v2_small_2026-06-23.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "CBC9FB363803FBAE77A5EC9E663BAA3E319909556EFB999DB41293B1C43AD760",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "trial_graph_records",
+      "byte_count": 35075,
+      "category": "processed",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\clinicaltrials_gbm_smoke_2026-06-23\\trial_graph_records.jsonl",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "555D2D8D93C07F71C065D041D5CB42B2391496198DBBB4EB2898F524D215F1CD",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curation_handoff_bundle_manifest",
+      "byte_count": 5341,
+      "category": "processed",
+      "line_count": 110,
+      "modified_at_utc": "2026-06-23T07:07:09+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\curation_handoff_bundle.json",
+      "provenance": {},
+      "sha256": "293BA60402C86DDDD66BBBEDD2BBB26B659EDE9F36F9973E88CF2ABA0E3CA446",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_handoff_bundle_manifest",
+      "byte_count": 3706,
+      "category": "processed",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T07:07:09+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\curation_handoff_bundle.md",
+      "provenance": {},
+      "sha256": "0809B4D102E8F6BD7E380EC921E929781460FCE7D49701A0A3AD5C2F0D32BE73",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_candidates",
+      "byte_count": 817,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_active_learning_candidates.jsonl",
+      "provenance": {},
+      "sha256": "A55ECD249008D477653AB8DDEF4FAB702AF5AEFC7839D9877752E57D0152FD97",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 500,
+      "category": "processed",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_curated_evidence_audit.md",
+      "provenance": {},
+      "sha256": "957F6003611889E740577C9EBACE79C8EDD6D0674A934A0BDE33C4F0C4CA5C69",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_predictions",
+      "byte_count": 683,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_curated_evidence_predictions.jsonl",
+      "provenance": {},
+      "sha256": "3BA2B7A5702CBE594B050F21706BB01B5C957B2A90B2AE55476B8A0B3021C186",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curation_smoke_workflow_report",
+      "byte_count": 1342,
+      "category": "processed",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_curation_smoke_workflow.md",
+      "provenance": {},
+      "sha256": "7FE18FDE770918A0109D2373968531C665AD3410B39744C78AD91BBAF4D67DD5",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 636,
+      "category": "processed",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_evidence_overlay.md",
+      "provenance": {},
+      "sha256": "471D0480EC6566B45BA356DFADCF3123350B466EAD8B0458CCE73143D5D256AE",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 633,
+      "category": "processed",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_evidence_overlay_diff.md",
+      "provenance": {},
+      "sha256": "760AB4E52DC1212960560ED99058800E7C87F0CBA2AAB9BF6E1A729C5E2051EE",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_graph_records",
+      "byte_count": 3151,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_evidence_overlay_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 574,
+      "category": "processed",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_prediction_quality.md",
+      "provenance": {},
+      "sha256": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_review_queue",
+      "byte_count": 734,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_prediction_review_queue.jsonl",
+      "provenance": {},
+      "sha256": "9081B2F7F0EB59D988DFFAFDFC4DB31443C1A90ABC8FD314D9A38C7D9C37FBF2",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 540,
+      "category": "processed",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_prediction_review_summary.md",
+      "provenance": {},
+      "sha256": "A305E68EBAD9D9001340BAB4ADA67DFC643FF8D56810FD3AF7C526912A0F6E79",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 786,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_handoff_bundle\\files\\curation_smoke_workflow_prediction_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "8C110F2C35876B8E74095B0B05C27452E69A2942DB7D9243ED2C7143C333690A",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "active_learning_batch_csv",
+      "byte_count": 913,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_batches.csv",
+      "provenance": {},
+      "sha256": "373448B5F04E3B0A1A2D321621E73ED733BC088751631E02FF2A8578411AB65C",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "active_learning_batch_plan",
+      "byte_count": 1073,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_batches.jsonl",
+      "provenance": {},
+      "sha256": "0751148AE8D7534066D48D114237F5473670400785CC6D028501CC6E97029711",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "active_learning_candidates",
+      "byte_count": 912,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_candidates.jsonl",
+      "provenance": {},
+      "sha256": "3C6A722238BB7C41F49B8C118BE4423BEFCE45D0387DD210A2668AD867371339",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curated_evidence_predictions",
+      "byte_count": 786,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\curated_evidence_predictions.jsonl",
+      "provenance": {},
+      "sha256": "5B5B7A659DD3D45F2FB5ED120E5F5F4344D2BF1070078B51AD015A204642B173",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_overlay_graph_records",
+      "byte_count": 3151,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curation_handoff_bundle_manifest",
+      "byte_count": 6925,
+      "category": "processed",
+      "line_count": 137,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\curation_handoff_bundle.json",
+      "provenance": {},
+      "sha256": "650196CF6DD2AB112C78CB6D05E77C518E1126D48CE912547D3DB9218175CD02",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_handoff_bundle_manifest",
+      "byte_count": 4835,
+      "category": "processed",
+      "line_count": 28,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\curation_handoff_bundle.md",
+      "provenance": {},
+      "sha256": "0EDF6888533964A3F72B458345B3DEBC50AB75A52DC5BA82A36CC99EDDCEE8DF",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_report",
+      "byte_count": 602,
+      "category": "processed",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_active_learning_batches.md",
+      "provenance": {},
+      "sha256": "357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_candidates",
+      "byte_count": 912,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_active_learning_candidates.jsonl",
+      "provenance": {},
+      "sha256": "3C6A722238BB7C41F49B8C118BE4423BEFCE45D0387DD210A2668AD867371339",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 501,
+      "category": "processed",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_curated_evidence_audit.md",
+      "provenance": {},
+      "sha256": "92F0555E84F393C65E80020BD27DD0615A60C205B5CCFDBD28EC470FC70B1DE7",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_predictions",
+      "byte_count": 786,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_curated_evidence_predictions.jsonl",
+      "provenance": {},
+      "sha256": "5B5B7A659DD3D45F2FB5ED120E5F5F4344D2BF1070078B51AD015A204642B173",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 1444,
+      "category": "processed",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_curation_regression_workflow.json",
+      "provenance": {},
+      "sha256": "E46F989670F1DF08D09CE00475A1F93995B3554A7C1C1E75D116EBEDF902CFF8",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 638,
+      "category": "processed",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_evidence_overlay.md",
+      "provenance": {},
+      "sha256": "ACF46B5EE2A5F1410EBBF5EA5D379014B17E439F68AC13959E7BC5C9E35A59F9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 634,
+      "category": "processed",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_evidence_overlay_diff.md",
+      "provenance": {},
+      "sha256": "555C894D8D81AA0D51CD726F81BB4EDAB82A170A48A86FCF09BACF1653F9C406",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_graph_records",
+      "byte_count": 3151,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_evidence_overlay_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 414,
+      "category": "processed",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_overlay_load_guard.md",
+      "provenance": {},
+      "sha256": "1B06E9913077BAAE57EA3EC60CBAB613950B0290DCF5B99F3E123E4F920749EC",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "overlay_revert_report",
+      "byte_count": 434,
+      "category": "processed",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_overlay_revert.md",
+      "provenance": {},
+      "sha256": "669906EE0BEB0574C59AB1DE22644C6A9411FB3DC25BF87179477297C317881F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 574,
+      "category": "processed",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_quality.md",
+      "provenance": {},
+      "sha256": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_review_queue",
+      "byte_count": 829,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_review_queue.jsonl",
+      "provenance": {},
+      "sha256": "EAAAFCA0664F19F4D34E07EB6695674F26E4202A626153C996BA17736821BC66",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 541,
+      "category": "processed",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_review_summary.md",
+      "provenance": {},
+      "sha256": "9E7FA1B9FE8188ACD1F31E95E48BDFF07B749DF312475BC1295A7F4959872F49",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 881,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "31A7CD9688CB79C4AC64AA77F00F2894169200CE9CBE63E2F9E7EEDE1654FBFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "normalized_graph_records",
+      "byte_count": 4158,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T09:48:07+00:00",
+      "path": "data\\processed\\curation_regression_pack\\normalized_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "30325682E046D9A66212F0DF819CAD4154ED157D445BF415B4A0EE9835B23DF6",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_review_queue",
+      "byte_count": 829,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\prediction_review_queue.jsonl",
+      "provenance": {},
+      "sha256": "EAAAFCA0664F19F4D34E07EB6695674F26E4202A626153C996BA17736821BC66",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 881,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\prediction_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "31A7CD9688CB79C4AC64AA77F00F2894169200CE9CBE63E2F9E7EEDE1654FBFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "qualifier_enriched_graph_records",
+      "byte_count": 4158,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T09:48:28+00:00",
+      "path": "data\\processed\\curation_regression_pack\\qualifier_enriched_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "30325682E046D9A66212F0DF819CAD4154ED157D445BF415B4A0EE9835B23DF6",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "reverted_graph_records",
+      "byte_count": 2885,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "data\\processed\\curation_regression_pack\\reverted_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "1308F5E8E30132C1A93F68EA0F0A379B236C25FC0E07A822268C3CF9A65DB3A3",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "active_learning_candidates",
+      "byte_count": 817,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_smoke_workflow\\active_learning_candidates.jsonl",
+      "provenance": {},
+      "sha256": "A55ECD249008D477653AB8DDEF4FAB702AF5AEFC7839D9877752E57D0152FD97",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curated_evidence_predictions",
+      "byte_count": 683,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_smoke_workflow\\curated_evidence_predictions.jsonl",
+      "provenance": {},
+      "sha256": "3BA2B7A5702CBE594B050F21706BB01B5C957B2A90B2AE55476B8A0B3021C186",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_overlay_graph_records",
+      "byte_count": 3151,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_smoke_workflow\\evidence_overlay_graph_records.jsonl",
+      "provenance": {},
+      "sha256": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_review_queue",
+      "byte_count": 734,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_smoke_workflow\\prediction_review_queue.jsonl",
+      "provenance": {},
+      "sha256": "9081B2F7F0EB59D988DFFAFDFC4DB31443C1A90ABC8FD314D9A38C7D9C37FBF2",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 786,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\processed\\curation_smoke_workflow\\prediction_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "8C110F2C35876B8E74095B0B05C27452E69A2942DB7D9243ED2C7143C333690A",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "curated_evidence_predictions",
+      "byte_count": 596,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:25:49+00:00",
+      "path": "data\\processed\\evidence_smoke_curated_predictions.jsonl",
+      "provenance": {},
+      "sha256": "D9C0E5816694E452C76D9EBFB10DBC6DFE826D3F94742FDEEF939E5176FF8D9D",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "pubmed_graph_records",
+      "byte_count": 46277,
+      "category": "processed",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T03:24:50+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\curated_graph_records.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "E9A4C9B7D1810171DA98A995A0EB4B5C14BB735EC0E0E2B137131070DCA2CCDD",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "entities",
+      "byte_count": 14414,
+      "category": "processed",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\entities.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "1096665318DFD6706A0A06149428A667AC6BF88413CA07883A1124240DB5EC7A",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 3518,
+      "category": "processed",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\evidence_claims.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "32A30BE5E9C9414CF86800F43FA00A9E7F1781482C700A88D84E73E92DBA323B",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 2555,
+      "category": "processed",
+      "line_count": 138,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\graph_quality_report.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "601DC4BE9C10581FB76FC42CC33BE0473DEB025625676690DD4AE9F182B289E1",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 1174,
+      "category": "processed",
+      "line_count": 51,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\graph_quality_report.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "F6D03C9C9CDFFE65CE7C1D4E3BB828F964F73BDC073D2DF4B53CFAE317C363F2",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "pubmed_graph_records",
+      "byte_count": 46277,
+      "category": "processed",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\graph_records.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "E9A4C9B7D1810171DA98A995A0EB4B5C14BB735EC0E0E2B137131070DCA2CCDD",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 2284,
+      "category": "processed",
+      "line_count": 62,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\pipeline_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "9F28832830120422EEBFF21C1EE3B6B41BE43DF865713E41B1A9A9A658CAAB4F",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 1700,
+      "category": "processed",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\processed\\ncbi_env_smoke_pipeline\\pipeline_manifest.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "80A1876ED5CFF2F91FFF4B3C0F903C6FECCB1B3844BF554B9B58034B344F4730",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_predictions",
+      "byte_count": 683,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:25:15+00:00",
+      "path": "data\\processed\\sample_graph_curated_evidence_predictions.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "3BA2B7A5702CBE594B050F21706BB01B5C957B2A90B2AE55476B8A0B3021C186",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_overlay_graph_records",
+      "byte_count": 3151,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T04:25:32+00:00",
+      "path": "data\\processed\\sample_graph_evidence_overlay_records.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_artifact_bundle_manifest",
+      "byte_count": 65616,
+      "category": "processed",
+      "line_count": 1312,
+      "modified_at_utc": "2026-06-23T23:15:58+00:00",
+      "path": "data\\processed\\training_artifact_bundle\\training_artifact_bundle.json",
+      "provenance": {},
+      "sha256": "3F01BADFAD9191C9DCDE3C15CBFF6F371B5D5A6CD9A2E24DEA2A67114485C0A3",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_artifact_bundle_manifest",
+      "byte_count": 28840,
+      "category": "processed",
+      "line_count": 198,
+      "modified_at_utc": "2026-06-23T23:15:58+00:00",
+      "path": "data\\processed\\training_artifact_bundle\\training_artifact_bundle.md",
+      "provenance": {},
+      "sha256": "74489AF8C66FD827ABBABAB8CCBC4BB3AAFB7769E9578183BF47100067098E3C",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_csv",
+      "byte_count": 922,
+      "category": "review",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "data\\review\\active_learning_batch_ALBATCH-001.csv",
+      "provenance": {},
+      "sha256": "EC2346F2F790DACBE68EA9FD7A5045592212217E8169A8643F253F39B5E363E1",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "active_learning_batch_reviewed_queue",
+      "byte_count": 976,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "data\\review\\active_learning_batch_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "A4607373CFCF67F9013E9C32707B9F940B4DD746D721DB6AFD0B4506655557E6",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "csv_artifact",
+      "byte_count": 724,
+      "category": "review",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\review\\active_learning_candidates.csv",
+      "provenance": {},
+      "sha256": "9C87E6603E5A220879BA59E7CDCC8079574690FCA3EBE2958486FF88ECBAEFCC",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "active_learning_candidates",
+      "byte_count": 798,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "data\\review\\active_learning_candidates.jsonl",
+      "provenance": {},
+      "sha256": "C1F5BDFCC2B95D92B8A2BA86ACDBF8CC2C02143132752287F1795867EB911422",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_review_queue_csv",
+      "byte_count": 617,
+      "category": "review",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T04:25:11+00:00",
+      "path": "data\\review\\evidence_smoke_prediction_review_queue.csv",
+      "provenance": {},
+      "sha256": "C94053F5961D6407504CE2407BFCFE0175F87216DF6564D5B8E1E8F4044B43D6",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "prediction_review_queue",
+      "byte_count": 688,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:25:11+00:00",
+      "path": "data\\review\\evidence_smoke_prediction_review_queue.jsonl",
+      "provenance": {},
+      "sha256": "B9080F35D967500A472FAB59FD468CF19E50E59F7FC95EFE9C61E05C9AE9F6D8",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue_csv",
+      "byte_count": 630,
+      "category": "review",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T04:25:32+00:00",
+      "path": "data\\review\\evidence_smoke_prediction_reviewed_queue.csv",
+      "provenance": {},
+      "sha256": "EFC556DCAAB402240B169B6864D20D76F6ADD6338E260E78122B06E5E973AEA6",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 701,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:25:32+00:00",
+      "path": "data\\review\\evidence_smoke_prediction_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "539AFEADB746A4DE1D5B4A186F3675AB798B58A167FD4BBFBFF4DAF0EBD810F4",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 701,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "data\\review\\evidence_smoke_prediction_reviewed_queue_from_csv.jsonl",
+      "provenance": {},
+      "sha256": "539AFEADB746A4DE1D5B4A186F3675AB798B58A167FD4BBFBFF4DAF0EBD810F4",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "review_queue_csv",
+      "byte_count": 2575,
+      "category": "review",
+      "line_count": 8,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\review\\ncbi_env_smoke_review_queue.csv",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "E1E85A7A3C7660ECB53D1208CF77523940EC5CAACEED88926E7AB177997FD274",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "review_queue",
+      "byte_count": 4182,
+      "category": "review",
+      "line_count": 7,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\review\\ncbi_env_smoke_review_queue.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "90FE7F2C255FBFF1CA99008E18327EA2F441CDA90F8631D791CD0B37C7392DB5",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "reviewed_queue_csv",
+      "byte_count": 2610,
+      "category": "review",
+      "line_count": 8,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\review\\ncbi_env_smoke_reviewed_queue.csv",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "4F6AF30026FFECB57F933936528C4F4E73EC02DB64E55B2ACBB7004891A0BBAE",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "reviewed_queue",
+      "byte_count": 4217,
+      "category": "review",
+      "line_count": 7,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "data\\review\\ncbi_env_smoke_reviewed_queue.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "8AC05C7855435D89A4E3C1AF22AA5A2F901C6C76A9B947684EE3E5EF2C3D61AE",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "prediction_reviewed_queue",
+      "byte_count": 785,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:24:50+00:00",
+      "path": "data\\review\\sample_graph_prediction_reviewed_queue.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "DB6443E46E1DF804D5273601975A49B929EE83FFA9A757B5C54E52BFD4D0DFDA",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "review_queue_csv",
+      "byte_count": 377,
+      "category": "review",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-22T23:54:58+00:00",
+      "path": "data\\review\\sample_review_queue.csv",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "422AE7B078935F248CD5CB36016E113265A1C77B068CDB9E446636CAC05B8811",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "review_queue",
+      "byte_count": 422,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-22T23:54:58+00:00",
+      "path": "data\\review\\sample_review_queue.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "645C2AE0E6D878F48CC441093CC01EDA0804EDBBD8FC47218100A62A3D1F95F7",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 1086,
+      "category": "training",
+      "line_count": 4,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset\\evidence.jsonl",
+      "provenance": {},
+      "sha256": "F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset\\ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset\\relations.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 1086,
+      "category": "training",
+      "line_count": 4,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
+      "provenance": {},
+      "sha256": "F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 1329,
+      "category": "training",
+      "line_count": 37,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence_label_repair.json",
+      "provenance": {},
+      "sha256": "F85642736F813410E54E532A9BA70F8C2282F1ABA38CB849B3081F75B7E7F9ED",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 626,
+      "category": "training",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence_label_repair.md",
+      "provenance": {},
+      "sha256": "364543D3EB9E590D9287F9F4853A39C53058DE36201B765B8ADC9A1A5CEF2172",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_dataset_repaired\\relations.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 203,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",
+      "provenance": {},
+      "sha256": "42367602740093E8271699B1FFAE443031E2EDA8965848D4712CFFA70A6ADBEF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 497,
+      "category": "training",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\evidence_train.jsonl",
+      "provenance": {},
+      "sha256": "E91DD4359B1F71051D2AABA40EDFBC587EFFC7BED7F6DF64B708B8C80BE29013",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 386,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\evidence_validation.jsonl",
+      "provenance": {},
+      "sha256": "402A05990A991718119994FC2405CB8B6285F9C4B78178C10D5693987314E18B",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\ner_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\ner_train.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\ner_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 2574,
+      "category": "training",
+      "line_count": 83,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\pmid_split_manifest.json",
+      "provenance": {},
+      "sha256": "C826E4CD316438BFA9F2446AE5B9CD342044D33E451038ED7A48DBED8A4878B7",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\relation_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\relation_train.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\annotation_splits\\relation_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 132,
+      "category": "training",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\label_maps\\evidence_label_map.json",
+      "provenance": {},
+      "sha256": "B940BD160CDA7C0A80396839836475FC64619C5C5E1956A0E3B7AB2E5C456B1B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_maps_manifest",
+      "byte_count": 518,
+      "category": "training",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\label_maps\\label_maps_manifest.json",
+      "provenance": {},
+      "sha256": "C3F33B3776EFD4D5482C4E3C0B4E56787CF61B78908F834B5CEB1AA15831E572",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 65,
+      "category": "training",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\label_maps\\ner_label_map.json",
+      "provenance": {},
+      "sha256": "B4CD8069BDC9673CB3A0E3DD8B4DE0ED3AFEE59585CB9C74043D61FAA0F0E6DC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 70,
+      "category": "training",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "data\\training\\evidence_pack\\label_maps\\relation_label_map.json",
+      "provenance": {},
+      "sha256": "C7F4D558F0F6498F057A8FD9D7D2886531767C0A9CA54CEEA56AE6E659DFDD42",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 77,
+      "category": "training",
+      "line_count": 7,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "data\\training\\evidence_smoke_fixture\\label_maps\\evidence_label_map.json",
+      "provenance": {},
+      "sha256": "59D2EE66191654DFF5A67B3F6308C6FB2DE9AD9922B6DC0D1D86CD356D7B3276",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 152,
+      "category": "training",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "data\\training\\evidence_smoke_fixture\\splits\\evidence_test.jsonl",
+      "provenance": {},
+      "sha256": "76C526FAC5EB6DA91A1A292906553EDDC7B010939093F7E12C686F44DA438538",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 79,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "data\\training\\evidence_smoke_fixture\\splits\\evidence_train.jsonl",
+      "provenance": {},
+      "sha256": "7982512FFAD372ED72F53326DCE37B2FA03A81057E271F1A0A999D14D6613330",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 73,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "data\\training\\evidence_smoke_fixture\\splits\\evidence_validation.jsonl",
+      "provenance": {},
+      "sha256": "FEB35A22D78F251603ED65732A546D36D94AE91DAAF28D90F02530DCD3056507",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 563,
+      "category": "training",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "data\\training\\evidence_smoke_fixture\\training_config.json",
+      "provenance": {},
+      "sha256": "E2177C82E957C2827F62AEBDD76421FEDD77F2652CD790C35D173484A3279446",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 485,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset\\evidence.jsonl",
+      "provenance": {},
+      "sha256": "C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset\\ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset\\relations.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 485,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl",
+      "provenance": {},
+      "sha256": "C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 1280,
+      "category": "training",
+      "line_count": 36,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence_label_repair.json",
+      "provenance": {},
+      "sha256": "0B4F510E4F53054FBE3B0E0BC38C9818737CEE3CCF1598AA0FDF1FD9F83B3AAC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 610,
+      "category": "training",
+      "line_count": 33,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence_label_repair.md",
+      "provenance": {},
+      "sha256": "9D5F7962C66248BDC1D25BCBCA6CC4C98B3153439C1FA8400533C64B49171AD4",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 485,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\evidence_train.jsonl",
+      "provenance": {},
+      "sha256": "C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\evidence_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\ner_train.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\ner_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 2443,
+      "category": "training",
+      "line_count": 78,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\pmid_split_manifest.json",
+      "provenance": {},
+      "sha256": "7876CE3B14190315BFD4539C9B9557E62F5012FDE6AE5FEBEED9E09420E2FA98",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\relation_train.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\annotation_splits\\relation_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_dataset",
+      "byte_count": 485,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\gold_seed\\gold_evidence.jsonl",
+      "provenance": {},
+      "sha256": "C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\gold_seed\\gold_ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\gold_seed\\gold_relations.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 906,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.json",
+      "provenance": {},
+      "sha256": "EF38B5754EC10F146CE232EF6A006DD25F378007F9328D09CA9080398908BE64",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 696,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.md",
+      "provenance": {},
+      "sha256": "39554F41F514F947367C41E250284E78B8D2E54C0B30AC5A3068A9E8DAFD2D20",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 104,
+      "category": "training",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\label_maps\\evidence_label_map.json",
+      "provenance": {},
+      "sha256": "4C511091045103D261074B8A2098B03640EFFA086E8956360755DBC5DF8E1152",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_maps_manifest",
+      "byte_count": 483,
+      "category": "training",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\label_maps\\label_maps_manifest.json",
+      "provenance": {},
+      "sha256": "2A3C9C266120B6779B3764F07919AD761E650DF15751A32379DEA54B43AA1635",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 65,
+      "category": "training",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\label_maps\\ner_label_map.json",
+      "provenance": {},
+      "sha256": "B4CD8069BDC9673CB3A0E3DD8B4DE0ED3AFEE59585CB9C74043D61FAA0F0E6DC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 70,
+      "category": "training",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "data\\training\\gold_pack\\label_maps\\relation_label_map.json",
+      "provenance": {},
+      "sha256": "C7F4D558F0F6498F057A8FD9D7D2886531767C0A9CA54CEEA56AE6E659DFDD42",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "gold_seed_dataset",
+      "byte_count": 485,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "data\\training\\gold_seed\\gold_evidence.jsonl",
+      "provenance": {},
+      "sha256": "C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "data\\training\\gold_seed\\gold_ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "data\\training\\gold_seed\\gold_relations.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 840,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "data\\training\\gold_seed\\gold_seed_manifest.json",
+      "provenance": {},
+      "sha256": "BAD9DA1A485ACC9C0B90FD83E305566064563954F5E8D81A04EE58DE87AF83E4",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 636,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "data\\training\\gold_seed\\gold_seed_manifest.md",
+      "provenance": {},
+      "sha256": "A07FBD21E829BB7751B7BA3ECAC000C6EDB9C9F3BDED4FD27B6B79D7381707E3",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 585,
+      "category": "training",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T03:24:50+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset\\dataset_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "D83784469BBC9DD8DB4041466FF1369FDA09AEC97CD3673531008818D190ED98",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 1086,
+      "category": "training",
+      "line_count": 4,
+      "modified_at_utc": "2026-06-23T03:24:50+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset\\evidence.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 20776,
+      "category": "training",
+      "line_count": 126,
+      "modified_at_utc": "2026-06-23T03:24:50+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset\\ner.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "ABAB8D8C57196CA64B3059D1DA2EF466348B1DFC27ED0ADD4D69E03E279A2C44",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 2369,
+      "category": "training",
+      "line_count": 3,
+      "modified_at_utc": "2026-06-23T03:24:50+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset\\relations.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "BE3085917000780D6B38DCA481F91ED697627AF198C7748A5AC9AEC3BDA1B7E8",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 1086,
+      "category": "training",
+      "line_count": 4,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset_repaired\\evidence.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 1598,
+      "category": "training",
+      "line_count": 49,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset_repaired\\evidence_label_repair.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "013478772C1A62D62E40099229EEDF2659CBBC1DFAE2220B40BE9C2C691E2B6A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 777,
+      "category": "training",
+      "line_count": 42,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset_repaired\\evidence_label_repair.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "86B3F7E454AAE3FAB5CC7D5A951C094CAEFAD805D0636022EA5ECA5EE7164E49",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 20776,
+      "category": "training",
+      "line_count": 126,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset_repaired\\ner.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "ABAB8D8C57196CA64B3059D1DA2EF466348B1DFC27ED0ADD4D69E03E279A2C44",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 2369,
+      "category": "training",
+      "line_count": 3,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_dataset_repaired\\relations.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "BE3085917000780D6B38DCA481F91ED697627AF198C7748A5AC9AEC3BDA1B7E8",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 203,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_test.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "42367602740093E8271699B1FFAE443031E2EDA8965848D4712CFFA70A6ADBEF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 675,
+      "category": "training",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_train.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "9E1A3E92FEE99BF316ED6E398590BF8A55D7AFE5C88D0ADBFB7437AA4E3A6283",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 208,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_validation.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "87CA8D65543B04DC1EC26D271EDB624CD56C68EA3508E226786CCDEC6781CDDF",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 2670,
+      "category": "training",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_test.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "400DA6A1539537383F3E9F693FDF7E98B4A2587D49F2FF347088D1480E1B6E5F",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 15435,
+      "category": "training",
+      "line_count": 94,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_train.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "2FCE63A01F8B2387FE52B87C01B9F01F385EAB58A3C18E0D9C7B96D91B435B1A",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 2671,
+      "category": "training",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_validation.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "108EC92CEFED50B871389C5B21CBF2C7249460F1B9D04EEBFCB82F519FC768CC",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 843,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_test.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "A0512AE6439F36FD554491DD08A9186529D180738A798F9BF9C8145F9C666D14",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 765,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_train.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "854162AB0609788A04470D78F92D15EE1DD0EB45925096BFC928B7DF6673BF44",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 761,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_validation.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "5FE10E8050B0D10AA77220B2579FCECEE51F3DDBC42B15C055F05AE6A9291838",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 3080,
+      "category": "training",
+      "line_count": 109,
+      "modified_at_utc": "2026-06-23T03:37:55+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits\\split_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "865EF635AEB8A3A60304F93C4640D6E69A1F2296F95D121CCB07FB99A3357631",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 386,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\evidence_test.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "402A05990A991718119994FC2405CB8B6285F9C4B78178C10D5693987314E18B",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 700,
+      "category": "training",
+      "line_count": 3,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\evidence_train.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "2CD3F5BC798588DECB2AF3A065F01AA5CE8ED3CADC29A1EA1824F786FF95A01C",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\evidence_validation.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 1994,
+      "category": "training",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\ner_test.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "95D2C8C352D83E2F8CC2862162488B60399B61061846B6038CE6A90FF581677E",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 18619,
+      "category": "training",
+      "line_count": 113,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\ner_train.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "4ECF2BF1DC1475ADB46602250447685C4327CEEB6F4C1DCBEAE68285B70E6B5D",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 163,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\ner_validation.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "238DF1584A7A7162DE7A9181676FF92E3752A9A9024B1424E41E56BEB52644A7",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 2951,
+      "category": "training",
+      "line_count": 98,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\pmid_split_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "7EB84D059C619F5D7C32BD605DE628F0B69F9DC10C69C5DF96A2AADE121E707A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\relation_test.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 2369,
+      "category": "training",
+      "line_count": 3,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\relation_train.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "BE3085917000780D6B38DCA481F91ED697627AF198C7748A5AC9AEC3BDA1B7E8",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "data\\training\\ncbi_env_smoke_annotation_splits_pmid\\relation_validation.jsonl",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 132,
+      "category": "training",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T03:38:07+00:00",
+      "path": "data\\training\\ncbi_env_smoke_label_maps\\evidence_label_map.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "B940BD160CDA7C0A80396839836475FC64619C5C5E1956A0E3B7AB2E5C456B1B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_maps_manifest",
+      "byte_count": 757,
+      "category": "training",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T03:38:07+00:00",
+      "path": "data\\training\\ncbi_env_smoke_label_maps\\label_maps_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "75FFA277EF98BA94279BCA890C8B3218D16C7578E9C3FAA9746626936A69A5F0",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 411,
+      "category": "training",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T03:38:07+00:00",
+      "path": "data\\training\\ncbi_env_smoke_label_maps\\ner_label_map.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "697F65400D8D4EC9DCA157C310B63E71BC69FF9B54E4DCDE92D37D5263A1DA3F",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 174,
+      "category": "training",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T03:38:07+00:00",
+      "path": "data\\training\\ncbi_env_smoke_label_maps\\relation_label_map.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "EC22A6E05F4A2E7DB7987E9249B549740396E011CECC1F5E8B2A1AAB346D211E",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_negative_dataset",
+      "byte_count": 2540,
+      "category": "training",
+      "line_count": 3,
+      "modified_at_utc": "2026-06-23T10:56:53+00:00",
+      "path": "data\\training\\relation_negatives.jsonl",
+      "provenance": {},
+      "sha256": "C30F8020984678DA20E6352BDEB6A18FCF9E873F431CE6C2C563F965E569F57D",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_dataset\\evidence.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_dataset\\ner.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "annotation_dataset",
+      "byte_count": 6304,
+      "category": "training",
+      "line_count": 6,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_dataset\\relations.jsonl",
+      "provenance": {},
+      "sha256": "6B341D44DBB000C4158717975F2BDD5191ADB977E9E7D7995C97237F4F5C9A2C",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\evidence_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\evidence_train.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\evidence_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\ner_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\ner_train.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\ner_validation.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 2570,
+      "category": "training",
+      "line_count": 82,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\pmid_split_manifest.json",
+      "provenance": {},
+      "sha256": "E1A5C3438B838365B4C306A90CBAF26FDD64AB3DC8B3D65D35D64522B5CC2035",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 0,
+      "category": "training",
+      "line_count": 0,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\relation_test.jsonl",
+      "provenance": {},
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 4095,
+      "category": "training",
+      "line_count": 4,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\relation_train.jsonl",
+      "provenance": {},
+      "sha256": "FF77945F6BA8247F8F84364DA04E459908CD599C05055699F18B6E4F1F31E98F",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_split",
+      "byte_count": 2209,
+      "category": "training",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\annotation_splits\\relation_validation.jsonl",
+      "provenance": {},
+      "sha256": "E294147EEFC1A0E6BCD7565EF485F590C7E7FDB734D1333EA80BAC6537BAD5F4",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 70,
+      "category": "training",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\label_maps\\evidence_label_map.json",
+      "provenance": {},
+      "sha256": "13E3EAEAF1AB1FB5155F28660CCB8B41E4A6A6FC8571F89632688ED875430D80",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_maps_manifest",
+      "byte_count": 564,
+      "category": "training",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\label_maps\\label_maps_manifest.json",
+      "provenance": {},
+      "sha256": "4B50506F926E9A1B57B3A7F83889BAC9F8FE3B1773344782CCE8A6F9FB6F69EA",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 65,
+      "category": "training",
+      "line_count": 5,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\label_maps\\ner_label_map.json",
+      "provenance": {},
+      "sha256": "B4CD8069BDC9673CB3A0E3DD8B4DE0ED3AFEE59585CB9C74043D61FAA0F0E6DC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "label_map",
+      "byte_count": 222,
+      "category": "training",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "data\\training\\relation_pack\\label_maps\\relation_label_map.json",
+      "provenance": {},
+      "sha256": "E4740EC74D3891336CA784B9D607DC1B4A318029B4A841C7F12C9E27CEA7BD94",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_dataset",
+      "byte_count": 6304,
+      "category": "training",
+      "line_count": 6,
+      "modified_at_utc": "2026-06-23T22:11:43+00:00",
+      "path": "data\\training\\relation_training_pack.jsonl",
+      "provenance": {},
+      "sha256": "6B341D44DBB000C4158717975F2BDD5191ADB977E9E7D7995C97237F4F5C9A2C",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "clinicaltrials_raw",
+      "byte_count": 590,
+      "category": "examples",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T00:10:28+00:00",
+      "path": "data\\examples\\clinicaltrials_gbm_sample.jsonl",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "2058E7FFFC328F1B668C668BA9AFF86A27DCE55140FAB673DE1A034DCC095292",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 1110,
+      "category": "examples",
+      "line_count": 30,
+      "modified_at_utc": "2026-06-23T09:38:13+00:00",
+      "path": "data\\examples\\entity_synonyms.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "8A433806B6569E66BE68DF7D1533EDBC95FA56D40C2593505A5BFBBAAF34BADD",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "pubmed_graph_records",
+      "byte_count": 2651,
+      "category": "examples",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-22T09:58:49+00:00",
+      "path": "data\\examples\\graph_records_sample.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "C64DB1F914C5D70C334D89C5DFCBA0539B2E93BB895B225DBF9C222FF83B7881",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "trial_graph_records",
+      "byte_count": 4599,
+      "category": "examples",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T00:11:02+00:00",
+      "path": "data\\examples\\trial_graph_records_sample.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "9B27F03310B4C8A39C2BEE77521A12A9BD3250842765021E6507B8EF2E354BC2",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "artifact_detail_report",
+      "byte_count": 5765,
+      "category": "report",
+      "line_count": 151,
+      "modified_at_utc": "2026-06-23T09:07:13+00:00",
+      "path": "reports\\artifact_detail.json",
+      "provenance": {},
+      "sha256": "CF4C458443DDC432448E3F84A199CD9FE2AA617C282B2C7F7B26F199190C8700",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "artifact_detail_report",
+      "byte_count": 4160,
+      "category": "report",
+      "line_count": 103,
+      "modified_at_utc": "2026-06-23T09:07:13+00:00",
+      "path": "reports\\artifact_detail.md",
+      "provenance": {},
+      "sha256": "CD71C34BFA14736B09257A5050CD56A619F4B1F9A80C91546FE85A1D273900A9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "artifact_index",
+      "byte_count": 182294,
+      "category": "report",
+      "line_count": 4907,
+      "modified_at_utc": "2026-06-27T02:34:25+00:00",
+      "path": "reports\\artifact_index.json",
+      "provenance": {},
+      "sha256": "5EA58593E87DA2C73E24F3CD9C506768261ED9EDE362E93544EBE7A5F7C53710",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "artifact_index",
+      "byte_count": 86804,
+      "category": "report",
+      "line_count": 549,
+      "modified_at_utc": "2026-06-27T02:34:25+00:00",
+      "path": "reports\\artifact_index.md",
+      "provenance": {},
+      "sha256": "B0BF9CE30F0C7E2BF9D67782C4286857F3E0B137008A20E78BD4EC71AA17B6BA",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 1524,
+      "category": "corpus_report",
+      "line_count": 46,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\corpus\\clinicaltrials_gbm_smoke_manifest.json",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "5937D5D3600FD73F05DA768A723F8CC498A7C8EDE3828DCA9114F1CEAA7DFE76",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 1166,
+      "category": "corpus_report",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\corpus\\clinicaltrials_gbm_smoke_manifest.md",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "23F7D7FC54E938F8D14BB4C79D18DB1EFF11316E3FD6353C4A236C1A969319AC",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 580,
+      "category": "corpus_report",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-22T23:54:58+00:00",
+      "path": "reports\\corpus\\ncbi_env_smoke_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "625FA8E3A278D459EC8C903437CC88262BDEB73657AA40DB02EB5ABDF52CD151",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 529,
+      "category": "corpus_report",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-22T23:54:58+00:00",
+      "path": "reports\\corpus\\ncbi_env_smoke_manifest.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "9239EA0E72587032DCB7570DABDBD590DB43657F507D10E5A0C9916E8CB69120",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 3811,
+      "category": "corpus_report",
+      "line_count": 99,
+      "modified_at_utc": "2026-06-22T22:43:25+00:00",
+      "path": "reports\\corpus\\pubmed_small_snapshot_2026-06-23.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "F3440357ADD31A27BECCB849481598704022E37EC81042C7A63DFC7F0D5F0413",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "graph_load_report",
+      "byte_count": 393,
+      "category": "graph_report",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_load_report.json",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "39EA1F59C261114C399FD60FA22EB514D196DDA9530E7DFA822A6D5C7B3DC0E9",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_load_report",
+      "byte_count": 472,
+      "category": "graph_report",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_load_report.md",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "0F0945F6F2489C221DE1D84E13CD35B06C7EDF0DFBB644486866D8AF178A5857",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 244,
+      "category": "graph_report",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_provenance_audit.json",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "7E361650F4DF97D2A99A587DAE997E5106A28443F5A89B7B00FBE3713C107D50",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 368,
+      "category": "graph_report",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_provenance_audit.md",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "8A0C926ED992D50DE790C9B8366760B36E51496E05758D563A986B981891A8C3",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 3266,
+      "category": "graph_report",
+      "line_count": 147,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_quality.json",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "21D8DE2469EA330B94CB9F49B9BAD77C70FC12D97CF9A4B12D3C834FC63CECEB",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 1706,
+      "category": "graph_report",
+      "line_count": 51,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_quality.md",
+      "provenance": {
+        "source": "ClinicalTrials.gov"
+      },
+      "sha256": "A1F302FB918AE83351DE997393FAA868725EC5FC1329A5831D75235656EF681F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "entity_normalization_report",
+      "byte_count": 1143,
+      "category": "graph_report",
+      "line_count": 33,
+      "modified_at_utc": "2026-06-23T09:48:07+00:00",
+      "path": "reports\\graph\\entity_normalization.json",
+      "provenance": {},
+      "sha256": "580A8DEDD80540ED7EC75FE640AD3070DA49F2785B304FF1EFA3412C0F395AB5",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "entity_normalization_report",
+      "byte_count": 695,
+      "category": "graph_report",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-23T09:48:07+00:00",
+      "path": "reports\\graph\\entity_normalization.md",
+      "provenance": {},
+      "sha256": "D5D38A61309CAA66B4A8F9B9AEFC07BC9701648137FCBB2DA6B361CF1A1A5920",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "graph_load_report",
+      "byte_count": 378,
+      "category": "graph_report",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\ncbi_env_smoke_load_report.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "2866A38D55DD193FF4EBA16BCEA86846722DE2DFFCA3E576F3CA1EDE1B5AE0F3",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_load_report",
+      "byte_count": 457,
+      "category": "graph_report",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\ncbi_env_smoke_load_report.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "CFA4E7851A64F944C9483FC53E6FDA34B4BC2B2225B5204ACF419BAB82025C9B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 227,
+      "category": "graph_report",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\ncbi_env_smoke_provenance_audit.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "A6D07352D6080AAA7A027BB23AB0227F165E0A8FB7FDAB0E4CD8BCF7F0ECBE43",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 351,
+      "category": "graph_report",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\ncbi_env_smoke_provenance_audit.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "1FD9F1F71B38998FB9F39FB064476727AF262BC556F02F2CDF6F755F82B699F7",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 3762,
+      "category": "graph_report",
+      "line_count": 184,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\ncbi_env_smoke_unified_quality.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "CB3DD43F5F7D7B9CD34A02519F935D6CB2765B7180D3F84EBB7C322A50C816D5",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 1802,
+      "category": "graph_report",
+      "line_count": 59,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\graph\\ncbi_env_smoke_unified_quality.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "847B2D9524E469D0739245E304A9A76539632D660007F52807B0F3BC2B27A89F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "qualifier_enrichment_report",
+      "byte_count": 462,
+      "category": "graph_report",
+      "line_count": 10,
+      "modified_at_utc": "2026-06-23T09:48:28+00:00",
+      "path": "reports\\graph\\qualifier_enrichment.json",
+      "provenance": {},
+      "sha256": "3F621254677D81403ABB109579B90F8FF1CC3BDD42104F7C9F9F7C3F0490B44D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "qualifier_enrichment_report",
+      "byte_count": 456,
+      "category": "graph_report",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T09:48:28+00:00",
+      "path": "reports\\graph\\qualifier_enrichment.md",
+      "provenance": {},
+      "sha256": "A1123D960A01624126103B824FA9BC45C3D43C31F6848C4B74305F539102F550",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_extraction_audit_report",
+      "byte_count": 1585,
+      "category": "graph_report",
+      "line_count": 55,
+      "modified_at_utc": "2026-06-23T09:25:14+00:00",
+      "path": "reports\\graph\\relation_extraction_audit.json",
+      "provenance": {},
+      "sha256": "B6AF05463EE98B1997096E8B1AAED4A2DBDE354D1F32494AAD965D6BCA0787A3",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_extraction_audit_report",
+      "byte_count": 769,
+      "category": "graph_report",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T09:25:14+00:00",
+      "path": "reports\\graph\\relation_extraction_audit.md",
+      "provenance": {},
+      "sha256": "CC91C4529FEDB57D2E66E3B550417333F7F29F9DC2E82983268FCF37A714B81F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 690,
+      "category": "graph_report",
+      "line_count": 22,
+      "modified_at_utc": "2026-06-23T04:25:32+00:00",
+      "path": "reports\\graph\\sample_graph_evidence_overlay.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "D900C242F648185FA0432CF83E1CC5F383166D523C1DDD9EB1634BC7BBEBDB7A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 608,
+      "category": "graph_report",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T04:25:32+00:00",
+      "path": "reports\\graph\\sample_graph_evidence_overlay.md",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "87103AE3D2D4937B3AD77CE10906F536EE9B884035ABEB34E53EF65F450EAB6A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 692,
+      "category": "graph_report",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\graph\\sample_graph_evidence_overlay_diff.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "970DE60A69EB9372F215EB78CAAB5DD24D0862A965B3D7999784C904047EBEFA",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 616,
+      "category": "graph_report",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\graph\\sample_graph_evidence_overlay_diff.md",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "4F6906CE0BBDD354459E8C09375E9C1D35F93209EBB395E5BBFB713057F3FE8F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "overlay_load_guard_report",
+      "byte_count": 274,
+      "category": "graph_report",
+      "line_count": 10,
+      "modified_at_utc": "2026-06-23T06:24:48+00:00",
+      "path": "reports\\graph\\sample_graph_overlay_load_guard.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "4C0D5BD77D2AFC322433C9B1CE639FBC17E0478A00BE095D6232DC29B1637E7D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "overlay_load_guard_report",
+      "byte_count": 396,
+      "category": "graph_report",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-23T06:24:48+00:00",
+      "path": "reports\\graph\\sample_graph_overlay_load_guard.md",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "2783E5F9175CB540AF1250F6D924F0513E4123C2723FEA44BE68967DAA01471F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 1637,
+      "category": "report",
+      "line_count": 85,
+      "modified_at_utc": "2026-06-22T23:46:40+00:00",
+      "path": "reports\\graph_quality_sample.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "3672C0541658DAF10EDBC876E3006234AD8CB41FB35BFCBE55C9A01CF4B90128",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 916,
+      "category": "report",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-22T23:46:40+00:00",
+      "path": "reports\\graph_quality_sample.md",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "C3022B6C978810BA15A92849FE1D119FCE38446643D153676768BB243EA2A58E",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "platform_regression_report",
+      "byte_count": 1064,
+      "category": "report",
+      "line_count": 46,
+      "modified_at_utc": "2026-06-23T23:17:29+00:00",
+      "path": "reports\\platform_regression\\platform_regression.json",
+      "provenance": {},
+      "sha256": "BD0340C26A8C84C0595CB52FA6728499EBB4BB61D05251C754B0E61DDF717E0E",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "platform_regression_report",
+      "byte_count": 564,
+      "category": "report",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T23:17:29+00:00",
+      "path": "reports\\platform_regression\\platform_regression.md",
+      "provenance": {},
+      "sha256": "4632317A22BBB5BF06058BED5C1E244A09AFC8D3802CC82C1E5FC0E70F333CB7",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "scope_drift_report",
+      "byte_count": 550,
+      "category": "report",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\platform_regression\\scope_drift.json",
+      "provenance": {},
+      "sha256": "D184C21CD2A1184218491631CD38729C378C30FD8124B4378DFFDB584164CBDC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "scope_drift_report",
+      "byte_count": 275,
+      "category": "report",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\platform_regression\\scope_drift.md",
+      "provenance": {},
+      "sha256": "0023C555D41AFC2142C82E7BF91C3C22E5ACC3855CD204C379B1D5A9AC5E3A9A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "preflight_report",
+      "byte_count": 1460,
+      "category": "report",
+      "line_count": 75,
+      "modified_at_utc": "2026-06-23T00:22:03+00:00",
+      "path": "reports\\preflight.json",
+      "provenance": {},
+      "sha256": "2247F25D8434F3B03A18840BF88C552D753C58E49FB1D3CBBED57769E23E194E",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "preflight_report",
+      "byte_count": 761,
+      "category": "report",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T00:22:03+00:00",
+      "path": "reports\\preflight.md",
+      "provenance": {},
+      "sha256": "C914876CEB51D2D871625B7DA8CBA9948065C20F3A614C6F88B8D0252122DE5B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 465,
+      "category": "review",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_export.json",
+      "provenance": {},
+      "sha256": "291D7F2EC1900E9CC4574916FF99BBDDF59C4D81F545FB322455DC1CBC5828F7",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 590,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_export.md",
+      "provenance": {},
+      "sha256": "CC5D17031EB6399329DFA98D8C11D2CC2981AD08F7A2F9BC5BAAC03DF3E7494B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 542,
+      "category": "review",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_import.json",
+      "provenance": {},
+      "sha256": "1A0865676558470B2FAE1FF5B099475BE04936861333BF9767095E796434BDC1",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 652,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_import.md",
+      "provenance": {},
+      "sha256": "AE716C1A03683461541CE07CA67ED7CCA91D7C1F5A5866FD1070203D11ED66D2",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_report",
+      "byte_count": 577,
+      "category": "review",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\active_learning_candidates.json",
+      "provenance": {},
+      "sha256": "DF03BE4BD9818C805759C33D76F4A526CB34EAE55016E544F4585B8A6950630C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_report",
+      "byte_count": 555,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\active_learning_candidates.md",
+      "provenance": {},
+      "sha256": "BA9A1B29585265131562E9FCE1A303113EB29DF7540FAA28B09D9E3BCE171172",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "adjudication_report",
+      "byte_count": 469,
+      "category": "review",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-23T09:48:07+00:00",
+      "path": "reports\\review\\adjudication_report.json",
+      "provenance": {},
+      "sha256": "F705168B21673FF7CB30D641C5E1DDC2AFEE6D5DDBDADE456D96547C2E2D783C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "adjudication_report",
+      "byte_count": 317,
+      "category": "review",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-23T09:48:07+00:00",
+      "path": "reports\\review\\adjudication_report.md",
+      "provenance": {},
+      "sha256": "19E05FC7EEBE3598A49D97F50CEE9EC40EE2D62047B25B9C24EBD816726A6713",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_search_report",
+      "byte_count": 984,
+      "category": "review",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T07:07:38+00:00",
+      "path": "reports\\review\\curated_evidence_search.json",
+      "provenance": {},
+      "sha256": "CD1C4811EED26BC226D896A3762BF6C10D789735FEEFB4A1994B3221DE746B3B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_search_report",
+      "byte_count": 462,
+      "category": "review",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T07:07:38+00:00",
+      "path": "reports\\review\\curated_evidence_search.md",
+      "provenance": {},
+      "sha256": "EC5E0AC47910BDEAB0D3D0B915C4312B0CED6627F234649788AB949CE9F2EF37",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_handoff_validation_report",
+      "byte_count": 325,
+      "category": "review",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T07:07:38+00:00",
+      "path": "reports\\review\\curation_handoff_validation.json",
+      "provenance": {},
+      "sha256": "0397916C699D434395405FD9742F8F307B7140D23811F020C7DBD9AC54727D46",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_handoff_validation_report",
+      "byte_count": 432,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T07:07:38+00:00",
+      "path": "reports\\review\\curation_handoff_validation.md",
+      "provenance": {},
+      "sha256": "8D5F1A8AF3A5B8005165F09F5BFA91B2C1F97732374A925E1C0667C8838E6C6F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_status_report",
+      "byte_count": 651,
+      "category": "review",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T09:05:49+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batch_status.json",
+      "provenance": {},
+      "sha256": "88F09B5213E5FD87B9420F72EEFFC46E6C4B49134D464DE6A8100B60ED5D8F14",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_status_report",
+      "byte_count": 550,
+      "category": "review",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-23T09:05:49+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batch_status.md",
+      "provenance": {},
+      "sha256": "0BBF3CD65DE0C07566BBC9F7B3CC32D89057F41F6DC2F17CBA7FC384A950876B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_report",
+      "byte_count": 734,
+      "category": "review",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batches.json",
+      "provenance": {},
+      "sha256": "A018297B544F659ACFFC11465437E26B76AA75BEA18628031D0EBF3EC038FE8D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_report",
+      "byte_count": 602,
+      "category": "review",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batches.md",
+      "provenance": {},
+      "sha256": "357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 437,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curated_evidence_audit.json",
+      "provenance": {},
+      "sha256": "8F81907C27AE12B5C4753A298219EC904EA549214E4E46D1B8E7D9133260D809",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 501,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curated_evidence_audit.md",
+      "provenance": {},
+      "sha256": "92F0555E84F393C65E80020BD27DD0615A60C205B5CCFDBD28EC470FC70B1DE7",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_handoff_validation_report",
+      "byte_count": 342,
+      "category": "review",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_handoff_validation.json",
+      "provenance": {},
+      "sha256": "66B84B9485B7218EF7CC14CE86E9FA9E12DE020A05D8406B272C6B345A7C546B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_handoff_validation_report",
+      "byte_count": 448,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_handoff_validation.md",
+      "provenance": {},
+      "sha256": "B428DD29C31A375C51FDA2E2BDA5C771E37B67F46A3230DCEDAF85415AE4BFCC",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 839,
+      "category": "review",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_regression_pack.json",
+      "provenance": {},
+      "sha256": "9E636A6D453F371E59A4AA8A10C6499C423B4C65C73B71BB7D555E14F464A53E",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 922,
+      "category": "review",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_regression_pack.md",
+      "provenance": {},
+      "sha256": "4A5B0F023A2C4046E9B98A07CA5D26FB272D864C5936C585EECA027D2DE4A67C",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 1444,
+      "category": "review",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_regression_workflow.json",
+      "provenance": {},
+      "sha256": "E46F989670F1DF08D09CE00475A1F93995B3554A7C1C1E75D116EBEDF902CFF8",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_regression_pack_report",
+      "byte_count": 1354,
+      "category": "review",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_regression_workflow.md",
+      "provenance": {},
+      "sha256": "BA9AB32166619AC5A619E47831EB1906925FACA2A5436492B858BC41AE858DDC",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_run_registry",
+      "byte_count": 788,
+      "category": "review",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\curation_run_registry.md",
+      "provenance": {},
+      "sha256": "60C43FDF18A492D5F9775887159D5BE0C9F85462D841427BBB82FCA1F92BC50F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 722,
+      "category": "review",
+      "line_count": 22,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\evidence_overlay.json",
+      "provenance": {},
+      "sha256": "28795499904554755DAFCFB36FBCE04AB0442671091E4DADCC66658D324B185D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 638,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\evidence_overlay.md",
+      "provenance": {},
+      "sha256": "ACF46B5EE2A5F1410EBBF5EA5D379014B17E439F68AC13959E7BC5C9E35A59F9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 711,
+      "category": "review",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\evidence_overlay_diff.json",
+      "provenance": {},
+      "sha256": "B531B3AEACEC37881402C1319230E23090D8EDFF1593D88524490A1AA350D913",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 634,
+      "category": "review",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\evidence_overlay_diff.md",
+      "provenance": {},
+      "sha256": "555C894D8D81AA0D51CD726F81BB4EDAB82A170A48A86FCF09BACF1653F9C406",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_promotion_gate_report",
+      "byte_count": 1028,
+      "category": "review",
+      "line_count": 37,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\evidence_overlay_promotion_gate.json",
+      "provenance": {},
+      "sha256": "FAF1F5DD0CC86BA98798F932451B4539D5706675C835CC97BE59A64A64A5F01D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_promotion_gate_report",
+      "byte_count": 655,
+      "category": "review",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\evidence_overlay_promotion_gate.md",
+      "provenance": {},
+      "sha256": "1FCB9548BB7764C0B945491F19CF19B850A96723A9E49B1A9B1670F82E285FA0",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 1648,
+      "category": "review",
+      "line_count": 82,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\overlay_graph_quality.json",
+      "provenance": {},
+      "sha256": "7E700EC289438F06A0CC3DE225EBEA0336CFD60D5C857B7AA6CDC682CD640D2F",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 960,
+      "category": "review",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\overlay_graph_quality.md",
+      "provenance": {},
+      "sha256": "14783D0FBF7E6425287D2C847F432FDCD04ED20BB8869BD98BCB3BA0313BF45C",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "overlay_load_guard_report",
+      "byte_count": 293,
+      "category": "review",
+      "line_count": 10,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\overlay_load_guard.json",
+      "provenance": {},
+      "sha256": "234251EBC8A78E0D7B949A09D568FF827DFEF10FEE39884DAB86250FB66A2D6D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "overlay_load_guard_report",
+      "byte_count": 414,
+      "category": "review",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\overlay_load_guard.md",
+      "provenance": {},
+      "sha256": "1B06E9913077BAAE57EA3EC60CBAB613950B0290DCF5B99F3E123E4F920749EC",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "overlay_revert_report",
+      "byte_count": 316,
+      "category": "review",
+      "line_count": 8,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\overlay_revert.json",
+      "provenance": {},
+      "sha256": "2FC860EF49D35E886148F76FE197345869AA41F6403BAC237BB60AD32B660045",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "overlay_revert_report",
+      "byte_count": 434,
+      "category": "review",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\overlay_revert.md",
+      "provenance": {},
+      "sha256": "669906EE0BEB0574C59AB1DE22644C6A9411FB3DC25BF87179477297C317881F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 777,
+      "category": "review",
+      "line_count": 40,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\prediction_quality.json",
+      "provenance": {},
+      "sha256": "55F09164E5668173287808A8D0A19593F9A6D692851E0523CDC21C7A328E232F",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 574,
+      "category": "review",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\prediction_quality.md",
+      "provenance": {},
+      "sha256": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 723,
+      "category": "review",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\prediction_review_summary.json",
+      "provenance": {},
+      "sha256": "67975E1DB70D40F532E1FC0350B0502FCCA57B886419E10BD634E460FA4E1056",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 541,
+      "category": "review",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_regression_pack\\prediction_review_summary.md",
+      "provenance": {},
+      "sha256": "9E7FA1B9FE8188ACD1F31E95E48BDFF07B749DF312475BC1295A7F4959872F49",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_run_browser_report",
+      "byte_count": 4347,
+      "category": "review",
+      "line_count": 64,
+      "modified_at_utc": "2026-06-23T09:05:49+00:00",
+      "path": "reports\\review\\curation_run_browser.json",
+      "provenance": {},
+      "sha256": "DFF41E5D977FD3AB874438FEAB67367A61365DF6657EE1CBDE9B1F7E7A013BBD",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_run_browser_report",
+      "byte_count": 817,
+      "category": "review",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T09:05:49+00:00",
+      "path": "reports\\review\\curation_run_browser.md",
+      "provenance": {},
+      "sha256": "F4287193A8AC27B4A258A76674F5C2E860B74BC554AF58C0CBB8E4DC7D26D00A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_run_registry",
+      "byte_count": 4235,
+      "category": "review",
+      "line_count": 56,
+      "modified_at_utc": "2026-06-27T02:34:50+00:00",
+      "path": "reports\\review\\curation_run_registry.json",
+      "provenance": {},
+      "sha256": "C74F88145DF3E23140D8B8C6FE8AFEFAEDF6E4D3419F8E6F297C5F6021960483",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_run_registry",
+      "byte_count": 542,
+      "category": "review",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T07:08:46+00:00",
+      "path": "reports\\review\\curation_run_registry.md",
+      "provenance": {},
+      "sha256": "711038289A4BEC40064D15B74996850F36363B5EA78B3B02B4F88EB72936C136",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_run_registry",
+      "byte_count": 2200,
+      "category": "review",
+      "line_count": 33,
+      "modified_at_utc": "2026-06-23T07:08:46+00:00",
+      "path": "reports\\review\\curation_run_registry_report.json",
+      "provenance": {},
+      "sha256": "BBA44871D8E63F806B0E56E5AA0D7EE9730638AF39578D35F85B23CB4646F1D0",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 436,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\curated_evidence_audit.json",
+      "provenance": {},
+      "sha256": "89D90AE73D76AB347DFDB9AF16C045B70ED6BC2D30400B57C9D182EDADD38F02",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 500,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\curated_evidence_audit.md",
+      "provenance": {},
+      "sha256": "957F6003611889E740577C9EBACE79C8EDD6D0674A934A0BDE33C4F0C4CA5C69",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curation_smoke_workflow_report",
+      "byte_count": 1298,
+      "category": "review",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\curation_smoke_workflow.json",
+      "provenance": {},
+      "sha256": "A49EA0F7E606B0ADAFAAFF9D08AFD293BB201F2710315924F01B3A7C96E5C11A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curation_smoke_workflow_report",
+      "byte_count": 1342,
+      "category": "review",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\curation_smoke_workflow.md",
+      "provenance": {},
+      "sha256": "7FE18FDE770918A0109D2373968531C665AD3410B39744C78AD91BBAF4D67DD5",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 720,
+      "category": "review",
+      "line_count": 22,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\evidence_overlay.json",
+      "provenance": {},
+      "sha256": "C1E2F6B812D949FE701E54B0BA37D6488F066196FE4A5A8EA9A8CB91F812F4F2",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_report",
+      "byte_count": 636,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\evidence_overlay.md",
+      "provenance": {},
+      "sha256": "471D0480EC6566B45BA356DFADCF3123350B466EAD8B0458CCE73143D5D256AE",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 710,
+      "category": "review",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\evidence_overlay_diff.json",
+      "provenance": {},
+      "sha256": "7938AD50B0796715C0D928B53701F8512627525C77D044F14DC8F1EFB103AE37",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_overlay_diff_report",
+      "byte_count": 633,
+      "category": "review",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\evidence_overlay_diff.md",
+      "provenance": {},
+      "sha256": "760AB4E52DC1212960560ED99058800E7C87F0CBA2AAB9BF6E1A729C5E2051EE",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 777,
+      "category": "review",
+      "line_count": 40,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\prediction_quality.json",
+      "provenance": {},
+      "sha256": "55F09164E5668173287808A8D0A19593F9A6D692851E0523CDC21C7A328E232F",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 574,
+      "category": "review",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\prediction_quality.md",
+      "provenance": {},
+      "sha256": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 722,
+      "category": "review",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\prediction_review_summary.json",
+      "provenance": {},
+      "sha256": "11A76B076028A59739F3018C69863F93B4F411BA80A13705182D06CE5D347F82",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 540,
+      "category": "review",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T06:24:56+00:00",
+      "path": "reports\\review\\curation_smoke_workflow\\prediction_review_summary.md",
+      "provenance": {},
+      "sha256": "A305E68EBAD9D9001340BAB4ADA67DFC643FF8D56810FD3AF7C526912A0F6E79",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 417,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "reports\\review\\evidence_smoke_curated_evidence_audit.json",
+      "provenance": {},
+      "sha256": "ACB327B827673D5F2FABAEE937AFC3DDBDF471AD97AB3CA1AC3AF40050D4D93D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 482,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "reports\\review\\evidence_smoke_curated_evidence_audit.md",
+      "provenance": {},
+      "sha256": "32717F29778641C577CB910F5C8CD6276178126463B8AC07C2C7E48CE6B0F47B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_report",
+      "byte_count": 537,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T04:25:49+00:00",
+      "path": "reports\\review\\evidence_smoke_curated_evidence_export.json",
+      "provenance": {},
+      "sha256": "2B936B741D2C11B62CD794894A06C9B7F499C8AE9B7179E83300035FBA022AD2",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_report",
+      "byte_count": 600,
+      "category": "review",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T04:25:49+00:00",
+      "path": "reports\\review\\evidence_smoke_curated_evidence_export.md",
+      "provenance": {},
+      "sha256": "5B0B6FE7B551B5A234586B115C51D2CF6C3B844331A72B922AED05AA49E323E9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 759,
+      "category": "review",
+      "line_count": 41,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "reports\\review\\evidence_smoke_prediction_review_summary.json",
+      "provenance": {},
+      "sha256": "82DF199C0653A51704C30E4AC92E7F5FEDF2D99AD0520B8B4AE5B8CAEE23C481",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "prediction_review_summary",
+      "byte_count": 562,
+      "category": "review",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "reports\\review\\evidence_smoke_prediction_review_summary.md",
+      "provenance": {},
+      "sha256": "3C62A6FAB54ED3D2D3C386C2ACC086886A0508C298F1B9F24B594706B7C17C84",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 608,
+      "category": "review",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-23T03:24:58+00:00",
+      "path": "reports\\review\\ncbi_env_smoke_curation_diff.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "399A95679A131932D68AF4E79859639709023EAB56102A8F82B34C705431596C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 574,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T03:24:58+00:00",
+      "path": "reports\\review\\ncbi_env_smoke_curation_diff.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "B73C5331F005FEACA866558F4164D77F18C9A376835327A5E773171480BFBDDD",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 4930,
+      "category": "review",
+      "line_count": 183,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\review\\ncbi_env_smoke_review_summary.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "0A976663F4EB2FC648E8E2D779066D4CA4A3FF95F212AE1E0BC170FF93F07895",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 953,
+      "category": "review",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\review\\ncbi_env_smoke_review_summary.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "BDF2BEA28FE0BD156CF1F05EF3A1231FF0A49EF94A90D9917B82DE350C395C98",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 4282,
+      "category": "review",
+      "line_count": 132,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\review\\ncbi_env_smoke_reviewed_summary.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "901B89E420BDC6E901E4DBE3565252B7D4B4C33A7357BB3C4AB93CF3269C1231",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 840,
+      "category": "review",
+      "line_count": 31,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\review\\ncbi_env_smoke_reviewed_summary.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "76D6FA7878C801294CC66B81DB9E37CBB00D91B0D169E91DD5CA2FA8485807AD",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 424,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "reports\\review\\sample_graph_curated_evidence_audit.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "83F230A66292B442A3BC9719AEFEA62A6DB098FCA60F46BBEA054FEC03E2D43C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_audit",
+      "byte_count": 489,
+      "category": "review",
+      "line_count": 19,
+      "modified_at_utc": "2026-06-23T04:37:27+00:00",
+      "path": "reports\\review\\sample_graph_curated_evidence_audit.md",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "367FEBCD646F708871D299B950AE4D86DFF0D5374E83A49D334F8F08B099020A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "curated_evidence_report",
+      "byte_count": 487,
+      "category": "review",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T04:25:15+00:00",
+      "path": "reports\\review\\sample_graph_curated_evidence_export.json",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "9BF170D319B2B77D144B282B243AB0FD06ACE141A3A6B30C7F2F048C16681502",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "curated_evidence_report",
+      "byte_count": 566,
+      "category": "review",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T04:25:15+00:00",
+      "path": "reports\\review\\sample_graph_curated_evidence_export.md",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "FD64D711BE7FC37FFE58DE5127742E4274D65DD3DDC179D48D33C75A6C9D077F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "json_report",
+      "byte_count": 1088,
+      "category": "report",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\smoke_baseline.json",
+      "provenance": {},
+      "sha256": "1C7741F379BCDBBAFC3C8A8DC421DAFC05153693942D1687A39455045365561F",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 1124,
+      "category": "report",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T03:00:23+00:00",
+      "path": "reports\\smoke_baseline.md",
+      "provenance": {},
+      "sha256": "AC223BB156E376A03BC35C0ACB18231DD1BDEC5CDE37CCA3D3A390F57A8920E1",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "dashboard_training_manifest",
+      "byte_count": 372,
+      "category": "training",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\dashboard_training_manifest.json",
+      "provenance": {},
+      "sha256": "8F74B3B7F4F5A97BCDDF86C37CECB830EF3600BE102AA5B322C3BD1FC15F2698",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "dashboard_training_manifest",
+      "byte_count": 293,
+      "category": "training",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\dashboard_training_manifest.md",
+      "provenance": {},
+      "sha256": "F6DCC6EEAD8D5742672735E8A569C48066F12470E1C699E3CDAE905CDA69D1ED",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 1598,
+      "category": "training",
+      "line_count": 49,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "reports\\training\\evidence_label_repair.json",
+      "provenance": {},
+      "sha256": "013478772C1A62D62E40099229EEDF2659CBBC1DFAE2220B40BE9C2C691E2B6A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 777,
+      "category": "training",
+      "line_count": 42,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "reports\\training\\evidence_label_repair.md",
+      "provenance": {},
+      "sha256": "86B3F7E454AAE3FAB5CC7D5A951C094CAEFAD805D0636022EA5ECA5EE7164E49",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 682,
+      "category": "training",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
+      "provenance": {},
+      "sha256": "51D980E47917759AAA1EED60A0949D47A2AE3E61E53EA851F564B32B61C37370",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 677,
+      "category": "training",
+      "line_count": 18,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack.md",
+      "provenance": {},
+      "sha256": "D25F6E8E322774A556049E553E7BAE97869AA22B776D8DB4A1A569ABE5A1EA74",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 965,
+      "category": "training",
+      "line_count": 35,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack_baseline.json",
+      "provenance": {},
+      "sha256": "7FAB133F90700FAA638861D8B6A39C97B02B232778BA5D01CBE12511F06853E5",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 882,
+      "category": "training",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack_baseline.md",
+      "provenance": {},
+      "sha256": "6338EE3651D7486DD933DDBA59D78B0740E7937A743658237F00D640389253B1",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 2251,
+      "category": "training",
+      "line_count": 75,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack_dataset_card.json",
+      "provenance": {},
+      "sha256": "AC05FFB3F7EA3C4AB924B1FEC6FF473985285C42818A741C782806B8D10F8B20",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 1914,
+      "category": "training",
+      "line_count": 79,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack_dataset_card.md",
+      "provenance": {},
+      "sha256": "3662B1C618375937314C749927A3D1CCDB5F12FC2475D8A06B7A1F6DE3AC9A22",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 669,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.json",
+      "provenance": {},
+      "sha256": "A909A1D518EFED138EDBA4C70C8F8DED6717D5C90B41056F3F654D23E032F246",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_training_pack_report",
+      "byte_count": 549,
+      "category": "training",
+      "line_count": 28,
+      "modified_at_utc": "2026-06-23T10:57:24+00:00",
+      "path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.md",
+      "provenance": {},
+      "sha256": "0976C27AF394596C9C3A4BD7B8C50DC0483F9547DF44EF5413F1B9A9A0EDFEB0",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 779,
+      "category": "training",
+      "line_count": 40,
+      "modified_at_utc": "2026-06-23T04:25:14+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_prediction_quality.json",
+      "provenance": {},
+      "sha256": "E4BB242548E2AF07B02A3EA0946EA427C04848AC657EBB88D6D1ED5B6248417A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "prediction_quality_report",
+      "byte_count": 576,
+      "category": "training",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T04:25:14+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_prediction_quality.md",
+      "provenance": {},
+      "sha256": "6EA57C9BD60FE5DA447D786E7C38F3932C378082D0C993941CBFDC3EF037FB04",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_metrics",
+      "byte_count": 687,
+      "category": "training",
+      "line_count": 36,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_metrics.json",
+      "provenance": {},
+      "sha256": "0E2178E53AE0C5050804C53F2B0A25931B86C71A9548EC7D8D6AE667DC5C2778",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_metrics",
+      "byte_count": 417,
+      "category": "training",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_metrics.md",
+      "provenance": {},
+      "sha256": "EBC7AA2ABC2E937E3FE17350F7ED03F1E6D652876942F991AF6BF4061E068FC1",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "model_card",
+      "byte_count": 5899,
+      "category": "training",
+      "line_count": 172,
+      "modified_at_utc": "2026-06-23T04:08:23+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_model_card.json",
+      "provenance": {},
+      "sha256": "FFCDBC03E1E5527EC86A7C73084D44F349DBB0542D359FE4BDB2FB27636AB39E",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "model_card",
+      "byte_count": 1028,
+      "category": "training",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T04:08:23+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_model_card.md",
+      "provenance": {},
+      "sha256": "06619B639043CC0175330301B51F0D64101300292E0B9F2F0DB3856F14DB686B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_predictions",
+      "byte_count": 409,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:08:25+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_predictions.jsonl",
+      "provenance": {},
+      "sha256": "032D7DCAD869DCD8B24665DD99204B7C9484892D9A9D01A1AE28E37E672F5F22",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_run_manifest",
+      "byte_count": 1347,
+      "category": "training",
+      "line_count": 21,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_run_manifest.json",
+      "provenance": {},
+      "sha256": "3A0FC7A2C9B6EE8E60BAF7CAD28960CD6DBC537ABE0F9EA0DAC34A65164E3253",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_claims",
+      "byte_count": 79,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:08:25+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_score_input.jsonl",
+      "provenance": {},
+      "sha256": "DAFB3E58F471052E0C711D8CB1B5BB7D7E48891727BA63DD729BC09A05D6A2F8",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "training_smoke_summary",
+      "byte_count": 628,
+      "category": "training",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_summary.json",
+      "provenance": {},
+      "sha256": "50758F78D9E570803E00B4EB3F9B495726DDCD6D662E9AAE3545AA2837805B75",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_predictions",
+      "byte_count": 439,
+      "category": "training",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T04:24:50+00:00",
+      "path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+      "provenance": {
+        "source": "local fixture"
+      },
+      "sha256": "4833049E800B76B43DB3F1139D456FBB71C32505EEC877BCDA9191FC6AC5AF19",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "baseline_report",
+      "byte_count": 968,
+      "category": "training",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\baseline_report.json",
+      "provenance": {},
+      "sha256": "886DD6B03F261DFA8548A16E1F5CD367A8503E22BB5E061575F3BE1B35A5359A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "baseline_report",
+      "byte_count": 902,
+      "category": "training",
+      "line_count": 35,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\baseline_report.md",
+      "provenance": {},
+      "sha256": "64B5D6430320E8400B4F7C08A2F6C4BDB79BD58E1D0C68C989EF0F64B618FF52",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "dataset_card",
+      "byte_count": 2270,
+      "category": "training",
+      "line_count": 72,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\dataset_card.json",
+      "provenance": {},
+      "sha256": "3BD54906C06CCDA6C0CDD7E7A0CEA03A8D77831DAD36D569AEF18DF68BB58034",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "dataset_card",
+      "byte_count": 1980,
+      "category": "training",
+      "line_count": 80,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\dataset_card.md",
+      "provenance": {},
+      "sha256": "9C65C0AE489C26820470FAD69CF0015F79B3400148088300459E9BEF5E9E1870",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 1280,
+      "category": "training",
+      "line_count": 36,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\evidence_label_repair.json",
+      "provenance": {},
+      "sha256": "0B4F510E4F53054FBE3B0E0BC38C9818737CEE3CCF1598AA0FDF1FD9F83B3AAC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "evidence_label_repair_report",
+      "byte_count": 610,
+      "category": "training",
+      "line_count": 33,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\evidence_label_repair.md",
+      "provenance": {},
+      "sha256": "9D5F7962C66248BDC1D25BCBCA6CC4C98B3153439C1FA8400533C64B49171AD4",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 906,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\gold_seed_manifest.json",
+      "provenance": {},
+      "sha256": "EF38B5754EC10F146CE232EF6A006DD25F378007F9328D09CA9080398908BE64",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "gold_training_pack_report",
+      "byte_count": 1724,
+      "category": "training",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\gold_training_pack.json",
+      "provenance": {},
+      "sha256": "47FD40466A058903F2899A85A67E2DB046B4451C7DE5BC2C8BD61DFA5330C48C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "gold_training_pack_report",
+      "byte_count": 1296,
+      "category": "training",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\gold_training_pack.md",
+      "provenance": {},
+      "sha256": "C2EC6D58F775DF0B548C5B8D5187488204403BE792F063F6843971C0B063A577",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 2443,
+      "category": "training",
+      "line_count": 78,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\pmid_split_manifest.json",
+      "provenance": {},
+      "sha256": "7876CE3B14190315BFD4539C9B9557E62F5012FDE6AE5FEBEED9E09420E2FA98",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 608,
+      "category": "training",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\pmid_split_manifest.md",
+      "provenance": {},
+      "sha256": "FF98D9F91931CE89B45DE11570472B7CE31BB7A8A5E24FF9EF17AA5868D51C6A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_readiness_report",
+      "byte_count": 1295,
+      "category": "training",
+      "line_count": 51,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\training_readiness.json",
+      "provenance": {},
+      "sha256": "B63B3BC92A7483DEE1EC034F707B0A9A5E596222B0297DC71A50A0F160D2C48B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_readiness_report",
+      "byte_count": 944,
+      "category": "training",
+      "line_count": 50,
+      "modified_at_utc": "2026-06-23T10:26:30+00:00",
+      "path": "reports\\training\\gold_pack\\training_readiness.md",
+      "provenance": {},
+      "sha256": "A2696C4B28E98F58814D191539466DC1F69138EED238289AA3658D13E29E29E0",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 840,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "reports\\training\\gold_seed_manifest.json",
+      "provenance": {},
+      "sha256": "BAD9DA1A485ACC9C0B90FD83E305566064563954F5E8D81A04EE58DE87AF83E4",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "gold_seed_manifest",
+      "byte_count": 636,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T09:47:55+00:00",
+      "path": "reports\\training\\gold_seed_manifest.md",
+      "provenance": {},
+      "sha256": "A07FBD21E829BB7751B7BA3ECAC000C6EDB9C9F3BDED4FD27B6B79D7381707E3",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_artifact_bundle_manifest",
+      "byte_count": 65608,
+      "category": "training",
+      "line_count": 1312,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
+      "provenance": {},
+      "sha256": "42D751859A9092F8909444120449D7C3E696B72E45B89B616904904D16E2BD04",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_artifact_bundle_manifest",
+      "byte_count": 28835,
+      "category": "training",
+      "line_count": 198,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md",
+      "provenance": {},
+      "sha256": "097BF65225FDBDAAA506D539536B9C8274A7C8C8CDD02F541C9765479FE6F9C2",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "dashboard_training_manifest",
+      "byte_count": 384,
+      "category": "training",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\dashboard_training_manifest.json",
+      "provenance": {},
+      "sha256": "648D29E177F7BCF4C3E58125D0203099C13C98D9B2D4CF34D4460805D9C6DE80",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "dashboard_training_manifest",
+      "byte_count": 293,
+      "category": "training",
+      "line_count": 9,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\dashboard_training_manifest.md",
+      "provenance": {},
+      "sha256": "F6DCC6EEAD8D5742672735E8A569C48066F12470E1C699E3CDAE905CDA69D1ED",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "model_registry_audit_report",
+      "byte_count": 2202,
+      "category": "training",
+      "line_count": 65,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\model_registry_audit.json",
+      "provenance": {},
+      "sha256": "AA12FB35279E00959C618F4EFF83155F283C018A5BA2028DE401914900689E8B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "model_registry_audit_report",
+      "byte_count": 1767,
+      "category": "training",
+      "line_count": 63,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\model_registry_audit.md",
+      "provenance": {},
+      "sha256": "5AAFB6E73D2DD1629DA30108343C1AC6298D438B730531AD3B1B2AA8B15D12AB",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "model_registry_remediation_plan",
+      "byte_count": 1079,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\model_registry_remediation_plan.json",
+      "provenance": {},
+      "sha256": "6ECFB92FBD416C0125730DFF779A39E8C7FE78B2EFB46FE9742967A02BF0C3AE",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "model_registry_remediation_plan",
+      "byte_count": 776,
+      "category": "training",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\model_registry_remediation_plan.md",
+      "provenance": {},
+      "sha256": "4D5A94AF45FC67D24B8C3665F92E8ACF120923CD02F6B93BB2EEC34DAF94F60B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_config_suite_review_report",
+      "byte_count": 7307,
+      "category": "training",
+      "line_count": 203,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_config_suite_review.json",
+      "provenance": {},
+      "sha256": "9B68CB755DD30A8294CE5A9D1DB13FE10016CACA6AC65E0D14A310213DE98C5C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_config_suite_review_report",
+      "byte_count": 880,
+      "category": "training",
+      "line_count": 32,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_config_suite_review.md",
+      "provenance": {},
+      "sha256": "5E560B31229F265D0C8668022C4D324C48C70B1BCBC133ED74FE04A7DABB120A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_governance_suite_report",
+      "byte_count": 1472,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_governance_suite.json",
+      "provenance": {},
+      "sha256": "634D4EF00649D09582AF6AC3EF5861DF2585799808B795ECFCEC0F32974433E3",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_governance_suite_report",
+      "byte_count": 1361,
+      "category": "training",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_governance_suite.md",
+      "provenance": {},
+      "sha256": "38500C0B41FDA03F5B201D46C9EC458BCC67C826709BC4CFF7AAB642301E0D73",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_label_drift_report",
+      "byte_count": 1381,
+      "category": "training",
+      "line_count": 67,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_label_drift.json",
+      "provenance": {},
+      "sha256": "42E3A68B39D3A963B7144CB729B680A59C6FB341DCD7AF922F10D53D8DF0FDCE",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_label_drift_report",
+      "byte_count": 604,
+      "category": "training",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_label_drift.md",
+      "provenance": {},
+      "sha256": "B78F87619053C05DFDF0242183254A27FD5F302B6262736CB93A5FE2138314A9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_pack_comparison_report",
+      "byte_count": 2323,
+      "category": "training",
+      "line_count": 79,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_pack_comparison.json",
+      "provenance": {},
+      "sha256": "BD5ADB427DFAF2555073681A842B70522E83E94637D10857BE78E1BC9C9FA805",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_pack_comparison_report",
+      "byte_count": 1629,
+      "category": "training",
+      "line_count": 66,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_pack_comparison.md",
+      "provenance": {},
+      "sha256": "2531B5759F2447BF4CC3550166A994300A648745CA3686DE4ADAC84FF615E102",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_pack_leakage_audit_report",
+      "byte_count": 4165,
+      "category": "training",
+      "line_count": 203,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_pack_leakage_audit.json",
+      "provenance": {},
+      "sha256": "DA99F1A832B7458F9EAF3E42B10B007A527C0F34C1ABA5CEECF81053A1D48CC8",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_pack_leakage_audit_report",
+      "byte_count": 1564,
+      "category": "training",
+      "line_count": 42,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_pack_leakage_audit.md",
+      "provenance": {},
+      "sha256": "0944815208BF3DEC269CC9BC933AF95C1F377EDCA05A02BD8CA8BBFC24399826",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_provenance_audit_report",
+      "byte_count": 420,
+      "category": "training",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_provenance_audit.json",
+      "provenance": {},
+      "sha256": "CF0C91CA8AC6C9E24D1CD40376A1F727952F6C5B7DBEAB0481B04BEFC57A1669",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_provenance_audit_report",
+      "byte_count": 344,
+      "category": "training",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_provenance_audit.md",
+      "provenance": {},
+      "sha256": "4130F4D9BEEBC3091EB405A5B038FDDA9E93966AABFCD6E9EC423AE91E34D0BE",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_readiness_snapshot",
+      "byte_count": 416,
+      "category": "training",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_readiness_snapshot.json",
+      "provenance": {},
+      "sha256": "B53DA0B995D50F00B8A66388B5AC6866A9B4F7336BB3C38C266C25BD8F908A17",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_readiness_snapshot",
+      "byte_count": 373,
+      "category": "training",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\governance\\training_readiness_snapshot.md",
+      "provenance": {},
+      "sha256": "F1C9730681B2E0B629F5057E99C0CCF9CA365E06056C3A7300C5924558D0E493",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "model_registry_audit_report",
+      "byte_count": 2202,
+      "category": "training",
+      "line_count": 65,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\model_registry_audit.json",
+      "provenance": {},
+      "sha256": "AA12FB35279E00959C618F4EFF83155F283C018A5BA2028DE401914900689E8B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "model_registry_audit_report",
+      "byte_count": 1767,
+      "category": "training",
+      "line_count": 63,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\model_registry_audit.md",
+      "provenance": {},
+      "sha256": "5AAFB6E73D2DD1629DA30108343C1AC6298D438B730531AD3B1B2AA8B15D12AB",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "model_registry_remediation_plan",
+      "byte_count": 1067,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\model_registry_remediation_plan.json",
+      "provenance": {},
+      "sha256": "B99EBA9B22AA6F5B23DA5520C692C09793422A7F4BC3EE4DD9502BB15F5874CC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "model_registry_remediation_plan",
+      "byte_count": 765,
+      "category": "training",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\model_registry_remediation_plan.md",
+      "provenance": {},
+      "sha256": "304C436D5DC830F2A0DB3FDB62CABEDD967659E5D856BD9776F7602BB9365A67",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "manifest",
+      "byte_count": 585,
+      "category": "training",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T03:24:50+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_annotation_dataset_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "D83784469BBC9DD8DB4041466FF1369FDA09AEC97CD3673531008818D190ED98",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 1112,
+      "category": "training",
+      "line_count": 50,
+      "modified_at_utc": "2026-06-23T03:24:58+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_annotation_dataset_quality.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "C5BC4AE77AE360B822A05EE99C063BB785BA8C5DA2BE8FDEEC41DC73CD39F800",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "graph_quality_report",
+      "byte_count": 785,
+      "category": "training",
+      "line_count": 44,
+      "modified_at_utc": "2026-06-23T03:24:58+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_annotation_dataset_quality.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "3277A06CE19401074F09AF5FA2FD422EF3EAFD889BC6C22AB96C35A5222601C0",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "baseline_report",
+      "byte_count": 1130,
+      "category": "training",
+      "line_count": 43,
+      "modified_at_utc": "2026-06-23T03:38:08+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_baseline_report.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "B8D25A5E57ED95B4EAA4BF8A7EEC5A6E721B27047236377459B9BFE28B224B67",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "baseline_report",
+      "byte_count": 962,
+      "category": "training",
+      "line_count": 40,
+      "modified_at_utc": "2026-06-23T03:38:08+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_baseline_report.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "34A6461484BB2D3FE1BEA236C6D9B47A785924CC21186E9C23D90EBF0D9C448F",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "dataset_card",
+      "byte_count": 2722,
+      "category": "training",
+      "line_count": 101,
+      "modified_at_utc": "2026-06-23T03:38:08+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_dataset_card.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "880F602D7882F70D5C5FD8C95950A0226E40B54BB197CCE3E2294B04A92EB499",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "dataset_card",
+      "byte_count": 2094,
+      "category": "training",
+      "line_count": 95,
+      "modified_at_utc": "2026-06-23T03:38:08+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_dataset_card.md",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "79FF5F20489F178C8FD192B8FEEC7BA1394124E653A03CCA501693FD3F2546F9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_experiment_manifest",
+      "byte_count": 1267,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T03:38:08+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_experiment_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "00B1DC0686A0C0E339420B1AB552F294F6841853F175371C0A16549D84227535",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_gate_report",
+      "byte_count": 1008,
+      "category": "training",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T04:00:21+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_train_gate.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "4047E8998FC9ADF8F9BCA5E090DA4CC3E59E643F85F839F5492E55D56E78AE50",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_experiment_manifest",
+      "byte_count": 1267,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T03:51:22+00:00",
+      "path": "reports\\training\\ncbi_env_smoke_train_gate_experiment_manifest.json",
+      "provenance": {
+        "source": "PubMed/NCBI"
+      },
+      "sha256": "00B1DC0686A0C0E339420B1AB552F294F6841853F175371C0A16549D84227535",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 2951,
+      "category": "training",
+      "line_count": 98,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "reports\\training\\pmid_split_manifest.json",
+      "provenance": {},
+      "sha256": "7EB84D059C619F5D7C32BD605DE628F0B69F9DC10C69C5DF96A2AADE121E707A",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "pmid_split_manifest",
+      "byte_count": 618,
+      "category": "training",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T10:25:12+00:00",
+      "path": "reports\\training\\pmid_split_manifest.md",
+      "provenance": {},
+      "sha256": "3DD0F0F4007D45D62667CE3F5ED00FBD272FCEA7F8B6AC92306F110DCB082635",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_dataset_quality_report",
+      "byte_count": 510,
+      "category": "training",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T22:11:43+00:00",
+      "path": "reports\\training\\relation_dataset_quality.json",
+      "provenance": {},
+      "sha256": "7F694BE6398E4A4A25100D9D4F9E3B3E4298AF6A95E17C54BE57A8F19843F242",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_dataset_quality_report",
+      "byte_count": 475,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T22:11:43+00:00",
+      "path": "reports\\training\\relation_dataset_quality.md",
+      "provenance": {},
+      "sha256": "FB96EC2496612ED158A6E67F3DB929366D88991001D65AB63FDE964DB17E5BC8",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_negative_report",
+      "byte_count": 434,
+      "category": "training",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T10:56:53+00:00",
+      "path": "reports\\training\\relation_negatives.json",
+      "provenance": {},
+      "sha256": "776A7C229A29581976C5AACF3229ECB442D9EAD2101E65DF5A023E279FFB1B5D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_negative_report",
+      "byte_count": 460,
+      "category": "training",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-23T10:56:53+00:00",
+      "path": "reports\\training\\relation_negatives.md",
+      "provenance": {},
+      "sha256": "0EC33B6819B45A8CAFE51932790273B7E9C0557D4697F0F65515ABC5D3E378AF",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 1561,
+      "category": "training",
+      "line_count": 25,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack.json",
+      "provenance": {},
+      "sha256": "852F8E1D5AA1EB9932A5C70E468D3BF7982F45587B3D977C464EE35B5F74CD74",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 1461,
+      "category": "training",
+      "line_count": 28,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack.md",
+      "provenance": {},
+      "sha256": "3DBC9E489E77ED336AD7C57468769D6564F7BABCECEF09DA9D51F404A4F36286",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 984,
+      "category": "training",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_baseline.json",
+      "provenance": {},
+      "sha256": "D259BAE537AB2E0A57770CB9CAB2081D167B5D30A9EB71C17A18835F2FA069EC",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 918,
+      "category": "training",
+      "line_count": 35,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_baseline.md",
+      "provenance": {},
+      "sha256": "D21B56F3A1C0B3AFA35A7D1B48CD428C80E1EB63699614B14BDF3A337291D2DB",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 2326,
+      "category": "training",
+      "line_count": 75,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_dataset_card.json",
+      "provenance": {},
+      "sha256": "EFFA91F9C904489DD42330F3E1856FC386C86E57A52DD49429FF04AD594B3D93",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 1999,
+      "category": "training",
+      "line_count": 81,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_dataset_card.md",
+      "provenance": {},
+      "sha256": "B2FA15FF8124A37ADEC8E9C75B373BCC3B9B202361DF3364101EE832195734C8",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 514,
+      "category": "training",
+      "line_count": 17,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_quality.json",
+      "provenance": {},
+      "sha256": "27052E0BD91F869CA003C8D693A8CA8B7E12193A2B064D5D7A100FC3974BB984",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 478,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_quality.md",
+      "provenance": {},
+      "sha256": "6E9ED5A10140D23D24142A758300FD1DB6EC5068CC49DCC8473C830A4E463940",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 716,
+      "category": "training",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_readiness.json",
+      "provenance": {},
+      "sha256": "100ADD68D5EEC697D3423939C305CF4B9E0C363BCA0D00423E986BD836523FEF",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 588,
+      "category": "training",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T22:54:05+00:00",
+      "path": "reports\\training\\relation_pack\\relation_training_pack_readiness.md",
+      "provenance": {},
+      "sha256": "31EEAF30B503ACFA838682419F3703ADECA4FFE95ECB5625AA2FC65E62787F36",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_config_review_report",
+      "byte_count": 1970,
+      "category": "training",
+      "line_count": 57,
+      "modified_at_utc": "2026-06-23T22:54:32+00:00",
+      "path": "reports\\training\\relation_training_config_review.json",
+      "provenance": {},
+      "sha256": "5E458E0C51E1C01FD55A3A688B320808753900D7A6264C75B99D13B7EBA8768B",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_config_review_report",
+      "byte_count": 1709,
+      "category": "training",
+      "line_count": 50,
+      "modified_at_utc": "2026-06-23T22:54:32+00:00",
+      "path": "reports\\training\\relation_training_config_review.md",
+      "provenance": {},
+      "sha256": "F691F460ECDEA7F0A872C17D3CB135321C8401E4A2C312C903DEEA1928B8FDFD",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 655,
+      "category": "training",
+      "line_count": 20,
+      "modified_at_utc": "2026-06-23T22:11:43+00:00",
+      "path": "reports\\training\\relation_training_pack.json",
+      "provenance": {},
+      "sha256": "691D694CFBCA7EACA0AF7BF4D8756025B2FF1216192EBA39ABD7F634832B5260",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "relation_training_pack_report",
+      "byte_count": 592,
+      "category": "training",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T22:11:43+00:00",
+      "path": "reports\\training\\relation_training_pack.md",
+      "provenance": {},
+      "sha256": "F8985AD1565D54BD5755CAF977694255CEA29C0356817292B4D076B2F3FFC9B6",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_artifact_search_report",
+      "byte_count": 11637,
+      "category": "training",
+      "line_count": 306,
+      "modified_at_utc": "2026-06-23T23:15:58+00:00",
+      "path": "reports\\training\\training_artifact_search.json",
+      "provenance": {},
+      "sha256": "FE3C4F8586720628E5A25F0374C70191EE22752E20636439EB52855B7895B859",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_artifact_search_report",
+      "byte_count": 2788,
+      "category": "training",
+      "line_count": 39,
+      "modified_at_utc": "2026-06-23T23:15:58+00:00",
+      "path": "reports\\training\\training_artifact_search.md",
+      "provenance": {},
+      "sha256": "419636643085B5EBA25CC044C0B3CE594209B72BE9D65D400290CB18E972FBF8",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_config_review_report",
+      "byte_count": 1642,
+      "category": "training",
+      "line_count": 52,
+      "modified_at_utc": "2026-06-23T10:57:42+00:00",
+      "path": "reports\\training\\training_config_review.json",
+      "provenance": {},
+      "sha256": "0CF9323F41CBE7AA9927A838501D59D059425655FCD257493AEADC5AF9A2CA66",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_config_review_report",
+      "byte_count": 1404,
+      "category": "training",
+      "line_count": 44,
+      "modified_at_utc": "2026-06-23T10:57:42+00:00",
+      "path": "reports\\training\\training_config_review.md",
+      "provenance": {},
+      "sha256": "A88C33E579EEE6275EA8B3C13844485AB3738736D6DFB270FF5D00010EE0FB0D",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_config_suite_review_report",
+      "byte_count": 7307,
+      "category": "training",
+      "line_count": 203,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_config_suite_review.json",
+      "provenance": {},
+      "sha256": "9B68CB755DD30A8294CE5A9D1DB13FE10016CACA6AC65E0D14A310213DE98C5C",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_config_suite_review_report",
+      "byte_count": 880,
+      "category": "training",
+      "line_count": 32,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_config_suite_review.md",
+      "provenance": {},
+      "sha256": "5E560B31229F265D0C8668022C4D324C48C70B1BCBC133ED74FE04A7DABB120A",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_label_drift_report",
+      "byte_count": 1381,
+      "category": "training",
+      "line_count": 67,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_label_drift.json",
+      "provenance": {},
+      "sha256": "42E3A68B39D3A963B7144CB729B680A59C6FB341DCD7AF922F10D53D8DF0FDCE",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_label_drift_report",
+      "byte_count": 604,
+      "category": "training",
+      "line_count": 24,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_label_drift.md",
+      "provenance": {},
+      "sha256": "B78F87619053C05DFDF0242183254A27FD5F302B6262736CB93A5FE2138314A9",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_pack_comparison_report",
+      "byte_count": 2323,
+      "category": "training",
+      "line_count": 79,
+      "modified_at_utc": "2026-06-23T22:54:57+00:00",
+      "path": "reports\\training\\training_pack_comparison.json",
+      "provenance": {},
+      "sha256": "BD5ADB427DFAF2555073681A842B70522E83E94637D10857BE78E1BC9C9FA805",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_pack_comparison_report",
+      "byte_count": 1629,
+      "category": "training",
+      "line_count": 66,
+      "modified_at_utc": "2026-06-23T22:54:57+00:00",
+      "path": "reports\\training\\training_pack_comparison.md",
+      "provenance": {},
+      "sha256": "2531B5759F2447BF4CC3550166A994300A648745CA3686DE4ADAC84FF615E102",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_pack_leakage_audit_report",
+      "byte_count": 4165,
+      "category": "training",
+      "line_count": 203,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_pack_leakage_audit.json",
+      "provenance": {},
+      "sha256": "DA99F1A832B7458F9EAF3E42B10B007A527C0F34C1ABA5CEECF81053A1D48CC8",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_pack_leakage_audit_report",
+      "byte_count": 1564,
+      "category": "training",
+      "line_count": 42,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_pack_leakage_audit.md",
+      "provenance": {},
+      "sha256": "0944815208BF3DEC269CC9BC933AF95C1F377EDCA05A02BD8CA8BBFC24399826",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_provenance_audit_report",
+      "byte_count": 420,
+      "category": "training",
+      "line_count": 13,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_provenance_audit.json",
+      "provenance": {},
+      "sha256": "CF0C91CA8AC6C9E24D1CD40376A1F727952F6C5B7DBEAB0481B04BEFC57A1669",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_provenance_audit_report",
+      "byte_count": 344,
+      "category": "training",
+      "line_count": 14,
+      "modified_at_utc": "2026-06-23T23:16:31+00:00",
+      "path": "reports\\training\\training_provenance_audit.md",
+      "provenance": {},
+      "sha256": "4130F4D9BEEBC3091EB405A5B038FDDA9E93966AABFCD6E9EC423AE91E34D0BE",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_readiness_report",
+      "byte_count": 1456,
+      "category": "training",
+      "line_count": 57,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "reports\\training\\training_readiness.json",
+      "provenance": {},
+      "sha256": "B59F6D1FD33821C0869462546CC29B7E3B3987517804C8D74682BF5911A33E28",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_readiness_report",
+      "byte_count": 1021,
+      "category": "training",
+      "line_count": 58,
+      "modified_at_utc": "2026-06-23T10:26:12+00:00",
+      "path": "reports\\training\\training_readiness.md",
+      "provenance": {},
+      "sha256": "84B054AA3381E0747E97ABF01055F6C4F7F8308CDAC15E5A7CDB9932222116E4",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "training_readiness_snapshot",
+      "byte_count": 416,
+      "category": "training",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\training_readiness_snapshot.json",
+      "provenance": {},
+      "sha256": "AE8A3312E9E1C3E272C1138A9BBF47B083FCB0615ED4F281C161E4D51A0E8F52",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "training_readiness_snapshot",
+      "byte_count": 373,
+      "category": "training",
+      "line_count": 12,
+      "modified_at_utc": "2026-06-23T23:16:49+00:00",
+      "path": "reports\\training\\training_readiness_snapshot.md",
+      "provenance": {},
+      "sha256": "75B0FD6DA4D8BA5044C76AF2AE72960BF6E78BBF9549832826027DB0D7A120B2",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "byte_count": 1641,
+      "category": "wireframe",
+      "line_count": 26,
+      "modified_at_utc": "2026-06-22T22:04:58+00:00",
+      "path": "reports\\wireframes\\kg_explorer.md",
+      "provenance": {},
+      "sha256": "26027595F9F6B93AECC86EA2CA288C26A0F19D9AF48390C46D93E774E4C2491E",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "checkpoint_registry",
+      "byte_count": 1630,
+      "category": "model",
+      "line_count": 29,
+      "modified_at_utc": "2026-06-23T04:08:01+00:00",
+      "path": "models\\checkpoint_registry.json",
+      "provenance": {},
+      "sha256": "D61A8912FD3973FE3456315FFFCB3B4CCB2D48E6B4785C045AF378EE0BA5D628",
+      "suffix": ".json"
+    }
+  ],
+  "category_counts": {
+    "corpus_report": 5,
+    "examples": 4,
+    "graph_report": 24,
+    "model": 1,
+    "processed": 58,
+    "raw": 4,
+    "report": 14,
+    "review": 90,
+    "training": 223,
+    "wireframe": 1
+  },
+  "root_paths": [
+    "data\\raw",
+    "data\\processed",
+    "data\\review",
+    "data\\training",
+    "data\\examples",
+    "reports",
+    "models"
+  ],
+  "suffix_counts": {
+    ".csv": 8,
+    ".json": 153,
+    ".jsonl": 128,
+    ".md": 135
+  },
+  "total_bytes": 1300176
+}

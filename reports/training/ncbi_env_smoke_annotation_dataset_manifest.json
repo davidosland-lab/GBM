@@ -1,0 +1,17 @@
+{
+  "evidence_count": 4,
+  "files": {
+    "evidence": "data\\training\\ncbi_env_smoke_annotation_dataset\\evidence.jsonl",
+    "manifest": "data\\training\\ncbi_env_smoke_annotation_dataset\\dataset_manifest.json",
+    "ner": "data\\training\\ncbi_env_smoke_annotation_dataset\\ner.jsonl",
+    "relation": "data\\training\\ncbi_env_smoke_annotation_dataset\\relations.jsonl"
+  },
+  "included_statuses": [
+    "accepted",
+    "corrected",
+    "pending"
+  ],
+  "ner_count": 126,
+  "output_dir": "data\\training\\ncbi_env_smoke_annotation_dataset",
+  "relation_count": 3
+}

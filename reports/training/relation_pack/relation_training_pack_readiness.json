@@ -1,0 +1,26 @@
+{
+  "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+  "leakage_warnings": [],
+  "min_examples_per_label": 1,
+  "min_examples_per_task": 1,
+  "ready": true,
+  "task_reports": [
+    {
+      "dominant_label_fraction": 0.5,
+      "duplicate_count": 0,
+      "example_count": 6,
+      "invalid_ner_span_count": 0,
+      "label_counts": {
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 3,
+        "PREDICTS": 1
+      },
+      "ready": true,
+      "task": "relation",
+      "warnings": []
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 0,
+  "warnings": []
+}

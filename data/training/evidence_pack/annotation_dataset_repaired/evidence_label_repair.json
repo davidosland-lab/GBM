@@ -1,0 +1,37 @@
+{
+  "changed_count": 0,
+  "input_dir": "data\\training\\evidence_pack\\annotation_dataset",
+  "output_dir": "data\\training\\evidence_pack\\annotation_dataset_repaired",
+  "skipped_count": 0,
+  "tasks": [
+    {
+      "changed_count": 0,
+      "label_counts": {
+        "0": 3,
+        "1": 1
+      },
+      "output_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
+      "row_count": 4,
+      "skipped_count": 0,
+      "source_file": "data\\training\\evidence_pack\\annotation_dataset\\evidence.jsonl"
+    },
+    {
+      "changed_count": 0,
+      "label_counts": {},
+      "output_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\ner.jsonl",
+      "row_count": 0,
+      "skipped_count": 0,
+      "source_file": "data\\training\\evidence_pack\\annotation_dataset\\ner.jsonl"
+    },
+    {
+      "changed_count": 0,
+      "label_counts": {},
+      "output_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\relations.jsonl",
+      "row_count": 0,
+      "skipped_count": 0,
+      "source_file": "data\\training\\evidence_pack\\annotation_dataset\\relations.jsonl"
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

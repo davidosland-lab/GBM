@@ -1,0 +1,41 @@
+{
+  "checkpoint_name_counts": [
+    {
+      "count": 1,
+      "key": "gbmbert_evidence_smoke"
+    }
+  ],
+  "checkpoint_status_counts": [
+    {
+      "count": 1,
+      "key": "research_candidate"
+    }
+  ],
+  "corrected_tier_counts": [],
+  "item_count": 1,
+  "pending_count": 1,
+  "predicted_tier_counts": [
+    {
+      "count": 1,
+      "key": "1"
+    }
+  ],
+  "reviewed_queue_path": "data\\review\\evidence_smoke_prediction_reviewed_queue.jsonl",
+  "status_counts": [
+    {
+      "count": 1,
+      "key": "pending"
+    }
+  ],
+  "tier_shift_counts": [],
+  "top_pmids": [
+    {
+      "count": 1,
+      "key": "SMOKE1"
+    }
+  ],
+  "warning_count": 1,
+  "warnings": [
+    "1 prediction item(s) still pending review"
+  ]
+}

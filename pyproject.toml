@@ -1,0 +1,129 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gbm-ai-platform"
+version = "0.1.0"
+description = "Research-use-only glioblastoma literature intelligence platform."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "accelerate>=0.30,<2",
+    "datasets>=2.19,<5",
+    "neo4j>=5.20,<6",
+    "pydantic>=2.7,<3",
+    "python-dotenv>=1.0,<2",
+    "spacy>=3.7,<4",
+    "scispacy>=0.5,<1",
+    "torch>=2.2,<3",
+    "transformers>=4.41,<5",
+    "tqdm>=4.66,<5",
+]
+
+[project.scripts]
+gbmbert-search-pubmed = "gbmbert.ingest.query_packs:main"
+gbmbert-search-trials = "gbmbert.ingest.clinicaltrials:main"
+gbmbert-build-corpus-manifest = "gbmbert.ingest.manifest:main"
+gbmbert-artifact-index = "gbmbert.artifacts:main"
+gbmbert-artifact-detail = "gbmbert.artifacts:detail_main"
+gbmbert-scope-drift-monitor = "gbmbert.scope_monitor:main"
+gbmbert-platform-regression = "gbmbert.platform_regression:main"
+gbmbert-adjudication-report = "gbmbert.adjudication:main"
+gbmbert-normalize-graph-entities = "gbmbert.normalization:main"
+gbmbert-preflight = "gbmbert.preflight:main"
+gbmbert-run-smoke-baseline = "gbmbert.smoke_baseline:main"
+gbmbert-export-annotation-dataset = "gbmbert.datasets:export_main"
+gbmbert-annotation-dataset-quality = "gbmbert.datasets:quality_main"
+gbmbert-extract-entities = "gbmbert.extraction.pipeline:main"
+gbmbert-classify-evidence = "gbmbert.extraction.evidence:main"
+gbmbert-export-review-queue = "gbmbert.extraction.review_queue:main"
+gbmbert-review-queue-summary = "gbmbert.extraction.review_queue:summary_main"
+gbmbert-init-reviewed-queue = "gbmbert.extraction.review_queue:initialize_main"
+gbmbert-reviewed-queue-summary = "gbmbert.extraction.review_queue:reviewed_summary_main"
+gbmbert-relation-extraction-audit = "gbmbert.extraction.relations:audit_main"
+gbmbert-run-pipeline = "gbmbert.pipeline:main"
+gbmbert-training-plan = "gbmbert.training.cli:main"
+gbmbert-train = "gbmbert.training.runner:main"
+gbmbert-score-evidence = "gbmbert.training.inference:main"
+gbmbert-build-model-card = "gbmbert.training.model_card:main"
+gbmbert-run-training-smoke = "gbmbert.training.smoke_training:main"
+gbmbert-build-gold-seed-dataset = "gbmbert.training.gold_seed:main"
+gbmbert-training-readiness-report = "gbmbert.training.readiness:main"
+gbmbert-export-active-learning-candidates = "gbmbert.training.prediction_curation:active_learning_main"
+gbmbert-export-prediction-review-queue = "gbmbert.training.prediction_curation:review_queue_main"
+gbmbert-init-reviewed-prediction-queue = "gbmbert.training.prediction_curation:initialize_main"
+gbmbert-prediction-review-summary = "gbmbert.training.prediction_curation:summary_main"
+gbmbert-import-prediction-review-csv = "gbmbert.training.prediction_curation:import_csv_main"
+gbmbert-prediction-quality-report = "gbmbert.training.prediction_curation:quality_main"
+gbmbert-audit-curated-evidence = "gbmbert.training.prediction_curation:audit_main"
+gbmbert-export-curated-evidence = "gbmbert.training.prediction_curation:curated_export_main"
+gbmbert-apply-evidence-overlay = "gbmbert.training.prediction_curation:overlay_main"
+gbmbert-overlay-diff = "gbmbert.training.prediction_curation:overlay_diff_main"
+gbmbert-run-curation-smoke-workflow = "gbmbert.training.prediction_curation:smoke_workflow_main"
+gbmbert-build-curation-handoff = "gbmbert.training.prediction_curation:handoff_bundle_main"
+gbmbert-validate-curation-handoff = "gbmbert.training.prediction_curation:handoff_validation_main"
+gbmbert-register-curation-run = "gbmbert.training.prediction_curation:run_registry_main"
+gbmbert-browse-curation-runs = "gbmbert.training.prediction_curation:run_browser_main"
+gbmbert-search-curated-evidence = "gbmbert.training.prediction_curation:curated_search_main"
+gbmbert-plan-active-learning-batches = "gbmbert.training.prediction_curation:active_learning_batch_main"
+gbmbert-active-learning-batch-status = "gbmbert.training.prediction_curation:active_learning_batch_status_main"
+gbmbert-export-active-learning-batch-csv = "gbmbert.training.prediction_curation:active_learning_batch_export_main"
+gbmbert-import-active-learning-batch-csv = "gbmbert.training.prediction_curation:active_learning_batch_import_main"
+gbmbert-revert-evidence-overlay = "gbmbert.training.prediction_curation:overlay_revert_main"
+gbmbert-run-curation-regression-pack = "gbmbert.training.prediction_curation:regression_pack_main"
+gbmbert-split-annotation-dataset = "gbmbert.training.preparation:split_main"
+gbmbert-split-by-pmid = "gbmbert.training.preparation:pmid_split_main"
+gbmbert-repair-evidence-labels = "gbmbert.training.preparation:repair_evidence_labels_main"
+gbmbert-build-gold-training-pack = "gbmbert.training.gold_pack:main"
+gbmbert-build-relation-negatives = "gbmbert.training.relation_negatives:main"
+gbmbert-relation-dataset-quality = "gbmbert.training.relation_quality:main"
+gbmbert-merge-relation-pack = "gbmbert.training.relation_pack:main"
+gbmbert-build-relation-training-pack = "gbmbert.training.relation_training_pack:main"
+gbmbert-build-evidence-training-pack = "gbmbert.training.evidence_pack:main"
+gbmbert-review-training-config = "gbmbert.training.config_review:main"
+gbmbert-compare-training-packs = "gbmbert.training.pack_comparison:main"
+gbmbert-audit-model-registry = "gbmbert.training.registry_audit:main"
+gbmbert-build-training-artifact-bundle = "gbmbert.training.governance:artifact_bundle_main"
+gbmbert-search-training-artifacts = "gbmbert.training.governance:artifact_search_main"
+gbmbert-audit-training-pack-leakage = "gbmbert.training.governance:leakage_audit_main"
+gbmbert-review-training-config-suite = "gbmbert.training.governance:config_suite_main"
+gbmbert-plan-registry-remediation = "gbmbert.training.governance:registry_remediation_main"
+gbmbert-training-label-drift = "gbmbert.training.governance:label_drift_main"
+gbmbert-audit-training-provenance = "gbmbert.training.governance:provenance_audit_main"
+gbmbert-training-readiness-snapshot = "gbmbert.training.governance:readiness_snapshot_main"
+gbmbert-dashboard-training-manifest = "gbmbert.training.governance:dashboard_manifest_main"
+gbmbert-run-training-governance-suite = "gbmbert.training.governance:governance_suite_main"
+gbmbert-build-label-maps = "gbmbert.training.preparation:label_maps_main"
+gbmbert-build-dataset-card = "gbmbert.training.preparation:dataset_card_main"
+gbmbert-baseline-report = "gbmbert.training.preparation:baseline_main"
+gbmbert-build-experiment-manifest = "gbmbert.training.preparation:experiment_manifest_main"
+gbmbert-register-checkpoint = "gbmbert.training.registry:main"
+gbmbert-build-graph-records = "gbmbert.knowledge_graph.build_records:main"
+gbmbert-build-trial-graph-records = "gbmbert.knowledge_graph.trials:main"
+gbmbert-graph-quality-report = "gbmbert.knowledge_graph.quality:main"
+gbmbert-audit-graph-provenance = "gbmbert.knowledge_graph.provenance:main"
+gbmbert-overlay-load-guard = "gbmbert.knowledge_graph.overlay_guard:main"
+gbmbert-promote-evidence-overlay = "gbmbert.knowledge_graph.promotion:main"
+gbmbert-enrich-relation-qualifiers = "gbmbert.knowledge_graph.qualifiers:main"
+gbmbert-export-curated-graph = "gbmbert.curation:export_main"
+gbmbert-curation-diff = "gbmbert.curation:diff_main"
+gbmbert-load-graph = "gbmbert.knowledge_graph.cli:main"
+gbmbert-inspect-graph = "gbmbert.knowledge_graph.inspect:main"
+gbmbert-explorer = "gbmbert.knowledge_graph.explorer:main"
+gbmbert-dashboard = "gbmbert.dashboard.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9",
+]
+dashboard = [
+    "streamlit>=1.36,<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

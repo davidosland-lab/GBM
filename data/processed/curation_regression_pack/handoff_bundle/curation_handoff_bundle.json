@@ -1,0 +1,137 @@
+{
+  "artifact_count": 14,
+  "artifacts": [
+    {
+      "artifact_role": "active_learning_candidates",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_active_learning_candidates.jsonl",
+      "byte_count": 912,
+      "line_count": 1,
+      "sha256": "3C6A722238BB7C41F49B8C118BE4423BEFCE45D0387DD210A2668AD867371339",
+      "source_path": "data\\processed\\curation_regression_pack\\active_learning_candidates.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_role": "prediction_review_queue",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_review_queue.jsonl",
+      "byte_count": 829,
+      "line_count": 1,
+      "sha256": "EAAAFCA0664F19F4D34E07EB6695674F26E4202A626153C996BA17736821BC66",
+      "source_path": "data\\processed\\curation_regression_pack\\prediction_review_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_role": "reviewed_prediction_queue",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_reviewed_queue.jsonl",
+      "byte_count": 881,
+      "line_count": 1,
+      "sha256": "31A7CD9688CB79C4AC64AA77F00F2894169200CE9CBE63E2F9E7EEDE1654FBFF",
+      "source_path": "data\\processed\\curation_regression_pack\\prediction_reviewed_queue.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_role": "curated_evidence_predictions",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_curated_evidence_predictions.jsonl",
+      "byte_count": 786,
+      "line_count": 1,
+      "sha256": "5B5B7A659DD3D45F2FB5ED120E5F5F4344D2BF1070078B51AD015A204642B173",
+      "source_path": "data\\processed\\curation_regression_pack\\curated_evidence_predictions.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_role": "evidence_overlay_graph",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_evidence_overlay_graph_records.jsonl",
+      "byte_count": 3151,
+      "line_count": 2,
+      "sha256": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+      "source_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_role": "prediction_quality_report",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_quality.md",
+      "byte_count": 574,
+      "line_count": 26,
+      "sha256": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+      "source_path": "reports\\review\\curation_regression_pack\\prediction_quality.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "prediction_review_summary",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_prediction_review_summary.md",
+      "byte_count": 541,
+      "line_count": 29,
+      "sha256": "9E7FA1B9FE8188ACD1F31E95E48BDFF07B749DF312475BC1295A7F4959872F49",
+      "source_path": "reports\\review\\curation_regression_pack\\prediction_review_summary.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "curated_evidence_audit",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_curated_evidence_audit.md",
+      "byte_count": 501,
+      "line_count": 19,
+      "sha256": "92F0555E84F393C65E80020BD27DD0615A60C205B5CCFDBD28EC470FC70B1DE7",
+      "source_path": "reports\\review\\curation_regression_pack\\curated_evidence_audit.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "evidence_overlay_report",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_evidence_overlay.md",
+      "byte_count": 638,
+      "line_count": 19,
+      "sha256": "ACF46B5EE2A5F1410EBBF5EA5D379014B17E439F68AC13959E7BC5C9E35A59F9",
+      "source_path": "reports\\review\\curation_regression_pack\\evidence_overlay.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "evidence_overlay_diff",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_evidence_overlay_diff.md",
+      "byte_count": 634,
+      "line_count": 21,
+      "sha256": "555C894D8D81AA0D51CD726F81BB4EDAB82A170A48A86FCF09BACF1653F9C406",
+      "source_path": "reports\\review\\curation_regression_pack\\evidence_overlay_diff.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "curation_artifact",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_curation_regression_workflow.json",
+      "byte_count": 1444,
+      "line_count": 18,
+      "sha256": "E46F989670F1DF08D09CE00475A1F93995B3554A7C1C1E75D116EBEDF902CFF8",
+      "source_path": "reports\\review\\curation_regression_pack\\curation_regression_workflow.json",
+      "suffix": ".json"
+    },
+    {
+      "artifact_role": "curation_artifact",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_overlay_load_guard.md",
+      "byte_count": 414,
+      "line_count": 14,
+      "sha256": "1B06E9913077BAAE57EA3EC60CBAB613950B0290DCF5B99F3E123E4F920749EC",
+      "source_path": "reports\\review\\curation_regression_pack\\overlay_load_guard.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "curation_artifact",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_overlay_revert.md",
+      "byte_count": 434,
+      "line_count": 12,
+      "sha256": "669906EE0BEB0574C59AB1DE22644C6A9411FB3DC25BF87179477297C317881F",
+      "source_path": "reports\\review\\curation_regression_pack\\overlay_revert.md",
+      "suffix": ".md"
+    },
+    {
+      "artifact_role": "active_learning_candidates",
+      "bundled_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_active_learning_batches.md",
+      "byte_count": 602,
+      "line_count": 23,
+      "sha256": "357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C",
+      "source_path": "reports\\review\\curation_regression_pack\\active_learning_batches.md",
+      "suffix": ".md"
+    }
+  ],
+  "bundle_dir": "data\\processed\\curation_regression_pack\\handoff_bundle",
+  "copied_artifact_count": 14,
+  "created_at_utc": "2026-06-27T02:34:50.169655+00:00",
+  "total_bytes": 12341,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

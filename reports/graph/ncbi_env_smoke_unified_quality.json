@@ -1,0 +1,184 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 2,
+      "key": "5"
+    },
+    {
+      "count": 1,
+      "key": "3"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 18,
+      "key": "Disease"
+    },
+    {
+      "count": 15,
+      "key": "Treatment"
+    },
+    {
+      "count": 9,
+      "key": "Outcome"
+    },
+    {
+      "count": 5,
+      "key": "Trial"
+    },
+    {
+      "count": 4,
+      "key": "Drug"
+    },
+    {
+      "count": 3,
+      "key": "DeliveryModifier"
+    },
+    {
+      "count": 3,
+      "key": "Biomarker"
+    },
+    {
+      "count": 2,
+      "key": "Gene"
+    },
+    {
+      "count": 2,
+      "key": "CellType"
+    }
+  ],
+  "node_mention_count": 61,
+  "paper_only_record_count": 0,
+  "record_count": 18,
+  "relation_count": 22,
+  "relation_type_counts": [
+    {
+      "count": 21,
+      "key": "ASSOCIATED_WITH"
+    },
+    {
+      "count": 1,
+      "key": "PREDICTS"
+    }
+  ],
+  "source_path": "data\\processed\\ncbi_env_smoke_pipeline\\graph_records.jsonl, data\\processed\\clinicaltrials_gbm_smoke_2026-06-23\\trial_graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 10,
+      "key_value": "glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 5,
+      "key_value": "survival",
+      "label": "Outcome"
+    },
+    {
+      "count": 4,
+      "key_value": "Glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 3,
+      "key_value": "temozolomide",
+      "label": "Drug"
+    },
+    {
+      "count": 3,
+      "key_value": "blood-brain barrier",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 2,
+      "key_value": "immunotherapy",
+      "label": "Treatment"
+    },
+    {
+      "count": 2,
+      "key_value": "response",
+      "label": "Outcome"
+    },
+    {
+      "count": 2,
+      "key_value": "MGMT",
+      "label": "Gene"
+    },
+    {
+      "count": 2,
+      "key_value": "stem cells",
+      "label": "CellType"
+    },
+    {
+      "count": 2,
+      "key_value": "Brain and Central Nervous System Tumors",
+      "label": "Disease"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "Disease:glioblastoma",
+      "relation": "PREDICTS",
+      "tail": "Outcome:response"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Outcome:survival"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT04552886",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT04552886",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:TH-1 Dendritic Cell Immunotherapy"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Glioma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Epacadostat"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Bevacizumab"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Radiation therapy"
+    }
+  ],
+  "unique_nct_count": 5,
+  "unique_node_count": 34,
+  "unique_pmid_count": 13,
+  "warnings": []
+}

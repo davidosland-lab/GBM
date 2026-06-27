@@ -1,0 +1,12 @@
+{
+  "batch_report_path": "reports\\review\\curation_regression_pack\\active_learning_batches.md",
+  "handoff_manifest_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\curation_handoff_bundle.json",
+  "output_dir": "data\\processed\\curation_regression_pack",
+  "overlay_guard_path": "reports\\review\\curation_regression_pack\\overlay_load_guard.md",
+  "registry_path": "reports\\review\\curation_run_registry.json",
+  "reports_dir": "reports\\review\\curation_regression_pack",
+  "reverted_graph_path": "data\\processed\\curation_regression_pack\\reverted_graph_records.jsonl",
+  "validation_report_path": "reports\\review\\curation_regression_pack\\curation_handoff_validation.json",
+  "warnings": [],
+  "workflow_report_path": "reports\\review\\curation_regression_pack\\curation_regression_workflow.json"
+}

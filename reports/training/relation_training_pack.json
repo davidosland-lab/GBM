@@ -1,0 +1,20 @@
+{
+  "label_counts": {
+    "ASSOCIATED_WITH": 2,
+    "NO_RELATION": 3,
+    "PREDICTS": 1
+  },
+  "negative_count": 3,
+  "negative_input_path": "data\\training\\relation_negatives.jsonl",
+  "output_path": "data\\training\\relation_training_pack.jsonl",
+  "positive_count": 3,
+  "positive_input_path": "data\\training\\ncbi_env_smoke_annotation_dataset",
+  "provenance_counts": {
+    "human_or_curated_positive": 3,
+    "synthetic_no_relation": 3
+  },
+  "ready": true,
+  "total_count": 6,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

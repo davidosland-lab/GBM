@@ -1,0 +1,17 @@
+{
+  "duplicate_count": 0,
+  "input_path": "data\\training\\relation_pack\\annotation_splits",
+  "invalid_endpoint_count": 0,
+  "label_counts": {
+    "ASSOCIATED_WITH": 2,
+    "NO_RELATION": 3,
+    "PREDICTS": 1
+  },
+  "missing_endpoint_count": 0,
+  "missing_sentence_count": 0,
+  "negative_count": 3,
+  "positive_count": 3,
+  "relation_count": 6,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

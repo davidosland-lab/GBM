@@ -1,0 +1,51 @@
+{
+  "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
+  "leakage_warnings": [],
+  "min_examples_per_label": 1,
+  "min_examples_per_task": 1,
+  "ready": false,
+  "task_reports": [
+    {
+      "dominant_label_fraction": null,
+      "duplicate_count": 0,
+      "example_count": 0,
+      "invalid_ner_span_count": 0,
+      "label_counts": {},
+      "ready": false,
+      "task": "ner",
+      "warnings": [
+        "fewer than 1 examples"
+      ]
+    },
+    {
+      "dominant_label_fraction": 1.0,
+      "duplicate_count": 0,
+      "example_count": 1,
+      "invalid_ner_span_count": 0,
+      "label_counts": {
+        "3": 1
+      },
+      "ready": true,
+      "task": "evidence",
+      "warnings": []
+    },
+    {
+      "dominant_label_fraction": null,
+      "duplicate_count": 0,
+      "example_count": 0,
+      "invalid_ner_span_count": 0,
+      "label_counts": {},
+      "ready": false,
+      "task": "relation",
+      "warnings": [
+        "fewer than 1 examples"
+      ]
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 2,
+  "warnings": [
+    "ner: fewer than 1 examples",
+    "relation: fewer than 1 examples"
+  ]
+}

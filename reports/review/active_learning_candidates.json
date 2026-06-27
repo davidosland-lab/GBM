@@ -1,0 +1,24 @@
+{
+  "candidate_count": 1,
+  "candidate_path": "data\\review\\active_learning_candidates.jsonl",
+  "graph_path": "data\\examples\\graph_records_sample.jsonl",
+  "prediction_count": 1,
+  "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+  "reason_counts": [
+    {
+      "count": 1,
+      "key": "pmid already present in graph"
+    },
+    {
+      "count": 1,
+      "key": "tier-change-sensitive evidence"
+    }
+  ],
+  "top_pmids": [
+    {
+      "count": 1,
+      "key": "40000001"
+    }
+  ],
+  "warnings": []
+}

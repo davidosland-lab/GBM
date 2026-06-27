@@ -1,0 +1,19 @@
+{
+  "name": "gbmbert_relation_biobert",
+  "task": "relation_extraction",
+  "base_model": "dmis-lab/biobert-base-cased-v1.2",
+  "train_path": "data/training/relation_pack/annotation_splits/relation_train.jsonl",
+  "validation_path": "data/training/relation_pack/annotation_splits/relation_validation.jsonl",
+  "output_dir": "models/checkpoints/gbmbert_relation_biobert",
+  "label_set": [
+    "ASSOCIATED_WITH",
+    "NO_RELATION",
+    "PREDICTS"
+  ],
+  "hyperparameters": {
+    "epochs": 3,
+    "learning_rate": 0.00002,
+    "batch_size": 8,
+    "max_length": 256
+  }
+}

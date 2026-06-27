@@ -1,0 +1,24 @@
+{
+  "added_relation_count": 0,
+  "changed_relation_count": 1,
+  "changes": [
+    {
+      "action": "increased",
+      "detail": "Evidence tier 1 -> 3",
+      "overlay_evidence_tier": 3,
+      "raw_evidence_tier": 1,
+      "relation_index": 1,
+      "source_pmid": "40000001"
+    }
+  ],
+  "decreased_tier_count": 0,
+  "increased_tier_count": 1,
+  "overlay_graph_path": "data\\processed\\sample_graph_evidence_overlay_records.jsonl",
+  "overlay_metadata_count": 1,
+  "overlay_relation_count": 2,
+  "raw_graph_path": "data\\examples\\graph_records_sample.jsonl",
+  "raw_relation_count": 2,
+  "removed_relation_count": 0,
+  "unchanged_relation_count": 1,
+  "warnings": []
+}

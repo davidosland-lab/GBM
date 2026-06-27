@@ -1,0 +1,9 @@
+{
+  "issue_count": 0,
+  "issue_type_counts": {},
+  "issues": [],
+  "record_type": "trial",
+  "records_seen": 5,
+  "relations_seen": 19,
+  "source_path": "data\\processed\\clinicaltrials_gbm_smoke_2026-06-23\\trial_graph_records.jsonl"
+}

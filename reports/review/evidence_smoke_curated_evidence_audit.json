@@ -1,0 +1,15 @@
+{
+  "accepted_count": 0,
+  "corrected_count": 0,
+  "curated_evidence_path": "data\\processed\\evidence_smoke_curated_predictions.jsonl",
+  "invalid_tier_count": 0,
+  "linkage_warning_count": 0,
+  "missing_checkpoint_count": 0,
+  "missing_item_id_count": 0,
+  "missing_pmid_count": 0,
+  "missing_reviewer_count": 0,
+  "missing_warning_count": 0,
+  "pending_count": 1,
+  "row_count": 1,
+  "warnings": []
+}

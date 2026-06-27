@@ -1,0 +1,13 @@
+{
+  "dataset_path": "data\\training\\relation_training_pack.jsonl",
+  "missing_pmid_count": 0,
+  "missing_warning_count": 0,
+  "row_count": 6,
+  "safe": true,
+  "source_type_counts": {
+    "human_or_curated_positive": 3,
+    "synthetic_no_relation": 3
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

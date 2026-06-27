@@ -1,0 +1,151 @@
+{
+  "artifacts": [
+    {
+      "artifact_type": "active_learning_batch_csv",
+      "byte_count": 873,
+      "category": "processed",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T07:39:02+00:00",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_batches.csv",
+      "provenance": {},
+      "sha256": "7BD27ED1749AB823908740DC4F319F1910D163CF6DCD504BD07BB96A82D0B3B3",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "active_learning_batch_plan",
+      "byte_count": 1021,
+      "category": "processed",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T07:39:02+00:00",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_batches.jsonl",
+      "provenance": {},
+      "sha256": "D02107B7AF1A3537CCA37D76A49A1BA073B2D2C5B11EEB2C6C8FF7B4874E2591",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "active_learning_batch_report",
+      "byte_count": 602,
+      "category": "processed",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T07:39:02+00:00",
+      "path": "data\\processed\\curation_regression_pack\\handoff_bundle\\files\\curation_regression_pack_active_learning_batches.md",
+      "provenance": {},
+      "sha256": "357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_csv",
+      "byte_count": 922,
+      "category": "review",
+      "line_count": 2,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "data\\review\\active_learning_batch_ALBATCH-001.csv",
+      "provenance": {},
+      "sha256": "EC2346F2F790DACBE68EA9FD7A5045592212217E8169A8643F253F39B5E363E1",
+      "suffix": ".csv"
+    },
+    {
+      "artifact_type": "active_learning_candidates",
+      "byte_count": 976,
+      "category": "review",
+      "line_count": 1,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "data\\review\\active_learning_batch_reviewed_queue.jsonl",
+      "provenance": {},
+      "sha256": "A4607373CFCF67F9013E9C32707B9F940B4DD746D721DB6AFD0B4506655557E6",
+      "suffix": ".jsonl"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 465,
+      "category": "review",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_export.json",
+      "provenance": {},
+      "sha256": "291D7F2EC1900E9CC4574916FF99BBDDF59C4D81F545FB322455DC1CBC5828F7",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 590,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_export.md",
+      "provenance": {},
+      "sha256": "CC5D17031EB6399329DFA98D8C11D2CC2981AD08F7A2F9BC5BAAC03DF3E7494B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 542,
+      "category": "review",
+      "line_count": 11,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_import.json",
+      "provenance": {},
+      "sha256": "1A0865676558470B2FAE1FF5B099475BE04936861333BF9767095E796434BDC1",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_roundtrip_report",
+      "byte_count": 652,
+      "category": "review",
+      "line_count": 15,
+      "modified_at_utc": "2026-06-23T09:06:30+00:00",
+      "path": "reports\\review\\active_learning_batch_roundtrip_import.md",
+      "provenance": {},
+      "sha256": "AE716C1A03683461541CE07CA67ED7CCA91D7C1F5A5866FD1070203D11ED66D2",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_status_report",
+      "byte_count": 651,
+      "category": "review",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T09:05:49+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batch_status.json",
+      "provenance": {},
+      "sha256": "88F09B5213E5FD87B9420F72EEFFC46E6C4B49134D464DE6A8100B60ED5D8F14",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_status_report",
+      "byte_count": 550,
+      "category": "review",
+      "line_count": 16,
+      "modified_at_utc": "2026-06-23T09:05:49+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batch_status.md",
+      "provenance": {},
+      "sha256": "0BBF3CD65DE0C07566BBC9F7B3CC32D89057F41F6DC2F17CBA7FC384A950876B",
+      "suffix": ".md"
+    },
+    {
+      "artifact_type": "active_learning_batch_report",
+      "byte_count": 734,
+      "category": "review",
+      "line_count": 34,
+      "modified_at_utc": "2026-06-23T07:39:02+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batches.json",
+      "provenance": {},
+      "sha256": "A018297B544F659ACFFC11465437E26B76AA75BEA18628031D0EBF3EC038FE8D",
+      "suffix": ".json"
+    },
+    {
+      "artifact_type": "active_learning_batch_report",
+      "byte_count": 602,
+      "category": "review",
+      "line_count": 23,
+      "modified_at_utc": "2026-06-23T07:39:02+00:00",
+      "path": "reports\\review\\curation_regression_pack\\active_learning_batches.md",
+      "provenance": {},
+      "sha256": "357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C",
+      "suffix": ".md"
+    }
+  ],
+  "index_path": "reports\\artifact_index.json",
+  "match_count": 13,
+  "query": "active_learning_batch",
+  "warnings": []
+}

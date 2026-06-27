@@ -1,0 +1,18 @@
+{
+  "candidate_path": "data\\processed\\curation_regression_pack\\active_learning_candidates.jsonl",
+  "curated_audit_path": "reports\\review\\curation_regression_pack\\curated_evidence_audit.md",
+  "curated_evidence_path": "data\\processed\\curation_regression_pack\\curated_evidence_predictions.jsonl",
+  "graph_path": "data\\examples\\graph_records_sample.jsonl",
+  "output_dir": "data\\processed\\curation_regression_pack",
+  "overlay_diff_path": "reports\\review\\curation_regression_pack\\evidence_overlay_diff.md",
+  "overlay_graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+  "overlay_report_path": "reports\\review\\curation_regression_pack\\evidence_overlay.md",
+  "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+  "quality_report_path": "reports\\review\\curation_regression_pack\\prediction_quality.md",
+  "reports_dir": "reports\\review\\curation_regression_pack",
+  "review_queue_path": "data\\processed\\curation_regression_pack\\prediction_review_queue.jsonl",
+  "review_summary_path": "reports\\review\\curation_regression_pack\\prediction_review_summary.md",
+  "reviewed_queue_path": "data\\processed\\curation_regression_pack\\prediction_reviewed_queue.jsonl",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

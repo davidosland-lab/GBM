@@ -1,0 +1,109 @@
+{
+  "input_dir": "data\\training\\ncbi_env_smoke_annotation_dataset",
+  "output_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+  "ratios": {
+    "test": 0.1,
+    "train": 0.8,
+    "validation": 0.1
+  },
+  "seed": 13,
+  "tasks": [
+    {
+      "label_counts": {
+        "test": {
+          "BIOMARKER": 1,
+          "CELL_TYPE": 1,
+          "DELIVERY_MODIFIER": 1,
+          "DISEASE": 7,
+          "DRUG": 2,
+          "GENE": 1,
+          "OUTCOME": 2,
+          "TREATMENT": 1
+        },
+        "train": {
+          "BIOMARKER": 3,
+          "CELL_TYPE": 2,
+          "DELIVERY_MODIFIER": 2,
+          "DISEASE": 54,
+          "DRUG": 11,
+          "GENE": 10,
+          "OUTCOME": 11,
+          "TREATMENT": 1
+        },
+        "validation": {
+          "BIOMARKER": 1,
+          "CELL_TYPE": 1,
+          "DELIVERY_MODIFIER": 1,
+          "DISEASE": 7,
+          "DRUG": 2,
+          "GENE": 1,
+          "OUTCOME": 2,
+          "TREATMENT": 1
+        }
+      },
+      "source_file": "data\\training\\ncbi_env_smoke_annotation_dataset\\ner.jsonl",
+      "split_counts": {
+        "test": 16,
+        "train": 94,
+        "validation": 16
+      },
+      "split_files": {
+        "test": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_test.jsonl",
+        "train": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_train.jsonl",
+        "validation": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_validation.jsonl"
+      },
+      "task": "ner"
+    },
+    {
+      "label_counts": {
+        "test": {
+          "0": 1
+        },
+        "train": {
+          "0": 1,
+          "1": 1
+        },
+        "validation": {
+          "0": 1
+        }
+      },
+      "source_file": "data\\training\\ncbi_env_smoke_annotation_dataset\\evidence.jsonl",
+      "split_counts": {
+        "test": 1,
+        "train": 2,
+        "validation": 1
+      },
+      "split_files": {
+        "test": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_test.jsonl",
+        "train": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_train.jsonl",
+        "validation": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_validation.jsonl"
+      },
+      "task": "evidence"
+    },
+    {
+      "label_counts": {
+        "test": {
+          "PREDICTS": 1
+        },
+        "train": {
+          "ASSOCIATED_WITH": 1
+        },
+        "validation": {
+          "ASSOCIATED_WITH": 1
+        }
+      },
+      "source_file": "data\\training\\ncbi_env_smoke_annotation_dataset\\relations.jsonl",
+      "split_counts": {
+        "test": 1,
+        "train": 1,
+        "validation": 1
+      },
+      "split_files": {
+        "test": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_test.jsonl",
+        "train": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_train.jsonl",
+        "validation": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_validation.jsonl"
+      },
+      "task": "relation"
+    }
+  ]
+}

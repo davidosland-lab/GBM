@@ -1,0 +1,15 @@
+{
+  "apply_constraints": false,
+  "dry_run": true,
+  "record_type": "trial",
+  "skip_invalid_records": false,
+  "source_path": "data\\processed\\clinicaltrials_gbm_smoke_2026-06-23\\trial_graph_records.jsonl",
+  "stats": {
+    "mentions_merged": 0,
+    "nodes_merged": 24,
+    "records_loaded": 5,
+    "records_seen": 5,
+    "records_skipped": 0,
+    "relations_merged": 19
+  }
+}

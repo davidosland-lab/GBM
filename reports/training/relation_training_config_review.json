@@ -1,0 +1,57 @@
+{
+  "base_model": "dmis-lab/biobert-base-cased-v1.2",
+  "checks": {
+    "config_label_set_nonempty": true,
+    "config_labels_present_in_dataset": true,
+    "dataset_dir_exists": true,
+    "dataset_label_set_nonempty": true,
+    "dataset_labels_covered_by_config": true,
+    "dataset_labels_covered_by_label_map": true,
+    "hyperparameters_in_review_bounds": true,
+    "label_map_labels_match_config": true,
+    "label_map_present": true,
+    "relation_config_includes_no_relation": true,
+    "relation_label_map_includes_no_relation": true,
+    "test_split_present": true,
+    "train_split_nonempty": true,
+    "train_split_present": true,
+    "training_enabled_confirmed": true,
+    "validation_split_present": true
+  },
+  "config_labels": [
+    "ASSOCIATED_WITH",
+    "NO_RELATION",
+    "PREDICTS"
+  ],
+  "config_path": "configs\\training\\gbmbert_relation_biobert.json",
+  "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+  "dataset_labels": [
+    "ASSOCIATED_WITH",
+    "NO_RELATION",
+    "PREDICTS"
+  ],
+  "errors": [],
+  "label_map_dir": "data\\training\\relation_pack\\label_maps",
+  "label_map_labels": [
+    "ASSOCIATED_WITH",
+    "NO_RELATION",
+    "PREDICTS"
+  ],
+  "prepared_task": "relation",
+  "split_counts": {
+    "test": 0,
+    "train": 4,
+    "validation": 2
+  },
+  "status": "passed",
+  "task": "relation_extraction",
+  "training_enabled": false,
+  "training_enabled_confirmed": false,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "review gate is for research scaffolding only and does not certify model performance",
+    "training remains separate from diagnosis, treatment selection, and clinical decision-making",
+    "relation_test.jsonl has no examples",
+    "training_enabled is false; this config is review-ready but will run as a dry run unless changed"
+  ]
+}

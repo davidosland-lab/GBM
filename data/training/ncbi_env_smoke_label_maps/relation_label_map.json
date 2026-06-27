@@ -1,0 +1,11 @@
+{
+  "id_to_label": {
+    "0": "ASSOCIATED_WITH",
+    "1": "PREDICTS"
+  },
+  "label_to_id": {
+    "ASSOCIATED_WITH": 0,
+    "PREDICTS": 1
+  },
+  "task": "relation"
+}

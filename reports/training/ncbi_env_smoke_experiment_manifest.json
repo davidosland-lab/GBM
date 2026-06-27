@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "config_sha256": "0867C17FDB627796FCA6562AA0C22F23970D5E9E146699D4BD6FEF655683354F",
+    "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+    "evaluation_file": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_test.jsonl",
+    "evaluation_file_sha256": "400DA6A1539537383F3E9F693FDF7E98B4A2587D49F2FF347088D1480E1B6E5F",
+    "label_map": "data\\training\\ncbi_env_smoke_label_maps\\ner_label_map.json",
+    "label_map_sha256": "697F65400D8D4EC9DCA157C310B63E71BC69FF9B54E4DCDE92D37D5263A1DA3F"
+  },
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "evaluation_file_exists": true,
+    "label_map_exists": true,
+    "training_enabled": false
+  },
+  "config_path": "configs\\training\\gbmbert_ner_pubmedbert.json",
+  "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+  "label_map_dir": "data\\training\\ncbi_env_smoke_label_maps",
+  "output_dir": "models\\checkpoints\\gbmbert_ner_pubmedbert",
+  "task": "ner",
+  "training_enabled": false,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

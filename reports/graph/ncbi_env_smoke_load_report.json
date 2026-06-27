@@ -1,0 +1,15 @@
+{
+  "apply_constraints": false,
+  "dry_run": true,
+  "record_type": "pubmed",
+  "skip_invalid_records": false,
+  "source_path": "data\\processed\\ncbi_env_smoke_pipeline\\graph_records.jsonl",
+  "stats": {
+    "mentions_merged": 37,
+    "nodes_merged": 50,
+    "records_loaded": 13,
+    "records_seen": 13,
+    "records_skipped": 0,
+    "relations_merged": 3
+  }
+}

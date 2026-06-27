@@ -1,0 +1,43 @@
+{
+  "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+  "tasks": [
+    {
+      "evaluation_file": "data\\training\\ncbi_env_smoke_annotation_splits\\ner_test.jsonl",
+      "examples": 16,
+      "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 7,
+        "DRUG": 2,
+        "GENE": 1,
+        "OUTCOME": 2,
+        "TREATMENT": 1
+      },
+      "majority_accuracy": 0.4375,
+      "majority_label": "DISEASE",
+      "task": "ner"
+    },
+    {
+      "evaluation_file": "data\\training\\ncbi_env_smoke_annotation_splits\\evidence_test.jsonl",
+      "examples": 1,
+      "label_counts": {
+        "0": 1
+      },
+      "majority_accuracy": 1.0,
+      "majority_label": "0",
+      "task": "evidence"
+    },
+    {
+      "evaluation_file": "data\\training\\ncbi_env_smoke_annotation_splits\\relation_test.jsonl",
+      "examples": 1,
+      "label_counts": {
+        "PREDICTS": 1
+      },
+      "majority_accuracy": 1.0,
+      "majority_label": "PREDICTS",
+      "task": "relation"
+    }
+  ],
+  "warnings": []
+}

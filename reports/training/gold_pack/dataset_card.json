@@ -1,0 +1,72 @@
+{
+  "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
+  "files": {
+    "evidence_test.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "evidence_train.jsonl": {
+      "examples": 1,
+      "label_counts": {
+        "3": 1
+      },
+      "missing_text": 0,
+      "sha256": "C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3"
+    },
+    "evidence_validation.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "ner_test.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "ner_train.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "ner_validation.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "relation_test.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "relation_train.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    "relation_validation.jsonl": {
+      "examples": 0,
+      "label_counts": {},
+      "missing_text": 0,
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    }
+  },
+  "total_examples": 1,
+  "warnings": [
+    "evidence_test.jsonl: no examples",
+    "evidence_validation.jsonl: no examples",
+    "ner_test.jsonl: no examples",
+    "ner_train.jsonl: no examples",
+    "ner_validation.jsonl: no examples",
+    "relation_test.jsonl: no examples",
+    "relation_train.jsonl: no examples",
+    "relation_validation.jsonl: no examples"
+  ]
+}

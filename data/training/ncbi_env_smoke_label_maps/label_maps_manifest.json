@@ -1,0 +1,29 @@
+{
+  "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+  "files": {
+    "evidence": "data\\training\\ncbi_env_smoke_label_maps\\evidence_label_map.json",
+    "ner": "data\\training\\ncbi_env_smoke_label_maps\\ner_label_map.json",
+    "relation": "data\\training\\ncbi_env_smoke_label_maps\\relation_label_map.json"
+  },
+  "labels": {
+    "evidence": {
+      "0": 0,
+      "1": 1
+    },
+    "ner": {
+      "BIOMARKER": 0,
+      "CELL_TYPE": 1,
+      "DELIVERY_MODIFIER": 2,
+      "DISEASE": 3,
+      "DRUG": 4,
+      "GENE": 5,
+      "OUTCOME": 6,
+      "TREATMENT": 7
+    },
+    "relation": {
+      "ASSOCIATED_WITH": 0,
+      "PREDICTS": 1
+    }
+  },
+  "output_dir": "data\\training\\ncbi_env_smoke_label_maps"
+}

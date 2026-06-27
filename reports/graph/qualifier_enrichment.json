@@ -1,0 +1,10 @@
+{
+  "changes": [],
+  "enriched_relation_count": 0,
+  "input_graph_path": "data\\processed\\curation_regression_pack\\normalized_graph_records.jsonl",
+  "output_graph_path": "data\\processed\\curation_regression_pack\\qualifier_enriched_graph_records.jsonl",
+  "record_count": 2,
+  "relation_count": 2,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

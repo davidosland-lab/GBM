@@ -1,0 +1,23 @@
+{
+  "id_to_label": {
+    "0": "BIOMARKER",
+    "1": "CELL_TYPE",
+    "2": "DELIVERY_MODIFIER",
+    "3": "DISEASE",
+    "4": "DRUG",
+    "5": "GENE",
+    "6": "OUTCOME",
+    "7": "TREATMENT"
+  },
+  "label_to_id": {
+    "BIOMARKER": 0,
+    "CELL_TYPE": 1,
+    "DELIVERY_MODIFIER": 2,
+    "DISEASE": 3,
+    "DRUG": 4,
+    "GENE": 5,
+    "OUTCOME": 6,
+    "TREATMENT": 7
+  },
+  "task": "ner"
+}

@@ -1,0 +1,21 @@
+{
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checkpoint_dir": "data\\training\\evidence_smoke_fixture\\checkpoint",
+  "completed_at": "2026-06-23T04:08:01.970260+00:00",
+  "config_sha256": "E2177C82E957C2827F62AEBDD76421FEDD77F2652CD790C35D173484A3279446",
+  "dataset_dir": "data\\training\\evidence_smoke_fixture\\splits",
+  "dataset_hashes": {
+    "test": "76C526FAC5EB6DA91A1A292906553EDDC7B010939093F7E12C686F44DA438538",
+    "train": "7982512FFAD372ED72F53326DCE37B2FA03A81057E271F1A0A999D14D6613330",
+    "validation": "FEB35A22D78F251603ED65732A546D36D94AE91DAAF28D90F02530DCD3056507"
+  },
+  "evaluation_markdown_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_metrics.md",
+  "label_map_dir": "data\\training\\evidence_smoke_fixture\\label_maps",
+  "label_map_sha256": "59D2EE66191654DFF5A67B3F6308C6FB2DE9AD9922B6DC0D1D86CD356D7B3276",
+  "metrics_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_metrics.json",
+  "output_dir": "data\\training\\evidence_smoke_fixture\\checkpoint",
+  "run_name": "gbmbert_evidence_smoke",
+  "started_at": "2026-06-23T04:08:01.925605+00:00",
+  "task": "evidence_classification",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

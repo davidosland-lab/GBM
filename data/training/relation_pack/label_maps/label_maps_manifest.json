@@ -1,0 +1,18 @@
+{
+  "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+  "files": {
+    "evidence": "data\\training\\relation_pack\\label_maps\\evidence_label_map.json",
+    "ner": "data\\training\\relation_pack\\label_maps\\ner_label_map.json",
+    "relation": "data\\training\\relation_pack\\label_maps\\relation_label_map.json"
+  },
+  "labels": {
+    "evidence": {},
+    "ner": {},
+    "relation": {
+      "ASSOCIATED_WITH": 0,
+      "NO_RELATION": 1,
+      "PREDICTS": 2
+    }
+  },
+  "output_dir": "data\\training\\relation_pack\\label_maps"
+}

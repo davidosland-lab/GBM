@@ -1,0 +1,15 @@
+{
+  "accepted_count": 0,
+  "corrected_count": 0,
+  "curated_evidence_path": "data\\processed\\evidence_smoke_curated_predictions.jsonl",
+  "curated_row_count": 1,
+  "missing_decision_count": 0,
+  "pending_count": 1,
+  "prediction_count": 1,
+  "predictions_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_predictions.jsonl",
+  "rejected_count": 0,
+  "reviewed_queue_path": "data\\review\\evidence_smoke_prediction_reviewed_queue.jsonl",
+  "warnings": [
+    "1 prediction item(s) still pending review"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "pubmed_gbm_v2",
+  "description": "Expanded GBM-AI v2 PubMed literature search topics for research-use-only graph expansion.",
+  "source": "docs/RESEARCH_SCOPE_V2.md",
+  "queries": [
+    "glioblastoma focused ultrasound blood brain barrier opening",
+    "glioblastoma MR-guided focused ultrasound microbubble",
+    "glioblastoma SonoCloud Exablate Neuro",
+    "glioblastoma oncolytic virus DNX-2401 CAN-3110 G47",
+    "glioblastoma perampanel AMPA receptor antagonist",
+    "glioblastoma CSF1R inhibitor pexidartinib BLZ945",
+    "glioblastoma tumor-associated macrophage microglia polarization",
+    "IDH-mutant glioma vorasidenib D-2-hydroxyglutarate",
+    "glioblastoma ferroptosis GPX4 SLC7A11",
+    "glioblastoma GD2 CAR-T chlorotoxin CAR-T",
+    "glioblastoma neoantigen vaccine NeoVax GAPVAC",
+    "glioblastoma chronotherapy temozolomide",
+    "glioblastoma Neftel cell states MES NPC OPC AC",
+    "glioblastoma BMP differentiation therapy",
+    "glioblastoma TTFields temozolomide synergy"
+  ]
+}

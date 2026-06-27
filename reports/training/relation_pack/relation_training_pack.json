@@ -1,0 +1,25 @@
+{
+  "annotation_dataset_dir": "data\\training\\relation_pack\\annotation_dataset",
+  "artifacts": {
+    "baseline_json": "reports\\training\\relation_pack\\relation_training_pack_baseline.json",
+    "baseline_md": "reports\\training\\relation_pack\\relation_training_pack_baseline.md",
+    "dataset_card_json": "reports\\training\\relation_pack\\relation_training_pack_dataset_card.json",
+    "dataset_card_md": "reports\\training\\relation_pack\\relation_training_pack_dataset_card.md",
+    "label_maps_manifest": "data\\training\\relation_pack\\label_maps\\label_maps_manifest.json",
+    "relation_quality_json": "reports\\training\\relation_pack\\relation_training_pack_quality.json",
+    "relation_quality_md": "reports\\training\\relation_pack\\relation_training_pack_quality.md",
+    "training_readiness_json": "reports\\training\\relation_pack\\relation_training_pack_readiness.json",
+    "training_readiness_md": "reports\\training\\relation_pack\\relation_training_pack_readiness.md"
+  },
+  "input_path": "data\\training\\relation_training_pack.jsonl",
+  "label_map_dir": "data\\training\\relation_pack\\label_maps",
+  "negative_rows": 3,
+  "output_dir": "data\\training\\relation_pack",
+  "positive_rows": 3,
+  "ready": true,
+  "relation_rows": 6,
+  "reports_dir": "reports\\training\\relation_pack",
+  "split_dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

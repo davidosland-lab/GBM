@@ -1,0 +1,2 @@
+item_id,item_type,source_pmid,evidence_tier,confidence,text,relation_type,head,tail,reasons,source_file
+relation:40000001:1,graph_relation,40000001,1,0.64,Focused ultrasound enhances delivery of temozolomide across the blood-brain barrier.,ENHANCES_DELIVERY_OF,DeliveryModifier:focused ultrasound,Drug:temozolomide,confidence <= 0.65,data\examples\graph_records_sample.jsonl

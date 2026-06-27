@@ -1,0 +1,23 @@
+{
+  "batch_count": 1,
+  "batch_jsonl_path": "data\\processed\\curation_regression_pack\\active_learning_batches.jsonl",
+  "batches": [
+    {
+      "accepted_count": 1,
+      "assigned_reviewer": "smoke_fixture",
+      "batch_id": "ALBATCH-001",
+      "batch_index": 1,
+      "batch_status": "complete",
+      "corrected_count": 0,
+      "item_count": 1,
+      "pending_count": 0,
+      "rejected_count": 0,
+      "reviewed_count": 1
+    }
+  ],
+  "item_count": 1,
+  "pending_count": 0,
+  "reviewed_count": 1,
+  "reviewed_queue_path": "data\\processed\\curation_regression_pack\\prediction_reviewed_queue.jsonl",
+  "warnings": []
+}

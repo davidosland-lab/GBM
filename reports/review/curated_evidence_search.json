@@ -1,0 +1,24 @@
+{
+  "curated_evidence_path": "data\\processed\\curation_smoke_workflow\\curated_evidence_predictions.jsonl",
+  "match_count": 1,
+  "matches": [
+    {
+      "checkpoint_dir": "data\\training\\evidence_smoke_fixture\\checkpoint",
+      "checkpoint_name": "gbmbert_evidence_smoke",
+      "checkpoint_status": "research_candidate",
+      "confidence": 0.98,
+      "curated_evidence_tier": 3,
+      "item_id": "prediction:40000001:1",
+      "original_predicted_evidence_tier": 3,
+      "original_prediction": "3",
+      "review_notes": "Accepted for local overlay smoke test.",
+      "review_status": "accepted",
+      "reviewer": "smoke_fixture",
+      "source_pmid": "40000001",
+      "text": "Focused ultrasound enhances delivery of temozolomide across the blood-brain barrier.",
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+    }
+  ],
+  "row_count": 1,
+  "warnings": []
+}

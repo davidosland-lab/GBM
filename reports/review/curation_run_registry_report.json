@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "artifact_hashes": {
+        "active_learning_candidates": "A55ECD249008D477653AB8DDEF4FAB702AF5AEFC7839D9877752E57D0152FD97",
+        "curated_evidence_audit": "957F6003611889E740577C9EBACE79C8EDD6D0674A934A0BDE33C4F0C4CA5C69",
+        "curated_evidence_predictions": "3BA2B7A5702CBE594B050F21706BB01B5C957B2A90B2AE55476B8A0B3021C186",
+        "curation_smoke_workflow_report": "7FE18FDE770918A0109D2373968531C665AD3410B39744C78AD91BBAF4D67DD5",
+        "evidence_overlay_diff": "760AB4E52DC1212960560ED99058800E7C87F0CBA2AAB9BF6E1A729C5E2051EE",
+        "evidence_overlay_graph": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+        "evidence_overlay_report": "471D0480EC6566B45BA356DFADCF3123350B466EAD8B0458CCE73143D5D256AE",
+        "handoff_bundle": "293BA60402C86DDDD66BBBEDD2BBB26B659EDE9F36F9973E88CF2ABA0E3CA446",
+        "prediction_quality_report": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+        "prediction_review_queue": "9081B2F7F0EB59D988DFFAFDFC4DB31443C1A90ABC8FD314D9A38C7D9C37FBF2",
+        "prediction_review_summary": "A305E68EBAD9D9001340BAB4ADA67DFC643FF8D56810FD3AF7C526912A0F6E79",
+        "reviewed_prediction_queue": "8C110F2C35876B8E74095B0B05C27452E69A2942DB7D9243ED2C7143C333690A",
+        "workflow_report": "A49EA0F7E606B0ADAFAAFF9D08AFD293BB201F2710315924F01B3A7C96E5C11A"
+      },
+      "created_at_utc": "2026-06-23T07:08:45.989413+00:00",
+      "graph_path": "data\\examples\\graph_records_sample.jsonl",
+      "handoff_bundle_path": "data\\processed\\curation_handoff_bundle\\curation_handoff_bundle.json",
+      "overlay_graph_path": "data\\processed\\curation_smoke_workflow\\evidence_overlay_graph_records.jsonl",
+      "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+      "reviewed_queue_path": "data\\processed\\curation_smoke_workflow\\prediction_reviewed_queue.jsonl",
+      "run_id": "curation-EFD1A088D875",
+      "warning_count": 0
+    }
+  ],
+  "latest_run_id": "curation-EFD1A088D875",
+  "registry_path": "reports\\review\\curation_run_registry.json",
+  "run_count": 1,
+  "warnings": []
+}

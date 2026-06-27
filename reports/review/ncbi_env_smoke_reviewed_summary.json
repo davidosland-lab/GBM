@@ -1,0 +1,132 @@
+{
+  "corrected_evidence_tier_counts": [],
+  "corrected_relation_type_counts": [],
+  "item_count": 7,
+  "item_type_counts": [
+    {
+      "count": 4,
+      "key": "evidence_claim"
+    },
+    {
+      "count": 3,
+      "key": "graph_relation"
+    }
+  ],
+  "pending_count": 7,
+  "sample_items": [
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:30187121",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "smoke",
+      "source_file": "data\\processed\\ncbi_env_smoke_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "30187121",
+      "tail": "",
+      "text": "Distribution of EGFR amplification, combined chromosome 7 gain and chromosome 10 loss, and TERT promoter mutation in brain tumors and their potential for the reclassification of IDHwt astrocytoma to glioblastoma."
+    },
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:37743333",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "smoke",
+      "source_file": "data\\processed\\ncbi_env_smoke_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "37743333",
+      "tail": "",
+      "text": "[Glioblastoma, IDH-Wildtype]."
+    },
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:26109046",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "smoke",
+      "source_file": "data\\processed\\ncbi_env_smoke_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "26109046",
+      "tail": "",
+      "text": "Cancer stem cells in glioblastoma."
+    },
+    {
+      "confidence": 0.58,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 1,
+      "head": "",
+      "item_id": "evidence:38477507",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "smoke",
+      "source_file": "data\\processed\\ncbi_env_smoke_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "38477507",
+      "tail": "",
+      "text": "Histone H3K9 Lactylation Confers Temozolomide Resistance in Glioblastoma via LUC7L2-Mediated MLH1 Intron Retention."
+    },
+    {
+      "confidence": 0.62,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 3,
+      "head": "Disease:glioblastoma",
+      "item_id": "relation:29643471:1",
+      "item_type": "graph_relation",
+      "reasons": [
+        "confidence <= 0.65"
+      ],
+      "relation_type": "PREDICTS",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "smoke",
+      "source_file": "data\\processed\\ncbi_env_smoke_pipeline\\graph_records.jsonl",
+      "source_pmid": "29643471",
+      "tail": "Outcome:response",
+      "text": "Herein, we examine the current state of immunotherapy for gliomas, notably glioblastoma, the implications for combining the current standard-of-care treatment modalities with immunotherapies, potential biomarkers of response, and future directions for glioblastoma immuno-oncology."
+    }
+  ],
+  "source_path": "data\\review\\ncbi_env_smoke_reviewed_queue.jsonl",
+  "status_counts": [
+    {
+      "count": 7,
+      "key": "pending"
+    }
+  ],
+  "warning_count": 1,
+  "warnings": [
+    "7 item(s) still pending review"
+  ]
+}

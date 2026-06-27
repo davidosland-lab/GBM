@@ -1,0 +1,14 @@
+{
+  "compared_item_count": 0,
+  "conflict_count": 0,
+  "conflicts": [],
+  "item_count": 1,
+  "source_paths": [
+    "data\\review\\sample_graph_prediction_reviewed_queue.jsonl",
+    "data\\review\\sample_graph_prediction_reviewed_queue.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "prediction:40000001:1 appears in only one source"
+  ]
+}

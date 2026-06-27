@@ -1,0 +1,9 @@
+{
+  "available_report_count": 7,
+  "output_path": "reports\\training\\governance\\dashboard_training_manifest.json",
+  "ready_pack_count": 2,
+  "registry_audit_passed": false,
+  "registry_entry_count": 2,
+  "relation_config_status": "passed",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

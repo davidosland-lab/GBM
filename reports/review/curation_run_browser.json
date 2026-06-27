@@ -1,0 +1,64 @@
+{
+  "filters": {
+    "path_contains": "",
+    "run_id": "",
+    "warnings_only": "False"
+  },
+  "latest_run_id": "curation-C19C75E1DD43",
+  "match_count": 2,
+  "registry_path": "reports\\review\\curation_run_registry.json",
+  "run_count": 2,
+  "runs": [
+    {
+      "artifact_hashes": {
+        "active_learning_candidates": "357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C",
+        "curated_evidence_audit": "92F0555E84F393C65E80020BD27DD0615A60C205B5CCFDBD28EC470FC70B1DE7",
+        "curated_evidence_predictions": "5B5B7A659DD3D45F2FB5ED120E5F5F4344D2BF1070078B51AD015A204642B173",
+        "curation_artifact": "669906EE0BEB0574C59AB1DE22644C6A9411FB3DC25BF87179477297C317881F",
+        "evidence_overlay_diff": "555C894D8D81AA0D51CD726F81BB4EDAB82A170A48A86FCF09BACF1653F9C406",
+        "evidence_overlay_graph": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+        "evidence_overlay_report": "ACF46B5EE2A5F1410EBBF5EA5D379014B17E439F68AC13959E7BC5C9E35A59F9",
+        "handoff_bundle": "A7F5169A346229196B4DDBF661245B4C9AC48162481B4790E98EEB14162CEDFD",
+        "prediction_quality_report": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+        "prediction_review_queue": "EAAAFCA0664F19F4D34E07EB6695674F26E4202A626153C996BA17736821BC66",
+        "prediction_review_summary": "9E7FA1B9FE8188ACD1F31E95E48BDFF07B749DF312475BC1295A7F4959872F49",
+        "reviewed_prediction_queue": "31A7CD9688CB79C4AC64AA77F00F2894169200CE9CBE63E2F9E7EEDE1654FBFF",
+        "workflow_report": "E46F989670F1DF08D09CE00475A1F93995B3554A7C1C1E75D116EBEDF902CFF8"
+      },
+      "created_at_utc": "2026-06-23T07:39:03.042617+00:00",
+      "graph_path": "data\\examples\\graph_records_sample.jsonl",
+      "handoff_bundle_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\curation_handoff_bundle.json",
+      "overlay_graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+      "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+      "reviewed_queue_path": "data\\processed\\curation_regression_pack\\prediction_reviewed_queue.jsonl",
+      "run_id": "curation-C19C75E1DD43",
+      "warning_count": 0
+    },
+    {
+      "artifact_hashes": {
+        "active_learning_candidates": "A55ECD249008D477653AB8DDEF4FAB702AF5AEFC7839D9877752E57D0152FD97",
+        "curated_evidence_audit": "957F6003611889E740577C9EBACE79C8EDD6D0674A934A0BDE33C4F0C4CA5C69",
+        "curated_evidence_predictions": "3BA2B7A5702CBE594B050F21706BB01B5C957B2A90B2AE55476B8A0B3021C186",
+        "curation_smoke_workflow_report": "7FE18FDE770918A0109D2373968531C665AD3410B39744C78AD91BBAF4D67DD5",
+        "evidence_overlay_diff": "760AB4E52DC1212960560ED99058800E7C87F0CBA2AAB9BF6E1A729C5E2051EE",
+        "evidence_overlay_graph": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
+        "evidence_overlay_report": "471D0480EC6566B45BA356DFADCF3123350B466EAD8B0458CCE73143D5D256AE",
+        "handoff_bundle": "293BA60402C86DDDD66BBBEDD2BBB26B659EDE9F36F9973E88CF2ABA0E3CA446",
+        "prediction_quality_report": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
+        "prediction_review_queue": "9081B2F7F0EB59D988DFFAFDFC4DB31443C1A90ABC8FD314D9A38C7D9C37FBF2",
+        "prediction_review_summary": "A305E68EBAD9D9001340BAB4ADA67DFC643FF8D56810FD3AF7C526912A0F6E79",
+        "reviewed_prediction_queue": "8C110F2C35876B8E74095B0B05C27452E69A2942DB7D9243ED2C7143C333690A",
+        "workflow_report": "A49EA0F7E606B0ADAFAAFF9D08AFD293BB201F2710315924F01B3A7C96E5C11A"
+      },
+      "created_at_utc": "2026-06-23T07:08:45.989413+00:00",
+      "graph_path": "data\\examples\\graph_records_sample.jsonl",
+      "handoff_bundle_path": "data\\processed\\curation_handoff_bundle\\curation_handoff_bundle.json",
+      "overlay_graph_path": "data\\processed\\curation_smoke_workflow\\evidence_overlay_graph_records.jsonl",
+      "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+      "reviewed_queue_path": "data\\processed\\curation_smoke_workflow\\prediction_reviewed_queue.jsonl",
+      "run_id": "curation-EFD1A088D875",
+      "warning_count": 0
+    }
+  ],
+  "warnings": []
+}

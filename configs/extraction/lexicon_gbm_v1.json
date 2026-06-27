@@ -1,0 +1,31 @@
+{
+  "name": "lexicon_gbm_v1",
+  "description": "Deterministic offline lexicon for GBM-AI smoke baselines. Research-use only.",
+  "entries": [
+    {"term": "glioblastoma", "label": "DISEASE"},
+    {"term": "GBM", "label": "DISEASE"},
+    {"term": "MGMT methylation", "label": "BIOMARKER"},
+    {"term": "MGMT", "label": "GENE"},
+    {"term": "EGFR amplification", "label": "BIOMARKER"},
+    {"term": "EGFR", "label": "GENE"},
+    {"term": "IDH-wildtype", "label": "BIOMARKER"},
+    {"term": "IDH wildtype", "label": "BIOMARKER"},
+    {"term": "IDH-mutant", "label": "BIOMARKER"},
+    {"term": "IDH mutant", "label": "BIOMARKER"},
+    {"term": "temozolomide resistance", "label": "OUTCOME"},
+    {"term": "temozolomide response", "label": "OUTCOME"},
+    {"term": "temozolomide", "label": "DRUG"},
+    {"term": "TMZ", "label": "DRUG"},
+    {"term": "immunotherapy", "label": "TREATMENT"},
+    {"term": "CAR-T", "label": "TREATMENT"},
+    {"term": "dendritic cell vaccine", "label": "TREATMENT"},
+    {"term": "checkpoint inhibitor", "label": "TREATMENT"},
+    {"term": "blood-brain barrier", "label": "DELIVERY_MODIFIER"},
+    {"term": "focused ultrasound", "label": "DELIVERY_MODIFIER"},
+    {"term": "glioblastoma stem cells", "label": "CELL_TYPE"},
+    {"term": "stem cells", "label": "CELL_TYPE"},
+    {"term": "recurrence", "label": "OUTCOME"},
+    {"term": "survival", "label": "OUTCOME"},
+    {"term": "response", "label": "OUTCOME"}
+  ]
+}

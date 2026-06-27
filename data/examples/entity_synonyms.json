@@ -1,0 +1,30 @@
+{
+  "version": "gbm-ai-entity-normalization-v0",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "entities": [
+    {
+      "canonical_id": "gene:MGMT",
+      "canonical_name": "MGMT",
+      "labels": ["Gene", "Biomarker"],
+      "synonyms": ["MGMT", "MGMT promoter methylation", "MGMT methylation", "O6-methylguanine-DNA methyltransferase"]
+    },
+    {
+      "canonical_id": "gene:EGFR",
+      "canonical_name": "EGFR",
+      "labels": ["Gene", "Biomarker"],
+      "synonyms": ["EGFR", "EGFR amplification", "epidermal growth factor receptor"]
+    },
+    {
+      "canonical_id": "drug:temozolomide",
+      "canonical_name": "temozolomide",
+      "labels": ["Drug", "Treatment"],
+      "synonyms": ["TMZ", "temozolomide", "Temodar"]
+    },
+    {
+      "canonical_id": "delivery:focused_ultrasound",
+      "canonical_name": "focused ultrasound",
+      "labels": ["DeliveryModifier", "Treatment"],
+      "synonyms": ["focused ultrasound", "FUS", "low-intensity focused ultrasound", "blood-brain barrier opening"]
+    }
+  ]
+}

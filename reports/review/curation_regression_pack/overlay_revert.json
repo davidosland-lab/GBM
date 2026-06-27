@@ -1,0 +1,8 @@
+{
+  "graph_record_count": 2,
+  "overlay_graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+  "relation_count": 2,
+  "reverted_graph_path": "data\\processed\\curation_regression_pack\\reverted_graph_records.jsonl",
+  "reverted_relation_count": 1,
+  "warnings": []
+}

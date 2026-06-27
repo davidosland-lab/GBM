@@ -1,0 +1,33 @@
+{
+  "input_graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+  "matches": [
+    {
+      "canonical_id": "gene:MGMT",
+      "canonical_name": "MGMT",
+      "label": "Biomarker",
+      "original_value": "MGMT methylation",
+      "source_pmid": "29097493"
+    },
+    {
+      "canonical_id": "delivery:focused_ultrasound",
+      "canonical_name": "focused ultrasound",
+      "label": "DeliveryModifier",
+      "original_value": "focused ultrasound",
+      "source_pmid": "40000001"
+    },
+    {
+      "canonical_id": "drug:temozolomide",
+      "canonical_name": "temozolomide",
+      "label": "Drug",
+      "original_value": "temozolomide",
+      "source_pmid": "40000001"
+    }
+  ],
+  "node_count": 4,
+  "normalized_node_count": 3,
+  "output_graph_path": "data\\processed\\curation_regression_pack\\normalized_graph_records.jsonl",
+  "record_count": 2,
+  "synonym_table_path": "data\\examples\\entity_synonyms.json",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

@@ -1,0 +1,147 @@
+{
+  "evidence_tier_counts": [],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 13,
+      "key": "Treatment"
+    },
+    {
+      "count": 6,
+      "key": "Disease"
+    },
+    {
+      "count": 5,
+      "key": "Trial"
+    }
+  ],
+  "node_mention_count": 24,
+  "paper_only_record_count": 0,
+  "record_count": 5,
+  "relation_count": 19,
+  "relation_type_counts": [
+    {
+      "count": 19,
+      "key": "ASSOCIATED_WITH"
+    }
+  ],
+  "source_path": "data\\processed\\clinicaltrials_gbm_smoke_2026-06-23\\trial_graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 2,
+      "key_value": "Glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 2,
+      "key_value": "Brain and Central Nervous System Tumors",
+      "label": "Disease"
+    },
+    {
+      "count": 2,
+      "key_value": "temozolomide",
+      "label": "Treatment"
+    },
+    {
+      "count": 1,
+      "key_value": "NCT04552886",
+      "label": "Trial"
+    },
+    {
+      "count": 1,
+      "key_value": "TH-1 Dendritic Cell Immunotherapy",
+      "label": "Treatment"
+    },
+    {
+      "count": 1,
+      "key_value": "NCT03532295",
+      "label": "Trial"
+    },
+    {
+      "count": 1,
+      "key_value": "Glioma",
+      "label": "Disease"
+    },
+    {
+      "count": 1,
+      "key_value": "Epacadostat",
+      "label": "Treatment"
+    },
+    {
+      "count": 1,
+      "key_value": "Bevacizumab",
+      "label": "Treatment"
+    },
+    {
+      "count": 1,
+      "key_value": "Radiation therapy",
+      "label": "Treatment"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "Trial:NCT04552886",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT04552886",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:TH-1 Dendritic Cell Immunotherapy"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Glioma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Epacadostat"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Bevacizumab"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Radiation therapy"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT03532295",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:Retifanlimab"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT00486603",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:Brain and Central Nervous System Tumors"
+    },
+    {
+      "count": 1,
+      "head": "Trial:NCT00486603",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Treatment:hydroxychloroquine"
+    }
+  ],
+  "unique_nct_count": 5,
+  "unique_node_count": 21,
+  "unique_pmid_count": 0,
+  "warnings": []
+}

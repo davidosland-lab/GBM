@@ -1,0 +1,22 @@
+{
+  "changed_relation_count": 1,
+  "changes": [
+    {
+      "original_evidence_tier": 1,
+      "overlaid_evidence_tier": 3,
+      "relation_index": 1,
+      "review_status": "accepted",
+      "source_pmid": "40000001"
+    }
+  ],
+  "curated_evidence_count": 1,
+  "curated_evidence_path": "data\\processed\\curation_smoke_workflow\\curated_evidence_predictions.jsonl",
+  "graph_path": "data\\examples\\graph_records_sample.jsonl",
+  "graph_record_count": 2,
+  "overlay_graph_path": "data\\processed\\curation_smoke_workflow\\evidence_overlay_graph_records.jsonl",
+  "relation_count": 2,
+  "skipped_pending_count": 0,
+  "unchanged_relation_count": 1,
+  "unmatched_evidence_count": 0,
+  "warnings": []
+}

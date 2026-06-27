@@ -1,0 +1,55 @@
+{
+  "findings": [
+    {
+      "confidence": 0.91,
+      "evidence_tier": 3,
+      "extraction_method": "sample_fixture",
+      "flags": [
+        "no inferred qualifiers"
+      ],
+      "head": "Biomarker:MGMT methylation",
+      "qualifier_count": 0,
+      "relation": "PREDICTS",
+      "relation_index": 1,
+      "sentence": "MGMT methylation predicts temozolomide response in glioblastoma cohorts.",
+      "source_pmid": "29097493",
+      "tail": "Outcome:temozolomide response",
+      "trigger": "predicts"
+    },
+    {
+      "confidence": 0.64,
+      "evidence_tier": 3,
+      "extraction_method": "sample_fixture",
+      "flags": [
+        "no inferred qualifiers"
+      ],
+      "head": "DeliveryModifier:focused ultrasound",
+      "qualifier_count": 0,
+      "relation": "ENHANCES_DELIVERY_OF",
+      "relation_index": 1,
+      "sentence": "Focused ultrasound enhances delivery of temozolomide across the blood-brain barrier.",
+      "source_pmid": "40000001",
+      "tail": "Drug:temozolomide",
+      "trigger": "enhances delivery of"
+    }
+  ],
+  "flagged_relation_count": 2,
+  "graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+  "low_confidence_count": 0,
+  "missing_method_count": 0,
+  "missing_qualifier_count": 2,
+  "missing_sentence_count": 0,
+  "missing_trigger_count": 0,
+  "relation_count": 2,
+  "relation_type_counts": [
+    {
+      "count": 1,
+      "key": "ENHANCES_DELIVERY_OF"
+    },
+    {
+      "count": 1,
+      "key": "PREDICTS"
+    }
+  ],
+  "warnings": []
+}

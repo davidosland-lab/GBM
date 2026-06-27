@@ -1,0 +1,35 @@
+{
+  "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+  "tasks": [
+    {
+      "evaluation_file": "data\\training\\evidence_pack\\annotation_splits\\ner_test.jsonl",
+      "examples": 0,
+      "label_counts": {},
+      "majority_accuracy": null,
+      "majority_label": null,
+      "task": "ner"
+    },
+    {
+      "evaluation_file": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",
+      "examples": 1,
+      "label_counts": {
+        "0": 1
+      },
+      "majority_accuracy": 1.0,
+      "majority_label": "0",
+      "task": "evidence"
+    },
+    {
+      "evaluation_file": "data\\training\\evidence_pack\\annotation_splits\\relation_test.jsonl",
+      "examples": 0,
+      "label_counts": {},
+      "majority_accuracy": null,
+      "majority_label": null,
+      "task": "relation"
+    }
+  ],
+  "warnings": [
+    "ner: no evaluation examples",
+    "relation: no evaluation examples"
+  ]
+}

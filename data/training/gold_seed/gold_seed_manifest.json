@@ -1,0 +1,20 @@
+{
+  "entity_jsonl_path": "",
+  "evidence_count": 1,
+  "files": {
+    "evidence": "data\\training\\gold_seed\\gold_evidence.jsonl",
+    "manifest": "data\\training\\gold_seed\\gold_seed_manifest.json",
+    "markdown": "data\\training\\gold_seed\\gold_seed_manifest.md",
+    "ner": "data\\training\\gold_seed\\gold_ner.jsonl",
+    "relation": "data\\training\\gold_seed\\gold_relations.jsonl"
+  },
+  "ner_count": 0,
+  "output_dir": "data\\training\\gold_seed",
+  "prediction_reviewed_queue_path": "data\\review\\sample_graph_prediction_reviewed_queue.jsonl",
+  "relation_count": 0,
+  "reviewed_queue_path": "",
+  "skipped_pending_count": 0,
+  "skipped_rejected_count": 0,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "name": "gbmbert_ner_pubmedbert",
+  "task": "ner",
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "train_path": "data/annotations/ner_train.jsonl",
+  "validation_path": "data/annotations/ner_validation.jsonl",
+  "output_dir": "models/checkpoints/gbmbert_ner_pubmedbert",
+  "label_set": [
+    "GENE",
+    "DRUG",
+    "DISEASE",
+    "PATHWAY",
+    "BIOMARKER",
+    "CELL_TYPE",
+    "CELL_STATE",
+    "TREATMENT",
+    "DELIVERY_MODIFIER",
+    "OUTCOME",
+    "TRIAL_PHASE",
+    "UNKNOWN"
+  ],
+  "hyperparameters": {
+    "epochs": 3,
+    "learning_rate": 0.00002,
+    "batch_size": 8,
+    "max_length": 256
+  }
+}

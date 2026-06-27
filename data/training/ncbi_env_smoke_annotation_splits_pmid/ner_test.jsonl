@@ -1,0 +1,12 @@
+{"confidence": 0.75, "end": 1214, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1211, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1268, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1265, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1432, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1429, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1742, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1739, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1846, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1843, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1937, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1934, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 211, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 199, "task": "ner", "text": "glioblastoma"}
+{"confidence": 0.75, "end": 231, "label": "BIOMARKER", "normalized_text": "EGFR amplification", "source_pmid": "30187121", "start": 213, "task": "ner", "text": "EGFR amplification"}
+{"confidence": 0.75, "end": 34, "label": "BIOMARKER", "normalized_text": "EGFR amplification", "source_pmid": "30187121", "start": 16, "task": "ner", "text": "EGFR amplification"}
+{"confidence": 0.75, "end": 436, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 424, "task": "ner", "text": "glioblastoma"}
+{"confidence": 0.75, "end": 441, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 438, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 632, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 629, "task": "ner", "text": "GBM"}

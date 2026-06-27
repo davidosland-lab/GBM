@@ -1,0 +1,13 @@
+{
+  "input_path": "data\\training\\ncbi_env_smoke_annotation_dataset",
+  "label_counts": {
+    "NO_RELATION": 3
+  },
+  "negative_count": 3,
+  "negative_ratio": 1.0,
+  "output_path": "data\\training\\relation_negatives.jsonl",
+  "positive_count": 3,
+  "skipped_count": 0,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

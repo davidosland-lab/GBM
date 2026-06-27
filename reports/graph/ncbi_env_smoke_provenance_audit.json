@@ -1,0 +1,9 @@
+{
+  "issue_count": 0,
+  "issue_type_counts": {},
+  "issues": [],
+  "record_type": "pubmed",
+  "records_seen": 13,
+  "relations_seen": 3,
+  "source_path": "data\\processed\\ncbi_env_smoke_pipeline\\graph_records.jsonl"
+}

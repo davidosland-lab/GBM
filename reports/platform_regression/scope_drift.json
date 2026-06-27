@@ -1,0 +1,17 @@
+{
+  "checked_paths": [
+    "README.md",
+    "docs\\ANNOTATION_GUIDELINES.md",
+    "docs\\PROJECT_SCOPE.json",
+    "docs\\RESEARCH_SCOPE_V2.md",
+    "reports\\wireframes\\kg_explorer.md",
+    "src\\gbmbert\\dashboard\\app.py",
+    "src\\gbmbert\\knowledge_graph\\explorer.py"
+  ],
+  "finding_count": 0,
+  "findings": [],
+  "missing_warning_count": 0,
+  "prohibited_assertion_count": 0,
+  "safe": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

@@ -1,0 +1,29 @@
+{
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "experiment_manifest_exists": true,
+    "label_map_exists": true,
+    "test_split_has_rows": true,
+    "train_split_has_rows": true,
+    "training_enabled_by_config": false,
+    "validation_split_has_rows": true
+  },
+  "config_path": "configs\\training\\gbmbert_ner_pubmedbert.json",
+  "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+  "dataset_splits": {
+    "test": 16,
+    "train": 94,
+    "validation": 16
+  },
+  "dry_run": true,
+  "execute_training_requested": false,
+  "execution": null,
+  "experiment_manifest_path": "reports\\training\\ncbi_env_smoke_train_gate_experiment_manifest.json",
+  "label_map_dir": "data\\training\\ncbi_env_smoke_label_maps",
+  "status": "dry_run_ready",
+  "task": "ner",
+  "tokenization": null,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

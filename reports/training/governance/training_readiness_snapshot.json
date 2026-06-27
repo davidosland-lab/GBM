@@ -1,0 +1,12 @@
+{
+  "created_at_utc": "2026-06-23T23:16:49.337694+00:00",
+  "dashboard_report_count": 7,
+  "ready_pack_count": 2,
+  "registry_audit_passed": false,
+  "relation_config_status": "passed",
+  "total_pack_count": 3,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "model registry audit has findings"
+  ]
+}

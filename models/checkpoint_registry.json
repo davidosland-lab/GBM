@@ -1,0 +1,29 @@
+{
+  "checkpoints": [
+    {
+      "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+      "checkpoint_dir": "data\\training\\evidence_smoke_fixture\\checkpoint",
+      "manifest_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_run_manifest.json",
+      "metrics_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_metrics.json",
+      "name": "gbmbert_evidence_smoke",
+      "notes": "Research-use evidence classifier checkpoint; not validated for clinical use.",
+      "registered_at": "2026-06-23T04:08:01.983823+00:00",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+    },
+    {
+      "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+      "checkpoint_dir": "models\\checkpoints\\gbmbert_ner_smoke_candidate",
+      "manifest_path": "reports\\training\\ncbi_env_smoke_experiment_manifest.json",
+      "metrics_path": null,
+      "name": "gbmbert_ner_smoke_candidate",
+      "notes": "Metadata-only smoke registration; no trained checkpoint produced.",
+      "registered_at": "2026-06-23T03:36:07.521888+00:00",
+      "status": "candidate",
+      "task": "ner",
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

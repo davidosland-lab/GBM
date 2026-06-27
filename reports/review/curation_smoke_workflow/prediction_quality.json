@@ -1,0 +1,40 @@
+{
+  "checkpoint_name_counts": [
+    {
+      "count": 1,
+      "key": "gbmbert_evidence_smoke"
+    }
+  ],
+  "checkpoint_status_counts": [
+    {
+      "count": 1,
+      "key": "research_candidate"
+    }
+  ],
+  "confidence_bucket_counts": [
+    {
+      "count": 1,
+      "key": "0.90-1.00"
+    }
+  ],
+  "evidence_tier_counts": [
+    {
+      "count": 1,
+      "key": "3"
+    }
+  ],
+  "invalid_prediction_count": 0,
+  "label_counts": [
+    {
+      "count": 1,
+      "key": "3"
+    }
+  ],
+  "low_confidence_count": 0,
+  "missing_pmid_count": 0,
+  "missing_text_count": 0,
+  "missing_warning_count": 0,
+  "prediction_count": 1,
+  "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+  "warnings": []
+}

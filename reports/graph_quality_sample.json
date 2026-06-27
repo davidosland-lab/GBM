@@ -1,0 +1,85 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 1,
+      "key": "3"
+    },
+    {
+      "count": 1,
+      "key": "1"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 1,
+      "key": "Biomarker"
+    },
+    {
+      "count": 1,
+      "key": "Outcome"
+    },
+    {
+      "count": 1,
+      "key": "DeliveryModifier"
+    },
+    {
+      "count": 1,
+      "key": "Drug"
+    }
+  ],
+  "node_mention_count": 4,
+  "paper_only_record_count": 0,
+  "record_count": 2,
+  "relation_count": 2,
+  "relation_type_counts": [
+    {
+      "count": 1,
+      "key": "PREDICTS"
+    },
+    {
+      "count": 1,
+      "key": "ENHANCES_DELIVERY_OF"
+    }
+  ],
+  "source_path": "data\\examples\\graph_records_sample.jsonl",
+  "top_entities": [
+    {
+      "count": 1,
+      "key_value": "MGMT methylation",
+      "label": "Biomarker"
+    },
+    {
+      "count": 1,
+      "key_value": "temozolomide response",
+      "label": "Outcome"
+    },
+    {
+      "count": 1,
+      "key_value": "focused ultrasound",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 1,
+      "key_value": "temozolomide",
+      "label": "Drug"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "Biomarker:MGMT methylation",
+      "relation": "PREDICTS",
+      "tail": "Outcome:temozolomide response"
+    },
+    {
+      "count": 1,
+      "head": "DeliveryModifier:focused ultrasound",
+      "relation": "ENHANCES_DELIVERY_OF",
+      "tail": "Drug:temozolomide"
+    }
+  ],
+  "unique_node_count": 4,
+  "unique_pmid_count": 2,
+  "warnings": []
+}

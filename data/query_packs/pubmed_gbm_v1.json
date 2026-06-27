@@ -1,0 +1,20 @@
+{
+  "name": "pubmed_gbm_v1",
+  "description": "Original PROJECT_HANDOFF v1.0 glioblastoma PubMed literature search topics.",
+  "source": "PROJECT_HANDOFF.md v1.0",
+  "queries": [
+    "glioblastoma",
+    "glioblastoma immunotherapy",
+    "glioblastoma CAR-T",
+    "glioblastoma dendritic cell vaccines",
+    "glioblastoma checkpoint inhibitors",
+    "glioblastoma MGMT methylation",
+    "glioblastoma EGFR amplification",
+    "IDH wildtype glioblastoma",
+    "glioblastoma stem cells",
+    "neuron-glioma synapses",
+    "glioblastoma blood-brain barrier",
+    "glioblastoma recurrence",
+    "glioblastoma temozolomide resistance"
+  ]
+}

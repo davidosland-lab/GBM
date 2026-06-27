@@ -1,0 +1,52 @@
+{
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checks": {
+    "config_label_set_nonempty": true,
+    "dataset_dir_exists": true,
+    "dataset_labels_covered_by_config": true,
+    "dataset_labels_covered_by_label_map": true,
+    "hyperparameters_in_review_bounds": true,
+    "label_map_present": true,
+    "test_split_present": true,
+    "train_split_nonempty": true,
+    "train_split_present": true,
+    "training_enabled_confirmed": true,
+    "validation_split_present": true
+  },
+  "config_labels": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "config_path": "configs\\training\\gbmbert_evidence_pubmedbert.json",
+  "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+  "dataset_labels": [
+    "0",
+    "1"
+  ],
+  "errors": [],
+  "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+  "label_map_labels": [
+    "0",
+    "1"
+  ],
+  "prepared_task": "evidence",
+  "split_counts": {
+    "test": 1,
+    "train": 2,
+    "validation": 1
+  },
+  "status": "passed",
+  "task": "evidence_classification",
+  "training_enabled": false,
+  "training_enabled_confirmed": false,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "review gate is for research scaffolding only and does not certify model performance",
+    "training remains separate from diagnosis, treatment selection, and clinical decision-making",
+    "training_enabled is false; this config is review-ready but will run as a dry run unless changed"
+  ]
+}

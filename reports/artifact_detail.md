@@ -1,0 +1,103 @@
+# GBM-AI Artifact Detail
+
+Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
+
+- Index: `reports\artifact_index.json`
+- Query: `active_learning_batch`
+- Matches: 13
+
+## Artifacts
+- `data\processed\curation_regression_pack\active_learning_batches.csv`
+  - Type: active_learning_batch_csv
+  - Category: processed
+  - Size: 873 bytes
+  - Lines: 2
+  - Modified UTC: 2026-06-23T07:39:02+00:00
+  - SHA256: `7BD27ED1749AB823908740DC4F319F1910D163CF6DCD504BD07BB96A82D0B3B3`
+- `data\processed\curation_regression_pack\active_learning_batches.jsonl`
+  - Type: active_learning_batch_plan
+  - Category: processed
+  - Size: 1021 bytes
+  - Lines: 1
+  - Modified UTC: 2026-06-23T07:39:02+00:00
+  - SHA256: `D02107B7AF1A3537CCA37D76A49A1BA073B2D2C5B11EEB2C6C8FF7B4874E2591`
+- `data\processed\curation_regression_pack\handoff_bundle\files\curation_regression_pack_active_learning_batches.md`
+  - Type: active_learning_batch_report
+  - Category: processed
+  - Size: 602 bytes
+  - Lines: 23
+  - Modified UTC: 2026-06-23T07:39:02+00:00
+  - SHA256: `357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C`
+- `data\review\active_learning_batch_ALBATCH-001.csv`
+  - Type: active_learning_batch_csv
+  - Category: review
+  - Size: 922 bytes
+  - Lines: 2
+  - Modified UTC: 2026-06-23T09:06:30+00:00
+  - SHA256: `EC2346F2F790DACBE68EA9FD7A5045592212217E8169A8643F253F39B5E363E1`
+- `data\review\active_learning_batch_reviewed_queue.jsonl`
+  - Type: active_learning_candidates
+  - Category: review
+  - Size: 976 bytes
+  - Lines: 1
+  - Modified UTC: 2026-06-23T09:06:30+00:00
+  - SHA256: `A4607373CFCF67F9013E9C32707B9F940B4DD746D721DB6AFD0B4506655557E6`
+- `reports\review\active_learning_batch_roundtrip_export.json`
+  - Type: active_learning_batch_roundtrip_report
+  - Category: review
+  - Size: 465 bytes
+  - Lines: 11
+  - Modified UTC: 2026-06-23T09:06:30+00:00
+  - SHA256: `291D7F2EC1900E9CC4574916FF99BBDDF59C4D81F545FB322455DC1CBC5828F7`
+- `reports\review\active_learning_batch_roundtrip_export.md`
+  - Type: active_learning_batch_roundtrip_report
+  - Category: review
+  - Size: 590 bytes
+  - Lines: 15
+  - Modified UTC: 2026-06-23T09:06:30+00:00
+  - SHA256: `CC5D17031EB6399329DFA98D8C11D2CC2981AD08F7A2F9BC5BAAC03DF3E7494B`
+- `reports\review\active_learning_batch_roundtrip_import.json`
+  - Type: active_learning_batch_roundtrip_report
+  - Category: review
+  - Size: 542 bytes
+  - Lines: 11
+  - Modified UTC: 2026-06-23T09:06:30+00:00
+  - SHA256: `1A0865676558470B2FAE1FF5B099475BE04936861333BF9767095E796434BDC1`
+- `reports\review\active_learning_batch_roundtrip_import.md`
+  - Type: active_learning_batch_roundtrip_report
+  - Category: review
+  - Size: 652 bytes
+  - Lines: 15
+  - Modified UTC: 2026-06-23T09:06:30+00:00
+  - SHA256: `AE716C1A03683461541CE07CA67ED7CCA91D7C1F5A5866FD1070203D11ED66D2`
+- `reports\review\curation_regression_pack\active_learning_batch_status.json`
+  - Type: active_learning_batch_status_report
+  - Category: review
+  - Size: 651 bytes
+  - Lines: 23
+  - Modified UTC: 2026-06-23T09:05:49+00:00
+  - SHA256: `88F09B5213E5FD87B9420F72EEFFC46E6C4B49134D464DE6A8100B60ED5D8F14`
+- `reports\review\curation_regression_pack\active_learning_batch_status.md`
+  - Type: active_learning_batch_status_report
+  - Category: review
+  - Size: 550 bytes
+  - Lines: 16
+  - Modified UTC: 2026-06-23T09:05:49+00:00
+  - SHA256: `0BBF3CD65DE0C07566BBC9F7B3CC32D89057F41F6DC2F17CBA7FC384A950876B`
+- `reports\review\curation_regression_pack\active_learning_batches.json`
+  - Type: active_learning_batch_report
+  - Category: review
+  - Size: 734 bytes
+  - Lines: 34
+  - Modified UTC: 2026-06-23T07:39:02+00:00
+  - SHA256: `A018297B544F659ACFFC11465437E26B76AA75BEA18628031D0EBF3EC038FE8D`
+- `reports\review\curation_regression_pack\active_learning_batches.md`
+  - Type: active_learning_batch_report
+  - Category: review
+  - Size: 602 bytes
+  - Lines: 23
+  - Modified UTC: 2026-06-23T07:39:02+00:00
+  - SHA256: `357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C`
+
+## Warnings
+- none

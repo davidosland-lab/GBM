@@ -1,0 +1,16 @@
+{
+  "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
+  "files": {
+    "evidence": "data\\training\\gold_pack\\label_maps\\evidence_label_map.json",
+    "ner": "data\\training\\gold_pack\\label_maps\\ner_label_map.json",
+    "relation": "data\\training\\gold_pack\\label_maps\\relation_label_map.json"
+  },
+  "labels": {
+    "evidence": {
+      "3": 0
+    },
+    "ner": {},
+    "relation": {}
+  },
+  "output_dir": "data\\training\\gold_pack\\label_maps"
+}

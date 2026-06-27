@@ -1,0 +1,10 @@
+{
+  "graph_path": "data\\processed\\sample_graph_evidence_overlay_records.jsonl",
+  "missing_original_tier_count": 0,
+  "overlay_relation_count": 1,
+  "pending_overlay_count": 0,
+  "record_count": 2,
+  "relation_count": 2,
+  "safe_to_load": true,
+  "warnings": []
+}

@@ -1,0 +1,50 @@
+{
+  "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_dataset",
+  "task_reports": [
+    {
+      "duplicate_count": 0,
+      "example_count": 126,
+      "label_counts": {
+        "BIOMARKER": 5,
+        "CELL_TYPE": 4,
+        "DELIVERY_MODIFIER": 4,
+        "DISEASE": 68,
+        "DRUG": 15,
+        "GENE": 12,
+        "OUTCOME": 15,
+        "TREATMENT": 3
+      },
+      "missing_offset_count": 0,
+      "missing_text_count": 0,
+      "task": "ner",
+      "warnings": []
+    },
+    {
+      "duplicate_count": 0,
+      "example_count": 4,
+      "label_counts": {
+        "0": 3,
+        "1": 1
+      },
+      "missing_offset_count": 0,
+      "missing_text_count": 0,
+      "task": "evidence",
+      "warnings": []
+    },
+    {
+      "duplicate_count": 0,
+      "example_count": 3,
+      "label_counts": {
+        "ASSOCIATED_WITH": 2,
+        "PREDICTS": 1
+      },
+      "missing_offset_count": 0,
+      "missing_text_count": 0,
+      "task": "relation",
+      "warnings": []
+    }
+  ],
+  "total_examples": 133,
+  "warning_count": 0,
+  "warnings": []
+}

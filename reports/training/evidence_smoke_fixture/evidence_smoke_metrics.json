@@ -1,0 +1,36 @@
+{
+  "accuracy": 1.0,
+  "confusion_matrix": {
+    "0": {
+      "0": 1,
+      "1": 0
+    },
+    "1": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "examples": 2,
+  "labels": [
+    {
+      "f1": 1.0,
+      "label": "0",
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1
+    },
+    {
+      "f1": 1.0,
+      "label": "1",
+      "precision": 1.0,
+      "recall": 1.0,
+      "support": 1
+    }
+  ],
+  "macro_f1": 1.0,
+  "task": "evidence_classification",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "fewer than 10 evaluation examples"
+  ]
+}

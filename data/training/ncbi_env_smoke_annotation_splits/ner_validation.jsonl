@@ -1,0 +1,16 @@
+{"confidence": 0.75, "end": 111, "label": "DELIVERY_MODIFIER", "normalized_text": "blood-brain barrier", "source_pmid": "39191260", "start": 92, "task": "ner", "text": "blood-brain barrier"}
+{"confidence": 0.75, "end": 1432, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "30187121", "start": 1429, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1461, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "38477507", "start": 1458, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 1593, "label": "DRUG", "normalized_text": "temozolomide", "source_pmid": "15758010", "start": 1581, "task": "ner", "text": "temozolomide"}
+{"confidence": 0.75, "end": 17, "label": "CELL_TYPE", "normalized_text": "stem cells", "source_pmid": "26109046", "start": 7, "task": "ner", "text": "stem cells"}
+{"confidence": 0.75, "end": 1790, "label": "OUTCOME", "normalized_text": "survival", "source_pmid": "41595608", "start": 1782, "task": "ner", "text": "survival"}
+{"confidence": 0.75, "end": 1842, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "33910979", "start": 1830, "task": "ner", "text": "glioblastoma"}
+{"confidence": 0.75, "end": 231, "label": "BIOMARKER", "normalized_text": "EGFR amplification", "source_pmid": "30187121", "start": 213, "task": "ner", "text": "EGFR amplification"}
+{"confidence": 0.75, "end": 30, "label": "TREATMENT", "normalized_text": "immunotherapy", "source_pmid": "29643471", "start": 17, "task": "ner", "text": "immunotherapy"}
+{"confidence": 0.75, "end": 356, "label": "DRUG", "normalized_text": "temozolomide", "source_pmid": "38477507", "start": 353, "task": "ner", "text": "TMZ"}
+{"confidence": 0.75, "end": 389, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "35976319", "start": 377, "task": "ner", "text": "glioblastoma"}
+{"confidence": 0.75, "end": 459, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "33910979", "start": 447, "task": "ner", "text": "glioblastoma"}
+{"confidence": 0.75, "end": 470, "label": "DISEASE", "normalized_text": "glioblastoma", "source_pmid": "38477507", "start": 467, "task": "ner", "text": "GBM"}
+{"confidence": 0.75, "end": 591, "label": "GENE", "normalized_text": "MGMT", "source_pmid": "15758010", "start": 587, "task": "ner", "text": "MGMT"}
+{"confidence": 0.75, "end": 81, "label": "DISEASE", "normalized_text": "Glioblastoma", "source_pmid": "35976319", "start": 69, "task": "ner", "text": "Glioblastoma"}
+{"confidence": 0.75, "end": 96, "label": "OUTCOME", "normalized_text": "recurrence", "source_pmid": "35016005", "start": 86, "task": "ner", "text": "recurrence"}

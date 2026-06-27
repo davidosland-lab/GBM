@@ -1,0 +1,37 @@
+{
+  "check_count": 5,
+  "checks": [
+    {
+      "detail": "invalid=0, warnings=0",
+      "name": "graph_quality",
+      "passed": true
+    },
+    {
+      "detail": "overlay_metadata=1, warnings=0",
+      "name": "overlay_diff",
+      "passed": true
+    },
+    {
+      "detail": "safe_to_load=True, warnings=0",
+      "name": "overlay_load_guard",
+      "passed": true
+    },
+    {
+      "detail": "valid=True, warnings=0",
+      "name": "handoff_validation",
+      "passed": true
+    },
+    {
+      "detail": "warnings=0",
+      "name": "curation_regression_pack",
+      "passed": true
+    }
+  ],
+  "created_at_utc": "2026-06-27T02:34:50.232333+00:00",
+  "failed_check_count": 0,
+  "overlay_graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
+  "passed_check_count": 5,
+  "safe_to_promote": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

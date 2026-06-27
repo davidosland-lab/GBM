@@ -1,0 +1,78 @@
+{
+  "input_dir": "data\\training\\gold_pack\\annotation_dataset_repaired",
+  "leakage_warnings": [],
+  "output_dir": "data\\training\\gold_pack\\annotation_splits",
+  "pmid_counts": {
+    "test": 0,
+    "train": 1,
+    "validation": 0
+  },
+  "ratios": {
+    "test": 0.1,
+    "train": 0.8,
+    "validation": 0.1
+  },
+  "seed": 13,
+  "tasks": [
+    {
+      "label_counts": {
+        "test": {},
+        "train": {},
+        "validation": {}
+      },
+      "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl",
+      "split_counts": {
+        "test": 0,
+        "train": 0,
+        "validation": 0
+      },
+      "split_files": {
+        "test": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
+        "train": "data\\training\\gold_pack\\annotation_splits\\ner_train.jsonl",
+        "validation": "data\\training\\gold_pack\\annotation_splits\\ner_validation.jsonl"
+      },
+      "task": "ner"
+    },
+    {
+      "label_counts": {
+        "test": {},
+        "train": {
+          "3": 1
+        },
+        "validation": {}
+      },
+      "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl",
+      "split_counts": {
+        "test": 0,
+        "train": 1,
+        "validation": 0
+      },
+      "split_files": {
+        "test": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
+        "train": "data\\training\\gold_pack\\annotation_splits\\evidence_train.jsonl",
+        "validation": "data\\training\\gold_pack\\annotation_splits\\evidence_validation.jsonl"
+      },
+      "task": "evidence"
+    },
+    {
+      "label_counts": {
+        "test": {},
+        "train": {},
+        "validation": {}
+      },
+      "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl",
+      "split_counts": {
+        "test": 0,
+        "train": 0,
+        "validation": 0
+      },
+      "split_files": {
+        "test": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",
+        "train": "data\\training\\gold_pack\\annotation_splits\\relation_train.jsonl",
+        "validation": "data\\training\\gold_pack\\annotation_splits\\relation_validation.jsonl"
+      },
+      "task": "relation"
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

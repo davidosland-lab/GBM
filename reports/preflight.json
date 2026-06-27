@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "detail": "3.12.9 64bit",
+      "name": "python",
+      "ok": true
+    },
+    {
+      "detail": "C:\\Users\\david\\GBM\\.venv",
+      "name": "local_venv",
+      "ok": true
+    },
+    {
+      "detail": "data\\raw",
+      "name": "data/raw",
+      "ok": true
+    },
+    {
+      "detail": "data\\processed",
+      "name": "data/processed",
+      "ok": true
+    },
+    {
+      "detail": "data\\review",
+      "name": "data/review",
+      "ok": true
+    },
+    {
+      "detail": "reports\\corpus",
+      "name": "reports/corpus",
+      "ok": true
+    },
+    {
+      "detail": "reports\\graph",
+      "name": "reports/graph",
+      "ok": true
+    },
+    {
+      "detail": "reports\\review",
+      "name": "reports/review",
+      "ok": true
+    },
+    {
+      "detail": "configured",
+      "name": "NCBI_EMAIL",
+      "ok": true
+    },
+    {
+      "detail": "configured",
+      "name": "NCBI_API_KEY",
+      "ok": true
+    },
+    {
+      "detail": "not configured",
+      "name": "NEO4J_URI",
+      "ok": true
+    },
+    {
+      "detail": "not configured",
+      "name": "NEO4J_USER",
+      "ok": true
+    },
+    {
+      "detail": "not configured",
+      "name": "NEO4J_PASSWORD",
+      "ok": true
+    },
+    {
+      "detail": "d4data/biomedical-ner-all not available locally (OSError)",
+      "name": "hf_model_cache",
+      "ok": false
+    }
+  ],
+  "ok": false
+}

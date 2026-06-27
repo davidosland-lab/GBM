@@ -1,0 +1,46 @@
+{
+  "command": "gbmbert-run-smoke-baseline",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 3967,
+      "line_count": 5,
+      "non_empty_line_count": 5,
+      "path": "data\\raw\\clinicaltrials_gbm_smoke_2026-06-23.jsonl",
+      "sha256": "925DC40B5F85A5C2CE02AC81A693398C5FB8780399CA6EF0848F335503C6F24C"
+    },
+    {
+      "byte_count": 35075,
+      "line_count": 5,
+      "non_empty_line_count": 5,
+      "path": "data\\processed\\clinicaltrials_gbm_smoke_2026-06-23\\trial_graph_records.jsonl",
+      "sha256": "555D2D8D93C07F71C065D041D5CB42B2391496198DBBB4EB2898F524D215F1CD"
+    },
+    {
+      "byte_count": 3266,
+      "line_count": 147,
+      "non_empty_line_count": 147,
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_quality.json",
+      "sha256": "21D8DE2469EA330B94CB9F49B9BAD77C70FC12D97CF9A4B12D3C834FC63CECEB"
+    },
+    {
+      "byte_count": 1706,
+      "line_count": 51,
+      "non_empty_line_count": 43,
+      "path": "reports\\graph\\clinicaltrials_gbm_smoke_quality.md",
+      "sha256": "A1F302FB918AE83351DE997393FAA868725EC5FC1329A5831D75235656EF681F"
+    }
+  ],
+  "generated_at_utc": "2026-06-23T03:00:23+00:00",
+  "name": "clinicaltrials_gbm_smoke_2026-06-23",
+  "notes": [
+    "Read-only ClinicalTrials.gov smoke snapshot; descriptive registry metadata only."
+  ],
+  "query_pack": null,
+  "record_count": 10,
+  "source": "ClinicalTrials.gov"
+}

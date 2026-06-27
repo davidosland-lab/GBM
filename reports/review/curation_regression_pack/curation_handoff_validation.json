@@ -1,0 +1,11 @@
+{
+  "artifact_count": 14,
+  "checked_artifact_count": 14,
+  "checksum_mismatch_count": 0,
+  "manifest_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\curation_handoff_bundle.json",
+  "missing_artifact_count": 0,
+  "missing_warning_count": 0,
+  "required_role_missing_count": 0,
+  "valid": true,
+  "warnings": []
+}

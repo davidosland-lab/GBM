@@ -1,0 +1,34 @@
+{
+  "batch_count": 1,
+  "batch_jsonl_path": "data\\processed\\curation_regression_pack\\active_learning_batches.jsonl",
+  "batch_size": 10,
+  "candidate_count": 1,
+  "candidates_path": "data\\processed\\curation_regression_pack\\active_learning_candidates.jsonl",
+  "checkpoint_counts": [
+    {
+      "count": 1,
+      "key": "gbmbert_evidence_smoke"
+    }
+  ],
+  "evidence_tier_counts": [
+    {
+      "count": 1,
+      "key": "3"
+    }
+  ],
+  "reason_counts": [
+    {
+      "count": 1,
+      "key": "confidence < 1.0"
+    },
+    {
+      "count": 1,
+      "key": "pmid already present in graph"
+    },
+    {
+      "count": 1,
+      "key": "tier-change-sensitive evidence"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,11 @@
+{
+  "action": "export",
+  "batch_id": "ALBATCH-001",
+  "input_path": "data\\processed\\curation_regression_pack\\active_learning_batches.jsonl",
+  "input_sha256": "D02107B7AF1A3537CCA37D76A49A1BA073B2D2C5B11EEB2C6C8FF7B4874E2591",
+  "output_path": "data\\review\\active_learning_batch_ALBATCH-001.csv",
+  "output_sha256": "EC2346F2F790DACBE68EA9FD7A5045592212217E8169A8643F253F39B5E363E1",
+  "reviewed_queue_path": "",
+  "row_count": 1,
+  "warnings": []
+}

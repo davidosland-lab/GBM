@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "bundle": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
+    "config_suite": "reports\\training\\governance\\training_config_suite_review.json",
+    "dashboard_manifest": "reports\\training\\governance\\dashboard_training_manifest.json",
+    "label_drift": "reports\\training\\governance\\training_label_drift.json",
+    "leakage_audit": "reports\\training\\governance\\training_pack_leakage_audit.json",
+    "pack_comparison": "reports\\training\\governance\\training_pack_comparison.json",
+    "provenance_audit": "reports\\training\\governance\\training_provenance_audit.json",
+    "readiness_snapshot": "reports\\training\\governance\\training_readiness_snapshot.json",
+    "registry_audit": "reports\\training\\governance\\model_registry_audit.json",
+    "registry_remediation": "reports\\training\\governance\\model_registry_remediation_plan.json"
+  },
+  "output_dir": "reports\\training\\governance",
+  "passed": false,
+  "step_count": 10,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "configs\\training\\gbmbert_evidence_pubmedbert.json: failed",
+    "configs\\training\\gbmbert_ner_pubmedbert.json: failed",
+    "gbmbert_ner_smoke_candidate: checkpoint_dir does not exist",
+    "evidence: config labels missing from dataset: 2, 3, 4, 5",
+    "model registry audit has findings"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "accepted_count": 1,
+  "corrected_count": 0,
+  "curated_evidence_path": "data\\processed\\sample_graph_curated_evidence_predictions.jsonl",
+  "curated_row_count": 1,
+  "missing_decision_count": 0,
+  "pending_count": 0,
+  "prediction_count": 1,
+  "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
+  "rejected_count": 0,
+  "reviewed_queue_path": "data\\review\\sample_graph_prediction_reviewed_queue.jsonl",
+  "warnings": []
+}

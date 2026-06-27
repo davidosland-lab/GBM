@@ -1,0 +1,11 @@
+{
+  "checkpoint_dir": "data\\training\\evidence_smoke_fixture\\checkpoint",
+  "checkpoint_name": "gbmbert_evidence_smoke",
+  "config_path": "data\\training\\evidence_smoke_fixture\\training_config.json",
+  "dataset_dir": "data\\training\\evidence_smoke_fixture\\splits",
+  "label_map_dir": "data\\training\\evidence_smoke_fixture\\label_maps",
+  "metrics_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_metrics.json",
+  "registry_path": "models\\checkpoint_registry.json",
+  "run_manifest_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_run_manifest.json",
+  "status": "completed"
+}

@@ -1,0 +1,17 @@
+{
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "hyperparameters": {
+    "max_length": 4,
+    "max_steps": 1
+  },
+  "label_set": [
+    "0",
+    "1"
+  ],
+  "name": "gbmbert_evidence_smoke",
+  "output_dir": "data\\training\\evidence_smoke_fixture\\checkpoint",
+  "task": "evidence_classification",
+  "train_path": "data\\training\\evidence_smoke_fixture\\splits\\evidence_train.jsonl",
+  "training_enabled": true,
+  "validation_path": "data\\training\\evidence_smoke_fixture\\splits\\evidence_validation.jsonl"
+}
