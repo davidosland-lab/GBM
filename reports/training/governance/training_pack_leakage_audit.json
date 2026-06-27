@@ -1,5 +1,9 @@
 {
-  "cross_pack_warnings": [],
+  "cross_pack_warnings": [
+    "evidence/gold: 12 shared PMID(s): 15758010, 23209033, 29643471, 30187121, 30716120",
+    "evidence/relation: 2 shared PMID(s): 15758010, 29643471",
+    "gold/relation: 2 shared PMID(s): 15758010, 29643471"
+  ],
   "packs": [
     "evidence",
     "gold",
@@ -14,9 +18,9 @@
       "task": "evidence"
     },
     {
-      "example_count": 2,
+      "example_count": 10,
       "pack": "evidence",
-      "pmid_count": 2,
+      "pmid_count": 10,
       "split": "train",
       "task": "evidence"
     },
@@ -133,71 +137,71 @@
       "task": "relation"
     },
     {
-      "example_count": 0,
+      "example_count": 1,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 1,
       "split": "test",
+      "task": "evidence"
+    },
+    {
+      "example_count": 10,
+      "pack": "gold",
+      "pmid_count": 10,
+      "split": "train",
       "task": "evidence"
     },
     {
       "example_count": 1,
       "pack": "gold",
       "pmid_count": 1,
-      "split": "train",
-      "task": "evidence"
-    },
-    {
-      "example_count": 0,
-      "pack": "gold",
-      "pmid_count": 0,
       "split": "validation",
       "task": "evidence"
     },
     {
-      "example_count": 0,
+      "example_count": 2,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 1,
       "split": "test",
       "task": "ner"
     },
     {
-      "example_count": 0,
+      "example_count": 20,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 10,
       "split": "train",
       "task": "ner"
     },
     {
-      "example_count": 0,
+      "example_count": 2,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 1,
       "split": "validation",
       "task": "ner"
     },
     {
-      "example_count": 0,
+      "example_count": 1,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 1,
       "split": "test",
       "task": "relation"
     },
     {
-      "example_count": 0,
+      "example_count": 10,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 10,
       "split": "train",
       "task": "relation"
     },
     {
-      "example_count": 0,
+      "example_count": 1,
       "pack": "gold",
-      "pmid_count": 0,
+      "pmid_count": 1,
       "split": "validation",
       "task": "relation"
     }
   ],
   "safe": true,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 0,
+  "warning_count": 3,
   "within_pack_warnings": []
 }

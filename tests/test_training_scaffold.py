@@ -80,8 +80,14 @@ def test_summarize_dataset_counts_labels(tmp_path: Path) -> None:
     assert summary.missing_labels == ["0"]
 
 
-def test_build_training_plan_is_dry_run_when_data_missing() -> None:
-    plan = build_training_plan(ROOT / "configs" / "training" / "gbmbert_evidence_pubmedbert.json")
+def test_build_training_plan_is_dry_run_when_data_missing(tmp_path: Path) -> None:
+    config_payload = json.loads((ROOT / "configs" / "training" / "gbmbert_evidence_pubmedbert.json").read_text(encoding="utf-8"))
+    config_payload["train_path"] = str(tmp_path / "missing_train.jsonl")
+    config_payload["validation_path"] = str(tmp_path / "missing_validation.jsonl")
+    config_path = tmp_path / "missing_data_config.json"
+    config_path.write_text(json.dumps(config_payload), encoding="utf-8")
+
+    plan = build_training_plan(config_path)
 
     assert plan["training_enabled"] is False
     assert plan["status"] == "dry_run_only"

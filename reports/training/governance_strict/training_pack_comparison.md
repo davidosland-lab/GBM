@@ -3,8 +3,8 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Packs compared: 3
-- Ready packs: 2
-- Warnings: 2
+- Ready packs: 3
+- Warnings: 0
 
 ## Packs
 ### evidence
@@ -14,11 +14,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Label maps: `data\training\evidence_pack\label_maps`
 - Ready: True
 - Row counts:
-- evidence: 4
+- evidence: 12
 - ner: 0
 - relation: 0
 - Label coverage:
-- evidence: 0=3, 1=1
+- evidence: 0=2, 1=2, 2=2, 3=2, 4=2, 5=2
 - ner: none
 - relation: none
 - Leakage:
@@ -50,17 +50,16 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Dataset: `data\training\gold_pack\annotation_dataset`
 - Splits: `data\training\gold_pack\annotation_splits`
 - Label maps: `data\training\gold_pack\label_maps`
-- Ready: False
+- Ready: True
 - Row counts:
-- evidence: 1
-- ner: 0
-- relation: 0
+- evidence: 12
+- ner: 24
+- relation: 12
 - Label coverage:
-- evidence: 3=1
-- ner: none
-- relation: none
+- evidence: 0=2, 1=2, 2=2, 3=2, 4=2, 5=2
+- ner: BIOMARKER=2, CELL_STATE=2, CELL_TYPE=2, DELIVERY_MODIFIER=2, DISEASE=2, DRUG=2, GENE=2, OUTCOME=2, PATHWAY=2, TREATMENT=2, TRIAL_PHASE=2, UNKNOWN=2
+- relation: ASSOCIATED_WITH=4, NO_RELATION=4, PREDICTS=4
 - Leakage:
 - none
 - Warnings:
-- ner: fewer than 1 examples
-- relation: fewer than 1 examples
+- none

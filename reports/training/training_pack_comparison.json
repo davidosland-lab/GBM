@@ -4,8 +4,12 @@
       "dataset_dir": "data\\training\\evidence_pack\\annotation_dataset",
       "label_counts": {
         "evidence": {
-          "0": 3,
-          "1": 1
+          "0": 2,
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
         },
         "ner": {},
         "relation": {}
@@ -16,7 +20,7 @@
       "pack_report_path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
       "ready": true,
       "row_counts": {
-        "evidence": 4,
+        "evidence": 12,
         "ner": 0,
         "relation": 0
       },
@@ -51,29 +55,48 @@
       "dataset_dir": "data\\training\\gold_pack\\annotation_dataset",
       "label_counts": {
         "evidence": {
-          "3": 1
+          "0": 2,
+          "1": 2,
+          "2": 2,
+          "3": 2,
+          "4": 2,
+          "5": 2
         },
-        "ner": {},
-        "relation": {}
+        "ner": {
+          "BIOMARKER": 2,
+          "CELL_STATE": 2,
+          "CELL_TYPE": 2,
+          "DELIVERY_MODIFIER": 2,
+          "DISEASE": 2,
+          "DRUG": 2,
+          "GENE": 2,
+          "OUTCOME": 2,
+          "PATHWAY": 2,
+          "TREATMENT": 2,
+          "TRIAL_PHASE": 2,
+          "UNKNOWN": 2
+        },
+        "relation": {
+          "ASSOCIATED_WITH": 4,
+          "NO_RELATION": 4,
+          "PREDICTS": 4
+        }
       },
       "label_map_dir": "data\\training\\gold_pack\\label_maps",
       "leakage_warnings": [],
       "name": "gold",
       "pack_report_path": "reports\\training\\gold_pack\\gold_training_pack.json",
-      "ready": false,
+      "ready": true,
       "row_counts": {
-        "evidence": 1,
-        "ner": 0,
-        "relation": 0
+        "evidence": 12,
+        "ner": 24,
+        "relation": 12
       },
       "split_dir": "data\\training\\gold_pack\\annotation_splits",
-      "warnings": [
-        "ner: fewer than 1 examples",
-        "relation: fewer than 1 examples"
-      ]
+      "warnings": []
     }
   ],
-  "ready_count": 2,
+  "ready_count": 3,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 2
+  "warning_count": 0
 }

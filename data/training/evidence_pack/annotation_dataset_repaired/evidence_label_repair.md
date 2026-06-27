@@ -9,12 +9,16 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Files
 ### evidence.jsonl
-- Rows: 4
+- Rows: 12
 - Changed: 0
 - Skipped: 0
 - Labels:
-- 0: 3
-- 1: 1
+- 0: 2
+- 1: 2
+- 2: 2
+- 3: 2
+- 4: 2
+- 5: 2
 
 ### ner.jsonl
 - Rows: 0

@@ -1,13 +1,17 @@
 {
-  "current_status": "not_ready",
-  "minimum_acceptance_targets": {
-    "evidence": "represent all intended evidence labels before promoting the full evidence config",
-    "ner": "non-empty train, validation, and test rows with each current smoke NER label represented",
-    "provenance": "source PMID, source type, and research-use warning preserved",
-    "relation": "positive relation rows and NO_RELATION rows across train, validation, and test splits",
-    "splits": "PMID separation across train, validation, and test"
+  "current_status": "minimal_fixture_ready",
+  "local_fixture_counts": {
+    "evidence_rows": 12,
+    "ner_entities": 24,
+    "relation_rows": 12
   },
-  "promotion_rule": "Gold pack remains a research scaffold until readiness reports show non-empty task splits, label maps match current configs, and governance passes without scaffold exemptions.",
+  "minimum_acceptance_targets": {
+    "evidence": "done: local fixture represents all intended evidence labels",
+    "ner": "done: local fixture includes broad checked-in NER labels",
+    "provenance": "done: source PMID, source type, and research-use warning are preserved",
+    "relation": "done: local fixture includes positive relation rows and NO_RELATION rows",
+    "splits": "done: PMID separation across train, validation, and test"
+  },
+  "promotion_rule": "Gold pack remains a research scaffold until larger reviewed data volumes are available, readiness reports show stable non-empty task splits, label maps match current configs, and governance passes without relying on scaffold exemptions.",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }
-

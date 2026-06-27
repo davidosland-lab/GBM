@@ -19,5 +19,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - registry_remediation: `reports\training\governance_strict\model_registry_remediation_plan.json`
 
 ## Warnings
-- configs\training\gbmbert_evidence_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: 2, 3, 4, 5; label map labels do not match config label_set)
-- configs\training\gbmbert_ner_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN; label map labels do not match config label_set)
+- evidence: dataset labels missing from config: 2, 3, 4, 5

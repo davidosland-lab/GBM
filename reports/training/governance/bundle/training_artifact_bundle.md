@@ -3,10 +3,13 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Output directory: `reports\training\governance\bundle`
-- Artifacts: 250
-- Total bytes: 595917
+- Artifacts: 257
+- Total bytes: 774982
 
 ## Artifacts
+- `data\training\curated_expansion\evidence_full_label.jsonl` -> `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims)
+- `data\training\curated_expansion\gold_entities.jsonl` -> `data\training\curated_expansion\gold_entities.jsonl` (entities)
+- `data\training\curated_expansion\gold_reviewed_queue.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue)
 - `data\training\evidence_pack\annotation_dataset\evidence.jsonl` -> `data\training\evidence_pack\annotation_dataset\evidence.jsonl` (evidence_claims)
 - `data\training\evidence_pack\annotation_dataset\ner.jsonl` -> `data\training\evidence_pack\annotation_dataset\ner.jsonl` (annotation_dataset)
 - `data\training\evidence_pack\annotation_dataset\relations.jsonl` -> `data\training\evidence_pack\annotation_dataset\relations.jsonl` (annotation_dataset)
@@ -156,6 +159,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\gold_pack\gold_training_pack.md` -> `reports\training\gold_pack\gold_training_pack.md` (gold_training_pack_report)
 - `reports\training\gold_pack\pmid_split_manifest.json` -> `reports\training\gold_pack\pmid_split_manifest.json` (pmid_split_manifest)
 - `reports\training\gold_pack\pmid_split_manifest.md` -> `reports\training\gold_pack\pmid_split_manifest.md` (pmid_split_manifest)
+- `reports\training\gold_pack\relation_dataset_quality.json` -> `reports\training\gold_pack\relation_dataset_quality.json` (relation_dataset_quality_report)
+- `reports\training\gold_pack\relation_dataset_quality.md` -> `reports\training\gold_pack\relation_dataset_quality.md` (relation_dataset_quality_report)
+- `reports\training\gold_pack\relation_training_provenance_audit.json` -> `reports\training\gold_pack\relation_training_provenance_audit.json` (training_provenance_audit_report)
+- `reports\training\gold_pack\relation_training_provenance_audit.md` -> `reports\training\gold_pack\relation_training_provenance_audit.md` (training_provenance_audit_report)
 - `reports\training\gold_pack\training_readiness.json` -> `reports\training\gold_pack\training_readiness.json` (training_readiness_report)
 - `reports\training\gold_pack\training_readiness.md` -> `reports\training\gold_pack\training_readiness.md` (training_readiness_report)
 - `reports\training\gold_seed_manifest.json` -> `reports\training\gold_seed_manifest.json` (gold_seed_manifest)

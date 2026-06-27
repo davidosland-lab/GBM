@@ -3,78 +3,89 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Dataset directory: `data\training\gold_pack\annotation_splits`
-- Total examples: 1
+- Total examples: 48
 
 ## Files
 ### evidence_test.jsonl
-- Examples: 0
-- Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
-- Labels:
-- none
-
-### evidence_train.jsonl
 - Examples: 1
 - Missing text: 0
-- SHA256: `C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3`
+- SHA256: `10FA7852E4B4679A90B4CA118B902510523319F01955E652A17AD9EFB6657B01`
 - Labels:
-- 3: 1
+- 1: 1
+
+### evidence_train.jsonl
+- Examples: 10
+- Missing text: 0
+- SHA256: `E5471F060F13FE7E545886B0F1099A43F4C3E93E0178211E80A359171D90A369`
+- Labels:
+- 0: 2
+- 1: 1
+- 2: 2
+- 3: 2
+- 4: 1
+- 5: 2
 
 ### evidence_validation.jsonl
-- Examples: 0
+- Examples: 1
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `4927961CBA87C623B809BC5268894E85AFBB7BC4920FF6C100084531DC2570BF`
 - Labels:
-- none
+- 4: 1
 
 ### ner_test.jsonl
-- Examples: 0
+- Examples: 2
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `2BC391FD32979426BE795BD80CE44018EEBE02493C289CA10AABF5B8479E30F7`
 - Labels:
-- none
+- OUTCOME: 1
+- PATHWAY: 1
 
 ### ner_train.jsonl
-- Examples: 0
+- Examples: 20
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `5FE6EB091B3C68E1604037A8CFD6240897BB6CFE47B8B7CCCBFF04D6048DF534`
 - Labels:
-- none
+- BIOMARKER: 2
+- CELL_STATE: 2
+- CELL_TYPE: 2
+- DELIVERY_MODIFIER: 2
+- DISEASE: 2
+- DRUG: 2
+- GENE: 2
+- TREATMENT: 2
+- TRIAL_PHASE: 2
+- UNKNOWN: 2
 
 ### ner_validation.jsonl
-- Examples: 0
+- Examples: 2
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `D95F9E9F7B33EE6151D732568685898BE83C357E30605F73A9909F568DEFF320`
 - Labels:
-- none
+- OUTCOME: 1
+- PATHWAY: 1
 
 ### relation_test.jsonl
-- Examples: 0
+- Examples: 1
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `A1DF1278B77C99A1303732FB7A969E3EB5924AD46A53A367FF489B4FB2CEF352`
 - Labels:
-- none
+- PREDICTS: 1
 
 ### relation_train.jsonl
-- Examples: 0
+- Examples: 10
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `3016EDB1F6171C626E22A06E61212F3E78897B0462B0F828991FAD8C57AB5A27`
 - Labels:
-- none
+- ASSOCIATED_WITH: 4
+- NO_RELATION: 3
+- PREDICTS: 3
 
 ### relation_validation.jsonl
-- Examples: 0
+- Examples: 1
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `3AD090D308AC221D9E778811528A80656A81F29BF820FF7E37E8D022CE90B7BA`
 - Labels:
-- none
+- NO_RELATION: 1
 
 ## Warnings
-- evidence_test.jsonl: no examples
-- evidence_validation.jsonl: no examples
-- ner_test.jsonl: no examples
-- ner_train.jsonl: no examples
-- ner_validation.jsonl: no examples
-- relation_test.jsonl: no examples
-- relation_train.jsonl: no examples
-- relation_validation.jsonl: no examples
+- none

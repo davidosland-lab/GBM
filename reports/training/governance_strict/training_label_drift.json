@@ -8,12 +8,21 @@
       "dataset_labels": {
         "evidence": [
           "0",
-          "1"
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
         ],
         "ner": [],
         "relation": []
       },
-      "missing_from_config": [],
+      "missing_from_config": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
       "missing_from_dataset": [],
       "name": "evidence"
     },
@@ -40,10 +49,32 @@
       "config_labels": [],
       "dataset_labels": {
         "evidence": [
-          "3"
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
         ],
-        "ner": [],
-        "relation": []
+        "ner": [
+          "BIOMARKER",
+          "CELL_STATE",
+          "CELL_TYPE",
+          "DELIVERY_MODIFIER",
+          "DISEASE",
+          "DRUG",
+          "GENE",
+          "OUTCOME",
+          "PATHWAY",
+          "TREATMENT",
+          "TRIAL_PHASE",
+          "UNKNOWN"
+        ],
+        "relation": [
+          "ASSOCIATED_WITH",
+          "NO_RELATION",
+          "PREDICTS"
+        ]
       },
       "missing_from_config": [],
       "missing_from_dataset": [],
@@ -51,6 +82,8 @@
     }
   ],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 0,
-  "warnings": []
+  "warning_count": 1,
+  "warnings": [
+    "evidence: dataset labels missing from config: 2, 3, 4, 5"
+  ]
 }

@@ -4,27 +4,31 @@
     "evidence_test.jsonl": {
       "examples": 1,
       "label_counts": {
-        "0": 1
-      },
-      "missing_text": 0,
-      "sha256": "42367602740093E8271699B1FFAE443031E2EDA8965848D4712CFFA70A6ADBEF"
-    },
-    "evidence_train.jsonl": {
-      "examples": 2,
-      "label_counts": {
-        "0": 1,
         "1": 1
       },
       "missing_text": 0,
-      "sha256": "E91DD4359B1F71051D2AABA40EDFBC587EFFC7BED7F6DF64B708B8C80BE29013"
+      "sha256": "70EFAF4FFDDA4C628B628F9E43FEF8A5BEB2D8461C1B283D0D550D63BCAF5D44"
+    },
+    "evidence_train.jsonl": {
+      "examples": 10,
+      "label_counts": {
+        "0": 2,
+        "1": 1,
+        "2": 2,
+        "3": 2,
+        "4": 1,
+        "5": 2
+      },
+      "missing_text": 0,
+      "sha256": "5C36D9181E52E9FDCB1BE0BA118EBF632473CD5575406A49BC2C3EFEACB49BEF"
     },
     "evidence_validation.jsonl": {
       "examples": 1,
       "label_counts": {
-        "0": 1
+        "4": 1
       },
       "missing_text": 0,
-      "sha256": "402A05990A991718119994FC2405CB8B6285F9C4B78178C10D5693987314E18B"
+      "sha256": "C7CA2981FE2091B06BF9449A5AEE97E94C87C7D5BB44A79ABAC311853097D19E"
     },
     "ner_test.jsonl": {
       "examples": 0,
@@ -63,7 +67,7 @@
       "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
     }
   },
-  "total_examples": 4,
+  "total_examples": 12,
   "warnings": [
     "ner_test.jsonl: no examples",
     "ner_train.jsonl: no examples",

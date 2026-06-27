@@ -1,5 +1,31 @@
 {
-  "id_to_label": {},
-  "label_to_id": {},
+  "id_to_label": {
+    "0": "BIOMARKER",
+    "1": "CELL_STATE",
+    "10": "TRIAL_PHASE",
+    "11": "UNKNOWN",
+    "2": "CELL_TYPE",
+    "3": "DELIVERY_MODIFIER",
+    "4": "DISEASE",
+    "5": "DRUG",
+    "6": "GENE",
+    "7": "OUTCOME",
+    "8": "PATHWAY",
+    "9": "TREATMENT"
+  },
+  "label_to_id": {
+    "BIOMARKER": 0,
+    "CELL_STATE": 1,
+    "CELL_TYPE": 2,
+    "DELIVERY_MODIFIER": 3,
+    "DISEASE": 4,
+    "DRUG": 5,
+    "GENE": 6,
+    "OUTCOME": 7,
+    "PATHWAY": 8,
+    "TREATMENT": 9,
+    "TRIAL_PHASE": 10,
+    "UNKNOWN": 11
+  },
   "task": "ner"
 }

@@ -97,6 +97,16 @@ def run_local_verification(
             ],
         ),
         (
+            "artifact_policy",
+            [
+                _console_script("gbmbert-check-artifact-policy"),
+                "--markdown-output",
+                str(reports_path / "artifact_policy.md"),
+                "--json-output",
+                str(reports_path / "artifact_policy.json"),
+            ],
+        ),
+        (
             "artifact_index",
             [
                 _console_script("gbmbert-artifact-index"),

@@ -3,7 +3,7 @@
     "0",
     "1"
   ],
-  "full_evidence_scaffold_labels": [
+  "expanded_local_evidence_labels": [
     "0",
     "1",
     "2",
@@ -11,12 +11,9 @@
     "4",
     "5"
   ],
-  "missing_labels": [
-    "2",
-    "3",
-    "4",
-    "5"
-  ],
-  "promotion_rule": "Do not promote the full evidence config from scaffold to current until the local pack label map and split contents cover labels 0 through 5.",
+  "local_fixture_rows": 12,
+  "missing_labels": [],
+  "promotion_rule": "Do not promote the full evidence config from scaffold to current based only on the minimal fixture. Promotion requires additional curated rows, governance review, and no training-readiness findings.",
+  "status": "minimal_fixture_complete",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }

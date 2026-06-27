@@ -1,0 +1,17 @@
+{
+  "duplicate_count": 0,
+  "input_path": "data\\training\\gold_pack\\annotation_splits",
+  "invalid_endpoint_count": 0,
+  "label_counts": {
+    "ASSOCIATED_WITH": 4,
+    "NO_RELATION": 4,
+    "PREDICTS": 4
+  },
+  "missing_endpoint_count": 0,
+  "missing_sentence_count": 0,
+  "negative_count": 4,
+  "positive_count": 8,
+  "relation_count": 12,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

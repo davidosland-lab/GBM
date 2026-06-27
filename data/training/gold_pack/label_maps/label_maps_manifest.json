@@ -7,10 +7,32 @@
   },
   "labels": {
     "evidence": {
-      "3": 0
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5
     },
-    "ner": {},
-    "relation": {}
+    "ner": {
+      "BIOMARKER": 0,
+      "CELL_STATE": 1,
+      "CELL_TYPE": 2,
+      "DELIVERY_MODIFIER": 3,
+      "DISEASE": 4,
+      "DRUG": 5,
+      "GENE": 6,
+      "OUTCOME": 7,
+      "PATHWAY": 8,
+      "TREATMENT": 9,
+      "TRIAL_PHASE": 10,
+      "UNKNOWN": 11
+    },
+    "relation": {
+      "ASSOCIATED_WITH": 0,
+      "NO_RELATION": 1,
+      "PREDICTS": 2
+    }
   },
   "output_dir": "data\\training\\gold_pack\\label_maps"
 }

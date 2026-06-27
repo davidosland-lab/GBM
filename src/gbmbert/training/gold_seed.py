@@ -193,6 +193,8 @@ def _evidence_row_from_prediction_item(item: PredictionReviewItem) -> dict[str, 
 
 def _relation_row_from_review_item(item: ReviewQueueItem) -> dict[str, Any]:
     tier = item.corrected_evidence_tier if item.corrected_evidence_tier is not None else item.evidence_tier
+    label = item.corrected_relation_type or item.relation_type
+    source_type = "curated_no_relation" if label == "NO_RELATION" else "human_or_curated_positive"
     return {
         "task": "relation",
         "item_id": item.item_id,
@@ -201,11 +203,14 @@ def _relation_row_from_review_item(item: ReviewQueueItem) -> dict[str, Any]:
         "sentence": item.text,
         "head": item.head,
         "tail": item.tail,
-        "label": item.corrected_relation_type or item.relation_type,
+        "label": label,
         "evidence_tier": int(tier),
         "review_status": item.review_status,
         "reviewer": item.reviewer,
         "review_notes": item.review_notes,
+        "relation_pack_source_path": item.source_file,
+        "relation_pack_source_type": source_type,
+        "relation_pack_synthetic": False,
         "warning": RESEARCH_WARNING,
     }
 

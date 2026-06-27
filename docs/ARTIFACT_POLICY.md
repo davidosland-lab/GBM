@@ -4,6 +4,14 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 This project tracks small, deterministic report artifacts that explain the current research scaffold and make handoff review possible without rerunning every command first.
 
+Run the policy check before handoff:
+
+```powershell
+gbmbert-check-artifact-policy --markdown-output reports/platform_regression/artifact_policy.md --json-output reports/platform_regression/artifact_policy.json
+```
+
+The canonical `gbmbert-verify-local` command runs this check automatically.
+
 ## Tracked Artifacts
 
 - Governance and readiness reports under `reports/training/` when they describe the current checked-in datasets, configs, or handoff state.
@@ -22,4 +30,3 @@ This project tracks small, deterministic report artifacts that explain the curre
 - Large model checkpoints, downloaded model weights, caches, virtual environments, and local notebook scratch outputs.
 - Full external corpora or private annotation batches unless they are intentionally reduced to a small research fixture.
 - Any artifact that would imply a validated trained GBM-BERT model exists before the model is actually trained, evaluated, and reviewed.
-

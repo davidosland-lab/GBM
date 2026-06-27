@@ -9,14 +9,13 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Reviews
 ### gbmbert_evidence_pubmedbert.json
-- Status: scaffold_pending
+- Status: scaffold_ready
 - Governance profile: scaffold
 - Blocking: False
 - Task: evidence_classification
-- Note: Full evidence label profile retained for future larger curated datasets; not validated against the tiny smoke evidence pack.
+- Note: Full evidence label profile aligned to the local curated full-label evidence pack; retained as scaffold until more rows are curated beyond the minimal fixture.
 - Errors:
-- config label_set labels missing from dataset: 2, 3, 4, 5
-- label map labels do not match config label_set
+- none
 
 ### gbmbert_evidence_smoke_pubmedbert.json
 - Status: passed
@@ -28,14 +27,13 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - none
 
 ### gbmbert_ner_pubmedbert.json
-- Status: scaffold_pending
+- Status: scaffold_ready
 - Governance profile: scaffold
 - Blocking: False
 - Task: ner
-- Note: Future NER scaffold with broader vocabulary than the current tiny smoke NER labels.
+- Note: Broad NER scaffold aligned to the expanded local gold pack; retained as scaffold until the curated fixture is larger.
 - Errors:
-- config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN
-- label map labels do not match config label_set
+- none
 
 ### gbmbert_ner_smoke_pubmedbert.json
 - Status: passed
@@ -59,5 +57,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - none
 
 ## Scaffold Warnings
-- configs\training\gbmbert_evidence_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: 2, 3, 4, 5; label map labels do not match config label_set)
-- configs\training\gbmbert_ner_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN; label map labels do not match config label_set)
+- none

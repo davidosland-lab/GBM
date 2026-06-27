@@ -1,5 +1,5 @@
 {
-  "artifact_count": 224,
+  "artifact_count": 250,
   "entries": [
     {
       "artifact_type": "evidence_claims",
@@ -863,6 +863,20 @@
       "source_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.md"
     },
     {
+      "artifact_type": "json_report",
+      "bundled_path": "reports\\training\\evidence_pack\\full_label_coverage_plan.json",
+      "byte_count": 516,
+      "sha256": "DF80E0FF1AB679E3B31B191B50633F2D160A8323727D7E8E5192C2FE4420ABD0",
+      "source_path": "reports\\training\\evidence_pack\\full_label_coverage_plan.json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "bundled_path": "reports\\training\\evidence_pack\\full_label_coverage_plan.md",
+      "byte_count": 963,
+      "sha256": "02CAC1AA9F9D2BAE1C328D31E8DD5ADDBA3242013003550177C14E81AA722C59",
+      "source_path": "reports\\training\\evidence_pack\\full_label_coverage_plan.md"
+    },
+    {
       "artifact_type": "prediction_quality_report",
       "bundled_path": "reports\\training\\evidence_smoke_fixture\\evidence_prediction_quality.json",
       "byte_count": 779,
@@ -982,6 +996,20 @@
       "source_path": "reports\\training\\gold_pack\\evidence_label_repair.md"
     },
     {
+      "artifact_type": "json_report",
+      "bundled_path": "reports\\training\\gold_pack\\gold_pack_expansion_plan.json",
+      "byte_count": 864,
+      "sha256": "50C572994D89323721ED51A2CE39D8086A9BA216CED6CE0D4786709020481986",
+      "source_path": "reports\\training\\gold_pack\\gold_pack_expansion_plan.json"
+    },
+    {
+      "artifact_type": "markdown_report",
+      "bundled_path": "reports\\training\\gold_pack\\gold_pack_expansion_plan.md",
+      "byte_count": 1498,
+      "sha256": "E464166A267670E2C7B5ABD16A8DF44315E2122047FEAB36385E6941EED7E456",
+      "source_path": "reports\\training\\gold_pack\\gold_pack_expansion_plan.md"
+    },
+    {
       "artifact_type": "gold_seed_manifest",
       "bundled_path": "reports\\training\\gold_pack\\gold_seed_manifest.json",
       "byte_count": 906,
@@ -1047,29 +1075,29 @@
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
-      "byte_count": 78874,
-      "sha256": "4477E467B978D005CC1A4F186471AFE004996899AED901DB5588D085C3831E2B",
+      "byte_count": 88442,
+      "sha256": "6851CB5DEE482355F7F843C27426809AEBBDBF0C8E50CFC4B60628F1C48DA7C2",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md",
-      "byte_count": 34621,
-      "sha256": "5F25A3AB23C8C67C4C4C36751C5C6C315BB9CBD198999FAB1CA44E14BCDE6DA2",
+      "byte_count": 39047,
+      "sha256": "BA7E2C7448D430507CC9CBE964F42FA75D10BA5E358ADAE2FA5E1BA6DE053677",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md"
     },
     {
       "artifact_type": "dashboard_training_manifest",
       "bundled_path": "reports\\training\\governance\\dashboard_training_manifest.json",
       "byte_count": 488,
-      "sha256": "C2A577EDB9F427412A8F1969D22FC180CC3E60E6D71CE41D3724A5465F10B7C4",
+      "sha256": "7756E1484945C6F717B564A38A44491CF7975FBB44C658C9F6E143CAB8651CF2",
       "source_path": "reports\\training\\governance\\dashboard_training_manifest.json"
     },
     {
       "artifact_type": "dashboard_training_manifest",
       "bundled_path": "reports\\training\\governance\\dashboard_training_manifest.md",
       "byte_count": 371,
-      "sha256": "89F8C2F0A4C3F9E9D33815844255721CDE53515A1340AA07A51AD4E61EB0B7A3",
+      "sha256": "7B5021D27BDEEB733F250D82413FE53E1B6405B254B72B22573D26D7609029CB",
       "source_path": "reports\\training\\governance\\dashboard_training_manifest.md"
     },
     {
@@ -1103,15 +1131,15 @@
     {
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\governance\\training_config_suite_review.json",
-      "byte_count": 10486,
-      "sha256": "3397707BB11486CF6508837FB259849E82F82BB53C3D5F472E2A1B0F6E466A40",
+      "byte_count": 13042,
+      "sha256": "F69074E953520DCBEECB2D497C42D31EFD248819A1CD9AFAB9B48261E01026E9",
       "source_path": "reports\\training\\governance\\training_config_suite_review.json"
     },
     {
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\governance\\training_config_suite_review.md",
-      "byte_count": 1957,
-      "sha256": "9A91554171E5572A0CBA6AD6826C5B4B2D22EECFD7387F06B882CEEB070E1A0C",
+      "byte_count": 2191,
+      "sha256": "556DAB700EB26C428CD108966B5E1AD956B609773926F7198615431A17D6C02E",
       "source_path": "reports\\training\\governance\\training_config_suite_review.md"
     },
     {
@@ -1188,15 +1216,169 @@
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.json",
       "byte_count": 475,
-      "sha256": "0AFB65BED0BEA743E3F1A7F729C58DE52DD90C53DF6E1868BE2133397CCFB8E5",
+      "sha256": "84AB4F84775321901F3F353E93254F123BADAA7ACC5480BD947AFEC0B166978C",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.json"
     },
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.md",
       "byte_count": 422,
-      "sha256": "B129535CE79795EBCFC6010B4B66A948C9AAAD1D47C69B35574A7FA9485BADB6",
+      "sha256": "E1F25303DF8800AC2158F8FFF6052C030596C8EC4A901965FC47E3B2E6E48F39",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.md"
+    },
+    {
+      "artifact_type": "training_artifact_bundle_manifest",
+      "bundled_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json",
+      "byte_count": 78888,
+      "sha256": "E71570798FB59C22F53717B44D159C62A9086B155A81B9379322868AE7DD692A",
+      "source_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json"
+    },
+    {
+      "artifact_type": "training_artifact_bundle_manifest",
+      "bundled_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.md",
+      "byte_count": 34628,
+      "sha256": "949B0C6277FC4AE103E21FA4B8F7914A10DAC0EA2A759C6C56CD5755D79EF058",
+      "source_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.md"
+    },
+    {
+      "artifact_type": "dashboard_training_manifest",
+      "bundled_path": "reports\\training\\governance_strict\\dashboard_training_manifest.json",
+      "byte_count": 495,
+      "sha256": "109A94BBD90C4C9245E7DCE7B05AFB03B7CB95C6776B5D53BABC04F28FF671C7",
+      "source_path": "reports\\training\\governance_strict\\dashboard_training_manifest.json"
+    },
+    {
+      "artifact_type": "dashboard_training_manifest",
+      "bundled_path": "reports\\training\\governance_strict\\dashboard_training_manifest.md",
+      "byte_count": 371,
+      "sha256": "7B5021D27BDEEB733F250D82413FE53E1B6405B254B72B22573D26D7609029CB",
+      "source_path": "reports\\training\\governance_strict\\dashboard_training_manifest.md"
+    },
+    {
+      "artifact_type": "model_registry_audit_report",
+      "bundled_path": "reports\\training\\governance_strict\\model_registry_audit.json",
+      "byte_count": 1154,
+      "sha256": "726CB944EEB4BB2E7C469E223D1D89EDC8C8E340188D0517BCBDBFA07978D19F",
+      "source_path": "reports\\training\\governance_strict\\model_registry_audit.json"
+    },
+    {
+      "artifact_type": "model_registry_audit_report",
+      "bundled_path": "reports\\training\\governance_strict\\model_registry_audit.md",
+      "byte_count": 972,
+      "sha256": "8AC161DD4AA189DC641C9FFA5082A08CA1C79ACED5A7830B401CCA186EE22CD1",
+      "source_path": "reports\\training\\governance_strict\\model_registry_audit.md"
+    },
+    {
+      "artifact_type": "model_registry_remediation_plan",
+      "bundled_path": "reports\\training\\governance_strict\\model_registry_remediation_plan.json",
+      "byte_count": 261,
+      "sha256": "68321F6B896648F0141A49D11829920DA64D6B362EA290765FBADA9F94E4F350",
+      "source_path": "reports\\training\\governance_strict\\model_registry_remediation_plan.json"
+    },
+    {
+      "artifact_type": "model_registry_remediation_plan",
+      "bundled_path": "reports\\training\\governance_strict\\model_registry_remediation_plan.md",
+      "byte_count": 275,
+      "sha256": "E9B24EB5EC864CB1A7010D5FE6BFD2E3C59BECE37588EC11E94C79FC2A50955B",
+      "source_path": "reports\\training\\governance_strict\\model_registry_remediation_plan.md"
+    },
+    {
+      "artifact_type": "training_config_suite_review_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_config_suite_review.json",
+      "byte_count": 13042,
+      "sha256": "F69074E953520DCBEECB2D497C42D31EFD248819A1CD9AFAB9B48261E01026E9",
+      "source_path": "reports\\training\\governance_strict\\training_config_suite_review.json"
+    },
+    {
+      "artifact_type": "training_config_suite_review_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_config_suite_review.md",
+      "byte_count": 2191,
+      "sha256": "556DAB700EB26C428CD108966B5E1AD956B609773926F7198615431A17D6C02E",
+      "source_path": "reports\\training\\governance_strict\\training_config_suite_review.md"
+    },
+    {
+      "artifact_type": "training_governance_suite_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_governance_suite.json",
+      "byte_count": 1640,
+      "sha256": "70B7CB656F67F9AC3F80F9319B13C8D9B68B63D9113BAC2A4FC4306769C2DB54",
+      "source_path": "reports\\training\\governance_strict\\training_governance_suite.json"
+    },
+    {
+      "artifact_type": "training_governance_suite_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_governance_suite.md",
+      "byte_count": 1544,
+      "sha256": "D0609EB2F5EAB7EE1410976550DED964C9372BB14DCB5767910273873EBF6B8B",
+      "source_path": "reports\\training\\governance_strict\\training_governance_suite.md"
+    },
+    {
+      "artifact_type": "training_label_drift_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_label_drift.json",
+      "byte_count": 1194,
+      "sha256": "FCF46EF6F0562693633067B711534C8C15F6C664F2FEE6A5415B5C0E00C07E1C",
+      "source_path": "reports\\training\\governance_strict\\training_label_drift.json"
+    },
+    {
+      "artifact_type": "training_label_drift_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_label_drift.md",
+      "byte_count": 534,
+      "sha256": "604E1D91EFC00D87BC9EB25BE84104046AB15BDD42ADEB9C7949B64C8E8B39C3",
+      "source_path": "reports\\training\\governance_strict\\training_label_drift.md"
+    },
+    {
+      "artifact_type": "training_pack_comparison_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_pack_comparison.json",
+      "byte_count": 2323,
+      "sha256": "BD5ADB427DFAF2555073681A842B70522E83E94637D10857BE78E1BC9C9FA805",
+      "source_path": "reports\\training\\governance_strict\\training_pack_comparison.json"
+    },
+    {
+      "artifact_type": "training_pack_comparison_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_pack_comparison.md",
+      "byte_count": 1629,
+      "sha256": "2531B5759F2447BF4CC3550166A994300A648745CA3686DE4ADAC84FF615E102",
+      "source_path": "reports\\training\\governance_strict\\training_pack_comparison.md"
+    },
+    {
+      "artifact_type": "training_pack_leakage_audit_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.json",
+      "byte_count": 4165,
+      "sha256": "DA99F1A832B7458F9EAF3E42B10B007A527C0F34C1ABA5CEECF81053A1D48CC8",
+      "source_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.json"
+    },
+    {
+      "artifact_type": "training_pack_leakage_audit_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.md",
+      "byte_count": 1564,
+      "sha256": "0944815208BF3DEC269CC9BC933AF95C1F377EDCA05A02BD8CA8BBFC24399826",
+      "source_path": "reports\\training\\governance_strict\\training_pack_leakage_audit.md"
+    },
+    {
+      "artifact_type": "training_provenance_audit_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_provenance_audit.json",
+      "byte_count": 420,
+      "sha256": "CF0C91CA8AC6C9E24D1CD40376A1F727952F6C5B7DBEAB0481B04BEFC57A1669",
+      "source_path": "reports\\training\\governance_strict\\training_provenance_audit.json"
+    },
+    {
+      "artifact_type": "training_provenance_audit_report",
+      "bundled_path": "reports\\training\\governance_strict\\training_provenance_audit.md",
+      "byte_count": 344,
+      "sha256": "4130F4D9BEEBC3091EB405A5B038FDDA9E93966AABFCD6E9EC423AE91E34D0BE",
+      "source_path": "reports\\training\\governance_strict\\training_provenance_audit.md"
+    },
+    {
+      "artifact_type": "training_readiness_snapshot",
+      "bundled_path": "reports\\training\\governance_strict\\training_readiness_snapshot.json",
+      "byte_count": 475,
+      "sha256": "DFC1A441050840FF16899EB740671C876A466725DBABBFDA0AC7978E72144E82",
+      "source_path": "reports\\training\\governance_strict\\training_readiness_snapshot.json"
+    },
+    {
+      "artifact_type": "training_readiness_snapshot",
+      "bundled_path": "reports\\training\\governance_strict\\training_readiness_snapshot.md",
+      "byte_count": 422,
+      "sha256": "319252370AD50AD3B37FCDE64500DAF8DAE1DEE21C176CB33087B9883A8216F6",
+      "source_path": "reports\\training\\governance_strict\\training_readiness_snapshot.md"
     },
     {
       "artifact_type": "model_registry_audit_report",
@@ -1467,15 +1649,15 @@
     {
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\training_config_suite_review.json",
-      "byte_count": 10486,
-      "sha256": "3397707BB11486CF6508837FB259849E82F82BB53C3D5F472E2A1B0F6E466A40",
+      "byte_count": 13042,
+      "sha256": "F69074E953520DCBEECB2D497C42D31EFD248819A1CD9AFAB9B48261E01026E9",
       "source_path": "reports\\training\\training_config_suite_review.json"
     },
     {
       "artifact_type": "training_config_suite_review_report",
       "bundled_path": "reports\\training\\training_config_suite_review.md",
-      "byte_count": 1957,
-      "sha256": "9A91554171E5572A0CBA6AD6826C5B4B2D22EECFD7387F06B882CEEB070E1A0C",
+      "byte_count": 2191,
+      "sha256": "556DAB700EB26C428CD108966B5E1AD956B609773926F7198615431A17D6C02E",
       "source_path": "reports\\training\\training_config_suite_review.md"
     },
     {
@@ -1572,7 +1754,7 @@
   ],
   "manifest_path": "reports\\training\\governance_strict\\bundle\\training_artifact_bundle.json",
   "output_dir": "reports\\training\\governance_strict\\bundle",
-  "total_bytes": 423971,
+  "total_bytes": 595917,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": []
 }

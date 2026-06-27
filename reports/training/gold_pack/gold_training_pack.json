@@ -17,13 +17,10 @@
   "gold_seed_dir": "data\\training\\gold_pack\\gold_seed",
   "label_map_dir": "data\\training\\gold_pack\\label_maps",
   "output_dir": "data\\training\\gold_pack",
-  "ready": false,
+  "ready": true,
   "repaired_dataset_dir": "data\\training\\gold_pack\\annotation_dataset_repaired",
   "reports_dir": "reports\\training\\gold_pack",
   "split_dir": "data\\training\\gold_pack\\annotation_splits",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": [
-    "ner: fewer than 1 examples",
-    "relation: fewer than 1 examples"
-  ]
+  "warnings": []
 }

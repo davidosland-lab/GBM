@@ -5,19 +5,23 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Dataset directory: `data\training\evidence_pack\annotation_splits`
 - Ready: True
 - Warnings: 0
-- Minimum examples per task: 1
-- Minimum examples per label: 1
+- Minimum examples per task: 10
+- Minimum examples per label: 2
 
 ## Tasks
 ### evidence
 - Ready: True
-- Examples: 4
+- Examples: 12
 - Duplicates: 0
 - Invalid NER spans: 0
-- Dominant label fraction: 0.750
+- Dominant label fraction: 0.167
 - Labels:
-- 0: 3
-- 1: 1
+- 0: 2
+- 1: 2
+- 2: 2
+- 3: 2
+- 4: 2
+- 5: 2
 - Warnings:
 - none
 

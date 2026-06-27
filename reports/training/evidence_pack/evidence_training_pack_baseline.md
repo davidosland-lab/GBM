@@ -16,10 +16,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ### evidence
 - Evaluation file: `data\training\evidence_pack\annotation_splits\evidence_test.jsonl`
 - Examples: 1
-- Majority label: 0
+- Majority label: 1
 - Majority accuracy: 1.000
 - Labels:
-- 0: 1
+- 1: 1
 
 ### relation
 - Evaluation file: `data\training\evidence_pack\annotation_splits\relation_test.jsonl`

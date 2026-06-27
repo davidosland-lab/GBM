@@ -2,10 +2,10 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Input directory: `data\training\ncbi_env_smoke_annotation_dataset`
+- Input directory: `data\training\curated_expansion\evidence_full_label.jsonl`
 - Output directory: `data\training\evidence_pack`
 - Reports directory: `reports\training\evidence_pack`
-- Evidence examples: 4
+- Evidence examples: 12
 - Ready: True
 
 ## Artifacts

@@ -4,7 +4,7 @@
   "output_dir": "data\\training\\evidence_pack\\annotation_splits",
   "pmid_counts": {
     "test": 1,
-    "train": 2,
+    "train": 10,
     "validation": 1
   },
   "ratios": {
@@ -36,20 +36,24 @@
     {
       "label_counts": {
         "test": {
-          "0": 1
-        },
-        "train": {
-          "0": 1,
           "1": 1
         },
+        "train": {
+          "0": 2,
+          "1": 1,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 2
+        },
         "validation": {
-          "0": 1
+          "4": 1
         }
       },
       "source_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
       "split_counts": {
         "test": 1,
-        "train": 2,
+        "train": 10,
         "validation": 1
       },
       "split_files": {

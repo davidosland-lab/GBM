@@ -15,6 +15,7 @@ from gbmbert.training.governance import (
     search_training_artifacts,
     strict_governance_suite_main,
 )
+from gbmbert.training.gold_seed import build_gold_seed_dataset
 
 
 def _write_jsonl(path: Path, rows: list[dict[str, object]]) -> None:
@@ -98,6 +99,57 @@ def test_training_provenance_audit_checks_warning_pmid_and_source_type(tmp_path:
 
     assert report.safe is True
     assert report.source_type_counts == {"synthetic_no_relation": 1}
+
+
+def test_gold_seed_relations_preserve_curated_source_type(tmp_path: Path) -> None:
+    reviewed = tmp_path / "reviewed.jsonl"
+    _write_jsonl(
+        reviewed,
+        [
+            {
+                "item_id": "r1",
+                "item_type": "graph_relation",
+                "source_pmid": "1",
+                "evidence_tier": 3,
+                "confidence": 0.9,
+                "text": "MGMT predicts response.",
+                "relation_type": "PREDICTS",
+                "head": "Gene:MGMT",
+                "tail": "Outcome:response",
+                "reasons": [],
+                "source_file": "reviewed.jsonl",
+                "review_status": "accepted",
+                "reviewer": "tester",
+                "review_notes": "",
+                "corrected_relation_type": "",
+                "corrected_evidence_tier": None,
+            },
+            {
+                "item_id": "r2",
+                "item_type": "graph_relation",
+                "source_pmid": "2",
+                "evidence_tier": 3,
+                "confidence": 0.9,
+                "text": "Negative relation fixture.",
+                "relation_type": "NO_RELATION",
+                "head": "Gene:MGMT",
+                "tail": "Disease:glioblastoma",
+                "reasons": [],
+                "source_file": "reviewed.jsonl",
+                "review_status": "accepted",
+                "reviewer": "tester",
+                "review_notes": "",
+                "corrected_relation_type": "",
+                "corrected_evidence_tier": None,
+            },
+        ],
+    )
+
+    build_gold_seed_dataset(output_dir=tmp_path / "gold", reviewed_queue_jsonl=reviewed)
+    rows = [json.loads(line) for line in (tmp_path / "gold" / "gold_relations.jsonl").read_text(encoding="utf-8").splitlines()]
+
+    assert rows[0]["relation_pack_source_type"] == "human_or_curated_positive"
+    assert rows[1]["relation_pack_source_type"] == "curated_no_relation"
 
 
 def test_dashboard_manifest_and_snapshot_read_local_context(tmp_path: Path) -> None:

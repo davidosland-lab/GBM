@@ -74,7 +74,11 @@ def test_launcher_menu_lists_operational_commands() -> None:
     assert "gbmbert-audit-model-registry.exe" in text
     assert "gbmbert-run-training-governance-suite.exe" in text
     assert "gbmbert-run-strict-training-governance.exe" in text
+    assert "gbmbert-check-artifact-policy.exe" in text
     assert "gbmbert-run-smoke-baseline.exe" in text
+    assert "Setup and environment" in text
+    assert "Verify, reports, and handoff checks" in text
+    assert "Training data and governance" in text
     assert "--artifact-index" in text
     assert "--baseline-data" in text
     assert "Build artifact index" in text

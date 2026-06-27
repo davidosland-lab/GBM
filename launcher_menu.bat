@@ -22,96 +22,27 @@ echo.
 echo Research-use only. Not medical advice. Not intended for
 echo diagnosis, treatment selection, or clinical decision-making.
 echo.
-echo 1. Create local virtual environment
-echo 1R. Recreate local virtual environment with Python 3.12 64-bit
-echo 2. Install project dependencies into local virtual environment
-echo 3. Install/update project in editable dev mode
-echo 4. Run tests
-echo 5. Show installed dependency versions
-echo 6. Open activated PowerShell in this project
-echo 7. Run PubMed to entity extraction CLI
-echo 8. Run full PubMed pipeline
-echo 9. Build graph quality report
-echo 10. Export review queue
-echo 11. Summarize review queue
-echo 11R. Initialize reviewed queue scaffold
-echo 11S. Summarize reviewed queue
-echo 11C. Export curated graph records
-echo 11D. Build curation diff report
-echo 12. Build corpus manifest
-echo 13. Build trial graph records
-echo 14. Dry-run graph load
-echo 14A. Audit graph provenance
-echo 15. Run preflight checks
-echo 16. Build artifact index
-echo 16B. Run offline smoke baseline rebuild
-echo 16C. Export annotation datasets
-echo 16D. Build annotation dataset quality report
-echo 16E. Split annotation datasets
-echo 16F. Build GBM-BERT label maps
-echo 16G. Build GBM-BERT dataset card
-echo 16H. Build GBM-BERT baseline report
-echo 16I. Build GBM-BERT experiment manifest
-echo 16J. Register GBM-BERT checkpoint metadata
-echo 16K. Validate GBM-BERT training gate
-echo 16L. Score evidence rows with GBM-BERT checkpoint
-echo 16M. Build GBM-BERT model card
-echo 16N. Run GBM-BERT training smoke fixture
-echo 16O. Export GBM-BERT prediction review queue
-echo 16P. Initialize reviewed prediction queue
-echo 16Q. Build GBM-BERT prediction quality report
-echo 16R. Export curated GBM-BERT evidence
-echo 16S. Apply curated evidence overlay to graph
-echo 16T. Summarize reviewed prediction queue
-echo 16U. Import reviewed prediction CSV
-echo 16V. Audit curated GBM-BERT evidence
-echo 16W. Export active learning candidates
-echo 16X. Build evidence overlay diff report
-echo 16Y. Run Neo4j overlay load guard
-echo 16Z. Run curation smoke workflow
-echo 16AA. Build curation handoff bundle
-echo 16AB. Validate curation handoff bundle
-echo 16AC. Register curation workflow run
-echo 16AD. Search curated evidence
-echo 16AE. Plan active learning batches
-echo 16AF. Revert evidence overlay graph
-echo 16AG. Run curation regression pack
-echo 16AH. Browse curation runs
-echo 16AI. Show artifact detail
-echo 16AJ. Summarize active learning batch status
-echo 16AK. Export active learning batch CSV
-echo 16AL. Import active learning batch CSV
-echo 16AM. Gate evidence overlay promotion
-echo 16AN. Audit relation extraction quality
-echo 16AO. Run scope drift monitor
-echo 16AP. Run platform regression
-echo 16AQ. Build gold seed dataset
-echo 16AR. Build adjudication report
-echo 16AS. Normalize graph entities
-echo 16AT. Enrich relation qualifiers
-echo 16AU. Build training readiness report
-echo 16AV. Split datasets by PMID
-echo 16AW. Repair evidence labels
-echo 16AX. Build gold training pack
-echo 16AY. Build relation negative examples
-echo 16AZ. Build relation dataset quality report
-echo 16BA. Build evidence-only training pack
-echo 16BB. Review training config gate
-echo 16BC. Merge relation training pack
-echo 16BD. Build relation-only training pack
-echo 16BE. Compare training packs
-echo 16BF. Audit model registry
-echo 16BG. Run training governance suite
-echo 16BH. Run strict training governance audit
-echo 16BI. Run canonical local verification
-echo 17. Start Knowledge Graph Explorer with sample data
-echo 17A. Start Knowledge Graph Explorer with artifact index selection
-echo 17B. Start Knowledge Graph Explorer with baseline smoke data
-echo 18. Start Knowledge Graph Explorer with Neo4j
-echo 19. Exit
+echo A. Setup and environment
+echo B. Verify, reports, and handoff checks
+echo C. Literature and graph pipeline
+echo D. Review and curation workflow
+echo E. Training data and governance
+echo F. Knowledge Graph Explorer
+echo G. Advanced command index
+echo Q. Exit
+echo.
+echo Tip: old shortcuts such as 16BI still work.
 echo.
 set /p "choice=Choose an option: "
 
+if /I "%choice%"=="A" goto setup_menu
+if /I "%choice%"=="B" goto verify_menu
+if /I "%choice%"=="C" goto pipeline_menu
+if /I "%choice%"=="D" goto curation_menu
+if /I "%choice%"=="E" goto training_menu
+if /I "%choice%"=="F" goto explorer_menu
+if /I "%choice%"=="G" goto advanced_menu
+if /I "%choice%"=="Q" goto end
 if "%choice%"=="1" goto create_venv
 if /I "%choice%"=="1R" goto recreate_venv
 if "%choice%"=="2" goto install_deps
@@ -194,6 +125,7 @@ if /I "%choice%"=="16BF" goto audit_model_registry
 if /I "%choice%"=="16BG" goto training_governance_suite
 if /I "%choice%"=="16BH" goto strict_training_governance
 if /I "%choice%"=="16BI" goto local_verification
+if /I "%choice%"=="16BJ" goto artifact_policy_check
 if "%choice%"=="17" goto run_explorer_sample
 if /I "%choice%"=="17A" goto run_explorer_artifact
 if /I "%choice%"=="17B" goto run_explorer_baseline
@@ -202,6 +134,305 @@ if "%choice%"=="19" goto end
 
 echo.
 echo Invalid choice.
+pause
+goto menu
+
+:setup_menu
+cls
+echo ============================================================
+echo Setup and Environment
+echo ============================================================
+echo.
+echo Use these first when the project is new, dependencies changed,
+echo or you want an activated shell.
+echo.
+echo 1. Create local virtual environment
+echo 1R. Recreate local virtual environment with Python 3.12 64-bit
+echo 2. Install project dependencies into local virtual environment
+echo 3. Install/update project in editable dev mode
+echo 5. Show installed dependency versions
+echo 6. Open activated PowerShell in this project
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if "%choice%"=="1" goto create_venv
+if /I "%choice%"=="1R" goto recreate_venv
+if "%choice%"=="2" goto install_deps
+if "%choice%"=="3" goto install_editable
+if "%choice%"=="5" goto show_versions
+if "%choice%"=="6" goto open_shell
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto setup_menu
+
+:verify_menu
+cls
+echo ============================================================
+echo Verify, Reports, and Handoff Checks
+echo ============================================================
+echo.
+echo Use these before handing work off or after larger changes.
+echo.
+echo 4. Run tests
+echo 15. Run preflight checks
+echo 16. Build artifact index
+echo 16AO. Run scope drift monitor
+echo 16AP. Run platform regression
+echo 16BI. Run canonical local verification
+echo 16BJ. Check tracked artifact policy
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if "%choice%"=="4" goto run_tests
+if "%choice%"=="15" goto preflight
+if "%choice%"=="16" goto artifact_index
+if /I "%choice%"=="16AO" goto scope_drift_monitor
+if /I "%choice%"=="16AP" goto platform_regression
+if /I "%choice%"=="16BI" goto local_verification
+if /I "%choice%"=="16BJ" goto artifact_policy_check
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto verify_menu
+
+:pipeline_menu
+cls
+echo ============================================================
+echo Literature and Graph Pipeline
+echo ============================================================
+echo.
+echo Use these to build source-derived literature and graph artifacts.
+echo.
+echo 7. Run PubMed to entity extraction CLI
+echo 8. Run full PubMed pipeline
+echo 9. Build graph quality report
+echo 12. Build corpus manifest
+echo 13. Build trial graph records
+echo 14. Dry-run graph load
+echo 14A. Audit graph provenance
+echo 16B. Run offline smoke baseline rebuild
+echo 16AS. Normalize graph entities
+echo 16AT. Enrich relation qualifiers
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if "%choice%"=="7" goto run_extraction
+if "%choice%"=="8" goto run_pipeline
+if "%choice%"=="9" goto graph_quality
+if "%choice%"=="12" goto build_manifest
+if "%choice%"=="13" goto build_trial_graph
+if "%choice%"=="14" goto dry_run_load
+if /I "%choice%"=="14A" goto audit_graph_provenance
+if /I "%choice%"=="16B" goto smoke_baseline
+if /I "%choice%"=="16AS" goto normalize_graph_entities
+if /I "%choice%"=="16AT" goto enrich_relation_qualifiers
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto pipeline_menu
+
+:curation_menu
+cls
+echo ============================================================
+echo Review and Curation Workflow
+echo ============================================================
+echo.
+echo Use these to move from raw queues to reviewed, auditable
+echo curation artifacts and graph overlays.
+echo.
+echo 10. Export review queue
+echo 11. Summarize review queue
+echo 11R. Initialize reviewed queue scaffold
+echo 11S. Summarize reviewed queue
+echo 11C. Export curated graph records
+echo 11D. Build curation diff report
+echo 16O. Export GBM-BERT prediction review queue
+echo 16P. Initialize reviewed prediction queue
+echo 16R. Export curated GBM-BERT evidence
+echo 16S. Apply curated evidence overlay to graph
+echo 16Z. Run curation smoke workflow
+echo 16AA. Build curation handoff bundle
+echo 16AG. Run curation regression pack
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if "%choice%"=="10" goto export_review_queue
+if "%choice%"=="11" goto summarize_review_queue
+if /I "%choice%"=="11R" goto initialize_reviewed_queue
+if /I "%choice%"=="11S" goto summarize_reviewed_queue
+if /I "%choice%"=="11C" goto export_curated_graph
+if /I "%choice%"=="11D" goto curation_diff
+if /I "%choice%"=="16O" goto export_prediction_review_queue
+if /I "%choice%"=="16P" goto initialize_prediction_queue
+if /I "%choice%"=="16R" goto export_curated_evidence
+if /I "%choice%"=="16S" goto apply_evidence_overlay
+if /I "%choice%"=="16Z" goto curation_smoke_workflow
+if /I "%choice%"=="16AA" goto curation_handoff_bundle
+if /I "%choice%"=="16AG" goto curation_regression_pack
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto curation_menu
+
+:training_menu
+cls
+echo ============================================================
+echo Training Data and Governance
+echo ============================================================
+echo.
+echo Use these to build annotation packs, inspect training readiness,
+echo and run governance checks. These do not claim a validated model.
+echo.
+echo 16C. Export annotation datasets
+echo 16D. Build annotation dataset quality report
+echo 16AQ. Build gold seed dataset
+echo 16AX. Build gold training pack
+echo 16BA. Build evidence-only training pack
+echo 16AZ. Build relation dataset quality report
+echo 16BE. Compare training packs
+echo 16BB. Review training config gate
+echo 16BG. Run training governance suite
+echo 16BH. Run strict training governance audit
+echo 16BI. Run canonical local verification
+echo T. Advanced training commands
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if /I "%choice%"=="16C" goto export_annotation_dataset
+if /I "%choice%"=="16D" goto annotation_dataset_quality
+if /I "%choice%"=="16AQ" goto build_gold_seed_dataset
+if /I "%choice%"=="16AX" goto gold_training_pack
+if /I "%choice%"=="16BA" goto evidence_training_pack
+if /I "%choice%"=="16AZ" goto relation_dataset_quality
+if /I "%choice%"=="16BE" goto compare_training_packs
+if /I "%choice%"=="16BB" goto review_training_config
+if /I "%choice%"=="16BG" goto training_governance_suite
+if /I "%choice%"=="16BH" goto strict_training_governance
+if /I "%choice%"=="16BI" goto local_verification
+if /I "%choice%"=="T" goto advanced_training_menu
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto training_menu
+
+:advanced_training_menu
+cls
+echo ============================================================
+echo Advanced Training Commands
+echo ============================================================
+echo.
+echo These are lower-level steps that are usually covered by the
+echo pack builders or governance commands.
+echo.
+echo 16E. Split annotation datasets
+echo 16F. Build GBM-BERT label maps
+echo 16G. Build GBM-BERT dataset card
+echo 16H. Build GBM-BERT baseline report
+echo 16I. Build GBM-BERT experiment manifest
+echo 16J. Register GBM-BERT checkpoint metadata
+echo 16K. Validate GBM-BERT training gate
+echo 16L. Score evidence rows with GBM-BERT checkpoint
+echo 16M. Build GBM-BERT model card
+echo 16N. Run GBM-BERT training smoke fixture
+echo 16AY. Build relation negative examples
+echo 16BC. Merge relation training pack
+echo 16BD. Build relation-only training pack
+echo 16BF. Audit model registry
+echo M. Main menu
+echo B. Back to training menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if /I "%choice%"=="16E" goto split_annotation_dataset
+if /I "%choice%"=="16F" goto build_label_maps
+if /I "%choice%"=="16G" goto build_dataset_card
+if /I "%choice%"=="16H" goto build_baseline_report
+if /I "%choice%"=="16I" goto build_experiment_manifest
+if /I "%choice%"=="16J" goto register_checkpoint
+if /I "%choice%"=="16K" goto validate_training_gate
+if /I "%choice%"=="16L" goto score_evidence
+if /I "%choice%"=="16M" goto build_model_card
+if /I "%choice%"=="16N" goto run_training_smoke
+if /I "%choice%"=="16AY" goto build_relation_negatives
+if /I "%choice%"=="16BC" goto merge_relation_pack
+if /I "%choice%"=="16BD" goto relation_training_pack
+if /I "%choice%"=="16BF" goto audit_model_registry
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="B" goto training_menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto advanced_training_menu
+
+:explorer_menu
+cls
+echo ============================================================
+echo Knowledge Graph Explorer
+echo ============================================================
+echo.
+echo Use these to inspect graph artifacts locally in a browser.
+echo.
+echo 17. Start Knowledge Graph Explorer with sample data
+echo 17A. Start Knowledge Graph Explorer with artifact index selection
+echo 17B. Start Knowledge Graph Explorer with baseline smoke data
+echo 18. Start Knowledge Graph Explorer with Neo4j
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if "%choice%"=="17" goto run_explorer_sample
+if /I "%choice%"=="17A" goto run_explorer_artifact
+if /I "%choice%"=="17B" goto run_explorer_baseline
+if "%choice%"=="18" goto run_explorer_neo4j
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto explorer_menu
+
+:advanced_menu
+cls
+echo ============================================================
+echo Advanced Command Index
+echo ============================================================
+echo.
+echo This is the legacy flat list. Use it when you already know the
+echo exact command shortcut.
+echo.
+echo Setup: 1, 1R, 2, 3, 4, 5, 6
+echo Pipeline: 7, 8, 9, 12, 13, 14, 14A, 16B, 16AS, 16AT
+echo Review: 10, 11, 11R, 11S, 11C, 11D
+echo Curation: 16O-16AG, plus 16AH-16AM for run/batch operations
+echo Training: 16C-16N and 16AQ-16BI
+echo Verification: 15, 16, 16AO, 16AP, 16BI, 16BJ
+echo Explorer: 17, 17A, 17B, 18
+echo.
+echo Old shortcuts still work from the main menu prompt.
+echo Press M to return to the main menu.
+echo.
+set /p "choice=Choose an option: "
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Returning to main menu.
 pause
 goto menu
 
@@ -1902,6 +2133,20 @@ echo Running canonical local verification...
 if errorlevel 1 goto command_failed
 echo.
 echo Local verification complete.
+pause
+goto menu
+
+:artifact_policy_check
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Checking tracked artifact policy...
+"%VENV_DIR%\Scripts\gbmbert-check-artifact-policy.exe" --markdown-output reports\platform_regression\artifact_policy.md --json-output reports\platform_regression\artifact_policy.json
+if errorlevel 1 goto command_failed
+echo.
+echo Artifact policy check complete.
 pause
 goto menu
 

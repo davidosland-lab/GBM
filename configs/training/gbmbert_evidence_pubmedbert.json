@@ -1,11 +1,11 @@
 {
   "name": "gbmbert_evidence_pubmedbert",
   "governance_profile": "scaffold",
-  "governance_note": "Full evidence label profile retained for future larger curated datasets; not validated against the tiny smoke evidence pack.",
+  "governance_note": "Full evidence label profile aligned to the local curated full-label evidence pack; retained as scaffold until more rows are curated beyond the minimal fixture.",
   "task": "evidence_classification",
   "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
-  "train_path": "data/annotations/evidence_train.jsonl",
-  "validation_path": "data/annotations/evidence_validation.jsonl",
+  "train_path": "data/training/evidence_pack/annotation_splits/evidence_train.jsonl",
+  "validation_path": "data/training/evidence_pack/annotation_splits/evidence_validation.jsonl",
   "output_dir": "models/checkpoints/gbmbert_evidence_pubmedbert",
   "label_set": [
     "0",

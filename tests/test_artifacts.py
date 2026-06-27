@@ -140,6 +140,8 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     (review_report_dir / "overlay_revert.md").write_text("# Revert\n", encoding="utf-8")
     (review_report_dir / "scope_drift.md").write_text("# Scope\n", encoding="utf-8")
     (review_report_dir / "platform_regression.md").write_text("# Regression\n", encoding="utf-8")
+    (review_report_dir / "local_verification.md").write_text("# Verification\n", encoding="utf-8")
+    (review_report_dir / "artifact_policy.md").write_text("# Artifact Policy\n", encoding="utf-8")
     (review_report_dir / "adjudication_report.md").write_text("# Adjudication\n", encoding="utf-8")
     (review_report_dir / "curation_regression_pack.md").write_text("# Regression\n", encoding="utf-8")
     (review_report_dir / "gold_seed_manifest.md").write_text("# Gold\n", encoding="utf-8")
@@ -221,6 +223,8 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     assert by_name["relation_extraction_audit.md"].artifact_type == "relation_extraction_audit_report"
     assert by_name["scope_drift.md"].artifact_type == "scope_drift_report"
     assert by_name["platform_regression.md"].artifact_type == "platform_regression_report"
+    assert by_name["local_verification.md"].artifact_type == "local_verification_report"
+    assert by_name["artifact_policy.md"].artifact_type == "artifact_policy_report"
     assert by_name["gold_seed_manifest.md"].artifact_type == "gold_seed_manifest"
     assert by_name["adjudication_report.md"].artifact_type == "adjudication_report"
     assert by_name["entity_normalization.md"].artifact_type == "entity_normalization_report"

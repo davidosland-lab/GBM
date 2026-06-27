@@ -7,26 +7,48 @@
     {
       "changed_count": 0,
       "label_counts": {
-        "3": 1
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2
       },
       "output_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl",
-      "row_count": 1,
+      "row_count": 12,
       "skipped_count": 0,
       "source_file": "data\\training\\gold_pack\\annotation_dataset\\evidence.jsonl"
     },
     {
       "changed_count": 0,
-      "label_counts": {},
+      "label_counts": {
+        "BIOMARKER": 2,
+        "CELL_STATE": 2,
+        "CELL_TYPE": 2,
+        "DELIVERY_MODIFIER": 2,
+        "DISEASE": 2,
+        "DRUG": 2,
+        "GENE": 2,
+        "OUTCOME": 2,
+        "PATHWAY": 2,
+        "TREATMENT": 2,
+        "TRIAL_PHASE": 2,
+        "UNKNOWN": 2
+      },
       "output_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl",
-      "row_count": 0,
+      "row_count": 24,
       "skipped_count": 0,
       "source_file": "data\\training\\gold_pack\\annotation_dataset\\ner.jsonl"
     },
     {
       "changed_count": 0,
-      "label_counts": {},
+      "label_counts": {
+        "ASSOCIATED_WITH": 4,
+        "NO_RELATION": 4,
+        "PREDICTS": 4
+      },
       "output_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl",
-      "row_count": 0,
+      "row_count": 12,
       "skipped_count": 0,
       "source_file": "data\\training\\gold_pack\\annotation_dataset\\relations.jsonl"
     }

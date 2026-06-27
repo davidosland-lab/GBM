@@ -473,6 +473,10 @@ def _artifact_type_for_path(path: Path) -> str:
         return "scope_drift_report"
     if "platform_regression" in name:
         return "platform_regression_report"
+    if "local_verification" in name:
+        return "local_verification_report"
+    if "artifact_policy" in name:
+        return "artifact_policy_report"
     if "artifact_detail" in name:
         return "artifact_detail_report"
     if "active_learning_batch_status" in name:

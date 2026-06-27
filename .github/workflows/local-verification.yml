@@ -1,0 +1,32 @@
+name: Local Verification
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install project
+        run: |
+          python -m pip install --disable-pip-version-check --upgrade pip
+          python -m pip install --no-build-isolation --no-compile -e ".[dev]"
+
+      - name: Run canonical local verification
+        run: gbmbert-verify-local
+
+      - name: Run strict training governance audit
+        run: gbmbert-run-strict-training-governance --output-dir reports/training/governance_strict --allow-findings

@@ -1,9 +1,9 @@
 {
-  "created_at_utc": "2026-06-27T03:12:46.210833+00:00",
+  "created_at_utc": "2026-06-27T09:17:19.176528+00:00",
   "failed_step_count": 0,
   "passed": true,
-  "passed_step_count": 6,
-  "step_count": 6,
+  "passed_step_count": 7,
+  "step_count": 7,
   "steps": [
     {
       "command": [
@@ -12,7 +12,7 @@
         "pytest",
         "-q"
       ],
-      "detail": "........................................................................ [ 35%] | ........................................................................ [ 70%] | .............................................................            [100%] | 205 passed in 11.50s",
+      "detail": "........................................................................ [ 34%] | ........................................................................ [ 69%] | ................................................................         [100%] | 208 passed in 11.52s",
       "name": "pytest",
       "passed": true,
       "returncode": 0
@@ -61,8 +61,21 @@
         "--reports-dir",
         "reports\\platform_regression"
       ],
-      "detail": "- scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=452) | ## Warnings | - none",
+      "detail": "- scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=461) | ## Warnings | - none",
       "name": "platform_regression",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-check-artifact-policy.exe",
+        "--markdown-output",
+        "reports\\platform_regression\\artifact_policy.md",
+        "--json-output",
+        "reports\\platform_regression\\artifact_policy.json"
+      ],
+      "detail": "- Tracked paths checked: 600 | - Findings: 0 | ## Findings | - none",
+      "name": "artifact_policy",
       "passed": true,
       "returncode": 0
     },

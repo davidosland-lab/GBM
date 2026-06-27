@@ -3,9 +3,9 @@
   "leakage_warnings": [],
   "output_dir": "data\\training\\gold_pack\\annotation_splits",
   "pmid_counts": {
-    "test": 0,
-    "train": 1,
-    "validation": 0
+    "test": 1,
+    "train": 10,
+    "validation": 1
   },
   "ratios": {
     "test": 0.1,
@@ -16,15 +16,32 @@
   "tasks": [
     {
       "label_counts": {
-        "test": {},
-        "train": {},
-        "validation": {}
+        "test": {
+          "OUTCOME": 1,
+          "PATHWAY": 1
+        },
+        "train": {
+          "BIOMARKER": 2,
+          "CELL_STATE": 2,
+          "CELL_TYPE": 2,
+          "DELIVERY_MODIFIER": 2,
+          "DISEASE": 2,
+          "DRUG": 2,
+          "GENE": 2,
+          "TREATMENT": 2,
+          "TRIAL_PHASE": 2,
+          "UNKNOWN": 2
+        },
+        "validation": {
+          "OUTCOME": 1,
+          "PATHWAY": 1
+        }
       },
       "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl",
       "split_counts": {
-        "test": 0,
-        "train": 0,
-        "validation": 0
+        "test": 2,
+        "train": 20,
+        "validation": 2
       },
       "split_files": {
         "test": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
@@ -35,17 +52,26 @@
     },
     {
       "label_counts": {
-        "test": {},
-        "train": {
-          "3": 1
+        "test": {
+          "1": 1
         },
-        "validation": {}
+        "train": {
+          "0": 2,
+          "1": 1,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 2
+        },
+        "validation": {
+          "4": 1
+        }
       },
       "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl",
       "split_counts": {
-        "test": 0,
-        "train": 1,
-        "validation": 0
+        "test": 1,
+        "train": 10,
+        "validation": 1
       },
       "split_files": {
         "test": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
@@ -56,15 +82,23 @@
     },
     {
       "label_counts": {
-        "test": {},
-        "train": {},
-        "validation": {}
+        "test": {
+          "PREDICTS": 1
+        },
+        "train": {
+          "ASSOCIATED_WITH": 4,
+          "NO_RELATION": 3,
+          "PREDICTS": 3
+        },
+        "validation": {
+          "NO_RELATION": 1
+        }
       },
       "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl",
       "split_counts": {
-        "test": 0,
-        "train": 0,
-        "validation": 0
+        "test": 1,
+        "train": 10,
+        "validation": 1
       },
       "split_files": {
         "test": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",

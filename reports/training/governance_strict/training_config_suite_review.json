@@ -9,13 +9,13 @@
       "blocking": false,
       "checks": {
         "config_label_set_nonempty": true,
-        "config_labels_present_in_dataset": false,
+        "config_labels_present_in_dataset": true,
         "dataset_dir_exists": true,
         "dataset_label_set_nonempty": true,
         "dataset_labels_covered_by_config": true,
         "dataset_labels_covered_by_label_map": true,
         "hyperparameters_in_review_bounds": true,
-        "label_map_labels_match_config": false,
+        "label_map_labels_match_config": true,
         "label_map_present": true,
         "test_split_present": true,
         "train_split_nonempty": true,
@@ -35,27 +35,32 @@
       "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
       "dataset_labels": [
         "0",
-        "1"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
-      "errors": [
-        "config label_set labels missing from dataset: 2, 3, 4, 5",
-        "label map labels do not match config label_set"
-      ],
-      "governance_note": "Full evidence label profile retained for future larger curated datasets; not validated against the tiny smoke evidence pack.",
+      "errors": [],
+      "governance_note": "Full evidence label profile aligned to the local curated full-label evidence pack; retained as scaffold until more rows are curated beyond the minimal fixture.",
       "governance_profile": "scaffold",
       "label_map_dir": "data\\training\\evidence_pack\\label_maps",
       "label_map_labels": [
         "0",
-        "1"
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
       ],
       "prepared_task": "evidence",
-      "raw_status": "failed",
+      "raw_status": "passed",
       "split_counts": {
         "test": 1,
-        "train": 2,
+        "train": 10,
         "validation": 1
       },
-      "status": "scaffold_pending",
+      "status": "scaffold_ready",
       "task": "evidence_classification",
       "training_enabled": false,
       "training_enabled_confirmed": false,
@@ -90,7 +95,7 @@
         "1"
       ],
       "config_path": "configs\\training\\gbmbert_evidence_smoke_pubmedbert.json",
-      "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+      "dataset_dir": "data\\training\\evidence_smoke_fixture\\splits",
       "dataset_labels": [
         "0",
         "1"
@@ -98,7 +103,7 @@
       "errors": [],
       "governance_note": "Current smoke evidence config aligned to the local evidence-only smoke pack.",
       "governance_profile": "current",
-      "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+      "label_map_dir": "data\\training\\evidence_smoke_fixture\\label_maps",
       "label_map_labels": [
         "0",
         "1"
@@ -106,8 +111,8 @@
       "prepared_task": "evidence",
       "raw_status": "passed",
       "split_counts": {
-        "test": 1,
-        "train": 2,
+        "test": 2,
+        "train": 1,
         "validation": 1
       },
       "status": "passed",
@@ -126,13 +131,13 @@
       "blocking": false,
       "checks": {
         "config_label_set_nonempty": true,
-        "config_labels_present_in_dataset": false,
+        "config_labels_present_in_dataset": true,
         "dataset_dir_exists": true,
         "dataset_label_set_nonempty": true,
         "dataset_labels_covered_by_config": true,
         "dataset_labels_covered_by_label_map": true,
         "hyperparameters_in_review_bounds": true,
-        "label_map_labels_match_config": false,
+        "label_map_labels_match_config": true,
         "label_map_present": true,
         "test_split_present": true,
         "train_split_nonempty": true,
@@ -155,42 +160,47 @@
         "UNKNOWN"
       ],
       "config_path": "configs\\training\\gbmbert_ner_pubmedbert.json",
-      "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+      "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
       "dataset_labels": [
         "BIOMARKER",
+        "CELL_STATE",
         "CELL_TYPE",
         "DELIVERY_MODIFIER",
         "DISEASE",
         "DRUG",
         "GENE",
         "OUTCOME",
-        "TREATMENT"
+        "PATHWAY",
+        "TREATMENT",
+        "TRIAL_PHASE",
+        "UNKNOWN"
       ],
-      "errors": [
-        "config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN",
-        "label map labels do not match config label_set"
-      ],
-      "governance_note": "Future NER scaffold with broader vocabulary than the current tiny smoke NER labels.",
+      "errors": [],
+      "governance_note": "Broad NER scaffold aligned to the expanded local gold pack; retained as scaffold until the curated fixture is larger.",
       "governance_profile": "scaffold",
-      "label_map_dir": "data\\training\\ncbi_env_smoke_label_maps",
+      "label_map_dir": "data\\training\\gold_pack\\label_maps",
       "label_map_labels": [
         "BIOMARKER",
+        "CELL_STATE",
         "CELL_TYPE",
         "DELIVERY_MODIFIER",
         "DISEASE",
         "DRUG",
         "GENE",
         "OUTCOME",
-        "TREATMENT"
+        "PATHWAY",
+        "TREATMENT",
+        "TRIAL_PHASE",
+        "UNKNOWN"
       ],
       "prepared_task": "ner",
-      "raw_status": "failed",
+      "raw_status": "passed",
       "split_counts": {
-        "test": 16,
-        "train": 94,
-        "validation": 16
+        "test": 2,
+        "train": 20,
+        "validation": 2
       },
-      "status": "scaffold_pending",
+      "status": "scaffold_ready",
       "task": "ner",
       "training_enabled": false,
       "training_enabled_confirmed": false,
@@ -337,10 +347,7 @@
     }
   ],
   "scaffold_count": 2,
-  "scaffold_warnings": [
-    "configs\\training\\gbmbert_evidence_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: 2, 3, 4, 5; label map labels do not match config label_set)",
-    "configs\\training\\gbmbert_ner_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN; label map labels do not match config label_set)"
-  ],
+  "scaffold_warnings": [],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": []
 }

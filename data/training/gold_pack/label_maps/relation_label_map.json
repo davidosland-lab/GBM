@@ -1,5 +1,13 @@
 {
-  "id_to_label": {},
-  "label_to_id": {},
+  "id_to_label": {
+    "0": "ASSOCIATED_WITH",
+    "1": "NO_RELATION",
+    "2": "PREDICTS"
+  },
+  "label_to_id": {
+    "ASSOCIATED_WITH": 0,
+    "NO_RELATION": 1,
+    "PREDICTS": 2
+  },
   "task": "relation"
 }

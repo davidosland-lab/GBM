@@ -1,11 +1,13 @@
 {
   "name": "gbmbert_ner_pubmedbert",
   "governance_profile": "scaffold",
-  "governance_note": "Future NER scaffold with broader vocabulary than the current tiny smoke NER labels.",
+  "governance_note": "Broad NER scaffold aligned to the expanded local gold pack; retained as scaffold until the curated fixture is larger.",
+  "governance_dataset_dir": "data/training/gold_pack/annotation_splits",
+  "governance_label_map_dir": "data/training/gold_pack/label_maps",
   "task": "ner",
   "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
-  "train_path": "data/annotations/ner_train.jsonl",
-  "validation_path": "data/annotations/ner_validation.jsonl",
+  "train_path": "data/training/gold_pack/annotation_splits/ner_train.jsonl",
+  "validation_path": "data/training/gold_pack/annotation_splits/ner_validation.jsonl",
   "output_dir": "models/checkpoints/gbmbert_ner_pubmedbert",
   "label_set": [
     "GENE",

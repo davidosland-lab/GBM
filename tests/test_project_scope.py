@@ -86,10 +86,16 @@ def test_project_scope_lockfile_preserves_prohibited_behavior() -> None:
     assert "scope_drift_monitor" in scope["implemented_modules"]
     assert "platform_regression_command" in scope["implemented_modules"]
     assert "local_verification_command" in scope["implemented_modules"]
+    assert "local_verification_ci_workflow" in scope["implemented_modules"]
+    assert "artifact_policy_check" in scope["implemented_modules"]
+    assert "launcher_menu_workflow_groups" in scope["implemented_modules"]
     assert "gbmbert_strict_training_governance_profile" in scope["implemented_modules"]
     assert "gbmbert_current_ner_smoke_config" in scope["implemented_modules"]
     assert "gbmbert_gold_pack_expansion_plan" in scope["implemented_modules"]
     assert "gbmbert_full_evidence_label_coverage_plan" in scope["implemented_modules"]
+    assert "gbmbert_curated_evidence_label_expansion" in scope["implemented_modules"]
+    assert "gbmbert_gold_ner_expansion" in scope["implemented_modules"]
+    assert "gbmbert_gold_relation_expansion" in scope["implemented_modules"]
     assert "streamlit_dashboard_shell" in scope["implemented_modules"]
 
 

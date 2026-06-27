@@ -3,30 +3,34 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Dataset directory: `data\training\evidence_pack\annotation_splits`
-- Total examples: 4
+- Total examples: 12
 
 ## Files
 ### evidence_test.jsonl
 - Examples: 1
 - Missing text: 0
-- SHA256: `42367602740093E8271699B1FFAE443031E2EDA8965848D4712CFFA70A6ADBEF`
+- SHA256: `70EFAF4FFDDA4C628B628F9E43FEF8A5BEB2D8461C1B283D0D550D63BCAF5D44`
 - Labels:
-- 0: 1
+- 1: 1
 
 ### evidence_train.jsonl
-- Examples: 2
+- Examples: 10
 - Missing text: 0
-- SHA256: `E91DD4359B1F71051D2AABA40EDFBC587EFFC7BED7F6DF64B708B8C80BE29013`
+- SHA256: `5C36D9181E52E9FDCB1BE0BA118EBF632473CD5575406A49BC2C3EFEACB49BEF`
 - Labels:
-- 0: 1
+- 0: 2
 - 1: 1
+- 2: 2
+- 3: 2
+- 4: 1
+- 5: 2
 
 ### evidence_validation.jsonl
 - Examples: 1
 - Missing text: 0
-- SHA256: `402A05990A991718119994FC2405CB8B6285F9C4B78178C10D5693987314E18B`
+- SHA256: `C7CA2981FE2091B06BF9449A5AEE97E94C87C7D5BB44A79ABAC311853097D19E`
 - Labels:
-- 0: 1
+- 4: 1
 
 ### ner_test.jsonl
 - Examples: 0

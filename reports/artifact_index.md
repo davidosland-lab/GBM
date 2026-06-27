@@ -2,8 +2,8 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Artifacts: 452
-- Total bytes: 1516113
+- Artifacts: 461
+- Total bytes: 1702638
 
 ## Categories
 - corpus_report: 5
@@ -12,9 +12,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - model: 1
 - processed: 58
 - raw: 4
-- report: 16
+- report: 18
 - review: 90
-- training: 249
+- training: 256
 - wireframe: 1
 
 ## Artifact Types
@@ -30,6 +30,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - annotation_dataset: 14
 - artifact_detail_report: 2
 - artifact_index: 2
+- artifact_policy_report: 2
 - baseline_report: 4
 - checkpoint_registry: 1
 - clinicaltrials_raw: 2
@@ -46,9 +47,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - curation_smoke_workflow_report: 3
 - dashboard_training_manifest: 6
 - dataset_card: 4
-- entities: 1
+- entities: 2
 - entity_normalization_report: 2
-- evidence_claims: 9
+- evidence_claims: 10
 - evidence_label_repair_report: 10
 - evidence_overlay_diff_report: 7
 - evidence_overlay_graph_records: 5
@@ -61,12 +62,13 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - gold_training_pack_report: 2
 - graph_load_report: 4
 - graph_quality_report: 12
-- json_report: 11
+- json_report: 10
 - jsonl_artifact: 3
 - label_map: 13
 - label_maps_manifest: 4
+- local_verification_report: 2
 - manifest: 9
-- markdown_report: 11
+- markdown_report: 10
 - model_card: 2
 - model_registry_audit_report: 6
 - model_registry_remediation_plan: 6
@@ -85,7 +87,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - pubmed_graph_records: 3
 - qualifier_enriched_graph_records: 1
 - qualifier_enrichment_report: 2
-- relation_dataset_quality_report: 2
+- relation_dataset_quality_report: 4
 - relation_extraction_audit_report: 2
 - relation_negative_dataset: 1
 - relation_negative_report: 2
@@ -94,7 +96,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - reverted_graph_records: 1
 - review_queue: 2
 - review_queue_csv: 2
-- reviewed_queue: 1
+- reviewed_queue: 2
 - reviewed_queue_csv: 1
 - scope_drift_report: 2
 - training_artifact_bundle_manifest: 6
@@ -108,7 +110,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - training_metrics: 2
 - training_pack_comparison_report: 6
 - training_pack_leakage_audit_report: 6
-- training_provenance_audit_report: 6
+- training_provenance_audit_report: 8
 - training_readiness_report: 4
 - training_readiness_snapshot: 6
 - training_run_manifest: 1
@@ -118,9 +120,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## File Types
 - .csv: 8
-- .json: 167
-- .jsonl: 128
-- .md: 149
+- .json: 170
+- .jsonl: 131
+- .md: 152
 
 ## Artifacts
 - `data\raw\clinicaltrials_gbm_smoke_2026-06-23.jsonl` (clinicaltrials_raw, raw, 3967 bytes, lines=5, SHA256 `925DC40B5F85A5C2CE02AC81A693398C5FB8780399CA6EF0848F335503C6F24C`)
@@ -146,8 +148,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\processed\curation_regression_pack\active_learning_candidates.jsonl` (active_learning_candidates, processed, 912 bytes, lines=1, SHA256 `3C6A722238BB7C41F49B8C118BE4423BEFCE45D0387DD210A2668AD867371339`)
 - `data\processed\curation_regression_pack\curated_evidence_predictions.jsonl` (curated_evidence_predictions, processed, 786 bytes, lines=1, SHA256 `5B5B7A659DD3D45F2FB5ED120E5F5F4344D2BF1070078B51AD015A204642B173`)
 - `data\processed\curation_regression_pack\evidence_overlay_graph_records.jsonl` (evidence_overlay_graph_records, processed, 3151 bytes, lines=2, SHA256 `4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF`)
-- `data\processed\curation_regression_pack\handoff_bundle\curation_handoff_bundle.json` (curation_handoff_bundle_manifest, processed, 6789 bytes, lines=137, SHA256 `25ABCC71B92D08AC28CD78CB800CBBDFDBC5A7C5A1A84F49576CEDDA835A908B`)
-- `data\processed\curation_regression_pack\handoff_bundle\curation_handoff_bundle.md` (curation_handoff_bundle_manifest, processed, 4807 bytes, lines=28, SHA256 `65E092BF873B4E0D3134A960B0C0B0117A45FE5345404C0E8E73736093002B84`)
+- `data\processed\curation_regression_pack\handoff_bundle\curation_handoff_bundle.json` (curation_handoff_bundle_manifest, processed, 6925 bytes, lines=137, SHA256 `FF8DF99A1A4A3668DE1FF9309225209CF43B8EC4E05A643C361A9FDB4DB6C8C9`)
+- `data\processed\curation_regression_pack\handoff_bundle\curation_handoff_bundle.md` (curation_handoff_bundle_manifest, processed, 4835 bytes, lines=28, SHA256 `E61B9FCE778BAB479D0C60150BA2373F0D077DFDF88E741D1A77EC92A08948F7`)
 - `data\processed\curation_regression_pack\handoff_bundle\files\curation_regression_pack_active_learning_batches.md` (active_learning_batch_report, processed, 602 bytes, lines=23, SHA256 `357BBEF5BFEC555388D80CD73CE945463CDDB5BBEE31745AFD03E437944E537C`)
 - `data\processed\curation_regression_pack\handoff_bundle\files\curation_regression_pack_active_learning_candidates.jsonl` (active_learning_candidates, processed, 912 bytes, lines=1, SHA256 `3C6A722238BB7C41F49B8C118BE4423BEFCE45D0387DD210A2668AD867371339`)
 - `data\processed\curation_regression_pack\handoff_bundle\files\curation_regression_pack_curated_evidence_audit.md` (curation_regression_pack_report, processed, 501 bytes, lines=19, SHA256 `92F0555E84F393C65E80020BD27DD0615A60C205B5CCFDBD28EC470FC70B1DE7`)
@@ -201,26 +203,29 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\review\sample_graph_prediction_reviewed_queue.jsonl` (prediction_reviewed_queue, review, 785 bytes, lines=1, SHA256 `DB6443E46E1DF804D5273601975A49B929EE83FFA9A757B5C54E52BFD4D0DFDA`)
 - `data\review\sample_review_queue.csv` (review_queue_csv, review, 377 bytes, lines=2, SHA256 `422AE7B078935F248CD5CB36016E113265A1C77B068CDB9E446636CAC05B8811`)
 - `data\review\sample_review_queue.jsonl` (review_queue, review, 422 bytes, lines=1, SHA256 `645C2AE0E6D878F48CC441093CC01EDA0804EDBBD8FC47218100A62A3D1F95F7`)
-- `data\training\evidence_pack\annotation_dataset\evidence.jsonl` (evidence_claims, training, 1086 bytes, lines=4, SHA256 `F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607`)
+- `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims, training, 5741 bytes, lines=12, SHA256 `4E02B383BF39F8CF6C7580B4E2BE502A11E67213A62DFE28973DA2F9F9140689`)
+- `data\training\curated_expansion\gold_entities.jsonl` (entities, training, 3088 bytes, lines=12, SHA256 `D61754B7457C23F278E354BF71C3FAD8ED1C84B0141F26B2C407C02F8D12E6EA`)
+- `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue, training, 14730 bytes, lines=24, SHA256 `ACB0E7AFF27B2EBBEA228A95B65338D0485BB0AF4DED1DBD2D2111D88A32AAF6`)
+- `data\training\evidence_pack\annotation_dataset\evidence.jsonl` (evidence_claims, training, 5957 bytes, lines=12, SHA256 `B309B60373A39B4AE5E05D19CD2EAEFABC898BF7962D5217D9AD79775CA519A3`)
 - `data\training\evidence_pack\annotation_dataset\ner.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
 - `data\training\evidence_pack\annotation_dataset\relations.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\evidence_pack\annotation_dataset_repaired\evidence.jsonl` (evidence_claims, training, 1086 bytes, lines=4, SHA256 `F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607`)
-- `data\training\evidence_pack\annotation_dataset_repaired\evidence_label_repair.json` (evidence_label_repair_report, training, 1329 bytes, lines=37, SHA256 `F85642736F813410E54E532A9BA70F8C2282F1ABA38CB849B3081F75B7E7F9ED`)
-- `data\training\evidence_pack\annotation_dataset_repaired\evidence_label_repair.md` (evidence_label_repair_report, training, 626 bytes, lines=34, SHA256 `364543D3EB9E590D9287F9F4853A39C53058DE36201B765B8ADC9A1A5CEF2172`)
+- `data\training\evidence_pack\annotation_dataset_repaired\evidence.jsonl` (evidence_claims, training, 5957 bytes, lines=12, SHA256 `B309B60373A39B4AE5E05D19CD2EAEFABC898BF7962D5217D9AD79775CA519A3`)
+- `data\training\evidence_pack\annotation_dataset_repaired\evidence_label_repair.json` (evidence_label_repair_report, training, 1398 bytes, lines=41, SHA256 `11DD08149000B37B5A02A8BE59497B6AEB6DD7CE2721C22EBD3ED7777518CF5E`)
+- `data\training\evidence_pack\annotation_dataset_repaired\evidence_label_repair.md` (evidence_label_repair_report, training, 659 bytes, lines=38, SHA256 `1CC8FC80F859FEF39B8EBE77962CFBFEBF8DF47C41754F8D12F7D4FEF55B67E1`)
 - `data\training\evidence_pack\annotation_dataset_repaired\ner.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
 - `data\training\evidence_pack\annotation_dataset_repaired\relations.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\evidence_pack\annotation_splits\evidence_test.jsonl` (training_split, training, 203 bytes, lines=1, SHA256 `42367602740093E8271699B1FFAE443031E2EDA8965848D4712CFFA70A6ADBEF`)
-- `data\training\evidence_pack\annotation_splits\evidence_train.jsonl` (training_split, training, 497 bytes, lines=2, SHA256 `E91DD4359B1F71051D2AABA40EDFBC587EFFC7BED7F6DF64B708B8C80BE29013`)
-- `data\training\evidence_pack\annotation_splits\evidence_validation.jsonl` (training_split, training, 386 bytes, lines=1, SHA256 `402A05990A991718119994FC2405CB8B6285F9C4B78178C10D5693987314E18B`)
+- `data\training\evidence_pack\annotation_splits\evidence_test.jsonl` (training_split, training, 476 bytes, lines=1, SHA256 `70EFAF4FFDDA4C628B628F9E43FEF8A5BEB2D8461C1B283D0D550D63BCAF5D44`)
+- `data\training\evidence_pack\annotation_splits\evidence_train.jsonl` (training_split, training, 4999 bytes, lines=10, SHA256 `5C36D9181E52E9FDCB1BE0BA118EBF632473CD5575406A49BC2C3EFEACB49BEF`)
+- `data\training\evidence_pack\annotation_splits\evidence_validation.jsonl` (training_split, training, 482 bytes, lines=1, SHA256 `C7CA2981FE2091B06BF9449A5AEE97E94C87C7D5BB44A79ABAC311853097D19E`)
 - `data\training\evidence_pack\annotation_splits\ner_test.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
 - `data\training\evidence_pack\annotation_splits\ner_train.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
 - `data\training\evidence_pack\annotation_splits\ner_validation.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\evidence_pack\annotation_splits\pmid_split_manifest.json` (pmid_split_manifest, training, 2574 bytes, lines=83, SHA256 `C826E4CD316438BFA9F2446AE5B9CD342044D33E451038ED7A48DBED8A4878B7`)
+- `data\training\evidence_pack\annotation_splits\pmid_split_manifest.json` (pmid_split_manifest, training, 2652 bytes, lines=87, SHA256 `103A1FC3495177481F2754094FC4E42F802A9F4581459F27D9C52DB033CC8A85`)
 - `data\training\evidence_pack\annotation_splits\relation_test.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
 - `data\training\evidence_pack\annotation_splits\relation_train.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
 - `data\training\evidence_pack\annotation_splits\relation_validation.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\evidence_pack\label_maps\evidence_label_map.json` (label_map, training, 132 bytes, lines=11, SHA256 `B940BD160CDA7C0A80396839836475FC64619C5C5E1956A0E3B7AB2E5C456B1B`)
-- `data\training\evidence_pack\label_maps\label_maps_manifest.json` (label_maps_manifest, training, 518 bytes, lines=17, SHA256 `C3F33B3776EFD4D5482C4E3C0B4E56787CF61B78908F834B5CEB1AA15831E572`)
+- `data\training\evidence_pack\label_maps\evidence_label_map.json` (label_map, training, 244 bytes, lines=19, SHA256 `EC12DACC60C2BF167E1E07A397794EEB977D34083DA79F87A938D477E8C3ABFE`)
+- `data\training\evidence_pack\label_maps\label_maps_manifest.json` (label_maps_manifest, training, 578 bytes, lines=21, SHA256 `69373122A4BEC1E3D09F4DFCF27689AEBDE11A3218127E363673675DDA6248FC`)
 - `data\training\evidence_pack\label_maps\ner_label_map.json` (label_map, training, 65 bytes, lines=5, SHA256 `B4CD8069BDC9673CB3A0E3DD8B4DE0ED3AFEE59585CB9C74043D61FAA0F0E6DC`)
 - `data\training\evidence_pack\label_maps\relation_label_map.json` (label_map, training, 70 bytes, lines=5, SHA256 `C7F4D558F0F6498F057A8FD9D7D2886531767C0A9CA54CEEA56AE6E659DFDD42`)
 - `data\training\evidence_smoke_fixture\label_maps\evidence_label_map.json` (label_map, training, 77 bytes, lines=7, SHA256 `59D2EE66191654DFF5A67B3F6308C6FB2DE9AD9922B6DC0D1D86CD356D7B3276`)
@@ -228,38 +233,38 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\training\evidence_smoke_fixture\splits\evidence_train.jsonl` (training_split, training, 79 bytes, lines=1, SHA256 `7982512FFAD372ED72F53326DCE37B2FA03A81057E271F1A0A999D14D6613330`)
 - `data\training\evidence_smoke_fixture\splits\evidence_validation.jsonl` (training_split, training, 73 bytes, lines=1, SHA256 `FEB35A22D78F251603ED65732A546D36D94AE91DAAF28D90F02530DCD3056507`)
 - `data\training\evidence_smoke_fixture\training_config.json` (json_report, training, 563 bytes, lines=17, SHA256 `E2177C82E957C2827F62AEBDD76421FEDD77F2652CD790C35D173484A3279446`)
-- `data\training\gold_pack\annotation_dataset\evidence.jsonl` (evidence_claims, training, 485 bytes, lines=1, SHA256 `C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3`)
-- `data\training\gold_pack\annotation_dataset\ner.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_dataset\relations.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_dataset_repaired\evidence.jsonl` (evidence_claims, training, 485 bytes, lines=1, SHA256 `C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3`)
-- `data\training\gold_pack\annotation_dataset_repaired\evidence_label_repair.json` (evidence_label_repair_report, training, 1280 bytes, lines=36, SHA256 `0B4F510E4F53054FBE3B0E0BC38C9818737CEE3CCF1598AA0FDF1FD9F83B3AAC`)
-- `data\training\gold_pack\annotation_dataset_repaired\evidence_label_repair.md` (evidence_label_repair_report, training, 610 bytes, lines=33, SHA256 `9D5F7962C66248BDC1D25BCBCA6CC4C98B3153439C1FA8400533C64B49171AD4`)
-- `data\training\gold_pack\annotation_dataset_repaired\ner.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_dataset_repaired\relations.jsonl` (annotation_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\evidence_test.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\evidence_train.jsonl` (training_split, training, 485 bytes, lines=1, SHA256 `C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3`)
-- `data\training\gold_pack\annotation_splits\evidence_validation.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\ner_test.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\ner_train.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\ner_validation.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\pmid_split_manifest.json` (pmid_split_manifest, training, 2443 bytes, lines=78, SHA256 `7876CE3B14190315BFD4539C9B9557E62F5012FDE6AE5FEBEED9E09420E2FA98`)
-- `data\training\gold_pack\annotation_splits\relation_test.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\relation_train.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\annotation_splits\relation_validation.jsonl` (training_split, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\gold_seed\gold_evidence.jsonl` (gold_seed_dataset, training, 485 bytes, lines=1, SHA256 `C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3`)
-- `data\training\gold_pack\gold_seed\gold_ner.jsonl` (gold_seed_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\gold_seed\gold_relations.jsonl` (gold_seed_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_pack\gold_seed\gold_seed_manifest.json` (gold_seed_manifest, training, 906 bytes, lines=20, SHA256 `EF38B5754EC10F146CE232EF6A006DD25F378007F9328D09CA9080398908BE64`)
-- `data\training\gold_pack\gold_seed\gold_seed_manifest.md` (gold_seed_manifest, training, 696 bytes, lines=20, SHA256 `39554F41F514F947367C41E250284E78B8D2E54C0B30AC5A3068A9E8DAFD2D20`)
-- `data\training\gold_pack\label_maps\evidence_label_map.json` (label_map, training, 104 bytes, lines=9, SHA256 `4C511091045103D261074B8A2098B03640EFFA086E8956360755DBC5DF8E1152`)
-- `data\training\gold_pack\label_maps\label_maps_manifest.json` (label_maps_manifest, training, 483 bytes, lines=16, SHA256 `2A3C9C266120B6779B3764F07919AD761E650DF15751A32379DEA54B43AA1635`)
-- `data\training\gold_pack\label_maps\ner_label_map.json` (label_map, training, 65 bytes, lines=5, SHA256 `B4CD8069BDC9673CB3A0E3DD8B4DE0ED3AFEE59585CB9C74043D61FAA0F0E6DC`)
-- `data\training\gold_pack\label_maps\relation_label_map.json` (label_map, training, 70 bytes, lines=5, SHA256 `C7F4D558F0F6498F057A8FD9D7D2886531767C0A9CA54CEEA56AE6E659DFDD42`)
-- `data\training\gold_seed\gold_evidence.jsonl` (gold_seed_dataset, training, 485 bytes, lines=1, SHA256 `C3BF5653452474A9477A0F56875B799055437D548E519AFF27063C8C985E03F3`)
-- `data\training\gold_seed\gold_ner.jsonl` (gold_seed_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_seed\gold_relations.jsonl` (gold_seed_dataset, training, 0 bytes, lines=0, SHA256 `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`)
-- `data\training\gold_seed\gold_seed_manifest.json` (gold_seed_manifest, training, 840 bytes, lines=20, SHA256 `BAD9DA1A485ACC9C0B90FD83E305566064563954F5E8D81A04EE58DE87AF83E4`)
-- `data\training\gold_seed\gold_seed_manifest.md` (gold_seed_manifest, training, 636 bytes, lines=20, SHA256 `A07FBD21E829BB7751B7BA3ECAC000C6EDB9C9F3BDED4FD27B6B79D7381707E3`)
+- `data\training\gold_pack\annotation_dataset\evidence.jsonl` (evidence_claims, training, 5835 bytes, lines=12, SHA256 `F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2`)
+- `data\training\gold_pack\annotation_dataset\ner.jsonl` (annotation_dataset, training, 7132 bytes, lines=24, SHA256 `EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183`)
+- `data\training\gold_pack\annotation_dataset\relations.jsonl` (annotation_dataset, training, 10392 bytes, lines=12, SHA256 `179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2`)
+- `data\training\gold_pack\annotation_dataset_repaired\evidence.jsonl` (evidence_claims, training, 5835 bytes, lines=12, SHA256 `F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2`)
+- `data\training\gold_pack\annotation_dataset_repaired\evidence_label_repair.json` (evidence_label_repair_report, training, 1757 bytes, lines=58, SHA256 `643A95CE231CE050F2981931A6F692C1A0F17BB99B87A891ADE64764CF7447F8`)
+- `data\training\gold_pack\annotation_dataset_repaired\evidence_label_repair.md` (evidence_label_repair_report, training, 877 bytes, lines=51, SHA256 `10412FEBC54E86BC31F9EA7691F575196641DEF6E155F96EB0E822954478585A`)
+- `data\training\gold_pack\annotation_dataset_repaired\ner.jsonl` (annotation_dataset, training, 7132 bytes, lines=24, SHA256 `EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183`)
+- `data\training\gold_pack\annotation_dataset_repaired\relations.jsonl` (annotation_dataset, training, 10392 bytes, lines=12, SHA256 `179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2`)
+- `data\training\gold_pack\annotation_splits\evidence_test.jsonl` (training_split, training, 476 bytes, lines=1, SHA256 `10FA7852E4B4679A90B4CA118B902510523319F01955E652A17AD9EFB6657B01`)
+- `data\training\gold_pack\annotation_splits\evidence_train.jsonl` (training_split, training, 4889 bytes, lines=10, SHA256 `E5471F060F13FE7E545886B0F1099A43F4C3E93E0178211E80A359171D90A369`)
+- `data\training\gold_pack\annotation_splits\evidence_validation.jsonl` (training_split, training, 470 bytes, lines=1, SHA256 `4927961CBA87C623B809BC5268894E85AFBB7BC4920FF6C100084531DC2570BF`)
+- `data\training\gold_pack\annotation_splits\ner_test.jsonl` (training_split, training, 585 bytes, lines=2, SHA256 `2BC391FD32979426BE795BD80CE44018EEBE02493C289CA10AABF5B8479E30F7`)
+- `data\training\gold_pack\annotation_splits\ner_train.jsonl` (training_split, training, 5946 bytes, lines=20, SHA256 `5FE6EB091B3C68E1604037A8CFD6240897BB6CFE47B8B7CCCBFF04D6048DF534`)
+- `data\training\gold_pack\annotation_splits\ner_validation.jsonl` (training_split, training, 601 bytes, lines=2, SHA256 `D95F9E9F7B33EE6151D732568685898BE83C357E30605F73A9909F568DEFF320`)
+- `data\training\gold_pack\annotation_splits\pmid_split_manifest.json` (pmid_split_manifest, training, 3162 bytes, lines=112, SHA256 `404814B14A91E21409FEAD90363C423FAA000E0184742DB83ABFF7C93B5B8CED`)
+- `data\training\gold_pack\annotation_splits\relation_test.jsonl` (training_split, training, 839 bytes, lines=1, SHA256 `A1DF1278B77C99A1303732FB7A969E3EB5924AD46A53A367FF489B4FB2CEF352`)
+- `data\training\gold_pack\annotation_splits\relation_train.jsonl` (training_split, training, 8684 bytes, lines=10, SHA256 `3016EDB1F6171C626E22A06E61212F3E78897B0462B0F828991FAD8C57AB5A27`)
+- `data\training\gold_pack\annotation_splits\relation_validation.jsonl` (training_split, training, 869 bytes, lines=1, SHA256 `3AD090D308AC221D9E778811528A80656A81F29BF820FF7E37E8D022CE90B7BA`)
+- `data\training\gold_pack\gold_seed\gold_evidence.jsonl` (gold_seed_dataset, training, 5835 bytes, lines=12, SHA256 `F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2`)
+- `data\training\gold_pack\gold_seed\gold_ner.jsonl` (gold_seed_dataset, training, 7132 bytes, lines=24, SHA256 `EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183`)
+- `data\training\gold_pack\gold_seed\gold_relations.jsonl` (gold_seed_dataset, training, 10392 bytes, lines=12, SHA256 `179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2`)
+- `data\training\gold_pack\gold_seed\gold_seed_manifest.json` (gold_seed_manifest, training, 965 bytes, lines=20, SHA256 `4D3004881760BDB13DD65947AE61052C49F9F1DDF2E33FE8DED7885649A97159`)
+- `data\training\gold_pack\gold_seed\gold_seed_manifest.md` (gold_seed_manifest, training, 699 bytes, lines=20, SHA256 `220AC2620F85710965FB36B46FF899E936EE744ECEF7BC8A4C5C59C2457F1272`)
+- `data\training\gold_pack\label_maps\evidence_label_map.json` (label_map, training, 244 bytes, lines=19, SHA256 `EC12DACC60C2BF167E1E07A397794EEB977D34083DA79F87A938D477E8C3ABFE`)
+- `data\training\gold_pack\label_maps\label_maps_manifest.json` (label_maps_manifest, training, 915 bytes, lines=38, SHA256 `6E064B83FA60C60069CEAC5B5A56F89E47CA082A2AD9DB0985DFAA0A0FA9D373`)
+- `data\training\gold_pack\label_maps\ner_label_map.json` (label_map, training, 589 bytes, lines=31, SHA256 `2DD35E2456664ED93879AA67F26372EB98B19B6C1103641F18341E2A2D7101D4`)
+- `data\training\gold_pack\label_maps\relation_label_map.json` (label_map, training, 222 bytes, lines=13, SHA256 `E4740EC74D3891336CA784B9D607DC1B4A318029B4A841C7F12C9E27CEA7BD94`)
+- `data\training\gold_seed\gold_evidence.jsonl` (gold_seed_dataset, training, 5835 bytes, lines=12, SHA256 `F9377907E8E74BABF123EFC63AD7BFFBAD02740FFE12F41B678817050052CFF2`)
+- `data\training\gold_seed\gold_ner.jsonl` (gold_seed_dataset, training, 7132 bytes, lines=24, SHA256 `EFFB30530B66CFCD73B0A1A84C2D5CB494090042575415C175445AC5FE359183`)
+- `data\training\gold_seed\gold_relations.jsonl` (gold_seed_dataset, training, 10392 bytes, lines=12, SHA256 `179B26568924C6633E1FC6B6740E1551FB08A86B918C6119C49E0E815E2813F2`)
+- `data\training\gold_seed\gold_seed_manifest.json` (gold_seed_manifest, training, 899 bytes, lines=20, SHA256 `934C101B9A0BF0B711F0A4AD886ADE4153DBD2522FDE9A46925416FDFDA0A432`)
+- `data\training\gold_seed\gold_seed_manifest.md` (gold_seed_manifest, training, 639 bytes, lines=20, SHA256 `02AA0FB521DFAEBF17FDFF3ACCEE4840A956835B8B515A96B4E591295EF97B93`)
 - `data\training\ncbi_env_smoke_annotation_dataset\dataset_manifest.json` (manifest, training, 585 bytes, lines=17, SHA256 `D83784469BBC9DD8DB4041466FF1369FDA09AEC97CD3673531008818D190ED98`)
 - `data\training\ncbi_env_smoke_annotation_dataset\evidence.jsonl` (evidence_claims, training, 1086 bytes, lines=4, SHA256 `F304B2EC4B8F35491EE7098268F166D64C5F61CF1FB63E753F3CC0B57692F607`)
 - `data\training\ncbi_env_smoke_annotation_dataset\ner.jsonl` (annotation_dataset, training, 20776 bytes, lines=126, SHA256 `ABAB8D8C57196CA64B3059D1DA2EF466348B1DFC27ED0ADD4D69E03E279A2C44`)
@@ -318,8 +323,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\examples\trial_graph_records_sample.jsonl` (trial_graph_records, examples, 4599 bytes, lines=1, SHA256 `9B27F03310B4C8A39C2BEE77521A12A9BD3250842765021E6507B8EF2E354BC2`)
 - `reports\artifact_detail.json` (artifact_detail_report, report, 5765 bytes, lines=151, SHA256 `CF4C458443DDC432448E3F84A199CD9FE2AA617C282B2C7F7B26F199190C8700`)
 - `reports\artifact_detail.md` (artifact_detail_report, report, 4160 bytes, lines=103, SHA256 `CD71C34BFA14736B09257A5050CD56A619F4B1F9A80C91546FE85A1D273900A9`)
-- `reports\artifact_index.json` (artifact_index, report, 194224 bytes, lines=5215, SHA256 `873B83B13EB0EBA7C419A7E12D265560D213BDF4B8B942E561C9BA646B42F93C`)
-- `reports\artifact_index.md` (artifact_index, report, 92548 bytes, lines=577, SHA256 `00A7014EAB08128233DE5E6A202F93C26EBF70884FBA8AF0A3A0CCAC6D1978CD`)
+- `reports\artifact_index.json` (artifact_index, report, 198064 bytes, lines=5314, SHA256 `B5AD6BF97320E49382536FCC181FC6FE406740EED7815EBD92FBD7C5686F54DF`)
+- `reports\artifact_index.md` (artifact_index, report, 94457 bytes, lines=588, SHA256 `630EFEC4EC96C4D1B4E60D6A6A7BA329118E9357938699B134E8B3D2287A7320`)
 - `reports\corpus\clinicaltrials_gbm_smoke_manifest.json` (manifest, corpus_report, 1524 bytes, lines=46, SHA256 `5937D5D3600FD73F05DA768A723F8CC498A7C8EDE3828DCA9114F1CEAA7DFE76`)
 - `reports\corpus\clinicaltrials_gbm_smoke_manifest.md` (manifest, corpus_report, 1166 bytes, lines=20, SHA256 `23F7D7FC54E938F8D14BB4C79D18DB1EFF11316E3FD6353C4A236C1A969319AC`)
 - `reports\corpus\ncbi_env_smoke_manifest.json` (manifest, corpus_report, 580 bytes, lines=23, SHA256 `625FA8E3A278D459EC8C903437CC88262BDEB73657AA40DB02EB5ABDF52CD151`)
@@ -351,10 +356,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\graph\sample_graph_overlay_load_guard.md` (overlay_load_guard_report, graph_report, 396 bytes, lines=14, SHA256 `2783E5F9175CB540AF1250F6D924F0513E4123C2723FEA44BE68967DAA01471F`)
 - `reports\graph_quality_sample.json` (graph_quality_report, report, 1637 bytes, lines=85, SHA256 `3672C0541658DAF10EDBC876E3006234AD8CB41FB35BFCBE55C9A01CF4B90128`)
 - `reports\graph_quality_sample.md` (graph_quality_report, report, 916 bytes, lines=39, SHA256 `C3022B6C978810BA15A92849FE1D119FCE38446643D153676768BB243EA2A58E`)
-- `reports\platform_regression\local_verification.json` (json_report, report, 3632 bytes, lines=85, SHA256 `EF1D621DEBD5648DC86F1E6903168CF30736A665CB8E00F3161F2310E66480AB`)
-- `reports\platform_regression\local_verification.md` (markdown_report, report, 2845 bytes, lines=47, SHA256 `77DD9B513F586313602084EA132116E1B229DD6818137C7B4FC7FB4D3A754113`)
-- `reports\platform_regression\platform_regression.json` (platform_regression_report, report, 1064 bytes, lines=46, SHA256 `EADC405AD946D3ECBF1C69E5BD406DE0A5247AE640FDFDD058DCB09D0B98730B`)
-- `reports\platform_regression\platform_regression.md` (platform_regression_report, report, 564 bytes, lines=19, SHA256 `30AA9F9C006925395ECC825E2FA92BC38ADFA05A89766794A8730AF0BB38B333`)
+- `reports\platform_regression\artifact_policy.json` (artifact_policy_report, report, 294 bytes, lines=10, SHA256 `981E7B9E99E9FA1FD56C5E296E771FC5C3CBF8EC5AD800081C3BE3BAB8A776AC`)
+- `reports\platform_regression\artifact_policy.md` (artifact_policy_report, report, 308 bytes, lines=13, SHA256 `D341A3FD43A18113F162D37D2EA32E47922F423D447B58621EE184FEEE0BEFD5`)
+- `reports\platform_regression\local_verification.json` (local_verification_report, report, 4109 bytes, lines=98, SHA256 `98C94851A9AE2A4BFF792607A3353B757DC6866DCF05944BD952FAA5F996EA58`)
+- `reports\platform_regression\local_verification.md` (local_verification_report, report, 3190 bytes, lines=53, SHA256 `822E350FEC2665B741FE1CE7970C488F9F4D17216F9D1E4809721F1D4882A138`)
+- `reports\platform_regression\platform_regression.json` (platform_regression_report, report, 1064 bytes, lines=46, SHA256 `7E99228CCBAEDC044210BEA79ED048672C9A9A0B108F1C73769641EC108E6EDA`)
+- `reports\platform_regression\platform_regression.md` (platform_regression_report, report, 564 bytes, lines=19, SHA256 `42010D2BDA18ACC49CD476C6456F02BDA12B3825706BF3AC01FCA9020AB51920`)
 - `reports\platform_regression\scope_drift.json` (scope_drift_report, report, 550 bytes, lines=17, SHA256 `D184C21CD2A1184218491631CD38729C378C30FD8124B4378DFFDB584164CBDC`)
 - `reports\platform_regression\scope_drift.md` (scope_drift_report, report, 275 bytes, lines=12, SHA256 `0023C555D41AFC2142C82E7BF91C3C22E5ACC3855CD204C379B1D5A9AC5E3A9A`)
 - `reports\preflight.json` (preflight_report, report, 1460 bytes, lines=75, SHA256 `2247F25D8434F3B03A18840BF88C552D753C58E49FB1D3CBBED57769E23E194E`)
@@ -383,13 +390,13 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\review\curation_regression_pack\curation_regression_pack.md` (curation_regression_pack_report, review, 922 bytes, lines=16, SHA256 `4A5B0F023A2C4046E9B98A07CA5D26FB272D864C5936C585EECA027D2DE4A67C`)
 - `reports\review\curation_regression_pack\curation_regression_workflow.json` (curation_regression_pack_report, review, 1444 bytes, lines=18, SHA256 `E46F989670F1DF08D09CE00475A1F93995B3554A7C1C1E75D116EBEDF902CFF8`)
 - `reports\review\curation_regression_pack\curation_regression_workflow.md` (curation_regression_pack_report, review, 1354 bytes, lines=21, SHA256 `BA9AB32166619AC5A619E47831EB1906925FACA2A5436492B858BC41AE858DDC`)
-- `reports\review\curation_regression_pack\curation_run_registry.md` (curation_run_registry, review, 774 bytes, lines=14, SHA256 `63D33E90FEF6C886EE8D909E6949006AB88BC6308D9E848BFDAFC48D086BB373`)
+- `reports\review\curation_regression_pack\curation_run_registry.md` (curation_run_registry, review, 788 bytes, lines=14, SHA256 `FF65C11A64A8018D0CB17068F645169080B07DE02773266DE257ADC45A46823D`)
 - `reports\review\curation_regression_pack\evidence_overlay.json` (evidence_overlay_report, review, 722 bytes, lines=22, SHA256 `28795499904554755DAFCFB36FBCE04AB0442671091E4DADCC66658D324B185D`)
 - `reports\review\curation_regression_pack\evidence_overlay.md` (evidence_overlay_report, review, 638 bytes, lines=19, SHA256 `ACF46B5EE2A5F1410EBBF5EA5D379014B17E439F68AC13959E7BC5C9E35A59F9`)
 - `reports\review\curation_regression_pack\evidence_overlay_diff.json` (evidence_overlay_diff_report, review, 711 bytes, lines=24, SHA256 `B531B3AEACEC37881402C1319230E23090D8EDFF1593D88524490A1AA350D913`)
 - `reports\review\curation_regression_pack\evidence_overlay_diff.md` (evidence_overlay_diff_report, review, 634 bytes, lines=21, SHA256 `555C894D8D81AA0D51CD726F81BB4EDAB82A170A48A86FCF09BACF1653F9C406`)
-- `reports\review\curation_regression_pack\evidence_overlay_promotion_gate.json` (evidence_overlay_promotion_gate_report, review, 992 bytes, lines=37, SHA256 `F2C6025615FEB01803D796C445697B4D2C302C56DFD1E5952B6E36D5223BB10A`)
-- `reports\review\curation_regression_pack\evidence_overlay_promotion_gate.md` (evidence_overlay_promotion_gate_report, review, 637 bytes, lines=18, SHA256 `FB1C88A41D06B2057BE25EE65B9D91058F14B95C2FC154FE1FD3F3C7083B3D26`)
+- `reports\review\curation_regression_pack\evidence_overlay_promotion_gate.json` (evidence_overlay_promotion_gate_report, review, 1028 bytes, lines=37, SHA256 `7B5E28E536425132AFF6000B5F0242AFADBBB0B8A1E65B64FF5E620709F47615`)
+- `reports\review\curation_regression_pack\evidence_overlay_promotion_gate.md` (evidence_overlay_promotion_gate_report, review, 655 bytes, lines=18, SHA256 `A92E3AA9E86B0B5A07117B70D6DD96EA5D50A2E47CADC5EF4D0FA918935AA49B`)
 - `reports\review\curation_regression_pack\overlay_graph_quality.json` (graph_quality_report, review, 1648 bytes, lines=82, SHA256 `7E700EC289438F06A0CC3DE225EBEA0336CFD60D5C857B7AA6CDC682CD640D2F`)
 - `reports\review\curation_regression_pack\overlay_graph_quality.md` (graph_quality_report, review, 960 bytes, lines=39, SHA256 `14783D0FBF7E6425287D2C847F432FDCD04ED20BB8869BD98BCB3BA0313BF45C`)
 - `reports\review\curation_regression_pack\overlay_load_guard.json` (overlay_load_guard_report, review, 293 bytes, lines=10, SHA256 `234251EBC8A78E0D7B949A09D568FF827DFEF10FEE39884DAB86250FB66A2D6D`)
@@ -402,7 +409,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\review\curation_regression_pack\prediction_review_summary.md` (prediction_review_summary, review, 541 bytes, lines=29, SHA256 `9E7FA1B9FE8188ACD1F31E95E48BDFF07B749DF312475BC1295A7F4959872F49`)
 - `reports\review\curation_run_browser.json` (curation_run_browser_report, review, 4347 bytes, lines=64, SHA256 `DFF41E5D977FD3AB874438FEAB67367A61365DF6657EE1CBDE9B1F7E7A013BBD`)
 - `reports\review\curation_run_browser.md` (curation_run_browser_report, review, 817 bytes, lines=20, SHA256 `F4287193A8AC27B4A258A76674F5C2E860B74BC554AF58C0CBB8E4DC7D26D00A`)
-- `reports\review\curation_run_registry.json` (curation_run_registry, review, 4180 bytes, lines=56, SHA256 `0121ABC6EFD00E4EFCC83FDA21439DD9109A6202D0F1565BBFF5DE607A6D2991`)
+- `reports\review\curation_run_registry.json` (curation_run_registry, review, 4235 bytes, lines=56, SHA256 `DB158C50A1C823CE468BC6FA96D7050063443D7BAAFFCB072F7978CC7710E6DC`)
 - `reports\review\curation_run_registry.md` (curation_run_registry, review, 542 bytes, lines=13, SHA256 `711038289A4BEC40064D15B74996850F36363B5EA78B3B02B4F88EB72936C136`)
 - `reports\review\curation_run_registry_report.json` (curation_run_registry, review, 2200 bytes, lines=33, SHA256 `BBA44871D8E63F806B0E56E5AA0D7EE9730638AF39578D35F85B23CB4646F1D0`)
 - `reports\review\curation_smoke_workflow\curated_evidence_audit.json` (curated_evidence_audit, review, 436 bytes, lines=15, SHA256 `89D90AE73D76AB347DFDB9AF16C045B70ED6BC2D30400B57C9D182EDADD38F02`)
@@ -439,16 +446,16 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\dashboard_training_manifest.md` (dashboard_training_manifest, training, 371 bytes, lines=12, SHA256 `89F8C2F0A4C3F9E9D33815844255721CDE53515A1340AA07A51AD4E61EB0B7A3`)
 - `reports\training\evidence_label_repair.json` (evidence_label_repair_report, training, 1598 bytes, lines=49, SHA256 `013478772C1A62D62E40099229EEDF2659CBBC1DFAE2220B40BE9C2C691E2B6A`)
 - `reports\training\evidence_label_repair.md` (evidence_label_repair_report, training, 777 bytes, lines=42, SHA256 `86B3F7E454AAE3FAB5CC7D5A951C094CAEFAD805D0636022EA5ECA5EE7164E49`)
-- `reports\training\evidence_pack\evidence_training_pack.json` (evidence_training_pack_report, training, 682 bytes, lines=13, SHA256 `51D980E47917759AAA1EED60A0949D47A2AE3E61E53EA851F564B32B61C37370`)
-- `reports\training\evidence_pack\evidence_training_pack.md` (evidence_training_pack_report, training, 677 bytes, lines=18, SHA256 `D25F6E8E322774A556049E553E7BAE97869AA22B776D8DB4A1A569ABE5A1EA74`)
-- `reports\training\evidence_pack\evidence_training_pack_baseline.json` (evidence_training_pack_report, training, 965 bytes, lines=35, SHA256 `7FAB133F90700FAA638861D8B6A39C97B02B232778BA5D01CBE12511F06853E5`)
-- `reports\training\evidence_pack\evidence_training_pack_baseline.md` (evidence_training_pack_report, training, 882 bytes, lines=34, SHA256 `6338EE3651D7486DD933DDBA59D78B0740E7937A743658237F00D640389253B1`)
-- `reports\training\evidence_pack\evidence_training_pack_dataset_card.json` (evidence_training_pack_report, training, 2251 bytes, lines=75, SHA256 `AC05FFB3F7EA3C4AB924B1FEC6FF473985285C42818A741C782806B8D10F8B20`)
-- `reports\training\evidence_pack\evidence_training_pack_dataset_card.md` (evidence_training_pack_report, training, 1914 bytes, lines=79, SHA256 `3662B1C618375937314C749927A3D1CCDB5F12FC2475D8A06B7A1F6DE3AC9A22`)
-- `reports\training\evidence_pack\evidence_training_pack_readiness.json` (evidence_training_pack_report, training, 669 bytes, lines=25, SHA256 `A909A1D518EFED138EDBA4C70C8F8DED6717D5C90B41056F3F654D23E032F246`)
-- `reports\training\evidence_pack\evidence_training_pack_readiness.md` (evidence_training_pack_report, training, 549 bytes, lines=28, SHA256 `0976C27AF394596C9C3A4BD7B8C50DC0483F9547DF44EF5413F1B9A9A0EDFEB0`)
-- `reports\training\evidence_pack\full_label_coverage_plan.json` (json_report, training, 516 bytes, lines=22, SHA256 `DF80E0FF1AB679E3B31B191B50633F2D160A8323727D7E8E5192C2FE4420ABD0`)
-- `reports\training\evidence_pack\full_label_coverage_plan.md` (markdown_report, training, 963 bytes, lines=19, SHA256 `02CAC1AA9F9D2BAE1C328D31E8DD5ADDBA3242013003550177C14E81AA722C59`)
+- `reports\training\evidence_pack\evidence_training_pack.json` (evidence_training_pack_report, training, 694 bytes, lines=13, SHA256 `E6A49867FFD195C01BFCB01471607AD23C5A769384ED13965B842CE0985899E4`)
+- `reports\training\evidence_pack\evidence_training_pack.md` (evidence_training_pack_report, training, 688 bytes, lines=18, SHA256 `B84110B4DAC7B15EB8FA848012C1DDF3F98E0B8502C989371732F1A2EC3415EF`)
+- `reports\training\evidence_pack\evidence_training_pack_baseline.json` (evidence_training_pack_report, training, 965 bytes, lines=35, SHA256 `E7C7A1BCF8961B7C38F8ACC8050F5B18A41437E536F0CE8CE6F92BD9C990E55D`)
+- `reports\training\evidence_pack\evidence_training_pack_baseline.md` (evidence_training_pack_report, training, 882 bytes, lines=34, SHA256 `15FE09132B0549FBB4ED0885E3472E8CB00A6B22651924C06E593E9CEDBC7FE6`)
+- `reports\training\evidence_pack\evidence_training_pack_dataset_card.json` (evidence_training_pack_report, training, 2321 bytes, lines=79, SHA256 `40896AAF16E7714DDC85C3E2D7479846C319008F515272224666EFDF658E8C48`)
+- `reports\training\evidence_pack\evidence_training_pack_dataset_card.md` (evidence_training_pack_report, training, 1948 bytes, lines=83, SHA256 `946B501A6DF03C0E7D2A85CA322C2181B7A4A628C45A8D3FCCBC3919DF8D9B25`)
+- `reports\training\evidence_pack\evidence_training_pack_readiness.json` (evidence_training_pack_report, training, 754 bytes, lines=29, SHA256 `B0F04A856D694294BEA3A74710065CA02D9EA40F4A5BE825482DAB8305B8F7A5`)
+- `reports\training\evidence_pack\evidence_training_pack_readiness.md` (evidence_training_pack_report, training, 583 bytes, lines=32, SHA256 `2EE4AAA33426ADE30B91ED82EE9FA95E9D187094375010C2C5E3D371CC2E5AA3`)
+- `reports\training\evidence_pack\full_label_coverage_plan.json` (json_report, training, 605 bytes, lines=19, SHA256 `C80148A8F31B5A885C2E662E704DA55C8D4BB99596961583FBC6109D705C70C1`)
+- `reports\training\evidence_pack\full_label_coverage_plan.md` (markdown_report, training, 1150 bytes, lines=21, SHA256 `6CED0D52BAFA073300F6FFD8C272C009E45EEE6ABE0809F00ECE19134FF3FBB4`)
 - `reports\training\evidence_smoke_fixture\evidence_prediction_quality.json` (prediction_quality_report, training, 779 bytes, lines=40, SHA256 `E4BB242548E2AF07B02A3EA0946EA427C04848AC657EBB88D6D1ED5B6248417A`)
 - `reports\training\evidence_smoke_fixture\evidence_prediction_quality.md` (prediction_quality_report, training, 576 bytes, lines=26, SHA256 `6EA57C9BD60FE5DA447D786E7C38F3932C378082D0C993941CBFDC3EF037FB04`)
 - `reports\training\evidence_smoke_fixture\evidence_smoke_metrics.json` (training_metrics, training, 687 bytes, lines=36, SHA256 `0E2178E53AE0C5050804C53F2B0A25931B86C71A9548EC7D8D6AE667DC5C2778`)
@@ -460,67 +467,71 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\evidence_smoke_fixture\evidence_smoke_score_input.jsonl` (evidence_claims, training, 79 bytes, lines=1, SHA256 `DAFB3E58F471052E0C711D8CB1B5BB7D7E48891727BA63DD729BC09A05D6A2F8`)
 - `reports\training\evidence_smoke_fixture\evidence_smoke_summary.json` (training_smoke_summary, training, 628 bytes, lines=11, SHA256 `50758F78D9E570803E00B4EB3F9B495726DDCD6D662E9AAE3545AA2837805B75`)
 - `reports\training\evidence_smoke_fixture\sample_graph_predictions.jsonl` (evidence_predictions, training, 439 bytes, lines=1, SHA256 `4833049E800B76B43DB3F1139D456FBB71C32505EEC877BCDA9191FC6AC5AF19`)
-- `reports\training\gold_pack\baseline_report.json` (baseline_report, training, 968 bytes, lines=34, SHA256 `886DD6B03F261DFA8548A16E1F5CD367A8503E22BB5E061575F3BE1B35A5359A`)
-- `reports\training\gold_pack\baseline_report.md` (baseline_report, training, 902 bytes, lines=35, SHA256 `64B5D6430320E8400B4F7C08A2F6C4BDB79BD58E1D0C68C989EF0F64B618FF52`)
-- `reports\training\gold_pack\dataset_card.json` (dataset_card, training, 2270 bytes, lines=72, SHA256 `3BD54906C06CCDA6C0CDD7E7A0CEA03A8D77831DAD36D569AEF18DF68BB58034`)
-- `reports\training\gold_pack\dataset_card.md` (dataset_card, training, 1980 bytes, lines=80, SHA256 `9C65C0AE489C26820470FAD69CF0015F79B3400148088300459E9BEF5E9E1870`)
-- `reports\training\gold_pack\evidence_label_repair.json` (evidence_label_repair_report, training, 1280 bytes, lines=36, SHA256 `0B4F510E4F53054FBE3B0E0BC38C9818737CEE3CCF1598AA0FDF1FD9F83B3AAC`)
-- `reports\training\gold_pack\evidence_label_repair.md` (evidence_label_repair_report, training, 610 bytes, lines=33, SHA256 `9D5F7962C66248BDC1D25BCBCA6CC4C98B3153439C1FA8400533C64B49171AD4`)
-- `reports\training\gold_pack\gold_pack_expansion_plan.json` (json_report, training, 864 bytes, lines=13, SHA256 `50C572994D89323721ED51A2CE39D8086A9BA216CED6CE0D4786709020481986`)
-- `reports\training\gold_pack\gold_pack_expansion_plan.md` (markdown_report, training, 1498 bytes, lines=27, SHA256 `E464166A267670E2C7B5ABD16A8DF44315E2122047FEAB36385E6941EED7E456`)
-- `reports\training\gold_pack\gold_seed_manifest.json` (gold_seed_manifest, training, 906 bytes, lines=20, SHA256 `EF38B5754EC10F146CE232EF6A006DD25F378007F9328D09CA9080398908BE64`)
-- `reports\training\gold_pack\gold_training_pack.json` (gold_training_pack_report, training, 1724 bytes, lines=29, SHA256 `47FD40466A058903F2899A85A67E2DB046B4451C7DE5BC2C8BD61DFA5330C48C`)
-- `reports\training\gold_pack\gold_training_pack.md` (gold_training_pack_report, training, 1296 bytes, lines=26, SHA256 `C2EC6D58F775DF0B548C5B8D5187488204403BE792F063F6843971C0B063A577`)
-- `reports\training\gold_pack\pmid_split_manifest.json` (pmid_split_manifest, training, 2443 bytes, lines=78, SHA256 `7876CE3B14190315BFD4539C9B9557E62F5012FDE6AE5FEBEED9E09420E2FA98`)
-- `reports\training\gold_pack\pmid_split_manifest.md` (pmid_split_manifest, training, 608 bytes, lines=34, SHA256 `FF98D9F91931CE89B45DE11570472B7CE31BB7A8A5E24FF9EF17AA5868D51C6A`)
-- `reports\training\gold_pack\training_readiness.json` (training_readiness_report, training, 1295 bytes, lines=51, SHA256 `B63B3BC92A7483DEE1EC034F707B0A9A5E596222B0297DC71A50A0F160D2C48B`)
-- `reports\training\gold_pack\training_readiness.md` (training_readiness_report, training, 944 bytes, lines=50, SHA256 `A2696C4B28E98F58814D191539466DC1F69138EED238289AA3658D13E29E29E0`)
-- `reports\training\gold_seed_manifest.json` (gold_seed_manifest, training, 840 bytes, lines=20, SHA256 `BAD9DA1A485ACC9C0B90FD83E305566064563954F5E8D81A04EE58DE87AF83E4`)
-- `reports\training\gold_seed_manifest.md` (gold_seed_manifest, training, 636 bytes, lines=20, SHA256 `A07FBD21E829BB7751B7BA3ECAC000C6EDB9C9F3BDED4FD27B6B79D7381707E3`)
-- `reports\training\governance\bundle\training_artifact_bundle.json` (training_artifact_bundle_manifest, training, 88442 bytes, lines=1760, SHA256 `6851CB5DEE482355F7F843C27426809AEBBDBF0C8E50CFC4B60628F1C48DA7C2`)
-- `reports\training\governance\bundle\training_artifact_bundle.md` (training_artifact_bundle_manifest, training, 39047 bytes, lines=262, SHA256 `BA7E2C7448D430507CC9CBE964F42FA75D10BA5E358ADAE2FA5E1BA6DE053677`)
-- `reports\training\governance\dashboard_training_manifest.json` (dashboard_training_manifest, training, 488 bytes, lines=12, SHA256 `7756E1484945C6F717B564A38A44491CF7975FBB44C658C9F6E143CAB8651CF2`)
-- `reports\training\governance\dashboard_training_manifest.md` (dashboard_training_manifest, training, 371 bytes, lines=12, SHA256 `7B5021D27BDEEB733F250D82413FE53E1B6405B254B72B22573D26D7609029CB`)
+- `reports\training\gold_pack\baseline_report.json` (baseline_report, training, 962 bytes, lines=37, SHA256 `B91AC3470EF181228919FD005FDB8CE324D372881C6B77E096EC2685AF804077`)
+- `reports\training\gold_pack\baseline_report.md` (baseline_report, training, 847 bytes, lines=34, SHA256 `135D38A15EE6F545C28B73E8509B9914A95FD45F5EAC8C18BD0121B90051ECC2`)
+- `reports\training\gold_pack\dataset_card.json` (dataset_card, training, 2585 bytes, lines=97, SHA256 `22750F35160A7D3CBC4F65BDE45A3990742CA6C5EACFCD1CE7FA07BA2C9E689E`)
+- `reports\training\gold_pack\dataset_card.md` (dataset_card, training, 1992 bytes, lines=91, SHA256 `709C2DE8B187F03DEFF4C7F556DE35E3BB2A4AC4311E27F29E389AF58DD45126`)
+- `reports\training\gold_pack\evidence_label_repair.json` (evidence_label_repair_report, training, 1757 bytes, lines=58, SHA256 `643A95CE231CE050F2981931A6F692C1A0F17BB99B87A891ADE64764CF7447F8`)
+- `reports\training\gold_pack\evidence_label_repair.md` (evidence_label_repair_report, training, 877 bytes, lines=51, SHA256 `10412FEBC54E86BC31F9EA7691F575196641DEF6E155F96EB0E822954478585A`)
+- `reports\training\gold_pack\gold_pack_expansion_plan.json` (json_report, training, 993 bytes, lines=17, SHA256 `601C80A7881AB63AB1B777B6D86FF96AC690538E3D53B2140AEF8BCF89D40470`)
+- `reports\training\gold_pack\gold_pack_expansion_plan.md` (markdown_report, training, 1582 bytes, lines=29, SHA256 `6FC6BCAB2A2DE902DD58F0BBEC18A25F274C09272E5F602597E3A953D0F97FEE`)
+- `reports\training\gold_pack\gold_seed_manifest.json` (gold_seed_manifest, training, 965 bytes, lines=20, SHA256 `4D3004881760BDB13DD65947AE61052C49F9F1DDF2E33FE8DED7885649A97159`)
+- `reports\training\gold_pack\gold_training_pack.json` (gold_training_pack_report, training, 1645 bytes, lines=26, SHA256 `55F00930053B482281E0BD070350020238E89D82B9599FCE8B017123D446E9C1`)
+- `reports\training\gold_pack\gold_training_pack.md` (gold_training_pack_report, training, 1238 bytes, lines=25, SHA256 `6FAF6916A45098FED55F9684E63ED4ECA28AC6BAC129B57F46D9D4B7ED21D8BE`)
+- `reports\training\gold_pack\pmid_split_manifest.json` (pmid_split_manifest, training, 3162 bytes, lines=112, SHA256 `404814B14A91E21409FEAD90363C423FAA000E0184742DB83ABFF7C93B5B8CED`)
+- `reports\training\gold_pack\pmid_split_manifest.md` (pmid_split_manifest, training, 612 bytes, lines=34, SHA256 `B33697F629B23E3E67B4E479BB02BC07866CBC90BF89A1117CE4DDF3619D9658`)
+- `reports\training\gold_pack\relation_dataset_quality.json` (relation_dataset_quality_report, training, 511 bytes, lines=17, SHA256 `64533D443D26498B09A2213EFD43AB71A04709A145E212A73E76F081350A3E52`)
+- `reports\training\gold_pack\relation_dataset_quality.md` (relation_dataset_quality_report, training, 475 bytes, lines=20, SHA256 `54763E5382A46FC736B7445D3E5DC2434793A8EDA2F5D3FB3542E77474C2C3D1`)
+- `reports\training\gold_pack\relation_training_provenance_audit.json` (training_provenance_audit_report, training, 441 bytes, lines=13, SHA256 `730629C103C23E27507EB2E400FA0F759FB4179213D96E99A449AF56A6F7914B`)
+- `reports\training\gold_pack\relation_training_provenance_audit.md` (training_provenance_audit_report, training, 363 bytes, lines=14, SHA256 `ACEBD87FB5BB042EED5B822D80070F1193B72777DA64A91B16E06C1848F3EBA7`)
+- `reports\training\gold_pack\training_readiness.json` (training_readiness_report, training, 1655 bytes, lines=66, SHA256 `65A0774DACA69310A73C7155D389A0FF24403AD3F25E057ED99543B3A582F17F`)
+- `reports\training\gold_pack\training_readiness.md` (training_readiness_report, training, 1122 bytes, lines=67, SHA256 `ADD1A3DAD8244CEADC5E389F516A5814F2E64C481AF8F01640A81AFD02458BC8`)
+- `reports\training\gold_seed_manifest.json` (gold_seed_manifest, training, 899 bytes, lines=20, SHA256 `934C101B9A0BF0B711F0A4AD886ADE4153DBD2522FDE9A46925416FDFDA0A432`)
+- `reports\training\gold_seed_manifest.md` (gold_seed_manifest, training, 639 bytes, lines=20, SHA256 `02AA0FB521DFAEBF17FDFF3ACCEE4840A956835B8B515A96B4E591295EF97B93`)
+- `reports\training\governance\bundle\training_artifact_bundle.json` (training_artifact_bundle_manifest, training, 90959 bytes, lines=1809, SHA256 `AD2365A33F63B7679C6FB0FCC872373C053F80BC93F36C7140105F586358FFB7`)
+- `reports\training\governance\bundle\training_artifact_bundle.md` (training_artifact_bundle_manifest, training, 40125 bytes, lines=269, SHA256 `6DEE1B4AFC6000EDF73B7E19AA0E0DD06D2CD127223CC4E157E6ADD0D2B42233`)
+- `reports\training\governance\dashboard_training_manifest.json` (dashboard_training_manifest, training, 488 bytes, lines=12, SHA256 `1D060ECF8262F4E7C898E0459A26664AD978FBEF9EBE7CB527B8D867F7B17A53`)
+- `reports\training\governance\dashboard_training_manifest.md` (dashboard_training_manifest, training, 371 bytes, lines=12, SHA256 `F7F5BD085D6F9DB2438C6496C224043315C1CD76B4FF002DAF4FFFB1F6031216`)
 - `reports\training\governance\model_registry_audit.json` (model_registry_audit_report, training, 1154 bytes, lines=35, SHA256 `726CB944EEB4BB2E7C469E223D1D89EDC8C8E340188D0517BCBDBFA07978D19F`)
 - `reports\training\governance\model_registry_audit.md` (model_registry_audit_report, training, 972 bytes, lines=39, SHA256 `8AC161DD4AA189DC641C9FFA5082A08CA1C79ACED5A7830B401CCA186EE22CD1`)
 - `reports\training\governance\model_registry_remediation_plan.json` (model_registry_remediation_plan, training, 254 bytes, lines=6, SHA256 `F17D2891E9293955FA0EF40271ED4AF19004F396DFD72F5BDF842ECD9C36897A`)
 - `reports\training\governance\model_registry_remediation_plan.md` (model_registry_remediation_plan, training, 268 bytes, lines=9, SHA256 `4BCA58EDA4FFBF1F99700D0E8211EA4F17893E234BC0FD3581EB4D7E4A00EE3E`)
-- `reports\training\governance\training_config_suite_review.json` (training_config_suite_review_report, training, 13042 bytes, lines=346, SHA256 `F69074E953520DCBEECB2D497C42D31EFD248819A1CD9AFAB9B48261E01026E9`)
-- `reports\training\governance\training_config_suite_review.md` (training_config_suite_review_report, training, 2191 bytes, lines=63, SHA256 `556DAB700EB26C428CD108966B5E1AD956B609773926F7198615431A17D6C02E`)
+- `reports\training\governance\training_config_suite_review.json` (training_config_suite_review_report, training, 12687 bytes, lines=353, SHA256 `3134A427E4CD2C7F648BDCCBCAD8023E4DBE2F6713346A11B71D1D0912CF5AF5`)
+- `reports\training\governance\training_config_suite_review.md` (training_config_suite_review_report, training, 1647 bytes, lines=60, SHA256 `4A0A332D46EC01ED7C4D5F951DE608A35429F1ECD690CC08AD95C64C8FFB2C6F`)
 - `reports\training\governance\training_governance_suite.json` (training_governance_suite_report, training, 1163 bytes, lines=19, SHA256 `CDB17E922E0028DCF0FC4649C328D6F179D3BDEFD9D2B63E4A5A8F03398FA8D5`)
 - `reports\training\governance\training_governance_suite.md` (training_governance_suite_report, training, 1092 bytes, lines=22, SHA256 `52303E209E540EDCA40BD0518487F00B508E85F2525A45E7E83BA279F2B1A08D`)
-- `reports\training\governance\training_label_drift.json` (training_label_drift_report, training, 1194 bytes, lines=56, SHA256 `FCF46EF6F0562693633067B711534C8C15F6C664F2FEE6A5415B5C0E00C07E1C`)
-- `reports\training\governance\training_label_drift.md` (training_label_drift_report, training, 534 bytes, lines=24, SHA256 `604E1D91EFC00D87BC9EB25BE84104046AB15BDD42ADEB9C7949B64C8E8B39C3`)
-- `reports\training\governance\training_pack_comparison.json` (training_pack_comparison_report, training, 2323 bytes, lines=79, SHA256 `BD5ADB427DFAF2555073681A842B70522E83E94637D10857BE78E1BC9C9FA805`)
-- `reports\training\governance\training_pack_comparison.md` (training_pack_comparison_report, training, 1629 bytes, lines=66, SHA256 `2531B5759F2447BF4CC3550166A994300A648745CA3686DE4ADAC84FF615E102`)
-- `reports\training\governance\training_pack_leakage_audit.json` (training_pack_leakage_audit_report, training, 4165 bytes, lines=203, SHA256 `DA99F1A832B7458F9EAF3E42B10B007A527C0F34C1ABA5CEECF81053A1D48CC8`)
-- `reports\training\governance\training_pack_leakage_audit.md` (training_pack_leakage_audit_report, training, 1564 bytes, lines=42, SHA256 `0944815208BF3DEC269CC9BC933AF95C1F377EDCA05A02BD8CA8BBFC24399826`)
+- `reports\training\governance\training_label_drift.json` (training_label_drift_report, training, 1847 bytes, lines=89, SHA256 `24CD437BFC48714BE91B01EBA88040C1E1D75AF0CC8C6F87488C05FD77B937D1`)
+- `reports\training\governance\training_label_drift.md` (training_label_drift_report, training, 592 bytes, lines=24, SHA256 `D7699D95D0A7BA862E4D950C38E13AD771915FC4CA144DD6C4822C8A90826CF4`)
+- `reports\training\governance\training_pack_comparison.json` (training_pack_comparison_report, training, 2830 bytes, lines=102, SHA256 `AA6DEFAE36D57150CD47A6CDEA5FDC8E7F0A74471D93AE2E8AE69BE738A1CCB0`)
+- `reports\training\governance\training_pack_comparison.md` (training_pack_comparison_report, training, 1803 bytes, lines=65, SHA256 `DFBC8A20B77486AADFEDB41B4932D4553A7389963AAD638406EF4626C3F413ED`)
+- `reports\training\governance\training_pack_leakage_audit.json` (training_pack_leakage_audit_report, training, 4391 bytes, lines=207, SHA256 `9BF0361A2B1F939F6C9C3BDB0187AEDC56C7EFCA9D12BFB1907C567F7117BFC1`)
+- `reports\training\governance\training_pack_leakage_audit.md` (training_pack_leakage_audit_report, training, 1764 bytes, lines=44, SHA256 `C3BD56D1E8DBB36061D837CC3569F240D5AB86E1900CA9AD247A7E16FA5488DD`)
 - `reports\training\governance\training_provenance_audit.json` (training_provenance_audit_report, training, 420 bytes, lines=13, SHA256 `CF0C91CA8AC6C9E24D1CD40376A1F727952F6C5B7DBEAB0481B04BEFC57A1669`)
 - `reports\training\governance\training_provenance_audit.md` (training_provenance_audit_report, training, 344 bytes, lines=14, SHA256 `4130F4D9BEEBC3091EB405A5B038FDDA9E93966AABFCD6E9EC423AE91E34D0BE`)
-- `reports\training\governance\training_readiness_snapshot.json` (training_readiness_snapshot, training, 475 bytes, lines=13, SHA256 `84AB4F84775321901F3F353E93254F123BADAA7ACC5480BD947AFEC0B166978C`)
-- `reports\training\governance\training_readiness_snapshot.md` (training_readiness_snapshot, training, 422 bytes, lines=15, SHA256 `E1F25303DF8800AC2158F8FFF6052C030596C8EC4A901965FC47E3B2E6E48F39`)
-- `reports\training\governance_strict\bundle\training_artifact_bundle.json` (training_artifact_bundle_manifest, training, 78888 bytes, lines=1578, SHA256 `E71570798FB59C22F53717B44D159C62A9086B155A81B9379322868AE7DD692A`)
-- `reports\training\governance_strict\bundle\training_artifact_bundle.md` (training_artifact_bundle_manifest, training, 34628 bytes, lines=236, SHA256 `949B0C6277FC4AE103E21FA4B8F7914A10DAC0EA2A759C6C56CD5755D79EF058`)
-- `reports\training\governance_strict\dashboard_training_manifest.json` (dashboard_training_manifest, training, 495 bytes, lines=12, SHA256 `109A94BBD90C4C9245E7DCE7B05AFB03B7CB95C6776B5D53BABC04F28FF671C7`)
-- `reports\training\governance_strict\dashboard_training_manifest.md` (dashboard_training_manifest, training, 371 bytes, lines=12, SHA256 `7B5021D27BDEEB733F250D82413FE53E1B6405B254B72B22573D26D7609029CB`)
+- `reports\training\governance\training_readiness_snapshot.json` (training_readiness_snapshot, training, 475 bytes, lines=13, SHA256 `F319E5E043D0E32A7EFB50FE56E2BBFBF538F131A586F83A3E041A4B1353541E`)
+- `reports\training\governance\training_readiness_snapshot.md` (training_readiness_snapshot, training, 422 bytes, lines=15, SHA256 `381B5552603EE8A3DDABF249909D535BB9F1A57DE622B3E8061F974E9D34BF4C`)
+- `reports\training\governance_strict\bundle\training_artifact_bundle.json` (training_artifact_bundle_manifest, training, 88456 bytes, lines=1760, SHA256 `9CE44A005A198712200DF99E8E392FAD6DC31D56BCDC3DBAFDDF5941F4B34CD1`)
+- `reports\training\governance_strict\bundle\training_artifact_bundle.md` (training_artifact_bundle_manifest, training, 39054 bytes, lines=262, SHA256 `91E2B62EDF447C5EF8FB620F921BF584CC349C61FFA8B88B7F4E3935704EB498`)
+- `reports\training\governance_strict\dashboard_training_manifest.json` (dashboard_training_manifest, training, 495 bytes, lines=12, SHA256 `AC2F92D346EC553706E6096B77403FAF2F819B24F3566A7373112ECEDBEFB7D1`)
+- `reports\training\governance_strict\dashboard_training_manifest.md` (dashboard_training_manifest, training, 371 bytes, lines=12, SHA256 `F7F5BD085D6F9DB2438C6496C224043315C1CD76B4FF002DAF4FFFB1F6031216`)
 - `reports\training\governance_strict\model_registry_audit.json` (model_registry_audit_report, training, 1154 bytes, lines=35, SHA256 `726CB944EEB4BB2E7C469E223D1D89EDC8C8E340188D0517BCBDBFA07978D19F`)
 - `reports\training\governance_strict\model_registry_audit.md` (model_registry_audit_report, training, 972 bytes, lines=39, SHA256 `8AC161DD4AA189DC641C9FFA5082A08CA1C79ACED5A7830B401CCA186EE22CD1`)
 - `reports\training\governance_strict\model_registry_remediation_plan.json` (model_registry_remediation_plan, training, 261 bytes, lines=6, SHA256 `68321F6B896648F0141A49D11829920DA64D6B362EA290765FBADA9F94E4F350`)
 - `reports\training\governance_strict\model_registry_remediation_plan.md` (model_registry_remediation_plan, training, 275 bytes, lines=9, SHA256 `E9B24EB5EC864CB1A7010D5FE6BFD2E3C59BECE37588EC11E94C79FC2A50955B`)
-- `reports\training\governance_strict\training_config_suite_review.json` (training_config_suite_review_report, training, 13042 bytes, lines=346, SHA256 `F69074E953520DCBEECB2D497C42D31EFD248819A1CD9AFAB9B48261E01026E9`)
-- `reports\training\governance_strict\training_config_suite_review.md` (training_config_suite_review_report, training, 2191 bytes, lines=63, SHA256 `556DAB700EB26C428CD108966B5E1AD956B609773926F7198615431A17D6C02E`)
-- `reports\training\governance_strict\training_governance_suite.json` (training_governance_suite_report, training, 1640 bytes, lines=22, SHA256 `70B7CB656F67F9AC3F80F9319B13C8D9B68B63D9113BAC2A4FC4306769C2DB54`)
-- `reports\training\governance_strict\training_governance_suite.md` (training_governance_suite_report, training, 1544 bytes, lines=23, SHA256 `D0609EB2F5EAB7EE1410976550DED964C9372BB14DCB5767910273873EBF6B8B`)
-- `reports\training\governance_strict\training_label_drift.json` (training_label_drift_report, training, 1194 bytes, lines=56, SHA256 `FCF46EF6F0562693633067B711534C8C15F6C664F2FEE6A5415B5C0E00C07E1C`)
-- `reports\training\governance_strict\training_label_drift.md` (training_label_drift_report, training, 534 bytes, lines=24, SHA256 `604E1D91EFC00D87BC9EB25BE84104046AB15BDD42ADEB9C7949B64C8E8B39C3`)
-- `reports\training\governance_strict\training_pack_comparison.json` (training_pack_comparison_report, training, 2323 bytes, lines=79, SHA256 `BD5ADB427DFAF2555073681A842B70522E83E94637D10857BE78E1BC9C9FA805`)
-- `reports\training\governance_strict\training_pack_comparison.md` (training_pack_comparison_report, training, 1629 bytes, lines=66, SHA256 `2531B5759F2447BF4CC3550166A994300A648745CA3686DE4ADAC84FF615E102`)
-- `reports\training\governance_strict\training_pack_leakage_audit.json` (training_pack_leakage_audit_report, training, 4165 bytes, lines=203, SHA256 `DA99F1A832B7458F9EAF3E42B10B007A527C0F34C1ABA5CEECF81053A1D48CC8`)
-- `reports\training\governance_strict\training_pack_leakage_audit.md` (training_pack_leakage_audit_report, training, 1564 bytes, lines=42, SHA256 `0944815208BF3DEC269CC9BC933AF95C1F377EDCA05A02BD8CA8BBFC24399826`)
+- `reports\training\governance_strict\training_config_suite_review.json` (training_config_suite_review_report, training, 12687 bytes, lines=353, SHA256 `3134A427E4CD2C7F648BDCCBCAD8023E4DBE2F6713346A11B71D1D0912CF5AF5`)
+- `reports\training\governance_strict\training_config_suite_review.md` (training_config_suite_review_report, training, 1647 bytes, lines=60, SHA256 `4A0A332D46EC01ED7C4D5F951DE608A35429F1ECD690CC08AD95C64C8FFB2C6F`)
+- `reports\training\governance_strict\training_governance_suite.json` (training_governance_suite_report, training, 1309 bytes, lines=21, SHA256 `8FFA349A626362ACEA18E9C9E621F93B5BC9D8FD06461564024686B4B15D8530`)
+- `reports\training\governance_strict\training_governance_suite.md` (training_governance_suite_report, training, 1222 bytes, lines=22, SHA256 `8B4269151E7EAD2B0D4797D9B400AF18AB8157345BE46B2F6969C17910FA92A6`)
+- `reports\training\governance_strict\training_label_drift.json` (training_label_drift_report, training, 1847 bytes, lines=89, SHA256 `24CD437BFC48714BE91B01EBA88040C1E1D75AF0CC8C6F87488C05FD77B937D1`)
+- `reports\training\governance_strict\training_label_drift.md` (training_label_drift_report, training, 592 bytes, lines=24, SHA256 `D7699D95D0A7BA862E4D950C38E13AD771915FC4CA144DD6C4822C8A90826CF4`)
+- `reports\training\governance_strict\training_pack_comparison.json` (training_pack_comparison_report, training, 2830 bytes, lines=102, SHA256 `AA6DEFAE36D57150CD47A6CDEA5FDC8E7F0A74471D93AE2E8AE69BE738A1CCB0`)
+- `reports\training\governance_strict\training_pack_comparison.md` (training_pack_comparison_report, training, 1803 bytes, lines=65, SHA256 `DFBC8A20B77486AADFEDB41B4932D4553A7389963AAD638406EF4626C3F413ED`)
+- `reports\training\governance_strict\training_pack_leakage_audit.json` (training_pack_leakage_audit_report, training, 4391 bytes, lines=207, SHA256 `9BF0361A2B1F939F6C9C3BDB0187AEDC56C7EFCA9D12BFB1907C567F7117BFC1`)
+- `reports\training\governance_strict\training_pack_leakage_audit.md` (training_pack_leakage_audit_report, training, 1764 bytes, lines=44, SHA256 `C3BD56D1E8DBB36061D837CC3569F240D5AB86E1900CA9AD247A7E16FA5488DD`)
 - `reports\training\governance_strict\training_provenance_audit.json` (training_provenance_audit_report, training, 420 bytes, lines=13, SHA256 `CF0C91CA8AC6C9E24D1CD40376A1F727952F6C5B7DBEAB0481B04BEFC57A1669`)
 - `reports\training\governance_strict\training_provenance_audit.md` (training_provenance_audit_report, training, 344 bytes, lines=14, SHA256 `4130F4D9BEEBC3091EB405A5B038FDDA9E93966AABFCD6E9EC423AE91E34D0BE`)
-- `reports\training\governance_strict\training_readiness_snapshot.json` (training_readiness_snapshot, training, 475 bytes, lines=13, SHA256 `DFC1A441050840FF16899EB740671C876A466725DBABBFDA0AC7978E72144E82`)
-- `reports\training\governance_strict\training_readiness_snapshot.md` (training_readiness_snapshot, training, 422 bytes, lines=15, SHA256 `319252370AD50AD3B37FCDE64500DAF8DAE1DEE21C176CB33087B9883A8216F6`)
+- `reports\training\governance_strict\training_readiness_snapshot.json` (training_readiness_snapshot, training, 475 bytes, lines=13, SHA256 `8440E956D6DECA0251963DA15462172AA5F53E8E315852D864E544CCB7ED1C2D`)
+- `reports\training\governance_strict\training_readiness_snapshot.md` (training_readiness_snapshot, training, 422 bytes, lines=15, SHA256 `0BD8448285208F79EB344DBD016ABE3C5BA267EDDB3F4F9878F7618BE36F592C`)
 - `reports\training\model_registry_audit.json` (model_registry_audit_report, training, 1154 bytes, lines=35, SHA256 `726CB944EEB4BB2E7C469E223D1D89EDC8C8E340188D0517BCBDBFA07978D19F`)
 - `reports\training\model_registry_audit.md` (model_registry_audit_report, training, 972 bytes, lines=39, SHA256 `8AC161DD4AA189DC641C9FFA5082A08CA1C79ACED5A7830B401CCA186EE22CD1`)
 - `reports\training\model_registry_remediation_plan.json` (model_registry_remediation_plan, training, 242 bytes, lines=6, SHA256 `980BA2D3390161BA58A49E2F33ED28E205BF952A42CF8BE3FC9DC1D21CCB347C`)
@@ -559,12 +570,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\training_artifact_search.md` (training_artifact_search_report, training, 2788 bytes, lines=39, SHA256 `419636643085B5EBA25CC044C0B3CE594209B72BE9D65D400290CB18E972FBF8`)
 - `reports\training\training_config_review.json` (training_config_review_report, training, 1740 bytes, lines=51, SHA256 `F9BAF71329DDCEDC96BAA28936786D2985D75C4A5A5072C8932C1FF9A96840C8`)
 - `reports\training\training_config_review.md` (training_config_review_report, training, 1515 bytes, lines=47, SHA256 `B004F184A65D30A2FAD7ED173CB94C555EA397C1E92CED75B04CEBC4AB38D252`)
-- `reports\training\training_config_suite_review.json` (training_config_suite_review_report, training, 13042 bytes, lines=346, SHA256 `F69074E953520DCBEECB2D497C42D31EFD248819A1CD9AFAB9B48261E01026E9`)
-- `reports\training\training_config_suite_review.md` (training_config_suite_review_report, training, 2191 bytes, lines=63, SHA256 `556DAB700EB26C428CD108966B5E1AD956B609773926F7198615431A17D6C02E`)
+- `reports\training\training_config_suite_review.json` (training_config_suite_review_report, training, 12687 bytes, lines=353, SHA256 `3134A427E4CD2C7F648BDCCBCAD8023E4DBE2F6713346A11B71D1D0912CF5AF5`)
+- `reports\training\training_config_suite_review.md` (training_config_suite_review_report, training, 1647 bytes, lines=60, SHA256 `4A0A332D46EC01ED7C4D5F951DE608A35429F1ECD690CC08AD95C64C8FFB2C6F`)
 - `reports\training\training_label_drift.json` (training_label_drift_report, training, 1194 bytes, lines=56, SHA256 `FCF46EF6F0562693633067B711534C8C15F6C664F2FEE6A5415B5C0E00C07E1C`)
 - `reports\training\training_label_drift.md` (training_label_drift_report, training, 534 bytes, lines=24, SHA256 `604E1D91EFC00D87BC9EB25BE84104046AB15BDD42ADEB9C7949B64C8E8B39C3`)
-- `reports\training\training_pack_comparison.json` (training_pack_comparison_report, training, 2323 bytes, lines=79, SHA256 `BD5ADB427DFAF2555073681A842B70522E83E94637D10857BE78E1BC9C9FA805`)
-- `reports\training\training_pack_comparison.md` (training_pack_comparison_report, training, 1629 bytes, lines=66, SHA256 `2531B5759F2447BF4CC3550166A994300A648745CA3686DE4ADAC84FF615E102`)
+- `reports\training\training_pack_comparison.json` (training_pack_comparison_report, training, 2830 bytes, lines=102, SHA256 `AA6DEFAE36D57150CD47A6CDEA5FDC8E7F0A74471D93AE2E8AE69BE738A1CCB0`)
+- `reports\training\training_pack_comparison.md` (training_pack_comparison_report, training, 1803 bytes, lines=65, SHA256 `DFBC8A20B77486AADFEDB41B4932D4553A7389963AAD638406EF4626C3F413ED`)
 - `reports\training\training_pack_leakage_audit.json` (training_pack_leakage_audit_report, training, 4165 bytes, lines=203, SHA256 `DA99F1A832B7458F9EAF3E42B10B007A527C0F34C1ABA5CEECF81053A1D48CC8`)
 - `reports\training\training_pack_leakage_audit.md` (training_pack_leakage_audit_report, training, 1564 bytes, lines=42, SHA256 `0944815208BF3DEC269CC9BC933AF95C1F377EDCA05A02BD8CA8BBFC24399826`)
 - `reports\training\training_provenance_audit.json` (training_provenance_audit_report, training, 420 bytes, lines=13, SHA256 `CF0C91CA8AC6C9E24D1CD40376A1F727952F6C5B7DBEAB0481B04BEFC57A1669`)
