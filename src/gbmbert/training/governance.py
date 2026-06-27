@@ -976,6 +976,17 @@ def governance_suite_main(argv: list[str] | None = None) -> int:
     return 0 if report.passed or args.allow_findings else 1
 
 
+def strict_governance_suite_main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Run the strict GBM-BERT training governance audit profile.")
+    parser.add_argument("--output-dir", type=Path, default=Path("reports/training/governance_strict"))
+    parser.add_argument("--json", action="store_true")
+    parser.add_argument("--allow-findings", action="store_true")
+    args = parser.parse_args(argv)
+    report = run_training_governance_suite(args.output_dir, strict_scaffolds=True)
+    print(json.dumps(report.to_dict(), indent=2, sort_keys=True) if args.json else (Path(report.output_dir) / "training_governance_suite.md").read_text(encoding="utf-8"))
+    return 0 if report.passed or args.allow_findings else 1
+
+
 def _load_artifact_entries(index_json: Path, warnings: list[str]) -> list[ArtifactEntry]:
     if not index_json.exists():
         warnings.append(f"artifact index not found: {index_json}")

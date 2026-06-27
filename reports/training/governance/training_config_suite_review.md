@@ -2,8 +2,8 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Configs: 4
-- Current passed: 2
+- Configs: 5
+- Current passed: 3
 - Current failed: 0
 - Scaffold configs: 2
 
@@ -36,6 +36,15 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Errors:
 - config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN
 - label map labels do not match config label_set
+
+### gbmbert_ner_smoke_pubmedbert.json
+- Status: passed
+- Governance profile: current
+- Blocking: True
+- Task: ner
+- Note: Current smoke NER config aligned to the populated local NCBI-style smoke NER splits.
+- Errors:
+- none
 
 ### gbmbert_relation_biobert.json
 - Status: passed

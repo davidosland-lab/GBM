@@ -55,6 +55,7 @@ def test_launcher_menu_lists_operational_commands() -> None:
     assert "gbmbert-relation-extraction-audit.exe" in text
     assert "gbmbert-scope-drift-monitor.exe" in text
     assert "gbmbert-platform-regression.exe" in text
+    assert "gbmbert-verify-local.exe" in text
     assert "gbmbert-build-gold-seed-dataset.exe" in text
     assert "gbmbert-adjudication-report.exe" in text
     assert "gbmbert-normalize-graph-entities.exe" in text
@@ -72,6 +73,7 @@ def test_launcher_menu_lists_operational_commands() -> None:
     assert "gbmbert-compare-training-packs.exe" in text
     assert "gbmbert-audit-model-registry.exe" in text
     assert "gbmbert-run-training-governance-suite.exe" in text
+    assert "gbmbert-run-strict-training-governance.exe" in text
     assert "gbmbert-run-smoke-baseline.exe" in text
     assert "--artifact-index" in text
     assert "--baseline-data" in text

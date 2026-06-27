@@ -49,7 +49,7 @@ The project has working local scaffolding and CLI workflows for:
 - Streamlit dashboard shell
 - GBM-BERT training scaffold, dataset splitting, label maps, dataset cards, baseline reports, experiment manifests, checkpoint registry metadata, gated training runner, HF dataset loaders, tokenizer pipeline, evidence classifier training execution, evaluation reports, run manifests, evidence batch inference, model cards, and smoke fixture
 
-## Recently Implemented PR111-117
+## Recently Implemented PR111-124
 
 PR111 NER Registry Retirement:
 
@@ -88,29 +88,63 @@ PR117 Handoff Refresh:
 - This handoff now reflects the current PR111-117 state.
 - The next work starts after the green governance cleanup, not at PR95.
 
+PR119 Changelog and Artifact Policy:
+
+- Added `CHANGELOG.md` with the current unreleased governance/data-planning changes.
+- Added `docs\ARTIFACT_POLICY.md` to distinguish tracked handoff reports from regenerated local byproducts.
+
+PR124 Canonical Local Verification:
+
+- Added `gbmbert-verify-local`, which runs pytest, pip check, scope drift, default training governance, compact platform regression, and artifact indexing in order.
+- Added `reports\platform_regression\local_verification.md` and JSON output from the current run.
+- Added launcher option `16BI`.
+
+PR123 Strict Governance Audit Profile:
+
+- Added `gbmbert-run-strict-training-governance` with default output under `reports\training\governance_strict`.
+- Added launcher option `16BH`.
+- The strict profile intentionally reports scaffold gaps for the full evidence and broad NER configs unless `--allow-findings` is used.
+
+PR120 Gold Pack Expansion Plan:
+
+- Added `reports\training\gold_pack\gold_pack_expansion_plan.md` and JSON.
+- The plan keeps the gold pack scaffold-only until evidence, NER, relation, split, and provenance criteria are met.
+
+PR121 Current NER Smoke Config:
+
+- Added `configs\training\gbmbert_ner_smoke_pubmedbert.json`.
+- Training config suite now reports 5 configs: 3 current configs passing, 0 current failures, and 2 scaffold configs.
+
+PR122 Full Evidence Label Coverage Plan:
+
+- Added `reports\training\evidence_pack\full_label_coverage_plan.md` and JSON.
+- The full evidence config remains scaffold-only until labels `0` through `5` are represented in the local pack.
+
 ## Latest Verification
 
 Last verified from `C:\Users\david\GBM` using the project `.venv`:
 
 ```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\gbmbert-scope-drift-monitor.exe --markdown-output reports\platform_regression\scope_drift.md --json-output reports\platform_regression\scope_drift.json
-.\.venv\Scripts\gbmbert-platform-regression.exe --skip-tests --skip-pip-check
+.\.venv\Scripts\gbmbert-review-training-config-suite.exe --markdown-output reports\training\training_config_suite_review.md --json-output reports\training\training_config_suite_review.json
+.\.venv\Scripts\gbmbert-run-training-governance-suite.exe --output-dir reports\training\governance
+.\.venv\Scripts\gbmbert-run-strict-training-governance.exe --output-dir reports\training\governance_strict --allow-findings
+.\.venv\Scripts\gbmbert-verify-local.exe
 .\.venv\Scripts\gbmbert-artifact-index.exe --markdown-output reports\artifact_index.md --json-output reports\artifact_index.json
 ```
 
 Results:
 
-- Tests: `200 passed`
+- Tests: `205 passed`
 - `pip check`: no broken requirements
 - Scope drift monitor: safe, 0 findings
 - Platform regression: passed, 7/7
-- Artifact index refreshed: 424 artifacts
-- Training governance suite: passed, 10/10, no blocking warnings
+- Artifact index refreshed: 452 artifacts
+- Default training governance suite: passed, 10/10, no blocking warnings
+- Strict training governance audit: failed by design without `--allow-findings` because two scaffold configs still have planned gaps
+- Training config suite: 5 configs, 3 current passed, 0 current failed, 2 scaffold configs
 - Model registry audit: passed, 1 checkpoint, 0 findings
 
-Expected nonblocking scaffold visibility: the full evidence and NER configs are marked `governance_profile=scaffold`, so their label gaps appear under scaffold warnings rather than blocking the current governance gate.
+Expected nonblocking scaffold visibility: the full evidence and broad NER configs are marked `governance_profile=scaffold`, so their label gaps appear under scaffold warnings rather than blocking the default governance gate.
 
 ## Useful Local Commands
 
@@ -130,6 +164,18 @@ Run platform regression:
 
 ```powershell
 .\.venv\Scripts\gbmbert-platform-regression.exe
+```
+
+Run canonical local verification:
+
+```powershell
+.\.venv\Scripts\gbmbert-verify-local.exe
+```
+
+Run strict training governance audit:
+
+```powershell
+.\.venv\Scripts\gbmbert-run-strict-training-governance.exe --output-dir reports\training\governance_strict --allow-findings
 ```
 
 Refresh artifact index:
@@ -167,7 +213,9 @@ Knowledge Graph Explorer:
 - `launcher_menu.bat`
 - `pyproject.toml`
 - `README.md`
+- `CHANGELOG.md`
 - `docs\PROJECT_SCOPE.json`
+- `docs\ARTIFACT_POLICY.md`
 - `docs\RESEARCH_SCOPE_V2.md`
 - `reports\artifact_index.md`
 - `reports\artifact_index.json`
@@ -177,6 +225,7 @@ Knowledge Graph Explorer:
 - `src\gbmbert\training\config_review.py`
 - `src\gbmbert\training\readiness.py`
 - `src\gbmbert\training\preparation.py`
+- `src\gbmbert\verification.py`
 - `src\gbmbert\knowledge_graph\explorer.py`
 - `src\gbmbert\knowledge_graph\inspect.py`
 - `src\gbmbert\knowledge_graph\loader.py`
@@ -184,30 +233,30 @@ Knowledge Graph Explorer:
 
 ## Recommended Next PR Series
 
-PR119 Commit Hygiene and Release Notes:
+PR125 Curated Evidence Label Expansion:
 
-- Add a short changelog entry for the governance cleanup.
-- Consider whether generated reports should remain tracked long term or move behind a reproducible artifact policy.
+- Add source-backed examples for evidence labels `2`, `3`, `4`, and `5`.
+- Rebuild the evidence pack and keep the full evidence config scaffold-only until coverage is real.
 
-PR120 Gold Pack Expansion Plan:
+PR126 NER Gold Pack Expansion:
 
-- Define what minimum curated evidence, NER, and relation rows are needed before the gold pack should be considered ready.
-- Keep the gold pack research-use only and avoid training-readiness overclaims.
+- Curate NER rows into the gold pack so NER train, validation, and test splits are non-empty.
+- Decide whether the broad NER scaffold vocabulary should shrink to observed labels or wait for larger curation.
 
-PR121 NER Smoke Pack Alignment:
+PR127 Relation Gold Pack Expansion:
 
-- Either create a current NER smoke config matching the existing smoke NER labels or build a larger curated NER pack for the scaffold vocabulary.
-- Keep `gbmbert_ner_pubmedbert.json` scaffold-only until real label coverage exists.
+- Add positive relation rows and `NO_RELATION` rows to the gold pack with PMID-safe splits.
+- Re-run relation quality, pack comparison, provenance audit, and governance.
 
-PR122 Evidence Full-Label Dataset Plan:
+PR128 Strict Governance CI Hook:
 
-- Define how labels `2` through `5` should enter a larger curated evidence pack.
-- Keep `gbmbert_evidence_pubmedbert.json` scaffold-only until those labels are represented.
+- Wire `gbmbert-verify-local` into the local/CI workflow.
+- Keep default governance blocking and strict governance visible as an audit profile.
 
-PR123 Governance Strict Audit CI:
+PR129 Artifact Policy Enforcement:
 
-- Add a CI or local command profile that runs default green governance and optional strict scaffold audit separately.
-- This should make current artifact health and future scaffold gaps visible without mixing them.
+- Add a lightweight check that verifies required tracked reports exist and that large local byproducts remain untracked.
+- Preserve the research-use boundary and avoid trained-model claims.
 
 ## Suggested Prompt For New Chat
 
@@ -218,5 +267,5 @@ Project root is C:\Users\david\GBM. Use the local .venv only.
 
 This is the GBM-AI Platform, a research-use-only glioblastoma literature intelligence platform. Persistent boundary: Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, and the latest reports\artifact_index.md. Then continue from PR119. First verify the current state with pytest, pip check, scope drift monitor, platform regression, and the training governance suite unless the handoff says they were just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
+Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, docs\ARTIFACT_POLICY.md, CHANGELOG.md, and the latest reports\artifact_index.md. Then continue from PR125. First verify the current state with gbmbert-verify-local unless the handoff says it was just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
 ```

@@ -2,7 +2,7 @@
   "available_report_count": 8,
   "current_config_failed_count": 0,
   "current_config_passed_count": 3,
-  "output_path": "reports\\training\\governance\\dashboard_training_manifest.json",
+  "output_path": "reports\\training\\governance_strict\\dashboard_training_manifest.json",
   "ready_pack_count": 2,
   "registry_audit_passed": true,
   "registry_entry_count": 1,

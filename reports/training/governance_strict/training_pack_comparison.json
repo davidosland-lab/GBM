@@ -1,0 +1,79 @@
+{
+  "packs": [
+    {
+      "dataset_dir": "data\\training\\evidence_pack\\annotation_dataset",
+      "label_counts": {
+        "evidence": {
+          "0": 3,
+          "1": 1
+        },
+        "ner": {},
+        "relation": {}
+      },
+      "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+      "leakage_warnings": [],
+      "name": "evidence",
+      "pack_report_path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
+      "ready": true,
+      "row_counts": {
+        "evidence": 4,
+        "ner": 0,
+        "relation": 0
+      },
+      "split_dir": "data\\training\\evidence_pack\\annotation_splits",
+      "warnings": []
+    },
+    {
+      "dataset_dir": "data\\training\\relation_pack\\annotation_dataset",
+      "label_counts": {
+        "evidence": {},
+        "ner": {},
+        "relation": {
+          "ASSOCIATED_WITH": 2,
+          "NO_RELATION": 3,
+          "PREDICTS": 1
+        }
+      },
+      "label_map_dir": "data\\training\\relation_pack\\label_maps",
+      "leakage_warnings": [],
+      "name": "relation",
+      "pack_report_path": "reports\\training\\relation_pack\\relation_training_pack.json",
+      "ready": true,
+      "row_counts": {
+        "evidence": 0,
+        "ner": 0,
+        "relation": 6
+      },
+      "split_dir": "data\\training\\relation_pack\\annotation_splits",
+      "warnings": []
+    },
+    {
+      "dataset_dir": "data\\training\\gold_pack\\annotation_dataset",
+      "label_counts": {
+        "evidence": {
+          "3": 1
+        },
+        "ner": {},
+        "relation": {}
+      },
+      "label_map_dir": "data\\training\\gold_pack\\label_maps",
+      "leakage_warnings": [],
+      "name": "gold",
+      "pack_report_path": "reports\\training\\gold_pack\\gold_training_pack.json",
+      "ready": false,
+      "row_counts": {
+        "evidence": 1,
+        "ner": 0,
+        "relation": 0
+      },
+      "split_dir": "data\\training\\gold_pack\\annotation_splits",
+      "warnings": [
+        "ner: fewer than 1 examples",
+        "relation: fewer than 1 examples"
+      ]
+    }
+  ],
+  "ready_count": 2,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 2
+}

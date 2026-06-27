@@ -1,0 +1,203 @@
+{
+  "cross_pack_warnings": [],
+  "packs": [
+    "evidence",
+    "gold",
+    "relation"
+  ],
+  "rows": [
+    {
+      "example_count": 1,
+      "pack": "evidence",
+      "pmid_count": 1,
+      "split": "test",
+      "task": "evidence"
+    },
+    {
+      "example_count": 2,
+      "pack": "evidence",
+      "pmid_count": 2,
+      "split": "train",
+      "task": "evidence"
+    },
+    {
+      "example_count": 1,
+      "pack": "evidence",
+      "pmid_count": 1,
+      "split": "validation",
+      "task": "evidence"
+    },
+    {
+      "example_count": 0,
+      "pack": "evidence",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "evidence",
+      "pmid_count": 0,
+      "split": "train",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "evidence",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "evidence",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "relation"
+    },
+    {
+      "example_count": 0,
+      "pack": "evidence",
+      "pmid_count": 0,
+      "split": "train",
+      "task": "relation"
+    },
+    {
+      "example_count": 0,
+      "pack": "evidence",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "relation"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "evidence"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "train",
+      "task": "evidence"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "evidence"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "train",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "relation",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "relation"
+    },
+    {
+      "example_count": 4,
+      "pack": "relation",
+      "pmid_count": 1,
+      "split": "train",
+      "task": "relation"
+    },
+    {
+      "example_count": 2,
+      "pack": "relation",
+      "pmid_count": 1,
+      "split": "validation",
+      "task": "relation"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "evidence"
+    },
+    {
+      "example_count": 1,
+      "pack": "gold",
+      "pmid_count": 1,
+      "split": "train",
+      "task": "evidence"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "evidence"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "train",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "ner"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "test",
+      "task": "relation"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "train",
+      "task": "relation"
+    },
+    {
+      "example_count": 0,
+      "pack": "gold",
+      "pmid_count": 0,
+      "split": "validation",
+      "task": "relation"
+    }
+  ],
+  "safe": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 0,
+  "within_pack_warnings": []
+}

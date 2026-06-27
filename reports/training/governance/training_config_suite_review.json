@@ -1,8 +1,8 @@
 {
   "blocking_failed_count": 0,
-  "config_count": 4,
+  "config_count": 5,
   "failed_count": 0,
-  "passed_count": 2,
+  "passed_count": 3,
   "reviews": [
     {
       "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
@@ -191,6 +191,79 @@
         "validation": 16
       },
       "status": "scaffold_pending",
+      "task": "ner",
+      "training_enabled": false,
+      "training_enabled_confirmed": false,
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+      "warnings": [
+        "review gate is for research scaffolding only and does not certify model performance",
+        "training remains separate from diagnosis, treatment selection, and clinical decision-making",
+        "training_enabled is false; this config is review-ready but will run as a dry run unless changed"
+      ]
+    },
+    {
+      "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+      "blocking": true,
+      "checks": {
+        "config_label_set_nonempty": true,
+        "config_labels_present_in_dataset": true,
+        "dataset_dir_exists": true,
+        "dataset_label_set_nonempty": true,
+        "dataset_labels_covered_by_config": true,
+        "dataset_labels_covered_by_label_map": true,
+        "hyperparameters_in_review_bounds": true,
+        "label_map_labels_match_config": true,
+        "label_map_present": true,
+        "test_split_present": true,
+        "train_split_nonempty": true,
+        "train_split_present": true,
+        "training_enabled_confirmed": true,
+        "validation_split_present": true
+      },
+      "config_labels": [
+        "BIOMARKER",
+        "CELL_TYPE",
+        "DELIVERY_MODIFIER",
+        "DISEASE",
+        "DRUG",
+        "GENE",
+        "OUTCOME",
+        "TREATMENT"
+      ],
+      "config_path": "configs\\training\\gbmbert_ner_smoke_pubmedbert.json",
+      "dataset_dir": "data\\training\\ncbi_env_smoke_annotation_splits",
+      "dataset_labels": [
+        "BIOMARKER",
+        "CELL_TYPE",
+        "DELIVERY_MODIFIER",
+        "DISEASE",
+        "DRUG",
+        "GENE",
+        "OUTCOME",
+        "TREATMENT"
+      ],
+      "errors": [],
+      "governance_note": "Current smoke NER config aligned to the populated local NCBI-style smoke NER splits.",
+      "governance_profile": "current",
+      "label_map_dir": "data\\training\\ncbi_env_smoke_label_maps",
+      "label_map_labels": [
+        "BIOMARKER",
+        "CELL_TYPE",
+        "DELIVERY_MODIFIER",
+        "DISEASE",
+        "DRUG",
+        "GENE",
+        "OUTCOME",
+        "TREATMENT"
+      ],
+      "prepared_task": "ner",
+      "raw_status": "passed",
+      "split_counts": {
+        "test": 16,
+        "train": 94,
+        "validation": 16
+      },
+      "status": "passed",
       "task": "ner",
       "training_enabled": false,
       "training_enabled_confirmed": false,

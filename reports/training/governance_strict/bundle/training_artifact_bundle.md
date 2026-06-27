@@ -2,9 +2,9 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Output directory: `reports\training\governance\bundle`
-- Artifacts: 250
-- Total bytes: 595917
+- Output directory: `reports\training\governance_strict\bundle`
+- Artifacts: 224
+- Total bytes: 423971
 
 ## Artifacts
 - `data\training\evidence_pack\annotation_dataset\evidence.jsonl` -> `data\training\evidence_pack\annotation_dataset\evidence.jsonl` (evidence_claims)
@@ -130,8 +130,6 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\evidence_pack\evidence_training_pack_dataset_card.md` -> `reports\training\evidence_pack\evidence_training_pack_dataset_card.md` (evidence_training_pack_report)
 - `reports\training\evidence_pack\evidence_training_pack_readiness.json` -> `reports\training\evidence_pack\evidence_training_pack_readiness.json` (evidence_training_pack_report)
 - `reports\training\evidence_pack\evidence_training_pack_readiness.md` -> `reports\training\evidence_pack\evidence_training_pack_readiness.md` (evidence_training_pack_report)
-- `reports\training\evidence_pack\full_label_coverage_plan.json` -> `reports\training\evidence_pack\full_label_coverage_plan.json` (json_report)
-- `reports\training\evidence_pack\full_label_coverage_plan.md` -> `reports\training\evidence_pack\full_label_coverage_plan.md` (markdown_report)
 - `reports\training\evidence_smoke_fixture\evidence_prediction_quality.json` -> `reports\training\evidence_smoke_fixture\evidence_prediction_quality.json` (prediction_quality_report)
 - `reports\training\evidence_smoke_fixture\evidence_prediction_quality.md` -> `reports\training\evidence_smoke_fixture\evidence_prediction_quality.md` (prediction_quality_report)
 - `reports\training\evidence_smoke_fixture\evidence_smoke_metrics.json` -> `reports\training\evidence_smoke_fixture\evidence_smoke_metrics.json` (training_metrics)
@@ -149,8 +147,6 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\gold_pack\dataset_card.md` -> `reports\training\gold_pack\dataset_card.md` (dataset_card)
 - `reports\training\gold_pack\evidence_label_repair.json` -> `reports\training\gold_pack\evidence_label_repair.json` (evidence_label_repair_report)
 - `reports\training\gold_pack\evidence_label_repair.md` -> `reports\training\gold_pack\evidence_label_repair.md` (evidence_label_repair_report)
-- `reports\training\gold_pack\gold_pack_expansion_plan.json` -> `reports\training\gold_pack\gold_pack_expansion_plan.json` (json_report)
-- `reports\training\gold_pack\gold_pack_expansion_plan.md` -> `reports\training\gold_pack\gold_pack_expansion_plan.md` (markdown_report)
 - `reports\training\gold_pack\gold_seed_manifest.json` -> `reports\training\gold_pack\gold_seed_manifest.json` (gold_seed_manifest)
 - `reports\training\gold_pack\gold_training_pack.json` -> `reports\training\gold_pack\gold_training_pack.json` (gold_training_pack_report)
 - `reports\training\gold_pack\gold_training_pack.md` -> `reports\training\gold_pack\gold_training_pack.md` (gold_training_pack_report)
@@ -182,28 +178,6 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\governance\training_provenance_audit.md` -> `reports\training\governance\training_provenance_audit.md` (training_provenance_audit_report)
 - `reports\training\governance\training_readiness_snapshot.json` -> `reports\training\governance\training_readiness_snapshot.json` (training_readiness_snapshot)
 - `reports\training\governance\training_readiness_snapshot.md` -> `reports\training\governance\training_readiness_snapshot.md` (training_readiness_snapshot)
-- `reports\training\governance_strict\bundle\training_artifact_bundle.json` -> `reports\training\governance_strict\bundle\training_artifact_bundle.json` (training_artifact_bundle_manifest)
-- `reports\training\governance_strict\bundle\training_artifact_bundle.md` -> `reports\training\governance_strict\bundle\training_artifact_bundle.md` (training_artifact_bundle_manifest)
-- `reports\training\governance_strict\dashboard_training_manifest.json` -> `reports\training\governance_strict\dashboard_training_manifest.json` (dashboard_training_manifest)
-- `reports\training\governance_strict\dashboard_training_manifest.md` -> `reports\training\governance_strict\dashboard_training_manifest.md` (dashboard_training_manifest)
-- `reports\training\governance_strict\model_registry_audit.json` -> `reports\training\governance_strict\model_registry_audit.json` (model_registry_audit_report)
-- `reports\training\governance_strict\model_registry_audit.md` -> `reports\training\governance_strict\model_registry_audit.md` (model_registry_audit_report)
-- `reports\training\governance_strict\model_registry_remediation_plan.json` -> `reports\training\governance_strict\model_registry_remediation_plan.json` (model_registry_remediation_plan)
-- `reports\training\governance_strict\model_registry_remediation_plan.md` -> `reports\training\governance_strict\model_registry_remediation_plan.md` (model_registry_remediation_plan)
-- `reports\training\governance_strict\training_config_suite_review.json` -> `reports\training\governance_strict\training_config_suite_review.json` (training_config_suite_review_report)
-- `reports\training\governance_strict\training_config_suite_review.md` -> `reports\training\governance_strict\training_config_suite_review.md` (training_config_suite_review_report)
-- `reports\training\governance_strict\training_governance_suite.json` -> `reports\training\governance_strict\training_governance_suite.json` (training_governance_suite_report)
-- `reports\training\governance_strict\training_governance_suite.md` -> `reports\training\governance_strict\training_governance_suite.md` (training_governance_suite_report)
-- `reports\training\governance_strict\training_label_drift.json` -> `reports\training\governance_strict\training_label_drift.json` (training_label_drift_report)
-- `reports\training\governance_strict\training_label_drift.md` -> `reports\training\governance_strict\training_label_drift.md` (training_label_drift_report)
-- `reports\training\governance_strict\training_pack_comparison.json` -> `reports\training\governance_strict\training_pack_comparison.json` (training_pack_comparison_report)
-- `reports\training\governance_strict\training_pack_comparison.md` -> `reports\training\governance_strict\training_pack_comparison.md` (training_pack_comparison_report)
-- `reports\training\governance_strict\training_pack_leakage_audit.json` -> `reports\training\governance_strict\training_pack_leakage_audit.json` (training_pack_leakage_audit_report)
-- `reports\training\governance_strict\training_pack_leakage_audit.md` -> `reports\training\governance_strict\training_pack_leakage_audit.md` (training_pack_leakage_audit_report)
-- `reports\training\governance_strict\training_provenance_audit.json` -> `reports\training\governance_strict\training_provenance_audit.json` (training_provenance_audit_report)
-- `reports\training\governance_strict\training_provenance_audit.md` -> `reports\training\governance_strict\training_provenance_audit.md` (training_provenance_audit_report)
-- `reports\training\governance_strict\training_readiness_snapshot.json` -> `reports\training\governance_strict\training_readiness_snapshot.json` (training_readiness_snapshot)
-- `reports\training\governance_strict\training_readiness_snapshot.md` -> `reports\training\governance_strict\training_readiness_snapshot.md` (training_readiness_snapshot)
 - `reports\training\model_registry_audit.json` -> `reports\training\model_registry_audit.json` (model_registry_audit_report)
 - `reports\training\model_registry_audit.md` -> `reports\training\model_registry_audit.md` (model_registry_audit_report)
 - `reports\training\model_registry_remediation_plan.json` -> `reports\training\model_registry_remediation_plan.json` (model_registry_remediation_plan)

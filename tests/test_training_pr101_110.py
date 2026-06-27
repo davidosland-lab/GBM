@@ -13,6 +13,7 @@ from gbmbert.training.governance import (
     review_training_config_suite,
     run_training_governance_suite,
     search_training_artifacts,
+    strict_governance_suite_main,
 )
 
 
@@ -203,3 +204,8 @@ def test_training_governance_suite_can_strictly_block_scaffolds(tmp_path: Path) 
 
     assert report.step_count == 10
     assert report.warnings
+
+
+def test_strict_training_governance_command_allows_audit_findings(tmp_path: Path) -> None:
+    assert strict_governance_suite_main(["--output-dir", str(tmp_path / "strict"), "--allow-findings"]) == 0
+    assert (tmp_path / "strict" / "training_governance_suite.json").exists()

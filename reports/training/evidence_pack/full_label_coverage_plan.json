@@ -1,0 +1,22 @@
+{
+  "current_evidence_smoke_labels": [
+    "0",
+    "1"
+  ],
+  "full_evidence_scaffold_labels": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "missing_labels": [
+    "2",
+    "3",
+    "4",
+    "5"
+  ],
+  "promotion_rule": "Do not promote the full evidence config from scaffold to current until the local pack label map and split contents cover labels 0 through 5.",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

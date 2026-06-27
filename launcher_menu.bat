@@ -102,6 +102,8 @@ echo 16BD. Build relation-only training pack
 echo 16BE. Compare training packs
 echo 16BF. Audit model registry
 echo 16BG. Run training governance suite
+echo 16BH. Run strict training governance audit
+echo 16BI. Run canonical local verification
 echo 17. Start Knowledge Graph Explorer with sample data
 echo 17A. Start Knowledge Graph Explorer with artifact index selection
 echo 17B. Start Knowledge Graph Explorer with baseline smoke data
@@ -190,6 +192,8 @@ if /I "%choice%"=="16BD" goto relation_training_pack
 if /I "%choice%"=="16BE" goto compare_training_packs
 if /I "%choice%"=="16BF" goto audit_model_registry
 if /I "%choice%"=="16BG" goto training_governance_suite
+if /I "%choice%"=="16BH" goto strict_training_governance
+if /I "%choice%"=="16BI" goto local_verification
 if "%choice%"=="17" goto run_explorer_sample
 if /I "%choice%"=="17A" goto run_explorer_artifact
 if /I "%choice%"=="17B" goto run_explorer_baseline
@@ -1869,6 +1873,35 @@ if "%output_dir%"=="" set "output_dir=reports\training\governance"
 if errorlevel 1 goto command_failed
 echo.
 echo Training governance suite complete.
+pause
+goto menu
+
+:strict_training_governance
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+set /p "output_dir=Strict training governance reports dir [reports\training\governance_strict]: "
+if "%output_dir%"=="" set "output_dir=reports\training\governance_strict"
+"%VENV_DIR%\Scripts\gbmbert-run-strict-training-governance.exe" --output-dir "%output_dir%" --allow-findings
+if errorlevel 1 goto command_failed
+echo.
+echo Strict training governance audit complete.
+pause
+goto menu
+
+:local_verification
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Running canonical local verification...
+"%VENV_DIR%\Scripts\gbmbert-verify-local.exe"
+if errorlevel 1 goto command_failed
+echo.
+echo Local verification complete.
 pause
 goto menu
 

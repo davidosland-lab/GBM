@@ -1,0 +1,85 @@
+{
+  "created_at_utc": "2026-06-27T03:12:46.210833+00:00",
+  "failed_step_count": 0,
+  "passed": true,
+  "passed_step_count": 6,
+  "step_count": 6,
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "detail": "........................................................................ [ 35%] | ........................................................................ [ 70%] | .............................................................            [100%] | 205 passed in 11.50s",
+      "name": "pytest",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "detail": "No broken requirements found.",
+      "name": "pip_check",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-scope-drift-monitor.exe",
+        "--markdown-output",
+        "reports\\platform_regression\\scope_drift.md",
+        "--json-output",
+        "reports\\platform_regression\\scope_drift.json"
+      ],
+      "detail": "- Missing warnings: 0 | - Prohibited assertions: 0 | ## Findings | - none",
+      "name": "scope_drift_monitor",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-run-training-governance-suite.exe",
+        "--output-dir",
+        "reports\\training\\governance"
+      ],
+      "detail": "- registry_audit: `reports\\training\\governance\\model_registry_audit.json` | - registry_remediation: `reports\\training\\governance\\model_registry_remediation_plan.json` | ## Warnings | - none",
+      "name": "training_governance_suite",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-platform-regression.exe",
+        "--skip-tests",
+        "--skip-pip-check",
+        "--reports-dir",
+        "reports\\platform_regression"
+      ],
+      "detail": "- scope_drift_monitor: pass (findings=0) | - artifact_index: pass (artifacts=452) | ## Warnings | - none",
+      "name": "platform_regression",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-artifact-index.exe",
+        "--markdown-output",
+        "reports/artifact_index.md",
+        "--json-output",
+        "reports/artifact_index.json"
+      ],
+      "detail": "- `reports\\training\\training_readiness_snapshot.json` (training_readiness_snapshot, training, 416 bytes, lines=12, SHA256 `AE8A3312E9E1C3E272C1138A9BBF47B083FCB0615ED4F281C161E4D51A0E8F52`) | - `reports\\training\\training_readiness_snapshot.md` (training_readiness_snapshot, training, 373 bytes, lines=12, SHA256 `75B0FD6DA4D8BA5044C76AF2AE72960BF6E78BBF9549832826027DB0D7A120B2`) | - `reports\\wireframes\\kg_explorer.md` (markdown_report, wireframe, 1641 bytes, lines=26, SHA256 `26027595F9F6B93AECC86EA2CA288C26A0F19D9AF48390C46D93E774E4C2491E`) | - `models\\checkpoint_registry.json` (checkpoint_registry, model, 956 bytes, lines=17, SHA256 `72DA040F8AEC0F33607F8703892D2DB1339951CFD28BD29C75F5EAA21E39CED4`)",
+      "name": "artifact_index",
+      "passed": true,
+      "returncode": 0
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

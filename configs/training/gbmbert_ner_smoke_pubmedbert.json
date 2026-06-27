@@ -1,0 +1,28 @@
+{
+  "name": "gbmbert_ner_smoke_pubmedbert",
+  "governance_profile": "current",
+  "governance_note": "Current smoke NER config aligned to the populated local NCBI-style smoke NER splits.",
+  "governance_dataset_dir": "data/training/ncbi_env_smoke_annotation_splits",
+  "governance_label_map_dir": "data/training/ncbi_env_smoke_label_maps",
+  "task": "ner",
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "train_path": "data/training/ncbi_env_smoke_annotation_splits/ner_train.jsonl",
+  "validation_path": "data/training/ncbi_env_smoke_annotation_splits/ner_validation.jsonl",
+  "output_dir": "models/checkpoints/gbmbert_ner_smoke_pubmedbert",
+  "label_set": [
+    "BIOMARKER",
+    "CELL_TYPE",
+    "DELIVERY_MODIFIER",
+    "DISEASE",
+    "DRUG",
+    "GENE",
+    "OUTCOME",
+    "TREATMENT"
+  ],
+  "hyperparameters": {
+    "epochs": 3,
+    "learning_rate": 0.00002,
+    "batch_size": 8,
+    "max_length": 256
+  }
+}

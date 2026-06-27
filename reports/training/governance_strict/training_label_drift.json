@@ -1,0 +1,56 @@
+{
+  "rows": [
+    {
+      "config_labels": [
+        "0",
+        "1"
+      ],
+      "dataset_labels": {
+        "evidence": [
+          "0",
+          "1"
+        ],
+        "ner": [],
+        "relation": []
+      },
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "evidence"
+    },
+    {
+      "config_labels": [
+        "ASSOCIATED_WITH",
+        "NO_RELATION",
+        "PREDICTS"
+      ],
+      "dataset_labels": {
+        "evidence": [],
+        "ner": [],
+        "relation": [
+          "ASSOCIATED_WITH",
+          "NO_RELATION",
+          "PREDICTS"
+        ]
+      },
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "relation"
+    },
+    {
+      "config_labels": [],
+      "dataset_labels": {
+        "evidence": [
+          "3"
+        ],
+        "ner": [],
+        "relation": []
+      },
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gold"
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 0,
+  "warnings": []
+}
