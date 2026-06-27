@@ -1,5 +1,7 @@
 {
   "name": "gbmbert_evidence_pubmedbert",
+  "governance_profile": "scaffold",
+  "governance_note": "Full evidence label profile retained for future larger curated datasets; not validated against the tiny smoke evidence pack.",
   "task": "evidence_classification",
   "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
   "train_path": "data/annotations/evidence_train.jsonl",

@@ -49,57 +49,44 @@ The project has working local scaffolding and CLI workflows for:
 - Streamlit dashboard shell
 - GBM-BERT training scaffold, dataset splitting, label maps, dataset cards, baseline reports, experiment manifests, checkpoint registry metadata, gated training runner, HF dataset loaders, tokenizer pipeline, evidence classifier training execution, evaluation reports, run manifests, evidence batch inference, model cards, and smoke fixture
 
-## Recently Implemented PR91-94
+## Recently Implemented PR111-117
 
-PR91 Relation Negative Sampler:
+PR111 NER Registry Retirement:
 
-- Added `gbmbert-build-relation-negatives`
-- Module: `src\gbmbert\training\relation_negatives.py`
-- Builds deterministic synthetic `NO_RELATION` examples from observed relation endpoints in the same source sentence.
-- Smoke output:
-  - `data\training\relation_negatives.jsonl`
-  - `reports\training\relation_negatives.md`
-  - `reports\training\relation_negatives.json`
+- Retired the stale `gbmbert_ner_smoke_candidate` checkpoint registry entry because no checkpoint artifact existed.
+- `models\checkpoint_registry.json` now lists only the real local evidence smoke research candidate.
+- Registry audit now passes with 1 checkpoint, 0 errors, and 0 warnings.
 
-PR92 Relation Dataset Quality v2:
+PR112 Evidence Config Profile Split:
 
-- Added `gbmbert-relation-dataset-quality`
-- Module: `src\gbmbert\training\relation_quality.py`
-- Reports positive/negative counts, missing sentence/text, missing endpoints, identical endpoint pairs, duplicate examples, label counts, and warnings.
-- Smoke output:
-  - `reports\training\relation_dataset_quality.md`
-  - `reports\training\relation_dataset_quality.json`
+- Added `configs\training\gbmbert_evidence_smoke_pubmedbert.json` for the current tiny evidence smoke pack.
+- Marked `configs\training\gbmbert_evidence_pubmedbert.json` as a future scaffold with the full evidence label profile.
+- Training label drift now compares the current smoke evidence config against the current evidence smoke data.
 
-PR93 Evidence-Only Training Pack:
+PR113 NER Config Scaffold Review:
 
-- Added `gbmbert-build-evidence-training-pack`
-- Module: `src\gbmbert\training\evidence_pack.py`
-- Builds an evidence-only pack with annotation dataset, repaired dataset, PMID-safe splits, label maps, dataset card, baseline report, and evidence-only readiness report.
-- Extended `gbmbert-training-readiness-report` with repeatable `--task` filtering while preserving default all-task behavior.
-- Smoke output:
-  - `data\training\evidence_pack\annotation_dataset`
-  - `data\training\evidence_pack\annotation_dataset_repaired`
-  - `data\training\evidence_pack\annotation_splits`
-  - `data\training\evidence_pack\label_maps`
-  - `reports\training\evidence_pack\*`
+- Marked `configs\training\gbmbert_ner_pubmedbert.json` as a nonblocking scaffold.
+- The NER config remains visible for future work, but its broader label vocabulary no longer fails the current governance gate.
 
-PR94 Training Config Review Gate:
+PR114 Governance Green Mode:
 
-- Added `gbmbert-review-training-config`
-- Module: `src\gbmbert\training\config_review.py`
-- Checks training config validity, prepared splits, label coverage, optional label map coverage, hyperparameter review bounds, training-enabled confirmation, and research boundary warnings.
-- Smoke output:
-  - `reports\training\training_config_review.md`
-  - `reports\training\training_config_review.json`
+- Default `gbmbert-run-training-governance-suite` now passes for current local artifacts.
+- Added `--strict-scaffolds` for audit mode when scaffold gaps should be treated as blocking.
 
-Also updated:
+PR115 Training Config Suite Report v2:
 
-- `pyproject.toml` console scripts
-- `README.md` command documentation
-- `launcher_menu.bat` options `16AY` through `16BB`
-- `docs\PROJECT_SCOPE.json`
-- `src\gbmbert\artifacts.py`
-- Tests for PR91-94, launcher wiring, scope lockfile, and artifact taxonomy
+- Config-suite reports now distinguish current blocking configs from scaffold configs.
+- Reports include current passed/failed counts, scaffold counts, raw review status, governance profile, and scaffold warnings.
+
+PR116 Dashboard Governance Status Cleanup:
+
+- Dashboard training context and manifest now separate registry health, current config health, and scaffold config count.
+- `reports\training\dashboard_training_manifest.md` now shows current config failures separately from scaffold visibility.
+
+PR117 Handoff Refresh:
+
+- This handoff now reflects the current PR111-117 state.
+- The next work starts after the green governance cleanup, not at PR95.
 
 ## Latest Verification
 
@@ -115,13 +102,15 @@ Last verified from `C:\Users\david\GBM` using the project `.venv`:
 
 Results:
 
-- Tests: `186 passed`
+- Tests: `200 passed`
 - `pip check`: no broken requirements
 - Scope drift monitor: safe, 0 findings
 - Platform regression: passed, 7/7
-- Artifact index refreshed: 348 artifacts
+- Artifact index refreshed: 424 artifacts
+- Training governance suite: passed, 10/10, no blocking warnings
+- Model registry audit: passed, 1 checkpoint, 0 findings
 
-One expected warning: `gbmbert-relation-dataset-quality` was smoke-tested on the generated negatives-only file, so it correctly warned that no positive relation examples were present in that specific file.
+Expected nonblocking scaffold visibility: the full evidence and NER configs are marked `governance_profile=scaffold`, so their label gaps appear under scaffold warnings rather than blocking the current governance gate.
 
 ## Useful Local Commands
 
@@ -158,7 +147,7 @@ PR91-94 smoke commands:
 
 .\.venv\Scripts\gbmbert-build-evidence-training-pack.exe data\training\ncbi_env_smoke_annotation_dataset --output-dir data\training\evidence_pack --reports-dir reports\training\evidence_pack --min-examples-per-task 1 --min-examples-per-label 1 --allow-not-ready
 
-.\.venv\Scripts\gbmbert-review-training-config.exe configs\training\gbmbert_evidence_pubmedbert.json data\training\evidence_pack\annotation_splits --label-map-dir data\training\evidence_pack\label_maps --markdown-output reports\training\training_config_review.md --json-output reports\training\training_config_review.json
+.\.venv\Scripts\gbmbert-review-training-config.exe configs\training\gbmbert_evidence_smoke_pubmedbert.json data\training\evidence_pack\annotation_splits --label-map-dir data\training\evidence_pack\label_maps --markdown-output reports\training\training_config_review.md --json-output reports\training\training_config_review.json
 ```
 
 Launch menu:
@@ -195,38 +184,30 @@ Knowledge Graph Explorer:
 
 ## Recommended Next PR Series
 
-PR95 Relation Pack Merger:
+PR119 Commit Hygiene and Release Notes:
 
-- Merge positive relation examples and synthetic `NO_RELATION` examples into a single relation training dataset.
-- Preserve provenance fields showing which rows are human/curated versus synthetic.
-- Add quality checks that relation training packs include both positives and negatives.
+- Add a short changelog entry for the governance cleanup.
+- Consider whether generated reports should remain tracked long term or move behind a reproducible artifact policy.
 
-PR96 Relation Training Pack Builder:
+PR120 Gold Pack Expansion Plan:
 
-- Build a relation-only training pack with PMID-safe splits, label maps, dataset card, baseline report, readiness report, and relation-specific quality report.
-- Should mirror the evidence-only pack pattern.
+- Define what minimum curated evidence, NER, and relation rows are needed before the gold pack should be considered ready.
+- Keep the gold pack research-use only and avoid training-readiness overclaims.
 
-PR97 Relation Config Review Gate:
+PR121 NER Smoke Pack Alignment:
 
-- Extend config review smoke coverage for `relation_extraction` configs.
-- Confirm relation split files and relation label maps align with config labels.
-- Keep execution gated; no claim of validated relation model.
+- Either create a current NER smoke config matching the existing smoke NER labels or build a larger curated NER pack for the scaffold vocabulary.
+- Keep `gbmbert_ner_pubmedbert.json` scaffold-only until real label coverage exists.
 
-PR98 Training Pack Comparison Report:
+PR122 Evidence Full-Label Dataset Plan:
 
-- Compare evidence, relation, and gold packs side by side.
-- Report row counts, label coverage, warnings, leakage, and readiness status.
-- Useful before any real fine-tuning.
+- Define how labels `2` through `5` should enter a larger curated evidence pack.
+- Keep `gbmbert_evidence_pubmedbert.json` scaffold-only until those labels are represented.
 
-PR99 Model Registry Audit:
+PR123 Governance Strict Audit CI:
 
-- Audit checkpoint registry records for missing model cards, missing dataset cards, stale paths, unsafe statuses, or missing research warnings.
-- Should help prevent accidental overclaiming.
-
-PR100 Dashboard Training Artifacts Page:
-
-- Add a Streamlit dashboard page for training artifacts: packs, readiness reports, config reviews, model cards, and checkpoint registry status.
-- Keep it read-only and research-scaffold oriented.
+- Add a CI or local command profile that runs default green governance and optional strict scaffold audit separately.
+- This should make current artifact health and future scaffold gaps visible without mixing them.
 
 ## Suggested Prompt For New Chat
 
@@ -237,5 +218,5 @@ Project root is C:\Users\david\GBM. Use the local .venv only.
 
 This is the GBM-AI Platform, a research-use-only glioblastoma literature intelligence platform. Persistent boundary: Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, and the latest reports\artifact_index.md. Then continue from PR95. First verify the current state with pytest, pip check, scope drift monitor, and platform regression unless the handoff says they were just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
+Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, and the latest reports\artifact_index.md. Then continue from PR119. First verify the current state with pytest, pip check, scope drift monitor, platform regression, and the training governance suite unless the handoff says they were just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
 ```

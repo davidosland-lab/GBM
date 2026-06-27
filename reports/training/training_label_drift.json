@@ -3,11 +3,7 @@
     {
       "config_labels": [
         "0",
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
+        "1"
       ],
       "dataset_labels": {
         "evidence": [
@@ -18,12 +14,7 @@
         "relation": []
       },
       "missing_from_config": [],
-      "missing_from_dataset": [
-        "2",
-        "3",
-        "4",
-        "5"
-      ],
+      "missing_from_dataset": [],
       "name": "evidence"
     },
     {
@@ -60,8 +51,6 @@
     }
   ],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 1,
-  "warnings": [
-    "evidence: config labels missing from dataset: 2, 3, 4, 5"
-  ]
+  "warning_count": 0,
+  "warnings": []
 }

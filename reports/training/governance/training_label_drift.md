@@ -2,13 +2,13 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Warnings: 1
+- Warnings: 0
 
 ## Packs
 ### evidence
-- Config labels: 0, 1, 2, 3, 4, 5
+- Config labels: 0, 1
 - Missing from config: none
-- Missing from dataset: 2, 3, 4, 5
+- Missing from dataset: none
 
 ### relation
 - Config labels: ASSOCIATED_WITH, NO_RELATION, PREDICTS
@@ -21,4 +21,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Missing from dataset: none
 
 ## Warnings
-- evidence: config labels missing from dataset: 2, 3, 4, 5
+- none

@@ -1,5 +1,5 @@
 {
-  "checkpoint_count": 2,
+  "checkpoint_count": 1,
   "entries": [
     {
       "checks": {
@@ -24,42 +24,12 @@
       "status": "research_candidate",
       "task": "evidence_classification",
       "warnings": []
-    },
-    {
-      "checks": {
-        "checkpoint_dir_exists": false,
-        "dataset_card_present": false,
-        "entry_warning_present": true,
-        "manifest_path_exists_or_empty": true,
-        "metrics_path_exists_or_empty": true,
-        "model_card_present": false,
-        "name_present": true,
-        "notes_do_not_overclaim": true,
-        "status_research_safe": true
-      },
-      "dataset_card_paths": [],
-      "errors": [
-        "gbmbert_ner_smoke_candidate: checkpoint_dir does not exist"
-      ],
-      "model_card_paths": [],
-      "name": "gbmbert_ner_smoke_candidate",
-      "status": "candidate",
-      "task": "ner",
-      "warnings": [
-        "gbmbert_ner_smoke_candidate: no matching model card found",
-        "gbmbert_ner_smoke_candidate: no matching dataset card found"
-      ]
     }
   ],
-  "errors": [
-    "gbmbert_ner_smoke_candidate: checkpoint_dir does not exist"
-  ],
-  "passed": false,
+  "errors": [],
+  "passed": true,
   "registry_path": "models\\checkpoint_registry.json",
   "reports_dir": "reports\\training",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": [
-    "gbmbert_ner_smoke_candidate: no matching model card found",
-    "gbmbert_ner_smoke_candidate: no matching dataset card found"
-  ]
+  "warnings": []
 }

@@ -2,10 +2,13 @@
   "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
   "checks": {
     "config_label_set_nonempty": true,
+    "config_labels_present_in_dataset": true,
     "dataset_dir_exists": true,
+    "dataset_label_set_nonempty": true,
     "dataset_labels_covered_by_config": true,
     "dataset_labels_covered_by_label_map": true,
     "hyperparameters_in_review_bounds": true,
+    "label_map_labels_match_config": true,
     "label_map_present": true,
     "test_split_present": true,
     "train_split_nonempty": true,
@@ -15,13 +18,9 @@
   },
   "config_labels": [
     "0",
-    "1",
-    "2",
-    "3",
-    "4",
-    "5"
+    "1"
   ],
-  "config_path": "configs\\training\\gbmbert_evidence_pubmedbert.json",
+  "config_path": "configs\\training\\gbmbert_evidence_smoke_pubmedbert.json",
   "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
   "dataset_labels": [
     "0",

@@ -2,8 +2,11 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Available reports: 7
+- Available reports: 8
 - Ready packs: 2
-- Registry entries: 2
+- Registry entries: 1
 - Relation config status: passed
-- Registry audit passed: False
+- Current config passed: 2
+- Current config failed: 0
+- Scaffold configs: 2
+- Registry audit passed: True

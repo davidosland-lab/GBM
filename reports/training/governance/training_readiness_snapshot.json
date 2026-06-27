@@ -1,12 +1,13 @@
 {
-  "created_at_utc": "2026-06-23T23:16:49.337694+00:00",
-  "dashboard_report_count": 7,
+  "created_at_utc": "2026-06-27T02:56:53.349155+00:00",
+  "current_config_failed_count": 0,
+  "current_config_passed_count": 2,
+  "dashboard_report_count": 8,
   "ready_pack_count": 2,
-  "registry_audit_passed": false,
+  "registry_audit_passed": true,
   "relation_config_status": "passed",
+  "scaffold_config_count": 2,
   "total_pack_count": 3,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": [
-    "model registry audit has findings"
-  ]
+  "warnings": []
 }

@@ -1,25 +1,6 @@
 {
-  "action_count": 3,
-  "actions": [
-    {
-      "checkpoint": "gbmbert_ner_smoke_candidate",
-      "finding": "gbmbert_ner_smoke_candidate: checkpoint_dir does not exist",
-      "severity": "error",
-      "suggested_action": "create the referenced metadata-only checkpoint directory or update the registry path"
-    },
-    {
-      "checkpoint": "gbmbert_ner_smoke_candidate",
-      "finding": "gbmbert_ner_smoke_candidate: no matching model card found",
-      "severity": "warning",
-      "suggested_action": "generate or link a research-use model card for this checkpoint"
-    },
-    {
-      "checkpoint": "gbmbert_ner_smoke_candidate",
-      "finding": "gbmbert_ner_smoke_candidate: no matching dataset card found",
-      "severity": "warning",
-      "suggested_action": "generate or link the dataset card used by this checkpoint"
-    }
-  ],
+  "action_count": 0,
+  "actions": [],
   "audit_path": "reports\\training\\model_registry_audit.json",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }

@@ -1,5 +1,7 @@
 {
   "name": "gbmbert_relation_biobert",
+  "governance_profile": "current",
+  "governance_note": "Current relation config aligned to the local relation-only training pack.",
   "task": "relation_extraction",
   "base_model": "dmis-lab/biobert-base-cased-v1.2",
   "train_path": "data/training/relation_pack/annotation_splits/relation_train.jsonl",

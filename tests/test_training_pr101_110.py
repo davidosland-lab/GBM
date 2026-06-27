@@ -125,7 +125,69 @@ def test_config_suite_and_label_drift_return_reports() -> None:
 
     assert suite.config_count == 0
     assert suite.passed_count == 0
+    assert suite.blocking_failed_count == 0
     assert drift.warning_count == 0
+
+
+def test_config_suite_treats_scaffold_gaps_as_nonblocking(tmp_path: Path) -> None:
+    split_dir = tmp_path / "splits"
+    label_dir = tmp_path / "label_maps"
+    _write_jsonl(split_dir / "evidence_train.jsonl", [{"source_pmid": "1", "label": "0"}])
+    _write_jsonl(split_dir / "evidence_validation.jsonl", [{"source_pmid": "2", "label": "1"}])
+    _write_jsonl(split_dir / "evidence_test.jsonl", [{"source_pmid": "3", "label": "0"}])
+    label_dir.mkdir()
+    (label_dir / "evidence_label_map.json").write_text(
+        json.dumps({"label_to_id": {"0": 0, "1": 1}, "id_to_label": {"0": "0", "1": "1"}}),
+        encoding="utf-8",
+    )
+    current_config = tmp_path / "current.json"
+    current_config.write_text(
+        json.dumps(
+            {
+                "name": "current",
+                "governance_profile": "current",
+                "governance_dataset_dir": str(split_dir),
+                "governance_label_map_dir": str(label_dir),
+                "task": "evidence_classification",
+                "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+                "train_path": "unused/evidence_train.jsonl",
+                "validation_path": "unused/evidence_validation.jsonl",
+                "output_dir": "models/current",
+                "label_set": ["0", "1"],
+                "hyperparameters": {"epochs": 3, "learning_rate": 0.00002, "batch_size": 8, "max_length": 256},
+            }
+        ),
+        encoding="utf-8",
+    )
+    scaffold_config = tmp_path / "scaffold.json"
+    scaffold_config.write_text(
+        json.dumps(
+            {
+                "name": "scaffold",
+                "governance_profile": "scaffold",
+                "governance_note": "full future label set",
+                "governance_dataset_dir": str(split_dir),
+                "governance_label_map_dir": str(label_dir),
+                "task": "evidence_classification",
+                "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+                "train_path": "unused/evidence_train.jsonl",
+                "validation_path": "unused/evidence_validation.jsonl",
+                "output_dir": "models/scaffold",
+                "label_set": ["0", "1", "2"],
+                "hyperparameters": {"epochs": 3, "learning_rate": 0.00002, "batch_size": 8, "max_length": 256},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    suite = review_training_config_suite([current_config, scaffold_config])
+
+    assert suite.passed_count == 1
+    assert suite.blocking_failed_count == 0
+    assert suite.scaffold_count == 1
+    assert not suite.warnings
+    assert suite.scaffold_warnings
+    assert suite.reviews[1]["status"] == "scaffold_pending"
 
 
 def test_training_governance_suite_writes_report(tmp_path: Path) -> None:
@@ -134,3 +196,10 @@ def test_training_governance_suite_writes_report(tmp_path: Path) -> None:
     assert report.step_count == 10
     assert (tmp_path / "governance" / "training_governance_suite.json").exists()
     assert "bundle" in report.artifacts
+
+
+def test_training_governance_suite_can_strictly_block_scaffolds(tmp_path: Path) -> None:
+    report = run_training_governance_suite(tmp_path / "governance", strict_scaffolds=True)
+
+    assert report.step_count == 10
+    assert report.warnings

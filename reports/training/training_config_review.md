@@ -3,7 +3,7 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Status: passed
-- Config: `configs\training\gbmbert_evidence_pubmedbert.json`
+- Config: `configs\training\gbmbert_evidence_smoke_pubmedbert.json`
 - Dataset: `data\training\evidence_pack\annotation_splits`
 - Label maps: `data\training\evidence_pack\label_maps`
 - Task: evidence_classification
@@ -19,10 +19,13 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Checks
 - config_label_set_nonempty: True
+- config_labels_present_in_dataset: True
 - dataset_dir_exists: True
+- dataset_label_set_nonempty: True
 - dataset_labels_covered_by_config: True
 - dataset_labels_covered_by_label_map: True
 - hyperparameters_in_review_bounds: True
+- label_map_labels_match_config: True
 - label_map_present: True
 - test_split_present: True
 - train_split_nonempty: True
@@ -31,7 +34,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - validation_split_present: True
 
 ## Labels
-- Config: 0, 1, 2, 3, 4, 5
+- Config: 0, 1
 - Dataset: 0, 1
 - Label map: 0, 1
 

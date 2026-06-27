@@ -1,10 +1,12 @@
 {
-  "config_count": 3,
-  "failed_count": 2,
-  "passed_count": 1,
+  "blocking_failed_count": 0,
+  "config_count": 4,
+  "failed_count": 0,
+  "passed_count": 2,
   "reviews": [
     {
       "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+      "blocking": false,
       "checks": {
         "config_label_set_nonempty": true,
         "config_labels_present_in_dataset": false,
@@ -39,18 +41,21 @@
         "config label_set labels missing from dataset: 2, 3, 4, 5",
         "label map labels do not match config label_set"
       ],
+      "governance_note": "Full evidence label profile retained for future larger curated datasets; not validated against the tiny smoke evidence pack.",
+      "governance_profile": "scaffold",
       "label_map_dir": "data\\training\\evidence_pack\\label_maps",
       "label_map_labels": [
         "0",
         "1"
       ],
       "prepared_task": "evidence",
+      "raw_status": "failed",
       "split_counts": {
         "test": 1,
         "train": 2,
         "validation": 1
       },
-      "status": "failed",
+      "status": "scaffold_pending",
       "task": "evidence_classification",
       "training_enabled": false,
       "training_enabled_confirmed": false,
@@ -63,6 +68,62 @@
     },
     {
       "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+      "blocking": true,
+      "checks": {
+        "config_label_set_nonempty": true,
+        "config_labels_present_in_dataset": true,
+        "dataset_dir_exists": true,
+        "dataset_label_set_nonempty": true,
+        "dataset_labels_covered_by_config": true,
+        "dataset_labels_covered_by_label_map": true,
+        "hyperparameters_in_review_bounds": true,
+        "label_map_labels_match_config": true,
+        "label_map_present": true,
+        "test_split_present": true,
+        "train_split_nonempty": true,
+        "train_split_present": true,
+        "training_enabled_confirmed": true,
+        "validation_split_present": true
+      },
+      "config_labels": [
+        "0",
+        "1"
+      ],
+      "config_path": "configs\\training\\gbmbert_evidence_smoke_pubmedbert.json",
+      "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+      "dataset_labels": [
+        "0",
+        "1"
+      ],
+      "errors": [],
+      "governance_note": "Current smoke evidence config aligned to the local evidence-only smoke pack.",
+      "governance_profile": "current",
+      "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+      "label_map_labels": [
+        "0",
+        "1"
+      ],
+      "prepared_task": "evidence",
+      "raw_status": "passed",
+      "split_counts": {
+        "test": 1,
+        "train": 2,
+        "validation": 1
+      },
+      "status": "passed",
+      "task": "evidence_classification",
+      "training_enabled": false,
+      "training_enabled_confirmed": false,
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+      "warnings": [
+        "review gate is for research scaffolding only and does not certify model performance",
+        "training remains separate from diagnosis, treatment selection, and clinical decision-making",
+        "training_enabled is false; this config is review-ready but will run as a dry run unless changed"
+      ]
+    },
+    {
+      "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+      "blocking": false,
       "checks": {
         "config_label_set_nonempty": true,
         "config_labels_present_in_dataset": false,
@@ -109,6 +170,8 @@
         "config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN",
         "label map labels do not match config label_set"
       ],
+      "governance_note": "Future NER scaffold with broader vocabulary than the current tiny smoke NER labels.",
+      "governance_profile": "scaffold",
       "label_map_dir": "data\\training\\ncbi_env_smoke_label_maps",
       "label_map_labels": [
         "BIOMARKER",
@@ -121,12 +184,13 @@
         "TREATMENT"
       ],
       "prepared_task": "ner",
+      "raw_status": "failed",
       "split_counts": {
         "test": 16,
         "train": 94,
         "validation": 16
       },
-      "status": "failed",
+      "status": "scaffold_pending",
       "task": "ner",
       "training_enabled": false,
       "training_enabled_confirmed": false,
@@ -139,6 +203,7 @@
     },
     {
       "base_model": "dmis-lab/biobert-base-cased-v1.2",
+      "blocking": true,
       "checks": {
         "config_label_set_nonempty": true,
         "config_labels_present_in_dataset": true,
@@ -170,6 +235,8 @@
         "PREDICTS"
       ],
       "errors": [],
+      "governance_note": "Current relation config aligned to the local relation-only training pack.",
+      "governance_profile": "current",
       "label_map_dir": "data\\training\\relation_pack\\label_maps",
       "label_map_labels": [
         "ASSOCIATED_WITH",
@@ -177,6 +244,7 @@
         "PREDICTS"
       ],
       "prepared_task": "relation",
+      "raw_status": "passed",
       "split_counts": {
         "test": 0,
         "train": 4,
@@ -195,9 +263,11 @@
       ]
     }
   ],
+  "scaffold_count": 2,
+  "scaffold_warnings": [
+    "configs\\training\\gbmbert_evidence_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: 2, 3, 4, 5; label map labels do not match config label_set)",
+    "configs\\training\\gbmbert_ner_pubmedbert.json: scaffold pending (config label_set labels missing from dataset: CELL_STATE, PATHWAY, TRIAL_PHASE, UNKNOWN; label map labels do not match config label_set)"
+  ],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": [
-    "configs\\training\\gbmbert_evidence_pubmedbert.json: failed",
-    "configs\\training\\gbmbert_ner_pubmedbert.json: failed"
-  ]
+  "warnings": []
 }

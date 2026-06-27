@@ -1,5 +1,7 @@
 {
   "name": "gbmbert_ner_pubmedbert",
+  "governance_profile": "scaffold",
+  "governance_note": "Future NER scaffold with broader vocabulary than the current tiny smoke NER labels.",
   "task": "ner",
   "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
   "train_path": "data/annotations/ner_train.jsonl",

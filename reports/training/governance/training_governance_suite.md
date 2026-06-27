@@ -4,7 +4,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Output directory: `reports\training\governance`
 - Steps: 10
-- Passed: False
+- Passed: True
 
 ## Artifacts
 - bundle: `reports\training\governance\bundle\training_artifact_bundle.json`
@@ -19,8 +19,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - registry_remediation: `reports\training\governance\model_registry_remediation_plan.json`
 
 ## Warnings
-- configs\training\gbmbert_evidence_pubmedbert.json: failed
-- configs\training\gbmbert_ner_pubmedbert.json: failed
-- gbmbert_ner_smoke_candidate: checkpoint_dir does not exist
-- evidence: config labels missing from dataset: 2, 3, 4, 5
-- model registry audit has findings
+- none

@@ -194,6 +194,7 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "Gold pack": base / "reports/training/gold_pack/gold_training_pack.md",
         "Relation config review": base / "reports/training/relation_training_config_review.md",
         "Training pack comparison": base / "reports/training/training_pack_comparison.md",
+        "Training config suite": base / "reports/training/training_config_suite_review.md",
         "Model registry audit": base / "reports/training/model_registry_audit.md",
         "Evidence smoke model card": base / "reports/training/evidence_smoke_fixture/evidence_smoke_model_card.md",
     }
@@ -206,6 +207,7 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "Gold readiness": base / "reports/training/gold_pack/training_readiness.json",
         "Relation config review": base / "reports/training/relation_training_config_review.json",
         "Training pack comparison": base / "reports/training/training_pack_comparison.json",
+        "Training config suite": base / "reports/training/training_config_suite_review.json",
         "Model registry audit": base / "reports/training/model_registry_audit.json",
         "Checkpoint registry": base / "models/checkpoint_registry.json",
     }
@@ -239,6 +241,14 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
     config_status = ""
     if isinstance(payloads.get("Relation config review"), dict):
         config_status = str(payloads["Relation config review"].get("status") or "")
+    current_config_passed = 0
+    current_config_failed = 0
+    scaffold_config_count = 0
+    if isinstance(payloads.get("Training config suite"), dict):
+        suite = payloads["Training config suite"]
+        current_config_passed = int(suite.get("passed_count") or 0)
+        current_config_failed = int(suite.get("blocking_failed_count") or suite.get("failed_count") or 0)
+        scaffold_config_count = int(suite.get("scaffold_count") or 0)
     return {
         "reports": reports,
         "payloads": payloads,
@@ -247,6 +257,9 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "registry_entry_count": registry_entries,
         "registry_audit_passed": registry_passed,
         "relation_config_status": config_status,
+        "current_config_passed_count": current_config_passed,
+        "current_config_failed_count": current_config_failed,
+        "scaffold_config_count": scaffold_config_count,
     }
 
 
@@ -256,6 +269,8 @@ def render_training_artifacts_page(st: object) -> None:
     st.metric("Ready packs", context["ready_pack_count"])
     if context["relation_config_status"]:
         st.metric("Relation config review", context["relation_config_status"])
+    st.metric("Current config failures", context["current_config_failed_count"])
+    st.metric("Scaffold configs", context["scaffold_config_count"])
     if context["registry_entry_count"]:
         st.metric("Registry entries", context["registry_entry_count"])
     if context["registry_audit_passed"] is not None:

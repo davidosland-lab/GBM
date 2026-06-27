@@ -300,14 +300,16 @@ Run the training artifact governance reports. These commands remain read-only/re
 gbmbert-build-training-artifact-bundle --output-dir data/processed/training_artifact_bundle
 gbmbert-search-training-artifacts relation_pack --markdown-output reports/training/training_artifact_search.md --json-output reports/training/training_artifact_search.json
 gbmbert-audit-training-pack-leakage --markdown-output reports/training/training_pack_leakage_audit.md --json-output reports/training/training_pack_leakage_audit.json --allow-warnings
-gbmbert-review-training-config-suite --markdown-output reports/training/training_config_suite_review.md --json-output reports/training/training_config_suite_review.json --allow-failed
+gbmbert-review-training-config-suite --markdown-output reports/training/training_config_suite_review.md --json-output reports/training/training_config_suite_review.json
 gbmbert-plan-registry-remediation --markdown-output reports/training/model_registry_remediation_plan.md --json-output reports/training/model_registry_remediation_plan.json
 gbmbert-training-label-drift --markdown-output reports/training/training_label_drift.md --json-output reports/training/training_label_drift.json --allow-warnings
 gbmbert-audit-training-provenance data/training/relation_training_pack.jsonl --markdown-output reports/training/training_provenance_audit.md --json-output reports/training/training_provenance_audit.json
 gbmbert-training-readiness-snapshot --markdown-output reports/training/training_readiness_snapshot.md --json-output reports/training/training_readiness_snapshot.json
 gbmbert-dashboard-training-manifest --output reports/training/dashboard_training_manifest.json --markdown-output reports/training/dashboard_training_manifest.md
-gbmbert-run-training-governance-suite --output-dir reports/training/governance --allow-findings
+gbmbert-run-training-governance-suite --output-dir reports/training/governance
 ```
+
+The default governance suite treats `governance_profile=current` configs as blocking and `governance_profile=scaffold` configs as visible but nonblocking future scaffolds. Use `--strict-scaffolds` on `gbmbert-review-training-config-suite` or `gbmbert-run-training-governance-suite` when scaffold gaps should fail the command.
 
 Build an evidence-only training pack for evidence classification experiments:
 
@@ -318,7 +320,7 @@ gbmbert-build-evidence-training-pack data/training/annotation_dataset --output-d
 Review an evidence training config against prepared splits and label maps before any execution:
 
 ```powershell
-gbmbert-review-training-config configs/training/gbmbert_evidence_pubmedbert.json data/training/evidence_pack/annotation_splits --label-map-dir data/training/evidence_pack/label_maps --markdown-output reports/training/training_config_review.md --json-output reports/training/training_config_review.json
+gbmbert-review-training-config configs/training/gbmbert_evidence_smoke_pubmedbert.json data/training/evidence_pack/annotation_splits --label-map-dir data/training/evidence_pack/label_maps --markdown-output reports/training/training_config_review.md --json-output reports/training/training_config_review.json
 ```
 
 Build a no-training experiment manifest that ties a config, prepared data, and label maps together:

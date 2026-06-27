@@ -1,0 +1,20 @@
+{
+  "name": "gbmbert_evidence_smoke_pubmedbert",
+  "governance_profile": "current",
+  "governance_note": "Current smoke evidence config aligned to the local evidence-only smoke pack.",
+  "task": "evidence_classification",
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "train_path": "data/training/evidence_pack/annotation_splits/evidence_train.jsonl",
+  "validation_path": "data/training/evidence_pack/annotation_splits/evidence_validation.jsonl",
+  "output_dir": "models/checkpoints/gbmbert_evidence_smoke_pubmedbert",
+  "label_set": [
+    "0",
+    "1"
+  ],
+  "hyperparameters": {
+    "epochs": 3,
+    "learning_rate": 0.00002,
+    "batch_size": 8,
+    "max_length": 256
+  }
+}

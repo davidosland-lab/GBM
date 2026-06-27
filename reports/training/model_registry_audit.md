@@ -4,10 +4,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Registry: `models\checkpoint_registry.json`
 - Reports directory: `reports\training`
-- Checkpoints: 2
-- Passed: False
-- Errors: 1
-- Warnings: 2
+- Checkpoints: 1
+- Passed: True
+- Errors: 0
+- Warnings: 0
 
 ## Entries
 ### gbmbert_evidence_smoke
@@ -32,32 +32,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Warnings:
 - none
 
-### gbmbert_ner_smoke_candidate
-- Task: ner
-- Status: candidate
-- Checks:
-- checkpoint_dir_exists: False
-- dataset_card_present: False
-- entry_warning_present: True
-- manifest_path_exists_or_empty: True
-- metrics_path_exists_or_empty: True
-- model_card_present: False
-- name_present: True
-- notes_do_not_overclaim: True
-- status_research_safe: True
-- Model cards:
-- none
-- Dataset cards:
-- none
-- Errors:
-- gbmbert_ner_smoke_candidate: checkpoint_dir does not exist
-- Warnings:
-- gbmbert_ner_smoke_candidate: no matching model card found
-- gbmbert_ner_smoke_candidate: no matching dataset card found
-
 ## Errors
-- gbmbert_ner_smoke_candidate: checkpoint_dir does not exist
+- none
 
 ## Warnings
-- gbmbert_ner_smoke_candidate: no matching model card found
-- gbmbert_ner_smoke_candidate: no matching dataset card found
+- none

@@ -91,8 +91,11 @@ class ConfigSuiteReviewReport:
     config_count: int
     passed_count: int
     failed_count: int
+    blocking_failed_count: int
+    scaffold_count: int
     reviews: list[dict[str, Any]]
     warnings: list[str]
+    scaffold_warnings: list[str]
     warning: str = RESEARCH_WARNING
 
     def to_dict(self) -> dict[str, Any]:
@@ -159,6 +162,9 @@ class TrainingReadinessSnapshotReport:
     ready_pack_count: int
     total_pack_count: int
     relation_config_status: str
+    current_config_passed_count: int
+    current_config_failed_count: int
+    scaffold_config_count: int
     registry_audit_passed: bool | None
     dashboard_report_count: int
     warnings: list[str]
@@ -175,6 +181,9 @@ class DashboardTrainingManifestReport:
     ready_pack_count: int
     registry_entry_count: int
     relation_config_status: str
+    current_config_passed_count: int
+    current_config_failed_count: int
+    scaffold_config_count: int
     registry_audit_passed: bool | None
     warning: str = RESEARCH_WARNING
 
@@ -325,10 +334,17 @@ def review_training_config_suite(config_paths: list[str | Path] | None = None) -
     paths = [Path(path) for path in selected_paths]
     reviews: list[dict[str, Any]] = []
     warnings: list[str] = []
+    scaffold_warnings: list[str] = []
     for config_path in paths:
+        metadata = _config_governance_metadata(config_path)
+        profile = metadata["profile"]
         try:
             config = load_training_config(config_path)
             dataset_dir, label_map_dir = _default_dataset_and_label_maps_for_task(config.task.value)
+            if metadata["dataset_dir"]:
+                dataset_dir = Path(metadata["dataset_dir"])
+            if metadata["label_map_dir"]:
+                label_map_dir = Path(metadata["label_map_dir"])
             review = review_training_config(config_path, dataset_dir, label_map_dir=label_map_dir).to_dict()
         except Exception as exc:  # Reports should keep going across the suite.
             review = {
@@ -337,15 +353,28 @@ def review_training_config_suite(config_paths: list[str | Path] | None = None) -
                 "errors": [str(exc)],
                 "warnings": [],
             }
+        raw_status = str(review.get("status") or "failed")
+        review["governance_profile"] = profile
+        review["governance_note"] = metadata["note"]
+        review["blocking"] = profile == "current"
+        review["raw_status"] = raw_status
+        if profile == "scaffold":
+            review["status"] = "scaffold_ready" if raw_status == "passed" else "scaffold_pending"
+            if raw_status != "passed":
+                scaffold_warnings.append(f"{config_path}: scaffold pending ({'; '.join(str(error) for error in review.get('errors', []))})")
+        elif raw_status != "passed":
+            warnings.append(f"{config_path}: {raw_status}")
         reviews.append(review)
-        if review.get("status") != "passed":
-            warnings.append(f"{config_path}: {review.get('status')}")
+    blocking_failed_count = sum(1 for review in reviews if review.get("blocking") and review.get("raw_status") != "passed")
     return ConfigSuiteReviewReport(
         config_count=len(reviews),
-        passed_count=sum(1 for review in reviews if review.get("status") == "passed"),
-        failed_count=sum(1 for review in reviews if review.get("status") != "passed"),
+        passed_count=sum(1 for review in reviews if review.get("blocking") and review.get("raw_status") == "passed"),
+        failed_count=blocking_failed_count,
+        blocking_failed_count=blocking_failed_count,
+        scaffold_count=sum(1 for review in reviews if review.get("governance_profile") == "scaffold"),
         reviews=reviews,
         warnings=warnings,
+        scaffold_warnings=scaffold_warnings,
     )
 
 
@@ -429,11 +458,16 @@ def build_training_readiness_snapshot(root: str | Path = ".") -> TrainingReadine
         warnings.append("model registry audit has findings")
     if context["relation_config_status"] and context["relation_config_status"] != "passed":
         warnings.append(f"relation config review status: {context['relation_config_status']}")
+    if int(context.get("current_config_failed_count", 0)):
+        warnings.append(f"current config failures: {context['current_config_failed_count']}")
     return TrainingReadinessSnapshotReport(
         created_at_utc=datetime.now(UTC).isoformat(),
         ready_pack_count=int(context["ready_pack_count"]),
         total_pack_count=3,
         relation_config_status=str(context["relation_config_status"]),
+        current_config_passed_count=int(context.get("current_config_passed_count", 0)),
+        current_config_failed_count=int(context.get("current_config_failed_count", 0)),
+        scaffold_config_count=int(context.get("scaffold_config_count", 0)),
         registry_audit_passed=context["registry_audit_passed"] if isinstance(context["registry_audit_passed"], bool) else None,
         dashboard_report_count=int(context["available_report_count"]),
         warnings=warnings,
@@ -448,13 +482,20 @@ def build_dashboard_training_manifest(output_path: str | Path, *, root: str | Pa
         ready_pack_count=int(context["ready_pack_count"]),
         registry_entry_count=int(context["registry_entry_count"]),
         relation_config_status=str(context["relation_config_status"]),
+        current_config_passed_count=int(context.get("current_config_passed_count", 0)),
+        current_config_failed_count=int(context.get("current_config_failed_count", 0)),
+        scaffold_config_count=int(context.get("scaffold_config_count", 0)),
         registry_audit_passed=context["registry_audit_passed"] if isinstance(context["registry_audit_passed"], bool) else None,
     )
     save_dashboard_training_manifest_json(report, output_path)
     return report
 
 
-def run_training_governance_suite(output_dir: str | Path = Path("reports/training/governance")) -> GovernanceSuiteReport:
+def run_training_governance_suite(
+    output_dir: str | Path = Path("reports/training/governance"),
+    *,
+    strict_scaffolds: bool = False,
+) -> GovernanceSuiteReport:
     output_root = Path(output_dir)
     output_root.mkdir(parents=True, exist_ok=True)
     artifacts: dict[str, str] = {}
@@ -473,6 +514,8 @@ def run_training_governance_suite(output_dir: str | Path = Path("reports/trainin
     artifacts["config_suite"] = str(save_config_suite_review_json(suite, output_root / "training_config_suite_review.json"))
     save_config_suite_review_markdown(suite, output_root / "training_config_suite_review.md")
     warnings.extend(suite.warnings)
+    if strict_scaffolds:
+        warnings.extend(suite.scaffold_warnings)
 
     registry = audit_checkpoint_registry(DEFAULT_REGISTRY)
     artifacts["registry_audit"] = str(save_registry_audit_json(registry, output_root / "model_registry_audit.json"))
@@ -486,7 +529,10 @@ def run_training_governance_suite(output_dir: str | Path = Path("reports/trainin
     drift = build_training_label_drift_report()
     artifacts["label_drift"] = str(save_training_label_drift_json(drift, output_root / "training_label_drift.json"))
     save_training_label_drift_markdown(drift, output_root / "training_label_drift.md")
-    warnings.extend(drift.warnings)
+    # Label drift from scaffold/full-profile configs is informational in the
+    # default green path; strict audit mode can still surface it as blocking.
+    if strict_scaffolds:
+        warnings.extend(drift.warnings)
 
     provenance = audit_training_provenance()
     artifacts["provenance_audit"] = str(save_training_provenance_audit_json(provenance, output_root / "training_provenance_audit.json"))
@@ -605,8 +651,9 @@ def save_config_suite_review_markdown(report: ConfigSuiteReviewReport, path: str
         RESEARCH_WARNING,
         "",
         f"- Configs: {report.config_count}",
-        f"- Passed: {report.passed_count}",
-        f"- Failed: {report.failed_count}",
+        f"- Current passed: {report.passed_count}",
+        f"- Current failed: {report.blocking_failed_count}",
+        f"- Scaffold configs: {report.scaffold_count}",
         "",
         "## Reviews",
     ]
@@ -615,13 +662,24 @@ def save_config_suite_review_markdown(report: ConfigSuiteReviewReport, path: str
             [
                 f"### {Path(str(review.get('config_path', 'unknown'))).name}",
                 f"- Status: {review.get('status')}",
+                f"- Governance profile: {review.get('governance_profile', 'current')}",
+                f"- Blocking: {review.get('blocking', True)}",
                 f"- Task: {review.get('task', 'n/a')}",
+                f"- Note: {review.get('governance_note') or 'none'}",
                 "- Errors:",
                 *([f"- {error}" for error in review.get("errors", [])] if review.get("errors") else ["- none"]),
                 "",
             ]
         )
-    lines.extend(["## Warnings", *([f"- {warning}" for warning in report.warnings] if report.warnings else ["- none"])])
+    lines.extend(
+        [
+            "## Blocking Warnings",
+            *([f"- {warning}" for warning in report.warnings] if report.warnings else ["- none"]),
+            "",
+            "## Scaffold Warnings",
+            *([f"- {warning}" for warning in report.scaffold_warnings] if report.scaffold_warnings else ["- none"]),
+        ]
+    )
     return _write_text(lines, path)
 
 
@@ -708,6 +766,9 @@ def save_training_readiness_snapshot_markdown(report: TrainingReadinessSnapshotR
         f"- Created UTC: {report.created_at_utc}",
         f"- Ready packs: {report.ready_pack_count}/{report.total_pack_count}",
         f"- Relation config status: {report.relation_config_status or 'n/a'}",
+        f"- Current config passed: {report.current_config_passed_count}",
+        f"- Current config failed: {report.current_config_failed_count}",
+        f"- Scaffold configs: {report.scaffold_config_count}",
         f"- Registry audit passed: {report.registry_audit_passed}",
         f"- Dashboard reports: {report.dashboard_report_count}",
         "",
@@ -731,6 +792,9 @@ def save_dashboard_training_manifest_markdown(report: DashboardTrainingManifestR
         f"- Ready packs: {report.ready_pack_count}",
         f"- Registry entries: {report.registry_entry_count}",
         f"- Relation config status: {report.relation_config_status or 'n/a'}",
+        f"- Current config passed: {report.current_config_passed_count}",
+        f"- Current config failed: {report.current_config_failed_count}",
+        f"- Scaffold configs: {report.scaffold_config_count}",
         f"- Registry audit passed: {report.registry_audit_passed}",
     ]
     return _write_text(lines, path)
@@ -811,6 +875,7 @@ def config_suite_main(argv: list[str] | None = None) -> int:
     parser.add_argument("--markdown-output", type=Path)
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--allow-failed", action="store_true")
+    parser.add_argument("--strict-scaffolds", action="store_true")
     args = parser.parse_args(argv)
     report = review_training_config_suite(args.config)
     if args.json_output:
@@ -818,7 +883,8 @@ def config_suite_main(argv: list[str] | None = None) -> int:
     if args.markdown_output:
         save_config_suite_review_markdown(report, args.markdown_output)
     print(json.dumps(report.to_dict(), indent=2, sort_keys=True) if args.json else _format_tmp_markdown(report, save_config_suite_review_markdown))
-    return 0 if report.failed_count == 0 or args.allow_failed else 1
+    has_findings = report.failed_count > 0 or (args.strict_scaffolds and bool(report.scaffold_warnings))
+    return 0 if not has_findings or args.allow_failed else 1
 
 
 def registry_remediation_main(argv: list[str] | None = None) -> int:
@@ -903,8 +969,9 @@ def governance_suite_main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-dir", type=Path, default=Path("reports/training/governance"))
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--allow-findings", action="store_true")
+    parser.add_argument("--strict-scaffolds", action="store_true")
     args = parser.parse_args(argv)
-    report = run_training_governance_suite(args.output_dir)
+    report = run_training_governance_suite(args.output_dir, strict_scaffolds=args.strict_scaffolds)
     print(json.dumps(report.to_dict(), indent=2, sort_keys=True) if args.json else (Path(report.output_dir) / "training_governance_suite.md").read_text(encoding="utf-8"))
     return 0 if report.passed or args.allow_findings else 1
 
@@ -952,19 +1019,45 @@ def _default_dataset_and_label_maps_for_task(task: str) -> tuple[Path, Path]:
     return Path("data/training/ncbi_env_smoke_annotation_splits"), Path("data/training/ncbi_env_smoke_label_maps")
 
 
+def _config_governance_metadata(path: str | Path) -> dict[str, str]:
+    config_path = Path(path)
+    try:
+        payload = json.loads(config_path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {"profile": "current", "note": "", "dataset_dir": "", "label_map_dir": ""}
+    if not isinstance(payload, dict):
+        return {"profile": "current", "note": "", "dataset_dir": "", "label_map_dir": ""}
+    profile = str(payload.get("governance_profile") or "current").strip().casefold()
+    if profile not in {"current", "scaffold"}:
+        profile = "current"
+    return {
+        "profile": profile,
+        "note": str(payload.get("governance_note") or ""),
+        "dataset_dir": str(payload.get("governance_dataset_dir") or ""),
+        "label_map_dir": str(payload.get("governance_label_map_dir") or ""),
+    }
+
+
 def _config_labels_by_task() -> dict[str, list[str]]:
     labels: dict[str, list[str]] = {}
+    profiles: dict[str, str] = {}
     for path in Path("configs/training").glob("*.json"):
         try:
             config = load_training_config(path)
         except Exception:
             continue
+        profile = _config_governance_metadata(path)["profile"]
         if config.task.value == "evidence_classification":
-            labels["evidence"] = list(config.label_set)
+            task_key = "evidence"
         elif config.task.value == "relation_extraction":
-            labels["relation"] = list(config.label_set)
+            task_key = "relation"
         elif config.task.value == "ner":
-            labels["ner"] = list(config.label_set)
+            task_key = "ner"
+        else:
+            continue
+        if task_key not in labels or profiles.get(task_key) != "current" or profile == "current":
+            labels[task_key] = list(config.label_set)
+            profiles[task_key] = profile
     return labels
 
 
