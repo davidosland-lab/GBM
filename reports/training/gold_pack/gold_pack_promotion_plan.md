@@ -9,6 +9,7 @@ This is a scaffold-only curation planning report. It does not promote a dataset,
 - Promotable now: False
 - Source PMIDs still needed: 8
 - Suggested future batches: 13
+- Overall label-floor coverage of task deltas: 14.8%
 
 ## Compact Summary
 ### Task Remaining Examples
@@ -25,6 +26,11 @@ This is a scaffold-only curation planning report. It does not promote a dataset,
 - evidence: label-floor 12 of 52 task-volume example(s); 40 remaining after label balancing
 - ner: label-floor 24 of 4 task-volume example(s); 0 remaining after label balancing
 - relation: label-floor 0 of 52 task-volume example(s); 52 remaining after label balancing
+
+### Task Delta Coverage
+- evidence: 23.1% covered by label-floor batches, 76.9% remaining as raw task volume (delta 52)
+- ner: 100.0% covered by label-floor batches, 0.0% remaining as raw task volume (delta 4)
+- relation: 0.0% covered by label-floor batches, 100.0% remaining as raw task volume (delta 52)
 
 ### Source PMID Batches
 - `source-pmid-expansion-001`: 6 new PMID(s)

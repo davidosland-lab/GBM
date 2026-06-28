@@ -316,6 +316,11 @@ PR158 Curated Round Rebuild Orchestrator:
 - Modeled on the `gbmbert-verify-local` runner: an injectable command runner, ordered step list, and a `reports\training\curated_round_rebuild.{md,json}` report with per-step status. Partial/missing rounds are surfaced as warnings; platform verification (`gbmbert-verify-local`) and the CI summary stay a separate downstream step.
 - Verified idempotent against the six-round corpus: 20/20 steps pass and the gold pack stays at 42 evidence / 84 NER / 42 relation across 36 source PMIDs.
 
+PR159 Promotion Planning Coverage Report:
+
+- The gold-pack promotion planning report now includes a per-task `task_coverage` view (label-floor coverage percentage of the task delta vs. remaining raw task-volume percentage, capped at 100%) plus an `overall_label_floor_coverage_pct` summary, surfaced in both the JSON and the Markdown.
+- Builds directly on the PR154 label-balance relationship; stays scaffold-only and research-use-only (it does not promote a dataset or claim a validated GBM-BERT model exists).
+
 ## Latest Verification
 
 Last verified from `C:\Users\david\GBM` using the project `.venv`:
@@ -336,7 +341,7 @@ Last verified from `C:\Users\david\GBM` using the project `.venv`:
 
 Results:
 
-- Tests: `235 passed`
+- Tests: `238 passed`
 - `pip check`: no broken requirements
 - Scope drift monitor: safe, 0 findings
 - Platform regression: passed
@@ -354,7 +359,7 @@ Results:
 - Governance detail export: required rows visible; missing report rows visible for review
 - Governance detail contract: valid, all required rows visible
 - Gold-pack promotion review: not promotable; current fixture has 48 evidence, 96 NER, 48 relation examples and 42 source PMIDs, below promotion thresholds
-- Promotion planning report: scaffold-only, 13 suggested future curation batches from the current deltas, with label-balance vs task-volume relationship per task
+- Promotion planning report: scaffold-only, 13 suggested future curation batches from the current deltas, with per-task label-balance/task-volume relationship and delta-coverage view (overall label-floor coverage 14.8%)
 - Training config suite: 5 configs, 3 current passed, 0 current failed, 2 scaffold configs
 - Model registry audit: passed, 1 checkpoint, 0 findings
 
@@ -534,11 +539,6 @@ PR161 Eighth Curated Expansion Round:
 
 - Add an eighth reviewed fixture batch (six new source PMIDs) toward promotion thresholds (target 54 evidence / 108 NER / 54 relation, 48 source PMIDs).
 - Add the round-eight trio under `data\training\curated_expansion`, then regenerate everything with `gbmbert-rebuild-curated-rounds` (PR158) followed by `gbmbert-verify-local` and the CI summary. No multi-step chain or launcher edits needed for the orchestrator path.
-
-PR159 Promotion Planning Coverage Report:
-
-- Build on the PR154 label-balance vs task-volume relationship by adding a compact coverage percentage (how much of each task delta is covered by current label-floor batches).
-- Keep the plan scaffold-only and explicitly research-use-only.
 
 PR160 Rebuild Orchestrator In Verify-Local / CI:
 

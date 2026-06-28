@@ -4,6 +4,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Unreleased
 
+- Added a task-delta coverage view to the gold-pack promotion planning report: per-task label-floor coverage vs. remaining raw task volume, plus an overall coverage percentage. Scaffold-only and research-use-only.
 - Added a seventh curated local curation round (six new source PMIDs) and rebuilt every report via the one-command orchestrator; the gold pack is now 48 evidence / 96 NER / 48 relation across 42 source PMIDs, still correctly below promotion thresholds.
 - Added `gbmbert-rebuild-curated-rounds` (launcher `16BS`): a single observe-only command that discovers every curated expansion round and regenerates the full report chain (import, provenance diff, gold seed/pack, evidence/relation packs, governance, promotion review/planning, governance detail).
 - Added a launcher path (`16BR`) for the full multi-batch curated import across every expansion round, matching the provenance-diff fixed file set.

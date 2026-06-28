@@ -290,6 +290,7 @@
     },
     "relation": {}
   },
+  "overall_label_floor_coverage_pct": 14.8,
   "promotable_now": false,
   "promotion_review_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.json",
   "scaffold_only": true,
@@ -304,6 +305,26 @@
     }
   ],
   "source_pmid_delta": 8,
+  "task_coverage": {
+    "evidence": {
+      "label_delta_total": 12.0,
+      "label_floor_coverage_pct": 23.1,
+      "task_example_delta": 52.0,
+      "task_volume_remaining_pct": 76.9
+    },
+    "ner": {
+      "label_delta_total": 24.0,
+      "label_floor_coverage_pct": 100.0,
+      "task_example_delta": 4.0,
+      "task_volume_remaining_pct": 0.0
+    },
+    "relation": {
+      "label_delta_total": 0.0,
+      "label_floor_coverage_pct": 0.0,
+      "task_example_delta": 52.0,
+      "task_volume_remaining_pct": 100.0
+    }
+  },
   "task_example_deltas": {
     "evidence": 52,
     "ner": 4,

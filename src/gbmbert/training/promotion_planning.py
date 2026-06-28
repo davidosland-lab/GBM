@@ -45,6 +45,8 @@ class GoldPackPromotionPlanningReport:
     label_remaining_examples: dict[str, dict[str, int]]
     source_pmid_batches: list[dict[str, int | str]]
     label_balance_relationship: dict[str, dict[str, int]]
+    task_coverage: dict[str, dict[str, float]]
+    overall_label_floor_coverage_pct: float
     batch_count: int
     batches: list[PromotionPlanningBatch]
     warning: str = RESEARCH_WARNING
@@ -73,6 +75,7 @@ def build_gold_pack_promotion_planning_report(
     batches: list[PromotionPlanningBatch] = []
     source_pmid_batches: list[dict[str, int | str]] = []
     label_balance_relationship: dict[str, dict[str, int]] = {}
+    task_coverage: dict[str, dict[str, float]] = {}
 
     for task in sorted(task_deltas):
         low_labels = [
@@ -91,6 +94,17 @@ def build_gold_pack_promotion_planning_report(
             "task_example_delta": task_example_delta,
             "label_delta_total": label_delta_total,
             "remaining_task_volume_after_labels": remaining_task_delta,
+        }
+        # Coverage view: how much of this task's example delta is accounted for by
+        # the label-floor batches versus raw task-volume batches. Label-floor work
+        # is a subset of the task-volume delta, so coverage is capped at 100%; a
+        # task with no remaining delta is treated as fully covered.
+        label_floor_coverage_pct = min(100.0, _pct(label_delta_total, task_example_delta))
+        task_coverage[task] = {
+            "task_example_delta": float(task_example_delta),
+            "label_delta_total": float(label_delta_total),
+            "label_floor_coverage_pct": label_floor_coverage_pct,
+            "task_volume_remaining_pct": round(100.0 - label_floor_coverage_pct, 1),
         }
         for index, chunk in enumerate(_chunks(low_labels, max(1, labels_per_batch)), start=1):
             batches.append(
@@ -149,6 +163,11 @@ def build_gold_pack_promotion_planning_report(
         label_remaining_examples={task: dict(sorted(labels.items())) for task, labels in sorted(label_deltas.items())},
         source_pmid_batches=source_pmid_batches,
         label_balance_relationship=dict(sorted(label_balance_relationship.items())),
+        task_coverage=dict(sorted(task_coverage.items())),
+        overall_label_floor_coverage_pct=_pct(
+            sum(min(cov["label_delta_total"], cov["task_example_delta"]) for cov in task_coverage.values()),
+            sum(cov["task_example_delta"] for cov in task_coverage.values()),
+        ),
         batch_count=len(batches),
         batches=batches,
     )
@@ -181,6 +200,7 @@ def format_gold_pack_promotion_planning_markdown(report: GoldPackPromotionPlanni
         f"- Promotable now: {report.promotable_now}",
         f"- Source PMIDs still needed: {report.source_pmid_delta}",
         f"- Suggested future batches: {report.batch_count}",
+        f"- Overall label-floor coverage of task deltas: {report.overall_label_floor_coverage_pct}%",
         "",
         "## Compact Summary",
         "### Task Remaining Examples",
@@ -201,6 +221,16 @@ def format_gold_pack_promotion_planning_markdown(report: GoldPackPromotionPlanni
             lines.append(
                 f"- {task}: label-floor {relationship['label_delta_total']} of {relationship['task_example_delta']} "
                 f"task-volume example(s); {relationship['remaining_task_volume_after_labels']} remaining after label balancing"
+            )
+    else:
+        lines.append("- none")
+    lines.extend(["", "### Task Delta Coverage"])
+    if report.task_coverage:
+        for task, coverage in sorted(report.task_coverage.items()):
+            lines.append(
+                f"- {task}: {coverage['label_floor_coverage_pct']}% covered by label-floor batches, "
+                f"{coverage['task_volume_remaining_pct']}% remaining as raw task volume "
+                f"(delta {int(coverage['task_example_delta'])})"
             )
     else:
         lines.append("- none")
@@ -275,6 +305,12 @@ def _read_json(path: Path) -> dict[str, Any]:
 
 def _chunks(items: list[dict[str, int]], size: int) -> list[list[dict[str, int]]]:
     return [items[index : index + size] for index in range(0, len(items), size)]
+
+
+def _pct(part: float, whole: float) -> float:
+    """Percentage of ``part`` over ``whole``; a zero ``whole`` means nothing left to cover."""
+
+    return round(part / whole * 100.0, 1) if whole else 100.0
 
 
 if __name__ == "__main__":
