@@ -56,9 +56,9 @@
       "prepared_task": "evidence",
       "raw_status": "passed",
       "split_counts": {
-        "test": 5,
-        "train": 33,
-        "validation": 4
+        "test": 4,
+        "train": 39,
+        "validation": 5
       },
       "status": "scaffold_ready",
       "task": "evidence_classification",
@@ -196,9 +196,9 @@
       "prepared_task": "ner",
       "raw_status": "passed",
       "split_counts": {
-        "test": 10,
-        "train": 66,
-        "validation": 8
+        "test": 8,
+        "train": 78,
+        "validation": 10
       },
       "status": "scaffold_ready",
       "task": "ner",
@@ -329,9 +329,9 @@
       "prepared_task": "relation",
       "raw_status": "passed",
       "split_counts": {
-        "test": 5,
-        "train": 33,
-        "validation": 4
+        "test": 4,
+        "train": 39,
+        "validation": 5
       },
       "status": "passed",
       "task": "relation_extraction",

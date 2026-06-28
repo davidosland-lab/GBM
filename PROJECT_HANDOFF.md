@@ -49,7 +49,7 @@ The project has working local scaffolding and CLI workflows for:
 - Streamlit dashboard shell
 - GBM-BERT training scaffold, dataset splitting, label maps, dataset cards, baseline reports, experiment manifests, checkpoint registry metadata, gated training runner, HF dataset loaders, tokenizer pipeline, evidence classifier training execution, evaluation reports, run manifests, evidence batch inference, model cards, and smoke fixture
 
-## Recently Implemented PR111-156
+## Recently Implemented PR111-158
 
 PR111 NER Registry Retirement:
 
@@ -303,6 +303,19 @@ PR156 Launcher Curated Import Multi-Batch Defaults:
 - Added launcher option `16BR` (`:curated_fixture_import_multibatch`) running the full six-round curated import with the same fixed file set the provenance diff (`16BN`) uses.
 - Extended the provenance diff recipe to include round six and registered `16BR` in the launcher menu check; `16BL` remains the interactive single-batch import.
 
+PR157 Seventh Curated Expansion Round:
+
+- Added seventh-round curated fixture files under `data\training\curated_expansion` (`evidence_round7.jsonl`, `gold_entities_round7.jsonl`, `gold_reviewed_queue_round7.jsonl`) introducing six brand-new source PMIDs (PMID-disjoint from all prior rounds).
+- Regenerated the entire report chain with the PR158 orchestrator (`gbmbert-rebuild-curated-rounds`, auto-discovered round seven with no code changes) — 7 rounds, 20/20 steps.
+- Current gold pack is locally ready with 48 evidence, 96 NER, and 48 relation examples across 42 source PMIDs, while promotion remains correctly blocked by threshold config (needs 50 PMIDs / 100 examples per task).
+- Updated the static `16BN` provenance-diff and `16BR` multi-batch-import launcher recipes to include round seven; the dynamic `16BS` orchestrator needs no per-round edits.
+
+PR158 Curated Round Rebuild Orchestrator:
+
+- Added `gbmbert-rebuild-curated-rounds` (`src\gbmbert\training\curated_round_rebuild.py`, launcher `16BS`): one observe-only command that discovers every curated expansion round (base trio + `*_round{N}` trios) and runs the full 20-step report chain — import, provenance diff, gold seed, gold pack, evidence pack, relation pack, relation quality, the seven top-level governance reports, promotion review/planning, the governance + strict-governance suites, and the governance detail export/contract.
+- Modeled on the `gbmbert-verify-local` runner: an injectable command runner, ordered step list, and a `reports\training\curated_round_rebuild.{md,json}` report with per-step status. Partial/missing rounds are surfaced as warnings; platform verification (`gbmbert-verify-local`) and the CI summary stay a separate downstream step.
+- Verified idempotent against the six-round corpus: 20/20 steps pass and the gold pack stays at 42 evidence / 84 NER / 42 relation across 36 source PMIDs.
+
 ## Latest Verification
 
 Last verified from `C:\Users\david\GBM` using the project `.venv`:
@@ -323,24 +336,25 @@ Last verified from `C:\Users\david\GBM` using the project `.venv`:
 
 Results:
 
-- Tests: `228 passed`
+- Tests: `235 passed`
 - `pip check`: no broken requirements
 - Scope drift monitor: safe, 0 findings
 - Platform regression: passed
 - Canonical local verification: passed, 8/8 steps
-- Artifact policy: safe, 619 tracked paths checked, 0 findings
-- Artifact index refreshed: 497 artifacts
+- Curated round rebuild orchestrator: passed, 7 rounds, 20/20 steps, 0 warnings
+- Artifact policy: safe, 0 findings
+- Artifact index refreshed: 502 artifacts
 - Default training governance suite: passed, 10/10, no blocking warnings
 - Strict training governance audit: ran with `--allow-findings`; scaffold findings remain visible for unpromoted full-label evidence coverage
 - Label drift: 0 warnings, using config-specific governance datasets
 - Launcher menu check: safe, 0 findings
 - CI report summary: tracked at `reports\platform_regression\ci_report_summary.md`; includes the Governance detail contract row; CI summary contract valid
-- Curated fixture import: safe, 42 evidence rows, 84 entity rows, 84 reviewed queue rows, 36 source PMIDs
-- Curated provenance diff: safe across six rounds, 36 source PMIDs, 0 duplicate/changed/withdrawn findings
+- Curated fixture import: safe, 48 evidence rows, 96 entity rows, 96 reviewed queue rows, 42 source PMIDs
+- Curated provenance diff: safe across seven rounds, 240 observations, 42 source PMIDs, 0 duplicate/changed/withdrawn findings
 - Governance detail export: required rows visible; missing report rows visible for review
 - Governance detail contract: valid, all required rows visible
-- Gold-pack promotion review: not promotable; current fixture has 42 evidence, 84 NER, 42 relation examples and 36 source PMIDs, below promotion thresholds
-- Promotion planning report: scaffold-only, 14 suggested future curation batches from the current deltas, with label-balance vs task-volume relationship per task
+- Gold-pack promotion review: not promotable; current fixture has 48 evidence, 96 NER, 48 relation examples and 42 source PMIDs, below promotion thresholds
+- Promotion planning report: scaffold-only, 13 suggested future curation batches from the current deltas, with label-balance vs task-volume relationship per task
 - Training config suite: 5 configs, 3 current passed, 0 current failed, 2 scaffold configs
 - Model registry audit: passed, 1 checkpoint, 0 findings
 
@@ -371,6 +385,19 @@ Run canonical local verification:
 ```powershell
 .\.venv\Scripts\gbmbert-verify-local.exe
 ```
+
+Rebuild every curated-round report in one command (PR158):
+
+```powershell
+.\.venv\Scripts\gbmbert-rebuild-curated-rounds.exe --markdown-output reports\training\curated_round_rebuild.md --json-output reports\training\curated_round_rebuild.json
+```
+
+This discovers every curated expansion round and regenerates the full chain
+(import, provenance diff, gold seed/pack, evidence/relation packs, governance,
+promotion review/planning, governance detail). It replaces the multi-step
+sequence under "PR91-94 smoke commands" plus the curated import/provenance/
+promotion commands below. Run `gbmbert-verify-local` afterward for platform
+checks and the CI summary.
 
 Run artifact policy directly:
 
@@ -494,6 +521,7 @@ Knowledge Graph Explorer:
 - `src\gbmbert\training\curated_provenance_diff.py`
 - `src\gbmbert\training\promotion_review.py`
 - `src\gbmbert\training\promotion_planning.py`
+- `src\gbmbert\training\curated_round_rebuild.py`
 - `src\gbmbert\training\governance_detail_export.py`
 - `src\gbmbert\knowledge_graph\explorer.py`
 - `src\gbmbert\knowledge_graph\inspect.py`
@@ -502,20 +530,20 @@ Knowledge Graph Explorer:
 
 ## Recommended Next PR Series
 
-PR157 Seventh Curated Expansion Round:
+PR161 Eighth Curated Expansion Round:
 
-- Add a seventh reviewed fixture batch (six new source PMIDs) to continue increasing source PMIDs and evidence/NER/relation task counts toward promotion thresholds (target 48 evidence / 96 NER / 48 relation, 42 source PMIDs).
-- Rebuild combined import, provenance diff, evidence, NER, relation, quality, provenance, comparison, drift, promotion-review, planning, CI, and governance reports from all seven rounds (the round-rebuild command chain is documented under "Useful Local Commands").
-
-PR158 Curated Round Rebuild Orchestrator:
-
-- Optional: consolidate the round-rebuild command chain into a single tracked command/script so future expansion rounds are one invocation instead of the documented multi-step sequence.
-- Keep it research-use-only and observe-only; it must not promote a dataset or claim a validated GBM-BERT model exists.
+- Add an eighth reviewed fixture batch (six new source PMIDs) toward promotion thresholds (target 54 evidence / 108 NER / 54 relation, 48 source PMIDs).
+- Add the round-eight trio under `data\training\curated_expansion`, then regenerate everything with `gbmbert-rebuild-curated-rounds` (PR158) followed by `gbmbert-verify-local` and the CI summary. No multi-step chain or launcher edits needed for the orchestrator path.
 
 PR159 Promotion Planning Coverage Report:
 
 - Build on the PR154 label-balance vs task-volume relationship by adding a compact coverage percentage (how much of each task delta is covered by current label-floor batches).
 - Keep the plan scaffold-only and explicitly research-use-only.
+
+PR160 Rebuild Orchestrator In Verify-Local / CI:
+
+- Optional: surface the `curated_round_rebuild` report state in the CI summary or wire an opt-in rebuild step ahead of verification, keeping platform verification and the curated-data rebuild cleanly separated.
+- Keep everything observe-only; it must not promote a dataset or claim a validated GBM-BERT model exists.
 
 ## Suggested Prompt For New Chat
 
@@ -526,5 +554,5 @@ Project root is C:\Users\david\GBM. Use the local .venv only.
 
 This is the GBM-AI Platform, a research-use-only glioblastoma literature intelligence platform. Persistent boundary: Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, docs\ARTIFACT_POLICY.md, docs\LAUNCHER_MENU.md, CHANGELOG.md, and the latest reports\artifact_index.md. Then continue from PR157. First verify the current state with gbmbert-verify-local unless the handoff says it was just run. Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
+Read PROJECT_HANDOFF.md, README.md, docs\PROJECT_SCOPE.json, docs\ARTIFACT_POLICY.md, docs\LAUNCHER_MENU.md, CHANGELOG.md, and the latest reports\artifact_index.md. Then continue from PR157. First verify the current state with gbmbert-verify-local unless the handoff says it was just run. To regenerate the curated-round reports use the one-command orchestrator gbmbert-rebuild-curated-rounds (PR158). Preserve all safety guardrails and do not claim a validated trained GBM-BERT model exists.
 ```

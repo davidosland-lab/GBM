@@ -23,12 +23,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ### relation
 - Evaluation file: `data\training\relation_pack\annotation_splits\relation_test.jsonl`
-- Examples: 5
-- Majority label: NO_RELATION
-- Majority accuracy: 0.600
+- Examples: 4
+- Majority label: ASSOCIATED_WITH
+- Majority accuracy: 0.500
 - Labels:
-- ASSOCIATED_WITH: 1
-- NO_RELATION: 3
+- ASSOCIATED_WITH: 2
+- NO_RELATION: 1
 - PREDICTS: 1
 
 ## Warnings

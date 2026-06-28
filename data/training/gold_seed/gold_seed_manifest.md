@@ -3,9 +3,9 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Output directory: `data\training\gold_seed`
-- NER examples: 84
-- Evidence examples: 42
-- Relation examples: 42
+- NER examples: 96
+- Evidence examples: 48
+- Relation examples: 48
 - Skipped pending: 0
 - Skipped rejected: 0
 

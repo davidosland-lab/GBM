@@ -134,6 +134,7 @@ if /I "%choice%"=="16BO" goto promotion_planning_report
 if /I "%choice%"=="16BP" goto governance_detail_export
 if /I "%choice%"=="16BQ" goto ci_summary_contract
 if /I "%choice%"=="16BR" goto curated_fixture_import_multibatch
+if /I "%choice%"=="16BS" goto curated_round_rebuild
 if "%choice%"=="17" goto run_explorer_sample
 if /I "%choice%"=="17A" goto run_explorer_artifact
 if /I "%choice%"=="17B" goto run_explorer_baseline
@@ -324,6 +325,7 @@ echo 16BO. Plan gold-pack promotion curation batches
 echo 16BP. Export governance detail links
 echo 16BQ. Check CI summary artifact contract
 echo 16BR. Import all curated rounds (multi-batch)
+echo 16BS. Rebuild all curated-round reports (one command)
 echo T. Advanced training commands
 echo M. Main menu
 echo Q. Exit
@@ -347,6 +349,7 @@ if /I "%choice%"=="16BO" goto promotion_planning_report
 if /I "%choice%"=="16BP" goto governance_detail_export
 if /I "%choice%"=="16BQ" goto ci_summary_contract
 if /I "%choice%"=="16BR" goto curated_fixture_import_multibatch
+if /I "%choice%"=="16BS" goto curated_round_rebuild
 if /I "%choice%"=="T" goto advanced_training_menu
 if /I "%choice%"=="M" goto menu
 if /I "%choice%"=="Q" goto end
@@ -2216,10 +2219,24 @@ call :check_venv
 if errorlevel 1 goto menu
 echo.
 echo Importing all curated expansion rounds (multi-batch)...
-"%VENV_DIR%\Scripts\gbmbert-import-curated-training-fixture.exe" --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round3.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round4.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round5.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round6.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round3.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round4.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round5.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round6.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round3.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round4.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round5.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round6.jsonl --output-dir data\training\curated_import --no-copy --markdown-output reports\training\curated_fixture_import.md --json-output reports\training\curated_fixture_import.json
+"%VENV_DIR%\Scripts\gbmbert-import-curated-training-fixture.exe" --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round3.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round4.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round5.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round6.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round7.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round3.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round4.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round5.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round6.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round7.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round3.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round4.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round5.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round6.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round7.jsonl --output-dir data\training\curated_import --no-copy --markdown-output reports\training\curated_fixture_import.md --json-output reports\training\curated_fixture_import.json
 if errorlevel 1 goto command_failed
 echo.
 echo Multi-batch curated fixture import complete.
+pause
+goto menu
+
+:curated_round_rebuild
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Rebuilding every curated-round report (import, packs, governance, promotion, planning)...
+"%VENV_DIR%\Scripts\gbmbert-rebuild-curated-rounds.exe" --markdown-output reports\training\curated_round_rebuild.md --json-output reports\training\curated_round_rebuild.json
+if errorlevel 1 goto command_failed
+echo.
+echo Curated round rebuild complete. Run 16BI (local verification) next for platform checks.
 pause
 goto menu
 
@@ -2230,7 +2247,7 @@ call :check_venv
 if errorlevel 1 goto menu
 echo.
 echo Diffing curated batch provenance...
-"%VENV_DIR%\Scripts\gbmbert-curated-provenance-diff.exe" --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round3.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round4.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round5.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round6.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round3.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round4.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round5.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round6.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round3.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round4.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round5.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round6.jsonl --markdown-output reports\training\curated_provenance_diff.md --json-output reports\training\curated_provenance_diff.json --allow-findings
+"%VENV_DIR%\Scripts\gbmbert-curated-provenance-diff.exe" --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round3.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round4.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round5.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round6.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round7.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round3.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round4.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round5.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round6.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round7.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round3.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round4.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round5.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round6.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round7.jsonl --markdown-output reports\training\curated_provenance_diff.md --json-output reports\training\curated_provenance_diff.json --allow-findings
 if errorlevel 1 goto command_failed
 echo.
 echo Curated provenance diff complete.

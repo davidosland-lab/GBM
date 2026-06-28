@@ -9,77 +9,77 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Minimum examples per task: 100
 - Minimum examples per label: 10
 - Minimum source PMIDs: 50
-- Observed source PMIDs: 36
-- Additional source PMIDs needed: 14
+- Observed source PMIDs: 42
+- Additional source PMIDs needed: 8
 
 ## Task Counts
-- evidence: 42
-- ner: 84
-- relation: 42
+- evidence: 48
+- ner: 96
+- relation: 48
 
 ## Promotion Deltas
-- evidence: 58 additional example(s) needed
-- ner: 16 additional example(s) needed
-- relation: 58 additional example(s) needed
+- evidence: 52 additional example(s) needed
+- ner: 4 additional example(s) needed
+- relation: 52 additional example(s) needed
 
 ## Label Counts
 ### evidence
-- 0: 7
-- 1: 7
-- 2: 7
-- 3: 7
-- 4: 7
-- 5: 7
+- 0: 8
+- 1: 8
+- 2: 8
+- 3: 8
+- 4: 8
+- 5: 8
 
 ### ner
-- BIOMARKER: 7
-- CELL_STATE: 7
-- CELL_TYPE: 7
-- DELIVERY_MODIFIER: 7
-- DISEASE: 7
+- BIOMARKER: 8
+- CELL_STATE: 8
+- CELL_TYPE: 8
+- DELIVERY_MODIFIER: 8
+- DISEASE: 8
 - DRUG: 7
-- GENE: 7
-- OUTCOME: 7
-- PATHWAY: 7
-- TREATMENT: 7
-- TRIAL_PHASE: 7
+- GENE: 9
+- OUTCOME: 8
+- PATHWAY: 8
+- TREATMENT: 9
+- TRIAL_PHASE: 8
 - UNKNOWN: 7
 
 ### relation
-- ASSOCIATED_WITH: 14
-- NO_RELATION: 14
-- PREDICTS: 14
+- ASSOCIATED_WITH: 16
+- NO_RELATION: 16
+- PREDICTS: 16
 
 ## Label Deltas
 ### evidence
-- 0: 3 additional example(s) needed
-- 1: 3 additional example(s) needed
-- 2: 3 additional example(s) needed
-- 3: 3 additional example(s) needed
-- 4: 3 additional example(s) needed
-- 5: 3 additional example(s) needed
+- 0: 2 additional example(s) needed
+- 1: 2 additional example(s) needed
+- 2: 2 additional example(s) needed
+- 3: 2 additional example(s) needed
+- 4: 2 additional example(s) needed
+- 5: 2 additional example(s) needed
 
 ### ner
-- BIOMARKER: 3 additional example(s) needed
-- CELL_STATE: 3 additional example(s) needed
-- CELL_TYPE: 3 additional example(s) needed
-- DELIVERY_MODIFIER: 3 additional example(s) needed
-- DISEASE: 3 additional example(s) needed
+- BIOMARKER: 2 additional example(s) needed
+- CELL_STATE: 2 additional example(s) needed
+- CELL_TYPE: 2 additional example(s) needed
+- DELIVERY_MODIFIER: 2 additional example(s) needed
+- DISEASE: 2 additional example(s) needed
 - DRUG: 3 additional example(s) needed
-- GENE: 3 additional example(s) needed
-- OUTCOME: 3 additional example(s) needed
-- PATHWAY: 3 additional example(s) needed
-- TREATMENT: 3 additional example(s) needed
-- TRIAL_PHASE: 3 additional example(s) needed
+- GENE: 1 additional example(s) needed
+- OUTCOME: 2 additional example(s) needed
+- PATHWAY: 2 additional example(s) needed
+- TREATMENT: 1 additional example(s) needed
+- TRIAL_PHASE: 2 additional example(s) needed
 - UNKNOWN: 3 additional example(s) needed
 
 ### relation
 - none
 
 ## Blockers
-- evidence has 42 examples; needs at least 100
-- evidence labels below 10 examples: 0=7, 1=7, 2=7, 3=7, 4=7, 5=7
-- ner has 84 examples; needs at least 100
-- ner labels below 10 examples: BIOMARKER=7, CELL_STATE=7, CELL_TYPE=7, DELIVERY_MODIFIER=7, DISEASE=7, DRUG=7, GENE=7, OUTCOME=7, PATHWAY=7, TREATMENT=7, TRIAL_PHASE=7, UNKNOWN=7
-- relation has 42 examples; needs at least 100
-- source PMID count is 36; needs at least 50
+- evidence has 48 examples; needs at least 100
+- evidence labels below 10 examples: 0=8, 1=8, 2=8, 3=8, 4=8, 5=8
+- ner has 96 examples; needs at least 100
+- ner labels below 10 examples: BIOMARKER=8, CELL_STATE=8, CELL_TYPE=8, DELIVERY_MODIFIER=8, DISEASE=8, DRUG=7, GENE=9, OUTCOME=8, PATHWAY=8, TREATMENT=9, TRIAL_PHASE=8, UNKNOWN=7
+- relation has 48 examples; needs at least 100
+- source PMID count is 42; needs at least 50

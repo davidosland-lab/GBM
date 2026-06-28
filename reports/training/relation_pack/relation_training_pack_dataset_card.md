@@ -3,7 +3,7 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Dataset directory: `data\training\relation_pack\annotation_splits`
-- Total examples: 42
+- Total examples: 48
 
 ## Files
 ### evidence_test.jsonl
@@ -49,31 +49,31 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - none
 
 ### relation_test.jsonl
-- Examples: 5
+- Examples: 4
 - Missing text: 0
-- SHA256: `69BB1EB9BF7DBE101E480771FBF24F9BF310E08B35F6E87D47C1D2B635B16A61`
+- SHA256: `440F352594574E371F20DD90A5C020080B8C7C8A7DF526C82680699108B0DFBE`
 - Labels:
-- ASSOCIATED_WITH: 1
-- NO_RELATION: 3
+- ASSOCIATED_WITH: 2
+- NO_RELATION: 1
 - PREDICTS: 1
 
 ### relation_train.jsonl
-- Examples: 33
+- Examples: 39
 - Missing text: 0
-- SHA256: `8F20887E4755B9600D9AECE64BB47203913E45BD4617682ABB9A2B27EF76A57C`
+- SHA256: `91CF9D3E327624E5F611B13A31B6FC34AC529C0F168F523A9B15FA15CAFE97C7`
 - Labels:
-- ASSOCIATED_WITH: 12
-- NO_RELATION: 10
-- PREDICTS: 11
+- ASSOCIATED_WITH: 11
+- NO_RELATION: 14
+- PREDICTS: 14
 
 ### relation_validation.jsonl
-- Examples: 4
+- Examples: 5
 - Missing text: 0
-- SHA256: `E8A43840EF5446E402D26AA51FD6C3F205EC0F84CF06A83E55855C1FD9C7E4B1`
+- SHA256: `B9BAB9DFB731E67C7E42EB2686FB9B423618095E6BFC24C34DCC5C6BEF693822`
 - Labels:
-- ASSOCIATED_WITH: 1
+- ASSOCIATED_WITH: 3
 - NO_RELATION: 1
-- PREDICTS: 2
+- PREDICTS: 1
 
 ## Warnings
 - evidence_test.jsonl: no examples

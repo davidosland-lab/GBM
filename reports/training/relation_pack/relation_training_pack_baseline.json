@@ -19,14 +19,14 @@
     },
     {
       "evaluation_file": "data\\training\\relation_pack\\annotation_splits\\relation_test.jsonl",
-      "examples": 5,
+      "examples": 4,
       "label_counts": {
-        "ASSOCIATED_WITH": 1,
-        "NO_RELATION": 3,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 1,
         "PREDICTS": 1
       },
-      "majority_accuracy": 0.6,
-      "majority_label": "NO_RELATION",
+      "majority_accuracy": 0.5,
+      "majority_label": "ASSOCIATED_WITH",
       "task": "relation"
     }
   ],

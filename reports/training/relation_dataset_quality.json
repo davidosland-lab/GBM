@@ -3,15 +3,15 @@
   "input_path": "data\\training\\gold_seed\\gold_relations.jsonl",
   "invalid_endpoint_count": 0,
   "label_counts": {
-    "ASSOCIATED_WITH": 14,
-    "NO_RELATION": 14,
-    "PREDICTS": 14
+    "ASSOCIATED_WITH": 16,
+    "NO_RELATION": 16,
+    "PREDICTS": 16
   },
   "missing_endpoint_count": 0,
   "missing_sentence_count": 0,
-  "negative_count": 14,
-  "positive_count": 28,
-  "relation_count": 42,
+  "negative_count": 16,
+  "positive_count": 32,
+  "relation_count": 48,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warnings": []
 }

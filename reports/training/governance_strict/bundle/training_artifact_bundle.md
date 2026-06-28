@@ -3,8 +3,8 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Output directory: `reports\training\governance_strict\bundle`
-- Artifacts: 285
-- Total bytes: 1317884
+- Artifacts: 290
+- Total bytes: 1455370
 
 ## Artifacts
 - `data\training\curated_expansion\evidence_full_label.jsonl` -> `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims)
@@ -12,16 +12,19 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\training\curated_expansion\evidence_round3.jsonl` -> `data\training\curated_expansion\evidence_round3.jsonl` (evidence_claims)
 - `data\training\curated_expansion\evidence_round4.jsonl` -> `data\training\curated_expansion\evidence_round4.jsonl` (evidence_claims)
 - `data\training\curated_expansion\evidence_round5.jsonl` -> `data\training\curated_expansion\evidence_round5.jsonl` (evidence_claims)
+- `data\training\curated_expansion\evidence_round6.jsonl` -> `data\training\curated_expansion\evidence_round6.jsonl` (evidence_claims)
 - `data\training\curated_expansion\gold_entities.jsonl` -> `data\training\curated_expansion\gold_entities.jsonl` (entities)
 - `data\training\curated_expansion\gold_entities_round2.jsonl` -> `data\training\curated_expansion\gold_entities_round2.jsonl` (entities)
 - `data\training\curated_expansion\gold_entities_round3.jsonl` -> `data\training\curated_expansion\gold_entities_round3.jsonl` (entities)
 - `data\training\curated_expansion\gold_entities_round4.jsonl` -> `data\training\curated_expansion\gold_entities_round4.jsonl` (entities)
 - `data\training\curated_expansion\gold_entities_round5.jsonl` -> `data\training\curated_expansion\gold_entities_round5.jsonl` (entities)
+- `data\training\curated_expansion\gold_entities_round6.jsonl` -> `data\training\curated_expansion\gold_entities_round6.jsonl` (entities)
 - `data\training\curated_expansion\gold_reviewed_queue.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue)
 - `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` (reviewed_queue)
 - `data\training\curated_expansion\gold_reviewed_queue_round3.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round3.jsonl` (reviewed_queue)
 - `data\training\curated_expansion\gold_reviewed_queue_round4.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round4.jsonl` (reviewed_queue)
 - `data\training\curated_expansion\gold_reviewed_queue_round5.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round5.jsonl` (reviewed_queue)
+- `data\training\curated_expansion\gold_reviewed_queue_round6.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round6.jsonl` (reviewed_queue)
 - `data\training\curated_import\combined_entities.jsonl` -> `data\training\curated_import\combined_entities.jsonl` (entities)
 - `data\training\curated_import\combined_evidence.jsonl` -> `data\training\curated_import\combined_evidence.jsonl` (evidence_claims)
 - `data\training\curated_import\combined_reviewed_queue.jsonl` -> `data\training\curated_import\combined_reviewed_queue.jsonl` (reviewed_queue)
@@ -140,6 +143,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\curated_fixture_import.md` -> `reports\training\curated_fixture_import.md` (curated_fixture_import_report)
 - `reports\training\curated_provenance_diff.json` -> `reports\training\curated_provenance_diff.json` (curated_provenance_diff_report)
 - `reports\training\curated_provenance_diff.md` -> `reports\training\curated_provenance_diff.md` (curated_provenance_diff_report)
+- `reports\training\curated_round_rebuild.json` -> `reports\training\curated_round_rebuild.json` (json_report)
+- `reports\training\curated_round_rebuild.md` -> `reports\training\curated_round_rebuild.md` (markdown_report)
 - `reports\training\dashboard_training_manifest.json` -> `reports\training\dashboard_training_manifest.json` (dashboard_training_manifest)
 - `reports\training\dashboard_training_manifest.md` -> `reports\training\dashboard_training_manifest.md` (dashboard_training_manifest)
 - `reports\training\evidence_label_repair.json` -> `reports\training\evidence_label_repair.json` (evidence_label_repair_report)

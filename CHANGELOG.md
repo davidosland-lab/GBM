@@ -4,6 +4,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Unreleased
 
+- Added a seventh curated local curation round (six new source PMIDs) and rebuilt every report via the one-command orchestrator; the gold pack is now 48 evidence / 96 NER / 48 relation across 42 source PMIDs, still correctly below promotion thresholds.
+- Added `gbmbert-rebuild-curated-rounds` (launcher `16BS`): a single observe-only command that discovers every curated expansion round and regenerates the full report chain (import, provenance diff, gold seed/pack, evidence/relation packs, governance, promotion review/planning, governance detail).
 - Added a launcher path (`16BR`) for the full multi-batch curated import across every expansion round, matching the provenance-diff fixed file set.
 - Surfaced the governance detail contract state in the compact CI Markdown summary and CI summary contract, keeping missing detail rows visible without implying readiness.
 - Refined gold-pack promotion planning so label-balance batches report how they relate to the task-volume delta (label-floor total vs. remaining task volume).

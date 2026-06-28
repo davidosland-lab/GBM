@@ -3,43 +3,39 @@
   "tasks": [
     {
       "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
-      "examples": 10,
+      "examples": 8,
       "label_counts": {
-        "BIOMARKER": 1,
-        "CELL_STATE": 3,
-        "DELIVERY_MODIFIER": 2,
-        "GENE": 1,
-        "PATHWAY": 1,
-        "TRIAL_PHASE": 1,
-        "UNKNOWN": 1
+        "CELL_STATE": 2,
+        "DISEASE": 1,
+        "DRUG": 2,
+        "TREATMENT": 1,
+        "UNKNOWN": 2
       },
-      "majority_accuracy": 0.3,
-      "majority_label": "CELL_STATE",
+      "majority_accuracy": 0.25,
+      "majority_label": "UNKNOWN",
       "task": "ner"
     },
     {
       "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
-      "examples": 5,
+      "examples": 4,
       "label_counts": {
-        "2": 2,
-        "3": 1,
-        "4": 1,
-        "5": 1
+        "2": 1,
+        "3": 3
       },
-      "majority_accuracy": 0.4,
-      "majority_label": "2",
+      "majority_accuracy": 0.75,
+      "majority_label": "3",
       "task": "evidence"
     },
     {
       "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",
-      "examples": 5,
+      "examples": 4,
       "label_counts": {
-        "ASSOCIATED_WITH": 1,
-        "NO_RELATION": 3,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 1,
         "PREDICTS": 1
       },
-      "majority_accuracy": 0.6,
-      "majority_label": "NO_RELATION",
+      "majority_accuracy": 0.5,
+      "majority_label": "ASSOCIATED_WITH",
       "task": "relation"
     }
   ],

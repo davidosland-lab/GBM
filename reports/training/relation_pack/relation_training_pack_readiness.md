@@ -11,14 +11,14 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ## Tasks
 ### relation
 - Ready: True
-- Examples: 42
+- Examples: 48
 - Duplicates: 0
 - Invalid NER spans: 0
 - Dominant label fraction: 0.333
 - Labels:
-- ASSOCIATED_WITH: 14
-- NO_RELATION: 14
-- PREDICTS: 14
+- ASSOCIATED_WITH: 16
+- NO_RELATION: 16
+- PREDICTS: 16
 - Warnings:
 - none
 

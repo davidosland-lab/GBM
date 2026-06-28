@@ -2,7 +2,7 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Created UTC: 2026-06-28T09:06:38.974532+00:00
+- Created UTC: 2026-06-28T09:42:23.040763+00:00
 - Passed: True
 - Steps: 7/7 passed
 
@@ -13,7 +13,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - overlay_graph_quality: pass (invalid=0, warnings=0)
 - evidence_overlay_promotion_gate: pass (failed=0)
 - scope_drift_monitor: pass (findings=0)
-- artifact_index: pass (artifacts=497)
+- artifact_index: pass (artifacts=502)
 
 ## Warnings
 - none

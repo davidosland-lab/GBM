@@ -3,9 +3,9 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Safe for pack rebuild review: True
-- Source files: 18
-- Observations: 210
-- Source PMIDs: 36
+- Source files: 21
+- Observations: 240
+- Source PMIDs: 42
 - Findings: 0
 - Duplicates: 0
 - Changed reviewed examples: 0
@@ -13,31 +13,31 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Missing source files: 0
 
 ## Task Counts
-- evidence: 84
-- ner: 84
-- relation: 42
+- evidence: 96
+- ner: 96
+- relation: 48
 
 ## Label Counts
-- 0: 14
-- 1: 14
-- 2: 14
-- 3: 14
-- 4: 14
-- 5: 14
-- ASSOCIATED_WITH: 14
-- BIOMARKER: 7
-- CELL_STATE: 7
-- CELL_TYPE: 7
-- DELIVERY_MODIFIER: 7
-- DISEASE: 7
+- 0: 16
+- 1: 16
+- 2: 16
+- 3: 16
+- 4: 16
+- 5: 16
+- ASSOCIATED_WITH: 16
+- BIOMARKER: 8
+- CELL_STATE: 8
+- CELL_TYPE: 8
+- DELIVERY_MODIFIER: 8
+- DISEASE: 8
 - DRUG: 7
-- GENE: 7
-- NO_RELATION: 14
-- OUTCOME: 7
-- PATHWAY: 7
-- PREDICTS: 14
-- TREATMENT: 7
-- TRIAL_PHASE: 7
+- GENE: 9
+- NO_RELATION: 16
+- OUTCOME: 8
+- PATHWAY: 8
+- PREDICTS: 16
+- TREATMENT: 9
+- TRIAL_PHASE: 8
 - UNKNOWN: 7
 
 ## Reviewer Counts
@@ -47,11 +47,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - curated_expansion_round4: 18
 - curated_expansion_round5: 18
 - curated_expansion_round6: 18
-- unreviewed: 84
+- curated_expansion_round7: 18
+- unreviewed: 96
 
 ## Review Status Counts
-- accepted: 126
-- unreviewed: 84
+- accepted: 144
+- unreviewed: 96
 
 ## Source Files
 - `data\training\curated_expansion\evidence_full_label.jsonl` (evidence)
@@ -102,6 +103,14 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
   - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
   - Reviewers: curated_expansion_round6=6
   - Review statuses: accepted=6
+- `data\training\curated_expansion\evidence_round7.jsonl` (evidence)
+  - Rows: 6
+  - Observations: 6
+  - Source PMIDs: 6
+  - Tasks: evidence=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
+  - Reviewers: curated_expansion_round7=6
+  - Review statuses: accepted=6
 - `data\training\curated_expansion\gold_entities.jsonl` (entities)
   - Rows: 12
   - Observations: 24
@@ -148,6 +157,14 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
   - Source PMIDs: 6
   - Tasks: ner=12
   - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, DRUG=1, GENE=1, OUTCOME=1, PATHWAY=1, TREATMENT=1, TRIAL_PHASE=1, UNKNOWN=1
+  - Reviewers: unreviewed=12
+  - Review statuses: unreviewed=12
+- `data\training\curated_expansion\gold_entities_round7.jsonl` (entities)
+  - Rows: 6
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: ner=12
+  - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, GENE=2, OUTCOME=1, PATHWAY=1, TREATMENT=2, TRIAL_PHASE=1
   - Reviewers: unreviewed=12
   - Review statuses: unreviewed=12
 - `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue)
@@ -197,6 +214,14 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
   - Tasks: evidence=6, relation=6
   - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
   - Reviewers: curated_expansion_round6=12
+  - Review statuses: accepted=12
+- `data\training\curated_expansion\gold_reviewed_queue_round7.jsonl` (reviewed_queue)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: evidence=6, relation=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
+  - Reviewers: curated_expansion_round7=12
   - Review statuses: accepted=12
 
 ## Findings

@@ -5,9 +5,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Input: `data\training\gold_seed\gold_relations.jsonl`
 - Output directory: `data\training\relation_pack`
 - Reports directory: `reports\training\relation_pack`
-- Relation examples: 42
-- Positive examples: 28
-- Negative examples: 14
+- Relation examples: 48
+- Positive examples: 32
+- Negative examples: 16
 - Ready: True
 
 ## Artifacts

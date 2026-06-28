@@ -4,11 +4,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Registry: `reports\review\curation_run_registry.json`
 - Runs: 2
-- Latest run: `curation-3275A9DB7F64`
+- Latest run: `curation-2975449584B2`
 
 ## Runs
 - `curation-EFD1A088D875` 2026-06-23T07:08:45.989413+00:00: predictions `reports\training\evidence_smoke_fixture\sample_graph_predictions.jsonl`, overlay `data\processed\curation_smoke_workflow\evidence_overlay_graph_records.jsonl`, warnings 0
-- `curation-3275A9DB7F64` 2026-06-28T09:06:38.293866+00:00: predictions `reports\training\evidence_smoke_fixture\sample_graph_predictions.jsonl`, overlay `data\processed\curation_regression_pack\evidence_overlay_graph_records.jsonl`, warnings 0
+- `curation-2975449584B2` 2026-06-28T09:42:22.440636+00:00: predictions `reports\training\evidence_smoke_fixture\sample_graph_predictions.jsonl`, overlay `data\processed\curation_regression_pack\evidence_overlay_graph_records.jsonl`, warnings 0
 
 ## Warnings
 - none

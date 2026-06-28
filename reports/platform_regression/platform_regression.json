@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-06-28T09:06:38.974532+00:00",
+  "created_at_utc": "2026-06-28T09:42:23.040763+00:00",
   "failed_step_count": 0,
   "passed": true,
   "passed_step_count": 7,
@@ -36,7 +36,7 @@
       "passed": true
     },
     {
-      "detail": "artifacts=497",
+      "detail": "artifacts=502",
       "name": "artifact_index",
       "passed": true
     }

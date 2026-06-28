@@ -14,9 +14,7 @@
       "dataset_labels": {
         "test": [
           "2",
-          "3",
-          "4",
-          "5"
+          "3"
         ],
         "train": [
           "0",
@@ -27,10 +25,9 @@
           "5"
         ],
         "validation": [
-          "0",
-          "1",
-          "2",
-          "4"
+          "3",
+          "4",
+          "5"
         ]
       },
       "governance_profile": "scaffold",
@@ -81,12 +78,10 @@
       "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
-          "BIOMARKER",
           "CELL_STATE",
-          "DELIVERY_MODIFIER",
-          "GENE",
-          "PATHWAY",
-          "TRIAL_PHASE",
+          "DISEASE",
+          "DRUG",
+          "TREATMENT",
           "UNKNOWN"
         ],
         "train": [
@@ -105,12 +100,12 @@
         ],
         "validation": [
           "BIOMARKER",
-          "CELL_TYPE",
+          "DELIVERY_MODIFIER",
           "DISEASE",
           "DRUG",
           "GENE",
           "OUTCOME",
-          "TREATMENT"
+          "UNKNOWN"
         ]
       },
       "governance_profile": "scaffold",

@@ -12,9 +12,10 @@
     "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
     "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
     "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
-    "data\\training\\curated_expansion\\gold_entities_round6.jsonl"
+    "data\\training\\curated_expansion\\gold_entities_round6.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round7.jsonl"
   ],
-  "entity_rows": 84,
+  "entity_rows": 96,
   "evidence_path": "data\\training\\curated_expansion\\evidence_full_label.jsonl",
   "evidence_paths": [
     "data\\training\\curated_expansion\\evidence_full_label.jsonl",
@@ -22,16 +23,17 @@
     "data\\training\\curated_expansion\\evidence_round3.jsonl",
     "data\\training\\curated_expansion\\evidence_round4.jsonl",
     "data\\training\\curated_expansion\\evidence_round5.jsonl",
-    "data\\training\\curated_expansion\\evidence_round6.jsonl"
+    "data\\training\\curated_expansion\\evidence_round6.jsonl",
+    "data\\training\\curated_expansion\\evidence_round7.jsonl"
   ],
-  "evidence_rows": 42,
+  "evidence_rows": 48,
   "missing_pmid_count": 0,
   "missing_review_metadata_count": 0,
   "output_dir": "data\\training\\curated_import",
-  "pmid_count": 36,
+  "pmid_count": 42,
   "reviewed_item_types": {
-    "evidence_claim": 42,
-    "graph_relation": 42
+    "evidence_claim": 48,
+    "graph_relation": 48
   },
   "reviewed_queue_path": "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
   "reviewed_queue_paths": [
@@ -40,9 +42,10 @@
     "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
     "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
     "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
-    "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl"
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round7.jsonl"
   ],
-  "reviewed_queue_rows": 84,
+  "reviewed_queue_rows": 96,
   "safe": true,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "warning_count": 0,

@@ -4,7 +4,7 @@
   "output_dir": "data\\training\\relation_pack\\annotation_splits",
   "pmid_counts": {
     "test": 4,
-    "train": 28,
+    "train": 34,
     "validation": 4
   },
   "ratios": {
@@ -55,26 +55,26 @@
     {
       "label_counts": {
         "test": {
-          "ASSOCIATED_WITH": 1,
-          "NO_RELATION": 3,
+          "ASSOCIATED_WITH": 2,
+          "NO_RELATION": 1,
           "PREDICTS": 1
         },
         "train": {
-          "ASSOCIATED_WITH": 12,
-          "NO_RELATION": 10,
-          "PREDICTS": 11
+          "ASSOCIATED_WITH": 11,
+          "NO_RELATION": 14,
+          "PREDICTS": 14
         },
         "validation": {
-          "ASSOCIATED_WITH": 1,
+          "ASSOCIATED_WITH": 3,
           "NO_RELATION": 1,
-          "PREDICTS": 2
+          "PREDICTS": 1
         }
       },
       "source_file": "data\\training\\relation_pack\\annotation_dataset\\relations.jsonl",
       "split_counts": {
-        "test": 5,
-        "train": 33,
-        "validation": 4
+        "test": 4,
+        "train": 39,
+        "validation": 5
       },
       "split_files": {
         "test": "data\\training\\relation_pack\\annotation_splits\\relation_test.jsonl",

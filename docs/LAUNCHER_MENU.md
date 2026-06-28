@@ -12,7 +12,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 | Verify, reports, and handoff checks | Running tests, preflight, scope drift, platform regression, artifact index, local verification, artifact policy checks, and launcher structure checks. | `4`, `15`, `16`, `16AO`, `16AP`, `16BI`, `16BJ`, `16BK` |
 | Literature and graph pipeline | Building source-derived PubMed, ClinicalTrials.gov, corpus, entity, and graph artifacts. | `7`, `8`, `9`, `12`, `13`, `14`, `14A`, `16B` |
 | Review and curation workflow | Creating review queues, reviewed queues, curated graph outputs, curation bundles, overlays, and regression packs. | `10`, `11`, `11R`, `11S`, `11C`, `11D`, `16O`, `16P`, `16R`, `16S`, `16Z` |
-| Training data and governance | Building annotation packs, gold/evidence/relation training packs, readiness reports, import checks, provenance diffs, promotion review, planning, detail exports, and governance audits. | `16C`, `16D`, `16AQ`, `16AX`, `16BA`, `16AZ`, `16BE`, `16BB`, `16BG`, `16BH`, `16BL`, `16BM`, `16BN`, `16BO`, `16BP`, `16BQ`, `16BR` |
+| Training data and governance | Building annotation packs, gold/evidence/relation training packs, readiness reports, import checks, provenance diffs, promotion review, planning, detail exports, and governance audits. | `16C`, `16D`, `16AQ`, `16AX`, `16BA`, `16AZ`, `16BE`, `16BB`, `16BG`, `16BH`, `16BL`, `16BM`, `16BN`, `16BO`, `16BP`, `16BQ`, `16BR`, `16BS` |
 | Knowledge Graph Explorer | Starting the local browser explorer with sample, baseline, artifact-index-selected, or Neo4j-backed data. | `17`, `17A`, `17B`, `18` |
 | Advanced command index | A compact map of the legacy flat menu for people who already know the old shortcut. | All legacy shortcuts |
 
@@ -43,6 +43,7 @@ launcher_menu.bat
 # E -> 16BE
 # E -> 16BG
 # E -> 16BH
+# E -> 16BS
 # E -> 16BR
 # E -> 16BO
 # E -> 16BP
@@ -50,6 +51,8 @@ launcher_menu.bat
 ```
 
 `16BR` runs the full multi-batch curated import across every expansion round (rounds 1-6) with the same fixed file set the provenance diff (`16BN`) uses, writing the combined import under `data\training\curated_import`. `16BL` remains the interactive single-batch import.
+
+`16BS` runs `gbmbert-rebuild-curated-rounds`, which discovers every curated round and regenerates the entire downstream report chain in one command (import, provenance diff, gold seed/pack, evidence/relation packs, the top-level governance reports, promotion review/planning, the governance suites, and the governance detail export/contract). It is observe-only; run `16BI` (local verification) afterward for platform checks and the CI summary.
 
 For local graph inspection:
 

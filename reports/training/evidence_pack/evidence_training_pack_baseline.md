@@ -15,14 +15,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ### evidence
 - Evaluation file: `data\training\evidence_pack\annotation_splits\evidence_test.jsonl`
-- Examples: 5
-- Majority label: 2
-- Majority accuracy: 0.400
+- Examples: 4
+- Majority label: 3
+- Majority accuracy: 0.750
 - Labels:
-- 2: 2
-- 3: 1
-- 4: 1
-- 5: 1
+- 2: 1
+- 3: 3
 
 ### relation
 - Evaluation file: `data\training\evidence_pack\annotation_splits\relation_test.jsonl`

@@ -8,15 +8,15 @@
     {
       "dominant_label_fraction": 0.16666666666666666,
       "duplicate_count": 0,
-      "example_count": 42,
+      "example_count": 48,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "0": 7,
-        "1": 7,
-        "2": 7,
-        "3": 7,
-        "4": 7,
-        "5": 7
+        "0": 8,
+        "1": 8,
+        "2": 8,
+        "3": 8,
+        "4": 8,
+        "5": 8
       },
       "ready": true,
       "task": "evidence",

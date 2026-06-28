@@ -8,12 +8,12 @@
     {
       "dominant_label_fraction": 0.3333333333333333,
       "duplicate_count": 0,
-      "example_count": 42,
+      "example_count": 48,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "ASSOCIATED_WITH": 14,
-        "NO_RELATION": 14,
-        "PREDICTS": 14
+        "ASSOCIATED_WITH": 16,
+        "NO_RELATION": 16,
+        "PREDICTS": 16
       },
       "ready": true,
       "task": "relation",

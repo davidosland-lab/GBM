@@ -7,7 +7,8 @@
     "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
     "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
     "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
-    "data\\training\\curated_expansion\\gold_entities_round6.jsonl"
+    "data\\training\\curated_expansion\\gold_entities_round6.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round7.jsonl"
   ],
   "evidence_paths": [
     "data\\training\\curated_expansion\\evidence_full_label.jsonl",
@@ -15,39 +16,40 @@
     "data\\training\\curated_expansion\\evidence_round3.jsonl",
     "data\\training\\curated_expansion\\evidence_round4.jsonl",
     "data\\training\\curated_expansion\\evidence_round5.jsonl",
-    "data\\training\\curated_expansion\\evidence_round6.jsonl"
+    "data\\training\\curated_expansion\\evidence_round6.jsonl",
+    "data\\training\\curated_expansion\\evidence_round7.jsonl"
   ],
   "finding_count": 0,
   "findings": [],
   "label_counts": {
-    "0": 14,
-    "1": 14,
-    "2": 14,
-    "3": 14,
-    "4": 14,
-    "5": 14,
-    "ASSOCIATED_WITH": 14,
-    "BIOMARKER": 7,
-    "CELL_STATE": 7,
-    "CELL_TYPE": 7,
-    "DELIVERY_MODIFIER": 7,
-    "DISEASE": 7,
+    "0": 16,
+    "1": 16,
+    "2": 16,
+    "3": 16,
+    "4": 16,
+    "5": 16,
+    "ASSOCIATED_WITH": 16,
+    "BIOMARKER": 8,
+    "CELL_STATE": 8,
+    "CELL_TYPE": 8,
+    "DELIVERY_MODIFIER": 8,
+    "DISEASE": 8,
     "DRUG": 7,
-    "GENE": 7,
-    "NO_RELATION": 14,
-    "OUTCOME": 7,
-    "PATHWAY": 7,
-    "PREDICTS": 14,
-    "TREATMENT": 7,
-    "TRIAL_PHASE": 7,
+    "GENE": 9,
+    "NO_RELATION": 16,
+    "OUTCOME": 8,
+    "PATHWAY": 8,
+    "PREDICTS": 16,
+    "TREATMENT": 9,
+    "TRIAL_PHASE": 8,
     "UNKNOWN": 7
   },
   "missing_source_count": 0,
-  "observation_count": 210,
-  "pmid_count": 36,
+  "observation_count": 240,
+  "pmid_count": 42,
   "review_status_counts": {
-    "accepted": 126,
-    "unreviewed": 84
+    "accepted": 144,
+    "unreviewed": 96
   },
   "reviewed_queue_paths": [
     "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
@@ -55,7 +57,8 @@
     "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
     "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
     "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
-    "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl"
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round7.jsonl"
   ],
   "reviewer_counts": {
     "curated_expansion": 36,
@@ -64,10 +67,11 @@
     "curated_expansion_round4": 18,
     "curated_expansion_round5": 18,
     "curated_expansion_round6": 18,
-    "unreviewed": 84
+    "curated_expansion_round7": 18,
+    "unreviewed": 96
   },
   "safe": true,
-  "source_file_count": 18,
+  "source_file_count": 21,
   "source_summaries": [
     {
       "label_counts": {
@@ -209,6 +213,30 @@
       },
       "row_count": 6,
       "source_file": "data\\training\\curated_expansion\\evidence_round6.jsonl",
+      "task_counts": {
+        "evidence": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "observation_count": 6,
+      "pmid_count": 6,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 6
+      },
+      "reviewer_counts": {
+        "curated_expansion_round7": 6
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\evidence_round7.jsonl",
       "task_counts": {
         "evidence": 6
       }
@@ -395,6 +423,34 @@
     },
     {
       "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_STATE": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 1,
+        "GENE": 2,
+        "OUTCOME": 1,
+        "PATHWAY": 1,
+        "TREATMENT": 2,
+        "TRIAL_PHASE": 1
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 12
+      },
+      "reviewer_counts": {
+        "unreviewed": 12
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\gold_entities_round7.jsonl",
+      "task_counts": {
+        "ner": 12
+      }
+    },
+    {
+      "label_counts": {
         "0": 2,
         "1": 2,
         "2": 2,
@@ -560,12 +616,40 @@
         "evidence": 6,
         "relation": 6
       }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 2,
+        "PREDICTS": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion_round7": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue_round7.jsonl",
+      "task_counts": {
+        "evidence": 6,
+        "relation": 6
+      }
     }
   ],
   "task_counts": {
-    "evidence": 84,
-    "ner": 84,
-    "relation": 42
+    "evidence": 96,
+    "ner": 96,
+    "relation": 48
   },
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "withdrawn_count": 0

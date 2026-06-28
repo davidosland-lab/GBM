@@ -1,0 +1,425 @@
+{
+  "created_at_utc": "2026-06-28T09:41:04.867178+00:00",
+  "curated_dir": "data\\training\\curated_expansion",
+  "failed_step_count": 0,
+  "import_dir": "data\\training\\curated_import",
+  "passed": true,
+  "passed_step_count": 20,
+  "round_count": 7,
+  "rounds": [
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+      "round_number": 1
+    },
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities_round2.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_round2.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl",
+      "round_number": 2
+    },
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_round3.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
+      "round_number": 3
+    },
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_round4.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
+      "round_number": 4
+    },
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_round5.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
+      "round_number": 5
+    },
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities_round6.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_round6.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl",
+      "round_number": 6
+    },
+    {
+      "entity": "data\\training\\curated_expansion\\gold_entities_round7.jsonl",
+      "evidence": "data\\training\\curated_expansion\\evidence_round7.jsonl",
+      "reviewed": "data\\training\\curated_expansion\\gold_reviewed_queue_round7.jsonl",
+      "round_number": 7
+    }
+  ],
+  "step_count": 20,
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-import-curated-training-fixture.exe",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round2.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round3.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round4.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round5.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round6.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round7.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round2.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round6.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round7.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round7.jsonl",
+        "--output-dir",
+        "data\\training\\curated_import",
+        "--no-copy",
+        "--markdown-output",
+        "reports/training/curated_fixture_import.md",
+        "--json-output",
+        "reports/training/curated_fixture_import.json"
+      ],
+      "detail": "- reviewed_queue: `data\\training\\curated_import\\combined_reviewed_queue.jsonl` | ## Warnings | - none",
+      "name": "curated_fixture_import",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-curated-provenance-diff.exe",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round2.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round3.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round4.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round5.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round6.jsonl",
+        "--evidence-jsonl",
+        "data\\training\\curated_expansion\\evidence_round7.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round2.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round6.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_expansion\\gold_entities_round7.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_expansion\\gold_reviewed_queue_round7.jsonl",
+        "--markdown-output",
+        "reports/training/curated_provenance_diff.md",
+        "--json-output",
+        "reports/training/curated_provenance_diff.json",
+        "--allow-findings"
+      ],
+      "detail": "- Review statuses: accepted=12 | ## Findings | - none",
+      "name": "curated_provenance_diff",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-build-gold-seed-dataset.exe",
+        "data/training/gold_seed",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_import\\combined_reviewed_queue.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_import\\combined_entities.jsonl",
+        "--json-output",
+        "reports/training/gold_seed_manifest.json",
+        "--markdown-output",
+        "reports/training/gold_seed_manifest.md"
+      ],
+      "detail": "- relation: `data\\training\\gold_seed\\gold_relations.jsonl` | ## Warnings | - none",
+      "name": "gold_seed",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-build-gold-training-pack.exe",
+        "--reviewed-queue-jsonl",
+        "data\\training\\curated_import\\combined_reviewed_queue.jsonl",
+        "--entity-jsonl",
+        "data\\training\\curated_import\\combined_entities.jsonl",
+        "--output-dir",
+        "data/training/gold_pack",
+        "--reports-dir",
+        "reports/training/gold_pack",
+        "--allow-not-ready"
+      ],
+      "detail": "- training_readiness_md: `reports\\training\\gold_pack\\training_readiness.md` | ## Warnings | - none",
+      "name": "gold_training_pack",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-build-evidence-training-pack.exe",
+        "data\\training\\curated_import\\combined_evidence.jsonl",
+        "--output-dir",
+        "data/training/evidence_pack",
+        "--reports-dir",
+        "reports/training/evidence_pack",
+        "--allow-not-ready"
+      ],
+      "detail": "- Label maps: `data\\training\\evidence_pack\\label_maps` | ## Warnings | - none",
+      "name": "evidence_training_pack",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-build-relation-training-pack.exe",
+        "data/training/gold_seed/gold_relations.jsonl",
+        "--output-dir",
+        "data/training/relation_pack",
+        "--reports-dir",
+        "reports/training/relation_pack",
+        "--allow-not-ready"
+      ],
+      "detail": "- training_readiness_md: `reports\\training\\relation_pack\\relation_training_pack_readiness.md` | ## Warnings | - none",
+      "name": "relation_training_pack",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-relation-dataset-quality.exe",
+        "data/training/gold_seed/gold_relations.jsonl",
+        "--markdown-output",
+        "reports/training/relation_dataset_quality.md",
+        "--json-output",
+        "reports/training/relation_dataset_quality.json"
+      ],
+      "detail": "- PREDICTS: 16 | ## Warnings | - none",
+      "name": "relation_dataset_quality",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-review-training-config-suite.exe",
+        "--markdown-output",
+        "reports/training/training_config_suite_review.md",
+        "--json-output",
+        "reports/training/training_config_suite_review.json"
+      ],
+      "detail": "- none | ## Scaffold Warnings | - none",
+      "name": "training_config_suite_review",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-training-label-drift.exe",
+        "--markdown-output",
+        "reports/training/training_label_drift.md",
+        "--json-output",
+        "reports/training/training_label_drift.json"
+      ],
+      "detail": "- Missing from dataset: none | ## Warnings | - none",
+      "name": "training_label_drift",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-audit-training-pack-leakage.exe",
+        "--markdown-output",
+        "reports/training/training_pack_leakage_audit.md",
+        "--json-output",
+        "reports/training/training_pack_leakage_audit.json"
+      ],
+      "detail": "- evidence/gold: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586 | - evidence/relation: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586 | - gold/relation: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586",
+      "name": "training_pack_leakage_audit",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-compare-training-packs.exe",
+        "--markdown-output",
+        "reports/training/training_pack_comparison.md",
+        "--json-output",
+        "reports/training/training_pack_comparison.json"
+      ],
+      "detail": "- none | - Warnings: | - none",
+      "name": "training_pack_comparison",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-audit-training-provenance.exe",
+        "--markdown-output",
+        "reports/training/training_provenance_audit.md",
+        "--json-output",
+        "reports/training/training_provenance_audit.json"
+      ],
+      "detail": "- synthetic_no_relation: 3 | ## Warnings | - none",
+      "name": "training_provenance_audit",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-training-readiness-snapshot.exe",
+        "--markdown-output",
+        "reports/training/training_readiness_snapshot.md",
+        "--json-output",
+        "reports/training/training_readiness_snapshot.json"
+      ],
+      "detail": "- Dashboard reports: 13 | ## Warnings | - none",
+      "name": "training_readiness_snapshot",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-dashboard-training-manifest.exe",
+        "--output",
+        "reports/training/dashboard_training_manifest.json",
+        "--markdown-output",
+        "reports/training/dashboard_training_manifest.md"
+      ],
+      "detail": "- Current config failed: 0 | - Scaffold configs: 2 | - Registry audit passed: True",
+      "name": "dashboard_training_manifest",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-review-gold-pack-promotion.exe",
+        "--gold-pack-report",
+        "reports/training/gold_pack/gold_training_pack.json",
+        "--threshold-config",
+        "configs/training/gold_pack_promotion_thresholds.json",
+        "--markdown-output",
+        "reports/training/gold_pack/gold_pack_promotion_review.md",
+        "--json-output",
+        "reports/training/gold_pack/gold_pack_promotion_review.json",
+        "--allow-blockers"
+      ],
+      "detail": "- ner labels below 10 examples: BIOMARKER=8, CELL_STATE=8, CELL_TYPE=8, DELIVERY_MODIFIER=8, DISEASE=8, DRUG=7, GENE=9, OUTCOME=8, PATHWAY=8, TREATMENT=9, TRIAL_PHASE=8, UNKNOWN=7 | - relation has 48 examples; needs at least 100 | - source PMID count is 42; needs at least 50",
+      "name": "gold_pack_promotion_review",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-plan-gold-pack-promotion.exe",
+        "--markdown-output",
+        "reports/training/gold_pack/gold_pack_promotion_plan.md",
+        "--json-output",
+        "reports/training/gold_pack/gold_pack_promotion_plan.json"
+      ],
+      "detail": "- `relation-volume-003` (task_volume, relation): 4 example(s), 0 new PMID(s); balanced/general. Add balanced reviewed examples for the task-volume delta remaining after label-floor batches. | - `source-pmid-expansion-001` (source_pmid_expansion, all): 0 example(s), 6 new PMID(s); balanced/general. Select additional source PMIDs for future reviewed curation batches. | - `source-pmid-expansion-002` (source_pmid_expansion, all): 0 example(s), 2 new PMID(s); balanced/general. Select additional source PMIDs for future reviewed curation batches.",
+      "name": "gold_pack_promotion_plan",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-run-training-governance-suite.exe",
+        "--output-dir",
+        "reports/training/governance"
+      ],
+      "detail": "- registry_remediation: `reports\\training\\governance\\model_registry_remediation_plan.json` | ## Warnings | - none",
+      "name": "training_governance_suite",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-run-strict-training-governance.exe",
+        "--output-dir",
+        "reports/training/governance_strict",
+        "--allow-findings"
+      ],
+      "detail": "- registry_remediation: `reports\\training\\governance_strict\\model_registry_remediation_plan.json` | ## Warnings | - strict audit includes 2 scaffold config(s) that are not promotion-ready by default",
+      "name": "strict_training_governance",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-export-governance-detail-links.exe",
+        "--markdown-output",
+        "reports/training/governance_detail_links.md",
+        "--json-output",
+        "reports/training/governance_detail_links.json"
+      ],
+      "detail": "| Training config suite | available | `reports\\training\\training_config_suite_review.md` | True | `reports\\training\\training_config_suite_review.json` | True | | | Training label drift | available | `reports\\training\\training_label_drift.md` | True | `reports\\training\\training_label_drift.json` | True | | | Training pack comparison | available | `reports\\training\\training_pack_comparison.md` | True | `reports\\training\\training_pack_comparison.json` | True |",
+      "name": "governance_detail_export",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-check-governance-detail-contract.exe",
+        "--detail-json",
+        "reports/training/governance_detail_links.json",
+        "--markdown-output",
+        "reports/training/governance_detail_contract.md",
+        "--json-output",
+        "reports/training/governance_detail_contract.json"
+      ],
+      "detail": "- none | ## Malformed Required Rows | - none",
+      "name": "governance_detail_contract",
+      "passed": true,
+      "returncode": 0
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

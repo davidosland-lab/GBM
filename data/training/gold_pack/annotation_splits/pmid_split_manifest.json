@@ -4,7 +4,7 @@
   "output_dir": "data\\training\\gold_pack\\annotation_splits",
   "pmid_counts": {
     "test": 4,
-    "train": 28,
+    "train": 34,
     "validation": 4
   },
   "ratios": {
@@ -17,43 +17,41 @@
     {
       "label_counts": {
         "test": {
-          "BIOMARKER": 1,
-          "CELL_STATE": 3,
-          "DELIVERY_MODIFIER": 2,
-          "GENE": 1,
-          "PATHWAY": 1,
-          "TRIAL_PHASE": 1,
-          "UNKNOWN": 1
+          "CELL_STATE": 2,
+          "DISEASE": 1,
+          "DRUG": 2,
+          "TREATMENT": 1,
+          "UNKNOWN": 2
         },
         "train": {
-          "BIOMARKER": 4,
-          "CELL_STATE": 4,
-          "CELL_TYPE": 6,
-          "DELIVERY_MODIFIER": 5,
-          "DISEASE": 6,
-          "DRUG": 6,
-          "GENE": 5,
-          "OUTCOME": 6,
-          "PATHWAY": 6,
-          "TREATMENT": 6,
-          "TRIAL_PHASE": 6,
-          "UNKNOWN": 6
+          "BIOMARKER": 7,
+          "CELL_STATE": 6,
+          "CELL_TYPE": 8,
+          "DELIVERY_MODIFIER": 7,
+          "DISEASE": 5,
+          "DRUG": 4,
+          "GENE": 6,
+          "OUTCOME": 7,
+          "PATHWAY": 8,
+          "TREATMENT": 8,
+          "TRIAL_PHASE": 8,
+          "UNKNOWN": 4
         },
         "validation": {
-          "BIOMARKER": 2,
-          "CELL_TYPE": 1,
-          "DISEASE": 1,
+          "BIOMARKER": 1,
+          "DELIVERY_MODIFIER": 1,
+          "DISEASE": 2,
           "DRUG": 1,
-          "GENE": 1,
+          "GENE": 3,
           "OUTCOME": 1,
-          "TREATMENT": 1
+          "UNKNOWN": 1
         }
       },
       "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\ner.jsonl",
       "split_counts": {
-        "test": 10,
-        "train": 66,
-        "validation": 8
+        "test": 8,
+        "train": 78,
+        "validation": 10
       },
       "split_files": {
         "test": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
@@ -65,31 +63,28 @@
     {
       "label_counts": {
         "test": {
-          "2": 2,
-          "3": 1,
-          "4": 1,
-          "5": 1
+          "2": 1,
+          "3": 3
         },
         "train": {
-          "0": 6,
-          "1": 6,
-          "2": 4,
-          "3": 6,
-          "4": 5,
-          "5": 6
+          "0": 8,
+          "1": 8,
+          "2": 7,
+          "3": 2,
+          "4": 7,
+          "5": 7
         },
         "validation": {
-          "0": 1,
-          "1": 1,
-          "2": 1,
-          "4": 1
+          "3": 3,
+          "4": 1,
+          "5": 1
         }
       },
       "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\evidence.jsonl",
       "split_counts": {
-        "test": 5,
-        "train": 33,
-        "validation": 4
+        "test": 4,
+        "train": 39,
+        "validation": 5
       },
       "split_files": {
         "test": "data\\training\\gold_pack\\annotation_splits\\evidence_test.jsonl",
@@ -101,26 +96,26 @@
     {
       "label_counts": {
         "test": {
-          "ASSOCIATED_WITH": 1,
-          "NO_RELATION": 3,
+          "ASSOCIATED_WITH": 2,
+          "NO_RELATION": 1,
           "PREDICTS": 1
         },
         "train": {
-          "ASSOCIATED_WITH": 12,
-          "NO_RELATION": 10,
-          "PREDICTS": 11
+          "ASSOCIATED_WITH": 11,
+          "NO_RELATION": 14,
+          "PREDICTS": 14
         },
         "validation": {
-          "ASSOCIATED_WITH": 1,
+          "ASSOCIATED_WITH": 3,
           "NO_RELATION": 1,
-          "PREDICTS": 2
+          "PREDICTS": 1
         }
       },
       "source_file": "data\\training\\gold_pack\\annotation_dataset_repaired\\relations.jsonl",
       "split_counts": {
-        "test": 5,
-        "train": 33,
-        "validation": 4
+        "test": 4,
+        "train": 39,
+        "validation": 5
       },
       "split_files": {
         "test": "data\\training\\gold_pack\\annotation_splits\\relation_test.jsonl",

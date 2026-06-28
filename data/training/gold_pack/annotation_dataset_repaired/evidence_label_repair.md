@@ -9,43 +9,43 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Files
 ### evidence.jsonl
-- Rows: 42
+- Rows: 48
 - Changed: 0
 - Skipped: 0
 - Labels:
-- 0: 7
-- 1: 7
-- 2: 7
-- 3: 7
-- 4: 7
-- 5: 7
+- 0: 8
+- 1: 8
+- 2: 8
+- 3: 8
+- 4: 8
+- 5: 8
 
 ### ner.jsonl
-- Rows: 84
+- Rows: 96
 - Changed: 0
 - Skipped: 0
 - Labels:
-- BIOMARKER: 7
-- CELL_STATE: 7
-- CELL_TYPE: 7
-- DELIVERY_MODIFIER: 7
-- DISEASE: 7
+- BIOMARKER: 8
+- CELL_STATE: 8
+- CELL_TYPE: 8
+- DELIVERY_MODIFIER: 8
+- DISEASE: 8
 - DRUG: 7
-- GENE: 7
-- OUTCOME: 7
-- PATHWAY: 7
-- TREATMENT: 7
-- TRIAL_PHASE: 7
+- GENE: 9
+- OUTCOME: 8
+- PATHWAY: 8
+- TREATMENT: 9
+- TRIAL_PHASE: 8
 - UNKNOWN: 7
 
 ### relations.jsonl
-- Rows: 42
+- Rows: 48
 - Changed: 0
 - Skipped: 0
 - Labels:
-- ASSOCIATED_WITH: 14
-- NO_RELATION: 14
-- PREDICTS: 14
+- ASSOCIATED_WITH: 16
+- NO_RELATION: 16
+- PREDICTS: 16
 
 ## Warnings
 - none
