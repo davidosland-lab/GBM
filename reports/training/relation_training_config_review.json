@@ -39,9 +39,9 @@
   ],
   "prepared_task": "relation",
   "split_counts": {
-    "test": 0,
-    "train": 4,
-    "validation": 2
+    "test": 3,
+    "train": 29,
+    "validation": 4
   },
   "status": "passed",
   "task": "relation_extraction",
@@ -51,7 +51,6 @@
   "warnings": [
     "review gate is for research scaffolding only and does not certify model performance",
     "training remains separate from diagnosis, treatment selection, and clinical decision-making",
-    "relation_test.jsonl has no examples",
     "training_enabled is false; this config is review-ready but will run as a dry run unless changed"
   ]
 }

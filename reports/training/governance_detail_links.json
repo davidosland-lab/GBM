@@ -1,0 +1,145 @@
+{
+  "invalid_count": 0,
+  "missing_count": 1,
+  "root": ".",
+  "row_count": 17,
+  "rows": [
+    {
+      "json_exists": true,
+      "json_path": "models\\checkpoint_registry.json",
+      "markdown_exists": false,
+      "markdown_path": "",
+      "status": "available",
+      "title": "Checkpoint registry"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\curated_fixture_import.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\curated_fixture_import.md",
+      "status": "safe",
+      "title": "Curated fixture import"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\curated_provenance_diff.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\curated_provenance_diff.md",
+      "status": "safe",
+      "title": "Curated provenance diff"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\evidence_pack\\evidence_training_pack.md",
+      "status": "ready",
+      "title": "Evidence pack"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.json",
+      "markdown_exists": false,
+      "markdown_path": "",
+      "status": "ready",
+      "title": "Evidence readiness"
+    },
+    {
+      "json_exists": false,
+      "json_path": "",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\evidence_smoke_fixture\\evidence_smoke_model_card.md",
+      "status": "missing",
+      "title": "Evidence smoke model card"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\gold_pack\\gold_training_pack.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\gold_pack\\gold_training_pack.md",
+      "status": "ready",
+      "title": "Gold pack"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\gold_pack\\training_readiness.json",
+      "markdown_exists": false,
+      "markdown_path": "",
+      "status": "ready",
+      "title": "Gold readiness"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.md",
+      "status": "blocked",
+      "title": "Gold-pack promotion review"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\platform_regression\\launcher_menu_check.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\platform_regression\\launcher_menu_check.md",
+      "status": "safe",
+      "title": "Launcher menu check"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\model_registry_audit.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\model_registry_audit.md",
+      "status": "passed",
+      "title": "Model registry audit"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\relation_training_config_review.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\relation_training_config_review.md",
+      "status": "available",
+      "title": "Relation config review"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\relation_pack\\relation_training_pack.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\relation_pack\\relation_training_pack.md",
+      "status": "ready",
+      "title": "Relation pack"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\relation_pack\\relation_training_pack_readiness.json",
+      "markdown_exists": false,
+      "markdown_path": "",
+      "status": "ready",
+      "title": "Relation readiness"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\training_config_suite_review.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\training_config_suite_review.md",
+      "status": "available",
+      "title": "Training config suite"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\training_label_drift.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\training_label_drift.md",
+      "status": "available",
+      "title": "Training label drift"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\training_pack_comparison.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\training_pack_comparison.md",
+      "status": "available",
+      "title": "Training pack comparison"
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

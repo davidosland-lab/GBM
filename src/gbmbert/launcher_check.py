@@ -21,7 +21,7 @@ REQUIRED_MENU_TEXT = (
     "Knowledge Graph Explorer",
     "Advanced command index",
 )
-REQUIRED_SHORTCUTS = ("16BI", "16BJ", "16BK", "16BL", "16BM")
+REQUIRED_SHORTCUTS = ("16BI", "16BJ", "16BK", "16BL", "16BM", "16BO", "16BP", "16BQ", "16BR")
 
 
 @dataclass(frozen=True)

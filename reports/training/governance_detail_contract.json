@@ -1,0 +1,35 @@
+{
+  "detail_json_path": "reports\\training\\governance_detail_links.json",
+  "malformed_required_rows": [],
+  "missing_required_rows": [],
+  "present_required_rows": [
+    "Curated fixture import",
+    "Curated provenance diff",
+    "Evidence pack",
+    "Gold pack",
+    "Gold-pack promotion review",
+    "Launcher menu check",
+    "Model registry audit",
+    "Relation pack",
+    "Training config suite",
+    "Training label drift",
+    "Training pack comparison"
+  ],
+  "required_rows": [
+    "Curated fixture import",
+    "Curated provenance diff",
+    "Evidence pack",
+    "Gold pack",
+    "Gold-pack promotion review",
+    "Launcher menu check",
+    "Model registry audit",
+    "Relation pack",
+    "Training config suite",
+    "Training label drift",
+    "Training pack comparison"
+  ],
+  "row_count": 17,
+  "valid": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_present": true
+}

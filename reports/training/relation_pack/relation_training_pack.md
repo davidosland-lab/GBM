@@ -2,12 +2,12 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Input: `data\training\relation_training_pack.jsonl`
+- Input: `data\training\gold_seed\gold_relations.jsonl`
 - Output directory: `data\training\relation_pack`
 - Reports directory: `reports\training\relation_pack`
-- Relation examples: 6
-- Positive examples: 3
-- Negative examples: 3
+- Relation examples: 42
+- Positive examples: 28
+- Negative examples: 14
 - Ready: True
 
 ## Artifacts

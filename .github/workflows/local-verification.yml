@@ -35,7 +35,11 @@ jobs:
         if: always()
         run: |
           gbmbert-review-gold-pack-promotion --markdown-output reports/training/gold_pack/gold_pack_promotion_review.md --json-output reports/training/gold_pack/gold_pack_promotion_review.json --allow-blockers
+          gbmbert-plan-gold-pack-promotion --markdown-output reports/training/gold_pack/gold_pack_promotion_plan.md --json-output reports/training/gold_pack/gold_pack_promotion_plan.json
+          gbmbert-export-governance-detail-links --markdown-output reports/training/governance_detail_links.md --json-output reports/training/governance_detail_links.json
+          gbmbert-check-governance-detail-contract --detail-json reports/training/governance_detail_links.json --markdown-output reports/training/governance_detail_contract.md --json-output reports/training/governance_detail_contract.json
           gbmbert-ci-report-summary --output reports/platform_regression/ci_report_summary.md
+          gbmbert-check-ci-summary-contract --summary reports/platform_regression/ci_report_summary.md --markdown-output reports/platform_regression/ci_summary_contract.md --json-output reports/platform_regression/ci_summary_contract.json
           cat reports/platform_regression/ci_report_summary.md >> "$GITHUB_STEP_SUMMARY"
 
       - name: Upload verification reports
@@ -51,4 +55,8 @@ jobs:
             reports/training/governance_strict/*.json
             reports/training/governance_strict/*.md
             reports/training/gold_pack/gold_pack_promotion_review.*
+            reports/training/gold_pack/gold_pack_promotion_plan.*
+            reports/training/curated_provenance_diff.*
+            reports/training/governance_detail_links.*
+            reports/training/governance_detail_contract.*
           if-no-files-found: warn

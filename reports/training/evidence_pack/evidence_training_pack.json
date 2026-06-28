@@ -1,6 +1,6 @@
 {
   "annotation_dataset_dir": "data\\training\\evidence_pack\\annotation_dataset",
-  "evidence_rows": 18,
+  "evidence_rows": 42,
   "input_dir": "data\\training\\curated_import\\combined_evidence.jsonl",
   "label_map_dir": "data\\training\\evidence_pack\\label_maps",
   "output_dir": "data\\training\\evidence_pack",

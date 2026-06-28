@@ -1,0 +1,572 @@
+{
+  "changed_count": 0,
+  "duplicate_count": 0,
+  "entity_paths": [
+    "data\\training\\curated_expansion\\gold_entities.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round2.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round6.jsonl"
+  ],
+  "evidence_paths": [
+    "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+    "data\\training\\curated_expansion\\evidence_round2.jsonl",
+    "data\\training\\curated_expansion\\evidence_round3.jsonl",
+    "data\\training\\curated_expansion\\evidence_round4.jsonl",
+    "data\\training\\curated_expansion\\evidence_round5.jsonl",
+    "data\\training\\curated_expansion\\evidence_round6.jsonl"
+  ],
+  "finding_count": 0,
+  "findings": [],
+  "label_counts": {
+    "0": 14,
+    "1": 14,
+    "2": 14,
+    "3": 14,
+    "4": 14,
+    "5": 14,
+    "ASSOCIATED_WITH": 14,
+    "BIOMARKER": 7,
+    "CELL_STATE": 7,
+    "CELL_TYPE": 7,
+    "DELIVERY_MODIFIER": 7,
+    "DISEASE": 7,
+    "DRUG": 7,
+    "GENE": 7,
+    "NO_RELATION": 14,
+    "OUTCOME": 7,
+    "PATHWAY": 7,
+    "PREDICTS": 14,
+    "TREATMENT": 7,
+    "TRIAL_PHASE": 7,
+    "UNKNOWN": 7
+  },
+  "missing_source_count": 0,
+  "observation_count": 210,
+  "pmid_count": 36,
+  "review_status_counts": {
+    "accepted": 126,
+    "unreviewed": 84
+  },
+  "reviewed_queue_paths": [
+    "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl"
+  ],
+  "reviewer_counts": {
+    "curated_expansion": 36,
+    "curated_expansion_round2": 18,
+    "curated_expansion_round3": 18,
+    "curated_expansion_round4": 18,
+    "curated_expansion_round5": 18,
+    "curated_expansion_round6": 18,
+    "unreviewed": 84
+  },
+  "safe": true,
+  "source_file_count": 18,
+  "source_summaries": [
+    {
+      "label_counts": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 12,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\evidence_full_label.jsonl",
+      "task_counts": {
+        "evidence": 12
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "observation_count": 6,
+      "pmid_count": 6,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 6
+      },
+      "reviewer_counts": {
+        "curated_expansion_round2": 6
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\evidence_round2.jsonl",
+      "task_counts": {
+        "evidence": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "observation_count": 6,
+      "pmid_count": 6,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 6
+      },
+      "reviewer_counts": {
+        "curated_expansion_round3": 6
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\evidence_round3.jsonl",
+      "task_counts": {
+        "evidence": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "observation_count": 6,
+      "pmid_count": 6,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 6
+      },
+      "reviewer_counts": {
+        "curated_expansion_round4": 6
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\evidence_round4.jsonl",
+      "task_counts": {
+        "evidence": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "observation_count": 6,
+      "pmid_count": 6,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 6
+      },
+      "reviewer_counts": {
+        "curated_expansion_round5": 6
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\evidence_round5.jsonl",
+      "task_counts": {
+        "evidence": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1
+      },
+      "observation_count": 6,
+      "pmid_count": 6,
+      "record_type": "evidence",
+      "review_status_counts": {
+        "accepted": 6
+      },
+      "reviewer_counts": {
+        "curated_expansion_round6": 6
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\evidence_round6.jsonl",
+      "task_counts": {
+        "evidence": 6
+      }
+    },
+    {
+      "label_counts": {
+        "BIOMARKER": 2,
+        "CELL_STATE": 2,
+        "CELL_TYPE": 2,
+        "DELIVERY_MODIFIER": 2,
+        "DISEASE": 2,
+        "DRUG": 2,
+        "GENE": 2,
+        "OUTCOME": 2,
+        "PATHWAY": 2,
+        "TREATMENT": 2,
+        "TRIAL_PHASE": 2,
+        "UNKNOWN": 2
+      },
+      "observation_count": 24,
+      "pmid_count": 12,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 24
+      },
+      "reviewer_counts": {
+        "unreviewed": 24
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_entities.jsonl",
+      "task_counts": {
+        "ner": 24
+      }
+    },
+    {
+      "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_STATE": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 1,
+        "DRUG": 1,
+        "GENE": 1,
+        "OUTCOME": 1,
+        "PATHWAY": 1,
+        "TREATMENT": 1,
+        "TRIAL_PHASE": 1,
+        "UNKNOWN": 1
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 12
+      },
+      "reviewer_counts": {
+        "unreviewed": 12
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\gold_entities_round2.jsonl",
+      "task_counts": {
+        "ner": 12
+      }
+    },
+    {
+      "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_STATE": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 1,
+        "DRUG": 1,
+        "GENE": 1,
+        "OUTCOME": 1,
+        "PATHWAY": 1,
+        "TREATMENT": 1,
+        "TRIAL_PHASE": 1,
+        "UNKNOWN": 1
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 12
+      },
+      "reviewer_counts": {
+        "unreviewed": 12
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\gold_entities_round3.jsonl",
+      "task_counts": {
+        "ner": 12
+      }
+    },
+    {
+      "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_STATE": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 1,
+        "DRUG": 1,
+        "GENE": 1,
+        "OUTCOME": 1,
+        "PATHWAY": 1,
+        "TREATMENT": 1,
+        "TRIAL_PHASE": 1,
+        "UNKNOWN": 1
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 12
+      },
+      "reviewer_counts": {
+        "unreviewed": 12
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\gold_entities_round4.jsonl",
+      "task_counts": {
+        "ner": 12
+      }
+    },
+    {
+      "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_STATE": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 1,
+        "DRUG": 1,
+        "GENE": 1,
+        "OUTCOME": 1,
+        "PATHWAY": 1,
+        "TREATMENT": 1,
+        "TRIAL_PHASE": 1,
+        "UNKNOWN": 1
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 12
+      },
+      "reviewer_counts": {
+        "unreviewed": 12
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\gold_entities_round5.jsonl",
+      "task_counts": {
+        "ner": 12
+      }
+    },
+    {
+      "label_counts": {
+        "BIOMARKER": 1,
+        "CELL_STATE": 1,
+        "CELL_TYPE": 1,
+        "DELIVERY_MODIFIER": 1,
+        "DISEASE": 1,
+        "DRUG": 1,
+        "GENE": 1,
+        "OUTCOME": 1,
+        "PATHWAY": 1,
+        "TREATMENT": 1,
+        "TRIAL_PHASE": 1,
+        "UNKNOWN": 1
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "entities",
+      "review_status_counts": {
+        "unreviewed": 12
+      },
+      "reviewer_counts": {
+        "unreviewed": 12
+      },
+      "row_count": 6,
+      "source_file": "data\\training\\curated_expansion\\gold_entities_round6.jsonl",
+      "task_counts": {
+        "ner": 12
+      }
+    },
+    {
+      "label_counts": {
+        "0": 2,
+        "1": 2,
+        "2": 2,
+        "3": 2,
+        "4": 2,
+        "5": 2,
+        "ASSOCIATED_WITH": 4,
+        "NO_RELATION": 4,
+        "PREDICTS": 4
+      },
+      "observation_count": 24,
+      "pmid_count": 12,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 24
+      },
+      "reviewer_counts": {
+        "curated_expansion": 24
+      },
+      "row_count": 24,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue.jsonl",
+      "task_counts": {
+        "evidence": 12,
+        "relation": 12
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 2,
+        "PREDICTS": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion_round2": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue_round2.jsonl",
+      "task_counts": {
+        "evidence": 6,
+        "relation": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 2,
+        "PREDICTS": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion_round3": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue_round3.jsonl",
+      "task_counts": {
+        "evidence": 6,
+        "relation": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 2,
+        "PREDICTS": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion_round4": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue_round4.jsonl",
+      "task_counts": {
+        "evidence": 6,
+        "relation": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 2,
+        "PREDICTS": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion_round5": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue_round5.jsonl",
+      "task_counts": {
+        "evidence": 6,
+        "relation": 6
+      }
+    },
+    {
+      "label_counts": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1,
+        "5": 1,
+        "ASSOCIATED_WITH": 2,
+        "NO_RELATION": 2,
+        "PREDICTS": 2
+      },
+      "observation_count": 12,
+      "pmid_count": 6,
+      "record_type": "reviewed_queue",
+      "review_status_counts": {
+        "accepted": 12
+      },
+      "reviewer_counts": {
+        "curated_expansion_round6": 12
+      },
+      "row_count": 12,
+      "source_file": "data\\training\\curated_expansion\\gold_reviewed_queue_round6.jsonl",
+      "task_counts": {
+        "evidence": 6,
+        "relation": 6
+      }
+    }
+  ],
+  "task_counts": {
+    "evidence": 84,
+    "ner": 84,
+    "relation": 42
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "withdrawn_count": 0
+}

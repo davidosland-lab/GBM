@@ -1,0 +1,203 @@
+# Curated Multi-Batch Provenance Diff
+
+Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
+
+- Safe for pack rebuild review: True
+- Source files: 18
+- Observations: 210
+- Source PMIDs: 36
+- Findings: 0
+- Duplicates: 0
+- Changed reviewed examples: 0
+- Withdrawn/rejected reviewed examples: 0
+- Missing source files: 0
+
+## Task Counts
+- evidence: 84
+- ner: 84
+- relation: 42
+
+## Label Counts
+- 0: 14
+- 1: 14
+- 2: 14
+- 3: 14
+- 4: 14
+- 5: 14
+- ASSOCIATED_WITH: 14
+- BIOMARKER: 7
+- CELL_STATE: 7
+- CELL_TYPE: 7
+- DELIVERY_MODIFIER: 7
+- DISEASE: 7
+- DRUG: 7
+- GENE: 7
+- NO_RELATION: 14
+- OUTCOME: 7
+- PATHWAY: 7
+- PREDICTS: 14
+- TREATMENT: 7
+- TRIAL_PHASE: 7
+- UNKNOWN: 7
+
+## Reviewer Counts
+- curated_expansion: 36
+- curated_expansion_round2: 18
+- curated_expansion_round3: 18
+- curated_expansion_round4: 18
+- curated_expansion_round5: 18
+- curated_expansion_round6: 18
+- unreviewed: 84
+
+## Review Status Counts
+- accepted: 126
+- unreviewed: 84
+
+## Source Files
+- `data\training\curated_expansion\evidence_full_label.jsonl` (evidence)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 12
+  - Tasks: evidence=12
+  - Labels: 0=2, 1=2, 2=2, 3=2, 4=2, 5=2
+  - Reviewers: curated_expansion=12
+  - Review statuses: accepted=12
+- `data\training\curated_expansion\evidence_round2.jsonl` (evidence)
+  - Rows: 6
+  - Observations: 6
+  - Source PMIDs: 6
+  - Tasks: evidence=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
+  - Reviewers: curated_expansion_round2=6
+  - Review statuses: accepted=6
+- `data\training\curated_expansion\evidence_round3.jsonl` (evidence)
+  - Rows: 6
+  - Observations: 6
+  - Source PMIDs: 6
+  - Tasks: evidence=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
+  - Reviewers: curated_expansion_round3=6
+  - Review statuses: accepted=6
+- `data\training\curated_expansion\evidence_round4.jsonl` (evidence)
+  - Rows: 6
+  - Observations: 6
+  - Source PMIDs: 6
+  - Tasks: evidence=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
+  - Reviewers: curated_expansion_round4=6
+  - Review statuses: accepted=6
+- `data\training\curated_expansion\evidence_round5.jsonl` (evidence)
+  - Rows: 6
+  - Observations: 6
+  - Source PMIDs: 6
+  - Tasks: evidence=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
+  - Reviewers: curated_expansion_round5=6
+  - Review statuses: accepted=6
+- `data\training\curated_expansion\evidence_round6.jsonl` (evidence)
+  - Rows: 6
+  - Observations: 6
+  - Source PMIDs: 6
+  - Tasks: evidence=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1
+  - Reviewers: curated_expansion_round6=6
+  - Review statuses: accepted=6
+- `data\training\curated_expansion\gold_entities.jsonl` (entities)
+  - Rows: 12
+  - Observations: 24
+  - Source PMIDs: 12
+  - Tasks: ner=24
+  - Labels: BIOMARKER=2, CELL_STATE=2, CELL_TYPE=2, DELIVERY_MODIFIER=2, DISEASE=2, DRUG=2, GENE=2, OUTCOME=2, PATHWAY=2, TREATMENT=2, TRIAL_PHASE=2, UNKNOWN=2
+  - Reviewers: unreviewed=24
+  - Review statuses: unreviewed=24
+- `data\training\curated_expansion\gold_entities_round2.jsonl` (entities)
+  - Rows: 6
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: ner=12
+  - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, DRUG=1, GENE=1, OUTCOME=1, PATHWAY=1, TREATMENT=1, TRIAL_PHASE=1, UNKNOWN=1
+  - Reviewers: unreviewed=12
+  - Review statuses: unreviewed=12
+- `data\training\curated_expansion\gold_entities_round3.jsonl` (entities)
+  - Rows: 6
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: ner=12
+  - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, DRUG=1, GENE=1, OUTCOME=1, PATHWAY=1, TREATMENT=1, TRIAL_PHASE=1, UNKNOWN=1
+  - Reviewers: unreviewed=12
+  - Review statuses: unreviewed=12
+- `data\training\curated_expansion\gold_entities_round4.jsonl` (entities)
+  - Rows: 6
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: ner=12
+  - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, DRUG=1, GENE=1, OUTCOME=1, PATHWAY=1, TREATMENT=1, TRIAL_PHASE=1, UNKNOWN=1
+  - Reviewers: unreviewed=12
+  - Review statuses: unreviewed=12
+- `data\training\curated_expansion\gold_entities_round5.jsonl` (entities)
+  - Rows: 6
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: ner=12
+  - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, DRUG=1, GENE=1, OUTCOME=1, PATHWAY=1, TREATMENT=1, TRIAL_PHASE=1, UNKNOWN=1
+  - Reviewers: unreviewed=12
+  - Review statuses: unreviewed=12
+- `data\training\curated_expansion\gold_entities_round6.jsonl` (entities)
+  - Rows: 6
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: ner=12
+  - Labels: BIOMARKER=1, CELL_STATE=1, CELL_TYPE=1, DELIVERY_MODIFIER=1, DISEASE=1, DRUG=1, GENE=1, OUTCOME=1, PATHWAY=1, TREATMENT=1, TRIAL_PHASE=1, UNKNOWN=1
+  - Reviewers: unreviewed=12
+  - Review statuses: unreviewed=12
+- `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue)
+  - Rows: 24
+  - Observations: 24
+  - Source PMIDs: 12
+  - Tasks: evidence=12, relation=12
+  - Labels: 0=2, 1=2, 2=2, 3=2, 4=2, 5=2, ASSOCIATED_WITH=4, NO_RELATION=4, PREDICTS=4
+  - Reviewers: curated_expansion=24
+  - Review statuses: accepted=24
+- `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` (reviewed_queue)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: evidence=6, relation=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
+  - Reviewers: curated_expansion_round2=12
+  - Review statuses: accepted=12
+- `data\training\curated_expansion\gold_reviewed_queue_round3.jsonl` (reviewed_queue)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: evidence=6, relation=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
+  - Reviewers: curated_expansion_round3=12
+  - Review statuses: accepted=12
+- `data\training\curated_expansion\gold_reviewed_queue_round4.jsonl` (reviewed_queue)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: evidence=6, relation=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
+  - Reviewers: curated_expansion_round4=12
+  - Review statuses: accepted=12
+- `data\training\curated_expansion\gold_reviewed_queue_round5.jsonl` (reviewed_queue)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: evidence=6, relation=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
+  - Reviewers: curated_expansion_round5=12
+  - Review statuses: accepted=12
+- `data\training\curated_expansion\gold_reviewed_queue_round6.jsonl` (reviewed_queue)
+  - Rows: 12
+  - Observations: 12
+  - Source PMIDs: 6
+  - Tasks: evidence=6, relation=6
+  - Labels: 0=1, 1=1, 2=1, 3=1, 4=1, 5=1, ASSOCIATED_WITH=2, NO_RELATION=2, PREDICTS=2
+  - Reviewers: curated_expansion_round6=12
+  - Review statuses: accepted=12
+
+## Findings
+- none

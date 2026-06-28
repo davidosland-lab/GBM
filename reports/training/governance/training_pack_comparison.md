@@ -14,11 +14,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Label maps: `data\training\evidence_pack\label_maps`
 - Ready: True
 - Row counts:
-- evidence: 18
+- evidence: 42
 - ner: 0
 - relation: 0
 - Label coverage:
-- evidence: 0=3, 1=3, 2=3, 3=3, 4=3, 5=3
+- evidence: 0=7, 1=7, 2=7, 3=7, 4=7, 5=7
 - ner: none
 - relation: none
 - Leakage:
@@ -35,11 +35,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Row counts:
 - evidence: 0
 - ner: 0
-- relation: 6
+- relation: 42
 - Label coverage:
 - evidence: none
 - ner: none
-- relation: ASSOCIATED_WITH=2, NO_RELATION=3, PREDICTS=1
+- relation: ASSOCIATED_WITH=14, NO_RELATION=14, PREDICTS=14
 - Leakage:
 - none
 - Warnings:
@@ -52,13 +52,13 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Label maps: `data\training\gold_pack\label_maps`
 - Ready: True
 - Row counts:
-- evidence: 18
-- ner: 36
-- relation: 18
+- evidence: 42
+- ner: 84
+- relation: 42
 - Label coverage:
-- evidence: 0=3, 1=3, 2=3, 3=3, 4=3, 5=3
-- ner: BIOMARKER=3, CELL_STATE=3, CELL_TYPE=3, DELIVERY_MODIFIER=3, DISEASE=3, DRUG=3, GENE=3, OUTCOME=3, PATHWAY=3, TREATMENT=3, TRIAL_PHASE=3, UNKNOWN=3
-- relation: ASSOCIATED_WITH=6, NO_RELATION=6, PREDICTS=6
+- evidence: 0=7, 1=7, 2=7, 3=7, 4=7, 5=7
+- ner: BIOMARKER=7, CELL_STATE=7, CELL_TYPE=7, DELIVERY_MODIFIER=7, DISEASE=7, DRUG=7, GENE=7, OUTCOME=7, PATHWAY=7, TREATMENT=7, TRIAL_PHASE=7, UNKNOWN=7
+- relation: ASSOCIATED_WITH=14, NO_RELATION=14, PREDICTS=14
 - Leakage:
 - none
 - Warnings:

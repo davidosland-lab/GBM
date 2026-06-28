@@ -57,11 +57,13 @@ def test_training_dashboard_context_includes_governance_status(tmp_path: Path) -
     _write_json(tmp_path / "reports/training/training_label_drift.json", {"warning_count": 0})
     _write_json(tmp_path / "reports/platform_regression/launcher_menu_check.json", {"safe": True})
     _write_json(tmp_path / "reports/training/curated_fixture_import.json", {"safe": True})
+    _write_json(tmp_path / "reports/training/curated_provenance_diff.json", {"safe": True})
     _write_json(tmp_path / "reports/training/gold_pack/gold_pack_promotion_review.json", {"promotable": False})
     for path in (
         tmp_path / "reports/training/training_label_drift.md",
         tmp_path / "reports/platform_regression/launcher_menu_check.md",
         tmp_path / "reports/training/curated_fixture_import.md",
+        tmp_path / "reports/training/curated_provenance_diff.md",
         tmp_path / "reports/training/gold_pack/gold_pack_promotion_review.md",
     ):
         path.parent.mkdir(parents=True, exist_ok=True)
@@ -73,6 +75,9 @@ def test_training_dashboard_context_includes_governance_status(tmp_path: Path) -
     assert context["launcher_menu_safe"] is True
     assert context["curated_fixture_safe"] is True
     assert context["gold_pack_promotable"] is False
+    details = {row["title"]: row for row in context["governance_report_details"]}
+    assert details["Curated provenance diff"]["status"] == "safe"
+    assert details["Model registry audit"]["status"] == "missing"
 
 
 def _write_json(path: Path, payload: dict) -> None:

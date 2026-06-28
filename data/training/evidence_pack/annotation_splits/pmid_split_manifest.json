@@ -3,9 +3,9 @@
   "leakage_warnings": [],
   "output_dir": "data\\training\\evidence_pack\\annotation_splits",
   "pmid_counts": {
-    "test": 1,
-    "train": 10,
-    "validation": 1
+    "test": 4,
+    "train": 28,
+    "validation": 4
   },
   "ratios": {
     "test": 0.1,
@@ -36,25 +36,31 @@
     {
       "label_counts": {
         "test": {
-          "1": 2
+          "2": 2,
+          "3": 1,
+          "4": 1,
+          "5": 1
         },
         "train": {
-          "0": 3,
-          "1": 1,
-          "2": 3,
-          "3": 3,
-          "4": 1,
-          "5": 3
+          "0": 6,
+          "1": 6,
+          "2": 4,
+          "3": 6,
+          "4": 5,
+          "5": 6
         },
         "validation": {
-          "4": 2
+          "0": 1,
+          "1": 1,
+          "2": 1,
+          "4": 1
         }
       },
       "source_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
       "split_counts": {
-        "test": 2,
-        "train": 14,
-        "validation": 2
+        "test": 5,
+        "train": 33,
+        "validation": 4
       },
       "split_files": {
         "test": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",

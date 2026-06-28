@@ -9,6 +9,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 | Launcher menu | pass | 0 warnings |
 | Default governance | pass | 0 warnings |
 | Strict governance audit | pass | 1 expected audit warning(s) |
-| Gold-pack promotion | review | 7 blocker(s) |
+| Gold-pack promotion | review | 6 blocker(s) |
+| Governance detail contract | pass | 0 missing row(s) |
 
 Strict governance and gold-pack promotion are audit signals. A non-promotable gold pack is expected until reviewed data volume thresholds are met.
+The governance detail contract is a visibility signal; missing detail rows stay listed and do not imply model or clinical readiness.

@@ -19,16 +19,19 @@
     },
     {
       "evaluation_file": "data\\training\\relation_pack\\annotation_splits\\relation_test.jsonl",
-      "examples": 0,
-      "label_counts": {},
-      "majority_accuracy": null,
-      "majority_label": null,
+      "examples": 5,
+      "label_counts": {
+        "ASSOCIATED_WITH": 1,
+        "NO_RELATION": 3,
+        "PREDICTS": 1
+      },
+      "majority_accuracy": 0.6,
+      "majority_label": "NO_RELATION",
       "task": "relation"
     }
   ],
   "warnings": [
     "ner: no evaluation examples",
-    "evidence: no evaluation examples",
-    "relation: no evaluation examples"
+    "evidence: no evaluation examples"
   ]
 }

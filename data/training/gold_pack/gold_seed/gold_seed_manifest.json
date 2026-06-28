@@ -1,6 +1,6 @@
 {
   "entity_jsonl_path": "data\\training\\curated_import\\combined_entities.jsonl",
-  "evidence_count": 18,
+  "evidence_count": 42,
   "files": {
     "evidence": "data\\training\\gold_pack\\gold_seed\\gold_evidence.jsonl",
     "manifest": "data\\training\\gold_pack\\gold_seed\\gold_seed_manifest.json",
@@ -8,10 +8,10 @@
     "ner": "data\\training\\gold_pack\\gold_seed\\gold_ner.jsonl",
     "relation": "data\\training\\gold_pack\\gold_seed\\gold_relations.jsonl"
   },
-  "ner_count": 36,
+  "ner_count": 84,
   "output_dir": "data\\training\\gold_pack\\gold_seed",
   "prediction_reviewed_queue_path": "",
-  "relation_count": 18,
+  "relation_count": 42,
   "reviewed_queue_path": "data\\training\\curated_import\\combined_reviewed_queue.jsonl",
   "skipped_pending_count": 0,
   "skipped_rejected_count": 0,

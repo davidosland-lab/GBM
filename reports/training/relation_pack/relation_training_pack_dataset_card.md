@@ -3,7 +3,7 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Dataset directory: `data\training\relation_pack\annotation_splits`
-- Total examples: 6
+- Total examples: 42
 
 ## Files
 ### evidence_test.jsonl
@@ -49,27 +49,31 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - none
 
 ### relation_test.jsonl
-- Examples: 0
+- Examples: 5
 - Missing text: 0
-- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- SHA256: `69BB1EB9BF7DBE101E480771FBF24F9BF310E08B35F6E87D47C1D2B635B16A61`
 - Labels:
-- none
+- ASSOCIATED_WITH: 1
+- NO_RELATION: 3
+- PREDICTS: 1
 
 ### relation_train.jsonl
-- Examples: 4
+- Examples: 33
 - Missing text: 0
-- SHA256: `FF77945F6BA8247F8F84364DA04E459908CD599C05055699F18B6E4F1F31E98F`
+- SHA256: `8F20887E4755B9600D9AECE64BB47203913E45BD4617682ABB9A2B27EF76A57C`
 - Labels:
-- ASSOCIATED_WITH: 2
-- NO_RELATION: 2
+- ASSOCIATED_WITH: 12
+- NO_RELATION: 10
+- PREDICTS: 11
 
 ### relation_validation.jsonl
-- Examples: 2
+- Examples: 4
 - Missing text: 0
-- SHA256: `E294147EEFC1A0E6BCD7565EF485F590C7E7FDB734D1333EA80BAC6537BAD5F4`
+- SHA256: `E8A43840EF5446E402D26AA51FD6C3F205EC0F84CF06A83E55855C1FD9C7E4B1`
 - Labels:
+- ASSOCIATED_WITH: 1
 - NO_RELATION: 1
-- PREDICTS: 1
+- PREDICTS: 2
 
 ## Warnings
 - evidence_test.jsonl: no examples
@@ -78,4 +82,3 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - ner_test.jsonl: no examples
 - ner_train.jsonl: no examples
 - ner_validation.jsonl: no examples
-- relation_test.jsonl: no examples

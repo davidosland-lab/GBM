@@ -2,7 +2,7 @@
   "finding_count": 0,
   "findings": [],
   "missing_required_count": 0,
-  "required_count": 25,
+  "required_count": 35,
   "root": ".",
   "safe": true,
   "tracked_count": 619,

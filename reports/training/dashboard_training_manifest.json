@@ -1,9 +1,9 @@
 {
-  "available_report_count": 8,
+  "available_report_count": 13,
   "current_config_failed_count": 0,
-  "current_config_passed_count": 2,
+  "current_config_passed_count": 3,
   "output_path": "reports\\training\\dashboard_training_manifest.json",
-  "ready_pack_count": 2,
+  "ready_pack_count": 3,
   "registry_audit_passed": true,
   "registry_entry_count": 1,
   "relation_config_status": "passed",

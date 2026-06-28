@@ -1,0 +1,333 @@
+{
+  "batch_count": 14,
+  "batches": [
+    {
+      "batch_id": "evidence-label-balance-001",
+      "batch_type": "label_balance",
+      "counts_toward_task_volume": true,
+      "labels": [
+        {
+          "additional_examples_needed": 3,
+          "label": "0"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "1"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "2"
+        }
+      ],
+      "note": "Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.",
+      "suggested_examples": 9,
+      "suggested_new_pmids": 0,
+      "task": "evidence",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "evidence-label-balance-002",
+      "batch_type": "label_balance",
+      "counts_toward_task_volume": true,
+      "labels": [
+        {
+          "additional_examples_needed": 3,
+          "label": "3"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "4"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "5"
+        }
+      ],
+      "note": "Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.",
+      "suggested_examples": 9,
+      "suggested_new_pmids": 0,
+      "task": "evidence",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "evidence-volume-001",
+      "batch_type": "task_volume",
+      "counts_toward_task_volume": true,
+      "labels": [],
+      "note": "Add balanced reviewed examples for the task-volume delta remaining after label-floor batches.",
+      "suggested_examples": 24,
+      "suggested_new_pmids": 0,
+      "task": "evidence",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "evidence-volume-002",
+      "batch_type": "task_volume",
+      "counts_toward_task_volume": true,
+      "labels": [],
+      "note": "Add balanced reviewed examples for the task-volume delta remaining after label-floor batches.",
+      "suggested_examples": 16,
+      "suggested_new_pmids": 0,
+      "task": "evidence",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "ner-label-balance-001",
+      "batch_type": "label_balance",
+      "counts_toward_task_volume": true,
+      "labels": [
+        {
+          "additional_examples_needed": 3,
+          "label": "BIOMARKER"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "CELL_STATE"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "CELL_TYPE"
+        }
+      ],
+      "note": "Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.",
+      "suggested_examples": 9,
+      "suggested_new_pmids": 0,
+      "task": "ner",
+      "task_volume_delta": 16
+    },
+    {
+      "batch_id": "ner-label-balance-002",
+      "batch_type": "label_balance",
+      "counts_toward_task_volume": true,
+      "labels": [
+        {
+          "additional_examples_needed": 3,
+          "label": "DELIVERY_MODIFIER"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "DISEASE"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "DRUG"
+        }
+      ],
+      "note": "Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.",
+      "suggested_examples": 9,
+      "suggested_new_pmids": 0,
+      "task": "ner",
+      "task_volume_delta": 16
+    },
+    {
+      "batch_id": "ner-label-balance-003",
+      "batch_type": "label_balance",
+      "counts_toward_task_volume": true,
+      "labels": [
+        {
+          "additional_examples_needed": 3,
+          "label": "GENE"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "OUTCOME"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "PATHWAY"
+        }
+      ],
+      "note": "Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.",
+      "suggested_examples": 9,
+      "suggested_new_pmids": 0,
+      "task": "ner",
+      "task_volume_delta": 16
+    },
+    {
+      "batch_id": "ner-label-balance-004",
+      "batch_type": "label_balance",
+      "counts_toward_task_volume": true,
+      "labels": [
+        {
+          "additional_examples_needed": 3,
+          "label": "TREATMENT"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "TRIAL_PHASE"
+        },
+        {
+          "additional_examples_needed": 3,
+          "label": "UNKNOWN"
+        }
+      ],
+      "note": "Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.",
+      "suggested_examples": 9,
+      "suggested_new_pmids": 0,
+      "task": "ner",
+      "task_volume_delta": 16
+    },
+    {
+      "batch_id": "relation-volume-001",
+      "batch_type": "task_volume",
+      "counts_toward_task_volume": true,
+      "labels": [],
+      "note": "Add balanced reviewed examples for the task-volume delta remaining after label-floor batches.",
+      "suggested_examples": 24,
+      "suggested_new_pmids": 0,
+      "task": "relation",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "relation-volume-002",
+      "batch_type": "task_volume",
+      "counts_toward_task_volume": true,
+      "labels": [],
+      "note": "Add balanced reviewed examples for the task-volume delta remaining after label-floor batches.",
+      "suggested_examples": 24,
+      "suggested_new_pmids": 0,
+      "task": "relation",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "relation-volume-003",
+      "batch_type": "task_volume",
+      "counts_toward_task_volume": true,
+      "labels": [],
+      "note": "Add balanced reviewed examples for the task-volume delta remaining after label-floor batches.",
+      "suggested_examples": 10,
+      "suggested_new_pmids": 0,
+      "task": "relation",
+      "task_volume_delta": 58
+    },
+    {
+      "batch_id": "source-pmid-expansion-001",
+      "batch_type": "source_pmid_expansion",
+      "counts_toward_task_volume": false,
+      "labels": [],
+      "note": "Select additional source PMIDs for future reviewed curation batches.",
+      "suggested_examples": 0,
+      "suggested_new_pmids": 6,
+      "task": "all",
+      "task_volume_delta": 0
+    },
+    {
+      "batch_id": "source-pmid-expansion-002",
+      "batch_type": "source_pmid_expansion",
+      "counts_toward_task_volume": false,
+      "labels": [],
+      "note": "Select additional source PMIDs for future reviewed curation batches.",
+      "suggested_examples": 0,
+      "suggested_new_pmids": 6,
+      "task": "all",
+      "task_volume_delta": 0
+    },
+    {
+      "batch_id": "source-pmid-expansion-003",
+      "batch_type": "source_pmid_expansion",
+      "counts_toward_task_volume": false,
+      "labels": [],
+      "note": "Select additional source PMIDs for future reviewed curation batches.",
+      "suggested_examples": 0,
+      "suggested_new_pmids": 2,
+      "task": "all",
+      "task_volume_delta": 0
+    }
+  ],
+  "label_balance_relationship": {
+    "evidence": {
+      "label_delta_total": 18,
+      "remaining_task_volume_after_labels": 40,
+      "task_example_delta": 58
+    },
+    "ner": {
+      "label_delta_total": 36,
+      "remaining_task_volume_after_labels": 0,
+      "task_example_delta": 16
+    },
+    "relation": {
+      "label_delta_total": 0,
+      "remaining_task_volume_after_labels": 58,
+      "task_example_delta": 58
+    }
+  },
+  "label_example_deltas": {
+    "evidence": {
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3
+    },
+    "ner": {
+      "BIOMARKER": 3,
+      "CELL_STATE": 3,
+      "CELL_TYPE": 3,
+      "DELIVERY_MODIFIER": 3,
+      "DISEASE": 3,
+      "DRUG": 3,
+      "GENE": 3,
+      "OUTCOME": 3,
+      "PATHWAY": 3,
+      "TREATMENT": 3,
+      "TRIAL_PHASE": 3,
+      "UNKNOWN": 3
+    },
+    "relation": {}
+  },
+  "label_remaining_examples": {
+    "evidence": {
+      "0": 3,
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3
+    },
+    "ner": {
+      "BIOMARKER": 3,
+      "CELL_STATE": 3,
+      "CELL_TYPE": 3,
+      "DELIVERY_MODIFIER": 3,
+      "DISEASE": 3,
+      "DRUG": 3,
+      "GENE": 3,
+      "OUTCOME": 3,
+      "PATHWAY": 3,
+      "TREATMENT": 3,
+      "TRIAL_PHASE": 3,
+      "UNKNOWN": 3
+    },
+    "relation": {}
+  },
+  "promotable_now": false,
+  "promotion_review_path": "reports\\training\\gold_pack\\gold_pack_promotion_review.json",
+  "scaffold_only": true,
+  "source_pmid_batches": [
+    {
+      "batch_id": "source-pmid-expansion-001",
+      "suggested_new_pmids": 6
+    },
+    {
+      "batch_id": "source-pmid-expansion-002",
+      "suggested_new_pmids": 6
+    },
+    {
+      "batch_id": "source-pmid-expansion-003",
+      "suggested_new_pmids": 2
+    }
+  ],
+  "source_pmid_delta": 14,
+  "task_example_deltas": {
+    "evidence": 58,
+    "ner": 16,
+    "relation": 58
+  },
+  "task_remaining_examples": {
+    "evidence": 58,
+    "ner": 16,
+    "relation": 58
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

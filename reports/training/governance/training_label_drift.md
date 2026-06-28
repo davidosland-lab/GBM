@@ -10,7 +10,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Governance profile: scaffold
 - Dataset: `data\training\evidence_pack\annotation_splits`
 - Config labels: 0, 1, 2, 3, 4, 5
-- Dataset labels: test=[1]; train=[0, 1, 2, 3, 4, 5]; validation=[4]
+- Dataset labels: test=[2, 3, 4, 5]; train=[0, 1, 2, 3, 4, 5]; validation=[0, 1, 2, 4]
 - Missing from config: none
 - Missing from dataset: none
 
@@ -28,7 +28,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Governance profile: scaffold
 - Dataset: `data\training\gold_pack\annotation_splits`
 - Config labels: GENE, DRUG, DISEASE, PATHWAY, BIOMARKER, CELL_TYPE, CELL_STATE, TREATMENT, DELIVERY_MODIFIER, OUTCOME, TRIAL_PHASE, UNKNOWN
-- Dataset labels: test=[CELL_TYPE, DRUG, OUTCOME, PATHWAY]; train=[BIOMARKER, CELL_STATE, CELL_TYPE, DELIVERY_MODIFIER, DISEASE, DRUG, GENE, OUTCOME, PATHWAY, TREATMENT, TRIAL_PHASE, UNKNOWN]; validation=[DELIVERY_MODIFIER, OUTCOME, PATHWAY, TRIAL_PHASE]
+- Dataset labels: test=[BIOMARKER, CELL_STATE, DELIVERY_MODIFIER, GENE, PATHWAY, TRIAL_PHASE, UNKNOWN]; train=[BIOMARKER, CELL_STATE, CELL_TYPE, DELIVERY_MODIFIER, DISEASE, DRUG, GENE, OUTCOME, PATHWAY, TREATMENT, TRIAL_PHASE, UNKNOWN]; validation=[BIOMARKER, CELL_TYPE, DISEASE, DRUG, GENE, OUTCOME, TREATMENT]
 - Missing from config: none
 - Missing from dataset: none
 
@@ -46,7 +46,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Governance profile: current
 - Dataset: `data\training\relation_pack\annotation_splits`
 - Config labels: ASSOCIATED_WITH, NO_RELATION, PREDICTS
-- Dataset labels: test=[none]; train=[ASSOCIATED_WITH, NO_RELATION]; validation=[NO_RELATION, PREDICTS]
+- Dataset labels: test=[ASSOCIATED_WITH, NO_RELATION, PREDICTS]; train=[ASSOCIATED_WITH, NO_RELATION, PREDICTS]; validation=[ASSOCIATED_WITH, NO_RELATION, PREDICTS]
 - Missing from config: none
 - Missing from dataset: none
 

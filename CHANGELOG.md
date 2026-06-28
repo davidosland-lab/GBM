@@ -4,6 +4,23 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Unreleased
 
+- Added a launcher path (`16BR`) for the full multi-batch curated import across every expansion round, matching the provenance-diff fixed file set.
+- Surfaced the governance detail contract state in the compact CI Markdown summary and CI summary contract, keeping missing detail rows visible without implying readiness.
+- Refined gold-pack promotion planning so label-balance batches report how they relate to the task-volume delta (label-floor total vs. remaining task volume).
+- Added a sixth curated local curation round and rebuilt combined import, provenance, evidence, NER, relation, promotion, planning, CI, and governance reports from all six rounds.
+- Added a fifth curated local curation round and rebuilt combined import, provenance, evidence, NER, relation, promotion, and governance reports from all five rounds.
+- Added compact promotion-planning summary fields for remaining task examples, label examples, and source-PMID batches.
+- Added a governance detail contract check that keeps required governance rows visible even when reports are missing.
+- Added launcher shortcuts for promotion planning, governance detail export, and CI summary contract checks.
+- Added a fourth curated local curation round and rebuilt combined import, provenance, evidence, NER, relation, promotion, and governance reports from all four rounds.
+- Added a standalone dashboard governance detail export report for Markdown/JSON handoff review.
+- Added a CI summary artifact contract check to keep required verification, governance, and promotion report families visible.
+- Added a scaffold-only gold-pack promotion planning report that groups promotion deltas into future curation batches.
+- Added promotion-review delta fields showing exact examples and source PMIDs still needed before any scaffold promotion review.
+- Hardened the CI Markdown summary so missing or invalid required verification/governance reports fail the summary command.
+- Added dashboard governance detail rows for training report paths, existence, and report status.
+- Added a third curated local curation round and rebuilt combined import, evidence, NER, relation, promotion, and governance reports from all three rounds.
+- Added a curated multi-batch provenance diff report that compares source files, PMIDs, tasks, labels, reviewers, and review statuses before training-pack rebuilds.
 - Aligned strict label-drift checks to config-specific governance datasets so smoke configs are not compared against scaffold packs.
 - Added a curated training fixture import validator for larger reviewed evidence, NER, and relation batches.
 - Extended curated training fixture import to accept repeated evidence, entity, and reviewed-queue JSONL inputs and write combined JSONL outputs.

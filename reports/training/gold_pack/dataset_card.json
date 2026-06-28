@@ -2,103 +2,118 @@
   "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
   "files": {
     "evidence_test.jsonl": {
-      "examples": 2,
+      "examples": 5,
       "label_counts": {
-        "1": 2
+        "2": 2,
+        "3": 1,
+        "4": 1,
+        "5": 1
       },
       "missing_text": 0,
-      "sha256": "6609D0E3B9F9BCA50BDD6115C31C43D28BCE2289BB590F590E2AEF5F5AB7184D"
+      "sha256": "6A2849479302CC495AFD4F93CA873B0529F278A57BD4B7998AA82BA6C0CE94C7"
     },
     "evidence_train.jsonl": {
-      "examples": 14,
+      "examples": 33,
       "label_counts": {
-        "0": 3,
-        "1": 1,
-        "2": 3,
-        "3": 3,
-        "4": 1,
-        "5": 3
+        "0": 6,
+        "1": 6,
+        "2": 4,
+        "3": 6,
+        "4": 5,
+        "5": 6
       },
       "missing_text": 0,
-      "sha256": "E8B9DF7984B025F2F6D92B1E0BB2AA5EBD8244D469A0E5D74F40223A8348AFFA"
+      "sha256": "8E2F240412F8CA19ABB95C3342B44274D4F577B7617E30E7ADDAD72FA66A6371"
     },
     "evidence_validation.jsonl": {
-      "examples": 2,
+      "examples": 4,
       "label_counts": {
-        "4": 2
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "4": 1
       },
       "missing_text": 0,
-      "sha256": "13E984199D5A4A849E973D1E96C4EBB17631E9597630457CE23FA72C133DBE50"
+      "sha256": "A7C62DB80936F811DC061F0F71E3B7472DED315E5188B1043779E70428225007"
     },
     "ner_test.jsonl": {
-      "examples": 4,
+      "examples": 10,
       "label_counts": {
-        "CELL_TYPE": 1,
-        "DRUG": 1,
-        "OUTCOME": 1,
-        "PATHWAY": 1
+        "BIOMARKER": 1,
+        "CELL_STATE": 3,
+        "DELIVERY_MODIFIER": 2,
+        "GENE": 1,
+        "PATHWAY": 1,
+        "TRIAL_PHASE": 1,
+        "UNKNOWN": 1
       },
       "missing_text": 0,
-      "sha256": "9C5BB7BA2FBFEF41769642E8FCF7139DC5D6714D32E02EDCC88EBC577E0F79E4"
+      "sha256": "014E4366869969F0DFE10CBCBFD04275954B54997F08DBE657479695DB32AB8B"
     },
     "ner_train.jsonl": {
-      "examples": 28,
+      "examples": 66,
       "label_counts": {
-        "BIOMARKER": 3,
-        "CELL_STATE": 3,
-        "CELL_TYPE": 2,
-        "DELIVERY_MODIFIER": 2,
-        "DISEASE": 3,
-        "DRUG": 2,
-        "GENE": 3,
-        "OUTCOME": 1,
-        "PATHWAY": 1,
-        "TREATMENT": 3,
-        "TRIAL_PHASE": 2,
-        "UNKNOWN": 3
+        "BIOMARKER": 4,
+        "CELL_STATE": 4,
+        "CELL_TYPE": 6,
+        "DELIVERY_MODIFIER": 5,
+        "DISEASE": 6,
+        "DRUG": 6,
+        "GENE": 5,
+        "OUTCOME": 6,
+        "PATHWAY": 6,
+        "TREATMENT": 6,
+        "TRIAL_PHASE": 6,
+        "UNKNOWN": 6
       },
       "missing_text": 0,
-      "sha256": "DD60D6441B99517CDCB9F390C74EFF8C62A202B8BBFCF54210D8CC19C19C4AFD"
+      "sha256": "D1458DA048598874CABB24DFCF09CBC35794B2577A5D538176F715EB81D49876"
     },
     "ner_validation.jsonl": {
-      "examples": 4,
+      "examples": 8,
       "label_counts": {
-        "DELIVERY_MODIFIER": 1,
+        "BIOMARKER": 2,
+        "CELL_TYPE": 1,
+        "DISEASE": 1,
+        "DRUG": 1,
+        "GENE": 1,
         "OUTCOME": 1,
-        "PATHWAY": 1,
-        "TRIAL_PHASE": 1
+        "TREATMENT": 1
       },
       "missing_text": 0,
-      "sha256": "4E2CDAF136C2F5CEF5D3DE69039EA7A1EB72BC8BD5DF0E619EA1A64A5A59637F"
+      "sha256": "D5D88F35A47045505B13413CFFD6E0CEDC416F941AC7D44DC628406C5E657D2D"
     },
     "relation_test.jsonl": {
-      "examples": 2,
+      "examples": 5,
       "label_counts": {
-        "PREDICTS": 2
-      },
-      "missing_text": 0,
-      "sha256": "736D2EB2DBF926488A5367D84B539E2AF76B7833001F9E8B91012B3D65ADE949"
-    },
-    "relation_train.jsonl": {
-      "examples": 14,
-      "label_counts": {
-        "ASSOCIATED_WITH": 6,
-        "NO_RELATION": 5,
-        "PREDICTS": 3
-      },
-      "missing_text": 0,
-      "sha256": "C8383319B0A57EB883C7698FDD7DD3284F87A6D6C96C6CF880B8095D469E0546"
-    },
-    "relation_validation.jsonl": {
-      "examples": 2,
-      "label_counts": {
-        "NO_RELATION": 1,
+        "ASSOCIATED_WITH": 1,
+        "NO_RELATION": 3,
         "PREDICTS": 1
       },
       "missing_text": 0,
-      "sha256": "3DF2A9EFAC3985E30AE338F3D28AF8FCFB7A7AD8FCA65499465FB409E1992979"
+      "sha256": "69BB1EB9BF7DBE101E480771FBF24F9BF310E08B35F6E87D47C1D2B635B16A61"
+    },
+    "relation_train.jsonl": {
+      "examples": 33,
+      "label_counts": {
+        "ASSOCIATED_WITH": 12,
+        "NO_RELATION": 10,
+        "PREDICTS": 11
+      },
+      "missing_text": 0,
+      "sha256": "8F20887E4755B9600D9AECE64BB47203913E45BD4617682ABB9A2B27EF76A57C"
+    },
+    "relation_validation.jsonl": {
+      "examples": 4,
+      "label_counts": {
+        "ASSOCIATED_WITH": 1,
+        "NO_RELATION": 1,
+        "PREDICTS": 2
+      },
+      "missing_text": 0,
+      "sha256": "E8A43840EF5446E402D26AA51FD6C3F205EC0F84CF06A83E55855C1FD9C7E4B1"
     }
   },
-  "total_examples": 72,
+  "total_examples": 168,
   "warnings": []
 }

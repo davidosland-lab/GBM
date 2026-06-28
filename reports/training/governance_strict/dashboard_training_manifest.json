@@ -1,5 +1,5 @@
 {
-  "available_report_count": 12,
+  "available_report_count": 13,
   "current_config_failed_count": 0,
   "current_config_passed_count": 3,
   "output_path": "reports\\training\\governance_strict\\dashboard_training_manifest.json",

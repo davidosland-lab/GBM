@@ -1,0 +1,25 @@
+{
+  "audit_signal_note_present": true,
+  "missing_families": [],
+  "referenced_families": [
+    "Local verification",
+    "Artifact policy",
+    "Launcher menu",
+    "Default governance",
+    "Strict governance audit",
+    "Gold-pack promotion",
+    "Governance detail contract"
+  ],
+  "required_families": [
+    "Local verification",
+    "Artifact policy",
+    "Launcher menu",
+    "Default governance",
+    "Strict governance audit",
+    "Gold-pack promotion",
+    "Governance detail contract"
+  ],
+  "summary_path": "reports\\platform_regression\\ci_report_summary.md",
+  "valid": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

@@ -13,7 +13,10 @@
       "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
-          "1"
+          "2",
+          "3",
+          "4",
+          "5"
         ],
         "train": [
           "0",
@@ -24,6 +27,9 @@
           "5"
         ],
         "validation": [
+          "0",
+          "1",
+          "2",
           "4"
         ]
       },
@@ -75,10 +81,13 @@
       "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
-          "CELL_TYPE",
-          "DRUG",
-          "OUTCOME",
-          "PATHWAY"
+          "BIOMARKER",
+          "CELL_STATE",
+          "DELIVERY_MODIFIER",
+          "GENE",
+          "PATHWAY",
+          "TRIAL_PHASE",
+          "UNKNOWN"
         ],
         "train": [
           "BIOMARKER",
@@ -95,10 +104,13 @@
           "UNKNOWN"
         ],
         "validation": [
-          "DELIVERY_MODIFIER",
+          "BIOMARKER",
+          "CELL_TYPE",
+          "DISEASE",
+          "DRUG",
+          "GENE",
           "OUTCOME",
-          "PATHWAY",
-          "TRIAL_PHASE"
+          "TREATMENT"
         ]
       },
       "governance_profile": "scaffold",
@@ -165,12 +177,18 @@
       "config_path": "configs\\training\\gbmbert_relation_biobert.json",
       "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
       "dataset_labels": {
-        "test": [],
+        "test": [
+          "ASSOCIATED_WITH",
+          "NO_RELATION",
+          "PREDICTS"
+        ],
         "train": [
           "ASSOCIATED_WITH",
-          "NO_RELATION"
+          "NO_RELATION",
+          "PREDICTS"
         ],
         "validation": [
+          "ASSOCIATED_WITH",
           "NO_RELATION",
           "PREDICTS"
         ]

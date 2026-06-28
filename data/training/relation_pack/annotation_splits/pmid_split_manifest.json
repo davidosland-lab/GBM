@@ -3,9 +3,9 @@
   "leakage_warnings": [],
   "output_dir": "data\\training\\relation_pack\\annotation_splits",
   "pmid_counts": {
-    "test": 0,
-    "train": 1,
-    "validation": 1
+    "test": 4,
+    "train": 28,
+    "validation": 4
   },
   "ratios": {
     "test": 0.1,
@@ -54,21 +54,27 @@
     },
     {
       "label_counts": {
-        "test": {},
+        "test": {
+          "ASSOCIATED_WITH": 1,
+          "NO_RELATION": 3,
+          "PREDICTS": 1
+        },
         "train": {
-          "ASSOCIATED_WITH": 2,
-          "NO_RELATION": 2
+          "ASSOCIATED_WITH": 12,
+          "NO_RELATION": 10,
+          "PREDICTS": 11
         },
         "validation": {
+          "ASSOCIATED_WITH": 1,
           "NO_RELATION": 1,
-          "PREDICTS": 1
+          "PREDICTS": 2
         }
       },
       "source_file": "data\\training\\relation_pack\\annotation_dataset\\relations.jsonl",
       "split_counts": {
-        "test": 0,
-        "train": 4,
-        "validation": 2
+        "test": 5,
+        "train": 33,
+        "validation": 4
       },
       "split_files": {
         "test": "data\\training\\relation_pack\\annotation_splits\\relation_test.jsonl",

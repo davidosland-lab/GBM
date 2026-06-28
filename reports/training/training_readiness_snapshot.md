@@ -2,11 +2,14 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Created UTC: 2026-06-23T23:16:49.203632+00:00
-- Ready packs: 2/3
+- Created UTC: 2026-06-28T09:04:07.388854+00:00
+- Ready packs: 3/3
 - Relation config status: passed
-- Registry audit passed: False
-- Dashboard reports: 7
+- Current config passed: 3
+- Current config failed: 0
+- Scaffold configs: 2
+- Registry audit passed: True
+- Dashboard reports: 13
 
 ## Warnings
-- model registry audit has findings
+- none

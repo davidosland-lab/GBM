@@ -13,9 +13,9 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Training enabled confirmed: False
 
 ## Split Counts
-- test: 0
-- train: 4
-- validation: 2
+- test: 3
+- train: 29
+- validation: 4
 
 ## Checks
 - config_label_set_nonempty: True
@@ -46,5 +46,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ## Warnings
 - review gate is for research scaffolding only and does not certify model performance
 - training remains separate from diagnosis, treatment selection, and clinical decision-making
-- relation_test.jsonl has no examples
 - training_enabled is false; this config is review-ready but will run as a dry run unless changed

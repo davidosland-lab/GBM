@@ -16,6 +16,7 @@ The canonical `gbmbert-verify-local` command runs this check automatically.
 
 - Governance and readiness reports under `reports/training/` when they describe the current checked-in datasets, configs, or handoff state.
 - Planning reports that define acceptance criteria for future curation work, such as gold-pack expansion and evidence-label coverage plans.
+- Governance detail exports, governance detail contracts, CI summary contracts, and promotion-planning reports that make handoff review reproducible without implying model or clinical readiness.
 - Platform and artifact-index reports that summarize project state after a verification run.
 - Tiny smoke fixtures and label maps that are required for tests or current governance checks.
 

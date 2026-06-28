@@ -11,52 +11,52 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ## Tasks
 ### ner
 - Ready: True
-- Examples: 36
+- Examples: 84
 - Duplicates: 0
 - Invalid NER spans: 0
 - Dominant label fraction: 0.083
 - Labels:
-- BIOMARKER: 3
-- CELL_STATE: 3
-- CELL_TYPE: 3
-- DELIVERY_MODIFIER: 3
-- DISEASE: 3
-- DRUG: 3
-- GENE: 3
-- OUTCOME: 3
-- PATHWAY: 3
-- TREATMENT: 3
-- TRIAL_PHASE: 3
-- UNKNOWN: 3
+- BIOMARKER: 7
+- CELL_STATE: 7
+- CELL_TYPE: 7
+- DELIVERY_MODIFIER: 7
+- DISEASE: 7
+- DRUG: 7
+- GENE: 7
+- OUTCOME: 7
+- PATHWAY: 7
+- TREATMENT: 7
+- TRIAL_PHASE: 7
+- UNKNOWN: 7
 - Warnings:
 - none
 
 ### evidence
 - Ready: True
-- Examples: 18
+- Examples: 42
 - Duplicates: 0
 - Invalid NER spans: 0
 - Dominant label fraction: 0.167
 - Labels:
-- 0: 3
-- 1: 3
-- 2: 3
-- 3: 3
-- 4: 3
-- 5: 3
+- 0: 7
+- 1: 7
+- 2: 7
+- 3: 7
+- 4: 7
+- 5: 7
 - Warnings:
 - none
 
 ### relation
 - Ready: True
-- Examples: 18
+- Examples: 42
 - Duplicates: 0
 - Invalid NER spans: 0
 - Dominant label fraction: 0.333
 - Labels:
-- ASSOCIATED_WITH: 6
-- NO_RELATION: 6
-- PREDICTS: 6
+- ASSOCIATED_WITH: 14
+- NO_RELATION: 14
+- PREDICTS: 14
 - Warnings:
 - none
 

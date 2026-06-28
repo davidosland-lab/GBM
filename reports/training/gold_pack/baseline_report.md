@@ -7,30 +7,38 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 ## Majority-Label Baselines
 ### ner
 - Evaluation file: `data\training\gold_pack\annotation_splits\ner_test.jsonl`
-- Examples: 4
-- Majority label: PATHWAY
-- Majority accuracy: 0.250
+- Examples: 10
+- Majority label: CELL_STATE
+- Majority accuracy: 0.300
 - Labels:
-- CELL_TYPE: 1
-- DRUG: 1
-- OUTCOME: 1
+- BIOMARKER: 1
+- CELL_STATE: 3
+- DELIVERY_MODIFIER: 2
+- GENE: 1
 - PATHWAY: 1
+- TRIAL_PHASE: 1
+- UNKNOWN: 1
 
 ### evidence
 - Evaluation file: `data\training\gold_pack\annotation_splits\evidence_test.jsonl`
-- Examples: 2
-- Majority label: 1
-- Majority accuracy: 1.000
+- Examples: 5
+- Majority label: 2
+- Majority accuracy: 0.400
 - Labels:
-- 1: 2
+- 2: 2
+- 3: 1
+- 4: 1
+- 5: 1
 
 ### relation
 - Evaluation file: `data\training\gold_pack\annotation_splits\relation_test.jsonl`
-- Examples: 2
-- Majority label: PREDICTS
-- Majority accuracy: 1.000
+- Examples: 5
+- Majority label: NO_RELATION
+- Majority accuracy: 0.600
 - Labels:
-- PREDICTS: 2
+- ASSOCIATED_WITH: 1
+- NO_RELATION: 3
+- PREDICTS: 1
 
 ## Warnings
 - none

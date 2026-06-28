@@ -7,28 +7,28 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Seed: 13
 
 ## PMIDs
-- test: 1
-- train: 10
-- validation: 1
-
-## Tasks
-### ner
-- Split counts:
 - test: 4
 - train: 28
 - validation: 4
 
+## Tasks
+### ner
+- Split counts:
+- test: 10
+- train: 66
+- validation: 8
+
 ### evidence
 - Split counts:
-- test: 2
-- train: 14
-- validation: 2
+- test: 5
+- train: 33
+- validation: 4
 
 ### relation
 - Split counts:
-- test: 2
-- train: 14
-- validation: 2
+- test: 5
+- train: 33
+- validation: 4
 
 ## Leakage
 - none

@@ -4,8 +4,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Launcher: `launcher_menu.bat`
 - Safe: True
-- Labels: 104
-- Goto commands: 586
+- Labels: 109
+- Goto commands: 616
 - Warnings: 0
 
 ## Missing Required Text

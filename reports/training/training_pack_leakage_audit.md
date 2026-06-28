@@ -4,12 +4,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Packs: evidence, gold, relation
 - Safe: True
-- Warnings: 0
+- Warnings: 3
 
 ## Split PMIDs
-- evidence/evidence/test: PMIDs=1, examples=1
-- evidence/evidence/train: PMIDs=2, examples=2
-- evidence/evidence/validation: PMIDs=1, examples=1
+- evidence/evidence/test: PMIDs=4, examples=5
+- evidence/evidence/train: PMIDs=28, examples=33
+- evidence/evidence/validation: PMIDs=4, examples=4
 - evidence/ner/test: PMIDs=0, examples=0
 - evidence/ner/train: PMIDs=0, examples=0
 - evidence/ner/validation: PMIDs=0, examples=0
@@ -22,21 +22,23 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - relation/ner/test: PMIDs=0, examples=0
 - relation/ner/train: PMIDs=0, examples=0
 - relation/ner/validation: PMIDs=0, examples=0
-- relation/relation/test: PMIDs=0, examples=0
-- relation/relation/train: PMIDs=1, examples=4
-- relation/relation/validation: PMIDs=1, examples=2
-- gold/evidence/test: PMIDs=0, examples=0
-- gold/evidence/train: PMIDs=1, examples=1
-- gold/evidence/validation: PMIDs=0, examples=0
-- gold/ner/test: PMIDs=0, examples=0
-- gold/ner/train: PMIDs=0, examples=0
-- gold/ner/validation: PMIDs=0, examples=0
-- gold/relation/test: PMIDs=0, examples=0
-- gold/relation/train: PMIDs=0, examples=0
-- gold/relation/validation: PMIDs=0, examples=0
+- relation/relation/test: PMIDs=4, examples=5
+- relation/relation/train: PMIDs=28, examples=33
+- relation/relation/validation: PMIDs=4, examples=4
+- gold/evidence/test: PMIDs=4, examples=5
+- gold/evidence/train: PMIDs=28, examples=33
+- gold/evidence/validation: PMIDs=4, examples=4
+- gold/ner/test: PMIDs=4, examples=10
+- gold/ner/train: PMIDs=28, examples=66
+- gold/ner/validation: PMIDs=4, examples=8
+- gold/relation/test: PMIDs=4, examples=5
+- gold/relation/train: PMIDs=28, examples=33
+- gold/relation/validation: PMIDs=4, examples=4
 
 ## Within-Pack Warnings
 - none
 
 ## Cross-Pack Warnings
-- none
+- evidence/gold: 36 shared PMID(s): 15758010, 23209033, 26109046, 28967586, 29380516
+- evidence/relation: 36 shared PMID(s): 15758010, 23209033, 26109046, 28967586, 29380516
+- gold/relation: 36 shared PMID(s): 15758010, 23209033, 26109046, 28967586, 29380516

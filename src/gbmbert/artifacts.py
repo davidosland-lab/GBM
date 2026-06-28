@@ -405,8 +405,16 @@ def _artifact_type_for_path(path: Path) -> str:
         return "training_label_drift_report"
     if "curated_fixture_import" in name:
         return "curated_fixture_import_report"
+    if "curated_provenance_diff" in name:
+        return "curated_provenance_diff_report"
+    if "governance_detail_links" in name:
+        return "governance_detail_links_report"
+    if "governance_detail_contract" in name:
+        return "governance_detail_contract_report"
     if "gold_pack_promotion_review" in name:
         return "gold_pack_promotion_review"
+    if "gold_pack_promotion_plan" in name:
+        return "gold_pack_promotion_plan"
     if "training_provenance_audit" in name:
         return "training_provenance_audit_report"
     if "training_readiness_snapshot" in name:
@@ -477,6 +485,8 @@ def _artifact_type_for_path(path: Path) -> str:
         return "scope_drift_report"
     if "ci_report_summary" in name:
         return "ci_report_summary"
+    if "ci_summary_contract" in name:
+        return "ci_summary_contract_report"
     if "platform_regression" in name:
         return "platform_regression_report"
     if "local_verification" in name:

@@ -197,6 +197,7 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "Training config suite": base / "reports/training/training_config_suite_review.md",
         "Training label drift": base / "reports/training/training_label_drift.md",
         "Curated fixture import": base / "reports/training/curated_fixture_import.md",
+        "Curated provenance diff": base / "reports/training/curated_provenance_diff.md",
         "Gold-pack promotion review": base / "reports/training/gold_pack/gold_pack_promotion_review.md",
         "Launcher menu check": base / "reports/platform_regression/launcher_menu_check.md",
         "Model registry audit": base / "reports/training/model_registry_audit.md",
@@ -214,6 +215,7 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
         "Training config suite": base / "reports/training/training_config_suite_review.json",
         "Training label drift": base / "reports/training/training_label_drift.json",
         "Curated fixture import": base / "reports/training/curated_fixture_import.json",
+        "Curated provenance diff": base / "reports/training/curated_provenance_diff.json",
         "Gold-pack promotion review": base / "reports/training/gold_pack/gold_pack_promotion_review.json",
         "Launcher menu check": base / "reports/platform_regression/launcher_menu_check.json",
         "Model registry audit": base / "reports/training/model_registry_audit.json",
@@ -261,9 +263,11 @@ def training_artifacts_dashboard_context(root: str | Path = ".") -> dict[str, ob
     launcher_menu_safe = payloads.get("Launcher menu check", {}).get("safe") if isinstance(payloads.get("Launcher menu check"), dict) else None
     curated_fixture_safe = payloads.get("Curated fixture import", {}).get("safe") if isinstance(payloads.get("Curated fixture import"), dict) else None
     gold_pack_promotable = payloads.get("Gold-pack promotion review", {}).get("promotable") if isinstance(payloads.get("Gold-pack promotion review"), dict) else None
+    governance_details = _training_governance_details(markdown_paths, json_paths, payloads)
     return {
         "reports": reports,
         "payloads": payloads,
+        "governance_report_details": governance_details,
         "available_report_count": sum(1 for item in reports if item["exists"]),
         "ready_pack_count": ready_packs,
         "registry_entry_count": registry_entries,
@@ -298,6 +302,9 @@ def render_training_artifacts_page(st: object) -> None:
         st.metric("Registry entries", context["registry_entry_count"])
     if context["registry_audit_passed"] is not None:
         st.metric("Registry audit", "passed" if context["registry_audit_passed"] else "findings")
+    if context.get("governance_report_details"):
+        st.subheader("Governance Details")
+        st.table(context["governance_report_details"])
     for report in context["reports"]:
         if report["exists"]:
             st.subheader(report["title"])
@@ -311,6 +318,48 @@ def render_training_artifacts_page(st: object) -> None:
             "gbmbert-audit-model-registry",
             language="powershell",
         )
+
+
+def _training_governance_details(
+    markdown_paths: dict[str, Path],
+    json_paths: dict[str, Path],
+    payloads: dict[str, object],
+) -> list[dict[str, object]]:
+    details: list[dict[str, object]] = []
+    for title in sorted(set(markdown_paths) | set(json_paths)):
+        markdown_path = markdown_paths.get(title)
+        json_path = json_paths.get(title)
+        payload = payloads.get(title)
+        details.append(
+            {
+                "title": title,
+                "status": _governance_payload_status(payload),
+                "markdown_path": str(markdown_path) if markdown_path else "",
+                "markdown_exists": bool(markdown_path and markdown_path.exists()),
+                "json_path": str(json_path) if json_path else "",
+                "json_exists": bool(json_path and json_path.exists()),
+            }
+        )
+    return details
+
+
+def _governance_payload_status(payload: object) -> str:
+    if not isinstance(payload, dict):
+        return "missing"
+    if payload.get("error"):
+        return "invalid"
+    for key, passed, failed in (
+        ("safe", "safe", "findings"),
+        ("passed", "passed", "findings"),
+        ("valid", "valid", "needs review"),
+        ("ready", "ready", "not ready"),
+        ("promotable", "promotion-ready", "blocked"),
+    ):
+        if key in payload:
+            return passed if payload.get(key) else failed
+    if payload:
+        return "available"
+    return "missing"
 
 
 def render_app() -> None:

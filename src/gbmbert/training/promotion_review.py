@@ -29,6 +29,9 @@ class GoldPackPromotionReview:
     task_counts: dict[str, int]
     label_counts: dict[str, dict[str, int]]
     source_pmid_count: int
+    task_example_deltas: dict[str, int]
+    label_example_deltas: dict[str, dict[str, int]]
+    source_pmid_delta: int
     blockers: list[str]
     warning: str = RESEARCH_WARNING
 
@@ -58,6 +61,8 @@ def review_gold_pack_promotion(
     pack_ready = bool(payload.get("ready"))
     task_counts: dict[str, int] = {}
     label_counts: dict[str, dict[str, int]] = {}
+    task_example_deltas: dict[str, int] = {}
+    label_example_deltas: dict[str, dict[str, int]] = {}
     source_pmids: set[str] = set()
     blockers: list[str] = []
 
@@ -69,6 +74,7 @@ def review_gold_pack_promotion(
     for task in DEFAULT_REQUIRED_TASKS:
         rows = _read_task_rows(split_dir, task)
         task_counts[task] = len(rows)
+        task_example_deltas[task] = max(0, min_examples_per_task - len(rows))
         labels: dict[str, int] = {}
         for row in rows:
             raw_label = row.get("label")
@@ -79,6 +85,11 @@ def review_gold_pack_promotion(
             if pmid:
                 source_pmids.add(pmid)
         label_counts[task] = dict(sorted(labels.items()))
+        label_example_deltas[task] = {
+            label: max(0, min_examples_per_label - count)
+            for label, count in sorted(labels.items())
+            if count < min_examples_per_label
+        }
         if len(rows) < min_examples_per_task:
             blockers.append(f"{task} has {len(rows)} examples; needs at least {min_examples_per_task}")
         low_labels = [f"{label}={count}" for label, count in sorted(labels.items()) if count < min_examples_per_label]
@@ -89,6 +100,7 @@ def review_gold_pack_promotion(
 
     if len(source_pmids) < min_source_pmids:
         blockers.append(f"source PMID count is {len(source_pmids)}; needs at least {min_source_pmids}")
+    source_pmid_delta = max(0, min_source_pmids - len(source_pmids))
 
     return GoldPackPromotionReview(
         gold_pack_report=str(report_path),
@@ -101,6 +113,9 @@ def review_gold_pack_promotion(
         task_counts=task_counts,
         label_counts=label_counts,
         source_pmid_count=len(source_pmids),
+        task_example_deltas=task_example_deltas,
+        label_example_deltas=label_example_deltas,
+        source_pmid_delta=source_pmid_delta,
         blockers=blockers,
     )
 
@@ -133,15 +148,30 @@ def format_gold_pack_promotion_review_markdown(report: GoldPackPromotionReview) 
         f"- Minimum examples per label: {report.min_examples_per_label}",
         f"- Minimum source PMIDs: {report.min_source_pmids}",
         f"- Observed source PMIDs: {report.source_pmid_count}",
+        f"- Additional source PMIDs needed: {report.source_pmid_delta}",
         "",
         "## Task Counts",
         *([f"- {task}: {count}" for task, count in sorted(report.task_counts.items())] or ["- none"]),
+        "",
+        "## Promotion Deltas",
+        *(
+            [
+                f"- {task}: {delta} additional example(s) needed"
+                for task, delta in sorted(report.task_example_deltas.items())
+            ]
+            or ["- none"]
+        ),
         "",
         "## Label Counts",
     ]
     for task, counts in sorted(report.label_counts.items()):
         lines.append(f"### {task}")
         lines.extend([f"- {label}: {count}" for label, count in sorted(counts.items())] or ["- none"])
+        lines.append("")
+    lines.append("## Label Deltas")
+    for task, counts in sorted(report.label_example_deltas.items()):
+        lines.append(f"### {task}")
+        lines.extend([f"- {label}: {delta} additional example(s) needed" for label, delta in sorted(counts.items())] or ["- none"])
         lines.append("")
     lines.extend(["## Blockers", *([f"- {blocker}" for blocker in report.blockers] if report.blockers else ["- none"])])
     return "\n".join(lines).rstrip() + "\n"

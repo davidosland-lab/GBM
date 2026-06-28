@@ -3,34 +3,40 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Dataset directory: `data\training\evidence_pack\annotation_splits`
-- Total examples: 18
+- Total examples: 42
 
 ## Files
 ### evidence_test.jsonl
-- Examples: 2
+- Examples: 5
 - Missing text: 0
-- SHA256: `119042211944856E9BB217AF2AA2110AB90D5ECA34358E26F80E8A9D7ECBCFC7`
+- SHA256: `BB1733D975C9CD8C4A5239FD533D509484039F039187376CBEB9CC5DC68D21FE`
 - Labels:
-- 1: 2
+- 2: 2
+- 3: 1
+- 4: 1
+- 5: 1
 
 ### evidence_train.jsonl
-- Examples: 14
+- Examples: 33
 - Missing text: 0
-- SHA256: `14C79F64E380B9718580B0516E76065533C4D01F427BDA675B15249B537F01BB`
+- SHA256: `EEA38102552DE390182908E044A428F7EE55AA19F02C2E33B899C9E086CDF72A`
 - Labels:
-- 0: 3
-- 1: 1
-- 2: 3
-- 3: 3
-- 4: 1
-- 5: 3
+- 0: 6
+- 1: 6
+- 2: 4
+- 3: 6
+- 4: 5
+- 5: 6
 
 ### evidence_validation.jsonl
-- Examples: 2
+- Examples: 4
 - Missing text: 0
-- SHA256: `9D1212176F49C0F2C6CA4FB67B4DBAC9D38CB90CCBBA0B06193AD504E2B92EEB`
+- SHA256: `9F1E8D9A30A82B8A962D60A23EEC390AA09E991D40263AD7D68CE42E6A3A5F77`
 - Labels:
-- 4: 2
+- 0: 1
+- 1: 1
+- 2: 1
+- 4: 1
 
 ### ner_test.jsonl
 - Examples: 0

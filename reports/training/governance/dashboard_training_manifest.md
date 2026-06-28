@@ -2,7 +2,7 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Available reports: 12
+- Available reports: 13
 - Ready packs: 3
 - Registry entries: 1
 - Relation config status: passed

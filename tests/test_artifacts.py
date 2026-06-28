@@ -104,7 +104,11 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     (report_dir / "model_registry_remediation_plan.md").write_text("# Plan\n", encoding="utf-8")
     (report_dir / "training_label_drift.md").write_text("# Drift\n", encoding="utf-8")
     (report_dir / "curated_fixture_import.md").write_text("# Import\n", encoding="utf-8")
+    (report_dir / "curated_provenance_diff.md").write_text("# Diff\n", encoding="utf-8")
+    (report_dir / "governance_detail_links.md").write_text("# Details\n", encoding="utf-8")
+    (report_dir / "governance_detail_contract.md").write_text("# Contract\n", encoding="utf-8")
     (report_dir / "gold_pack_promotion_review.md").write_text("# Promotion\n", encoding="utf-8")
+    (report_dir / "gold_pack_promotion_plan.md").write_text("# Plan\n", encoding="utf-8")
     (report_dir / "training_provenance_audit.md").write_text("# Provenance\n", encoding="utf-8")
     (report_dir / "training_readiness_snapshot.md").write_text("# Snapshot\n", encoding="utf-8")
     (report_dir / "dashboard_training_manifest.md").write_text("# Dashboard\n", encoding="utf-8")
@@ -146,6 +150,7 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     (review_report_dir / "artifact_policy.md").write_text("# Artifact Policy\n", encoding="utf-8")
     (review_report_dir / "launcher_menu_check.md").write_text("# Launcher\n", encoding="utf-8")
     (review_report_dir / "ci_report_summary.md").write_text("# CI Summary\n", encoding="utf-8")
+    (review_report_dir / "ci_summary_contract.md").write_text("# CI Contract\n", encoding="utf-8")
     (review_report_dir / "adjudication_report.md").write_text("# Adjudication\n", encoding="utf-8")
     (review_report_dir / "curation_regression_pack.md").write_text("# Regression\n", encoding="utf-8")
     (review_report_dir / "gold_seed_manifest.md").write_text("# Gold\n", encoding="utf-8")
@@ -194,7 +199,11 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     assert by_name["model_registry_remediation_plan.md"].artifact_type == "model_registry_remediation_plan"
     assert by_name["training_label_drift.md"].artifact_type == "training_label_drift_report"
     assert by_name["curated_fixture_import.md"].artifact_type == "curated_fixture_import_report"
+    assert by_name["curated_provenance_diff.md"].artifact_type == "curated_provenance_diff_report"
+    assert by_name["governance_detail_links.md"].artifact_type == "governance_detail_links_report"
+    assert by_name["governance_detail_contract.md"].artifact_type == "governance_detail_contract_report"
     assert by_name["gold_pack_promotion_review.md"].artifact_type == "gold_pack_promotion_review"
+    assert by_name["gold_pack_promotion_plan.md"].artifact_type == "gold_pack_promotion_plan"
     assert by_name["training_provenance_audit.md"].artifact_type == "training_provenance_audit_report"
     assert by_name["training_readiness_snapshot.md"].artifact_type == "training_readiness_snapshot"
     assert by_name["dashboard_training_manifest.md"].artifact_type == "dashboard_training_manifest"
@@ -202,6 +211,7 @@ def test_artifact_index_classifies_training_artifacts(tmp_path: Path) -> None:
     assert by_name["evidence_training_pack.md"].artifact_type == "evidence_training_pack_report"
     assert by_name["training_config_review.md"].artifact_type == "training_config_review_report"
     assert by_name["ci_report_summary.md"].artifact_type == "ci_report_summary"
+    assert by_name["ci_summary_contract.md"].artifact_type == "ci_summary_contract_report"
     assert by_name["relation_negatives.jsonl"].artifact_type == "relation_negative_dataset"
     assert by_name["relation_training_pack.jsonl"].artifact_type == "relation_training_dataset"
     assert by_name["active_learning_candidates.jsonl"].artifact_type == "active_learning_candidates"

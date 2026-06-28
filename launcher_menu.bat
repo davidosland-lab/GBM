@@ -129,6 +129,11 @@ if /I "%choice%"=="16BJ" goto artifact_policy_check
 if /I "%choice%"=="16BK" goto launcher_menu_check
 if /I "%choice%"=="16BL" goto curated_fixture_import
 if /I "%choice%"=="16BM" goto gold_pack_promotion_review
+if /I "%choice%"=="16BN" goto curated_provenance_diff
+if /I "%choice%"=="16BO" goto promotion_planning_report
+if /I "%choice%"=="16BP" goto governance_detail_export
+if /I "%choice%"=="16BQ" goto ci_summary_contract
+if /I "%choice%"=="16BR" goto curated_fixture_import_multibatch
 if "%choice%"=="17" goto run_explorer_sample
 if /I "%choice%"=="17A" goto run_explorer_artifact
 if /I "%choice%"=="17B" goto run_explorer_baseline
@@ -314,6 +319,11 @@ echo 16BH. Run strict training governance audit
 echo 16BI. Run canonical local verification
 echo 16BL. Import curated training fixture
 echo 16BM. Review gold-pack promotion thresholds
+echo 16BN. Diff curated batch provenance
+echo 16BO. Plan gold-pack promotion curation batches
+echo 16BP. Export governance detail links
+echo 16BQ. Check CI summary artifact contract
+echo 16BR. Import all curated rounds (multi-batch)
 echo T. Advanced training commands
 echo M. Main menu
 echo Q. Exit
@@ -332,6 +342,11 @@ if /I "%choice%"=="16BH" goto strict_training_governance
 if /I "%choice%"=="16BI" goto local_verification
 if /I "%choice%"=="16BL" goto curated_fixture_import
 if /I "%choice%"=="16BM" goto gold_pack_promotion_review
+if /I "%choice%"=="16BN" goto curated_provenance_diff
+if /I "%choice%"=="16BO" goto promotion_planning_report
+if /I "%choice%"=="16BP" goto governance_detail_export
+if /I "%choice%"=="16BQ" goto ci_summary_contract
+if /I "%choice%"=="16BR" goto curated_fixture_import_multibatch
 if /I "%choice%"=="T" goto advanced_training_menu
 if /I "%choice%"=="M" goto menu
 if /I "%choice%"=="Q" goto end
@@ -430,7 +445,7 @@ echo Setup: 1, 1R, 2, 3, 4, 5, 6
 echo Pipeline: 7, 8, 9, 12, 13, 14, 14A, 16B, 16AS, 16AT
 echo Review: 10, 11, 11R, 11S, 11C, 11D
 echo Curation: 16O-16AG, plus 16AH-16AM for run/batch operations
-echo Training: 16C-16N and 16AQ-16BM
+echo Training: 16C-16N and 16AQ-16BQ
 echo Verification: 15, 16, 16AO, 16AP, 16BI, 16BJ, 16BK
 echo Explorer: 17, 17A, 17B, 18
 echo.
@@ -2194,6 +2209,34 @@ echo Curated fixture import check complete.
 pause
 goto menu
 
+:curated_fixture_import_multibatch
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Importing all curated expansion rounds (multi-batch)...
+"%VENV_DIR%\Scripts\gbmbert-import-curated-training-fixture.exe" --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round3.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round4.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round5.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round6.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round3.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round4.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round5.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round6.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round3.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round4.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round5.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round6.jsonl --output-dir data\training\curated_import --no-copy --markdown-output reports\training\curated_fixture_import.md --json-output reports\training\curated_fixture_import.json
+if errorlevel 1 goto command_failed
+echo.
+echo Multi-batch curated fixture import complete.
+pause
+goto menu
+
+:curated_provenance_diff
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Diffing curated batch provenance...
+"%VENV_DIR%\Scripts\gbmbert-curated-provenance-diff.exe" --evidence-jsonl data\training\curated_expansion\evidence_full_label.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round2.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round3.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round4.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round5.jsonl --evidence-jsonl data\training\curated_expansion\evidence_round6.jsonl --entity-jsonl data\training\curated_expansion\gold_entities.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round2.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round3.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round4.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round5.jsonl --entity-jsonl data\training\curated_expansion\gold_entities_round6.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round2.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round3.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round4.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round5.jsonl --reviewed-queue-jsonl data\training\curated_expansion\gold_reviewed_queue_round6.jsonl --markdown-output reports\training\curated_provenance_diff.md --json-output reports\training\curated_provenance_diff.json --allow-findings
+if errorlevel 1 goto command_failed
+echo.
+echo Curated provenance diff complete.
+pause
+goto menu
+
 :gold_pack_promotion_review
 call :ensure_venv
 if errorlevel 1 goto menu
@@ -2205,6 +2248,48 @@ echo Reviewing gold-pack promotion thresholds...
 if errorlevel 1 goto command_failed
 echo.
 echo Gold-pack promotion review complete.
+pause
+goto menu
+
+:promotion_planning_report
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Planning scaffold-only gold-pack promotion curation batches...
+"%VENV_DIR%\Scripts\gbmbert-plan-gold-pack-promotion.exe" --markdown-output reports\training\gold_pack\gold_pack_promotion_plan.md --json-output reports\training\gold_pack\gold_pack_promotion_plan.json
+if errorlevel 1 goto command_failed
+echo.
+echo Promotion planning report complete.
+pause
+goto menu
+
+:governance_detail_export
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Exporting governance detail links...
+"%VENV_DIR%\Scripts\gbmbert-export-governance-detail-links.exe" --markdown-output reports\training\governance_detail_links.md --json-output reports\training\governance_detail_links.json
+if errorlevel 1 goto command_failed
+echo.
+echo Governance detail export complete.
+pause
+goto menu
+
+:ci_summary_contract
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Checking CI summary artifact contract...
+"%VENV_DIR%\Scripts\gbmbert-check-ci-summary-contract.exe" --summary reports\platform_regression\ci_report_summary.md --markdown-output reports\platform_regression\ci_summary_contract.md --json-output reports\platform_regression\ci_summary_contract.json
+if errorlevel 1 goto command_failed
+echo.
+echo CI summary contract check complete.
 pause
 goto menu
 

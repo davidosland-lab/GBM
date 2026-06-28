@@ -3,13 +3,28 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Output directory: `reports\training\governance_strict\bundle`
-- Artifacts: 261
-- Total bytes: 800856
+- Artifacts: 285
+- Total bytes: 1317884
 
 ## Artifacts
 - `data\training\curated_expansion\evidence_full_label.jsonl` -> `data\training\curated_expansion\evidence_full_label.jsonl` (evidence_claims)
+- `data\training\curated_expansion\evidence_round2.jsonl` -> `data\training\curated_expansion\evidence_round2.jsonl` (evidence_claims)
+- `data\training\curated_expansion\evidence_round3.jsonl` -> `data\training\curated_expansion\evidence_round3.jsonl` (evidence_claims)
+- `data\training\curated_expansion\evidence_round4.jsonl` -> `data\training\curated_expansion\evidence_round4.jsonl` (evidence_claims)
+- `data\training\curated_expansion\evidence_round5.jsonl` -> `data\training\curated_expansion\evidence_round5.jsonl` (evidence_claims)
 - `data\training\curated_expansion\gold_entities.jsonl` -> `data\training\curated_expansion\gold_entities.jsonl` (entities)
+- `data\training\curated_expansion\gold_entities_round2.jsonl` -> `data\training\curated_expansion\gold_entities_round2.jsonl` (entities)
+- `data\training\curated_expansion\gold_entities_round3.jsonl` -> `data\training\curated_expansion\gold_entities_round3.jsonl` (entities)
+- `data\training\curated_expansion\gold_entities_round4.jsonl` -> `data\training\curated_expansion\gold_entities_round4.jsonl` (entities)
+- `data\training\curated_expansion\gold_entities_round5.jsonl` -> `data\training\curated_expansion\gold_entities_round5.jsonl` (entities)
 - `data\training\curated_expansion\gold_reviewed_queue.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue.jsonl` (reviewed_queue)
+- `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round2.jsonl` (reviewed_queue)
+- `data\training\curated_expansion\gold_reviewed_queue_round3.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round3.jsonl` (reviewed_queue)
+- `data\training\curated_expansion\gold_reviewed_queue_round4.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round4.jsonl` (reviewed_queue)
+- `data\training\curated_expansion\gold_reviewed_queue_round5.jsonl` -> `data\training\curated_expansion\gold_reviewed_queue_round5.jsonl` (reviewed_queue)
+- `data\training\curated_import\combined_entities.jsonl` -> `data\training\curated_import\combined_entities.jsonl` (entities)
+- `data\training\curated_import\combined_evidence.jsonl` -> `data\training\curated_import\combined_evidence.jsonl` (evidence_claims)
+- `data\training\curated_import\combined_reviewed_queue.jsonl` -> `data\training\curated_import\combined_reviewed_queue.jsonl` (reviewed_queue)
 - `data\training\evidence_pack\annotation_dataset\evidence.jsonl` -> `data\training\evidence_pack\annotation_dataset\evidence.jsonl` (evidence_claims)
 - `data\training\evidence_pack\annotation_dataset\ner.jsonl` -> `data\training\evidence_pack\annotation_dataset\ner.jsonl` (annotation_dataset)
 - `data\training\evidence_pack\annotation_dataset\relations.jsonl` -> `data\training\evidence_pack\annotation_dataset\relations.jsonl` (annotation_dataset)
@@ -123,6 +138,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `data\training\relation_training_pack.jsonl` -> `data\training\relation_training_pack.jsonl` (relation_training_dataset)
 - `reports\training\curated_fixture_import.json` -> `reports\training\curated_fixture_import.json` (curated_fixture_import_report)
 - `reports\training\curated_fixture_import.md` -> `reports\training\curated_fixture_import.md` (curated_fixture_import_report)
+- `reports\training\curated_provenance_diff.json` -> `reports\training\curated_provenance_diff.json` (curated_provenance_diff_report)
+- `reports\training\curated_provenance_diff.md` -> `reports\training\curated_provenance_diff.md` (curated_provenance_diff_report)
 - `reports\training\dashboard_training_manifest.json` -> `reports\training\dashboard_training_manifest.json` (dashboard_training_manifest)
 - `reports\training\dashboard_training_manifest.md` -> `reports\training\dashboard_training_manifest.md` (dashboard_training_manifest)
 - `reports\training\evidence_label_repair.json` -> `reports\training\evidence_label_repair.json` (evidence_label_repair_report)
@@ -156,9 +173,12 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\gold_pack\evidence_label_repair.md` -> `reports\training\gold_pack\evidence_label_repair.md` (evidence_label_repair_report)
 - `reports\training\gold_pack\gold_pack_expansion_plan.json` -> `reports\training\gold_pack\gold_pack_expansion_plan.json` (json_report)
 - `reports\training\gold_pack\gold_pack_expansion_plan.md` -> `reports\training\gold_pack\gold_pack_expansion_plan.md` (markdown_report)
+- `reports\training\gold_pack\gold_pack_promotion_plan.json` -> `reports\training\gold_pack\gold_pack_promotion_plan.json` (gold_pack_promotion_plan)
+- `reports\training\gold_pack\gold_pack_promotion_plan.md` -> `reports\training\gold_pack\gold_pack_promotion_plan.md` (gold_pack_promotion_plan)
 - `reports\training\gold_pack\gold_pack_promotion_review.json` -> `reports\training\gold_pack\gold_pack_promotion_review.json` (gold_pack_promotion_review)
 - `reports\training\gold_pack\gold_pack_promotion_review.md` -> `reports\training\gold_pack\gold_pack_promotion_review.md` (gold_pack_promotion_review)
 - `reports\training\gold_pack\gold_seed_manifest.json` -> `reports\training\gold_pack\gold_seed_manifest.json` (gold_seed_manifest)
+- `reports\training\gold_pack\gold_seed_manifest.md` -> `reports\training\gold_pack\gold_seed_manifest.md` (gold_seed_manifest)
 - `reports\training\gold_pack\gold_training_pack.json` -> `reports\training\gold_pack\gold_training_pack.json` (gold_training_pack_report)
 - `reports\training\gold_pack\gold_training_pack.md` -> `reports\training\gold_pack\gold_training_pack.md` (gold_training_pack_report)
 - `reports\training\gold_pack\pmid_split_manifest.json` -> `reports\training\gold_pack\pmid_split_manifest.json` (pmid_split_manifest)
@@ -193,6 +213,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `reports\training\governance\training_provenance_audit.md` -> `reports\training\governance\training_provenance_audit.md` (training_provenance_audit_report)
 - `reports\training\governance\training_readiness_snapshot.json` -> `reports\training\governance\training_readiness_snapshot.json` (training_readiness_snapshot)
 - `reports\training\governance\training_readiness_snapshot.md` -> `reports\training\governance\training_readiness_snapshot.md` (training_readiness_snapshot)
+- `reports\training\governance_detail_contract.json` -> `reports\training\governance_detail_contract.json` (governance_detail_contract_report)
+- `reports\training\governance_detail_contract.md` -> `reports\training\governance_detail_contract.md` (governance_detail_contract_report)
+- `reports\training\governance_detail_links.json` -> `reports\training\governance_detail_links.json` (governance_detail_links_report)
+- `reports\training\governance_detail_links.md` -> `reports\training\governance_detail_links.md` (governance_detail_links_report)
 - `reports\training\governance_strict\bundle\training_artifact_bundle.json` -> `reports\training\governance_strict\bundle\training_artifact_bundle.json` (training_artifact_bundle_manifest)
 - `reports\training\governance_strict\bundle\training_artifact_bundle.md` -> `reports\training\governance_strict\bundle\training_artifact_bundle.md` (training_artifact_bundle_manifest)
 - `reports\training\governance_strict\dashboard_training_manifest.json` -> `reports\training\governance_strict\dashboard_training_manifest.json` (dashboard_training_manifest)
