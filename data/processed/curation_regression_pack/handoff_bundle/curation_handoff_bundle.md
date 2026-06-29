@@ -3,7 +3,7 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Bundle dir: `data\processed\curation_regression_pack\handoff_bundle`
-- Created UTC: 2026-06-28T09:52:25.622461+00:00
+- Created UTC: 2026-06-29T03:49:49.678211+00:00
 - Artifacts: 14
 - Copied artifacts: 14
 - Total bytes: 12341

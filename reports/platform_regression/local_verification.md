@@ -2,7 +2,7 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Created UTC: 2026-06-28T09:52:28.785928+00:00
+- Created UTC: 2026-06-29T03:49:53.005593+00:00
 - Passed: True
 - Steps: 8/8 passed
 
@@ -11,7 +11,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\python.exe -m pytest -q`
-- Detail: ........................................................................ [ 60%] | ........................................................................ [ 90%] | ......................                                                   [100%] | 238 passed in 13.38s
+- Detail: ........................................................................ [ 59%] | ........................................................................ [ 88%] | ............................                                             [100%] | 244 passed in 19.90s
 
 ### pip_check
 - Status: pass
@@ -47,7 +47,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Status: pass
 - Return code: 0
 - Command: `C:\Users\david\GBM\.venv\Scripts\gbmbert-check-artifact-policy.exe --markdown-output reports\platform_regression\artifact_policy.md --json-output reports\platform_regression\artifact_policy.json`
-- Detail: - Tracked paths checked: 654 | - Findings: 0 | ## Findings | - none
+- Detail: - Tracked paths checked: 655 | - Findings: 0 | ## Findings | - none
 
 ### artifact_index
 - Status: pass

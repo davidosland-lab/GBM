@@ -321,6 +321,13 @@ PR159 Promotion Planning Coverage Report:
 - The gold-pack promotion planning report now includes a per-task `task_coverage` view (label-floor coverage percentage of the task delta vs. remaining raw task-volume percentage, capped at 100%) plus an `overall_label_floor_coverage_pct` summary, surfaced in both the JSON and the Markdown.
 - Builds directly on the PR154 label-balance relationship; stays scaffold-only and research-use-only (it does not promote a dataset or claim a validated GBM-BERT model exists).
 
+PR161-real Real-Annotation Review-Batch Helper:
+
+- Added `src\gbmbert\training\review_batch_prep.py` with two console scripts. `gbmbert-prep-review-batch` ingests real PubMed abstracts (optionally fetching via `--query-pack`), runs the offline lexicon literature pipeline (Hugging Face NER is unreachable in this environment; lexicon mode is the validated substitute), exports a review queue, and writes a human-review reviewed-queue skeleton + entities + INSTRUCTIONS under a staging dir.
+- `gbmbert-finalize-review-batch` validates the human-reviewed batch and promotes the three round files into `data\training\curated_expansion` ONLY when no row is still `pending`; only accepted rows enter the corpus, and the evidence_round{N} labels are derived from the human-confirmed (or corrected) evidence tiers. `gbmbert-rebuild-curated-rounds` then discovers the new round.
+- Dry-run validated end-to-end on 39 real GBM abstracts: 46 review items staged (39 evidence claims + 7 relations), finalize correctly refuses an all-`pending` batch. No unreviewed round was committed — round 8 is left for real human annotation.
+- Scope: observe-only, research-use-only. Entity spans are lexicon-suggested (not span-reviewed); the human-reviewed signal is the evidence tiers and relations.
+
 ## Latest Verification
 
 Last verified from `C:\Users\david\GBM` using the project `.venv`:
@@ -341,7 +348,7 @@ Last verified from `C:\Users\david\GBM` using the project `.venv`:
 
 Results:
 
-- Tests: `238 passed`
+- Tests: `244 passed`
 - `pip check`: no broken requirements
 - Scope drift monitor: safe, 0 findings
 - Platform regression: passed
@@ -403,6 +410,20 @@ promotion review/planning, governance detail). It replaces the multi-step
 sequence under "PR91-94 smoke commands" plus the curated import/provenance/
 promotion commands below. Run `gbmbert-verify-local` afterward for platform
 checks and the CI summary.
+
+Prep + finalize a REAL reviewed annotation round (PR161-real):
+
+```powershell
+# 1. Build a human-review skeleton from real abstracts (offline lexicon mode).
+#    Add --query-pack pubmed_gbm_v1 to fetch the abstracts first.
+.\.venv\Scripts\gbmbert-prep-review-batch.exe --round 8 --pubmed-jsonl data\research\round8_pubmed.jsonl --reviewer david
+# 2. Annotate data\research\review_batches\round8\gold_reviewed_queue_round8.jsonl by hand
+#    (set each row accepted/rejected; confirm/correct evidence_tier or relation_type).
+# 3. Promote into the curated rounds (only succeeds when no row is still 'pending').
+.\.venv\Scripts\gbmbert-finalize-review-batch.exe --round 8
+# 4. Integrate.
+.\.venv\Scripts\gbmbert-rebuild-curated-rounds.exe
+```
 
 Run artifact policy directly:
 
@@ -527,6 +548,7 @@ Knowledge Graph Explorer:
 - `src\gbmbert\training\promotion_review.py`
 - `src\gbmbert\training\promotion_planning.py`
 - `src\gbmbert\training\curated_round_rebuild.py`
+- `src\gbmbert\training\review_batch_prep.py`
 - `src\gbmbert\training\governance_detail_export.py`
 - `src\gbmbert\knowledge_graph\explorer.py`
 - `src\gbmbert\knowledge_graph\inspect.py`
@@ -535,10 +557,15 @@ Knowledge Graph Explorer:
 
 ## Recommended Next PR Series
 
-PR161 Eighth Curated Expansion Round:
+PR161 Eighth Curated Round — prefer REAL annotations:
 
-- Add an eighth reviewed fixture batch (six new source PMIDs) toward promotion thresholds (target 54 evidence / 108 NER / 54 relation, 48 source PMIDs).
-- Add the round-eight trio under `data\training\curated_expansion`, then regenerate everything with `gbmbert-rebuild-curated-rounds` (PR158) followed by `gbmbert-verify-local` and the CI summary. No multi-step chain or launcher edits needed for the orchestrator path.
+- Round 8 is the point to switch from synthetic fixtures to a real reviewed batch using the PR161-real helper: `gbmbert-prep-review-batch --round 8 --pubmed-jsonl <abstracts> --reviewer <name>` (or add `--query-pack pubmed_gbm_v1` to fetch), annotate the staged reviewed-queue skeleton (set each row accepted/rejected, confirm/correct tier or relation), then `gbmbert-finalize-review-batch --round 8` and `gbmbert-rebuild-curated-rounds`.
+- A real batch of ~25 reviewed claims across ~8 new PMIDs moves the corpus toward thresholds with authentic, human-judged labels rather than templated rows.
+
+PR162 Review-Batch Launcher + Entity Review:
+
+- Optional: add launcher menu entries for the prep/finalize helper, and extend the review loop to cover entity spans (currently lexicon-suggested, not span-reviewed).
+- Keep everything observe-only and research-use-only.
 
 PR160 Rebuild Orchestrator In Verify-Local / CI:
 

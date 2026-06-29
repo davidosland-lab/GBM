@@ -1349,14 +1349,14 @@
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json",
       "byte_count": 103139,
-      "sha256": "030D64446F6DBE0CB9A1C8EB96F6D2CE54748C2D44FCF1565583AE768D117CCF",
+      "sha256": "AA5D568BE1D7AA5BCADA3E221667FD0D21315D6CE2AC782E6A4C19C082FEDD7A",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.json"
     },
     {
       "artifact_type": "training_artifact_bundle_manifest",
       "bundled_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md",
       "byte_count": 45161,
-      "sha256": "16AE4C7E626974881CB62F1E156375992E8D023CAF44634D7A74A134C6717923",
+      "sha256": "5688207BA83F67DC3B5387CED92C8D60F378000FD2319EAB68CEEDFD4A23F49E",
       "source_path": "reports\\training\\governance\\bundle\\training_artifact_bundle.md"
     },
     {
@@ -1489,14 +1489,14 @@
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.json",
       "byte_count": 476,
-      "sha256": "894C1C67687D14505E3EBDCCF7FD9741CC8D4416DD30550075E77A2126E4A333",
+      "sha256": "D7A99D41ADE55D354D498BBE49CC8D8632F8AE93F92A1B897D7594BA22BB9B1D",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.json"
     },
     {
       "artifact_type": "training_readiness_snapshot",
       "bundled_path": "reports\\training\\governance\\training_readiness_snapshot.md",
       "byte_count": 423,
-      "sha256": "FCA5076F5BA6138D138DFE5D1AA541801E2267F8F99597C1C03AFEB6DFED0D70",
+      "sha256": "F6732C7AA18349ED2E976C1714653E414E4E3B88FF37EB491CBC36F7EC76BAE1",
       "source_path": "reports\\training\\governance\\training_readiness_snapshot.md"
     },
     {

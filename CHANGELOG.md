@@ -4,6 +4,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 ## Unreleased
 
+- Added a real-annotation review-batch helper: `gbmbert-prep-review-batch` turns real PubMed abstracts into a human-review skeleton via the offline lexicon pipeline, and `gbmbert-finalize-review-batch` validates the human-reviewed batch and promotes it into the curated rounds (only when no row is still `pending`, accepted rows only). Observe-only; entity spans are lexicon-suggested while evidence tiers and relations are the human-reviewed signal.
 - Added a task-delta coverage view to the gold-pack promotion planning report: per-task label-floor coverage vs. remaining raw task volume, plus an overall coverage percentage. Scaffold-only and research-use-only.
 - Added a seventh curated local curation round (six new source PMIDs) and rebuilt every report via the one-command orchestrator; the gold pack is now 48 evidence / 96 NER / 48 relation across 42 source PMIDs, still correctly below promotion thresholds.
 - Added `gbmbert-rebuild-curated-rounds` (launcher `16BS`): a single observe-only command that discovers every curated expansion round and regenerates the full report chain (import, provenance diff, gold seed/pack, evidence/relation packs, governance, promotion review/planning, governance detail).

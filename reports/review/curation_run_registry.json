@@ -34,20 +34,20 @@
         "evidence_overlay_diff": "555C894D8D81AA0D51CD726F81BB4EDAB82A170A48A86FCF09BACF1653F9C406",
         "evidence_overlay_graph": "4A17E5F1420D944E85CC9247B8DC3A798FCB2DB87E64683A57D8E560C24B3FFF",
         "evidence_overlay_report": "ACF46B5EE2A5F1410EBBF5EA5D379014B17E439F68AC13959E7BC5C9E35A59F9",
-        "handoff_bundle": "833E0A6D94BD3ABA2AFB6265C8C74806EED2D78AC5125ECF3D99CDB50B43504B",
+        "handoff_bundle": "E7DB6ADA65F4FC19C91D3B92EB3E2E501D5D1FDBD3483ADA198936F59FC85EEA",
         "prediction_quality_report": "89695A2474D76970020F4287BD0911836DA4FC8685B356EF297C1BED43803E78",
         "prediction_review_queue": "EAAAFCA0664F19F4D34E07EB6695674F26E4202A626153C996BA17736821BC66",
         "prediction_review_summary": "9E7FA1B9FE8188ACD1F31E95E48BDFF07B749DF312475BC1295A7F4959872F49",
         "reviewed_prediction_queue": "31A7CD9688CB79C4AC64AA77F00F2894169200CE9CBE63E2F9E7EEDE1654FBFF",
         "workflow_report": "E46F989670F1DF08D09CE00475A1F93995B3554A7C1C1E75D116EBEDF902CFF8"
       },
-      "created_at_utc": "2026-06-28T09:52:25.652524+00:00",
+      "created_at_utc": "2026-06-29T03:49:49.719267+00:00",
       "graph_path": "data\\examples\\graph_records_sample.jsonl",
       "handoff_bundle_path": "data\\processed\\curation_regression_pack\\handoff_bundle\\curation_handoff_bundle.json",
       "overlay_graph_path": "data\\processed\\curation_regression_pack\\evidence_overlay_graph_records.jsonl",
       "predictions_path": "reports\\training\\evidence_smoke_fixture\\sample_graph_predictions.jsonl",
       "reviewed_queue_path": "data\\processed\\curation_regression_pack\\prediction_reviewed_queue.jsonl",
-      "run_id": "curation-175D49E82F1E",
+      "run_id": "curation-A24262FCF5A2",
       "warning_count": 0
     }
   ],
