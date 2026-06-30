@@ -4,7 +4,7 @@ from pathlib import Path
 from gbmbert.annotation.schema import EntityType, Paper
 from gbmbert.extraction.entities import entity_from_model_output, normalize_label
 from gbmbert.extraction.io import load_entity_jsonl, load_pubmed_jsonl, save_entity_jsonl
-from gbmbert.extraction.pipeline import BiomedicalNERPipeline, paper_to_source_text
+from gbmbert.extraction.pipeline import BiomedicalNERPipeline, paper_to_source_text, split_text_chunks
 
 
 def test_normalize_label_maps_model_labels_to_supported_types() -> None:
@@ -13,6 +13,11 @@ def test_normalize_label_maps_model_labels_to_supported_types() -> None:
     assert normalize_label("cell_line") is EntityType.CELL_TYPE
     assert normalize_label("cell_state") is EntityType.CELL_STATE
     assert normalize_label("delivery_modifier") is EntityType.DELIVERY_MODIFIER
+    assert normalize_label("B-Medication") is EntityType.DRUG
+    assert normalize_label("I-Disease_disorder") is EntityType.DISEASE
+    assert normalize_label("Therapeutic_procedure") is EntityType.TREATMENT
+    assert normalize_label("Lab_value") is EntityType.BIOMARKER
+    assert normalize_label("Sign_symptom") is EntityType.DISEASE
     assert normalize_label("not-a-real-label") is EntityType.UNKNOWN
 
 
@@ -56,6 +61,71 @@ def test_paper_to_source_text_combines_title_and_abstract() -> None:
     paper = Paper(pmid="12345678", title=" Title ", abstract=" Abstract\ntext ")
 
     assert paper_to_source_text(paper) == "Title Abstract text"
+
+
+def test_split_text_chunks_preserves_source_offsets() -> None:
+    text = "alpha beta gamma delta epsilon"
+
+    chunks = list(split_text_chunks(text, max_words=3, overlap_words=1))
+
+    assert chunks == [
+        (0, "alpha beta gamma"),
+        (11, "gamma delta epsilon"),
+    ]
+
+
+def test_biomedical_ner_pipeline_chunks_and_restores_offsets() -> None:
+    title = "alpha beta gamma delta epsilon zeta eta"
+    paper = Paper(pmid="12345678", title=title)
+    calls: list[str] = []
+
+    def fake_pipeline(text: str) -> list[dict[str, object]]:
+        calls.append(text)
+        outputs: list[dict[str, object]] = []
+        if "gamma" in text:
+            score = 0.1 if text.startswith("alpha") else 0.8
+            start = text.index("gamma")
+            outputs.append(
+                {
+                    "word": "gamma",
+                    "entity_group": "Disease_disorder",
+                    "score": score,
+                    "start": start,
+                    "end": start + len("gamma"),
+                }
+            )
+        if "zeta" in text:
+            start = text.index("zeta")
+            outputs.append(
+                {
+                    "word": "zeta",
+                    "entity_group": "Therapeutic_procedure",
+                    "score": 0.7,
+                    "start": start,
+                    "end": start + len("zeta"),
+                }
+            )
+        return outputs
+
+    extractor = BiomedicalNERPipeline(
+        ner_pipeline=fake_pipeline,
+        max_chunk_words=3,
+        chunk_overlap_words=1,
+    )
+    result = extractor.extract_from_paper(paper)
+
+    assert calls == [
+        "alpha beta gamma",
+        "gamma delta epsilon",
+        "epsilon zeta eta",
+    ]
+    observed_entities = [
+        (entity.text, entity.label, entity.start, entity.confidence) for entity in result.entities
+    ]
+    assert observed_entities == [
+        ("gamma", EntityType.DISEASE, title.index("gamma"), 0.8),
+        ("zeta", EntityType.TREATMENT, title.index("zeta"), 0.7),
+    ]
 
 
 def test_pubmed_jsonl_loads_and_entity_jsonl_writes(tmp_path: Path) -> None:
