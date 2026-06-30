@@ -27,15 +27,21 @@ _LABEL_ALIASES: dict[str, EntityType] = {
     "GENE": EntityType.GENE,
     "GENES": EntityType.GENE,
     "PROTEIN": EntityType.GENE,
+    "BIOLOGICAL STRUCTURE": EntityType.CELL_TYPE,
     "CHEMICAL": EntityType.DRUG,
     "CHEMICALS": EntityType.DRUG,
     "DRUG": EntityType.DRUG,
     "DRUGS": EntityType.DRUG,
+    "MEDICATION": EntityType.DRUG,
     "DISEASE": EntityType.DISEASE,
     "DISEASES": EntityType.DISEASE,
     "DISORDER": EntityType.DISEASE,
+    "DISEASE DISORDER": EntityType.DISEASE,
+    "SIGN SYMPTOM": EntityType.DISEASE,
     "PATHWAY": EntityType.PATHWAY,
     "BIOMARKER": EntityType.BIOMARKER,
+    "BIOLOGICAL ATTRIBUTE": EntityType.BIOMARKER,
+    "LAB VALUE": EntityType.BIOMARKER,
     "CELL": EntityType.CELL_TYPE,
     "CELL LINE": EntityType.CELL_TYPE,
     "CELL TYPE": EntityType.CELL_TYPE,
@@ -44,6 +50,7 @@ _LABEL_ALIASES: dict[str, EntityType] = {
     "CELL_STATE": EntityType.CELL_STATE,
     "TREATMENT": EntityType.TREATMENT,
     "THERAPY": EntityType.TREATMENT,
+    "THERAPEUTIC PROCEDURE": EntityType.TREATMENT,
     "DELIVERY MODIFIER": EntityType.DELIVERY_MODIFIER,
     "DELIVERY_MODIFIER": EntityType.DELIVERY_MODIFIER,
     "OUTCOME": EntityType.OUTCOME,
@@ -97,6 +104,7 @@ def normalize_label(label: str | None) -> EntityType:
         return EntityType.UNKNOWN
 
     clean_label = label.replace("B-", "").replace("I-", "").strip()
+    clean_label = clean_label.replace("-", " ")
     clean_label = clean_label.replace("_", " ").upper()
     return _LABEL_ALIASES.get(clean_label, EntityType.UNKNOWN)
 
