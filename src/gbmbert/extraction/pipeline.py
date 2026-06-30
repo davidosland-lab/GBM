@@ -106,6 +106,7 @@ def create_ner_pipeline(model_name: str = DEFAULT_MODEL_NAME, device: int = -1) 
         tokenizer=model_name,
         aggregation_strategy="simple",
         device=device,
+        framework="pt",
     )
 
 
