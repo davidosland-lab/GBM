@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gbm-ai-platform"
+version = "0.1.0"
+description = "Research-use-only glioblastoma literature intelligence platform."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=0.30,<2",
+    "datasets>=2.19,<5",
+    "pydantic>=2.7,<3",
+    "python-dotenv>=1.0,<2",
+    "spacy>=3.7,<4",
+    "scispacy>=0.5,<1",
+    "torch>=2.2,<3",
+    "transformers>=4.41,<5",
+    "tqdm>=4.66,<5",
+]
+
+[project.scripts]
+gbmbert-extract-entities = "gbmbert.extraction.pipeline:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0,<9",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
