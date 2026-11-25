@@ -1,0 +1,14 @@
+{
+  "dataset_path": "data\\training\\gold_pack_combined\\gold_relations.jsonl",
+  "missing_pmid_count": 0,
+  "missing_warning_count": 0,
+  "row_count": 127,
+  "safe": true,
+  "source_type_counts": {
+    "curated_no_relation": 16,
+    "external_corpus": 77,
+    "human_or_curated_positive": 34
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

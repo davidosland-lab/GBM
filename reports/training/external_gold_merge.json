@@ -1,0 +1,66 @@
+{
+  "curated_entities_inputs": [
+    "data\\training\\curated_import\\combined_entities.jsonl"
+  ],
+  "curated_evidence_inputs": [
+    "data\\training\\gold_pack\\gold_seed\\gold_evidence.jsonl"
+  ],
+  "curated_relations_inputs": [
+    "data\\training\\gold_pack\\gold_seed\\gold_relations.jsonl"
+  ],
+  "entity_document_count": 563,
+  "entity_label_counts": {
+    "BIOMARKER": 261,
+    "CELL_STATE": 20,
+    "CELL_TYPE": 162,
+    "DELIVERY_MODIFIER": 154,
+    "DISEASE": 2576,
+    "DRUG": 791,
+    "GENE": 609,
+    "OUTCOME": 1052,
+    "PATHWAY": 20,
+    "TREATMENT": 387,
+    "TRIAL_PHASE": 20,
+    "UNKNOWN": 20
+  },
+  "evidence_count": 498,
+  "external_documents_dropped": 494,
+  "external_documents_kept": 6,
+  "external_documents_total": 500,
+  "external_entities_input": "data\\training\\external_corpus\\biored_all\\gold_entities.jsonl",
+  "external_relations_input": "data\\training\\external_corpus\\biored_all\\gold_relations.jsonl",
+  "files": {
+    "entities": "data\\training\\gold_pack_combined\\gold_entities.jsonl",
+    "evidence": "data\\training\\gold_pack_combined\\gold_evidence.jsonl",
+    "manifest": "data\\training\\gold_pack_combined\\external_gold_merge_manifest.json",
+    "markdown": "data\\training\\gold_pack_combined\\external_gold_merge_manifest.md",
+    "ner": "data\\training\\gold_pack_combined\\gold_ner.jsonl",
+    "relations": "data\\training\\gold_pack_combined\\gold_relations.jsonl"
+  },
+  "keywords_path": "configs\\extraction\\gbm_relevance_keywords.json",
+  "matched_patterns": {
+    "U87MG": 1,
+    "\\bT98G\\b": 1,
+    "blood-brain barrier": 2,
+    "glioblastoma": 1,
+    "glioma": 3
+  },
+  "ner_count": 6072,
+  "output_dir": "data\\training\\gold_pack_combined",
+  "provenance_counts": {
+    "curated_no_relation": 74,
+    "external_corpus": 286,
+    "human_or_curated_positive": 137,
+    "human_reviewed": 6924
+  },
+  "relation_count": 288,
+  "relation_label_counts": {
+    "ASSOCIATED_WITH": 138,
+    "IMPROVES": 20,
+    "NO_RELATION": 74,
+    "PREDICTS": 36,
+    "WORSENS": 20
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

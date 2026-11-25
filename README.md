@@ -42,7 +42,9 @@ This repository currently implements the Phase 1-3 research scaffold plus a loca
 - Reproducible smoke baseline rebuild command for local handoff artifacts.
 - Local Knowledge Graph Explorer prototype for sample JSONL, artifact-index-selected JSONL, or Neo4j-backed graph review.
 - GBM-BERT fine-tuning scaffold with dry-run training plans and dataset adapters.
-- Streamlit dashboard shell with the required research-use warning on every page.
+- Phase 5 research prototype tumour simulation: offline compartment toy model, KG/resistance/Monte Carlo deepening, toy parameter-fitting stub (explicitly not PK/PD), scenario runner CLIs, and example reports (not clinically validated; not a digital twin).
+- Phase 6 research prototype: ranks Phase 5 toy treatment *scenarios* under explicit weights with toy efficacy/toxicity trade-offs and intensity/schedule simulation knobs (`gbmbert-rank-treatment-scenarios`) — not CDS, not prescriptions, no patient eligibility.
+- Streamlit research operations console with live in-process runners across literature search, entity extraction, knowledge-graph explore, prediction curation, training-artifact browse/audit, simulation / Monte Carlo / treatment ranking (plus saved-report viewers) and the required research-use warning on every page.
 
 The project must not be used to recommend treatment for a real patient, generate clinical instructions, present itself as a medical device, or claim predictive clinical accuracy.
 
@@ -634,6 +636,21 @@ The Explorer exposes `/api/metadata` for schema-derived filter options with acti
 
 The Knowledge Graph Explorer wireframe note lives at `reports/wireframes/kg_explorer.md`.
 
+## Phase 5 Tumour Simulation (Research Prototype)
+
+Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
+
+Phase 5 is an offline Neftel-inspired four-compartment logistic growth **toy model** with baseline vs TMZ vs TMZ+FUS scenarios, optional resistance-axis populations, KG/relation-type modulation, seedable Monte Carlo sweeps, and a toy parameter-fitting stub. It is not a biophysical digital twin, not PK/PD, and does not claim clinical validity or patient-ready predictions. Phase 6 ranks those toy scenarios under explicit research weights (including toy toxicity/burden trade-offs and intensity/schedule simulation knobs) — it is not CDS, not real dosing search, and not medical advice.
+
+```powershell
+gbmbert-run-tumour-simulation --config configs/simulation/compartment_toy_v1.json --graph-jsonl data/examples/graph_records_sample.jsonl --use-graph-modulation --markdown-output reports/simulation/phase5_mvp_example.md --json-output reports/simulation/phase5_mvp_example.json
+gbmbert-run-simulation-monte-carlo --config configs/simulation/monte_carlo_v1.json --markdown-output reports/simulation/phase5_monte_carlo_example.md --json-output reports/simulation/phase5_monte_carlo_example.json
+gbmbert-fit-simulation-parameters --config configs/simulation/toy_fitting_v1.json --markdown-output reports/simulation/phase5_fitting_example.md --json-output reports/simulation/phase5_fitting_example.json
+gbmbert-rank-treatment-scenarios --config configs/treatment/strategy_research_v1.json --graph-jsonl data/examples/graph_records_sample.jsonl --intensity-scale 1.0 --schedule-duty-cycle 1.0 --markdown-output reports/treatment/phase6_strategy_example.md --json-output reports/treatment/phase6_strategy_example.json
+```
+
+Launcher shortcuts: `H` → `16BX` (sim), `16BY` (Monte Carlo), `16BZ` (scenario ranking), `16CA` (dashboard live runners), `16CB` (toy fitting stub).
+
 ## Smoke Baseline
 
 Rebuild the local smoke baseline from existing raw PubMed and ClinicalTrials.gov JSONL files:
@@ -644,13 +661,13 @@ gbmbert-run-smoke-baseline --offline --markdown-output reports/smoke_baseline.md
 
 Without `--offline`, the command refreshes the small PubMed query-pack and ClinicalTrials.gov snapshots before rebuilding pipeline outputs, review queues, quality reports, dry-run load reports, provenance audits, manifests, and the artifact index.
 
-## Dashboard Shell
+## Research Operations Console (Dashboard)
 
-The Streamlit dashboard shell provides the required page structure and persistent research-use warning. Install the optional dashboard extra before launching it:
+The Streamlit research operations console covers literature → extract → graph → curation → training artifacts → sim/rank, with a persistent research-use warning on every page. Install the optional dashboard extra before launching it:
 
 ```powershell
 .\.venv\Scripts\python.exe -m pip install -e ".[dashboard]"
 gbmbert-dashboard --host 127.0.0.1 --port 8501
 ```
 
-The dashboard shell does not implement simulator or treatment-explorer logic yet.
+All pages are interactive `live-runner` surfaces calling in-process Python APIs (`gbmbert.dashboard.runners`): Literature Search, Entity Explorer, Knowledge Graph Explorer, Prediction Curation, Training Artifacts, Tumour Simulator, Treatment Explorer, and Monte Carlo. Offline defaults prefer local JSONL/lexicon fixtures; NCBI/model modes surface clear errors when network or models are unavailable. Training Artifacts supports safe read-only registry audits and confirmed manifest refresh only — no surprise GPU trains. It is not hospital CDS, does not prescribe treatments, and does not claim clinical validation.

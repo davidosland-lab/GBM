@@ -24,6 +24,7 @@ REQUIRED_REPORTS = {
 # missing report file stays visible as a review signal without implying readiness.
 OPTIONAL_REPORTS = {
     "governance detail contract": Path("reports/training/governance_detail_contract.json"),
+    "curated round rebuild": Path("reports/training/curated_round_rebuild.json"),
 }
 
 
@@ -59,6 +60,13 @@ def build_ci_report_summary(root: str | Path = ".") -> str:
     detail_present = detail_contract is not None
     detail_missing_rows = len((detail_contract or {}).get("missing_required_rows") or [])
     detail_detail = f"{detail_missing_rows} missing row(s)" if detail_present else "report missing"
+    rebuild = optional["curated round rebuild"]
+    rebuild_present = rebuild is not None
+    rebuild_detail = (
+        f"{rebuild.get('passed_step_count', 0)}/{rebuild.get('step_count', 0)} steps"
+        if rebuild_present
+        else "report missing"
+    )
     lines = [
         "# GBM-AI CI Verification Summary",
         "",
@@ -73,9 +81,11 @@ def build_ci_report_summary(root: str | Path = ".") -> str:
         _row("Strict governance audit", not bool(strict.get("passed")), f"{len(strict.get('warnings') or [])} expected audit warning(s)"),
         _row("Gold-pack promotion", bool(promotion.get("promotable")), f"{len(promotion.get('blockers') or [])} blocker(s)"),
         _row("Governance detail contract", detail_present and bool(detail_contract.get("valid")), detail_detail),
+        _row("Curated round rebuild", rebuild_present and bool(rebuild.get("passed")), rebuild_detail),
         "",
         "Strict governance and gold-pack promotion are audit signals. A non-promotable gold pack is expected until reviewed data volume thresholds are met.",
         "The governance detail contract is a visibility signal; missing detail rows stay listed and do not imply model or clinical readiness.",
+        "Curated round rebuild is an opt-in visibility signal only; it is not a local-verification hard gate.",
     ]
     return "\n".join(lines).rstrip() + "\n"
 
@@ -95,13 +105,21 @@ def validate_ci_report_summary_contract(
         "Strict governance audit",
         "Gold-pack promotion",
         "Governance detail contract",
+        "Curated round rebuild",
     ]
     referenced_families = [family for family in required_families if family in text]
     missing_families = [family for family in required_families if family not in text]
     audit_signal_note_present = "Strict governance and gold-pack promotion are audit signals" in text
+    rebuild_signal_note_present = "Curated round rebuild is an opt-in visibility signal" in text
     return CIReportContract(
         summary_path=str(path),
-        valid=path.exists() and not missing_families and audit_signal_note_present and RESEARCH_WARNING in text,
+        valid=(
+            path.exists()
+            and not missing_families
+            and audit_signal_note_present
+            and rebuild_signal_note_present
+            and RESEARCH_WARNING in text
+        ),
         required_families=required_families,
         referenced_families=referenced_families,
         missing_families=missing_families,

@@ -1,6 +1,193 @@
 {
-  "checkpoint_count": 1,
+  "checkpoint_count": 18,
   "entries": [
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": true,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [
+        "reports\\training\\evidence_experiment_v2_model_card.json"
+      ],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v2",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v2: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": true,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [
+        "reports\\training\\evidence_experiment_v3_model_card.json"
+      ],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v3",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v3: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": true,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [
+        "reports\\training\\evidence_experiment_v4_model_card.json"
+      ],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v4",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v4: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v5",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v5: no matching model card found",
+        "gbmbert_evidence_experiment_pubmedbert_v5: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v6",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v6: no matching model card found",
+        "gbmbert_evidence_experiment_pubmedbert_v6: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v7",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v7: no matching model card found",
+        "gbmbert_evidence_experiment_pubmedbert_v7: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v8",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v8: no matching model card found",
+        "gbmbert_evidence_experiment_pubmedbert_v8: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_evidence_experiment_pubmedbert_v9",
+      "status": "research_candidate",
+      "task": "evidence_classification",
+      "warnings": [
+        "gbmbert_evidence_experiment_pubmedbert_v9: no matching model card found",
+        "gbmbert_evidence_experiment_pubmedbert_v9: no matching dataset card found"
+      ]
+    },
     {
       "checks": {
         "checkpoint_dir_exists": true,
@@ -24,6 +211,213 @@
       "status": "research_candidate",
       "task": "evidence_classification",
       "warnings": []
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_ner_bio_pubmedbert_v1",
+      "status": "research_candidate",
+      "task": "ner",
+      "warnings": [
+        "gbmbert_ner_bio_pubmedbert_v1: no matching model card found",
+        "gbmbert_ner_bio_pubmedbert_v1: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_ner_bio_pubmedbert_v2",
+      "status": "research_candidate",
+      "task": "ner",
+      "warnings": [
+        "gbmbert_ner_bio_pubmedbert_v2: no matching model card found",
+        "gbmbert_ner_bio_pubmedbert_v2: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_ner_bio_pubmedbert_v3",
+      "status": "research_candidate",
+      "task": "ner",
+      "warnings": [
+        "gbmbert_ner_bio_pubmedbert_v3: no matching model card found",
+        "gbmbert_ner_bio_pubmedbert_v3: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_ner_bio_pubmedbert_v4",
+      "status": "research_candidate",
+      "task": "ner",
+      "warnings": [
+        "gbmbert_ner_bio_pubmedbert_v4: no matching model card found",
+        "gbmbert_ner_bio_pubmedbert_v4: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_ner_bio_pubmedbert_v5",
+      "status": "research_candidate",
+      "task": "ner",
+      "warnings": [
+        "gbmbert_ner_bio_pubmedbert_v5: no matching model card found",
+        "gbmbert_ner_bio_pubmedbert_v5: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_ner_pubmedbert_v1",
+      "status": "research_candidate",
+      "task": "ner",
+      "warnings": [
+        "gbmbert_ner_pubmedbert_v1: no matching model card found",
+        "gbmbert_ner_pubmedbert_v1: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_relation_biobert_v1",
+      "status": "research_candidate",
+      "task": "relation_extraction",
+      "warnings": [
+        "gbmbert_relation_biobert_v1: no matching model card found",
+        "gbmbert_relation_biobert_v1: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_relation_biobert_v2",
+      "status": "research_candidate",
+      "task": "relation_extraction",
+      "warnings": [
+        "gbmbert_relation_biobert_v2: no matching model card found",
+        "gbmbert_relation_biobert_v2: no matching dataset card found"
+      ]
+    },
+    {
+      "checks": {
+        "checkpoint_dir_exists": true,
+        "dataset_card_present": false,
+        "entry_warning_present": true,
+        "manifest_path_exists_or_empty": true,
+        "metrics_path_exists_or_empty": true,
+        "model_card_present": false,
+        "name_present": true,
+        "notes_do_not_overclaim": true,
+        "status_research_safe": true
+      },
+      "dataset_card_paths": [],
+      "errors": [],
+      "model_card_paths": [],
+      "name": "gbmbert_relation_biobert_v3",
+      "status": "research_candidate",
+      "task": "relation_extraction",
+      "warnings": [
+        "gbmbert_relation_biobert_v3: no matching model card found",
+        "gbmbert_relation_biobert_v3: no matching dataset card found"
+      ]
     }
   ],
   "errors": [],
@@ -31,5 +425,37 @@
   "registry_path": "models\\checkpoint_registry.json",
   "reports_dir": "reports\\training",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": []
+  "warnings": [
+    "gbmbert_evidence_experiment_pubmedbert_v2: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v3: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v4: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v5: no matching model card found",
+    "gbmbert_evidence_experiment_pubmedbert_v5: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v6: no matching model card found",
+    "gbmbert_evidence_experiment_pubmedbert_v6: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v7: no matching model card found",
+    "gbmbert_evidence_experiment_pubmedbert_v7: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v8: no matching model card found",
+    "gbmbert_evidence_experiment_pubmedbert_v8: no matching dataset card found",
+    "gbmbert_evidence_experiment_pubmedbert_v9: no matching model card found",
+    "gbmbert_evidence_experiment_pubmedbert_v9: no matching dataset card found",
+    "gbmbert_ner_bio_pubmedbert_v1: no matching model card found",
+    "gbmbert_ner_bio_pubmedbert_v1: no matching dataset card found",
+    "gbmbert_ner_bio_pubmedbert_v2: no matching model card found",
+    "gbmbert_ner_bio_pubmedbert_v2: no matching dataset card found",
+    "gbmbert_ner_bio_pubmedbert_v3: no matching model card found",
+    "gbmbert_ner_bio_pubmedbert_v3: no matching dataset card found",
+    "gbmbert_ner_bio_pubmedbert_v4: no matching model card found",
+    "gbmbert_ner_bio_pubmedbert_v4: no matching dataset card found",
+    "gbmbert_ner_bio_pubmedbert_v5: no matching model card found",
+    "gbmbert_ner_bio_pubmedbert_v5: no matching dataset card found",
+    "gbmbert_ner_pubmedbert_v1: no matching model card found",
+    "gbmbert_ner_pubmedbert_v1: no matching dataset card found",
+    "gbmbert_relation_biobert_v1: no matching model card found",
+    "gbmbert_relation_biobert_v1: no matching dataset card found",
+    "gbmbert_relation_biobert_v2: no matching model card found",
+    "gbmbert_relation_biobert_v2: no matching dataset card found",
+    "gbmbert_relation_biobert_v3: no matching model card found",
+    "gbmbert_relation_biobert_v3: no matching dataset card found"
+  ]
 }

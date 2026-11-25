@@ -1,0 +1,45 @@
+{
+  "round": 18,
+  "improves": 3,
+  "worsens": 2,
+  "ner_filled": {
+    "CELL_STATE": 12,
+    "PATHWAY": 12,
+    "TRIAL_PHASE": 12,
+    "UNKNOWN": 13
+  },
+  "ner_docs": 39,
+  "relations": [
+    {
+      "pmid": "16944365",
+      "label": "IMPROVES",
+      "head": "Treatment:radiotherapy",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "19269895",
+      "label": "IMPROVES",
+      "head": "Drug:temozolomide",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "22440876",
+      "label": "IMPROVES",
+      "head": "Drug:temozolomide",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "33799798",
+      "label": "WORSENS",
+      "head": "Treatment:radiation",
+      "tail": "Outcome:recurrence"
+    },
+    {
+      "pmid": "35951174",
+      "label": "WORSENS",
+      "head": "Treatment:radiotherapy",
+      "tail": "Outcome:progression"
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

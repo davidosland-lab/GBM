@@ -1,17 +1,25 @@
 {
-  "duplicate_count": 0,
+  "duplicate_count": 7,
   "input_path": "data\\training\\relation_pack\\annotation_splits",
-  "invalid_endpoint_count": 0,
+  "invalid_endpoint_count": 1,
   "label_counts": {
-    "ASSOCIATED_WITH": 16,
-    "NO_RELATION": 16,
-    "PREDICTS": 16
+    "ASSOCIATED_WITH": 82,
+    "ENHANCES_DELIVERY_OF": 2,
+    "IMPROVES": 44,
+    "NO_RELATION": 74,
+    "PREDICTS": 46,
+    "SYNERGIZES_WITH": 5,
+    "TARGETS": 2,
+    "WORSENS": 58
   },
   "missing_endpoint_count": 0,
   "missing_sentence_count": 0,
-  "negative_count": 16,
-  "positive_count": 32,
-  "relation_count": 48,
+  "negative_count": 74,
+  "positive_count": 239,
+  "relation_count": 313,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": []
+  "warnings": [
+    "1 relation example(s) have identical head and tail endpoints",
+    "7 duplicate relation example(s)"
+  ]
 }

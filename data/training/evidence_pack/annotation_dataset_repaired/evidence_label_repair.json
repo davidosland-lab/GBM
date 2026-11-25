@@ -7,15 +7,15 @@
     {
       "changed_count": 0,
       "label_counts": {
-        "0": 8,
-        "1": 8,
-        "2": 8,
-        "3": 8,
-        "4": 8,
-        "5": 8
+        "0": 175,
+        "1": 114,
+        "2": 115,
+        "3": 393,
+        "4": 111,
+        "5": 108
       },
       "output_file": "data\\training\\evidence_pack\\annotation_dataset_repaired\\evidence.jsonl",
-      "row_count": 48,
+      "row_count": 1016,
       "skipped_count": 0,
       "source_file": "data\\training\\evidence_pack\\annotation_dataset\\evidence.jsonl"
     },

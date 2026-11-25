@@ -1,0 +1,19 @@
+{
+  "name": "pubmed_spinal_fusion_neuropathy_v1",
+  "description": "Spinal fusion surgery and associated neuropathy PubMed topics for research-grade evidence review. Research-use only; not for patient-specific advice.",
+  "source": "docs/SPINAL_FUSION_NEUROPATHY_REVIEW.md",
+  "queries": [
+    "spinal fusion postoperative neuropathy",
+    "spinal fusion nerve injury radiculopathy",
+    "lumbar fusion neuropathic pain postoperative",
+    "cervical fusion postoperative nerve root injury",
+    "spine surgery failed back surgery syndrome neuropathic pain",
+    "spinal arthrodesis neurologic complication nerve injury",
+    "transforaminal lumbar interbody fusion nerve injury neuropathy",
+    "posterior lumbar interbody fusion radiculopathy postoperative",
+    "anterior cervical discectomy fusion neuropathic pain radiculopathy",
+    "spinal fusion adjacent segment disease radiculopathy",
+    "postoperative inflammatory neuropathy spine surgery",
+    "spinal fusion chronic pain neuropathic symptoms outcome"
+  ]
+}

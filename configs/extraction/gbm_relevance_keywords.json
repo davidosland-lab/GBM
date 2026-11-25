@@ -1,0 +1,24 @@
+{
+  "description": "Keyword patterns for filtering external biomedical corpora to GBM-adjacent documents before merging into the combined gold pack (PR165). Case-insensitive substring / word-boundary match against document text. Research-use only.",
+  "match_mode": "any",
+  "patterns": [
+    "glioblastoma",
+    "\\bGBM\\b",
+    "glioma",
+    "astrocytoma",
+    "oligodendroglioma",
+    "IDH[- ]?wildtype",
+    "IDH[- ]?mutant",
+    "temozolomide",
+    "\\bTMZ\\b",
+    "\\bMGMT\\b",
+    "EGFRvIII",
+    "\\bU87\\b",
+    "U87MG",
+    "\\bU251\\b",
+    "\\bT98G\\b",
+    "glioblastoma stem",
+    "neuron-glioma",
+    "blood-brain barrier"
+  ]
+}

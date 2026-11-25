@@ -1,12 +1,12 @@
 {
-  "available_report_count": 13,
+  "available_report_count": 14,
   "current_config_failed_count": 0,
-  "current_config_passed_count": 3,
+  "current_config_passed_count": 2,
   "output_path": "reports\\training\\dashboard_training_manifest.json",
-  "ready_pack_count": 3,
+  "ready_pack_count": 0,
   "registry_audit_passed": true,
-  "registry_entry_count": 1,
+  "registry_entry_count": 18,
   "relation_config_status": "passed",
-  "scaffold_config_count": 2,
+  "scaffold_config_count": 5,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }

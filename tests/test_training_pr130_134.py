@@ -234,7 +234,9 @@ def test_ci_report_summary_contract_requires_all_report_families(tmp_path: Path)
                 "| Strict governance audit | review | 1 expected audit warning(s) |",
                 "| Gold-pack promotion | review | 1 blocker(s) |",
                 "| Governance detail contract | pass | 0 missing row(s) |",
+                "| Curated round rebuild | pass | 20/20 steps |",
                 "Strict governance and gold-pack promotion are audit signals.",
+                "Curated round rebuild is an opt-in visibility signal only; it is not a local-verification hard gate.",
             ]
         ),
         encoding="utf-8",

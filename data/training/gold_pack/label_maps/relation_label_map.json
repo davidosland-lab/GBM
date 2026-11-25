@@ -1,13 +1,23 @@
 {
   "id_to_label": {
     "0": "ASSOCIATED_WITH",
-    "1": "NO_RELATION",
-    "2": "PREDICTS"
+    "1": "ENHANCES_DELIVERY_OF",
+    "2": "IMPROVES",
+    "3": "NO_RELATION",
+    "4": "PREDICTS",
+    "5": "SYNERGIZES_WITH",
+    "6": "TARGETS",
+    "7": "WORSENS"
   },
   "label_to_id": {
     "ASSOCIATED_WITH": 0,
-    "NO_RELATION": 1,
-    "PREDICTS": 2
+    "ENHANCES_DELIVERY_OF": 1,
+    "IMPROVES": 2,
+    "NO_RELATION": 3,
+    "PREDICTS": 4,
+    "SYNERGIZES_WITH": 5,
+    "TARGETS": 6,
+    "WORSENS": 7
   },
   "task": "relation"
 }

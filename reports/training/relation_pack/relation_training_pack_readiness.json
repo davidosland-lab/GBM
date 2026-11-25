@@ -3,24 +3,33 @@
   "leakage_warnings": [],
   "min_examples_per_label": 2,
   "min_examples_per_task": 10,
-  "ready": true,
+  "ready": false,
   "task_reports": [
     {
-      "dominant_label_fraction": 0.3333333333333333,
-      "duplicate_count": 0,
-      "example_count": 48,
+      "dominant_label_fraction": 0.26198083067092653,
+      "duplicate_count": 7,
+      "example_count": 313,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "ASSOCIATED_WITH": 16,
-        "NO_RELATION": 16,
-        "PREDICTS": 16
+        "ASSOCIATED_WITH": 82,
+        "ENHANCES_DELIVERY_OF": 2,
+        "IMPROVES": 44,
+        "NO_RELATION": 74,
+        "PREDICTS": 46,
+        "SYNERGIZES_WITH": 5,
+        "TARGETS": 2,
+        "WORSENS": 58
       },
-      "ready": true,
+      "ready": false,
       "task": "relation",
-      "warnings": []
+      "warnings": [
+        "7 duplicate example(s)"
+      ]
     }
   ],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 0,
-  "warnings": []
+  "warning_count": 1,
+  "warnings": [
+    "relation: 7 duplicate example(s)"
+  ]
 }

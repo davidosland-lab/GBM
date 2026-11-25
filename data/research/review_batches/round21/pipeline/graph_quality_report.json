@@ -1,0 +1,134 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 3,
+      "key": "3"
+    },
+    {
+      "count": 1,
+      "key": "5"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 77,
+      "key": "Outcome"
+    },
+    {
+      "count": 61,
+      "key": "Disease"
+    },
+    {
+      "count": 18,
+      "key": "Drug"
+    },
+    {
+      "count": 12,
+      "key": "Biomarker"
+    },
+    {
+      "count": 10,
+      "key": "Treatment"
+    },
+    {
+      "count": 8,
+      "key": "Gene"
+    },
+    {
+      "count": 7,
+      "key": "DeliveryModifier"
+    },
+    {
+      "count": 6,
+      "key": "CellType"
+    }
+  ],
+  "node_mention_count": 199,
+  "paper_only_record_count": 12,
+  "record_count": 80,
+  "relation_count": 4,
+  "relation_type_counts": [
+    {
+      "count": 4,
+      "key": "SYNERGIZES_WITH"
+    }
+  ],
+  "source_path": "data\\research\\review_batches\\round21\\pipeline\\graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 45,
+      "key_value": "survival",
+      "label": "Outcome"
+    },
+    {
+      "count": 44,
+      "key_value": "glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 23,
+      "key_value": "response",
+      "label": "Outcome"
+    },
+    {
+      "count": 17,
+      "key_value": "Glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 15,
+      "key_value": "temozolomide",
+      "label": "Drug"
+    },
+    {
+      "count": 8,
+      "key_value": "recurrence",
+      "label": "Outcome"
+    },
+    {
+      "count": 7,
+      "key_value": "MGMT",
+      "label": "Gene"
+    },
+    {
+      "count": 6,
+      "key_value": "IDH-wildtype",
+      "label": "Biomarker"
+    },
+    {
+      "count": 6,
+      "key_value": "immunotherapy",
+      "label": "Treatment"
+    },
+    {
+      "count": 5,
+      "key_value": "stem cells",
+      "label": "CellType"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 2,
+      "head": "Drug:temozolomide",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Drug:temozolomide"
+    },
+    {
+      "count": 1,
+      "head": "Drug:temozolomide",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:immunotherapy"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:immunotherapy",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Drug:temozolomide"
+    }
+  ],
+  "unique_nct_count": 0,
+  "unique_node_count": 19,
+  "unique_pmid_count": 80,
+  "warnings": []
+}

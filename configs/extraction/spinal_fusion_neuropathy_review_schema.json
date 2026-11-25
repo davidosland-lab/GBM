@@ -1,0 +1,90 @@
+{
+  "name": "spinal_fusion_neuropathy_review_schema_v1",
+  "description": "Research-grade evidence review schema for spinal fusion surgery and associated neuropathy. This schema supports literature triage, extraction, and graph review only.",
+  "research_use_only": true,
+  "clinical_validity_claimed": false,
+  "excluded_uses": [
+    "diagnosis",
+    "patient-specific treatment advice",
+    "surgical eligibility assessment",
+    "causation determination for an individual case",
+    "medicolegal attribution",
+    "medical-device or clinical-decision-support claims"
+  ],
+  "review_questions": [
+    "What neuropathic symptoms or neurologic complications are reported after spinal fusion?",
+    "Which fusion approaches, spinal levels, or perioperative factors are associated with neuropathy or radiculopathy in the literature?",
+    "What mechanisms are proposed, such as nerve root compression, traction, inflammation, scar tissue, hardware-related irritation, or adjacent segment disease?",
+    "What time course and outcomes are reported for postoperative neuropathic symptoms?",
+    "What treatments or follow-up interventions are reported, and what level of evidence supports them?"
+  ],
+  "domain_entities": [
+    "SURGERY_TYPE",
+    "SPINAL_REGION",
+    "SPINAL_LEVEL",
+    "APPROACH",
+    "NERVE_ROOT",
+    "NEUROPATHIC_SYMPTOM",
+    "COMPLICATION",
+    "MECHANISM",
+    "RISK_FACTOR",
+    "IMAGING_FINDING",
+    "TREATMENT",
+    "OUTCOME",
+    "TIME_COURSE",
+    "STUDY_DESIGN"
+  ],
+  "project_label_projection": {
+    "SURGERY_TYPE": "TREATMENT",
+    "SPINAL_REGION": "DELIVERY_MODIFIER",
+    "SPINAL_LEVEL": "DELIVERY_MODIFIER",
+    "APPROACH": "DELIVERY_MODIFIER",
+    "NERVE_ROOT": "DELIVERY_MODIFIER",
+    "NEUROPATHIC_SYMPTOM": "OUTCOME",
+    "COMPLICATION": "DISEASE",
+    "MECHANISM": "PATHWAY",
+    "RISK_FACTOR": "BIOMARKER",
+    "IMAGING_FINDING": "BIOMARKER",
+    "TREATMENT": "TREATMENT",
+    "OUTCOME": "OUTCOME",
+    "TIME_COURSE": "OUTCOME",
+    "STUDY_DESIGN": "UNKNOWN"
+  },
+  "relation_candidates": [
+    "ASSOCIATED_WITH",
+    "PREDICTS",
+    "WORSENS",
+    "IMPROVES",
+    "TARGETS",
+    "NO_RELATION"
+  ],
+  "evidence_fields": [
+    "pmid",
+    "title",
+    "study_design",
+    "population",
+    "surgery_type",
+    "spinal_region_or_level",
+    "neuropathy_or_symptom",
+    "time_course",
+    "reported_association",
+    "evidence_level",
+    "limitations",
+    "review_status"
+  ],
+  "review_status_values": [
+    "pending",
+    "accepted",
+    "needs_second_review",
+    "excluded_not_spinal_fusion",
+    "excluded_not_neuropathy",
+    "excluded_no_abstract",
+    "excluded_patient_advice"
+  ],
+  "promotion_gate": {
+    "minimum_reviewed_records": 100,
+    "minimum_second_review_fraction": 0.2,
+    "requires_patient_specific_claim_audit": true,
+    "requires_research_warning": true
+  }
+}

@@ -1,6 +1,193 @@
 {
-  "action_count": 0,
-  "actions": [],
+  "action_count": 31,
+  "actions": [
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v2",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v2: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v3",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v3: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v4",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v4: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v5",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v5: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v5",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v5: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v6",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v6: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v6",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v6: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v7",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v7: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v7",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v7: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v8",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v8: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v8",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v8: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v9",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v9: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_evidence_experiment_pubmedbert_v9",
+      "finding": "gbmbert_evidence_experiment_pubmedbert_v9: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v1",
+      "finding": "gbmbert_ner_bio_pubmedbert_v1: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v1",
+      "finding": "gbmbert_ner_bio_pubmedbert_v1: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v2",
+      "finding": "gbmbert_ner_bio_pubmedbert_v2: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v2",
+      "finding": "gbmbert_ner_bio_pubmedbert_v2: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v3",
+      "finding": "gbmbert_ner_bio_pubmedbert_v3: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v3",
+      "finding": "gbmbert_ner_bio_pubmedbert_v3: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v4",
+      "finding": "gbmbert_ner_bio_pubmedbert_v4: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v4",
+      "finding": "gbmbert_ner_bio_pubmedbert_v4: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v5",
+      "finding": "gbmbert_ner_bio_pubmedbert_v5: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_bio_pubmedbert_v5",
+      "finding": "gbmbert_ner_bio_pubmedbert_v5: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_pubmedbert_v1",
+      "finding": "gbmbert_ner_pubmedbert_v1: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_ner_pubmedbert_v1",
+      "finding": "gbmbert_ner_pubmedbert_v1: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_relation_biobert_v1",
+      "finding": "gbmbert_relation_biobert_v1: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_relation_biobert_v1",
+      "finding": "gbmbert_relation_biobert_v1: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_relation_biobert_v2",
+      "finding": "gbmbert_relation_biobert_v2: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_relation_biobert_v2",
+      "finding": "gbmbert_relation_biobert_v2: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_relation_biobert_v3",
+      "finding": "gbmbert_relation_biobert_v3: no matching model card found",
+      "severity": "warning",
+      "suggested_action": "generate or link a research-use model card for this checkpoint"
+    },
+    {
+      "checkpoint": "gbmbert_relation_biobert_v3",
+      "finding": "gbmbert_relation_biobert_v3: no matching dataset card found",
+      "severity": "warning",
+      "suggested_action": "generate or link the dataset card used by this checkpoint"
+    }
+  ],
   "audit_path": "reports\\training\\governance_strict\\model_registry_audit.json",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
 }

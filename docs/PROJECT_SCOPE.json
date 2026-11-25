@@ -1,20 +1,21 @@
 {
   "project": "GBM-AI Platform",
   "status": "research_project",
-  "purpose": "Research-use-only glioblastoma literature intelligence platform for literature mining, structured biomedical annotation, knowledge graph construction, and in-silico hypothesis generation.",
+  "purpose": "Research-use-only glioblastoma literature intelligence platform for literature mining, structured biomedical annotation, knowledge graph construction, curation/training research operations, and in-silico hypothesis generation.",
   "required_user_facing_warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
   "active_phases": [
     "Phase 1: PubMed ingestion and project scaffold",
     "Phase 2: Baseline biomedical extraction pipeline",
     "Phase 3: Knowledge graph schema, loader, inspection, and local graph review",
-    "Phase 4 scaffold: GBM-BERT fine-tuning configs and dataset adapters",
-    "Phase 7 scaffold: Streamlit dashboard shell"
+    "Phase 4: GBM-BERT research training criteria satisfied (deepen gold-pack ops / curation / governance)",
+    "Phase 5: Tumour simulation research prototype (post-MVP deepening + toy fitting stub)",
+    "Phase 6: Treatment scenario ranking research prototype (trade-off scores)",
+    "Phase 7: Streamlit research operations console with live runners (literature → extract → graph → curation → training artifacts → sim/rank)"
   ],
   "future_phases": [
-    "Phase 4: GBM-BERT training execution and evaluation workflow",
-    "Phase 5: Tumour simulation engine",
-    "Phase 6: Treatment strategy exploration engine",
-    "Phase 7: Full Streamlit dashboard implementation"
+    "Phase 5: Further simulation expansions (spatial biophysics and real PK/PD remain out of scope)",
+    "Phase 6: Treatment strategy expansions beyond toy ranking (real eligibility/CDS remain out of scope)",
+    "Phase 7: Further research-console UX polish (production clinical / hospital CDS dashboard remains out of scope)"
   ],
   "implemented_modules": [
     "pubmed_ingestion",
@@ -140,6 +141,9 @@
     "gbmbert_strict_label_drift_alignment",
     "gbmbert_curated_fixture_import",
     "gbmbert_gold_pack_promotion_review",
+    "gbmbert_gold_pack_ops_status",
+    "gbmbert_sparse_densify_dual_review_batch",
+    "gold_pack_ops_runbook",
     "gbmbert_curated_multi_file_import",
     "gbmbert_curated_provenance_diff",
     "gbmbert_promotion_threshold_delta_review",
@@ -173,11 +177,45 @@
     "baseline_graph_explorer_launch",
     "artifact_index_graph_explorer_selection",
     "clinicaltrials_graph_explorer_sample_mode",
-    "streamlit_dashboard_shell"
+    "streamlit_dashboard_shell",
+    "dashboard_simulation_report_pages",
+    "dashboard_treatment_explorer_page",
+    "dashboard_monte_carlo_page",
+    "dashboard_live_research_runners",
+    "dashboard_literature_entity_live_runners",
+    "dashboard_knowledge_graph_live_runner",
+    "dashboard_prediction_curation_live_runner",
+    "dashboard_training_artifacts_live_runner",
+    "dashboard_research_operations_console",
+    "phase5_tumour_simulation_mvp",
+    "phase5_compartment_toy_model",
+    "phase5_scenario_runner",
+    "phase5_simulation_cli",
+    "phase5_graph_parameter_modulation",
+    "phase5_resistance_axis_populations",
+    "phase5_monte_carlo_sweeps",
+    "phase5_richer_simulation_reports",
+    "phase5_toy_parameter_fitting_stub",
+    "phase6_treatment_scenario_ranking",
+    "phase6_treatment_strategy_cli",
+    "phase6_toy_toxicity_tradeoff_scores",
+    "phase6_scenario_intensity_schedule_knobs",
+    "gallbladder_gallstone_review_extension",
+    "dashboard_review_topic_registry"
   ],
   "prototype_modules": [
     "local_knowledge_graph_explorer_prototype",
-    "streamlit_dashboard_shell"
+    "streamlit_dashboard_shell",
+    "phase5_tumour_simulation_mvp",
+    "phase5_monte_carlo_sweeps",
+    "phase5_toy_parameter_fitting_stub",
+    "phase6_treatment_scenario_ranking",
+    "dashboard_live_research_runners",
+    "dashboard_literature_entity_live_runners",
+    "dashboard_knowledge_graph_live_runner",
+    "dashboard_prediction_curation_live_runner",
+    "dashboard_training_artifacts_live_runner",
+    "dashboard_research_operations_console"
   ],
   "prohibited_behavior": [
     "recommend_treatment_for_real_patient",
@@ -195,8 +233,16 @@
     "clinical_decision_support",
     "predictive_clinical_accuracy_claims",
     "production_dashboard",
-    "trained_gbm_bert_model",
-    "tumour_simulator",
-    "treatment_optimizer"
-  ]
+    "validated_clinical_gbm_bert_model",
+    "clinically_validated_tumour_simulator",
+    "biophysical_digital_twin",
+    "treatment_optimizer",
+    "real_pk_pd_modelling",
+    "spatial_biophysics_digital_twin",
+    "patient_eligibility_cds",
+    "lit_mining_scale_as_primary_differentiation",
+    "clinical_ranking_cds_competition"
+  ],
+  "differentiation_bet": "Deepen the gold-pack / curation / governance asset (evidence-tier gold, dual-review, active learning, promotion gates, provenance, ops status) rather than competing on lit-mining scale or clinical ranking.",
+  "boundary_note": "Research-candidate checkpoints, gold-pack promotion reviews, gold-pack ops status reports, Phase 5 toy tumour simulations (including Monte Carlo and toy fitting stubs that are explicitly not PK/PD), Phase 6 scenario rankings with toy efficacy/toxicity trade-off scores and simulation-parameter knobs, and the Phase 7 research operations console (live runners across literature, extraction, graph review, prediction curation, training artifact browse/audit with promotion blockers/next actions, and sim/rank) may exist for literature-mining and in-silico hypothesis exploration. They do not create a validated clinical model, authorize diagnosis/treatment decisions, provide clinical decision support, screen patient eligibility, prescribe treatments, claim validated clinical dosing, or claim patient-ready predictions. Research-use only."
 }

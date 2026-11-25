@@ -1,0 +1,69 @@
+{
+  "description": "Crosswalk mapping external biomedical annotated corpora onto the project entity/relation label scheme. Add a new corpus block + reader to onboard each corpus; the project labels stay stable. Research-use only.",
+  "corpora": {
+    "bc5cdr": {
+      "source": "https://huggingface.co/datasets/tner/bc5cdr (token-level NER mirror of BioCreative V CDR)",
+      "license": "BioCreative V CDR corpus; US NLM, free for research use. PubMed-derived text.",
+      "reader": "bc5cdr_tner",
+      "notes": "This mirror is token-level NER only: original PubMed PMIDs, character offsets against source, and chemical-induced-disease relations are NOT included. Use BioRED BioC for relations + PMIDs + GENE/CELL_TYPE.",
+      "entity_label_map": {
+        "Chemical": "DRUG",
+        "Disease": "DISEASE"
+      },
+      "relation_label_map": {}
+    },
+    "biored": {
+      "source": "https://ftp.ncbi.nlm.nih.gov/pub/lu/BioRED/BIORED.zip (BioC JSON: Train/Dev/Test.BioC.JSON)",
+      "license": "BioRED (Luo et al., Brief Bioinform 2022); NCBI / NLM research corpus. PubMed-derived abstracts. Research-use only.",
+      "reader": "biored_bioc",
+      "notes": "BioC JSON documents use PubMed PMIDs as ids, absolute character offsets, six entity types, and document-level relations keyed by entity identifiers. OrganismTaxon is intentionally unmapped (no project label). SequenceVariant maps to BIOMARKER.",
+      "entity_label_map": {
+        "GeneOrGeneProduct": "GENE",
+        "CellLine": "CELL_TYPE",
+        "ChemicalEntity": "DRUG",
+        "DiseaseOrPhenotypicFeature": "DISEASE",
+        "SequenceVariant": "BIOMARKER"
+      },
+      "relation_label_map": {
+        "Association": "ASSOCIATED_WITH",
+        "Positive_Correlation": "PREDICTS",
+        "Negative_Correlation": "ASSOCIATED_WITH",
+        "Bind": "TARGETS",
+        "Cotreatment": "SYNERGIZES_WITH",
+        "Comparison": "ASSOCIATED_WITH",
+        "Drug_Interaction": "SYNERGIZES_WITH",
+        "Conversion": "ASSOCIATED_WITH"
+      }
+    },
+    "ebm_nlp": {
+      "source": "https://github.com/bepnye/EBM-NLP (ebm_nlp_2_00.tar.gz; Nye et al., ACL 2018)",
+      "license": "EBM-NLP corpus (Nye et al., ACL 2018); PubMed abstracts with PICO span annotations. Research-use only.",
+      "reader": "ebm_nlp",
+      "notes": "Uses aggregated starting_spans for interventions and outcomes (participants omitted: no project label). Token labels are collapsed to character spans on a single-space token join. Prefer test/gold over test/crowd. Hierarchical Intervention subtypes are not consumed in this reader.",
+      "entity_label_map": {
+        "Intervention": "TREATMENT",
+        "Outcome": "OUTCOME"
+      },
+      "relation_label_map": {}
+    },
+    "treatment_stub": {
+      "source": "Local research stub JSONL (Intervention/Procedure spans). Prefer --corpus ebm_nlp for the peer-used TREATMENT path.",
+      "license": "Research fixture only; not a peer-reviewed corpus release.",
+      "reader": "treatment_stub_jsonl",
+      "notes": "Smoke-path only. Onboards TREATMENT via Intervention/Procedure source labels. Observe-only; does not claim clinical annotation quality.",
+      "entity_label_map": {
+        "Intervention": "TREATMENT",
+        "Procedure": "TREATMENT",
+        "Treatment": "TREATMENT"
+      },
+      "relation_label_map": {}
+    }
+  },
+  "future_project_labels": {
+    "GENE": "from biored (GeneOrGeneProduct) via gbmbert-import-external-corpus --corpus biored",
+    "CELL_TYPE": "from biored (CellLine) via gbmbert-import-external-corpus --corpus biored",
+    "TREATMENT": "from ebm_nlp (Intervention starting spans) via gbmbert-import-external-corpus --corpus ebm_nlp; treatment_stub remains a smoke fixture",
+    "OUTCOME": "from ebm_nlp (Outcome starting spans) via --corpus ebm_nlp",
+    "BIOMARKER": "from biored (SequenceVariant) via --corpus biored; richer biomarker-specific corpora can refine later"
+  }
+}

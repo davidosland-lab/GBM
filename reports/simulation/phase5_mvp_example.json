@@ -1,0 +1,982 @@
+{
+  "assumptions": [
+    "Compartment labels follow a Neftel-inspired MES/NPC/OPC/AC vocabulary for research alignment only.",
+    "Growth is discrete-time logistic with a shared carrying capacity.",
+    "Transition rates are symmetric toy leakage, not inferred from single-cell data in this MVP.",
+    "Kill and delivery multipliers are explicit scenario knobs with literature-themed anchors, not patient-ready predictions.",
+    "Phase 6 may rank these toy scenarios for research comparison only; it is not CDS and not a prescription engine.",
+    "KG-driven modulation uses relation-type research weights only (ENHANCES_DELIVERY_OF -> delivery scale, PREDICTS/IMPROVES -> kill scale, SYNERGIZES_WITH -> combo bonus, TRANSITIONS_TO -> transition scale).",
+    "Modulation bounds are explicit toy clamps, not calibrated effect sizes.",
+    "Resolved scales: evidence=0.950, delivery=1.147, kill=1.127, transition=1.000, synergy=1.000."
+  ],
+  "clinical_validity_claimed": false,
+  "comparison_table": [
+    {
+      "AC": 0.658,
+      "MES": 0.7288,
+      "NPC": 0.71,
+      "OPC": 0.6767,
+      "delta_vs_baseline": 0.0,
+      "final_total": 2.7735,
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "midpoint_total": 1.8502,
+      "relative_reduction": 0.0,
+      "scenario_id": "baseline"
+    },
+    {
+      "AC": 0.2498,
+      "MES": 0.3303,
+      "NPC": 0.2438,
+      "OPC": 0.2231,
+      "delta_vs_baseline": 1.7265,
+      "final_total": 1.047,
+      "label": "Toy TMZ pressure",
+      "midpoint_total": 1.0243,
+      "relative_reduction": 0.6225,
+      "scenario_id": "tmz"
+    },
+    {
+      "AC": 0.0966,
+      "MES": 0.1497,
+      "NPC": 0.0866,
+      "OPC": 0.0757,
+      "delta_vs_baseline": 2.3649,
+      "final_total": 0.4086,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "midpoint_total": 0.6136,
+      "relative_reduction": 0.8527,
+      "scenario_id": "tmz_fus"
+    }
+  ],
+  "comparisons": [
+    {
+      "delta_vs_baseline_total": 0.0,
+      "final_resistance_totals": null,
+      "final_total": 2.7735168280800586,
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "midpoint_total": 1.850216412807077,
+      "relative_reduction_vs_baseline": 0.0,
+      "resistance_enabled": false,
+      "scenario_id": "baseline"
+    },
+    {
+      "delta_vs_baseline_total": 1.7265047120315815,
+      "final_resistance_totals": null,
+      "final_total": 1.047012116048477,
+      "label": "Toy TMZ pressure",
+      "midpoint_total": 1.0243182847879888,
+      "relative_reduction_vs_baseline": 0.6224965698970496,
+      "resistance_enabled": false,
+      "scenario_id": "tmz"
+    },
+    {
+      "delta_vs_baseline_total": 2.3648697135514,
+      "final_resistance_totals": null,
+      "final_total": 0.4086471145286586,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "midpoint_total": 0.6135991758007043,
+      "relative_reduction_vs_baseline": 0.8526610293504002,
+      "resistance_enabled": false,
+      "scenario_id": "tmz_fus"
+    }
+  ],
+  "description": "Phase 5 MVP: literature-parameterized Neftel-inspired four-compartment logistic growth toy model with baseline vs TMZ vs TMZ+FUS scenarios. Research prototype only - not a biophysical digital twin and not clinically validated.",
+  "graph_features": {
+    "delivery_modulation": 1.147,
+    "evidence_modulation": 0.95,
+    "evidence_tier_counts": {
+      "1": 1,
+      "3": 1
+    },
+    "kill_modulation": 1.1265,
+    "mean_evidence_tier": 2.0,
+    "parameter_provenance": [
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "kill_modulation",
+        "value": 1.1265
+      },
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "delivery_modulation",
+        "value": 1.147
+      },
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "parameter": "kill_modulation",
+        "relation": "PREDICTS",
+        "research_weight": 0.755,
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "parameter": "delivery_modulation",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "research_weight": 0.42,
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "relation_count": 2,
+    "relation_type_counts": {
+      "ENHANCES_DELIVERY_OF": 1,
+      "PREDICTS": 1
+    },
+    "sample_relations": [
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "relation": "PREDICTS",
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "source_path": "data\\examples\\graph_records_sample.jsonl",
+    "synergy_modulation": 1.0,
+    "transition_modulation": 1.0,
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+    "warnings": []
+  },
+  "graph_modulation": {
+    "assumptions": [
+      "KG-driven modulation uses relation-type research weights only (ENHANCES_DELIVERY_OF -> delivery scale, PREDICTS/IMPROVES -> kill scale, SYNERGIZES_WITH -> combo bonus, TRANSITIONS_TO -> transition scale).",
+      "Modulation bounds are explicit toy clamps, not calibrated effect sizes.",
+      "Resolved scales: evidence=0.950, delivery=1.147, kill=1.127, transition=1.000, synergy=1.000."
+    ],
+    "base_kill_rate_scale": 1.1265,
+    "delivery_multiplier_scale": 1.147,
+    "evidence_modulation": 0.95,
+    "provenance": [
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "kill_modulation",
+        "value": 1.1265
+      },
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "delivery_modulation",
+        "value": 1.147
+      },
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "parameter": "kill_modulation",
+        "relation": "PREDICTS",
+        "research_weight": 0.755,
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "parameter": "delivery_modulation",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "research_weight": 0.42,
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "synergy_bonus": 0.0,
+    "transition_rate_scale": 1.0
+  },
+  "literature_anchors": [
+    {
+      "note": "Neftel et al. cell-state framework cited as vocabulary inspiration only (not used to fit rates here).",
+      "pmid": "31327527"
+    },
+    {
+      "note": "Sample graph fixture includes MGMT-to-TMZ response PREDICTS relation as an evidence-tier example.",
+      "pmid": "29097493"
+    },
+    {
+      "note": "Sample graph fixture includes FUS ENHANCES_DELIVERY_OF temozolomide as a delivery-modifier example.",
+      "pmid": "40000001"
+    }
+  ],
+  "not_simulated": [
+    "Patient-specific clinical outcomes or imaging-constrained geometry",
+    "Validated pharmacokinetics / pharmacodynamics",
+    "Spatial invasion, vasculature, or full immune digital twin",
+    "Clinical decision support or patient-ready treatment prescriptions",
+    "Clinical validity or patient-ready predictions"
+  ],
+  "pack_name": "compartment_toy_v1",
+  "phase": "Phase 5 research prototype",
+  "resistance_enabled": false,
+  "results": [
+    {
+      "assumptions": [
+        "Compartment labels follow a Neftel-inspired MES/NPC/OPC/AC vocabulary for research alignment only.",
+        "Growth is discrete-time logistic with a shared carrying capacity.",
+        "Transition rates are symmetric toy leakage, not inferred from single-cell data in this MVP.",
+        "Kill and delivery multipliers are explicit scenario knobs with literature-themed anchors, not patient-ready predictions.",
+        "Phase 6 may rank these toy scenarios for research comparison only; it is not CDS and not a prescription engine.",
+        "Baseline isolates growth and transition dynamics without kill pressure.",
+        "KG-driven modulation uses relation-type research weights only (ENHANCES_DELIVERY_OF -> delivery scale, PREDICTS/IMPROVES -> kill scale, SYNERGIZES_WITH -> combo bonus, TRANSITIONS_TO -> transition scale).",
+        "Modulation bounds are explicit toy clamps, not calibrated effect sizes.",
+        "Resolved scales: evidence=0.950, delivery=1.147, kill=1.127, transition=1.000, synergy=1.000."
+      ],
+      "dt": 1.0,
+      "final_resistance_totals": null,
+      "final_state": {
+        "AC": 0.6579758319396456,
+        "MES": 0.7287825821003837,
+        "NPC": 0.7100365798037348,
+        "OPC": 0.6767218342362946
+      },
+      "final_total": 2.7735168280800586,
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "parameters": {
+        "base_kill_rate": 0.0,
+        "carrying_capacity": 4.0,
+        "delivery_multiplier": 1.147,
+        "effective_kill": 0.0,
+        "evidence_modulation": 0.95,
+        "initial_state": {
+          "AC": 0.2,
+          "MES": 0.3,
+          "NPC": 0.25,
+          "OPC": 0.25
+        },
+        "intrinsic_growth_rate": 0.08,
+        "resistance": null,
+        "state_kill_weights": {
+          "AC": 0.9,
+          "MES": 0.7,
+          "NPC": 1.0,
+          "OPC": 1.0
+        },
+        "transition_rate": 0.02
+      },
+      "resistance_enabled": false,
+      "scenario_id": "baseline",
+      "steps": 24,
+      "trajectory": [
+        {
+          "AC": 0.2,
+          "MES": 0.3,
+          "NPC": 0.25,
+          "OPC": 0.25,
+          "t": 0.0,
+          "total": 1.0
+        },
+        {
+          "AC": 0.21518,
+          "MES": 0.31482000000000004,
+          "NPC": 0.26606,
+          "OPC": 0.26394000000000006,
+          "t": 1.0,
+          "total": 1.06
+        },
+        {
+          "AC": 0.2309751024,
+          "MES": 0.33018889760000003,
+          "NPC": 0.28269197664,
+          "OPC": 0.27847202336000004,
+          "t": 2.0,
+          "total": 1.122328
+        },
+        {
+          "AC": 0.24737160254866966,
+          "MES": 0.34608931605549037,
+          "NPC": 0.2998772264768867,
+          "OPC": 0.29358369212727337,
+          "t": 3.0,
+          "total": 1.1869218372083201
+        },
+        {
+          "AC": 0.264350791220546,
+          "MES": 0.3624991663955271,
+          "NPC": 0.31759207673428175,
+          "OPC": 0.3092578808817914,
+          "t": 4.0,
+          "total": 1.2536999152321462
+        },
+        {
+          "AC": 0.2818887818181017,
+          "MES": 0.3793915376327263,
+          "NPC": 0.33580777361214287,
+          "OPC": 0.3254725458386852,
+          "t": 5.0,
+          "total": 1.322560638901656
+        },
+        {
+          "AC": 0.29995641485325364,
+          "MES": 0.39673466371792093,
+          "NPC": 0.3544904517295832,
+          "OPC": 0.34220062684159147,
+          "t": 6.0,
+          "total": 1.3933821571423493
+        },
+        {
+          "AC": 0.31851925030184275,
+          "MES": 0.41449197619659905,
+          "NPC": 0.37360119405956516,
+          "OPC": 0.3594100324388768,
+          "t": 7.0,
+          "total": 1.466022452996884
+        },
+        {
+          "AC": 0.33753765665608393,
+          "MES": 0.4326222496353233,
+          "NPC": 0.39309618971106275,
+          "OPC": 0.37706371658034465,
+          "t": 8.0,
+          "total": 1.5403198125828146
+        },
+        {
+          "AC": 0.3569670031082227,
+          "MES": 0.4510798444361456,
+          "NPC": 0.4129269943225504,
+          "OPC": 0.3951198532218181,
+          "t": 9.0,
+          "total": 1.616093695088737
+        },
+        {
+          "AC": 0.37675795833045284,
+          "MES": 0.46981504870440927,
+          "NPC": 0.43304089471307683,
+          "OPC": 0.4135321123217855,
+          "t": 10.0,
+          "total": 1.6931460140697243
+        },
+        {
+          "AC": 0.3968568958652947,
+          "MES": 0.4887745174827544,
+          "NPC": 0.4533813759023888,
+          "OPC": 0.4322500374456606,
+          "t": 11.0,
+          "total": 1.7712628266960986
+        },
+        {
+          "AC": 0.417206402347391,
+          "MES": 0.5079018040561474,
+          "NPC": 0.47388868481231994,
+          "OPC": 0.45121952159121875,
+          "t": 12.0,
+          "total": 1.850216412807077
+        },
+        {
+          "AC": 0.437745880823818,
+          "MES": 0.5271379743497966,
+          "NPC": 0.4945004810882823,
+          "OPC": 0.4703833740853325,
+          "t": 13.0,
+          "total": 1.9297677103472293
+        },
+        {
+          "AC": 0.4584122375387913,
+          "MES": 0.5464222918897246,
+          "NPC": 0.5151525617489106,
+          "OPC": 0.4896819676796056,
+          "t": 14.0,
+          "total": 2.009669058857032
+        },
+        {
+          "AC": 0.4791406369303577,
+          "MES": 0.5656929575911663,
+          "NPC": 0.5357796430114812,
+          "OPC": 0.5090539515100432,
+          "t": 15.0,
+          "total": 2.0896671890430483
+        },
+        {
+          "AC": 0.4998653064807245,
+          "MES": 0.5848878859928905,
+          "NPC": 0.556316179871181,
+          "OPC": 0.5284370126024346,
+          "t": 16.0,
+          "total": 2.1695063849472307
+        },
+        {
+          "AC": 0.5205203706772129,
+          "MES": 0.6039454976510231,
+          "NPC": 0.5766972020275144,
+          "OPC": 0.5477686663007221,
+          "t": 17.0,
+          "total": 2.2489317366564725
+        },
+        {
+          "AC": 0.5410406918466552,
+          "MES": 0.6228055063864328,
+          "NPC": 0.5968591436999885,
+          "OPC": 0.5669870545330997,
+          "t": 18.0,
+          "total": 2.327692396466176
+        },
+        {
+          "AC": 0.5613626951353713,
+          "MES": 0.6414096800306993,
+          "NPC": 0.6167406448464462,
+          "OPC": 0.5860317303196247,
+          "t": 19.0,
+          "total": 2.4055447503321417
+        },
+        {
+          "AC": 0.5814251554646649,
+          "MES": 0.6597025542561862,
+          "NPC": 0.6362833023098439,
+          "OPC": 0.6048444074110074,
+          "t": 20.0,
+          "total": 2.4822554194417026
+        },
+        {
+          "AC": 0.6011699258697647,
+          "MES": 0.6776320809552774,
+          "NPC": 0.6554323514185524,
+          "OPC": 0.62336965540649,
+          "t": 21.0,
+          "total": 2.5576040136500846
+        },
+        {
+          "AC": 0.62054258912854,
+          "MES": 0.6951501953361154,
+          "NPC": 0.6741372614279427,
+          "OPC": 0.6415555230367127,
+          "t": 22.0,
+          "total": 2.6313855689293106
+        },
+        {
+          "AC": 0.6394930178428044,
+          "MES": 0.7122132892553291,
+          "NPC": 0.6923522317354304,
+          "OPC": 0.6593540753627032,
+          "t": 23.0,
+          "total": 2.7034126141962673
+        },
+        {
+          "AC": 0.6579758319396456,
+          "MES": 0.7287825821003837,
+          "NPC": 0.7100365798037348,
+          "OPC": 0.6767218342362946,
+          "t": 24.0,
+          "total": 2.7735168280800586
+        }
+      ],
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+    },
+    {
+      "assumptions": [
+        "Compartment labels follow a Neftel-inspired MES/NPC/OPC/AC vocabulary for research alignment only.",
+        "Growth is discrete-time logistic with a shared carrying capacity.",
+        "Transition rates are symmetric toy leakage, not inferred from single-cell data in this MVP.",
+        "Kill and delivery multipliers are explicit scenario knobs with literature-themed anchors, not patient-ready predictions.",
+        "Phase 6 may rank these toy scenarios for research comparison only; it is not CDS and not a prescription engine.",
+        "TMZ kill rate is a scenario knob inspired by alkylating-agent literature themes, not a calibrated effect size.",
+        "KG-driven modulation uses relation-type research weights only (ENHANCES_DELIVERY_OF -> delivery scale, PREDICTS/IMPROVES -> kill scale, SYNERGIZES_WITH -> combo bonus, TRANSITIONS_TO -> transition scale).",
+        "Modulation bounds are explicit toy clamps, not calibrated effect sizes.",
+        "Resolved scales: evidence=0.950, delivery=1.147, kill=1.127, transition=1.000, synergy=1.000."
+      ],
+      "dt": 1.0,
+      "final_resistance_totals": null,
+      "final_state": {
+        "AC": 0.24983587670749813,
+        "MES": 0.33034417616574746,
+        "NPC": 0.24375658245530066,
+        "OPC": 0.22307548071993072
+      },
+      "final_total": 1.047012116048477,
+      "label": "Toy TMZ pressure",
+      "parameters": {
+        "base_kill_rate": 0.05632500000000001,
+        "carrying_capacity": 4.0,
+        "delivery_multiplier": 1.147,
+        "effective_kill": 0.06137453625,
+        "evidence_modulation": 0.95,
+        "initial_state": {
+          "AC": 0.2,
+          "MES": 0.3,
+          "NPC": 0.25,
+          "OPC": 0.25
+        },
+        "intrinsic_growth_rate": 0.08,
+        "resistance": null,
+        "state_kill_weights": {
+          "AC": 0.9,
+          "MES": 0.7,
+          "NPC": 1.0,
+          "OPC": 1.0
+        },
+        "transition_rate": 0.02
+      },
+      "resistance_enabled": false,
+      "scenario_id": "tmz",
+      "steps": 24,
+      "trajectory": [
+        {
+          "AC": 0.2,
+          "MES": 0.3,
+          "NPC": 0.25,
+          "OPC": 0.25,
+          "t": 0.0,
+          "total": 1.0
+        },
+        {
+          "AC": 0.2032940845607525,
+          "MES": 0.3012946479484425,
+          "NPC": 0.249730690885325,
+          "OPC": 0.24774080490217507,
+          "t": 1.0,
+          "total": 1.0020602282966953
+        },
+        {
+          "AC": 0.20643364323173838,
+          "MES": 0.3026050887680499,
+          "NPC": 0.24944457132504502,
+          "OPC": 0.24563358627184906,
+          "t": 2.0,
+          "total": 1.0041168895966823
+        },
+        {
+          "AC": 0.20942778306741097,
+          "MES": 0.30392735043514224,
+          "NPC": 0.2491457730140384,
+          "OPC": 0.2436682863107001,
+          "t": 3.0,
+          "total": 1.0061691928272916
+        },
+        {
+          "AC": 0.21228499819462784,
+          "MES": 0.30525783713162524,
+          "NPC": 0.24883796785350346,
+          "OPC": 0.24183554959722345,
+          "t": 4.0,
+          "total": 1.0082163527769799
+        },
+        {
+          "AC": 0.21501321393841127,
+          "MES": 0.30659329820918024,
+          "NPC": 0.24852440948420002,
+          "OPC": 0.24012667150956726,
+          "t": 5.0,
+          "total": 1.0102575931413587
+        },
+        {
+          "AC": 0.21761982766468532,
+          "MES": 0.30793079962045755,
+          "NPC": 0.24820797137401596,
+          "OPC": 0.23853355054834158,
+          "t": 6.0,
+          "total": 1.0122921492075003
+        },
+        {
+          "AC": 0.22011174658786095,
+          "MES": 0.3092676976235825,
+          "NPC": 0.24789118173518232,
+          "OPC": 0.23704864426109118,
+          "t": 7.0,
+          "total": 1.014319270207717
+        },
+        {
+          "AC": 0.22249542277237744,
+          "MES": 0.31060161458139074,
+          "NPC": 0.2475762555248239,
+          "OPC": 0.2356649284929278,
+          "t": 8.0,
+          "total": 1.01633822137152
+        },
+        {
+          "AC": 0.22477688553995295,
+          "MES": 0.31193041669074567,
+          "NPC": 0.24726512376257714,
+          "OPC": 0.23437585970889627,
+          "t": 9.0,
+          "total": 1.0183482857021722
+        },
+        {
+          "AC": 0.22696177147824198,
+          "MES": 0.3132521934901561,
+          "NPC": 0.2469594603806045,
+          "OPC": 0.2331753401531358,
+          "t": 10.0,
+          "total": 1.0203487655021384
+        },
+        {
+          "AC": 0.22905535223175214,
+          "MES": 0.31456523900577066,
+          "NPC": 0.24666070680436802,
+          "OPC": 0.23205768562790588,
+          "t": 11.0,
+          "total": 1.0223389836697967
+        },
+        {
+          "AC": 0.23106256024214766,
+          "MES": 0.31586803440677513,
+          "NPC": 0.24637009444688407,
+          "OPC": 0.231017595692182,
+          "t": 12.0,
+          "total": 1.0243182847879888
+        },
+        {
+          "AC": 0.23298801259237767,
+          "MES": 0.31715923205130564,
+          "NPC": 0.24608866528476045,
+          "OPC": 0.2300501260948975,
+          "t": 13.0,
+          "total": 1.0262860360233412
+        },
+        {
+          "AC": 0.23483603309734113,
+          "MES": 0.31843764081330234,
+          "NPC": 0.24581729067102834,
+          "OPC": 0.22915066327210418,
+          "t": 14.0,
+          "total": 1.028241627853776
+        },
+        {
+          "AC": 0.23661067277296177,
+          "MES": 0.3197022125893056,
+          "NPC": 0.24555668852753149,
+          "OPC": 0.2283149007504358,
+          "t": 15.0,
+          "total": 1.0301844746402347
+        },
+        {
+          "AC": 0.23831572880553062,
+          "MES": 0.3209520298921133,
+          "NPC": 0.24530743904834484,
+          "OPC": 0.2275388173113658,
+          "t": 16.0,
+          "total": 1.0321140150573545
+        },
+        {
+          "AC": 0.2399547621339207,
+          "MES": 0.32218629444550956,
+          "NPC": 0.24506999903529253,
+          "OPC": 0.22681865678193225,
+          "t": 17.0,
+          "total": 1.034029712396655
+        },
+        {
+          "AC": 0.24153111374872752,
+          "MES": 0.3234043167010015,
+          "NPC": 0.2448447149770451,
+          "OPC": 0.22615090932792375,
+          "t": 18.0,
+          "total": 1.0359310547546978
+        },
+        {
+          "AC": 0.24304791980448953,
+          "MES": 0.3246055062037009,
+          "NPC": 0.24463183497444152,
+          "OPC": 0.22553229413505166,
+          "t": 19.0,
+          "total": 1.0378175551176836
+        },
+        {
+          "AC": 0.24450812563384672,
+          "MES": 0.325789362740201,
+          "NPC": 0.24443151960654041,
+          "OPC": 0.2249597433724316,
+          "t": 20.0,
+          "total": 1.0396887513530197
+        },
+        {
+          "AC": 0.2459144987457515,
+          "MES": 0.32695546820656884,
+          "NPC": 0.24424385182440056,
+          "OPC": 0.2244303873408194,
+          "t": 21.0,
+          "total": 1.0415442061175404
+        },
+        {
+          "AC": 0.24726964088362025,
+          "MES": 0.32810347913942756,
+          "NPC": 0.24406884595267925,
+          "OPC": 0.22394154071554304,
+          "t": 22.0,
+          "total": 1.0433835066912702
+        },
+        {
+          "AC": 0.24857599921356116,
+          "MES": 0.3292331198575793,
+          "NPC": 0.24390645587276613,
+          "OPC": 0.22349068980099435,
+          "t": 23.0,
+          "total": 1.045206264744901
+        },
+        {
+          "AC": 0.24983587670749813,
+          "MES": 0.33034417616574746,
+          "NPC": 0.24375658245530066,
+          "OPC": 0.22307548071993072,
+          "t": 24.0,
+          "total": 1.047012116048477
+        }
+      ],
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+    },
+    {
+      "assumptions": [
+        "Compartment labels follow a Neftel-inspired MES/NPC/OPC/AC vocabulary for research alignment only.",
+        "Growth is discrete-time logistic with a shared carrying capacity.",
+        "Transition rates are symmetric toy leakage, not inferred from single-cell data in this MVP.",
+        "Kill and delivery multipliers are explicit scenario knobs with literature-themed anchors, not patient-ready predictions.",
+        "Phase 6 may rank these toy scenarios for research comparison only; it is not CDS and not a prescription engine.",
+        "FUS is modelled only as a delivery multiplier on effective kill pressure (research toy), not as validated BBB opening pharmacology.",
+        "KG-driven modulation uses relation-type research weights only (ENHANCES_DELIVERY_OF -> delivery scale, PREDICTS/IMPROVES -> kill scale, SYNERGIZES_WITH -> combo bonus, TRANSITIONS_TO -> transition scale).",
+        "Modulation bounds are explicit toy clamps, not calibrated effect sizes.",
+        "Resolved scales: evidence=0.950, delivery=1.147, kill=1.127, transition=1.000, synergy=1.000."
+      ],
+      "dt": 1.0,
+      "final_resistance_totals": null,
+      "final_state": {
+        "AC": 0.09660076851659088,
+        "MES": 0.1497467395238617,
+        "NPC": 0.08657744259676854,
+        "OPC": 0.07572216389143746
+      },
+      "final_total": 0.4086471145286586,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "parameters": {
+        "base_kill_rate": 0.05632500000000001,
+        "carrying_capacity": 4.0,
+        "delivery_multiplier": 2.0646,
+        "effective_kill": 0.11047416525,
+        "evidence_modulation": 0.95,
+        "initial_state": {
+          "AC": 0.2,
+          "MES": 0.3,
+          "NPC": 0.25,
+          "OPC": 0.25
+        },
+        "intrinsic_growth_rate": 0.08,
+        "resistance": null,
+        "state_kill_weights": {
+          "AC": 0.9,
+          "MES": 0.7,
+          "NPC": 1.0,
+          "OPC": 1.0
+        },
+        "transition_rate": 0.02
+      },
+      "resistance_enabled": false,
+      "scenario_id": "tmz_fus",
+      "steps": 24,
+      "trajectory": [
+        {
+          "AC": 0.2,
+          "MES": 0.3,
+          "NPC": 0.25,
+          "OPC": 0.25,
+          "t": 0.0,
+          "total": 1.0
+        },
+        {
+          "AC": 0.1937853522093545,
+          "MES": 0.29047436630719653,
+          "NPC": 0.236667243593585,
+          "OPC": 0.23478144882391505,
+          "t": 1.0,
+          "total": 0.955708410934051
+        },
+        {
+          "AC": 0.18777447444943246,
+          "MES": 0.28138327645245914,
+          "NPC": 0.22431935974466907,
+          "OPC": 0.22082165852019336,
+          "t": 2.0,
+          "total": 0.9142987691667541
+        },
+        {
+          "AC": 0.18196284425526282,
+          "MES": 0.27269376263879663,
+          "NPC": 0.2128639327899727,
+          "OPC": 0.2079907006444867,
+          "t": 3.0,
+          "total": 0.8755112403285188
+        },
+        {
+          "AC": 0.17634553647791698,
+          "MES": 0.2643766529029439,
+          "NPC": 0.20221908233966718,
+          "OPC": 0.19617465890988856,
+          "t": 4.0,
+          "total": 0.8391159306304166
+        },
+        {
+          "AC": 0.17091733940554085,
+          "MES": 0.2564060159092957,
+          "NPC": 0.19231202847425555,
+          "OPC": 0.18527332584210035,
+          "t": 5.0,
+          "total": 0.8049087096311924
+        },
+        {
+          "AC": 0.16567284852018022,
+          "MES": 0.24875869972828352,
+          "NPC": 0.1830778865716711,
+          "OPC": 0.17519827952929734,
+          "t": 6.0,
+          "total": 0.7727077143494321
+        },
+        {
+          "AC": 0.16060654213482486,
+          "MES": 0.24141394677973307,
+          "NPC": 0.17445864952884124,
+          "OPC": 0.1658712696637568,
+          "t": 7.0,
+          "total": 0.7423504081071559
+        },
+        {
+          "AC": 0.15571284229898766,
+          "MES": 0.23435307085485282,
+          "NPC": 0.16640232386929932,
+          "OPC": 0.1572228567423297,
+          "t": 8.0,
+          "total": 0.7136910937654695
+        },
+        {
+          "AC": 0.15098616369200998,
+          "MES": 0.2275591850079136,
+          "NPC": 0.15886219296738927,
+          "OPC": 0.14919125962561053,
+          "t": 9.0,
+          "total": 0.6865988012929234
+        },
+        {
+          "AC": 0.14642095269690233,
+          "MES": 0.22101697134301992,
+          "NPC": 0.1517961858626942,
+          "OPC": 0.14172137547548702,
+          "t": 10.0,
+          "total": 0.6609554853781036
+        },
+        {
+          "AC": 0.14201171843092442,
+          "MES": 0.214712485468491,
+          "NPC": 0.14516633424680728,
+          "OPC": 0.1347639430029379,
+          "t": 11.0,
+          "total": 0.6366544811491606
+        },
+        {
+          "AC": 0.13775305717751396,
+          "MES": 0.20863298976649713,
+          "NPC": 0.13893830344580496,
+          "OPC": 0.12827482541088833,
+          "t": 12.0,
+          "total": 0.6135991758007043
+        },
+        {
+          "AC": 0.133639671398848,
+          "MES": 0.2027668107146501,
+          "NPC": 0.13308098579527983,
+          "OPC": 0.12221439374554773,
+          "t": 13.0,
+          "total": 0.5917018616543256
+        },
+        {
+          "AC": 0.1296663842949666,
+          "MES": 0.19710321636379288,
+          "NPC": 0.12756614686057943,
+          "OPC": 0.11654699482605888,
+          "t": 14.0,
+          "total": 0.5708827423453978
+        },
+        {
+          "AC": 0.1258281507030357,
+          "MES": 0.1916323107711475,
+          "NPC": 0.12236811660666046,
+          "OPC": 0.11124049069767618,
+          "t": 15.0,
+          "total": 0.5510690687785198
+        },
+        {
+          "AC": 0.12212006499049649,
+          "MES": 0.18634494274752827,
+          "NPC": 0.11746351895644605,
+          "OPC": 0.10626585879407287,
+          "t": 16.0,
+          "total": 0.5321943854885437
+        },
+        {
+          "AC": 0.11853736648194742,
+          "MES": 0.18123262673010926,
+          "NPC": 0.11283103426040597,
+          "OPC": 0.10159684381200684,
+          "t": 17.0,
+          "total": 0.5141978712844695
+        },
+        {
+          "AC": 0.11507544286648251,
+          "MES": 0.17628747396034838,
+          "NPC": 0.10845119008477375,
+          "OPC": 0.09720965378329374,
+          "t": 18.0,
+          "total": 0.4970237606948984
+        },
+        {
+          "AC": 0.11172983195580674,
+          "MES": 0.1715021324472744,
+          "NPC": 0.1043061764514438,
+          "OPC": 0.09308269404243621,
+          "t": 19.0,
+          "total": 0.48062083489696117
+        },
+        {
+          "AC": 0.10849622210056808,
+          "MES": 0.16686973444286354,
+          "NPC": 0.10037968226049958,
+          "OPC": 0.08919633378625394,
+          "t": 20.0,
+          "total": 0.4649419725901851
+        },
+        {
+          "AC": 0.10537045152043563,
+          "MES": 0.16238385035920644,
+          "NPC": 0.09665675012116927,
+          "OPC": 0.08553270074609184,
+          "t": 21.0,
+          "total": 0.4499437527469032
+        },
+        {
+          "AC": 0.10234850676048692,
+          "MES": 0.15803844822493007,
+          "NPC": 0.0931236472282931,
+          "OPC": 0.08207550017661071,
+          "t": 22.0,
+          "total": 0.43558610239032075
+        },
+        {
+          "AC": 0.09942652045081211,
+          "MES": 0.15382785791749928,
+          "NPC": 0.08976775026461528,
+          "OPC": 0.07880985493397981,
+          "t": 23.0,
+          "total": 0.4218319835669065
+        },
+        {
+          "AC": 0.09660076851659088,
+          "MES": 0.1497467395238617,
+          "NPC": 0.08657744259676854,
+          "OPC": 0.07572216389143746,
+          "t": 24.0,
+          "total": 0.4086471145286586
+        }
+      ],
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+    }
+  ],
+  "simulated": [
+    "Discrete-time Neftel-inspired compartment abundances",
+    "Logistic growth with shared carrying capacity",
+    "Toy state transitions and kill/pressure scenario knobs",
+    "Optional evidence-tier and relation-type research weighting from graph JSONL"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

@@ -1,0 +1,82 @@
+{
+  "accuracy": 0.625,
+  "confusion_matrix": {
+    "ASSOCIATED_WITH": {
+      "ASSOCIATED_WITH": 8,
+      "IMPROVES": 3,
+      "NO_RELATION": 1,
+      "PREDICTS": 0,
+      "WORSENS": 0
+    },
+    "IMPROVES": {
+      "ASSOCIATED_WITH": 0,
+      "IMPROVES": 3,
+      "NO_RELATION": 0,
+      "PREDICTS": 0,
+      "WORSENS": 0
+    },
+    "NO_RELATION": {
+      "ASSOCIATED_WITH": 0,
+      "IMPROVES": 0,
+      "NO_RELATION": 2,
+      "PREDICTS": 0,
+      "WORSENS": 0
+    },
+    "PREDICTS": {
+      "ASSOCIATED_WITH": 0,
+      "IMPROVES": 0,
+      "NO_RELATION": 0,
+      "PREDICTS": 1,
+      "WORSENS": 0
+    },
+    "WORSENS": {
+      "ASSOCIATED_WITH": 0,
+      "IMPROVES": 3,
+      "NO_RELATION": 0,
+      "PREDICTS": 2,
+      "WORSENS": 1
+    }
+  },
+  "examples": 24,
+  "labels": [
+    {
+      "f1": 0.8,
+      "label": "ASSOCIATED_WITH",
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "support": 12
+    },
+    {
+      "f1": 0.5,
+      "label": "IMPROVES",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "support": 3
+    },
+    {
+      "f1": 0.8,
+      "label": "NO_RELATION",
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "support": 2
+    },
+    {
+      "f1": 0.5,
+      "label": "PREDICTS",
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "support": 1
+    },
+    {
+      "f1": 0.2857142857142857,
+      "label": "WORSENS",
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "support": 6
+    }
+  ],
+  "macro_f1": 0.5771428571428572,
+  "task": "relation_extraction",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

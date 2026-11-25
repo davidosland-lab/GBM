@@ -1,0 +1,88 @@
+{
+  "name": "compartment_resistance_v1",
+  "description": "Phase 5 post-MVP: Neftel-inspired compartments plus optional sensitive/persister/resistant axis. Research prototype only — not clinically validated.",
+  "steps": 24,
+  "dt": 1.0,
+  "initial_state": {
+    "MES": 0.30,
+    "NPC": 0.25,
+    "OPC": 0.25,
+    "AC": 0.20
+  },
+  "growth": {
+    "intrinsic_growth_rate": 0.08,
+    "carrying_capacity": 4.0,
+    "transition_rate": 0.02,
+    "base_kill_rate": 0.0,
+    "delivery_multiplier": 1.0,
+    "evidence_modulation": 1.0,
+    "state_kill_weights": {
+      "MES": 0.70,
+      "NPC": 1.00,
+      "OPC": 1.00,
+      "AC": 0.90
+    }
+  },
+  "resistance": {
+    "enabled": true,
+    "initial_fractions": {
+      "sensitive": 0.85,
+      "persister": 0.12,
+      "resistant": 0.03
+    },
+    "kill_multipliers": {
+      "sensitive": 1.0,
+      "persister": 0.35,
+      "resistant": 0.10
+    },
+    "induction_rate": 0.02,
+    "progression_rate": 0.01,
+    "assumptions": [
+      "Resistance axis is a research construct only (sensitive/persister/resistant).",
+      "Induction/progression activate under kill pressure at fixed toy rates.",
+      "Kill multipliers are scenario research weights, not validated PK/PD."
+    ]
+  },
+  "scenarios": [
+    {
+      "scenario_id": "baseline",
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "base_kill_rate": 0.0,
+      "delivery_multiplier": 1.0,
+      "notes": [
+        "Baseline isolates growth/transition/resistance mix without kill pressure."
+      ]
+    },
+    {
+      "scenario_id": "tmz",
+      "label": "Toy TMZ pressure",
+      "base_kill_rate": 0.05,
+      "delivery_multiplier": 1.0,
+      "notes": [
+        "TMZ pressure preferentially removes sensitive cells in this toy model."
+      ]
+    },
+    {
+      "scenario_id": "tmz_fus",
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "base_kill_rate": 0.05,
+      "delivery_multiplier": 1.8,
+      "apply_synergy_bonus": true,
+      "notes": [
+        "FUS is modelled only as a delivery multiplier (research toy)."
+      ]
+    }
+  ],
+  "assumptions": [
+    "Compartment labels follow a Neftel-inspired MES/NPC/OPC/AC vocabulary for research alignment only.",
+    "Growth is discrete-time logistic with a shared carrying capacity.",
+    "Resistance subpopulations are optional and explicitly toy-parameterized.",
+    "Outputs are for in-silico hypothesis exploration only."
+  ],
+  "literature_anchors": [
+    {
+      "pmid": "31327527",
+      "note": "Neftel et al. cell-state framework cited as vocabulary inspiration only."
+    }
+  ]
+}

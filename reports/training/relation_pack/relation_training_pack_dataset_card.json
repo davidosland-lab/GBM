@@ -38,37 +38,47 @@
       "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
     },
     "relation_test.jsonl": {
-      "examples": 4,
+      "examples": 33,
       "label_counts": {
-        "ASSOCIATED_WITH": 2,
-        "NO_RELATION": 1,
-        "PREDICTS": 1
+        "ASSOCIATED_WITH": 12,
+        "IMPROVES": 3,
+        "NO_RELATION": 4,
+        "PREDICTS": 1,
+        "SYNERGIZES_WITH": 2,
+        "WORSENS": 11
       },
       "missing_text": 0,
-      "sha256": "440F352594574E371F20DD90A5C020080B8C7C8A7DF526C82680699108B0DFBE"
+      "sha256": "C11F897562D2165AF99921DBF3097D7C9F850A3ECE86D38FB6323D34270A0E76"
     },
     "relation_train.jsonl": {
-      "examples": 39,
+      "examples": 255,
       "label_counts": {
-        "ASSOCIATED_WITH": 11,
-        "NO_RELATION": 14,
-        "PREDICTS": 14
+        "ASSOCIATED_WITH": 58,
+        "ENHANCES_DELIVERY_OF": 2,
+        "IMPROVES": 38,
+        "NO_RELATION": 68,
+        "PREDICTS": 43,
+        "TARGETS": 2,
+        "WORSENS": 44
       },
       "missing_text": 0,
-      "sha256": "91CF9D3E327624E5F611B13A31B6FC34AC529C0F168F523A9B15FA15CAFE97C7"
+      "sha256": "9099B87311CF4AD2950A979ED9BE93AECFDDD3C2F3C9377FCD1EC2A8AE4212DC"
     },
     "relation_validation.jsonl": {
-      "examples": 5,
+      "examples": 25,
       "label_counts": {
-        "ASSOCIATED_WITH": 3,
-        "NO_RELATION": 1,
-        "PREDICTS": 1
+        "ASSOCIATED_WITH": 12,
+        "IMPROVES": 3,
+        "NO_RELATION": 2,
+        "PREDICTS": 2,
+        "SYNERGIZES_WITH": 3,
+        "WORSENS": 3
       },
       "missing_text": 0,
-      "sha256": "B9BAB9DFB731E67C7E42EB2686FB9B423618095E6BFC24C34DCC5C6BEF693822"
+      "sha256": "33FE80682BF7146325CAE22031C0D5757D4141C30A0B2334BB3BB1510F189D41"
     }
   },
-  "total_examples": 48,
+  "total_examples": 313,
   "warnings": [
     "evidence_test.jsonl: no examples",
     "evidence_train.jsonl: no examples",

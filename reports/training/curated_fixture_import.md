@@ -4,17 +4,17 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Output directory: `data\training\curated_import`
 - Safe: True
-- Evidence rows: 48
-- Entity rows: 96
-- Reviewed queue rows: 96
-- Source PMIDs: 42
+- Evidence rows: 1016
+- Entity rows: 9555
+- Reviewed queue rows: 1329
+- Source PMIDs: 1015
 - Missing PMID rows: 0
 - Missing review metadata rows: 0
 - Warnings: 0
 
 ## Reviewed Item Types
-- evidence_claim: 48
-- graph_relation: 48
+- evidence_claim: 1016
+- graph_relation: 313
 
 ## Copied Files
 - none

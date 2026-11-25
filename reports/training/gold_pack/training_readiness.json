@@ -3,64 +3,76 @@
   "leakage_warnings": [],
   "min_examples_per_label": 2,
   "min_examples_per_task": 10,
-  "ready": true,
+  "ready": false,
   "task_reports": [
     {
-      "dominant_label_fraction": 0.09375,
+      "dominant_label_fraction": 0.43586753731343286,
       "duplicate_count": 0,
-      "example_count": 96,
+      "example_count": 8576,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "BIOMARKER": 8,
-        "CELL_STATE": 8,
-        "CELL_TYPE": 8,
-        "DELIVERY_MODIFIER": 8,
-        "DISEASE": 8,
-        "DRUG": 7,
-        "GENE": 9,
-        "OUTCOME": 8,
-        "PATHWAY": 8,
-        "TREATMENT": 9,
-        "TRIAL_PHASE": 8,
-        "UNKNOWN": 7
+        "BIOMARKER": 320,
+        "CELL_STATE": 131,
+        "CELL_TYPE": 212,
+        "DELIVERY_MODIFIER": 290,
+        "DISEASE": 3738,
+        "DRUG": 928,
+        "GENE": 672,
+        "OUTCOME": 1424,
+        "PATHWAY": 93,
+        "TREATMENT": 638,
+        "TRIAL_PHASE": 71,
+        "UNKNOWN": 59
       },
       "ready": true,
       "task": "ner",
       "warnings": []
     },
     {
-      "dominant_label_fraction": 0.16666666666666666,
-      "duplicate_count": 0,
-      "example_count": 48,
+      "dominant_label_fraction": 0.3868110236220472,
+      "duplicate_count": 86,
+      "example_count": 1016,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "0": 8,
-        "1": 8,
-        "2": 8,
-        "3": 8,
-        "4": 8,
-        "5": 8
+        "0": 175,
+        "1": 114,
+        "2": 115,
+        "3": 393,
+        "4": 111,
+        "5": 108
       },
-      "ready": true,
+      "ready": false,
       "task": "evidence",
-      "warnings": []
+      "warnings": [
+        "86 duplicate example(s)"
+      ]
     },
     {
-      "dominant_label_fraction": 0.3333333333333333,
-      "duplicate_count": 0,
-      "example_count": 48,
+      "dominant_label_fraction": 0.26198083067092653,
+      "duplicate_count": 7,
+      "example_count": 313,
       "invalid_ner_span_count": 0,
       "label_counts": {
-        "ASSOCIATED_WITH": 16,
-        "NO_RELATION": 16,
-        "PREDICTS": 16
+        "ASSOCIATED_WITH": 82,
+        "ENHANCES_DELIVERY_OF": 2,
+        "IMPROVES": 44,
+        "NO_RELATION": 74,
+        "PREDICTS": 46,
+        "SYNERGIZES_WITH": 5,
+        "TARGETS": 2,
+        "WORSENS": 58
       },
-      "ready": true,
+      "ready": false,
       "task": "relation",
-      "warnings": []
+      "warnings": [
+        "7 duplicate example(s)"
+      ]
     }
   ],
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 0,
-  "warnings": []
+  "warning_count": 2,
+  "warnings": [
+    "evidence: 86 duplicate example(s)",
+    "relation: 7 duplicate example(s)"
+  ]
 }

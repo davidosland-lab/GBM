@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "config_sha256": "01604A8A419149F69228CCD5319C814C3AEE52FBEE3B56C9C9496F6B75DA427E",
+    "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
+    "evaluation_file": "data\\training\\gold_pack\\annotation_splits\\ner_test.jsonl",
+    "evaluation_file_sha256": "36C1471D3B7FB10804F28A556EEE4E3971ADD2E32F93A10EAD53E6C455D25ACA",
+    "label_map": "data\\training\\gold_pack\\label_maps\\ner_label_map.json",
+    "label_map_sha256": "2DD35E2456664ED93879AA67F26372EB98B19B6C1103641F18341E2A2D7101D4"
+  },
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "evaluation_file_exists": true,
+    "label_map_exists": true,
+    "training_enabled": true
+  },
+  "config_path": "configs\\training\\gbmbert_ner_pubmedbert.json",
+  "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
+  "label_map_dir": "data\\training\\gold_pack\\label_maps",
+  "output_dir": "models\\checkpoints\\gbmbert_ner_pubmedbert_v1",
+  "task": "ner",
+  "training_enabled": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

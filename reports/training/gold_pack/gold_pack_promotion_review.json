@@ -1,83 +1,68 @@
 {
   "blockers": [
-    "evidence has 48 examples; needs at least 100",
-    "evidence labels below 10 examples: 0=8, 1=8, 2=8, 3=8, 4=8, 5=8",
-    "ner has 96 examples; needs at least 100",
-    "ner labels below 10 examples: BIOMARKER=8, CELL_STATE=8, CELL_TYPE=8, DELIVERY_MODIFIER=8, DISEASE=8, DRUG=7, GENE=9, OUTCOME=8, PATHWAY=8, TREATMENT=9, TRIAL_PHASE=8, UNKNOWN=7",
-    "relation has 48 examples; needs at least 100",
-    "source PMID count is 42; needs at least 50"
+    "gold pack readiness report is not ready",
+    "relation labels below 20 examples: ENHANCES_DELIVERY_OF=2, SYNERGIZES_WITH=5, TARGETS=2"
   ],
   "gold_pack_report": "reports\\training\\gold_pack\\gold_training_pack.json",
   "label_counts": {
     "evidence": {
-      "0": 8,
-      "1": 8,
-      "2": 8,
-      "3": 8,
-      "4": 8,
-      "5": 8
+      "0": 175,
+      "1": 114,
+      "2": 115,
+      "3": 393,
+      "4": 111,
+      "5": 108
     },
     "ner": {
-      "BIOMARKER": 8,
-      "CELL_STATE": 8,
-      "CELL_TYPE": 8,
-      "DELIVERY_MODIFIER": 8,
-      "DISEASE": 8,
-      "DRUG": 7,
-      "GENE": 9,
-      "OUTCOME": 8,
-      "PATHWAY": 8,
-      "TREATMENT": 9,
-      "TRIAL_PHASE": 8,
-      "UNKNOWN": 7
+      "BIOMARKER": 320,
+      "CELL_STATE": 131,
+      "CELL_TYPE": 212,
+      "DELIVERY_MODIFIER": 290,
+      "DISEASE": 3738,
+      "DRUG": 928,
+      "GENE": 672,
+      "OUTCOME": 1424,
+      "PATHWAY": 93,
+      "TREATMENT": 638,
+      "TRIAL_PHASE": 71,
+      "UNKNOWN": 59
     },
     "relation": {
-      "ASSOCIATED_WITH": 16,
-      "NO_RELATION": 16,
-      "PREDICTS": 16
+      "ASSOCIATED_WITH": 82,
+      "ENHANCES_DELIVERY_OF": 2,
+      "IMPROVES": 44,
+      "NO_RELATION": 74,
+      "PREDICTS": 46,
+      "SYNERGIZES_WITH": 5,
+      "TARGETS": 2,
+      "WORSENS": 58
     }
   },
   "label_example_deltas": {
-    "evidence": {
-      "0": 2,
-      "1": 2,
-      "2": 2,
-      "3": 2,
-      "4": 2,
-      "5": 2
-    },
-    "ner": {
-      "BIOMARKER": 2,
-      "CELL_STATE": 2,
-      "CELL_TYPE": 2,
-      "DELIVERY_MODIFIER": 2,
-      "DISEASE": 2,
-      "DRUG": 3,
-      "GENE": 1,
-      "OUTCOME": 2,
-      "PATHWAY": 2,
-      "TREATMENT": 1,
-      "TRIAL_PHASE": 2,
-      "UNKNOWN": 3
-    },
-    "relation": {}
+    "evidence": {},
+    "ner": {},
+    "relation": {
+      "ENHANCES_DELIVERY_OF": 18,
+      "SYNERGIZES_WITH": 15,
+      "TARGETS": 18
+    }
   },
-  "min_examples_per_label": 10,
-  "min_examples_per_task": 100,
-  "min_source_pmids": 50,
-  "pack_ready": true,
+  "min_examples_per_label": 20,
+  "min_examples_per_task": 200,
+  "min_source_pmids": 100,
+  "pack_ready": false,
   "promotable": false,
-  "source_pmid_count": 42,
-  "source_pmid_delta": 8,
+  "source_pmid_count": 1014,
+  "source_pmid_delta": 0,
   "task_counts": {
-    "evidence": 48,
-    "ner": 96,
-    "relation": 48
+    "evidence": 1016,
+    "ner": 8576,
+    "relation": 313
   },
   "task_example_deltas": {
-    "evidence": 52,
-    "ner": 4,
-    "relation": 52
+    "evidence": 0,
+    "ner": 0,
+    "relation": 0
   },
   "threshold_config": "configs\\training\\gold_pack_promotion_thresholds.json",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."

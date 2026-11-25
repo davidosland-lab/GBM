@@ -10,8 +10,13 @@
     "ner": {},
     "relation": {
       "ASSOCIATED_WITH": 0,
-      "NO_RELATION": 1,
-      "PREDICTS": 2
+      "ENHANCES_DELIVERY_OF": 1,
+      "IMPROVES": 2,
+      "NO_RELATION": 3,
+      "PREDICTS": 4,
+      "SYNERGIZES_WITH": 5,
+      "TARGETS": 6,
+      "WORSENS": 7
     }
   },
   "output_dir": "data\\training\\relation_pack\\label_maps"

@@ -1,0 +1,449 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 36,
+      "key": "3"
+    },
+    {
+      "count": 19,
+      "key": "0"
+    },
+    {
+      "count": 10,
+      "key": "1"
+    },
+    {
+      "count": 6,
+      "key": "2"
+    },
+    {
+      "count": 4,
+      "key": "5"
+    },
+    {
+      "count": 1,
+      "key": "4"
+    }
+  ],
+  "item_count": 76,
+  "item_type_counts": [
+    {
+      "count": 69,
+      "key": "evidence_claim"
+    },
+    {
+      "count": 7,
+      "key": "graph_relation"
+    }
+  ],
+  "reason_counts": [
+    {
+      "count": 76,
+      "key": "confidence <= 0.95"
+    },
+    {
+      "count": 19,
+      "key": "hypothesis-tier evidence"
+    }
+  ],
+  "relation_type_counts": [
+    {
+      "count": 3,
+      "key": "SYNERGIZES_WITH"
+    },
+    {
+      "count": 2,
+      "key": "ENHANCES_DELIVERY_OF"
+    },
+    {
+      "count": 1,
+      "key": "IMPROVES"
+    },
+    {
+      "count": 1,
+      "key": "ASSOCIATED_WITH"
+    }
+  ],
+  "sample_items": [
+    {
+      "confidence": 0.68,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 3,
+      "head": "",
+      "item_id": "evidence:42446136",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.95"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "",
+      "source_file": "data\\research\\review_batches\\round8\\pipeline\\evidence_claims.jsonl",
+      "source_pmid": "42446136",
+      "tail": "",
+      "text": "FUS-mediated BBB opening reshapes plasma extracellular vesicle size distribution without elevating concentration in glioblastoma patients."
+    },
+    {
+      "confidence": 0.68,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 3,
+      "head": "",
+      "item_id": "evidence:42439657",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.95"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "",
+      "source_file": "data\\research\\review_batches\\round8\\pipeline\\evidence_claims.jsonl",
+      "source_pmid": "42439657",
+      "tail": "",
+      "text": "Albumin-Based Drug Delivery for Glioblastoma Treatment: Mechanistic Rationale, Preclinical Evidence, and Clinical Translation."
+    },
+    {
+      "confidence": 0.68,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 3,
+      "head": "",
+      "item_id": "evidence:42399440",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.95"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "",
+      "source_file": "data\\research\\review_batches\\round8\\pipeline\\evidence_claims.jsonl",
+      "source_pmid": "42399440",
+      "tail": "",
+      "text": "Focused ultrasound-mediated blood-brain barrier opening to enhance temozolomide delivery in glioblastoma: a systematic review of preclinical and early clinical evidence."
+    },
+    {
+      "confidence": 0.68,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 3,
+      "head": "",
+      "item_id": "evidence:42397830",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.95"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "",
+      "source_file": "data\\research\\review_batches\\round8\\pipeline\\evidence_claims.jsonl",
+      "source_pmid": "42397830",
+      "tail": "",
+      "text": "Focused ultrasound-induced blood-brain barrier modulation for drug delivery in recurrent glioblastoma: A systematic review."
+    },
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:42351156",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.95",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "",
+      "review_status": "pending",
+      "reviewer": "",
+      "source_file": "data\\research\\review_batches\\round8\\pipeline\\evidence_claims.jsonl",
+      "source_pmid": "42351156",
+      "tail": "",
+      "text": "Multistage nanomedicine engineering to overcome sequential barriers to glioblastoma treatment: a review."
+    }
+  ],
+  "source_path": "data\\research\\review_batches\\round8\\review_queue.jsonl",
+  "top_pmids": [
+    {
+      "count": 4,
+      "key": "42399440"
+    },
+    {
+      "count": 4,
+      "key": "37916157"
+    },
+    {
+      "count": 2,
+      "key": "39919036"
+    },
+    {
+      "count": 1,
+      "key": "42446136"
+    },
+    {
+      "count": 1,
+      "key": "42439657"
+    },
+    {
+      "count": 1,
+      "key": "42397830"
+    },
+    {
+      "count": 1,
+      "key": "42351156"
+    },
+    {
+      "count": 1,
+      "key": "42281807"
+    },
+    {
+      "count": 1,
+      "key": "42256082"
+    },
+    {
+      "count": 1,
+      "key": "42081981"
+    },
+    {
+      "count": 1,
+      "key": "41993780"
+    },
+    {
+      "count": 1,
+      "key": "41967385"
+    },
+    {
+      "count": 1,
+      "key": "38647018"
+    },
+    {
+      "count": 1,
+      "key": "32492056"
+    },
+    {
+      "count": 1,
+      "key": "42237784"
+    },
+    {
+      "count": 1,
+      "key": "42033519"
+    },
+    {
+      "count": 1,
+      "key": "41981510"
+    },
+    {
+      "count": 1,
+      "key": "39499201"
+    },
+    {
+      "count": 1,
+      "key": "37605807"
+    },
+    {
+      "count": 1,
+      "key": "36831869"
+    },
+    {
+      "count": 1,
+      "key": "34092568"
+    },
+    {
+      "count": 1,
+      "key": "34068749"
+    },
+    {
+      "count": 1,
+      "key": "33328869"
+    },
+    {
+      "count": 1,
+      "key": "31262884"
+    },
+    {
+      "count": 1,
+      "key": "37682326"
+    },
+    {
+      "count": 1,
+      "key": "42346137"
+    },
+    {
+      "count": 1,
+      "key": "41832564"
+    },
+    {
+      "count": 1,
+      "key": "41811084"
+    },
+    {
+      "count": 1,
+      "key": "41794238"
+    },
+    {
+      "count": 1,
+      "key": "41694346"
+    },
+    {
+      "count": 1,
+      "key": "41479886"
+    },
+    {
+      "count": 1,
+      "key": "41377462"
+    },
+    {
+      "count": 1,
+      "key": "41139792"
+    },
+    {
+      "count": 1,
+      "key": "40826424"
+    },
+    {
+      "count": 1,
+      "key": "40724825"
+    },
+    {
+      "count": 1,
+      "key": "41252576"
+    },
+    {
+      "count": 1,
+      "key": "38760442"
+    },
+    {
+      "count": 1,
+      "key": "42357386"
+    },
+    {
+      "count": 1,
+      "key": "42352550"
+    },
+    {
+      "count": 1,
+      "key": "41925978"
+    },
+    {
+      "count": 1,
+      "key": "41596099"
+    },
+    {
+      "count": 1,
+      "key": "41523255"
+    },
+    {
+      "count": 1,
+      "key": "41054218"
+    },
+    {
+      "count": 1,
+      "key": "40678831"
+    },
+    {
+      "count": 1,
+      "key": "39945608"
+    },
+    {
+      "count": 1,
+      "key": "39600281"
+    },
+    {
+      "count": 1,
+      "key": "39543084"
+    },
+    {
+      "count": 1,
+      "key": "42406201"
+    },
+    {
+      "count": 1,
+      "key": "41651408"
+    },
+    {
+      "count": 1,
+      "key": "41387951"
+    },
+    {
+      "count": 1,
+      "key": "41123669"
+    },
+    {
+      "count": 1,
+      "key": "40983311"
+    },
+    {
+      "count": 1,
+      "key": "40910700"
+    },
+    {
+      "count": 1,
+      "key": "40909807"
+    },
+    {
+      "count": 1,
+      "key": "40887493"
+    },
+    {
+      "count": 1,
+      "key": "40649908"
+    },
+    {
+      "count": 1,
+      "key": "40432273"
+    },
+    {
+      "count": 1,
+      "key": "41624070"
+    },
+    {
+      "count": 1,
+      "key": "39386580"
+    },
+    {
+      "count": 1,
+      "key": "38049682"
+    },
+    {
+      "count": 1,
+      "key": "35639831"
+    },
+    {
+      "count": 1,
+      "key": "35192123"
+    },
+    {
+      "count": 1,
+      "key": "34214250"
+    },
+    {
+      "count": 1,
+      "key": "33972529"
+    },
+    {
+      "count": 1,
+      "key": "31483918"
+    },
+    {
+      "count": 1,
+      "key": "29449696"
+    },
+    {
+      "count": 1,
+      "key": "40466642"
+    },
+    {
+      "count": 1,
+      "key": "37131108"
+    },
+    {
+      "count": 1,
+      "key": "36336899"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "command": "gbmbert-search-pubmed --query-pack pubmed_gbm_v1/v2 --retmax-per-query 50; merge+dedupe by pmid",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 1219252,
+      "line_count": 612,
+      "non_empty_line_count": 612,
+      "path": "data\\raw\\pubmed_gbm_v1_backfill_2026-07-18.jsonl",
+      "sha256": "2E3DC1361031FA54A49E63E5F9557F3F5CCEA469762A93EEBD902E9B4FB4A16F"
+    },
+    {
+      "byte_count": 657144,
+      "line_count": 315,
+      "non_empty_line_count": 315,
+      "path": "data\\raw\\pubmed_gbm_v2_backfill_2026-07-18.jsonl",
+      "sha256": "9CAEF4D1458225B9D4F7921128F43957DBAED5523994E50DFE72FC220FD6ED4E"
+    },
+    {
+      "byte_count": 1846773,
+      "line_count": 912,
+      "non_empty_line_count": 912,
+      "path": "data\\raw\\pubmed_gbm_merged_backfill_2026-07-18.jsonl",
+      "sha256": "5BBCCD79FD156F437B311D7183DAAD6CC890C356F6FF0D8E5FFC802667F6820B"
+    }
+  ],
+  "generated_at_utc": "2026-07-18T02:52:17+00:00",
+  "name": "pubmed_gbm_merged_backfill_2026-07-18",
+  "notes": [
+    "Tuned five previously empty v2 queries; 912 unique PMIDs; research-use only."
+  ],
+  "query_pack": "pubmed_gbm_v1+pubmed_gbm_v2",
+  "record_count": 1839,
+  "source": "NCBI PubMed via gbmbert-search-pubmed retmax-per-query=50"
+}

@@ -20,13 +20,34 @@ def test_project_scope_lockfile_records_active_and_future_phases() -> None:
         "Phase 1: PubMed ingestion and project scaffold",
         "Phase 2: Baseline biomedical extraction pipeline",
         "Phase 3: Knowledge graph schema, loader, inspection, and local graph review",
-        "Phase 4 scaffold: GBM-BERT fine-tuning configs and dataset adapters",
-        "Phase 7 scaffold: Streamlit dashboard shell",
+        "Phase 4: GBM-BERT research training criteria satisfied (deepen gold-pack ops / curation / governance)",
+        "Phase 5: Tumour simulation research prototype (post-MVP deepening + toy fitting stub)",
+        "Phase 6: Treatment scenario ranking research prototype (trade-off scores)",
+        "Phase 7: Streamlit research operations console with live runners (literature → extract → graph → curation → training artifacts → sim/rank)",
     ]
-    assert "Phase 4: GBM-BERT training execution and evaluation workflow" in scope["future_phases"]
-    assert "Phase 7: Full Streamlit dashboard implementation" in scope["future_phases"]
+    assert "Phase 6: Treatment strategy expansions beyond toy ranking (real eligibility/CDS remain out of scope)" in scope["future_phases"]
+    assert "Phase 7: Further research-console UX polish (production clinical / hospital CDS dashboard remains out of scope)" in scope["future_phases"]
     assert "local_knowledge_graph_explorer_prototype" in scope["prototype_modules"]
     assert "streamlit_dashboard_shell" in scope["prototype_modules"]
+    assert "phase5_tumour_simulation_mvp" in scope["prototype_modules"]
+    assert "phase6_treatment_scenario_ranking" in scope["prototype_modules"]
+    assert "dashboard_live_research_runners" in scope["prototype_modules"]
+    assert "dashboard_research_operations_console" in scope["prototype_modules"]
+    assert "phase5_tumour_simulation_mvp" in scope["implemented_modules"]
+    assert "phase5_monte_carlo_sweeps" in scope["implemented_modules"]
+    assert "phase5_toy_parameter_fitting_stub" in scope["implemented_modules"]
+    assert "phase6_treatment_strategy_cli" in scope["implemented_modules"]
+    assert "phase6_toy_toxicity_tradeoff_scores" in scope["implemented_modules"]
+    assert "dashboard_live_research_runners" in scope["implemented_modules"]
+    assert "dashboard_knowledge_graph_live_runner" in scope["implemented_modules"]
+    assert "dashboard_prediction_curation_live_runner" in scope["implemented_modules"]
+    assert "dashboard_training_artifacts_live_runner" in scope["implemented_modules"]
+    assert "dashboard_research_operations_console" in scope["implemented_modules"]
+    assert "clinically_validated_tumour_simulator" in scope["current_non_goals"]
+    assert "treatment_optimizer" in scope["current_non_goals"]
+    assert "real_pk_pd_modelling" in scope["current_non_goals"]
+    assert "patient_eligibility_cds" in scope["current_non_goals"]
+    assert "tumour_simulator" not in scope["current_non_goals"]
 
 
 def test_project_scope_lockfile_preserves_prohibited_behavior() -> None:
@@ -95,6 +116,12 @@ def test_project_scope_lockfile_preserves_prohibited_behavior() -> None:
     assert "gbmbert_strict_label_drift_alignment" in scope["implemented_modules"]
     assert "gbmbert_curated_fixture_import" in scope["implemented_modules"]
     assert "gbmbert_gold_pack_promotion_review" in scope["implemented_modules"]
+    assert "gbmbert_gold_pack_ops_status" in scope["implemented_modules"]
+    assert "gbmbert_sparse_densify_dual_review_batch" in scope["implemented_modules"]
+    assert "gold_pack_ops_runbook" in scope["implemented_modules"]
+    assert "lit_mining_scale_as_primary_differentiation" in scope["current_non_goals"]
+    assert "clinical_ranking_cds_competition" in scope["current_non_goals"]
+    assert "gold-pack" in scope["differentiation_bet"].lower()
     assert "gbmbert_curated_multi_file_import" in scope["implemented_modules"]
     assert "gbmbert_curated_provenance_diff" in scope["implemented_modules"]
     assert "gbmbert_promotion_threshold_delta_review" in scope["implemented_modules"]

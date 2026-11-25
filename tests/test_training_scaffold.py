@@ -13,7 +13,12 @@ from gbmbert.training.datasets import (
     summarize_dataset,
 )
 from gbmbert.training.evaluation import evaluate_predictions
-from gbmbert.training.execution import execute_evidence_training
+from gbmbert.training.execution import (
+    _decode_predictions,
+    compute_inverse_frequency_class_weights,
+    execute_evidence_training,
+    execute_task_training,
+)
 from gbmbert.training.hf_datasets import dataset_split_counts, load_label_map, load_prepared_dataset
 from gbmbert.training.inference import score_evidence_jsonl
 from gbmbert.training.model_card import build_model_card, format_model_card_markdown
@@ -248,6 +253,7 @@ def test_tokenize_dataset_handles_classification_and_ner_labels(tmp_path: Path) 
     summary = summarize_tokenized_dataset(tokenized, task="evidence", max_length=5)
 
     assert tokenized["train"][0]["labels"] == 0
+    assert "label" not in tokenized["train"].column_names
     assert summary.splits == {"train": 1, "validation": 1, "test": 1}
     assert "input_ids" in summary.columns
 
@@ -490,6 +496,178 @@ class FakeTrainer:
     def predict(self, dataset: object) -> FakePredictionOutput:
         del dataset
         return FakePredictionOutput()
+
+
+def test_inverse_frequency_class_weights_downweight_majority() -> None:
+    # Four class-0 and one class-1 -> class 1 should receive a higher weight.
+    weights = compute_inverse_frequency_class_weights([0, 0, 0, 0, 1], num_labels=2)
+
+    assert weights[0] == pytest.approx(5 / (2 * 4))
+    assert weights[1] == pytest.approx(5 / (2 * 1))
+    assert weights[1] > weights[0]
+
+
+def test_inverse_frequency_class_weights_keep_absent_labels_at_one() -> None:
+    weights = compute_inverse_frequency_class_weights([0, 0, 1], num_labels=3)
+
+    assert weights[2] == pytest.approx(1.0)
+
+
+def test_inverse_frequency_class_weights_power_and_max_ratio() -> None:
+    full = compute_inverse_frequency_class_weights([0, 0, 0, 0, 1], num_labels=2, power=1.0)
+    tempered = compute_inverse_frequency_class_weights([0, 0, 0, 0, 1], num_labels=2, power=0.5)
+    capped = compute_inverse_frequency_class_weights(
+        [0, 0, 0, 0, 1],
+        num_labels=2,
+        power=1.0,
+        max_ratio=2.0,
+    )
+
+    assert tempered[1] < full[1]
+    assert capped[1] / capped[0] == pytest.approx(2.0)
+
+
+def test_decode_predictions_sequence_classification() -> None:
+    true_labels, predicted_labels = _decode_predictions(
+        prepared_task="relation",
+        label_ids=[0, 1],
+        predictions=[[0.9, 0.1], [0.2, 0.8]],
+        id_to_label={0: "NO_RELATION", 1: "IMPROVES"},
+    )
+
+    assert true_labels == ["NO_RELATION", "IMPROVES"]
+    assert predicted_labels == ["NO_RELATION", "IMPROVES"]
+
+
+def test_decode_predictions_ner_majority_over_supervised_tokens() -> None:
+    true_labels, predicted_labels = _decode_predictions(
+        prepared_task="ner",
+        label_ids=[[0, 0, -100], [1, 1, -100]],
+        predictions=[
+            [[0.9, 0.1], [0.8, 0.2], [0.1, 0.9]],
+            [[0.2, 0.8], [0.3, 0.7], [0.9, 0.1]],
+        ],
+        id_to_label={0: "GENE", 1: "DRUG"},
+    )
+
+    assert true_labels == ["GENE", "DRUG"]
+    assert predicted_labels == ["GENE", "DRUG"]
+
+
+def test_execute_task_training_supports_relation_extraction(tmp_path: Path) -> None:
+    dataset_dir = tmp_path / "splits"
+    dataset_dir.mkdir()
+    for split, rows in {
+        "train": [{"task": "relation", "source_pmid": "1", "text": "a improves b", "label": "IMPROVES"}],
+        "validation": [{"task": "relation", "source_pmid": "2", "text": "no link", "label": "NO_RELATION"}],
+        "test": [
+            {"task": "relation", "source_pmid": "3", "text": "a improves b", "label": "IMPROVES"},
+            {"task": "relation", "source_pmid": "4", "text": "no link", "label": "NO_RELATION"},
+        ],
+    }.items():
+        _write_jsonl(dataset_dir / f"relation_{split}.jsonl", rows)
+    label_dir = tmp_path / "labels"
+    label_dir.mkdir()
+    (label_dir / "relation_label_map.json").write_text(
+        json.dumps({"task": "relation", "label_to_id": {"IMPROVES": 0, "NO_RELATION": 1}}),
+        encoding="utf-8",
+    )
+    config_path = tmp_path / "training_config.json"
+    config = TrainingConfig(
+        name="gbmbert_relation_test",
+        task=TrainingTask.RELATION_EXTRACTION,
+        base_model="dmis-lab/biobert-base-cased-v1.2",
+        train_path=dataset_dir / "relation_train.jsonl",
+        validation_path=dataset_dir / "relation_validation.jsonl",
+        output_dir=tmp_path / "checkpoint",
+        label_set=["IMPROVES", "NO_RELATION"],
+        hyperparameters={"max_length": 4},
+        training_enabled=True,
+    )
+    config_path.write_text(json.dumps(config.model_dump(mode="json")), encoding="utf-8")
+
+    class RelationFakePredictionOutput:
+        predictions = [[0.9, 0.1], [0.1, 0.9]]
+        label_ids = [0, 1]
+
+    class RelationFakeTrainer(FakeTrainer):
+        def predict(self, dataset: object) -> RelationFakePredictionOutput:
+            del dataset
+            return RelationFakePredictionOutput()
+
+    result = execute_task_training(
+        config=config,
+        config_path=config_path,
+        dataset_dir=dataset_dir,
+        label_map_dir=label_dir,
+        metrics_output=tmp_path / "metrics.json",
+        evaluation_markdown_output=tmp_path / "metrics.md",
+        run_manifest_output=tmp_path / "run_manifest.json",
+        registry_path=tmp_path / "checkpoint_registry.json",
+        checkpoint_name="gbmbert_relation_test",
+        tokenizer_loader=lambda base_model, local_files_only: FakeTokenizer(),
+        trainer_factory=lambda **kwargs: RelationFakeTrainer(kwargs["tokenized"]),
+    )
+
+    assert result.status == "completed"
+    assert json.loads((tmp_path / "run_manifest.json").read_text(encoding="utf-8"))["task"] == "relation_extraction"
+    assert result.evaluation.accuracy == 1.0
+
+
+def test_training_gate_allows_relation_execution_when_enabled(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+    dataset_dir = tmp_path / "splits"
+    dataset_dir.mkdir()
+    for split in ("train", "validation", "test"):
+        _write_jsonl(
+            dataset_dir / f"relation_{split}.jsonl",
+            [{"task": "relation", "source_pmid": split, "text": "a improves b", "label": "IMPROVES"}],
+        )
+    label_dir = tmp_path / "labels"
+    label_dir.mkdir()
+    (label_dir / "relation_label_map.json").write_text(
+        json.dumps({"task": "relation", "label_to_id": {"IMPROVES": 0}}),
+        encoding="utf-8",
+    )
+    config_path = tmp_path / "training_config.json"
+    config = TrainingConfig(
+        name="gbmbert_relation_gate",
+        task=TrainingTask.RELATION_EXTRACTION,
+        base_model="dmis-lab/biobert-base-cased-v1.2",
+        train_path=dataset_dir / "relation_train.jsonl",
+        validation_path=dataset_dir / "relation_validation.jsonl",
+        output_dir=tmp_path / "checkpoint",
+        label_set=["IMPROVES"],
+        hyperparameters={"max_length": 4},
+        training_enabled=True,
+    )
+    config_path.write_text(json.dumps(config.model_dump(mode="json")), encoding="utf-8")
+    manifest_path = tmp_path / "manifest.json"
+    manifest_path.write_text("{}", encoding="utf-8")
+
+    class _StubResult:
+        def to_dict(self) -> dict[str, object]:
+            return {"status": "completed"}
+
+    monkeypatch.setattr(
+        "gbmbert.training.runner.execute_task_training",
+        lambda **kwargs: _StubResult(),
+    )
+
+    report = build_training_gate_report(
+        config_path=config_path,
+        dataset_dir=dataset_dir,
+        label_map_dir=label_dir,
+        experiment_manifest_path=manifest_path,
+        execute_training=True,
+        metrics_output=tmp_path / "metrics.json",
+        run_manifest_output=tmp_path / "run_manifest.json",
+        registry_path=tmp_path / "registry.json",
+        checkpoint_name="gbmbert_relation_gate",
+    )
+
+    assert report.status == "training_completed"
+    assert report.task == "relation_extraction"
+    assert report.execution == {"status": "completed"}
 
 
 def _write_jsonl(path: Path, rows: list[dict[str, object]]) -> None:

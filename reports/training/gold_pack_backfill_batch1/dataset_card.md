@@ -1,0 +1,79 @@
+# GBM-BERT Dataset Card
+
+Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
+
+- Dataset directory: `data\training\gold_pack_backfill_batch1\annotation_splits`
+- Total examples: 19
+
+## Files
+### evidence_test.jsonl
+- Examples: 0
+- Missing text: 0
+- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Labels:
+- none
+
+### evidence_train.jsonl
+- Examples: 7
+- Missing text: 0
+- SHA256: `21EDAB1E73EF40DD0ED0215DA8637B1974F1D92CCF1F41ACE2F91C939AB93BDF`
+- Labels:
+- 0: 4
+- 1: 2
+- 3: 1
+
+### evidence_validation.jsonl
+- Examples: 0
+- Missing text: 0
+- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Labels:
+- none
+
+### ner_test.jsonl
+- Examples: 0
+- Missing text: 0
+- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Labels:
+- none
+
+### ner_train.jsonl
+- Examples: 0
+- Missing text: 0
+- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Labels:
+- none
+
+### ner_validation.jsonl
+- Examples: 0
+- Missing text: 0
+- SHA256: `E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855`
+- Labels:
+- none
+
+### relation_test.jsonl
+- Examples: 3
+- Missing text: 0
+- SHA256: `AC7E97B4FC751AA221F6EAD1615C43C26F724E097B0AB57AEC4F081A0A1DEF85`
+- Labels:
+- ASSOCIATED_WITH: 3
+
+### relation_train.jsonl
+- Examples: 6
+- Missing text: 0
+- SHA256: `383FD4E2ED0F50847C1E35DC39A3BE2F00C68B550D4B13AD46F2B510CACF0E98`
+- Labels:
+- ASSOCIATED_WITH: 6
+
+### relation_validation.jsonl
+- Examples: 3
+- Missing text: 0
+- SHA256: `AE072DB4BB7689BF2739CABB56A084B5D9DED467023932E706EEF4D95EB9D600`
+- Labels:
+- ASSOCIATED_WITH: 3
+
+## Warnings
+- evidence_test.jsonl: no examples
+- evidence_validation.jsonl: no examples
+- ner_test.jsonl: no examples
+- ner_train.jsonl: no examples
+- ner_validation.jsonl: no examples

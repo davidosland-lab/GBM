@@ -8,7 +8,8 @@
     "Default governance",
     "Strict governance audit",
     "Gold-pack promotion",
-    "Governance detail contract"
+    "Governance detail contract",
+    "Curated round rebuild"
   ],
   "required_families": [
     "Local verification",
@@ -17,7 +18,8 @@
     "Default governance",
     "Strict governance audit",
     "Gold-pack promotion",
-    "Governance detail contract"
+    "Governance detail contract",
+    "Curated round rebuild"
   ],
   "summary_path": "reports\\platform_regression\\ci_report_summary.md",
   "valid": true,

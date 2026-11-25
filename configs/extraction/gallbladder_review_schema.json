@@ -1,0 +1,100 @@
+{
+  "name": "gallbladder_review_schema_v1",
+  "description": "Research-grade evidence review schema for gallbladder disease, gallstones, cholecystectomy, and post-operative recovery. This schema supports literature triage, extraction, and graph review only.",
+  "research_use_only": true,
+  "clinical_validity_claimed": false,
+  "excluded_uses": [
+    "diagnosis",
+    "patient-specific treatment advice",
+    "surgical eligibility assessment",
+    "operative technique instruction",
+    "post-operative care instruction",
+    "dietary prescription after cholecystectomy",
+    "causation determination for an individual case",
+    "medicolegal attribution",
+    "medical-device or clinical-decision-support claims"
+  ],
+  "review_questions": [
+    "Which presentations of gallbladder and gallstone disease are studied, and how are symptomatic, asymptomatic, and complicated disease distinguished?",
+    "What does the literature report for conservative management, medical dissolution therapy, and drainage compared with cholecystectomy?",
+    "Which cholecystectomy approaches, timings, and intraoperative safety strategies are associated with which complication rates?",
+    "What recovery trajectories are reported after gallbladder removal, including pain, length of stay, return to work, and quality of life?",
+    "What persistent or new symptoms are reported after cholecystectomy, such as post-cholecystectomy syndrome or bile-acid diarrhoea, and what mechanisms are proposed?",
+    "Which patient, disease, and perioperative factors are reported as predictors of poorer outcomes, and at what level of evidence?"
+  ],
+  "domain_entities": [
+    "BILIARY_STRUCTURE",
+    "PRESENTATION",
+    "COMPLICATION",
+    "PROCEDURE",
+    "APPROACH",
+    "TIMING",
+    "MEDICATION",
+    "PERIOPERATIVE_CARE",
+    "MECHANISM",
+    "RISK_FACTOR",
+    "IMAGING_FINDING",
+    "LAB_MARKER",
+    "RECOVERY_OUTCOME",
+    "OUTCOME",
+    "TIME_COURSE",
+    "STUDY_DESIGN"
+  ],
+  "project_label_projection": {
+    "BILIARY_STRUCTURE": "DELIVERY_MODIFIER",
+    "PRESENTATION": "DISEASE",
+    "COMPLICATION": "DISEASE",
+    "PROCEDURE": "TREATMENT",
+    "APPROACH": "DELIVERY_MODIFIER",
+    "TIMING": "DELIVERY_MODIFIER",
+    "MEDICATION": "DRUG",
+    "PERIOPERATIVE_CARE": "TREATMENT",
+    "MECHANISM": "PATHWAY",
+    "RISK_FACTOR": "BIOMARKER",
+    "IMAGING_FINDING": "BIOMARKER",
+    "LAB_MARKER": "BIOMARKER",
+    "RECOVERY_OUTCOME": "OUTCOME",
+    "OUTCOME": "OUTCOME",
+    "TIME_COURSE": "OUTCOME",
+    "STUDY_DESIGN": "UNKNOWN"
+  },
+  "relation_candidates": [
+    "ASSOCIATED_WITH",
+    "PREDICTS",
+    "WORSENS",
+    "IMPROVES",
+    "TARGETS",
+    "NO_RELATION"
+  ],
+  "evidence_fields": [
+    "pmid",
+    "title",
+    "study_design",
+    "population",
+    "presentation_or_indication",
+    "procedure_or_management",
+    "approach_and_timing",
+    "comparator",
+    "recovery_or_outcome",
+    "time_course",
+    "reported_association",
+    "evidence_level",
+    "limitations",
+    "review_status"
+  ],
+  "review_status_values": [
+    "pending",
+    "accepted",
+    "needs_second_review",
+    "excluded_not_gallbladder",
+    "excluded_not_gallstone_or_cholecystectomy",
+    "excluded_no_abstract",
+    "excluded_patient_advice"
+  ],
+  "promotion_gate": {
+    "minimum_reviewed_records": 100,
+    "minimum_second_review_fraction": 0.2,
+    "requires_patient_specific_claim_audit": true,
+    "requires_research_warning": true
+  }
+}

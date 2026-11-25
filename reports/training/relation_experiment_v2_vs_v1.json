@@ -1,0 +1,9 @@
+{
+  "delta_accuracy": 0.06499999999999995,
+  "delta_macro_f1": 0.14050715022851257,
+  "v1_accuracy": 0.56,
+  "v1_macro_f1": 0.4366357069143446,
+  "v2_accuracy": 0.625,
+  "v2_macro_f1": 0.5771428571428572,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

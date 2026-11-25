@@ -48,6 +48,9 @@ REQUIRED_ARTIFACTS = (
     Path("reports/training/gold_pack/gold_pack_promotion_review.md"),
     Path("reports/training/gold_pack/gold_pack_promotion_plan.json"),
     Path("reports/training/gold_pack/gold_pack_promotion_plan.md"),
+    Path("reports/training/gold_pack/gold_pack_ops_status.json"),
+    Path("reports/training/gold_pack/gold_pack_ops_status.md"),
+    Path("docs/GOLD_PACK_OPS_RUNBOOK.md"),
 )
 FORBIDDEN_TRACKED_PARTS = {".venv", "__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache"}
 FORBIDDEN_MODEL_SUFFIXES = {".bin", ".ckpt", ".h5", ".onnx", ".pt", ".pth", ".safetensors"}

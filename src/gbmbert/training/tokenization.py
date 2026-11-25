@@ -10,6 +10,7 @@ from transformers import AutoTokenizer
 from transformers.tokenization_utils_base import PreTrainedTokenizerBase
 
 from gbmbert.training.hf_datasets import PreparedTask
+from gbmbert.training.ner_bio import align_bio_labels, bio_label_map_is_bio
 
 
 @dataclass(frozen=True)
@@ -39,10 +40,24 @@ def tokenize_dataset(
 ) -> DatasetDict:
     """Tokenize a prepared DatasetDict for the selected task."""
 
+    # Drop source metadata columns so the Trainer collator only sees tensors.
+    remove_columns = _source_columns_to_remove(dataset)
     if task == "ner":
+        if bio_label_map_is_bio(label_to_id):
+            return dataset.map(
+                lambda batch: _tokenize_ner_bio_batch(
+                    batch,
+                    tokenizer=tokenizer,
+                    label_to_id=label_to_id,
+                    max_length=max_length,
+                ),
+                batched=True,
+                remove_columns=remove_columns,
+            )
         return dataset.map(
             lambda batch: _tokenize_ner_batch(batch, tokenizer=tokenizer, label_to_id=label_to_id, max_length=max_length),
             batched=True,
+            remove_columns=remove_columns,
         )
     return dataset.map(
         lambda batch: _tokenize_classification_batch(
@@ -52,7 +67,15 @@ def tokenize_dataset(
             max_length=max_length,
         ),
         batched=True,
+        remove_columns=remove_columns,
     )
+
+
+def _source_columns_to_remove(dataset: DatasetDict) -> list[str]:
+    first_split = next(iter(dataset.keys()), None)
+    if first_split is None:
+        return []
+    return list(dataset[first_split].column_names)
 
 
 def summarize_tokenized_dataset(dataset: DatasetDict, *, task: PreparedTask, max_length: int) -> TokenizationSummary:
@@ -103,6 +126,38 @@ def _tokenize_ner_batch(
     for attention_mask, label in zip(attention_masks, batch.get("label", []), strict=False):
         label_id = _label_id(label, label_to_id)
         labels.append([label_id if int(mask) == 1 else -100 for mask in attention_mask])
+    tokenized["labels"] = labels
+    return tokenized
+
+
+def _tokenize_ner_bio_batch(
+    batch: dict[str, list[Any]],
+    *,
+    tokenizer: PreTrainedTokenizerBase,
+    label_to_id: dict[str, int],
+    max_length: int,
+) -> dict[str, Any]:
+    texts = [str(text) for text in batch.get("text", [])]
+    tokenized = tokenizer(
+        texts,
+        truncation=True,
+        padding="max_length",
+        max_length=max_length,
+        return_offsets_mapping=True,
+    )
+    offset_mappings = tokenized.pop("offset_mapping")
+    entities_batch = batch.get("entities") or [[] for _ in texts]
+    labels: list[list[int]] = []
+    for text, offsets, entities in zip(texts, offset_mappings, entities_batch, strict=False):
+        entity_rows = entities if isinstance(entities, list) else []
+        labels.append(
+            align_bio_labels(
+                text=text,
+                entities=entity_rows,
+                offset_mapping=[(int(start), int(end)) for start, end in offsets],
+                label_to_id=label_to_id,
+            )
+        )
     tokenized["labels"] = labels
     return tokenized
 

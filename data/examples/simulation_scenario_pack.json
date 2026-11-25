@@ -1,0 +1,52 @@
+{
+  "name": "simulation_scenario_pack_example",
+  "description": "Tiny offline fixture mirroring configs/simulation/compartment_toy_v1.json for tests and smoke demos.",
+  "steps": 8,
+  "dt": 1.0,
+  "initial_state": {
+    "MES": 0.30,
+    "NPC": 0.25,
+    "OPC": 0.25,
+    "AC": 0.20
+  },
+  "growth": {
+    "intrinsic_growth_rate": 0.08,
+    "carrying_capacity": 4.0,
+    "transition_rate": 0.02,
+    "state_kill_weights": {
+      "MES": 0.70,
+      "NPC": 1.00,
+      "OPC": 1.00,
+      "AC": 0.90
+    }
+  },
+  "scenarios": [
+    {
+      "scenario_id": "baseline",
+      "label": "Baseline",
+      "base_kill_rate": 0.0,
+      "delivery_multiplier": 1.0
+    },
+    {
+      "scenario_id": "tmz",
+      "label": "Toy TMZ",
+      "base_kill_rate": 0.05,
+      "delivery_multiplier": 1.0
+    },
+    {
+      "scenario_id": "tmz_fus",
+      "label": "Toy TMZ+FUS",
+      "base_kill_rate": 0.05,
+      "delivery_multiplier": 1.8
+    }
+  ],
+  "assumptions": [
+    "Fixture pack for offline tests only."
+  ],
+  "literature_anchors": [
+    {
+      "pmid": "29097493",
+      "note": "Example PREDICTS relation in graph_records_sample.jsonl"
+    }
+  ]
+}

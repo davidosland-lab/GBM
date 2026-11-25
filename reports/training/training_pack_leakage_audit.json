@@ -1,8 +1,8 @@
 {
   "cross_pack_warnings": [
-    "evidence/gold: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586",
-    "evidence/relation: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586",
-    "gold/relation: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586"
+    "evidence/gold: 898 shared PMID(s): 10853323, 11138924, 11717820, 11939587, 12124496",
+    "evidence/relation: 154 shared PMID(s): 15758010, 18676355, 18752056, 18757334, 19269895",
+    "gold/relation: 159 shared PMID(s): 15758010, 16944365, 17325429, 18665745, 18676355"
   ],
   "packs": [
     "evidence",
@@ -11,23 +11,23 @@
   ],
   "rows": [
     {
-      "example_count": 4,
+      "example_count": 105,
       "pack": "evidence",
-      "pmid_count": 4,
+      "pmid_count": 90,
       "split": "test",
       "task": "evidence"
     },
     {
-      "example_count": 39,
+      "example_count": 809,
       "pack": "evidence",
-      "pmid_count": 34,
+      "pmid_count": 718,
       "split": "train",
       "task": "evidence"
     },
     {
-      "example_count": 5,
+      "example_count": 102,
       "pack": "evidence",
-      "pmid_count": 4,
+      "pmid_count": 90,
       "split": "validation",
       "task": "evidence"
     },
@@ -116,86 +116,86 @@
       "task": "ner"
     },
     {
-      "example_count": 4,
+      "example_count": 33,
       "pack": "relation",
-      "pmid_count": 4,
+      "pmid_count": 16,
       "split": "test",
       "task": "relation"
     },
     {
-      "example_count": 39,
+      "example_count": 255,
       "pack": "relation",
-      "pmid_count": 34,
+      "pmid_count": 127,
       "split": "train",
       "task": "relation"
     },
     {
-      "example_count": 5,
+      "example_count": 25,
       "pack": "relation",
-      "pmid_count": 4,
+      "pmid_count": 16,
       "split": "validation",
       "task": "relation"
     },
     {
-      "example_count": 4,
+      "example_count": 96,
       "pack": "gold",
-      "pmid_count": 4,
+      "pmid_count": 86,
       "split": "test",
       "task": "evidence"
     },
     {
-      "example_count": 39,
+      "example_count": 816,
       "pack": "gold",
-      "pmid_count": 34,
+      "pmid_count": 720,
       "split": "train",
       "task": "evidence"
     },
     {
-      "example_count": 5,
+      "example_count": 104,
       "pack": "gold",
-      "pmid_count": 4,
+      "pmid_count": 92,
       "split": "validation",
       "task": "evidence"
     },
     {
-      "example_count": 8,
+      "example_count": 838,
       "pack": "gold",
-      "pmid_count": 4,
+      "pmid_count": 88,
       "split": "test",
       "task": "ner"
     },
     {
-      "example_count": 78,
+      "example_count": 6881,
       "pack": "gold",
-      "pmid_count": 34,
+      "pmid_count": 717,
       "split": "train",
       "task": "ner"
     },
     {
-      "example_count": 10,
+      "example_count": 857,
       "pack": "gold",
-      "pmid_count": 4,
+      "pmid_count": 94,
       "split": "validation",
       "task": "ner"
     },
     {
-      "example_count": 4,
+      "example_count": 40,
       "pack": "gold",
-      "pmid_count": 4,
+      "pmid_count": 21,
       "split": "test",
       "task": "relation"
     },
     {
-      "example_count": 39,
+      "example_count": 242,
       "pack": "gold",
-      "pmid_count": 34,
+      "pmid_count": 124,
       "split": "train",
       "task": "relation"
     },
     {
-      "example_count": 5,
+      "example_count": 31,
       "pack": "gold",
-      "pmid_count": 4,
+      "pmid_count": 14,
       "split": "validation",
       "task": "relation"
     }

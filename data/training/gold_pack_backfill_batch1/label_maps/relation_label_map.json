@@ -1,0 +1,9 @@
+{
+  "id_to_label": {
+    "0": "ASSOCIATED_WITH"
+  },
+  "label_to_id": {
+    "ASSOCIATED_WITH": 0
+  },
+  "task": "relation"
+}

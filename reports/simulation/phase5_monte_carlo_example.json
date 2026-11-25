@@ -1,0 +1,358 @@
+{
+  "assumptions": [
+    "Parameter distributions are explicit research priors, not fitted patient posteriors.",
+    "Each draw reruns the deterministic toy scenario pack.",
+    "Quantile bands summarize in-silico outcome spread only.",
+    "Monte Carlo seed=7, n_samples=40 (research prototype).",
+    "Parameter draws are independent toy distributions, not empirically fitted posteriors.",
+    "Uncertainty bands are sample quantiles of in-silico outcomes only."
+  ],
+  "clinical_validity_claimed": false,
+  "comparison_table": [
+    {
+      "band_high": 3.1409,
+      "band_low": 2.2424,
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "mean_final_total": 2.7326,
+      "median_final_total": 2.7244,
+      "relative_reduction_vs_baseline_median": 0.0,
+      "scenario_id": "baseline"
+    },
+    {
+      "band_high": 1.5515,
+      "band_low": 0.8872,
+      "label": "Toy TMZ pressure",
+      "mean_final_total": 1.2613,
+      "median_final_total": 1.2799,
+      "relative_reduction_vs_baseline_median": 0.5302,
+      "scenario_id": "tmz"
+    },
+    {
+      "band_high": 0.7668,
+      "band_low": 0.3942,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "mean_final_total": 0.609,
+      "median_final_total": 0.6299,
+      "relative_reduction_vs_baseline_median": 0.7688,
+      "scenario_id": "tmz_fus"
+    }
+  ],
+  "config_name": "monte_carlo_v1",
+  "description": "Phase 5 Monte Carlo sweeps over toy growth parameters for baseline/TMZ/TMZ+FUS scenarios. Research prototype only \u2014 not clinical uncertainty quantification.",
+  "graph_features": null,
+  "n_samples": 40,
+  "not_simulated": [
+    "Clinical uncertainty quantification or validated posterior inference",
+    "Patient-specific predictive intervals",
+    "Treatment prescriptions or clinical decision support"
+  ],
+  "parameter_specs": [
+    {
+      "dist": "normal",
+      "high": 0.16,
+      "low": 0.02,
+      "mean": 0.08,
+      "name": "intrinsic_growth_rate",
+      "std": 0.015
+    },
+    {
+      "dist": "uniform",
+      "high": 5.0,
+      "low": 3.0,
+      "mean": 4.0,
+      "name": "carrying_capacity",
+      "std": 0.5
+    },
+    {
+      "dist": "normal",
+      "high": 0.05,
+      "low": 0.005,
+      "mean": 0.02,
+      "name": "transition_rate",
+      "std": 0.005
+    }
+  ],
+  "phase": "Phase 5 Monte Carlo research prototype",
+  "sample_comparisons": [
+    {
+      "baseline": 2.800932587710257,
+      "overrides": {
+        "carrying_capacity": 4.301868946079708,
+        "intrinsic_growth_rate": 0.076161795673286,
+        "transition_rate": 0.022557157562582572
+      },
+      "sample_index": 0,
+      "tmz": 1.2498369304812549,
+      "tmz_fus": 0.5878907109526066
+    },
+    {
+      "baseline": 2.946764687975361,
+      "overrides": {
+        "carrying_capacity": 3.731377833825171,
+        "intrinsic_growth_rate": 0.09669372278818303,
+        "transition_rate": 0.02272329509522492
+      },
+      "sample_index": 1,
+      "tmz": 1.4975281565375018,
+      "tmz_fus": 0.7639789119932939
+    },
+    {
+      "baseline": 2.563572005611301,
+      "overrides": {
+        "carrying_capacity": 3.0749913168839695,
+        "intrinsic_growth_rate": 0.09667876071479481,
+        "transition_rate": 0.02212073342062968
+      },
+      "sample_index": 2,
+      "tmz": 1.346351737832227,
+      "tmz_fus": 0.7040756407711715
+    },
+    {
+      "baseline": 2.337123185571408,
+      "overrides": {
+        "carrying_capacity": 3.1814260266877303,
+        "intrinsic_growth_rate": 0.0747804879500311,
+        "transition_rate": 0.02077053767938256
+      },
+      "sample_index": 3,
+      "tmz": 1.089231232035643,
+      "tmz_fus": 0.5269827030585571
+    },
+    {
+      "baseline": 2.027271775606279,
+      "overrides": {
+        "carrying_capacity": 3.247603922299291,
+        "intrinsic_growth_rate": 0.055009062120320855,
+        "transition_rate": 0.024276254843823685
+      },
+      "sample_index": 4,
+      "tmz": 0.8492200443747681,
+      "tmz_fus": 0.38604727761102176
+    },
+    {
+      "baseline": 3.1948330815125,
+      "overrides": {
+        "carrying_capacity": 4.8954178849140115,
+        "intrinsic_growth_rate": 0.0835275551391756,
+        "transition_rate": 0.026927071688301475
+      },
+      "sample_index": 5,
+      "tmz": 1.446078665267296,
+      "tmz_fus": 0.684208860290573
+    },
+    {
+      "baseline": 2.7364531280885407,
+      "overrides": {
+        "carrying_capacity": 4.952510211185841,
+        "intrinsic_growth_rate": 0.06665576982789606,
+        "transition_rate": 0.017659053621333826
+      },
+      "sample_index": 6,
+      "tmz": 1.142817830029335,
+      "tmz_fus": 0.5190712696608593
+    },
+    {
+      "baseline": 3.0150158686116106,
+      "overrides": {
+        "carrying_capacity": 3.5792185726633523,
+        "intrinsic_growth_rate": 0.10840086135784563,
+        "transition_rate": 0.022852791639631095
+      },
+      "sample_index": 7,
+      "tmz": 1.6367716263823575,
+      "tmz_fus": 0.8747903827515261
+    },
+    {
+      "baseline": 2.693737318888195,
+      "overrides": {
+        "carrying_capacity": 3.6169636482038685,
+        "intrinsic_growth_rate": 0.08463054723816321,
+        "transition_rate": 0.02197077238429605
+      },
+      "sample_index": 8,
+      "tmz": 1.2931357972590984,
+      "tmz_fus": 0.6362200648294886
+    },
+    {
+      "baseline": 2.920048288614901,
+      "overrides": {
+        "carrying_capacity": 4.163200327324932,
+        "intrinsic_growth_rate": 0.08382284778601677,
+        "transition_rate": 0.017111564109918508
+      },
+      "sample_index": 9,
+      "tmz": 1.3644590310551448,
+      "tmz_fus": 0.6608228367290842
+    },
+    {
+      "baseline": 2.6051170852319996,
+      "overrides": {
+        "carrying_capacity": 4.095488931419116,
+        "intrinsic_growth_rate": 0.07069500628275735,
+        "transition_rate": 0.016302420518876135
+      },
+      "sample_index": 10,
+      "tmz": 1.1422879754396529,
+      "tmz_fus": 0.5334948035667783
+    },
+    {
+      "baseline": 2.5983615367229405,
+      "overrides": {
+        "carrying_capacity": 3.411917425638653,
+        "intrinsic_growth_rate": 0.08485466588911775,
+        "transition_rate": 0.02067373436899353
+      },
+      "sample_index": 11,
+      "tmz": 1.261825077489792,
+      "tmz_fus": 0.6259253307681346
+    },
+    {
+      "baseline": 2.4953625603245753,
+      "overrides": {
+        "carrying_capacity": 3.628294340753583,
+        "intrinsic_growth_rate": 0.07328967657151753,
+        "transition_rate": 0.015215438431688141
+      },
+      "sample_index": 12,
+      "tmz": 1.1310351492580821,
+      "tmz_fus": 0.538949819146743
+    },
+    {
+      "baseline": 2.3409337206420355,
+      "overrides": {
+        "carrying_capacity": 3.5995339937273645,
+        "intrinsic_growth_rate": 0.0658433927221333,
+        "transition_rate": 0.017186735957700927
+      },
+      "sample_index": 13,
+      "tmz": 1.021986454736248,
+      "tmz_fus": 0.47630114015225355
+    },
+    {
+      "baseline": 2.6599538620439316,
+      "overrides": {
+        "carrying_capacity": 3.4881930214443058,
+        "intrinsic_growth_rate": 0.08639778462011245,
+        "transition_rate": 0.012551284325694426
+      },
+      "sample_index": 14,
+      "tmz": 1.300591165065575,
+      "tmz_fus": 0.6499681902027423
+    },
+    {
+      "baseline": 2.603723980999949,
+      "overrides": {
+        "carrying_capacity": 4.750274991146858,
+        "intrinsic_growth_rate": 0.06365742580296785,
+        "transition_rate": 0.017249147963027026
+      },
+      "sample_index": 15,
+      "tmz": 1.0791459212003036,
+      "tmz_fus": 0.4883728704013759
+    },
+    {
+      "baseline": 3.076179419657782,
+      "overrides": {
+        "carrying_capacity": 4.960349694985164,
+        "intrinsic_growth_rate": 0.07840791247061475,
+        "transition_rate": 0.015913698487814928
+      },
+      "sample_index": 16,
+      "tmz": 1.3588082742803036,
+      "tmz_fus": 0.6366548267048018
+    },
+    {
+      "baseline": 3.238369491407098,
+      "overrides": {
+        "carrying_capacity": 4.514281859130499,
+        "intrinsic_growth_rate": 0.09150824660515337,
+        "transition_rate": 0.023515575019467095
+      },
+      "sample_index": 17,
+      "tmz": 1.5493384662034209,
+      "tmz_fus": 0.7589140110684353
+    },
+    {
+      "baseline": 2.490974466964269,
+      "overrides": {
+        "carrying_capacity": 3.0784145140948755,
+        "intrinsic_growth_rate": 0.09004003534731501,
+        "transition_rate": 0.02472920896203707
+      },
+      "sample_index": 18,
+      "tmz": 1.2635148375192509,
+      "tmz_fus": 0.6445940991341917
+    },
+    {
+      "baseline": 2.5454515007459277,
+      "overrides": {
+        "carrying_capacity": 4.146051880554768,
+        "intrinsic_growth_rate": 0.06745972589536699,
+        "transition_rate": 0.012594319572180164
+      },
+      "sample_index": 19,
+      "tmz": 1.0978470709444688,
+      "tmz_fus": 0.5089216077714713
+    }
+  ],
+  "scenario_summaries": [
+    {
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "mean_final_total": 2.7326492061853704,
+      "n": 40,
+      "quantiles": {
+        "q05": 2.2424127140264867,
+        "q50": 2.72436737293246,
+        "q95": 3.1409232847326005
+      },
+      "scenario_id": "baseline",
+      "std_final_total": 0.2830297713878804,
+      "uncertainty_band": {
+        "high": 3.1409232847326005,
+        "low": 2.2424127140264867,
+        "median": 2.72436737293246
+      }
+    },
+    {
+      "label": "Toy TMZ pressure",
+      "mean_final_total": 1.2613006794678523,
+      "n": 40,
+      "quantiles": {
+        "q05": 0.8872208024713036,
+        "q50": 1.2798930567885878,
+        "q95": 1.551456234268961
+      },
+      "scenario_id": "tmz",
+      "std_final_total": 0.1882097764265712,
+      "uncertainty_band": {
+        "high": 1.551456234268961,
+        "low": 0.8872208024713036,
+        "median": 1.2798930567885878
+      }
+    },
+    {
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "mean_final_total": 0.6090419231728135,
+      "n": 40,
+      "quantiles": {
+        "q05": 0.3942271443824871,
+        "q50": 0.6298738698724038,
+        "q95": 0.7667776694556994
+      },
+      "scenario_id": "tmz_fus",
+      "std_final_total": 0.11276487723455457,
+      "uncertainty_band": {
+        "high": 0.7667776694556994,
+        "low": 0.3942271443824871,
+        "median": 0.6298738698724038
+      }
+    }
+  ],
+  "seed": 7,
+  "simulated": [
+    "Seedable Monte Carlo sweeps over toy growth parameters",
+    "Per-scenario outcome distributions (final_total)",
+    "Quantile / uncertainty-band summaries for research comparison"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "config_sha256": "80429C45561E60AAF85D187C89197B98466C5036ABDFA178B81E8B7C354386F0",
+    "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+    "evaluation_file": "data\\training\\evidence_pack\\annotation_splits\\evidence_test.jsonl",
+    "evaluation_file_sha256": "D02CC3202AB2C9A77EACDB830E03AA0F20BB7734A2C425A9D1DB413CA1FED207",
+    "label_map": "data\\training\\evidence_pack\\label_maps\\evidence_label_map.json",
+    "label_map_sha256": "EC12DACC60C2BF167E1E07A397794EEB977D34083DA79F87A938D477E8C3ABFE"
+  },
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "evaluation_file_exists": true,
+    "label_map_exists": true,
+    "training_enabled": true
+  },
+  "config_path": "configs\\training\\gbmbert_evidence_experiment_pubmedbert.json",
+  "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+  "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+  "output_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v5",
+  "task": "evidence_classification",
+  "training_enabled": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

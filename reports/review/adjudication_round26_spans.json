@@ -1,0 +1,23 @@
+{
+  "agreement_rate": 0.9767441860465116,
+  "compared_item_count": 43,
+  "conflict_count": 1,
+  "conflicted_item_count": 1,
+  "conflicts": [
+    {
+      "field": "review_status",
+      "item_id": "entity_span:35836243:6:588:598",
+      "values_by_source": {
+        "data\\research\\review_batches\\round26\\entity_span_review_round26_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round26\\entity_span_review_round26_r2.jsonl": "corrected"
+      }
+    }
+  ],
+  "item_count": 43,
+  "source_paths": [
+    "data\\research\\review_batches\\round26\\entity_span_review_round26_r1.jsonl",
+    "data\\research\\review_batches\\round26\\entity_span_review_round26_r2.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

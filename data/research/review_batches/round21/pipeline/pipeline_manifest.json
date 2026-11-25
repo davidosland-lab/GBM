@@ -1,0 +1,62 @@
+{
+  "command": "gbmbert-run-pipeline data\\research\\review_batches\\round21\\pubmed_round21_candidates.jsonl --output-dir data\\research\\review_batches\\round21\\pipeline --entity-mode lexicon",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 172310,
+      "line_count": 80,
+      "non_empty_line_count": 80,
+      "path": "data\\research\\review_batches\\round21\\pubmed_round21_candidates.jsonl",
+      "sha256": "864DA75581E7A931C00ED71012C5E69BCB999FC108AF73E3DC7F096288202FA9"
+    },
+    {
+      "byte_count": 66514,
+      "line_count": 80,
+      "non_empty_line_count": 80,
+      "path": "data\\research\\review_batches\\round21\\pipeline\\entities.jsonl",
+      "sha256": "1B4FF0472C4D90A2A20BD388E641A6E4F4D34704DD1476EE704AD1D3A6263B9B"
+    },
+    {
+      "byte_count": 23968,
+      "line_count": 80,
+      "non_empty_line_count": 80,
+      "path": "data\\research\\review_batches\\round21\\pipeline\\evidence_claims.jsonl",
+      "sha256": "8D5537929722E1D80F39BBD83CFCAD840CBD6F2806D551E06738ECC7756928E8"
+    },
+    {
+      "byte_count": 254958,
+      "line_count": 80,
+      "non_empty_line_count": 80,
+      "path": "data\\research\\review_batches\\round21\\pipeline\\graph_records.jsonl",
+      "sha256": "997C678277D94BCC7EB89D3AEE3AC6170638319A61EFDB13AE53EFA80199B45C"
+    },
+    {
+      "byte_count": 2522,
+      "line_count": 134,
+      "non_empty_line_count": 134,
+      "path": "data\\research\\review_batches\\round21\\pipeline\\graph_quality_report.json",
+      "sha256": "4337EFA08F3DF3A842B5F17BEFA3784613378A4D80DFAFE23AA6054B94373CF2"
+    },
+    {
+      "byte_count": 1183,
+      "line_count": 50,
+      "non_empty_line_count": 42,
+      "path": "data\\research\\review_batches\\round21\\pipeline\\graph_quality_report.md",
+      "sha256": "AD05159EA3A02BA555D062C486BA48BA5BCFAD7AF6E73048E4CF7ABDE97C70A0"
+    }
+  ],
+  "generated_at_utc": "2026-07-19T10:02:38+00:00",
+  "name": "pipeline",
+  "notes": [
+    "Pipeline artifact bundle: input PubMed JSONL, entity JSONL, evidence JSONL, graph JSONL, and quality reports.",
+    "Entity mode: lexicon",
+    "Lexicon: configs\\extraction\\lexicon_gbm_v1.json"
+  ],
+  "query_pack": null,
+  "record_count": 320,
+  "source": "GBM-AI literature pipeline"
+}

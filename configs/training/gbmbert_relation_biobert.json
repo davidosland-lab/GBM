@@ -1,21 +1,31 @@
 {
   "name": "gbmbert_relation_biobert",
-  "governance_profile": "current",
-  "governance_note": "Current relation config aligned to the local relation-only training pack.",
+  "governance_profile": "scaffold",
+  "governance_note": "Completed Round 25 PREDICTS/WORSENS fill + class-weighted BioBERT relation experiment (v3). Macro-F1 0.59 (was 0.58 on v2). Re-enable training_enabled and pass --confirm-training-enabled to repeat. Research-use only; not a validated clinical model. Run artifacts under reports/training/relation_experiment_v3_*.",
+  "governance_dataset_dir": "data/training/relation_pack/annotation_splits",
+  "governance_label_map_dir": "data/training/relation_pack/label_maps",
   "task": "relation_extraction",
   "base_model": "dmis-lab/biobert-base-cased-v1.2",
   "train_path": "data/training/relation_pack/annotation_splits/relation_train.jsonl",
   "validation_path": "data/training/relation_pack/annotation_splits/relation_validation.jsonl",
-  "output_dir": "models/checkpoints/gbmbert_relation_biobert",
+  "output_dir": "models/checkpoints/gbmbert_relation_biobert_v3",
   "label_set": [
     "ASSOCIATED_WITH",
+    "ENHANCES_DELIVERY_OF",
+    "IMPROVES",
     "NO_RELATION",
-    "PREDICTS"
+    "PREDICTS",
+    "SYNERGIZES_WITH",
+    "TARGETS",
+    "WORSENS"
   ],
   "hyperparameters": {
     "epochs": 3,
     "learning_rate": 0.00002,
     "batch_size": 8,
-    "max_length": 256
-  }
+    "max_length": 256,
+    "seed": 13,
+    "use_class_weights": true
+  },
+  "training_enabled": false
 }

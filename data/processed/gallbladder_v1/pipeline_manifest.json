@@ -1,0 +1,62 @@
+{
+  "command": "gbmbert-run-pipeline data\\raw\\pubmed_gallbladder_v1_2026-09-08.jsonl --output-dir data\\processed\\gallbladder_v1 --entity-mode lexicon",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 361781,
+      "line_count": 158,
+      "non_empty_line_count": 158,
+      "path": "data\\raw\\pubmed_gallbladder_v1_2026-09-08.jsonl",
+      "sha256": "814048B3AD954C9AC0A2745DE2E0F8EDA51CD00ACADF4701A8D9AE8ADF0A024F"
+    },
+    {
+      "byte_count": 201550,
+      "line_count": 158,
+      "non_empty_line_count": 158,
+      "path": "data\\processed\\gallbladder_v1\\entities.jsonl",
+      "sha256": "9DE51B2CB25E5677E9ED5BF053A639B58A11AB572ED8CBB220108DC508B57510"
+    },
+    {
+      "byte_count": 45052,
+      "line_count": 158,
+      "non_empty_line_count": 158,
+      "path": "data\\processed\\gallbladder_v1\\evidence_claims.jsonl",
+      "sha256": "4B1DFEC42F3BB43D579423EBBF0337FCBB25A608BBD77B13DAEF0C9B668E9E24"
+    },
+    {
+      "byte_count": 647581,
+      "line_count": 158,
+      "non_empty_line_count": 158,
+      "path": "data\\processed\\gallbladder_v1\\graph_records.jsonl",
+      "sha256": "467E80C888EF9B943879268758C8CB27086A3798AC0FE52E7CD0F7648C2F9D7C"
+    },
+    {
+      "byte_count": 2893,
+      "line_count": 140,
+      "non_empty_line_count": 140,
+      "path": "data\\processed\\gallbladder_v1\\graph_quality_report.json",
+      "sha256": "1DEC08362926F8900979C9F9A75A23D162D9F5EC5F31547DBE18CF5936876A5A"
+    },
+    {
+      "byte_count": 1476,
+      "line_count": 50,
+      "non_empty_line_count": 42,
+      "path": "data\\processed\\gallbladder_v1\\graph_quality_report.md",
+      "sha256": "77DD9AA512BCD75B77C5EFB0E4F898C06A19568DF339B7752BADAFA623ED2378"
+    }
+  ],
+  "generated_at_utc": "2026-09-08T06:26:22+00:00",
+  "name": "gallbladder_v1",
+  "notes": [
+    "Pipeline artifact bundle: input PubMed JSONL, entity JSONL, evidence JSONL, graph JSONL, and quality reports.",
+    "Entity mode: lexicon",
+    "Lexicon: configs\\extraction\\lexicon_gallbladder_v1.json"
+  ],
+  "query_pack": null,
+  "record_count": 632,
+  "source": "GBM-AI literature pipeline"
+}

@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "config_sha256": "7DE94884AE046453DF46F5304DDE67BBB7F2D343BBE01B55755A4DCBD1F22B9F",
+    "dataset_dir": "data\\training\\ner_bio_pack\\annotation_splits",
+    "evaluation_file": "data\\training\\ner_bio_pack\\annotation_splits\\ner_test.jsonl",
+    "evaluation_file_sha256": "46BCFEF596387DDD02E7C965C0AE5F66A33B3E491C6ABF6C12650331FDFC5AD1",
+    "label_map": "data\\training\\ner_bio_pack\\label_maps\\ner_label_map.json",
+    "label_map_sha256": "5F2954DC456C9B6F8F66C87002E99BD227942F36FD155B405CE9F7B9CDBEB1CC"
+  },
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "evaluation_file_exists": true,
+    "label_map_exists": true,
+    "training_enabled": true
+  },
+  "config_path": "configs\\training\\gbmbert_ner_bio_pubmedbert.json",
+  "dataset_dir": "data\\training\\ner_bio_pack\\annotation_splits",
+  "label_map_dir": "data\\training\\ner_bio_pack\\label_maps",
+  "output_dir": "models\\checkpoints\\gbmbert_ner_bio_pubmedbert_v1",
+  "task": "ner",
+  "training_enabled": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

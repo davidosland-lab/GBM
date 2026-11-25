@@ -1,0 +1,23 @@
+{
+  "command": null,
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 398759,
+      "line_count": 181,
+      "non_empty_line_count": 181,
+      "path": "data\\raw\\pubmed_gbm_v2_round34_2026-07-23.jsonl",
+      "sha256": "E91E819AD8E3BEC76829D4B92A5C23C07457B254876F4094F29DC205F691C5EA"
+    }
+  ],
+  "generated_at_utc": "2026-07-23T00:21:29+00:00",
+  "name": "pubmed_gbm_v2_round34_2026-07-23",
+  "notes": [],
+  "query_pack": "pubmed_gbm_v2",
+  "record_count": 181,
+  "source": "PubMed"
+}

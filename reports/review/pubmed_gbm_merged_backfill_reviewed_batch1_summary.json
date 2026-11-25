@@ -1,0 +1,135 @@
+{
+  "corrected_evidence_tier_counts": [],
+  "corrected_relation_type_counts": [],
+  "item_count": 30,
+  "item_type_counts": [
+    {
+      "count": 18,
+      "key": "evidence_claim"
+    },
+    {
+      "count": 12,
+      "key": "graph_relation"
+    }
+  ],
+  "pending_count": 0,
+  "sample_items": [
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:176331",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "Text too short/ambiguous for gold evidence labeling.",
+      "review_status": "rejected",
+      "reviewer": "agent-curation",
+      "source_file": "data\\processed\\pubmed_gbm_merged_backfill_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "176331",
+      "tail": "",
+      "text": "Glioblastoma multiforme in children."
+    },
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:16944365",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "Text too short/ambiguous for gold evidence labeling.",
+      "review_status": "rejected",
+      "reviewer": "agent-curation",
+      "source_file": "data\\processed\\pubmed_gbm_merged_backfill_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "16944365",
+      "tail": "",
+      "text": "[Malignant gliomas--radiotherapy]."
+    },
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:18167333",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "Text too short/ambiguous for gold evidence labeling.",
+      "review_status": "rejected",
+      "reviewer": "agent-curation",
+      "source_file": "data\\processed\\pubmed_gbm_merged_backfill_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "18167333",
+      "tail": "",
+      "text": "BMPing off glioma stem cells."
+    },
+    {
+      "confidence": 0.58,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 1,
+      "head": "",
+      "item_id": "evidence:18665745",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65"
+      ],
+      "relation_type": "",
+      "review_notes": "Text too short/ambiguous for gold evidence labeling.",
+      "review_status": "rejected",
+      "reviewer": "agent-curation",
+      "source_file": "data\\processed\\pubmed_gbm_merged_backfill_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "18665745",
+      "tail": "",
+      "text": "Glioblastoma and stem cells."
+    },
+    {
+      "confidence": 0.5,
+      "corrected_evidence_tier": null,
+      "corrected_relation_type": "",
+      "evidence_tier": 0,
+      "head": "",
+      "item_id": "evidence:20457135",
+      "item_type": "evidence_claim",
+      "reasons": [
+        "confidence <= 0.65",
+        "hypothesis-tier evidence"
+      ],
+      "relation_type": "",
+      "review_notes": "Review/hypothesis language matches tier 0.",
+      "review_status": "accepted",
+      "reviewer": "agent-curation",
+      "source_file": "data\\processed\\pubmed_gbm_merged_backfill_pipeline\\evidence_claims.jsonl",
+      "source_pmid": "20457135",
+      "tail": "",
+      "text": "Potential therapeutic implications of cancer stem cells in glioblastoma."
+    }
+  ],
+  "source_path": "data\\review\\pubmed_gbm_merged_backfill_reviewed_batch1.jsonl",
+  "status_counts": [
+    {
+      "count": 17,
+      "key": "accepted"
+    },
+    {
+      "count": 13,
+      "key": "rejected"
+    }
+  ],
+  "warning_count": 0,
+  "warnings": []
+}

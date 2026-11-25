@@ -1,0 +1,128 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 2,
+      "key": "0"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 64,
+      "key": "Disease"
+    },
+    {
+      "count": 39,
+      "key": "Outcome"
+    },
+    {
+      "count": 35,
+      "key": "DeliveryModifier"
+    },
+    {
+      "count": 20,
+      "key": "Treatment"
+    },
+    {
+      "count": 6,
+      "key": "CellType"
+    },
+    {
+      "count": 6,
+      "key": "Gene"
+    },
+    {
+      "count": 3,
+      "key": "Biomarker"
+    },
+    {
+      "count": 2,
+      "key": "Drug"
+    }
+  ],
+  "node_mention_count": 175,
+  "paper_only_record_count": 5,
+  "record_count": 70,
+  "relation_count": 2,
+  "relation_type_counts": [
+    {
+      "count": 1,
+      "key": "ASSOCIATED_WITH"
+    },
+    {
+      "count": 1,
+      "key": "TARGETS"
+    }
+  ],
+  "source_path": "data\\research\\review_batches\\round20\\pipeline\\graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 43,
+      "key_value": "glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 21,
+      "key_value": "Glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 20,
+      "key_value": "blood-brain barrier",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 20,
+      "key_value": "survival",
+      "label": "Outcome"
+    },
+    {
+      "count": 13,
+      "key_value": "immunotherapy",
+      "label": "Treatment"
+    },
+    {
+      "count": 9,
+      "key_value": "focused ultrasound",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 9,
+      "key_value": "recurrence",
+      "label": "Outcome"
+    },
+    {
+      "count": 9,
+      "key_value": "response",
+      "label": "Outcome"
+    },
+    {
+      "count": 4,
+      "key_value": "Blood-Brain Barrier",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 4,
+      "key_value": "stem cells",
+      "label": "CellType"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "Biomarker:IDH-wildtype",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Drug:temozolomide",
+      "relation": "TARGETS",
+      "tail": "Gene:EGFR"
+    }
+  ],
+  "unique_nct_count": 0,
+  "unique_node_count": 14,
+  "unique_pmid_count": 70,
+  "warnings": []
+}

@@ -61,7 +61,7 @@ def test_run_prep_writes_skeleton_and_instructions(tmp_path: Path) -> None:
     assert report.passed is True
     assert Path(report.entities_path).exists()
     assert Path(report.instructions_path).exists()
-    assert "accepted` or `rejected" in Path(report.instructions_path).read_text(encoding="utf-8")
+    assert "accepted`, `corrected`, or `rejected" in Path(report.instructions_path).read_text(encoding="utf-8")
 
 
 def test_finalize_blocks_when_rows_still_pending(tmp_path: Path) -> None:
@@ -125,6 +125,24 @@ def test_finalize_uses_corrected_tier(tmp_path: Path) -> None:
     assert report.promoted is True
     evidence = [json.loads(line) for line in (curated / "evidence_round9.jsonl").read_text(encoding="utf-8").splitlines()]
     assert evidence[0]["label"] == 5  # corrected tier wins over the original
+
+
+def test_finalize_promotes_corrected_status_rows(tmp_path: Path) -> None:
+    staging = tmp_path / "stage"
+    row = _evidence("31", tier=0, status="corrected", notes="observational cohort")
+    row["corrected_evidence_tier"] = 3
+    _write_skeleton(staging, round_number=10, rows=[row])
+    curated = tmp_path / "curated"
+
+    report = finalize_review_batch(round_number=10, staging_dir=staging, curated_dir=curated)
+
+    assert report.promoted is True
+    assert report.accepted_evidence == 1
+    evidence = [json.loads(line) for line in (curated / "evidence_round10.jsonl").read_text(encoding="utf-8").splitlines()]
+    assert evidence[0]["label"] == 3
+    reviewed = [json.loads(line) for line in (curated / "gold_reviewed_queue_round10.jsonl").read_text(encoding="utf-8").splitlines()]
+    assert reviewed[0]["review_status"] == "accepted"
+    assert reviewed[0]["evidence_tier"] == 3
 
 
 def _evidence(pmid: str, *, tier: int, status: str, notes: str = "note") -> dict:

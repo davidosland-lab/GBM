@@ -1,0 +1,116 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 1,
+      "key": "5"
+    },
+    {
+      "count": 1,
+      "key": "3"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 99,
+      "key": "Treatment"
+    },
+    {
+      "count": 91,
+      "key": "Disease"
+    },
+    {
+      "count": 19,
+      "key": "Outcome"
+    },
+    {
+      "count": 5,
+      "key": "Drug"
+    }
+  ],
+  "node_mention_count": 214,
+  "paper_only_record_count": 11,
+  "record_count": 84,
+  "relation_count": 2,
+  "relation_type_counts": [
+    {
+      "count": 1,
+      "key": "IMPROVES"
+    },
+    {
+      "count": 1,
+      "key": "SYNERGIZES_WITH"
+    }
+  ],
+  "source_path": "data\\processed\\spinal_fusion_neuropathy_v1\\graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 27,
+      "key_value": "radiculopathy",
+      "label": "Disease"
+    },
+    {
+      "count": 16,
+      "key_value": "decompression",
+      "label": "Treatment"
+    },
+    {
+      "count": 14,
+      "key_value": "neuropathic pain",
+      "label": "Disease"
+    },
+    {
+      "count": 13,
+      "key_value": "neuropathy",
+      "label": "Disease"
+    },
+    {
+      "count": 11,
+      "key_value": "spinal fusion",
+      "label": "Treatment"
+    },
+    {
+      "count": 8,
+      "key_value": "interbody fusion",
+      "label": "Treatment"
+    },
+    {
+      "count": 6,
+      "key_value": "PLIF",
+      "label": "Treatment"
+    },
+    {
+      "count": 6,
+      "key_value": "weakness",
+      "label": "Outcome"
+    },
+    {
+      "count": 6,
+      "key_value": "numbness",
+      "label": "Outcome"
+    },
+    {
+      "count": 6,
+      "key_value": "cervical fusion",
+      "label": "Treatment"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "Treatment:PLIF",
+      "relation": "IMPROVES",
+      "tail": "Outcome:numbness"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:anterior cervical discectomy and fusion",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:ACDF"
+    }
+  ],
+  "unique_nct_count": 0,
+  "unique_node_count": 28,
+  "unique_pmid_count": 84,
+  "warnings": []
+}

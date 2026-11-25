@@ -1,0 +1,26 @@
+{
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "phase": 4,
+  "must_have": [
+    {"id": "M1", "criterion": "Training scaffold present", "status": "pass"},
+    {"id": "M2", "criterion": "Evidence training loop", "status": "pass", "preferred": "gbmbert_evidence_experiment_pubmedbert_v9", "macro_f1": 0.59},
+    {"id": "M3", "criterion": "Relation training loop", "status": "pass", "preferred": "gbmbert_relation_biobert_v3", "macro_f1": 0.59},
+    {"id": "M4", "criterion": "BIO NER training loop", "status": "pass", "preferred": "gbmbert_ner_bio_pubmedbert_v6", "span_accuracy": 0.987, "type_macro_f1": 0.691},
+    {"id": "M5", "criterion": "Gold-pack promotion floors", "status": "pass", "promotable": true},
+    {"id": "M6", "criterion": "Default governance green", "status": "pass"},
+    {"id": "M7", "criterion": "Preferred checkpoints + training_enabled false", "status": "pass"},
+    {"id": "M8", "criterion": "Research-use boundary", "status": "pass"}
+  ],
+  "quality_stretch": [
+    {"id": "Q1", "criterion": "Evidence macro-F1 >= 0.50", "target": 0.5, "actual": 0.59, "status": "pass"},
+    {"id": "Q2", "criterion": "Relation macro-F1 >= 0.50", "target": 0.5, "actual": 0.59, "status": "pass"},
+    {"id": "Q3", "criterion": "BIO span accuracy >= 0.90", "target": 0.9, "actual": 0.987, "status": "pass"},
+    {"id": "Q4", "criterion": "BIO type macro-F1 >= 0.40 with span >= 0.90", "target": 0.4, "actual": 0.691, "status": "pass", "note": "Met on cleaned 11-type BIO pack (v6). Sparse CELL_STATE/PATHWAY still fragile on tiny test n; not clinical validation."}
+  ],
+  "out_of_scope": ["phase_5_tumour_simulator", "phase_6_treatment_engine", "clinical_validation", "cds"],
+  "verdict": "satisfied",
+  "soft_residuals": [
+    "BIO sparse-type F1 (CELL_STATE/PATHWAY) still near-zero on n=1–2 test supports",
+    "v6 vs v3 is not freeze-split comparable"
+  ]
+}

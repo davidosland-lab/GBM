@@ -1,0 +1,86 @@
+{
+  "round": 17,
+  "kind": "curated_no_relation_safe_co_mention",
+  "selected": 55,
+  "pmids": 26,
+  "label": "NO_RELATION",
+  "excluded_risky_type_pairs": [
+    "Biomarker|Disease",
+    "Biomarker|Drug",
+    "Biomarker|Outcome",
+    "Biomarker|Treatment",
+    "Disease|Drug",
+    "Disease|Gene",
+    "Disease|Outcome",
+    "Disease|Treatment",
+    "Drug|Gene",
+    "Drug|Outcome",
+    "Gene|Outcome",
+    "Gene|Treatment",
+    "Outcome|Treatment"
+  ],
+  "method": "NO_RELATION from co-mentioned endpoints: (1) other pairs in positive-relation sentences excluding risky type pairs and known positives; (2) same-type co-mentions from entity docs when needed for volume.",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "sample": [
+    {
+      "pmid": "42399440",
+      "head": "DeliveryModifier:Focused ultrasound",
+      "tail": "DeliveryModifier:blood-brain barrier"
+    },
+    {
+      "pmid": "42399440",
+      "head": "DeliveryModifier:blood-brain barrier",
+      "tail": "DeliveryModifier:Focused ultrasound"
+    },
+    {
+      "pmid": "29546530",
+      "head": "Outcome:recurrence",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "29546530",
+      "head": "Outcome:survival",
+      "tail": "Outcome:recurrence"
+    },
+    {
+      "pmid": "34498213",
+      "head": "Outcome:recurrence",
+      "tail": "Outcome:response"
+    },
+    {
+      "pmid": "34498213",
+      "head": "Outcome:response",
+      "tail": "Outcome:recurrence"
+    },
+    {
+      "pmid": "37634280",
+      "head": "Outcome:response",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "37634280",
+      "head": "Outcome:survival",
+      "tail": "Outcome:response"
+    },
+    {
+      "pmid": "39560080",
+      "head": "Outcome:recurrence",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "39560080",
+      "head": "Outcome:survival",
+      "tail": "Outcome:recurrence"
+    },
+    {
+      "pmid": "17325429",
+      "head": "Outcome:response",
+      "tail": "Outcome:survival"
+    },
+    {
+      "pmid": "17325429",
+      "head": "Outcome:survival",
+      "tail": "Outcome:response"
+    }
+  ]
+}

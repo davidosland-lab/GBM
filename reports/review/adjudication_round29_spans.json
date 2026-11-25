@@ -1,0 +1,103 @@
+{
+  "agreement_rate": 0.8428571428571429,
+  "compared_item_count": 70,
+  "conflict_count": 11,
+  "conflicted_item_count": 11,
+  "conflicts": [
+    {
+      "field": "review_status",
+      "item_id": "entity_span:18757334:0:1232:1239",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:20601442:0:391:398",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:25230908:0:454:463",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:26607953:0:601:615",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:27308621:0:184:198",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:31942068:0:642:649",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:33708196:0:1116:1130",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:35303420:0:465:472",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:37523556:0:406:413",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:38134933:0:773:787",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "entity_span:41451780:0:276:283",
+      "values_by_source": {
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl": "rejected"
+      }
+    }
+  ],
+  "item_count": 70,
+  "source_paths": [
+    "data\\research\\review_batches\\round29\\entity_span_review_round29_r1.jsonl",
+    "data\\research\\review_batches\\round29\\entity_span_review_round29_r2.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

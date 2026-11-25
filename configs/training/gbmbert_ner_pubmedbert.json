@@ -1,14 +1,14 @@
 {
   "name": "gbmbert_ner_pubmedbert",
   "governance_profile": "scaffold",
-  "governance_note": "Broad NER scaffold aligned to the expanded local gold pack; retained as scaffold until the curated fixture is larger.",
+  "governance_note": "Completed NER scaffold research experiment (max_steps=200, class-weighted CE) on the expanded local gold pack. Metrics use majority-token decode over span examples (not span-level BIO). Re-enable training_enabled and pass --confirm-training-enabled to repeat. Research-use only; not a validated clinical model. Run artifacts under reports/training/ner_experiment_v1_*.",
   "governance_dataset_dir": "data/training/gold_pack/annotation_splits",
   "governance_label_map_dir": "data/training/gold_pack/label_maps",
   "task": "ner",
   "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
   "train_path": "data/training/gold_pack/annotation_splits/ner_train.jsonl",
   "validation_path": "data/training/gold_pack/annotation_splits/ner_validation.jsonl",
-  "output_dir": "models/checkpoints/gbmbert_ner_pubmedbert",
+  "output_dir": "models/checkpoints/gbmbert_ner_pubmedbert_v1",
   "label_set": [
     "GENE",
     "DRUG",
@@ -24,9 +24,13 @@
     "UNKNOWN"
   ],
   "hyperparameters": {
-    "epochs": 3,
+    "epochs": 1,
     "learning_rate": 0.00002,
     "batch_size": 8,
-    "max_length": 256
-  }
+    "max_length": 256,
+    "seed": 13,
+    "max_steps": 200,
+    "use_class_weights": true
+  },
+  "training_enabled": false
 }

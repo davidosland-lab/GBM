@@ -5,8 +5,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Input directory: `data\training\curated_import\combined_evidence.jsonl`
 - Output directory: `data\training\evidence_pack`
 - Reports directory: `reports\training\evidence_pack`
-- Evidence examples: 48
-- Ready: True
+- Evidence examples: 1016
+- Ready: False
 
 ## Artifacts
 - Annotation dataset: `data\training\evidence_pack\annotation_dataset`
@@ -15,4 +15,4 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Label maps: `data\training\evidence_pack\label_maps`
 
 ## Warnings
-- none
+- evidence: 86 duplicate example(s)

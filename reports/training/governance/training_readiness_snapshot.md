@@ -2,14 +2,14 @@
 
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
-- Created UTC: 2026-06-29T03:49:41.082409+00:00
-- Ready packs: 3/3
+- Created UTC: 2026-07-23T07:32:16.552860+00:00
+- Ready packs: 0/3
 - Relation config status: passed
-- Current config passed: 3
+- Current config passed: 2
 - Current config failed: 0
-- Scaffold configs: 2
+- Scaffold configs: 5
 - Registry audit passed: True
-- Dashboard reports: 13
+- Dashboard reports: 14
 
 ## Warnings
 - none

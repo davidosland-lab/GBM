@@ -1,0 +1,18 @@
+{
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "round": 27,
+  "second_pass_reviewer": "agent-curation-r3",
+  "items": 100,
+  "consensus_label_changes": 0,
+  "changes": [],
+  "r3_status_counts": {
+    "rejected": 67,
+    "corrected": 33
+  },
+  "updated_consensus_status_counts": {
+    "rejected": 64,
+    "corrected": 36
+  },
+  "evidence_round27_updated": false,
+  "note": "Conservative triple vote; evidence_round27 unchanged because no majority-backed gold label change vs prior consensus."
+}

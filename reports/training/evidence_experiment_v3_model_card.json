@@ -1,0 +1,140 @@
+{
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checkpoint_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v3",
+  "checkpoint_name": "gbmbert_evidence_experiment_pubmedbert_v3",
+  "checkpoint_status": "research_candidate",
+  "dataset_card": null,
+  "limitations": [
+    "Research-use only; not medical advice.",
+    "Not intended for diagnosis, treatment selection, or clinical decision-making.",
+    "Performance metrics are local research artifacts and do not establish clinical validity.",
+    "Training data may be small, imbalanced, or manually curated for research exploration."
+  ],
+  "metrics": {
+    "accuracy": 0.44,
+    "confusion_matrix": {
+      "0": {
+        "0": 5,
+        "1": 2,
+        "2": 1,
+        "3": 3,
+        "4": 0,
+        "5": 0
+      },
+      "1": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      },
+      "2": {
+        "0": 1,
+        "1": 0,
+        "2": 3,
+        "3": 3,
+        "4": 0,
+        "5": 0
+      },
+      "3": {
+        "0": 9,
+        "1": 3,
+        "2": 1,
+        "3": 13,
+        "4": 3,
+        "5": 0
+      },
+      "4": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 1,
+        "5": 0
+      },
+      "5": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 2,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "examples": 50,
+    "labels": [
+      {
+        "f1": 0.3846153846153846,
+        "label": "0",
+        "precision": 0.3333333333333333,
+        "recall": 0.45454545454545453,
+        "support": 11
+      },
+      {
+        "f1": 0.0,
+        "label": "1",
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 0
+      },
+      {
+        "f1": 0.5,
+        "label": "2",
+        "precision": 0.6,
+        "recall": 0.42857142857142855,
+        "support": 7
+      },
+      {
+        "f1": 0.52,
+        "label": "3",
+        "precision": 0.6190476190476191,
+        "recall": 0.4482758620689655,
+        "support": 29
+      },
+      {
+        "f1": 0.4,
+        "label": "4",
+        "precision": 0.25,
+        "recall": 1.0,
+        "support": 1
+      },
+      {
+        "f1": 0.0,
+        "label": "5",
+        "precision": 0.0,
+        "recall": 0.0,
+        "support": 2
+      }
+    ],
+    "macro_f1": 0.30076923076923073,
+    "task": "evidence_classification",
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+    "warnings": [
+      "label(s) absent from evaluation set: 1"
+    ]
+  },
+  "run_manifest": {
+    "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+    "checkpoint_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v3",
+    "completed_at": "2026-07-18T21:28:17.114157+00:00",
+    "config_sha256": "3EDDE430C4DAB84C60BA7B056BD9337018CCF980FECFC092976C9A73F54DC795",
+    "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+    "dataset_hashes": {
+      "test": "B0AE14F835BCB63AED70F3535FFEAEA9BC146406F8877CC83431EE33275E8C49",
+      "train": "BCBABB7EF303F2EFEAFE86711E3EACF23C01DF067A560E07E0F6B03EE6804CCF",
+      "validation": "1F62B3D7887627D9EEF92D8D1F2DD6862E426FA16F5764546D79C45D9D4EA4F4"
+    },
+    "evaluation_markdown_path": "reports\\training\\evidence_experiment_v3_metrics.md",
+    "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+    "label_map_sha256": "EC12DACC60C2BF167E1E07A397794EEB977D34083DA79F87A938D477E8C3ABFE",
+    "metrics_path": "reports\\training\\evidence_experiment_v3_metrics.json",
+    "output_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v3",
+    "run_name": "gbmbert_evidence_experiment_pubmedbert",
+    "started_at": "2026-07-18T21:13:12.697020+00:00",
+    "task": "evidence_classification",
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+  },
+  "task": "evidence_classification",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

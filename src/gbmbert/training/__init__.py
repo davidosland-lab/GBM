@@ -7,7 +7,12 @@ train a model or download model weights.
 from gbmbert.training.config import TrainingConfig, TrainingTask, load_training_config
 from gbmbert.training.datasets import DatasetSummary, summarize_dataset_for_config
 from gbmbert.training.evaluation import EvaluationReport, evaluate_predictions
-from gbmbert.training.execution import TrainingExecutionResult, TrainingRunManifest, execute_evidence_training
+from gbmbert.training.execution import (
+    TrainingExecutionResult,
+    TrainingRunManifest,
+    execute_evidence_training,
+    execute_task_training,
+)
 from gbmbert.training.hf_datasets import load_label_map, load_prepared_dataset
 from gbmbert.training.inference import score_evidence_jsonl
 from gbmbert.training.model_card import ModelCard, build_model_card
@@ -39,6 +44,7 @@ __all__ = [
     "build_model_card",
     "evaluate_predictions",
     "execute_evidence_training",
+    "execute_task_training",
     "load_label_map",
     "load_prepared_dataset",
     "load_training_config",

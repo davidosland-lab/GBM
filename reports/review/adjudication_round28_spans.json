@@ -1,0 +1,14 @@
+{
+  "agreement_rate": 1.0,
+  "compared_item_count": 56,
+  "conflict_count": 0,
+  "conflicted_item_count": 0,
+  "conflicts": [],
+  "item_count": 56,
+  "source_paths": [
+    "data\\research\\review_batches\\round28\\entity_span_review_round28_r1.jsonl",
+    "data\\research\\review_batches\\round28\\entity_span_review_round28_r2.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

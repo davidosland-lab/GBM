@@ -4,7 +4,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Detail JSON: `reports\training\governance_detail_links.json`
 - Valid: True
-- Rows: 17
+- Rows: 18
 - Warning present: True
 
 This contract checks that required governance rows remain visible. Missing report files inside those rows are review signals only and do not imply model or clinical readiness.

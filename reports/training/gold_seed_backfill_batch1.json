@@ -1,0 +1,20 @@
+{
+  "entity_jsonl_path": "",
+  "evidence_count": 7,
+  "files": {
+    "evidence": "data\\training\\gold_seed_backfill_batch1\\gold_evidence.jsonl",
+    "manifest": "data\\training\\gold_seed_backfill_batch1\\gold_seed_manifest.json",
+    "markdown": "data\\training\\gold_seed_backfill_batch1\\gold_seed_manifest.md",
+    "ner": "data\\training\\gold_seed_backfill_batch1\\gold_ner.jsonl",
+    "relation": "data\\training\\gold_seed_backfill_batch1\\gold_relations.jsonl"
+  },
+  "ner_count": 0,
+  "output_dir": "data\\training\\gold_seed_backfill_batch1",
+  "prediction_reviewed_queue_path": "",
+  "relation_count": 12,
+  "reviewed_queue_path": "data\\review\\combined_smoke_and_backfill_batch1_reviewed_queue.jsonl",
+  "skipped_pending_count": 0,
+  "skipped_rejected_count": 15,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

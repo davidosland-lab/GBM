@@ -11,6 +11,7 @@ from typing import Any
 from gbmbert.datasets import RESEARCH_WARNING
 from gbmbert.training.config import TrainingConfig, TrainingTask, load_training_config
 from gbmbert.training.hf_datasets import load_label_map
+from gbmbert.training.ner_bio import bio_label_map_is_bio
 from gbmbert.training.relation_negatives import NO_RELATION_LABEL
 
 TASK_TO_PREPARED = {
@@ -56,25 +57,45 @@ def review_training_config(
     config = load_training_config(config_path)
     root = Path(dataset_dir)
     prepared_task = TASK_TO_PREPARED[config.task]
-    split_counts = {split: len(_read_jsonl(root / f"{prepared_task}_{split}.jsonl")) for split in ("train", "validation", "test")}
-    dataset_labels = sorted(
-        {
-            str(row.get("label")).strip()
-            for split in ("train", "validation", "test")
-            for row in _read_jsonl(root / f"{prepared_task}_{split}.jsonl")
-            if row.get("label") is not None and str(row.get("label")).strip()
-        }
-    )
+    split_rows = {
+        split: _read_jsonl(root / f"{prepared_task}_{split}.jsonl") for split in ("train", "validation", "test")
+    }
+    split_counts = {split: len(rows) for split, rows in split_rows.items()}
     label_map_labels: list[str] = []
     label_root = Path(label_map_dir) if label_map_dir else None
-    if label_root is not None:
-        label_map_labels = sorted(load_label_map(label_root, prepared_task).keys())
+    label_to_id: dict[str, int] = {}
+    if label_root is not None and (label_root / f"{prepared_task}_label_map.json").exists():
+        label_to_id = load_label_map(label_root, prepared_task)
+        label_map_labels = sorted(label_to_id.keys())
+    is_bio = prepared_task == "ner" and bio_label_map_is_bio(label_to_id)
+    if is_bio:
+        dataset_labels = sorted(_collect_entity_types(split_rows))
+        config_entity_types = sorted({label[2:] for label in config.label_set if label.startswith("B-")})
+    else:
+        dataset_labels = sorted(
+            {
+                str(row.get("label")).strip()
+                for rows in split_rows.values()
+                for row in rows
+                if row.get("label") is not None and str(row.get("label")).strip()
+            }
+        )
+        config_entity_types = list(config.label_set)
 
     errors: list[str] = []
     warnings: list[str] = [
         "review gate is for research scaffolding only and does not certify model performance",
         "training remains separate from diagnosis, treatment selection, and clinical decision-making",
     ]
+    if is_bio:
+        warnings.append("BIO NER config: dataset labels are entity types; config/label map use O/B-/I- tags")
+        dataset_covered_by_config = all(f"B-{label}" in set(config.label_set) for label in dataset_labels)
+        config_labels_present = True
+        dataset_covered_by_map = all(f"B-{label}" in set(label_map_labels) for label in dataset_labels)
+    else:
+        dataset_covered_by_config = set(dataset_labels).issubset(set(config.label_set))
+        config_labels_present = set(config.label_set).issubset(set(dataset_labels))
+        dataset_covered_by_map = not label_root or set(dataset_labels).issubset(set(label_map_labels))
     checks = {
         "dataset_dir_exists": root.exists(),
         "train_split_present": (root / f"{prepared_task}_train.jsonl").exists(),
@@ -83,10 +104,10 @@ def review_training_config(
         "train_split_nonempty": split_counts["train"] > 0,
         "config_label_set_nonempty": bool(config.label_set),
         "dataset_label_set_nonempty": bool(dataset_labels),
-        "dataset_labels_covered_by_config": set(dataset_labels).issubset(set(config.label_set)),
-        "config_labels_present_in_dataset": set(config.label_set).issubset(set(dataset_labels)),
+        "dataset_labels_covered_by_config": dataset_covered_by_config,
+        "config_labels_present_in_dataset": config_labels_present,
         "label_map_present": label_root is None or (label_root / f"{prepared_task}_label_map.json").exists(),
-        "dataset_labels_covered_by_label_map": not label_root or set(dataset_labels).issubset(set(label_map_labels)),
+        "dataset_labels_covered_by_label_map": dataset_covered_by_map,
         "label_map_labels_match_config": not label_root or set(label_map_labels) == set(config.label_set),
         "hyperparameters_in_review_bounds": _hyperparameters_in_review_bounds(config),
         "training_enabled_confirmed": not config.training_enabled or confirm_training_enabled,
@@ -103,16 +124,29 @@ def review_training_config(
             errors.append(f"{prepared_task}_{split}.jsonl has no examples")
         elif count == 0:
             warnings.append(f"{prepared_task}_{split}.jsonl has no examples")
-    missing_config_labels = sorted(set(dataset_labels) - set(config.label_set))
-    if missing_config_labels:
-        errors.append(f"dataset labels missing from config label_set: {', '.join(missing_config_labels)}")
-    unused_config_labels = sorted(set(config.label_set) - set(dataset_labels))
-    if unused_config_labels:
-        errors.append(f"config label_set labels missing from dataset: {', '.join(unused_config_labels)}")
+    if is_bio:
+        missing_config_labels = sorted(label for label in dataset_labels if f"B-{label}" not in set(config.label_set))
+        if missing_config_labels:
+            errors.append(f"dataset entity types missing B- tags in config label_set: {', '.join(missing_config_labels)}")
+        unused_entity_types = sorted(set(config_entity_types) - set(dataset_labels))
+        if unused_entity_types:
+            warnings.append(f"config entity types absent from dataset spans: {', '.join(unused_entity_types)}")
+    else:
+        missing_config_labels = sorted(set(dataset_labels) - set(config.label_set))
+        if missing_config_labels:
+            errors.append(f"dataset labels missing from config label_set: {', '.join(missing_config_labels)}")
+        unused_config_labels = sorted(set(config.label_set) - set(dataset_labels))
+        if unused_config_labels:
+            errors.append(f"config label_set labels missing from dataset: {', '.join(unused_config_labels)}")
     if label_root is not None:
-        missing_map_labels = sorted(set(dataset_labels) - set(label_map_labels))
-        if missing_map_labels:
-            errors.append(f"dataset labels missing from label map: {', '.join(missing_map_labels)}")
+        if is_bio:
+            missing_map_labels = sorted(label for label in dataset_labels if f"B-{label}" not in set(label_map_labels))
+            if missing_map_labels:
+                errors.append(f"dataset entity types missing B- tags in label map: {', '.join(missing_map_labels)}")
+        else:
+            missing_map_labels = sorted(set(dataset_labels) - set(label_map_labels))
+            if missing_map_labels:
+                errors.append(f"dataset labels missing from label map: {', '.join(missing_map_labels)}")
         if set(label_map_labels) != set(config.label_set):
             errors.append("label map labels do not match config label_set")
     if prepared_task == "relation" and NO_RELATION_LABEL not in set(config.label_set):
@@ -247,6 +281,20 @@ def _numeric_in_range(value: Any, *, lower: float, upper: float, lower_inclusive
     if not lower_inclusive and value <= lower:
         return False
     return value <= upper
+
+
+def _collect_entity_types(split_rows: dict[str, list[dict[str, Any]]]) -> set[str]:
+    labels: set[str] = set()
+    for rows in split_rows.values():
+        for row in rows:
+            entities = row.get("entities")
+            if isinstance(entities, list):
+                for entity in entities:
+                    if isinstance(entity, dict) and str(entity.get("label") or "").strip():
+                        labels.add(str(entity["label"]).strip())
+            elif row.get("label") is not None and str(row.get("label")).strip():
+                labels.add(str(row.get("label")).strip())
+    return labels
 
 
 def _read_jsonl(path: Path) -> list[dict[str, Any]]:

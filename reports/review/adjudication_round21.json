@@ -1,0 +1,55 @@
+{
+  "agreement_rate": 0.9404761904761905,
+  "compared_item_count": 84,
+  "conflict_count": 5,
+  "conflicted_item_count": 5,
+  "conflicts": [
+    {
+      "field": "review_status",
+      "item_id": "evidence:34186205",
+      "values_by_source": {
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r2.jsonl": "corrected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "evidence:34298694",
+      "values_by_source": {
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r2.jsonl": "corrected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "evidence:37142373",
+      "values_by_source": {
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r2.jsonl": "corrected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "evidence:40482854",
+      "values_by_source": {
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r2.jsonl": "corrected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "evidence:41345097",
+      "values_by_source": {
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r2.jsonl": "corrected"
+      }
+    }
+  ],
+  "item_count": 84,
+  "source_paths": [
+    "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r1.jsonl",
+    "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21_r2.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

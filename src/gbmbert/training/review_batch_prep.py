@@ -14,9 +14,11 @@ curated round which the PR158 rebuild orchestrator then discovers:
             curated-expansion dir so ``gbmbert-rebuild-curated-rounds`` picks them
             up.
 
-Research-use only. The entity spans are lexicon-suggested (not span-reviewed);
-the evidence tiers and relations are the human-reviewed signal. This helper does
-not promote a dataset or claim a validated GBM-BERT model exists.
+Research-use only. Lexicon entity spans are not span-reviewed until you run
+``gbmbert-export-entity-span-review`` / ``gbmbert-apply-entity-span-review``;
+evidence tiers and relations remain the primary human-reviewed signals from
+prep/finalize. This helper does not promote a dataset or claim a validated
+GBM-BERT model exists.
 """
 
 from __future__ import annotations
@@ -264,7 +266,8 @@ def finalize_review_batch(
 
     pending = [r for r in rows if str(r.get("review_status") or PENDING_STATUS) == PENDING_STATUS]
     rejected = [r for r in rows if str(r.get("review_status")) == REJECTED_STATUS]
-    accepted = [r for r in rows if str(r.get("review_status")) == ACCEPTED_STATUS]
+    # Corrected rows are gold-usable after applying correction fields.
+    accepted = [_apply_corrections(r) for r in rows if str(r.get("review_status")) in {ACCEPTED_STATUS, "corrected"}]
     accepted_evidence = [r for r in accepted if str(r.get("item_type")) == "evidence_claim"]
     accepted_relations = [r for r in accepted if str(r.get("item_type")) == "graph_relation"]
 
@@ -456,6 +459,22 @@ def _evidence_tier(row: dict[str, Any]) -> int | None:
         return None
 
 
+def _apply_corrections(row: dict[str, Any]) -> dict[str, Any]:
+    """Normalize accepted/corrected review rows before promotion into curated rounds."""
+
+    promoted = dict(row)
+    tier = _evidence_tier(promoted)
+    if tier is not None:
+        promoted["evidence_tier"] = tier
+    relation = str(promoted.get("corrected_relation_type") or promoted.get("relation_type") or "").strip()
+    if relation:
+        promoted["relation_type"] = relation
+    promoted["review_status"] = ACCEPTED_STATUS
+    promoted["corrected_evidence_tier"] = None
+    promoted["corrected_relation_type"] = ""
+    return promoted
+
+
 def _prep_instructions(round_number: int, reviewed_queue: Path, entities: Path) -> str:
     return "\n".join(
         [
@@ -466,17 +485,19 @@ def _prep_instructions(round_number: int, reviewed_queue: Path, entities: Path) 
             f"Annotate the reviewed-queue skeleton, then finalize round {round_number}.",
             "",
             f"1. Open `{reviewed_queue}`. Each line is one item (evidence_claim or graph_relation).",
-            "2. For every row, set `review_status` to `accepted` or `rejected` (it starts as `pending`).",
+            "2. For every row, set `review_status` to `accepted`, `corrected`, or `rejected` (it starts as `pending`).",
             "   - evidence_claim: verify/correct `evidence_tier` (0-5) or set `corrected_evidence_tier`.",
             "   - graph_relation: verify/correct `relation_type` or set `corrected_relation_type`.",
             "   - add a one-line `review_notes` rationale.",
-            f"3. Entity spans in `{entities}` are lexicon-suggested (not span-reviewed); leave or trim as needed.",
+            f"3. Entity spans in `{entities}` are lexicon-suggested until span-reviewed. Optionally run",
+            "   `gbmbert-export-entity-span-review` / `gbmbert-apply-entity-span-review` (launcher `16BV`/`16BW`)",
+            "   so offsets/labels become a reviewed NER signal before promote.",
             f"4. Run `gbmbert-finalize-review-batch --round {round_number}`. It promotes the round into the",
-            "   curated-expansion dir only when no row is still `pending`. Only accepted rows enter the corpus.",
+            "   curated-expansion dir only when no row is still `pending`. Accepted and corrected rows enter the corpus.",
             "5. Run `gbmbert-rebuild-curated-rounds` then `gbmbert-verify-local`.",
             "",
-            "Research-use only. Tiers and relations are the human-reviewed signal; this does not promote a",
-            "dataset or claim a validated GBM-BERT model exists.",
+            "Research-use only. Evidence tiers, relations, and (when used) entity-span reviews are the human-reviewed",
+            "signals; this does not promote a dataset or claim a validated GBM-BERT model exists.",
         ]
     )
 

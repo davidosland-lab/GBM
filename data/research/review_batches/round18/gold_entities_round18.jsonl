@@ -1,0 +1,39 @@
+{"pmid": "16759163", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 1346, "end": 1360, "confidence": 1.0}]}
+{"pmid": "26443480", "entities": [{"text": "Furthermore", "normalized_text": "Furthermore", "label": "UNKNOWN", "start": 725, "end": 736, "confidence": 1.0}]}
+{"pmid": "28274144", "entities": [{"text": "phase I", "normalized_text": "phase I", "label": "TRIAL_PHASE", "start": 997, "end": 1004, "confidence": 1.0}]}
+{"pmid": "28459464", "entities": [{"text": "apoptosis", "normalized_text": "apoptosis", "label": "CELL_STATE", "start": 74, "end": 83, "confidence": 1.0}]}
+{"pmid": "30022431", "entities": [{"text": "AKT", "normalized_text": "AKT", "label": "PATHWAY", "start": 1193, "end": 1196, "confidence": 1.0}]}
+{"pmid": "30742119", "entities": [{"text": "MAPK", "normalized_text": "MAPK", "label": "PATHWAY", "start": 730, "end": 734, "confidence": 1.0}]}
+{"pmid": "31852834", "entities": [{"text": "DNA Damage Response", "normalized_text": "DNA Damage Response", "label": "PATHWAY", "start": 37, "end": 56, "confidence": 1.0}]}
+{"pmid": "32210117", "entities": [{"text": "apoptosis", "normalized_text": "apoptosis", "label": "CELL_STATE", "start": 1540, "end": 1549, "confidence": 1.0}]}
+{"pmid": "32401608", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 167, "end": 181, "confidence": 1.0}]}
+{"pmid": "32408220", "entities": [{"text": "randomized trial", "normalized_text": "randomized trial", "label": "TRIAL_PHASE", "start": 569, "end": 585, "confidence": 1.0}]}
+{"pmid": "32813021", "entities": [{"text": "TGF-β", "normalized_text": "TGF-β", "label": "PATHWAY", "start": 0, "end": 5, "confidence": 1.0}, {"text": "Furthermore", "normalized_text": "Furthermore", "label": "UNKNOWN", "start": 1922, "end": 1933, "confidence": 1.0}]}
+{"pmid": "33858848", "entities": [{"text": "context", "normalized_text": "context", "label": "UNKNOWN", "start": 2464, "end": 2471, "confidence": 1.0}]}
+{"pmid": "35093451", "entities": [{"text": "apoptosis", "normalized_text": "apoptosis", "label": "CELL_STATE", "start": 490, "end": 499, "confidence": 1.0}, {"text": "However", "normalized_text": "However", "label": "UNKNOWN", "start": 316, "end": 323, "confidence": 1.0}]}
+{"pmid": "35601970", "entities": [{"text": "randomized trial", "normalized_text": "randomized trial", "label": "TRIAL_PHASE", "start": 669, "end": 685, "confidence": 1.0}]}
+{"pmid": "35849035", "entities": [{"text": "phase I", "normalized_text": "phase I", "label": "TRIAL_PHASE", "start": 74, "end": 81, "confidence": 1.0}]}
+{"pmid": "36056850", "entities": [{"text": "proliferation", "normalized_text": "proliferation", "label": "CELL_STATE", "start": 554, "end": 567, "confidence": 1.0}, {"text": "therefore", "normalized_text": "therefore", "label": "UNKNOWN", "start": 331, "end": 340, "confidence": 1.0}]}
+{"pmid": "36129048", "entities": [{"text": "PI3K/Akt", "normalized_text": "PI3K/Akt", "label": "PATHWAY", "start": 1294, "end": 1302, "confidence": 1.0}]}
+{"pmid": "36562460", "entities": [{"text": "akt", "normalized_text": "akt", "label": "PATHWAY", "start": 88, "end": 91, "confidence": 1.0}]}
+{"pmid": "36730349", "entities": [{"text": "respectively", "normalized_text": "respectively", "label": "UNKNOWN", "start": 1013, "end": 1025, "confidence": 1.0}]}
+{"pmid": "37289203", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 867, "end": 881, "confidence": 1.0}, {"text": "Furthermore", "normalized_text": "Furthermore", "label": "UNKNOWN", "start": 495, "end": 506, "confidence": 1.0}]}
+{"pmid": "37781367", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 866, "end": 880, "confidence": 1.0}]}
+{"pmid": "38020665", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 401, "end": 415, "confidence": 1.0}]}
+{"pmid": "38049682", "entities": [{"text": "invasion", "normalized_text": "invasion", "label": "CELL_STATE", "start": 1082, "end": 1090, "confidence": 1.0}]}
+{"pmid": "38448392", "entities": [{"text": "respectively", "normalized_text": "respectively", "label": "UNKNOWN", "start": 956, "end": 968, "confidence": 1.0}]}
+{"pmid": "38477507", "entities": [{"text": "mismatch repair", "normalized_text": "mismatch repair", "label": "PATHWAY", "start": 961, "end": 976, "confidence": 1.0}]}
+{"pmid": "38631135", "entities": [{"text": "PI3K", "normalized_text": "PI3K", "label": "PATHWAY", "start": 802, "end": 806, "confidence": 1.0}]}
+{"pmid": "39248287", "entities": [{"text": "WNT", "normalized_text": "WNT", "label": "PATHWAY", "start": 893, "end": 896, "confidence": 1.0}]}
+{"pmid": "39386580", "entities": [{"text": "stemness", "normalized_text": "stemness", "label": "CELL_STATE", "start": 1173, "end": 1181, "confidence": 1.0}]}
+{"pmid": "39862873", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 841, "end": 855, "confidence": 1.0}]}
+{"pmid": "40019712", "entities": [{"text": "AKT", "normalized_text": "AKT", "label": "PATHWAY", "start": 90, "end": 93, "confidence": 1.0}]}
+{"pmid": "40095115", "entities": [{"text": "migration", "normalized_text": "migration", "label": "CELL_STATE", "start": 1583, "end": 1592, "confidence": 1.0}, {"text": "However", "normalized_text": "However", "label": "UNKNOWN", "start": 591, "end": 598, "confidence": 1.0}]}
+{"pmid": "40474210", "entities": [{"text": "MAPK", "normalized_text": "MAPK", "label": "PATHWAY", "start": 1873, "end": 1877, "confidence": 1.0}]}
+{"pmid": "40901145", "entities": [{"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 246, "end": 260, "confidence": 1.0}]}
+{"pmid": "41465586", "entities": [{"text": "proliferation", "normalized_text": "proliferation", "label": "CELL_STATE", "start": 1315, "end": 1328, "confidence": 1.0}, {"text": "Overview", "normalized_text": "Overview", "label": "UNKNOWN", "start": 28, "end": 36, "confidence": 1.0}]}
+{"pmid": "41651314", "entities": [{"text": "differentiation", "normalized_text": "differentiation", "label": "CELL_STATE", "start": 911, "end": 926, "confidence": 1.0}, {"text": "However", "normalized_text": "However", "label": "UNKNOWN", "start": 570, "end": 577, "confidence": 1.0}]}
+{"pmid": "41896311", "entities": [{"text": "However", "normalized_text": "However", "label": "UNKNOWN", "start": 235, "end": 242, "confidence": 1.0}]}
+{"pmid": "41898421", "entities": [{"text": "invasion", "normalized_text": "invasion", "label": "CELL_STATE", "start": 382, "end": 390, "confidence": 1.0}]}
+{"pmid": "41925978", "entities": [{"text": "apoptosis", "normalized_text": "apoptosis", "label": "CELL_STATE", "start": 445, "end": 454, "confidence": 1.0}, {"text": "mTOR", "normalized_text": "mTOR", "label": "PATHWAY", "start": 1453, "end": 1457, "confidence": 1.0}, {"text": "Therefore", "normalized_text": "Therefore", "label": "UNKNOWN", "start": 2709, "end": 2718, "confidence": 1.0}]}
+{"pmid": "41981510", "entities": [{"text": "invasion", "normalized_text": "invasion", "label": "CELL_STATE", "start": 477, "end": 485, "confidence": 1.0}, {"text": "clinical trial", "normalized_text": "clinical trial", "label": "TRIAL_PHASE", "start": 52, "end": 66, "confidence": 1.0}]}

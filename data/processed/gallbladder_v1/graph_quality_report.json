@@ -1,0 +1,140 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 4,
+      "key": "5"
+    },
+    {
+      "count": 1,
+      "key": "3"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 263,
+      "key": "Treatment"
+    },
+    {
+      "count": 253,
+      "key": "Disease"
+    },
+    {
+      "count": 108,
+      "key": "Outcome"
+    },
+    {
+      "count": 57,
+      "key": "DeliveryModifier"
+    },
+    {
+      "count": 15,
+      "key": "Drug"
+    },
+    {
+      "count": 7,
+      "key": "Biomarker"
+    }
+  ],
+  "node_mention_count": 703,
+  "paper_only_record_count": 1,
+  "record_count": 158,
+  "relation_count": 5,
+  "relation_type_counts": [
+    {
+      "count": 5,
+      "key": "SYNERGIZES_WITH"
+    }
+  ],
+  "source_path": "data\\processed\\gallbladder_v1\\graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 78,
+      "key_value": "cholecystectomy",
+      "label": "Treatment"
+    },
+    {
+      "count": 54,
+      "key_value": "laparoscopic cholecystectomy",
+      "label": "Treatment"
+    },
+    {
+      "count": 32,
+      "key_value": "gallstones",
+      "label": "Disease"
+    },
+    {
+      "count": 30,
+      "key_value": "mortality",
+      "label": "Outcome"
+    },
+    {
+      "count": 29,
+      "key_value": "gallstone",
+      "label": "Disease"
+    },
+    {
+      "count": 24,
+      "key_value": "laparoscopic",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 22,
+      "key_value": "acute cholecystitis",
+      "label": "Disease"
+    },
+    {
+      "count": 18,
+      "key_value": "cholecystitis",
+      "label": "Disease"
+    },
+    {
+      "count": 18,
+      "key_value": "bile duct injury",
+      "label": "Disease"
+    },
+    {
+      "count": 17,
+      "key_value": "quality of life",
+      "label": "Outcome"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "Treatment:Subtotal cholecystectomy",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:intraoperative cholangiography"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:ERCP",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:Laparoscopic Cholecystectomy"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:ERCP",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:ERCP"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:Laparoscopic Cholecystectomy",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:ERCP"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:Laparoscopic Cholecystectomy",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:Laparoscopic Cholecystectomy"
+    }
+  ],
+  "unique_nct_count": 0,
+  "unique_node_count": 63,
+  "unique_pmid_count": 158,
+  "warnings": [
+    "PMID 40960586: missing paper abstract"
+  ]
+}

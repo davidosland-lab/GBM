@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-07-19T10:02:39.210197+00:00",
+  "entities_path": "data\\research\\review_batches\\round21\\gold_entities_round21.jsonl",
+  "instructions_path": "data\\research\\review_batches\\round21\\INSTRUCTIONS.md",
+  "passed": true,
+  "pubmed_jsonl": "data\\research\\review_batches\\round21\\pubmed_round21_candidates.jsonl",
+  "reviewed_queue_path": "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21.jsonl",
+  "round_number": 21,
+  "staging_dir": "data\\research\\review_batches\\round21",
+  "step_count": 3,
+  "steps": [
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-run-pipeline.exe",
+        "data\\research\\review_batches\\round21\\pubmed_round21_candidates.jsonl",
+        "--output-dir",
+        "data\\research\\review_batches\\round21\\pipeline",
+        "--entity-mode",
+        "lexicon",
+        "--lexicon",
+        "configs\\extraction\\lexicon_gbm_v1.json"
+      ],
+      "detail": "INFO:gbmbert.pipeline:Saved quality reports to data\\research\\review_batches\\round21\\pipeline\\graph_quality_report.json and data\\research\\review_batches\\round21\\pipeline\\graph_quality_report.md | INFO:gbmbert.pipeline:Saved pipeline manifests to data\\research\\review_batches\\round21\\pipeline\\pipeline_manifest.json and data\\research\\review_batches\\round21\\pipeline\\pipeline_manifest.md | INFO:gbmbert.pipeline:Validated 80 graph records with 0 invalid records",
+      "name": "literature_pipeline_lexicon",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-export-review-queue.exe",
+        "--evidence-jsonl",
+        "data\\research\\review_batches\\round21\\pipeline\\evidence_claims.jsonl",
+        "--graph-jsonl",
+        "data\\research\\review_batches\\round21\\pipeline\\graph_records.jsonl",
+        "--output",
+        "data\\research\\review_batches\\round21\\review_queue.jsonl",
+        "--max-confidence",
+        "0.85"
+      ],
+      "detail": "INFO:gbmbert.extraction.review_queue:Saved review queue JSONL to data\\research\\review_batches\\round21\\review_queue.jsonl | INFO:gbmbert.extraction.review_queue:Queued 84 item(s) for review",
+      "name": "export_review_queue",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\david\\GBM\\.venv\\Scripts\\gbmbert-init-reviewed-queue.exe",
+        "data\\research\\review_batches\\round21\\review_queue.jsonl",
+        "data\\research\\review_batches\\round21\\gold_reviewed_queue_round21.jsonl",
+        "--reviewer",
+        "agent-curation"
+      ],
+      "detail": "INFO:gbmbert.extraction.review_queue:Saved review queue JSONL to data\\research\\review_batches\\round21\\gold_reviewed_queue_round21.jsonl | INFO:gbmbert.extraction.review_queue:Initialized 84 reviewed queue item(s)",
+      "name": "init_reviewed_queue",
+      "passed": true,
+      "returncode": 0
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

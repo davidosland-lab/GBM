@@ -1,0 +1,19 @@
+{
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "v3": {"span_accuracy": 0.958, "type_macro_f1": 0.301, "examples": 575},
+  "v5": {"span_accuracy": 0.901, "type_macro_f1": 0.258, "examples": 588},
+  "dominant_failure": "rare_type_false_positives_from_class_weights_plus_label_noise",
+  "label_noise": {
+    "pathway_gene_symbol_spans_approx": 30,
+    "pathway_total_approx": 53,
+    "unknown_noise_spans_approx": 46
+  },
+  "levers": [
+    "drop_unknown_from_bio_pack",
+    "remap_pathway_gene_symbols_to_gene",
+    "stratified_pmid_split_sparse_types",
+    "oversample_sparse_train_docs",
+    "temper_class_weights_power_0_5_max_ratio_20",
+    "longer_max_steps"
+  ]
+}

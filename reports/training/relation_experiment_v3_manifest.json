@@ -1,0 +1,25 @@
+{
+  "artifacts": {
+    "config_sha256": "89F3FEE45F5AF8F3AF8FB81AB244F5D2A55E9AA1D9535CCE546036509477DFAF",
+    "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+    "evaluation_file": "data\\training\\relation_pack\\annotation_splits\\relation_test.jsonl",
+    "evaluation_file_sha256": "DC0FB2D793E419DB61518922D5FC49E487F0EB6537B9B350B1B4DB011F20B04D",
+    "label_map": "data\\training\\relation_pack\\label_maps\\relation_label_map.json",
+    "label_map_sha256": "292F411478C2D7F1820777144F35AB0BBBA51AFC40EA02256A07D4D0F5D9EA09"
+  },
+  "base_model": "dmis-lab/biobert-base-cased-v1.2",
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "evaluation_file_exists": true,
+    "label_map_exists": true,
+    "training_enabled": true
+  },
+  "config_path": "configs\\training\\gbmbert_relation_biobert.json",
+  "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+  "label_map_dir": "data\\training\\relation_pack\\label_maps",
+  "output_dir": "models\\checkpoints\\gbmbert_relation_biobert_v3",
+  "task": "relation_extraction",
+  "training_enabled": true,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

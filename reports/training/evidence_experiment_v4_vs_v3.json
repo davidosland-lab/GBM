@@ -1,0 +1,91 @@
+{
+  "v3": {
+    "accuracy": 0.44,
+    "macro_f1": 0.30076923076923073
+  },
+  "v4": {
+    "accuracy": 0.40350877192982454,
+    "macro_f1": 0.25831649831649833
+  },
+  "delta_accuracy": -0.03649122807017546,
+  "delta_macro_f1": -0.0424527324527324,
+  "per_label": {
+    "0": {
+      "v3_f1": 0.3846153846153846,
+      "v4_f1": 0.0,
+      "v3_recall": 0.45454545454545453,
+      "v4_recall": 0.0,
+      "support_v4": 12
+    },
+    "1": {
+      "v3_f1": 0.0,
+      "v4_f1": 0.56,
+      "v3_recall": 0.0,
+      "v4_recall": 0.7777777777777778,
+      "support_v4": 9
+    },
+    "2": {
+      "v3_f1": 0.5,
+      "v4_f1": 0.0,
+      "v3_recall": 0.42857142857142855,
+      "v4_recall": 0.0,
+      "support_v4": 4
+    },
+    "3": {
+      "v3_f1": 0.52,
+      "v4_f1": 0.5454545454545454,
+      "v3_recall": 0.4482758620689655,
+      "v4_recall": 0.5,
+      "support_v4": 24
+    },
+    "4": {
+      "v3_f1": 0.4,
+      "v4_f1": 0.0,
+      "v3_recall": 1.0,
+      "v4_recall": 0.0,
+      "support_v4": 4
+    },
+    "5": {
+      "v3_f1": 0.0,
+      "v4_f1": 0.4444444444444445,
+      "v3_recall": 0.0,
+      "v4_recall": 1.0,
+      "support_v4": 4
+    }
+  },
+  "split_counts_after_round19": {
+    "train": {
+      "0": 69,
+      "1": 70,
+      "2": 33,
+      "3": 223,
+      "4": 22,
+      "5": 34
+    },
+    "validation": {
+      "0": 7,
+      "1": 10,
+      "2": 4,
+      "3": 26,
+      "4": 5,
+      "5": 5
+    },
+    "test": {
+      "0": 12,
+      "1": 9,
+      "2": 4,
+      "3": 24,
+      "4": 4,
+      "5": 4
+    }
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "corpus_prediction_counts_v4": {
+    "0": 169,
+    "1": 236,
+    "2": 27,
+    "3": 295,
+    "4": 34,
+    "5": 151
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "batch_count": 4,
+  "batch_jsonl_path": "data\\processed\\curation_regression_pack\\active_learning_batches_round26.jsonl",
+  "batch_size": 25,
+  "candidate_count": 100,
+  "candidates_path": "data\\review\\active_learning_candidates_round26.jsonl",
+  "checkpoint_counts": [
+    {
+      "count": 100,
+      "key": "gbmbert_evidence_experiment_pubmedbert"
+    }
+  ],
+  "evidence_tier_counts": [
+    {
+      "count": 100,
+      "key": "4"
+    }
+  ],
+  "reason_counts": [
+    {
+      "count": 100,
+      "key": "confidence < 0.8"
+    },
+    {
+      "count": 100,
+      "key": "tier-change-sensitive evidence"
+    }
+  ],
+  "warnings": []
+}
