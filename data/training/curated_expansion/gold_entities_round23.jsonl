@@ -1,0 +1,63 @@
+{"pmid": "22877848", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 160, "end": 167, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "24552318", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 170, "end": 177, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "25975195", "entities": [{"text": "phase I/II", "label": "TRIAL_PHASE", "start": 39, "end": 49, "confidence": 0.7, "normalized_text": "phase I/II"}]}
+{"pmid": "26896279", "entities": [{"text": "quiescent", "label": "CELL_STATE", "start": 1271, "end": 1280, "confidence": 0.7, "normalized_text": "quiescent"}]}
+{"pmid": "26948367", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 864, "end": 868, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "26965451", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 908, "end": 919, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "28697342", "entities": [{"text": "proneural", "label": "CELL_STATE", "start": 303, "end": 312, "confidence": 0.7, "normalized_text": "proneural"}]}
+{"pmid": "28844499", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 151, "end": 158, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "29138945", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 310, "end": 321, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "29141164", "entities": [{"text": "phase 2", "label": "TRIAL_PHASE", "start": 186, "end": 193, "confidence": 0.7, "normalized_text": "phase 2"}]}
+{"pmid": "29392700", "entities": [{"text": "stem-like", "label": "CELL_STATE", "start": 252, "end": 261, "confidence": 0.7, "normalized_text": "stem-like"}]}
+{"pmid": "29694897", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 718, "end": 729, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "29863955", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 252, "end": 259, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "30742119", "entities": [{"text": "MAPK pathway", "label": "PATHWAY", "start": 730, "end": 742, "confidence": 0.7, "normalized_text": "MAPK pathway"}]}
+{"pmid": "30782343", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 198, "end": 205, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "31262884", "entities": [{"text": "AKT pathway", "label": "PATHWAY", "start": 229, "end": 240, "confidence": 0.7, "normalized_text": "AKT pathway"}]}
+{"pmid": "31541850", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 919, "end": 923, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "31554641", "entities": [{"text": "proneural", "label": "CELL_STATE", "start": 169, "end": 178, "confidence": 0.7, "normalized_text": "proneural"}]}
+{"pmid": "31721715", "entities": [{"text": "stem-like", "label": "CELL_STATE", "start": 445, "end": 454, "confidence": 0.7, "normalized_text": "stem-like"}, {"text": "WNT", "label": "PATHWAY", "start": 717, "end": 720, "confidence": 0.7, "normalized_text": "WNT"}]}
+{"pmid": "31751860", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 1418, "end": 1422, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "31956038", "entities": [{"text": "stem-like", "label": "CELL_STATE", "start": 350, "end": 359, "confidence": 0.7, "normalized_text": "stem-like"}]}
+{"pmid": "33235994", "entities": [{"text": "MAPK", "label": "PATHWAY", "start": 324, "end": 328, "confidence": 0.7, "normalized_text": "MAPK"}, {"text": "Phase I/II", "label": "TRIAL_PHASE", "start": 0, "end": 10, "confidence": 0.7, "normalized_text": "Phase I/II"}]}
+{"pmid": "33972529", "entities": [{"text": "quiescent", "label": "CELL_STATE", "start": 293, "end": 302, "confidence": 0.7, "normalized_text": "quiescent"}]}
+{"pmid": "34011400", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 79, "end": 90, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "34181595", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 939, "end": 943, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "34434898", "entities": [{"text": "proneural", "label": "CELL_STATE", "start": 1319, "end": 1328, "confidence": 0.7, "normalized_text": "proneural"}]}
+{"pmid": "35419607", "entities": [{"text": "phase III", "label": "TRIAL_PHASE", "start": 147, "end": 156, "confidence": 0.7, "normalized_text": "phase III"}]}
+{"pmid": "35511454", "entities": [{"text": "Phase III", "label": "TRIAL_PHASE", "start": 0, "end": 9, "confidence": 0.7, "normalized_text": "Phase III"}]}
+{"pmid": "35779193", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 1177, "end": 1181, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "35841593", "entities": [{"text": "stem-like", "label": "CELL_STATE", "start": 471, "end": 480, "confidence": 0.7, "normalized_text": "stem-like"}, {"text": "PI3K/AKT", "label": "PATHWAY", "start": 590, "end": 598, "confidence": 0.7, "normalized_text": "PI3K/AKT"}]}
+{"pmid": "36129048", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 1294, "end": 1298, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "36713376", "entities": [{"text": "phase III", "label": "TRIAL_PHASE", "start": 185, "end": 194, "confidence": 0.7, "normalized_text": "phase III"}]}
+{"pmid": "36898379", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 509, "end": 520, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "36933770", "entities": [{"text": "phase III", "label": "TRIAL_PHASE", "start": 839, "end": 848, "confidence": 0.7, "normalized_text": "phase III"}]}
+{"pmid": "37920878", "entities": [{"text": "AKT pathway", "label": "PATHWAY", "start": 1563, "end": 1574, "confidence": 0.7, "normalized_text": "AKT pathway"}]}
+{"pmid": "37967136", "entities": [{"text": "phase I", "label": "TRIAL_PHASE", "start": 1726, "end": 1733, "confidence": 0.7, "normalized_text": "phase I"}]}
+{"pmid": "38001101", "entities": [{"text": "stem-like", "label": "CELL_STATE", "start": 878, "end": 887, "confidence": 0.7, "normalized_text": "stem-like"}]}
+{"pmid": "38023152", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 1129, "end": 1133, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "38225549", "entities": [{"text": "phase II", "label": "TRIAL_PHASE", "start": 13, "end": 21, "confidence": 0.7, "normalized_text": "phase II"}]}
+{"pmid": "38502052", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 71, "end": 78, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "38565886", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 258, "end": 265, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "38605523", "entities": [{"text": "NOS", "label": "UNKNOWN", "start": 907, "end": 910, "confidence": 0.65, "normalized_text": "NOS"}]}
+{"pmid": "38741436", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 238, "end": 249, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "38891962", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 747, "end": 751, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "39143438", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 1413, "end": 1417, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "39196960", "entities": [{"text": "phase 1", "label": "TRIAL_PHASE", "start": 80, "end": 87, "confidence": 0.7, "normalized_text": "phase 1"}]}
+{"pmid": "39431006", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 66, "end": 77, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "39638782", "entities": [{"text": "phase 2", "label": "TRIAL_PHASE", "start": 261, "end": 268, "confidence": 0.7, "normalized_text": "phase 2"}]}
+{"pmid": "39692003", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 1399, "end": 1410, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "39814199", "entities": [{"text": "phase III", "label": "TRIAL_PHASE", "start": 13, "end": 22, "confidence": 0.7, "normalized_text": "phase III"}]}
+{"pmid": "40102594", "entities": [{"text": "phase 2", "label": "TRIAL_PHASE", "start": 102, "end": 109, "confidence": 0.7, "normalized_text": "phase 2"}]}
+{"pmid": "40351834", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 1537, "end": 1548, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "40500345", "entities": [{"text": "MAPK pathway", "label": "PATHWAY", "start": 1796, "end": 1808, "confidence": 0.7, "normalized_text": "MAPK pathway"}]}
+{"pmid": "40560330", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 1604, "end": 1608, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "40628732", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 458, "end": 462, "confidence": 0.7, "normalized_text": "PI3K"}]}
+{"pmid": "40691367", "entities": [{"text": "phase 1/2", "label": "TRIAL_PHASE", "start": 98, "end": 107, "confidence": 0.7, "normalized_text": "phase 1/2"}]}
+{"pmid": "40779733", "entities": [{"text": "Phase II/III", "label": "TRIAL_PHASE", "start": 117, "end": 129, "confidence": 0.7, "normalized_text": "Phase II/III"}]}
+{"pmid": "41061048", "entities": [{"text": "undetermined", "label": "UNKNOWN", "start": 809, "end": 821, "confidence": 0.65, "normalized_text": "undetermined"}]}
+{"pmid": "41339316", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 109, "end": 116, "confidence": 0.7, "normalized_text": "phase 3"}]}
+{"pmid": "41763363", "entities": [{"text": "phase II", "label": "TRIAL_PHASE", "start": 458, "end": 466, "confidence": 0.7, "normalized_text": "phase II"}]}
+{"pmid": "42070479", "entities": [{"text": "mesenchymal", "label": "CELL_STATE", "start": 1836, "end": 1847, "confidence": 0.7, "normalized_text": "mesenchymal"}]}
+{"pmid": "42372746", "entities": [{"text": "phase 3", "label": "TRIAL_PHASE", "start": 147, "end": 154, "confidence": 0.7, "normalized_text": "phase 3"}, {"text": "not otherwise specified", "label": "UNKNOWN", "start": 3160, "end": 3183, "confidence": 0.65, "normalized_text": "not otherwise specified"}]}
+{"pmid": "42418103", "entities": [{"text": "PI3K", "label": "PATHWAY", "start": 970, "end": 974, "confidence": 0.7, "normalized_text": "PI3K"}]}

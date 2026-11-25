@@ -1,0 +1,39 @@
+{
+  "corpus": "biored",
+  "document_count": 400,
+  "dropped_entity_label_counts": {
+    "OrganismTaxon": 1429
+  },
+  "dropped_relation_label_counts": {
+    "Association": 200,
+    "Bind": 8,
+    "Negative_Correlation": 74,
+    "Positive_Correlation": 65
+  },
+  "entity_count": 11922,
+  "input_path": "data\\research\\biored\\extracted\\BioRED\\Train.BioC.JSON",
+  "license": "BioRED (Luo et al., Brief Bioinform 2022); NCBI / NLM research corpus. PubMed-derived abstracts. Research-use only.",
+  "output_path": "data\\training\\external_corpus\\biored_train\\gold_entities.jsonl",
+  "project_entity_label_counts": {
+    "BIOMARKER": 890,
+    "CELL_TYPE": 103,
+    "DISEASE": 3646,
+    "DRUG": 2853,
+    "GENE": 4430
+  },
+  "project_relation_label_counts": {
+    "ASSOCIATED_WITH": 2712,
+    "PREDICTS": 1024,
+    "SYNERGIZES_WITH": 42,
+    "TARGETS": 53
+  },
+  "reader": "biored_bioc",
+  "relation_count": 3831,
+  "relations_output_path": "data\\training\\external_corpus\\biored_train\\gold_relations.jsonl",
+  "source_type": "external_corpus",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "dropped unmapped source entity labels (add them to the crosswalk to keep them): OrganismTaxon=1429",
+    "dropped unmapped or unresolved source relations: Association=200, Bind=8, Negative_Correlation=74, Positive_Correlation=65"
+  ]
+}

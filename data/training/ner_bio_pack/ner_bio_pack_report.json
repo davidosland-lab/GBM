@@ -1,0 +1,39 @@
+{
+  "document_count": 754,
+  "entity_count": 6906,
+  "entity_type_counts": {
+    "BIOMARKER": 264,
+    "CELL_STATE": 95,
+    "CELL_TYPE": 182,
+    "DELIVERY_MODIFIER": 221,
+    "DISEASE": 3013,
+    "DRUG": 717,
+    "GENE": 616,
+    "OUTCOME": 1190,
+    "PATHWAY": 46,
+    "TREATMENT": 520,
+    "TRIAL_PHASE": 42
+  },
+  "files": {
+    "label_map": "data\\training\\ner_bio_pack\\label_maps\\ner_label_map.json",
+    "test": "data\\training\\ner_bio_pack\\annotation_splits\\ner_test.jsonl",
+    "train": "data\\training\\ner_bio_pack\\annotation_splits\\ner_train.jsonl",
+    "validation": "data\\training\\ner_bio_pack\\annotation_splits\\ner_validation.jsonl"
+  },
+  "label_map_path": "data\\training\\ner_bio_pack\\label_maps\\ner_label_map.json",
+  "output_dir": "data\\training\\ner_bio_pack",
+  "split_counts": {
+    "test": 76,
+    "train": 712,
+    "validation": 75
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "skipped 38 entity doc(s) with no matching PubMed text",
+    "skipped 22 entity span(s) with invalid/unaligned offsets",
+    "dropped 46 all UNKNOWN span(s) (keyword-dump cleanup)",
+    "remapped 31 gene-symbol PATHWAY span(s) to GENE",
+    "used stratified PMID split preserving sparse entity types in train+test",
+    "oversampled sparse-type train docs x2 (603 -> 712)"
+  ]
+}

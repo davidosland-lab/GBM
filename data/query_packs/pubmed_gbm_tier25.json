@@ -1,0 +1,11 @@
+{
+  "name": "pubmed_gbm_tier25",
+  "description": "Animal/in-vivo and randomized/phase-III glioblastoma queries for evidence tiers 2 and 5.",
+  "source": "research curation Round 24",
+  "queries": [
+    "glioblastoma xenograft OR orthotopic mice OR murine model",
+    "glioblastoma \"in vivo\" mouse OR rat temozolomide OR bevacizumab",
+    "glioblastoma randomized OR \"phase III\" OR \"phase 3\" clinical trial",
+    "glioblastoma \"double-blind\" OR \"placebo-controlled\" OR multicenter trial"
+  ]
+}

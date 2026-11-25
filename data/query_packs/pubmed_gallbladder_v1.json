@@ -1,0 +1,29 @@
+{
+  "name": "pubmed_gallbladder_v1",
+  "description": "Gallbladder disease, gallstones, cholecystectomy, and post-operative recovery PubMed topics for research-grade evidence review. Research-use only; not for patient-specific advice.",
+  "source": "docs/GALLBLADDER_REVIEW.md",
+  "queries": [
+    "gallstone disease risk factors epidemiology",
+    "cholelithiasis management guideline",
+    "asymptomatic gallstones conservative management observation",
+    "biliary colic treatment analgesia",
+    "acute cholecystitis early versus delayed cholecystectomy",
+    "laparoscopic cholecystectomy outcomes complications",
+    "open versus laparoscopic cholecystectomy comparison",
+    "subtotal cholecystectomy difficult gallbladder outcomes",
+    "cholecystectomy bile duct injury incidence critical view of safety",
+    "percutaneous cholecystostomy high risk patients outcomes",
+    "choledocholithiasis ERCP common bile duct stone management",
+    "gallstone pancreatitis timing of cholecystectomy",
+    "enhanced recovery after laparoscopic cholecystectomy",
+    "day case ambulatory cholecystectomy recovery return to work",
+    "postoperative pain after laparoscopic cholecystectomy management",
+    "post-cholecystectomy syndrome persistent symptoms",
+    "post-cholecystectomy diarrhoea bile acid malabsorption treatment",
+    "quality of life after cholecystectomy long term outcome",
+    "diet after cholecystectomy digestive symptoms",
+    "ursodeoxycholic acid gallstone dissolution medical therapy",
+    "gallbladder polyp surveillance management",
+    "functional gallbladder disorder biliary dyskinesia cholecystectomy outcome"
+  ]
+}

@@ -17,6 +17,13 @@ ADJUDICATION_FIELDS = (
     "relation_type",
     "evidence_tier",
     "predicted_evidence_tier",
+    # Entity-span review queues (16BV/16BW)
+    "label",
+    "corrected_label",
+    "start",
+    "end",
+    "corrected_start",
+    "corrected_end",
 )
 
 
@@ -33,6 +40,8 @@ class AdjudicationReport:
     item_count: int
     compared_item_count: int
     conflict_count: int
+    conflicted_item_count: int
+    agreement_rate: float | None
     conflicts: list[AdjudicationConflict]
     warnings: list[str]
     warning: str = RESEARCH_WARNING
@@ -50,6 +59,7 @@ def build_adjudication_report(paths: list[str | Path]) -> AdjudicationReport:
     conflicts: list[AdjudicationConflict] = []
     warnings: list[str] = []
     compared_count = 0
+    conflicted_items: set[str] = set()
     for item_id in all_item_ids:
         present = {source: rows[item_id] for source, rows in rows_by_source.items() if item_id in rows}
         if len(present) < 2:
@@ -63,12 +73,18 @@ def build_adjudication_report(paths: list[str | Path]) -> AdjudicationReport:
                 if _stringify_decision(row.get(field)) != ""
             }
             if len(set(values.values())) > 1:
+                conflicted_items.add(item_id)
                 conflicts.append(AdjudicationConflict(item_id=item_id, field=field, values_by_source=values))
+    agreement_rate = (
+        (compared_count - len(conflicted_items)) / compared_count if compared_count else None
+    )
     return AdjudicationReport(
         source_paths=source_paths,
         item_count=len(all_item_ids),
         compared_item_count=compared_count,
         conflict_count=len(conflicts),
+        conflicted_item_count=len(conflicted_items),
+        agreement_rate=agreement_rate,
         conflicts=conflicts,
         warnings=warnings,
     )
@@ -102,7 +118,9 @@ def format_adjudication_markdown(report: AdjudicationReport) -> str:
         f"- Sources: {len(report.source_paths)}",
         f"- Items: {report.item_count}",
         f"- Compared items: {report.compared_item_count}",
-        f"- Conflicts: {report.conflict_count}",
+        f"- Conflicted items: {report.conflicted_item_count}",
+        f"- Field conflicts: {report.conflict_count}",
+        f"- Agreement rate: {report.agreement_rate:.3f}" if report.agreement_rate is not None else "- Agreement rate: n/a",
         "",
         "## Conflicts",
         *conflict_lines,

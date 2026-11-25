@@ -53,6 +53,11 @@ def _normalize_row(row: dict[str, Any], *, task: PreparedTask) -> dict[str, Any]
     if task == "ner":
         normalized["start"] = row.get("start")
         normalized["end"] = row.get("end")
+        if row.get("ner_encoding"):
+            normalized["ner_encoding"] = str(row.get("ner_encoding"))
+        entities = row.get("entities")
+        if isinstance(entities, list):
+            normalized["entities"] = entities
     if task == "relation":
         normalized["head"] = row.get("head")
         normalized["tail"] = row.get("tail")

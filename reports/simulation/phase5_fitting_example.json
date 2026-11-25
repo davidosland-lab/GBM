@@ -1,0 +1,354 @@
+{
+  "accepted_particles": [
+    {
+      "accepted": true,
+      "draw_index": 61,
+      "overrides": {
+        "carrying_capacity": 2.5210176612816237,
+        "intrinsic_growth_rate": 0.10304199954777626,
+        "transition_rate": 0.023248837486520898
+      },
+      "predictions": {
+        "baseline": 1.511997,
+        "tmz": 1.02969,
+        "tmz_fus": 0.738606
+      },
+      "score": 0.188048
+    },
+    {
+      "accepted": true,
+      "draw_index": 12,
+      "overrides": {
+        "carrying_capacity": 2.757066729244238,
+        "intrinsic_growth_rate": 0.09742975571687013,
+        "transition_rate": 0.005802544239723626
+      },
+      "predictions": {
+        "baseline": 1.524273,
+        "tmz": 1.03087,
+        "tmz_fus": 0.736441
+      },
+      "score": 0.191991
+    },
+    {
+      "accepted": true,
+      "draw_index": 51,
+      "overrides": {
+        "carrying_capacity": 3.402496968677006,
+        "intrinsic_growth_rate": 0.09035709987146734,
+        "transition_rate": 0.03883900686944892
+      },
+      "predictions": {
+        "baseline": 1.563786,
+        "tmz": 1.041928,
+        "tmz_fus": 0.735977
+      },
+      "score": 0.200096
+    },
+    {
+      "accepted": true,
+      "draw_index": 33,
+      "overrides": {
+        "carrying_capacity": 3.2553408838527247,
+        "intrinsic_growth_rate": 0.09552234172640012,
+        "transition_rate": 0.02316572071322391
+      },
+      "predictions": {
+        "baseline": 1.581288,
+        "tmz": 1.059404,
+        "tmz_fus": 0.751481
+      },
+      "score": 0.200152
+    },
+    {
+      "accepted": true,
+      "draw_index": 30,
+      "overrides": {
+        "carrying_capacity": 3.3764629582734846,
+        "intrinsic_growth_rate": 0.09356415261657243,
+        "transition_rate": 0.0412221098693992
+      },
+      "predictions": {
+        "baseline": 1.582326,
+        "tmz": 1.056394,
+        "tmz_fus": 0.747143
+      },
+      "score": 0.20102
+    },
+    {
+      "accepted": true,
+      "draw_index": 58,
+      "overrides": {
+        "carrying_capacity": 3.389725266483343,
+        "intrinsic_growth_rate": 0.08576434997260322,
+        "transition_rate": 0.007625585483201967
+      },
+      "predictions": {
+        "baseline": 1.532053,
+        "tmz": 1.020177,
+        "tmz_fus": 0.72114
+      },
+      "score": 0.20301
+    },
+    {
+      "accepted": true,
+      "draw_index": 15,
+      "overrides": {
+        "carrying_capacity": 2.807141858808198,
+        "intrinsic_growth_rate": 0.08613768994148588,
+        "transition_rate": 0.015752595441557698
+      },
+      "predictions": {
+        "baseline": 1.469167,
+        "tmz": 0.984942,
+        "tmz_fus": 0.699203
+      },
+      "score": 0.203664
+    },
+    {
+      "accepted": true,
+      "draw_index": 32,
+      "overrides": {
+        "carrying_capacity": 3.8812095667562225,
+        "intrinsic_growth_rate": 0.08788846880103468,
+        "transition_rate": 0.03969345941418843
+      },
+      "predictions": {
+        "baseline": 1.589811,
+        "tmz": 1.052971,
+        "tmz_fus": 0.740784
+      },
+      "score": 0.204334
+    },
+    {
+      "accepted": true,
+      "draw_index": 76,
+      "overrides": {
+        "carrying_capacity": 3.3765658757493413,
+        "intrinsic_growth_rate": 0.08369719128349562,
+        "transition_rate": 0.019476122627582835
+      },
+      "predictions": {
+        "baseline": 1.517174,
+        "tmz": 1.00844,
+        "tmz_fus": 0.711646
+      },
+      "score": 0.205754
+    },
+    {
+      "accepted": true,
+      "draw_index": 63,
+      "overrides": {
+        "carrying_capacity": 2.8707046701314782,
+        "intrinsic_growth_rate": 0.08180549522637554,
+        "transition_rate": 0.0065086559443893076
+      },
+      "predictions": {
+        "baseline": 1.452593,
+        "tmz": 0.970964,
+        "tmz_fus": 0.688172
+      },
+      "score": 0.207169
+    },
+    {
+      "accepted": true,
+      "draw_index": 29,
+      "overrides": {
+        "carrying_capacity": 4.235658313621839,
+        "intrinsic_growth_rate": 0.08564697314301271,
+        "transition_rate": 0.014557537192555165
+      },
+      "predictions": {
+        "baseline": 1.598647,
+        "tmz": 1.056255,
+        "tmz_fus": 0.742534
+      },
+      "score": 0.207323
+    },
+    {
+      "accepted": true,
+      "draw_index": 52,
+      "overrides": {
+        "carrying_capacity": 4.4591291123312375,
+        "intrinsic_growth_rate": 0.08380171376770645,
+        "transition_rate": 0.028293323554257614
+      },
+      "predictions": {
+        "baseline": 1.598092,
+        "tmz": 1.052534,
+        "tmz_fus": 0.73798
+      },
+      "score": 0.207579
+    }
+  ],
+  "assumptions": [
+    "Targets are synthetic research set-points for the offline fixture pack, not clinical observations.",
+    "Accepted particles are toy approximate-posterior samples only.",
+    "Explicitly not pharmacokinetics/pharmacodynamics and not spatial biophysics.",
+    "Research stub only. Not PK/PD. Not clinically validated posteriors. Toy-target acceptance sampling for in-silico exploration \u2014 not patient-ready inference.",
+    "Toy targets: {'baseline': 1.15, 'tmz': 1.05, 'tmz_fus': 0.95}",
+    "Acceptance relative_tolerance=0.35; seed=17.",
+    "Accepted particles are research samples, not validated clinical posteriors.",
+    "This module is explicitly not PK/PD and not spatially resolved biophysics."
+  ],
+  "best_particle": {
+    "accepted": true,
+    "draw_index": 61,
+    "overrides": {
+      "carrying_capacity": 2.5210176612816237,
+      "intrinsic_growth_rate": 0.10304199954777626,
+      "transition_rate": 0.023248837486520898
+    },
+    "predictions": {
+      "baseline": 1.511997,
+      "tmz": 1.02969,
+      "tmz_fus": 0.738606
+    },
+    "score": 0.188048
+  },
+  "boundary": "Research stub only. Not PK/PD. Not clinically validated posteriors. Toy-target acceptance sampling for in-silico exploration \u2014 not patient-ready inference.",
+  "clinical_validity_claimed": false,
+  "config_name": "toy_fitting_v1",
+  "description": "Phase 5 research stub: approximate posterior-style sampling against toy scenario final_total targets. Not PK/PD. Not clinically calibrated posteriors. Not a digital twin.",
+  "graph_features": {
+    "delivery_modulation": 1.147,
+    "evidence_modulation": 0.95,
+    "evidence_tier_counts": {
+      "1": 1,
+      "3": 1
+    },
+    "kill_modulation": 1.1265,
+    "mean_evidence_tier": 2.0,
+    "parameter_provenance": [
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "kill_modulation",
+        "value": 1.1265
+      },
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "delivery_modulation",
+        "value": 1.147
+      },
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "parameter": "kill_modulation",
+        "relation": "PREDICTS",
+        "research_weight": 0.755,
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "parameter": "delivery_modulation",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "research_weight": 0.42,
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "relation_count": 2,
+    "relation_type_counts": {
+      "ENHANCES_DELIVERY_OF": 1,
+      "PREDICTS": 1
+    },
+    "sample_relations": [
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "relation": "PREDICTS",
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "source_path": "C:\\Users\\david\\GBM\\data\\examples\\graph_records_sample.jsonl",
+    "synergy_modulation": 1.0,
+    "transition_modulation": 1.0,
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+    "warnings": []
+  },
+  "is_pk_pd": false,
+  "n_accepted": 80,
+  "n_draws": 80,
+  "n_keep": 12,
+  "not_simulated": [
+    "Pharmacokinetics / pharmacodynamics (explicitly out of scope)",
+    "Spatially resolved biophysics or imaging-constrained geometry",
+    "Empirically calibrated clinical posteriors or patient-ready inference",
+    "Clinical decision support or treatment prescriptions"
+  ],
+  "parameter_specs": [
+    {
+      "dist": "normal",
+      "high": 0.16,
+      "low": 0.02,
+      "mean": 0.08,
+      "name": "intrinsic_growth_rate",
+      "std": 0.02
+    },
+    {
+      "dist": "normal",
+      "high": 6.0,
+      "low": 2.0,
+      "mean": 4.0,
+      "name": "carrying_capacity",
+      "std": 0.6
+    },
+    {
+      "dist": "uniform",
+      "high": 0.05,
+      "low": 0.005,
+      "mean": 0.02,
+      "name": "transition_rate",
+      "std": 0.0
+    }
+  ],
+  "phase": "Phase 5 toy parameter-fitting research stub",
+  "posterior_summary": {
+    "carrying_capacity": {
+      "max": 4.459129,
+      "mean": 3.361043,
+      "min": 2.521018,
+      "n": 12.0,
+      "std": 0.568124
+    },
+    "intrinsic_growth_rate": {
+      "max": 0.103042,
+      "mean": 0.089555,
+      "min": 0.081805,
+      "n": 12.0,
+      "std": 0.006244
+    },
+    "transition_rate": {
+      "max": 0.041222,
+      "mean": 0.022015,
+      "min": 0.005803,
+      "n": 12.0,
+      "std": 0.01231
+    }
+  },
+  "relative_tolerance": 0.35,
+  "seed": 17,
+  "simulated": [
+    "Rejection / approximate posterior-style sampling against toy scenario targets",
+    "Optional soft graph-derived constraint term (research weight only)",
+    "Particle summaries (mean/std of accepted draws) for research exploration"
+  ],
+  "targets": {
+    "baseline": 1.15,
+    "tmz": 1.05,
+    "tmz_fus": 0.95
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

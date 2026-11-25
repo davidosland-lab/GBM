@@ -1,0 +1,212 @@
+{
+  "active_learning_backlog": [
+    {
+      "decided_rows": 0,
+      "note": "export CSV / adjudicate before import",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_batches_round26.jsonl",
+      "pending_rows": 100,
+      "queue_kind": "active_learning_batch",
+      "total_rows": 100
+    },
+    {
+      "decided_rows": 0,
+      "note": "export CSV / adjudicate before import",
+      "path": "data\\processed\\curation_regression_pack\\active_learning_batches.jsonl",
+      "pending_rows": 1,
+      "queue_kind": "active_learning_batch",
+      "total_rows": 1
+    }
+  ],
+  "active_learning_pending_total": 101,
+  "clinical_validity_claimed": false,
+  "created_at_utc": "2026-07-21T01:16:44Z",
+  "differentiation_bet": "Invest in gold-pack / curation / governance depth rather than lit-mining scale or clinical ranking.",
+  "dual_review_backlog": [
+    {
+      "decided_rows": 0,
+      "note": "",
+      "path": "data\\research\\review_batches\\round33\\span_review_r1_round33.jsonl",
+      "pending_rows": 48,
+      "queue_kind": "entity_span",
+      "total_rows": 48
+    },
+    {
+      "decided_rows": 0,
+      "note": "",
+      "path": "data\\research\\review_batches\\round33\\span_review_r2_round33.jsonl",
+      "pending_rows": 48,
+      "queue_kind": "entity_span",
+      "total_rows": 48
+    },
+    {
+      "decided_rows": 0,
+      "note": "",
+      "path": "data\\research\\review_batches\\round26\\gold_entities_round26_span_reviewed.jsonl",
+      "pending_rows": 22,
+      "queue_kind": "entity_span",
+      "total_rows": 22
+    },
+    {
+      "decided_rows": 0,
+      "note": "legacy unfinished span queue; prefer latest sparse densify round",
+      "path": "data\\research\\review_batches\\round28\\entity_span_review_round28.jsonl",
+      "pending_rows": 56,
+      "queue_kind": "entity_span",
+      "total_rows": 56
+    }
+  ],
+  "dual_review_pending_total": 174,
+  "gold_pack_report": "reports\\training\\gold_pack\\gold_training_pack.json",
+  "label_counts": {
+    "evidence": {
+      "0": 120,
+      "1": 93,
+      "2": 97,
+      "3": 330,
+      "4": 101,
+      "5": 94
+    },
+    "ner": {
+      "BIOMARKER": 319,
+      "CELL_STATE": 131,
+      "CELL_TYPE": 202,
+      "DELIVERY_MODIFIER": 248,
+      "DISEASE": 3466,
+      "DRUG": 886,
+      "GENE": 654,
+      "OUTCOME": 1356,
+      "PATHWAY": 93,
+      "TREATMENT": 585,
+      "TRIAL_PHASE": 71,
+      "UNKNOWN": 59
+    },
+    "relation": {
+      "ASSOCIATED_WITH": 78,
+      "IMPROVES": 40,
+      "NO_RELATION": 74,
+      "PREDICTS": 46,
+      "WORSENS": 56
+    }
+  },
+  "label_example_deltas": {
+    "evidence": {},
+    "ner": {},
+    "relation": {}
+  },
+  "next_actions": [
+    "Hard promotion floors met - deepen quality via soft densify / dual-review (not lit-mining scale).",
+    "Prioritize soft densify gaps: evidence/1(+27), evidence/2(+23), evidence/4(+19), evidence/5(+26), ner/CELL_STATE(+19), ner/PATHWAY(+27).",
+    "Adjudicate dual-review backlog (174 pending). Start with `data\\research\\review_batches\\round33\\span_review_r1_round33.jsonl`.",
+    "Clear active-learning pending rows (101). Queue: `data\\processed\\curation_regression_pack\\active_learning_batches_round26.jsonl`.",
+    "After human decisions: finalize/promote curated round -> `gbmbert-rebuild-curated-rounds`.",
+    "Keep preferred research checkpoints (evidence v9 / relation v3 / BIO NER v6) until freeze-split compare.",
+    "Do not claim clinical validation; promotable != patient-ready model."
+  ],
+  "notes": [
+    "Ops status is research-governance observability only.",
+    "Hard promotion floors and soft densify targets are distinct; soft gaps do not block promotable.",
+    "Do not invent dual-review labels; adjudicate pending queues as a human."
+  ],
+  "pack_ready": true,
+  "promotable": true,
+  "promotion_blockers": [],
+  "soft_densify_gaps": [
+    {
+      "count": 93,
+      "delta": 27,
+      "label": "1",
+      "soft_floor": 120,
+      "task": "evidence"
+    },
+    {
+      "count": 97,
+      "delta": 23,
+      "label": "2",
+      "soft_floor": 120,
+      "task": "evidence"
+    },
+    {
+      "count": 101,
+      "delta": 19,
+      "label": "4",
+      "soft_floor": 120,
+      "task": "evidence"
+    },
+    {
+      "count": 94,
+      "delta": 26,
+      "label": "5",
+      "soft_floor": 120,
+      "task": "evidence"
+    },
+    {
+      "count": 131,
+      "delta": 19,
+      "label": "CELL_STATE",
+      "soft_floor": 150,
+      "task": "ner"
+    },
+    {
+      "count": 93,
+      "delta": 27,
+      "label": "PATHWAY",
+      "soft_floor": 120,
+      "task": "ner"
+    },
+    {
+      "count": 71,
+      "delta": 29,
+      "label": "TRIAL_PHASE",
+      "soft_floor": 100,
+      "task": "ner"
+    },
+    {
+      "count": 59,
+      "delta": 21,
+      "label": "UNKNOWN",
+      "soft_floor": 80,
+      "task": "ner"
+    },
+    {
+      "count": 40,
+      "delta": 20,
+      "label": "IMPROVES",
+      "soft_floor": 60,
+      "task": "relation"
+    },
+    {
+      "count": 46,
+      "delta": 14,
+      "label": "PREDICTS",
+      "soft_floor": 60,
+      "task": "relation"
+    },
+    {
+      "count": 56,
+      "delta": 4,
+      "label": "WORSENS",
+      "soft_floor": 60,
+      "task": "relation"
+    }
+  ],
+  "source_pmid_count": 951,
+  "source_pmid_delta": 0,
+  "sparse_label_counts": {
+    "CELL_STATE": 131,
+    "PATHWAY": 93,
+    "TRIAL_PHASE": 71,
+    "UNKNOWN": 59
+  },
+  "task_counts": {
+    "evidence": 835,
+    "ner": 8070,
+    "relation": 294
+  },
+  "task_example_deltas": {
+    "evidence": 0,
+    "ner": 0,
+    "relation": 0
+  },
+  "threshold_config": "configs\\training\\gold_pack_promotion_thresholds.json",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

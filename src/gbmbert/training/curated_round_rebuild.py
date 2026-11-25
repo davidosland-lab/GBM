@@ -28,6 +28,8 @@ from gbmbert.datasets import RESEARCH_WARNING
 
 DEFAULT_CURATED_DIR = Path("data/training/curated_expansion")
 DEFAULT_IMPORT_DIR = Path("data/training/curated_import")
+# GBM-filtered EBM-NLP Intervention/Outcome entities folded into gold NER packs.
+DEFAULT_EXTERNAL_GBM_ENTITY_JSONL = Path("data/training/external_corpus/ebm_nlp_gbm/gold_entities.jsonl")
 
 
 @dataclass(frozen=True)
@@ -123,6 +125,7 @@ def build_rebuild_commands(
     rounds: list[CuratedRound],
     *,
     import_dir: str | Path = DEFAULT_IMPORT_DIR,
+    external_entity_jsonl: str | Path | None = DEFAULT_EXTERNAL_GBM_ENTITY_JSONL,
 ) -> list[tuple[str, list[str]]]:
     """Build the ordered (name, command) list for the curated round rebuild."""
 
@@ -139,6 +142,10 @@ def build_rebuild_commands(
         evidence_flags += ["--evidence-jsonl", curated_round.evidence]
         entity_flags += ["--entity-jsonl", curated_round.entity]
         reviewed_flags += ["--reviewed-queue-jsonl", curated_round.reviewed]
+    if external_entity_jsonl is not None:
+        external_path = Path(external_entity_jsonl)
+        if external_path.exists():
+            entity_flags += ["--entity-jsonl", str(external_path)]
     fixture_flags = [*evidence_flags, *entity_flags, *reviewed_flags]
 
     return [

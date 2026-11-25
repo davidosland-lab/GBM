@@ -1,0 +1,166 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 7,
+      "key": "3"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 62,
+      "key": "Disease"
+    },
+    {
+      "count": 41,
+      "key": "Outcome"
+    },
+    {
+      "count": 26,
+      "key": "DeliveryModifier"
+    },
+    {
+      "count": 22,
+      "key": "Drug"
+    },
+    {
+      "count": 7,
+      "key": "CellType"
+    },
+    {
+      "count": 7,
+      "key": "Gene"
+    },
+    {
+      "count": 4,
+      "key": "Treatment"
+    },
+    {
+      "count": 4,
+      "key": "Biomarker"
+    }
+  ],
+  "node_mention_count": 173,
+  "paper_only_record_count": 2,
+  "record_count": 69,
+  "relation_count": 7,
+  "relation_type_counts": [
+    {
+      "count": 3,
+      "key": "SYNERGIZES_WITH"
+    },
+    {
+      "count": 2,
+      "key": "ENHANCES_DELIVERY_OF"
+    },
+    {
+      "count": 1,
+      "key": "IMPROVES"
+    },
+    {
+      "count": 1,
+      "key": "ASSOCIATED_WITH"
+    }
+  ],
+  "source_path": "data\\research\\review_batches\\round8\\pipeline\\graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 47,
+      "key_value": "glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 24,
+      "key_value": "survival",
+      "label": "Outcome"
+    },
+    {
+      "count": 16,
+      "key_value": "temozolomide",
+      "label": "Drug"
+    },
+    {
+      "count": 15,
+      "key_value": "Glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 14,
+      "key_value": "blood-brain barrier",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 11,
+      "key_value": "response",
+      "label": "Outcome"
+    },
+    {
+      "count": 6,
+      "key_value": "Focused ultrasound",
+      "label": "DeliveryModifier"
+    },
+    {
+      "count": 6,
+      "key_value": "Temozolomide",
+      "label": "Drug"
+    },
+    {
+      "count": 6,
+      "key_value": "MGMT",
+      "label": "Gene"
+    },
+    {
+      "count": 6,
+      "key_value": "stem cells",
+      "label": "CellType"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 1,
+      "head": "DeliveryModifier:Focused ultrasound",
+      "relation": "ENHANCES_DELIVERY_OF",
+      "tail": "Drug:temozolomide"
+    },
+    {
+      "count": 1,
+      "head": "DeliveryModifier:blood-brain barrier",
+      "relation": "ENHANCES_DELIVERY_OF",
+      "tail": "Drug:temozolomide"
+    },
+    {
+      "count": 1,
+      "head": "Drug:temozolomide",
+      "relation": "IMPROVES",
+      "tail": "Outcome:survival"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Drug:temozolomide",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Drug:temozolomide"
+    },
+    {
+      "count": 1,
+      "head": "Drug:temozolomide",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Treatment:immunotherapy"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:immunotherapy",
+      "relation": "SYNERGIZES_WITH",
+      "tail": "Drug:temozolomide"
+    }
+  ],
+  "unique_nct_count": 0,
+  "unique_node_count": 14,
+  "unique_pmid_count": 69,
+  "warnings": []
+}

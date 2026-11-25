@@ -48,7 +48,11 @@ def test_build_rebuild_commands_spans_every_round_and_stage(tmp_path: Path) -> N
     _touch(tmp_path / "gold_reviewed_queue_round2.jsonl")
     rounds, _ = discover_curated_rounds(tmp_path)
 
-    commands = build_rebuild_commands(rounds, import_dir="data/training/curated_import")
+    commands = build_rebuild_commands(
+        rounds,
+        import_dir="data/training/curated_import",
+        external_entity_jsonl=tmp_path / "missing_external.jsonl",
+    )
     by_name = {name: cmd for name, cmd in commands}
 
     # Every expected stage is present and ordered import -> ... -> contract.
@@ -68,8 +72,24 @@ def test_build_rebuild_commands_spans_every_round_and_stage(tmp_path: Path) -> N
     # The import command carries both rounds' fixture flags.
     import_cmd = by_name["curated_fixture_import"]
     assert import_cmd.count("--evidence-jsonl") == 2
+    assert import_cmd.count("--entity-jsonl") == 2
     assert import_cmd.count("--reviewed-queue-jsonl") == 2
     assert "--no-copy" in import_cmd
+
+
+def test_build_rebuild_commands_folds_external_gbm_entities(tmp_path: Path) -> None:
+    _touch(tmp_path / "evidence_full_label.jsonl")
+    _touch(tmp_path / "gold_entities.jsonl")
+    _touch(tmp_path / "gold_reviewed_queue.jsonl")
+    external = tmp_path / "ebm_nlp_gbm_entities.jsonl"
+    external.write_text("{}\n", encoding="utf-8")
+    rounds, _ = discover_curated_rounds(tmp_path)
+
+    commands = build_rebuild_commands(rounds, import_dir="data/training/curated_import", external_entity_jsonl=external)
+    import_cmd = dict(commands)["curated_fixture_import"]
+
+    assert import_cmd.count("--entity-jsonl") == 2
+    assert str(external) in import_cmd
 
 
 def test_run_curated_round_rebuild_uses_injected_runner(tmp_path: Path) -> None:

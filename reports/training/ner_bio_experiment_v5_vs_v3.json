@@ -1,0 +1,10 @@
+{
+  "v3_accuracy": 0.9582608695652174,
+  "v3_macro_f1": 0.30139216620271353,
+  "v5_accuracy": 0.9013605442176871,
+  "v5_macro_f1": 0.257691396837784,
+  "delta_accuracy": -0.05690032534753031,
+  "delta_macro_f1": -0.043700769364929504,
+  "note": "Test split reshuffled after Round 29 BIO pack rebuild (seed=13). Compare is informative only across different test PMIDs.",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

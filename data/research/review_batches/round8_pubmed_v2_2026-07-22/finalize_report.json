@@ -1,0 +1,19 @@
+{
+  "accepted_evidence": 0,
+  "accepted_relations": 0,
+  "created_at_utc": "2026-07-22T07:03:59.103115+00:00",
+  "curated_dir": "data\\training\\curated_expansion",
+  "curated_files": [],
+  "pending_count": 76,
+  "promoted": false,
+  "ready": false,
+  "rejected_count": 0,
+  "reviewed_total": 76,
+  "round_number": 8,
+  "staging_dir": "data\\research\\review_batches\\round8",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": [
+    "76 reviewed-queue row(s) still 'pending'; annotate them before finalizing",
+    "no accepted evidence claims; the round would add no evidence examples"
+  ]
+}

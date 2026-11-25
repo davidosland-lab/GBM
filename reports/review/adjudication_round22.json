@@ -1,0 +1,39 @@
+{
+  "agreement_rate": 0.925,
+  "compared_item_count": 40,
+  "conflict_count": 3,
+  "conflicted_item_count": 3,
+  "conflicts": [
+    {
+      "field": "review_status",
+      "item_id": "curated-outcome-relation:round22:22440876:93",
+      "values_by_source": {
+        "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r2.jsonl": "corrected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "curated-outcome-relation:round22:39824465:23",
+      "values_by_source": {
+        "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r2.jsonl": "corrected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "curated-outcome-relation:round22:41308679:1",
+      "values_by_source": {
+        "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r1.jsonl": "accepted",
+        "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r2.jsonl": "corrected"
+      }
+    }
+  ],
+  "item_count": 40,
+  "source_paths": [
+    "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r1.jsonl",
+    "data\\research\\review_batches\\round22\\gold_reviewed_queue_round22_r2.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

@@ -1,0 +1,20 @@
+{
+  "accepted_evidence": 33,
+  "accepted_relations": 5,
+  "created_at_utc": "2026-07-18T05:03:52.885143+00:00",
+  "curated_dir": "data\\training\\curated_expansion",
+  "curated_files": [
+    "data\\training\\curated_expansion\\evidence_round9.jsonl",
+    "data\\training\\curated_expansion\\gold_reviewed_queue_round9.jsonl",
+    "data\\training\\curated_expansion\\gold_entities_round9.jsonl"
+  ],
+  "pending_count": 0,
+  "promoted": true,
+  "ready": true,
+  "rejected_count": 6,
+  "reviewed_total": 44,
+  "round_number": 9,
+  "staging_dir": "data\\research\\review_batches\\round9",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

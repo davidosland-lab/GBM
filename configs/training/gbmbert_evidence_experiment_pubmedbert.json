@@ -1,0 +1,44 @@
+{
+
+  "name": "gbmbert_evidence_experiment_pubmedbert",
+
+  "governance_profile": "scaffold",
+
+  "governance_note": "Preferred baseline remains evidence v9 (macro-F1 0.59; tier-4 F1 0.71). Round 32 added +26 PMID-disjoint curated evidence rows (835 total; tiers 0–5 present). Volume/tier-balance change not material vs v9 — skip retrain. training_enabled=false. Research-use only; not a validated clinical model. Run artifacts under reports/training/evidence_experiment_v9_*.",
+
+  "governance_dataset_dir": "data/training/evidence_pack/annotation_splits",
+
+  "governance_label_map_dir": "data/training/evidence_pack/label_maps",
+
+  "task": "evidence_classification",
+
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+
+  "train_path": "data/training/evidence_pack/annotation_splits/evidence_train.jsonl",
+
+  "validation_path": "data/training/evidence_pack/annotation_splits/evidence_validation.jsonl",
+
+  "output_dir": "models/checkpoints/gbmbert_evidence_experiment_pubmedbert_v9",
+
+  "label_set": ["0", "1", "2", "3", "4", "5"],
+
+  "hyperparameters": {
+
+    "epochs": 3,
+
+    "learning_rate": 0.00002,
+
+    "batch_size": 4,
+
+    "max_length": 256,
+
+    "seed": 13,
+
+    "use_class_weights": true
+
+  },
+
+  "training_enabled": false
+
+}
+

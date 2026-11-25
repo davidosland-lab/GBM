@@ -1,0 +1,53 @@
+{
+  "delta_accuracy": 0.12774122807017546,
+  "delta_macro_f1": 0.20900376312141022,
+  "per_label": {
+    "0": {
+      "v4_f1": 0.0,
+      "v4_recall": 0.0,
+      "v5_f1": 0.3846153846153846,
+      "v5_recall": 0.45454545454545453,
+      "v5_support": 11
+    },
+    "1": {
+      "v4_f1": 0.56,
+      "v4_recall": 0.7777777777777778,
+      "v5_f1": 0.4705882352941177,
+      "v5_recall": 0.6666666666666666,
+      "v5_support": 6
+    },
+    "2": {
+      "v4_f1": 0.0,
+      "v4_recall": 0.0,
+      "v5_f1": 0.8333333333333334,
+      "v5_recall": 0.8333333333333334,
+      "v5_support": 6
+    },
+    "3": {
+      "v4_f1": 0.5454545454545454,
+      "v4_recall": 0.5,
+      "v5_f1": 0.6153846153846154,
+      "v5_recall": 0.5,
+      "v5_support": 32
+    },
+    "4": {
+      "v4_f1": 0.0,
+      "v4_recall": 0.0,
+      "v5_f1": 0.0,
+      "v5_recall": 0.0,
+      "v5_support": 2
+    },
+    "5": {
+      "v4_f1": 0.4444444444444445,
+      "v4_recall": 1.0,
+      "v5_f1": 0.5,
+      "v5_recall": 0.5714285714285714,
+      "v5_support": 7
+    }
+  },
+  "v4_accuracy": 0.40350877192982454,
+  "v4_macro_f1": 0.25831649831649833,
+  "v5_accuracy": 0.53125,
+  "v5_macro_f1": 0.46732026143790856,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

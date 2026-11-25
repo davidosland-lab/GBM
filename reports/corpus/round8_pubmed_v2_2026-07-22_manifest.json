@@ -1,0 +1,23 @@
+{
+  "command": null,
+  "environment": {
+    "NCBI_API_KEY_set": false,
+    "NCBI_EMAIL_set": false,
+    "NCBI_TOOL_set": false
+  },
+  "files": [
+    {
+      "byte_count": 159278,
+      "line_count": 69,
+      "non_empty_line_count": 69,
+      "path": "data\\research\\round8_pubmed_v2_2026-07-22.jsonl",
+      "sha256": "23F3EF98188F33E763CFD1D5D150B25D0421094E1249DFA77461368539859F63"
+    }
+  ],
+  "generated_at_utc": "2026-07-22T07:03:19+00:00",
+  "name": "round8_pubmed_v2_2026-07-22",
+  "notes": [],
+  "query_pack": "pubmed_gbm_v2",
+  "record_count": 69,
+  "source": "PubMed"
+}

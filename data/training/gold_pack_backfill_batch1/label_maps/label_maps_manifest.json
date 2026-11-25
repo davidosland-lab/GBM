@@ -1,0 +1,20 @@
+{
+  "dataset_dir": "data\\training\\gold_pack_backfill_batch1\\annotation_splits",
+  "files": {
+    "evidence": "data\\training\\gold_pack_backfill_batch1\\label_maps\\evidence_label_map.json",
+    "ner": "data\\training\\gold_pack_backfill_batch1\\label_maps\\ner_label_map.json",
+    "relation": "data\\training\\gold_pack_backfill_batch1\\label_maps\\relation_label_map.json"
+  },
+  "labels": {
+    "evidence": {
+      "0": 0,
+      "1": 1,
+      "3": 2
+    },
+    "ner": {},
+    "relation": {
+      "ASSOCIATED_WITH": 0
+    }
+  },
+  "output_dir": "data\\training\\gold_pack_backfill_batch1\\label_maps"
+}

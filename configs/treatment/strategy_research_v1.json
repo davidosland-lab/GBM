@@ -1,0 +1,36 @@
+{
+  "name": "strategy_research_v1",
+  "description": "Phase 6 research prototype: rank Phase 5 toy simulation scenarios (baseline/TMZ/TMZ+FUS) under explicit multi-criteria research weights including toy efficacy vs toy toxicity/burden trade-offs. Optional intensity/schedule knobs are simulation parameters only. Not CDS. Not medical advice. Not clinically validated. No patient eligibility.",
+  "simulation_config": "configs/simulation/compartment_toy_v1.json",
+  "exclude_baseline_from_ranking": true,
+  "weights": {
+    "relative_reduction": 0.45,
+    "final_burden_inverse": 0.20,
+    "delivery_efficiency": 0.10,
+    "evidence_support": 0.10,
+    "toxicity_inverse": 0.15
+  },
+  "scenario_knobs": {
+    "intensity_scale": 1.0,
+    "schedule_duty_cycle": 1.0
+  },
+  "assumptions": [
+    "Scenarios are Phase 5 toy knobs (kill rate / delivery multiplier), not real dosing schedules.",
+    "Ranking maximizes a transparent research score; it does not optimize clinical utility.",
+    "Toy toxicity/burden is a synthetic research score, not clinical AE prediction.",
+    "intensity_scale and schedule_duty_cycle scale simulation kill pressure only — not real regimens.",
+    "Evidence-support terms from graph JSONL are research weights only.",
+    "No patient eligibility screening or clinical decision support.",
+    "Outputs must never be interpreted as prescriptions or clinical recommendations."
+  ],
+  "literature_anchors": [
+    {
+      "pmid": "29097493",
+      "note": "Sample PREDICTS relation used only as an optional evidence-support signal."
+    },
+    {
+      "pmid": "40000001",
+      "note": "Sample FUS ENHANCES_DELIVERY_OF relation used only as delivery-theme context."
+    }
+  ]
+}

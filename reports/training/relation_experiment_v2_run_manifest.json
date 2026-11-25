@@ -1,0 +1,21 @@
+{
+  "base_model": "dmis-lab/biobert-base-cased-v1.2",
+  "checkpoint_dir": "models\\checkpoints\\gbmbert_relation_biobert_v2",
+  "completed_at": "2026-07-19T10:18:11.801534+00:00",
+  "config_sha256": "658678582DCE60EF43E5D9FF4E11262106412769E447DE46A609B2B355061331",
+  "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
+  "dataset_hashes": {
+    "test": "C992A5F6E7E3F849834B83C73AF6B2AACC51A874CA60A225CA697FEC05814005",
+    "train": "F1E5B0FC0567BA4A271C5E05E7D98CD68D0F09E47D342E5735D5C576A3DD0F02",
+    "validation": "D7D8FD012FDCC5871A07F82F7A4313E4E7C98547538903935282FEA424E8D2E6"
+  },
+  "evaluation_markdown_path": "reports\\training\\relation_experiment_v2_metrics.md",
+  "label_map_dir": "data\\training\\relation_pack\\label_maps",
+  "label_map_sha256": "292F411478C2D7F1820777144F35AB0BBBA51AFC40EA02256A07D4D0F5D9EA09",
+  "metrics_path": "reports\\training\\relation_experiment_v2_metrics.json",
+  "output_dir": "models\\checkpoints\\gbmbert_relation_biobert_v2",
+  "run_name": "gbmbert_relation_biobert",
+  "started_at": "2026-07-19T10:11:38.186925+00:00",
+  "task": "relation_extraction",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

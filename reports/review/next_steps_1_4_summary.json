@@ -1,0 +1,35 @@
+{
+  "al": {
+    "agreement_rate": 0.93,
+    "al_stats": {
+      "accepted": 2,
+      "corrected": 34,
+      "r2_divergent": 7,
+      "rejected": 64,
+      "tier_0": 5,
+      "tier_2": 5,
+      "tier_3": 22,
+      "tier_4": 2,
+      "tier_5": 2
+    },
+    "conflicted": 7,
+    "evidence_round27": 36
+  },
+  "round26_spans": {
+    "r2_divergent": 1,
+    "span_agreement": 0.9767441860465116,
+    "span_conflicts": 1
+  },
+  "round28_ner": {
+    "agreement": 1.0,
+    "counts": {
+      "CELL_STATE": 20,
+      "PATHWAY": 12,
+      "TRIAL_PHASE": 10,
+      "UNKNOWN": 4
+    },
+    "divergent": 0,
+    "docs": 29,
+    "spans": 46
+  }
+}

@@ -78,6 +78,77 @@ def evaluate_predictions(
     )
 
 
+def evaluate_bio_spans(
+    *,
+    task: str,
+    true_spans_by_doc: list[list[tuple[int, int, str]]],
+    predicted_spans_by_doc: list[list[tuple[int, int, str]]],
+    entity_types: list[str],
+) -> EvaluationReport:
+    """Exact token-span match metrics for BIO NER (start, end, type)."""
+
+    if len(true_spans_by_doc) != len(predicted_spans_by_doc):
+        raise ValueError("true/predicted span docs must have the same length")
+    types = sorted(set(entity_types) | {span[2] for doc in true_spans_by_doc for span in doc} | {span[2] for doc in predicted_spans_by_doc for span in doc})
+    tp = Counter()
+    fp = Counter()
+    fn = Counter()
+    matched_total = 0
+    gold_total = 0
+    pred_total = 0
+    for true_spans, pred_spans in zip(true_spans_by_doc, predicted_spans_by_doc, strict=False):
+        gold_total += len(true_spans)
+        pred_total += len(pred_spans)
+        remaining = Counter(pred_spans)
+        for span in true_spans:
+            if remaining[span] > 0:
+                remaining[span] -= 1
+                tp[span[2]] += 1
+                matched_total += 1
+            else:
+                fn[span[2]] += 1
+        for span, count in remaining.items():
+            fp[span[2]] += count
+    label_metrics: list[LabelMetrics] = []
+    for label in types:
+        precision = tp[label] / (tp[label] + fp[label]) if tp[label] + fp[label] else 0.0
+        recall = tp[label] / (tp[label] + fn[label]) if tp[label] + fn[label] else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if precision + recall else 0.0
+        label_metrics.append(
+            LabelMetrics(
+                label=label,
+                precision=precision,
+                recall=recall,
+                f1=f1,
+                support=tp[label] + fn[label],
+            )
+        )
+    confusion = {
+        label: {other: (tp[label] if other == label else 0) for other in types}
+        for label in types
+    }
+    for label in types:
+        # Represent FN as gold->MISS and FP as MISS->pred via off-diagonal buckets when possible.
+        if "__MISS__" not in confusion:
+            for row in confusion.values():
+                row["__MISS__"] = 0
+            confusion["__MISS__"] = {other: 0 for other in [*types, "__MISS__"]}
+        confusion[label]["__MISS__"] = fn[label]
+        confusion["__MISS__"][label] = fp[label]
+    warnings = ["BIO exact-span metrics (token indices); research scaffold only"]
+    if gold_total < 10:
+        warnings.append("fewer than 10 gold entity spans in evaluation set")
+    return EvaluationReport(
+        task=task,
+        examples=gold_total,
+        accuracy=matched_total / gold_total if gold_total else 0.0,
+        macro_f1=sum(item.f1 for item in label_metrics) / len(label_metrics) if label_metrics else 0.0,
+        labels=label_metrics,
+        confusion_matrix=confusion,
+        warnings=warnings,
+    )
+
+
 def save_evaluation_report_json(report: EvaluationReport, path: str | Path) -> Path:
     output = Path(path)
     output.parent.mkdir(parents=True, exist_ok=True)

@@ -11,7 +11,7 @@ from typing import Any
 
 from gbmbert.datasets import RESEARCH_WARNING
 from gbmbert.training.config import TrainingConfig, load_training_config
-from gbmbert.training.execution import TrainingExecutionResult, execute_evidence_training
+from gbmbert.training.execution import TrainingExecutionResult, execute_task_training
 from gbmbert.training.hf_datasets import (
     PreparedTask,
     dataset_split_counts,
@@ -117,14 +117,14 @@ def build_training_gate_report(
     status = "dry_run_ready" if base_gate_ready else "blocked"
     if execute_training:
         if execute_gate_ready and config.is_training_enabled:
-            if config.task.value != "evidence_classification":
+            if config.task.value not in {"evidence_classification", "relation_extraction", "ner"}:
                 status = "blocked"
-                warnings.append("training execution currently supports evidence_classification only")
+                warnings.append("training execution currently supports evidence_classification, relation_extraction, and ner")
             elif metrics_output is None or run_manifest_output is None:
                 status = "blocked"
                 warnings.append("training execution requires --metrics-output and --run-manifest-output")
             else:
-                execution_result = execute_evidence_training(
+                execution_result = execute_task_training(
                     config=config,
                     config_path=config_file,
                     dataset_dir=dataset_root,

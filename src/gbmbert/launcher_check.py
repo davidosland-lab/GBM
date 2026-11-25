@@ -19,9 +19,30 @@ REQUIRED_MENU_TEXT = (
     "Review and curation workflow",
     "Training data and governance",
     "Knowledge Graph Explorer",
+    "Tumour simulation (research)",
     "Advanced command index",
 )
-REQUIRED_SHORTCUTS = ("16BI", "16BJ", "16BK", "16BL", "16BM", "16BO", "16BP", "16BQ", "16BR", "16BS")
+REQUIRED_SHORTCUTS = (
+    "16BI",
+    "16BJ",
+    "16BK",
+    "16BL",
+    "16BM",
+    "16BO",
+    "16BP",
+    "16BQ",
+    "16BR",
+    "16BS",
+    "16BT",
+    "16BU",
+    "16BV",
+    "16BW",
+    "16BX",
+    "16BY",
+    "16BZ",
+    "16CA",
+    "16CB",
+)
 
 
 @dataclass(frozen=True)

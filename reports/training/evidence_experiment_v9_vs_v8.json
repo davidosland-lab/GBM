@@ -1,0 +1,10 @@
+{
+  "v8_accuracy": 0.5443037974683544,
+  "v8_macro_f1": 0.5690302864440795,
+  "v9_accuracy": 0.6375,
+  "v9_macro_f1": 0.5891251781277357,
+  "delta_accuracy": 0.09319620253164551,
+  "delta_macro_f1": 0.02009489168365619,
+  "note": "Test split reshuffled after Round 30 tier-4 fill. Tier-4 test support improved (historically n=2).",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

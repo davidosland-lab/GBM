@@ -2,7 +2,7 @@
   "invalid_count": 0,
   "missing_count": 1,
   "root": ".",
-  "row_count": 17,
+  "row_count": 18,
   "rows": [
     {
       "json_exists": true,
@@ -25,7 +25,7 @@
       "json_path": "reports\\training\\curated_provenance_diff.json",
       "markdown_exists": true,
       "markdown_path": "reports\\training\\curated_provenance_diff.md",
-      "status": "safe",
+      "status": "findings",
       "title": "Curated provenance diff"
     },
     {
@@ -33,7 +33,7 @@
       "json_path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
       "markdown_exists": true,
       "markdown_path": "reports\\training\\evidence_pack\\evidence_training_pack.md",
-      "status": "ready",
+      "status": "not ready",
       "title": "Evidence pack"
     },
     {
@@ -41,7 +41,7 @@
       "json_path": "reports\\training\\evidence_pack\\evidence_training_pack_readiness.json",
       "markdown_exists": false,
       "markdown_path": "",
-      "status": "ready",
+      "status": "not ready",
       "title": "Evidence readiness"
     },
     {
@@ -57,7 +57,7 @@
       "json_path": "reports\\training\\gold_pack\\gold_training_pack.json",
       "markdown_exists": true,
       "markdown_path": "reports\\training\\gold_pack\\gold_training_pack.md",
-      "status": "ready",
+      "status": "not ready",
       "title": "Gold pack"
     },
     {
@@ -65,8 +65,16 @@
       "json_path": "reports\\training\\gold_pack\\training_readiness.json",
       "markdown_exists": false,
       "markdown_path": "",
-      "status": "ready",
+      "status": "not ready",
       "title": "Gold readiness"
+    },
+    {
+      "json_exists": true,
+      "json_path": "reports\\training\\gold_pack\\gold_pack_ops_status.json",
+      "markdown_exists": true,
+      "markdown_path": "reports\\training\\gold_pack\\gold_pack_ops_status.md",
+      "status": "promotion-ready",
+      "title": "Gold-pack ops status"
     },
     {
       "json_exists": true,
@@ -105,7 +113,7 @@
       "json_path": "reports\\training\\relation_pack\\relation_training_pack.json",
       "markdown_exists": true,
       "markdown_path": "reports\\training\\relation_pack\\relation_training_pack.md",
-      "status": "ready",
+      "status": "not ready",
       "title": "Relation pack"
     },
     {
@@ -113,7 +121,7 @@
       "json_path": "reports\\training\\relation_pack\\relation_training_pack_readiness.json",
       "markdown_exists": false,
       "markdown_path": "",
-      "status": "ready",
+      "status": "not ready",
       "title": "Relation readiness"
     },
     {

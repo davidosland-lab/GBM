@@ -1,17 +1,17 @@
 {
-  "created_at_utc": "2026-06-29T03:49:50.362134+00:00",
+  "created_at_utc": "2026-09-08T07:07:12.857253+00:00",
   "failed_step_count": 0,
   "passed": true,
   "passed_step_count": 7,
   "step_count": 7,
   "steps": [
     {
-      "detail": "skipped",
+      "detail": "........................................................................ [ 81%] | ...................................................................      [100%] | 355 passed in 60.20s (0:01:00)",
       "name": "pytest",
       "passed": true
     },
     {
-      "detail": "skipped",
+      "detail": "WARNING: Ignoring invalid distribution ~bm-ai-platform (C:\\Users\\david\\GBM\\.venv\\Lib\\site-packages) | WARNING: Ignoring invalid distribution ~bm-ai-platform (C:\\Users\\david\\GBM\\.venv\\Lib\\site-packages) | No broken requirements found.",
       "name": "pip_check",
       "passed": true
     },
@@ -36,7 +36,7 @@
       "passed": true
     },
     {
-      "detail": "artifacts=502",
+      "detail": "artifacts=1022",
       "name": "artifact_index",
       "passed": true
     }

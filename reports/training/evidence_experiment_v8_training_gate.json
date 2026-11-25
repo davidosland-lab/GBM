@@ -1,0 +1,138 @@
+{
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "experiment_manifest_exists": true,
+    "label_map_exists": true,
+    "test_split_has_rows": true,
+    "train_split_has_rows": true,
+    "training_enabled_by_config": true,
+    "validation_split_has_rows": true
+  },
+  "config_path": "configs\\training\\gbmbert_evidence_experiment_pubmedbert.json",
+  "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+  "dataset_splits": {
+    "test": 79,
+    "train": 634,
+    "validation": 78
+  },
+  "dry_run": false,
+  "execute_training_requested": true,
+  "execution": {
+    "checkpoint_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v8",
+    "evaluation": {
+      "accuracy": 0.5443037974683544,
+      "confusion_matrix": {
+        "0": {
+          "0": 6,
+          "1": 0,
+          "2": 0,
+          "3": 4,
+          "4": 0,
+          "5": 0
+        },
+        "1": {
+          "0": 1,
+          "1": 9,
+          "2": 2,
+          "3": 2,
+          "4": 0,
+          "5": 0
+        },
+        "2": {
+          "0": 2,
+          "1": 4,
+          "2": 6,
+          "3": 3,
+          "4": 0,
+          "5": 0
+        },
+        "3": {
+          "0": 8,
+          "1": 2,
+          "2": 2,
+          "3": 15,
+          "4": 0,
+          "5": 4
+        },
+        "4": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 1,
+          "5": 1
+        },
+        "5": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1,
+          "4": 0,
+          "5": 6
+        }
+      },
+      "examples": 79,
+      "labels": [
+        {
+          "f1": 0.4444444444444445,
+          "label": "0",
+          "precision": 0.35294117647058826,
+          "recall": 0.6,
+          "support": 10
+        },
+        {
+          "f1": 0.6206896551724138,
+          "label": "1",
+          "precision": 0.6,
+          "recall": 0.6428571428571429,
+          "support": 14
+        },
+        {
+          "f1": 0.48,
+          "label": "2",
+          "precision": 0.6,
+          "recall": 0.4,
+          "support": 15
+        },
+        {
+          "f1": 0.5357142857142857,
+          "label": "3",
+          "precision": 0.6,
+          "recall": 0.4838709677419355,
+          "support": 31
+        },
+        {
+          "f1": 0.6666666666666666,
+          "label": "4",
+          "precision": 1.0,
+          "recall": 0.5,
+          "support": 2
+        },
+        {
+          "f1": 0.6666666666666665,
+          "label": "5",
+          "precision": 0.5454545454545454,
+          "recall": 0.8571428571428571,
+          "support": 7
+        }
+      ],
+      "macro_f1": 0.5690302864440795,
+      "task": "evidence_classification",
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+      "warnings": []
+    },
+    "metrics_path": "reports\\training\\evidence_experiment_v8_metrics.json",
+    "registry_path": "models\\checkpoint_registry.json",
+    "run_manifest_path": "reports\\training\\evidence_experiment_v8_run_manifest.json",
+    "status": "completed",
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+  },
+  "experiment_manifest_path": "reports\\training\\evidence_experiment_v8_manifest.json",
+  "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+  "status": "training_completed",
+  "task": "evidence_classification",
+  "tokenization": null,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

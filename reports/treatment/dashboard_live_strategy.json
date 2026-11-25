@@ -1,0 +1,264 @@
+{
+  "assumptions": [
+    "Scenarios are Phase 5 toy knobs (kill rate / delivery multiplier), not real dosing schedules.",
+    "Ranking maximizes a transparent research score; it does not optimize clinical utility.",
+    "Toy toxicity/burden is a synthetic research score, not clinical AE prediction.",
+    "intensity_scale and schedule_duty_cycle scale simulation kill pressure only \u2014 not real regimens.",
+    "Evidence-support terms from graph JSONL are research weights only.",
+    "No patient eligibility screening or clinical decision support.",
+    "Outputs must never be interpreted as prescriptions or clinical recommendations.",
+    "Ranks compare Phase 5 toy simulation scenarios only.",
+    "Scores use explicit transparent weights; they are not clinically optimized.",
+    "Toy toxicity/burden is a synthetic research score \u2014 not clinical toxicity or AE prediction.",
+    "Intensity/schedule knobs scale simulation kill pressure only \u2014 not real dosing schedules.",
+    "No patient eligibility, CDS, or prescription generation.",
+    "Higher research_score means better in-silico scenario under the configured toy objective - not a treatment recommendation.",
+    "Research-use only. Not medical advice. Not clinical decision support (CDS). Not intended for diagnosis, treatment selection, dosing, or clinical decision-making. Scenario ranks are toy in-silico comparisons, not prescriptions. No patient eligibility screening. Intensity/schedule knobs are simulation parameters only."
+  ],
+  "boundary": "Research-use only. Not medical advice. Not clinical decision support (CDS). Not intended for diagnosis, treatment selection, dosing, or clinical decision-making. Scenario ranks are toy in-silico comparisons, not prescriptions. No patient eligibility screening. Intensity/schedule knobs are simulation parameters only.",
+  "clinical_validity_claimed": false,
+  "comparison_table": [
+    {
+      "delivery_multiplier": 2.0646,
+      "final_total": 0.4086,
+      "intensity_scale": 1.0,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "rank": 1,
+      "relative_reduction": 0.8527,
+      "research_score": 0.85,
+      "scenario_id": "tmz_fus",
+      "schedule_duty_cycle": 1.0,
+      "toy_toxicity_burden": 0.1163
+    },
+    {
+      "delivery_multiplier": 1.147,
+      "final_total": 1.047,
+      "intensity_scale": 1.0,
+      "label": "Toy TMZ pressure",
+      "rank": 2,
+      "relative_reduction": 0.6225,
+      "research_score": 0.25,
+      "scenario_id": "tmz",
+      "schedule_duty_cycle": 1.0,
+      "toy_toxicity_burden": 0.0646
+    }
+  ],
+  "config_name": "strategy_research_v1",
+  "description": "Phase 6 research prototype: rank Phase 5 toy simulation scenarios (baseline/TMZ/TMZ+FUS) under explicit multi-criteria research weights including toy efficacy vs toy toxicity/burden trade-offs. Optional intensity/schedule knobs are simulation parameters only. Not CDS. Not medical advice. Not clinically validated. No patient eligibility.",
+  "graph_features": {
+    "delivery_modulation": 1.147,
+    "evidence_modulation": 0.95,
+    "evidence_tier_counts": {
+      "1": 1,
+      "3": 1
+    },
+    "kill_modulation": 1.1265,
+    "mean_evidence_tier": 2.0,
+    "parameter_provenance": [
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "kill_modulation",
+        "value": 1.1265
+      },
+      {
+        "aggregation": "mean_tier_confidence",
+        "n_relations": 1,
+        "parameter": "delivery_modulation",
+        "value": 1.147
+      },
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "parameter": "kill_modulation",
+        "relation": "PREDICTS",
+        "research_weight": 0.755,
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "parameter": "delivery_modulation",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "research_weight": 0.42,
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "relation_count": 2,
+    "relation_type_counts": {
+      "ENHANCES_DELIVERY_OF": 1,
+      "PREDICTS": 1
+    },
+    "sample_relations": [
+      {
+        "evidence_tier": 3,
+        "head": "MGMT methylation",
+        "relation": "PREDICTS",
+        "source_pmid": "29097493",
+        "tail": "temozolomide response"
+      },
+      {
+        "evidence_tier": 1,
+        "head": "focused ultrasound",
+        "relation": "ENHANCES_DELIVERY_OF",
+        "source_pmid": "40000001",
+        "tail": "temozolomide"
+      }
+    ],
+    "source_path": "C:\\Users\\david\\GBM\\data\\examples\\graph_records_sample.jsonl",
+    "synergy_modulation": 1.0,
+    "transition_modulation": 1.0,
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+    "warnings": []
+  },
+  "is_clinical_decision_support": false,
+  "literature_anchors": [
+    {
+      "note": "Sample PREDICTS relation used only as an optional evidence-support signal.",
+      "pmid": "29097493"
+    },
+    {
+      "note": "Sample FUS ENHANCES_DELIVERY_OF relation used only as delivery-theme context.",
+      "pmid": "40000001"
+    }
+  ],
+  "not_simulated": [
+    "Real-patient treatment selection, dosing, or scheduling",
+    "Clinical decision support or prescription generation",
+    "Validated efficacy/toxicity trade-off optimization",
+    "Patient eligibility screening or real-world inclusion criteria",
+    "Regulatory or bedside recommendations"
+  ],
+  "phase": "Phase 6 treatment strategy research prototype",
+  "ranking_provenance": {
+    "clinical_decision_support": false,
+    "components": [
+      "relative_reduction",
+      "final_burden_inverse",
+      "delivery_efficiency",
+      "evidence_support",
+      "toxicity_inverse"
+    ],
+    "method": "transparent_weighted_sum_over_normalized_toy_components",
+    "normalization": "min_max_per_component_across_ranked_scenarios",
+    "notes": [
+      "Higher research_score means better under the configured toy objective only.",
+      "toxicity_inverse rewards lower toy_toxicity_burden (research score, not clinical AEs).",
+      "intensity_scale and schedule_duty_cycle are simulation knobs, not prescriptions."
+    ],
+    "patient_eligibility": false,
+    "real_dosing_schedule_search": false,
+    "scenario_knobs": {
+      "intensity_scale": 1.0,
+      "schedule_duty_cycle": 1.0
+    },
+    "toxicity_model": "toy_kill_x_delivery_x_intensity_x_duty_proxy",
+    "weights": {
+      "delivery_efficiency": 0.1,
+      "evidence_support": 0.1,
+      "final_burden_inverse": 0.2,
+      "relative_reduction": 0.45,
+      "toxicity_inverse": 0.15
+    }
+  },
+  "rankings": [
+    {
+      "base_kill_rate": 0.05632500000000001,
+      "component_scores": {
+        "delivery_efficiency": 1.0,
+        "evidence_support": 1.0,
+        "final_burden_inverse": 1.0,
+        "relative_reduction": 1.0,
+        "toxicity_inverse": 0.0
+      },
+      "delivery_efficiency": 0.11628859500000001,
+      "delivery_multiplier": 2.0646,
+      "evidence_support": 0.4,
+      "final_total": 0.4086471145286586,
+      "intensity_scale": 1.0,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "rank": 1,
+      "relative_reduction_vs_baseline": 0.8526610293504002,
+      "research_score": 0.85,
+      "scenario_id": "tmz_fus",
+      "schedule_duty_cycle": 1.0,
+      "toy_toxicity_burden": 0.11628859500000001
+    },
+    {
+      "base_kill_rate": 0.05632500000000001,
+      "component_scores": {
+        "delivery_efficiency": 0.0,
+        "evidence_support": 1.0,
+        "final_burden_inverse": 0.0,
+        "relative_reduction": 0.0,
+        "toxicity_inverse": 1.0
+      },
+      "delivery_efficiency": 0.064604775,
+      "delivery_multiplier": 1.147,
+      "evidence_support": 0.4,
+      "final_total": 1.047012116048477,
+      "intensity_scale": 1.0,
+      "label": "Toy TMZ pressure",
+      "rank": 2,
+      "relative_reduction_vs_baseline": 0.6224965698970496,
+      "research_score": 0.25,
+      "scenario_id": "tmz",
+      "schedule_duty_cycle": 1.0,
+      "toy_toxicity_burden": 0.064604775
+    }
+  ],
+  "scenario_knobs": {
+    "intensity_scale": 1.0,
+    "schedule_duty_cycle": 1.0
+  },
+  "simulated": [
+    "Ranking of Phase 5 simulation scenarios under toy multi-criteria weights",
+    "Optional graph evidence-support term as a research score component",
+    "Toy efficacy vs toy toxicity/burden trade-off scores (research only)",
+    "Optional intensity_scale / schedule_duty_cycle simulation-parameter knobs",
+    "Transparent comparison tables and ranking provenance for in-silico exploration"
+  ],
+  "simulation_comparisons": [
+    {
+      "delta_vs_baseline_total": 0.0,
+      "final_resistance_totals": null,
+      "final_total": 2.7735168280800586,
+      "label": "Baseline growth (no cytotoxic pressure)",
+      "midpoint_total": 1.850216412807077,
+      "relative_reduction_vs_baseline": 0.0,
+      "resistance_enabled": false,
+      "scenario_id": "baseline"
+    },
+    {
+      "delta_vs_baseline_total": 1.7265047120315815,
+      "final_resistance_totals": null,
+      "final_total": 1.047012116048477,
+      "label": "Toy TMZ pressure",
+      "midpoint_total": 1.0243182847879888,
+      "relative_reduction_vs_baseline": 0.6224965698970496,
+      "resistance_enabled": false,
+      "scenario_id": "tmz"
+    },
+    {
+      "delta_vs_baseline_total": 2.3648697135514,
+      "final_resistance_totals": null,
+      "final_total": 0.4086471145286586,
+      "label": "Toy TMZ + FUS delivery multiplier",
+      "midpoint_total": 0.6135991758007043,
+      "relative_reduction_vs_baseline": 0.8526610293504002,
+      "resistance_enabled": false,
+      "scenario_id": "tmz_fus"
+    }
+  ],
+  "simulation_pack_name": "compartment_toy_v1",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "weights": {
+    "delivery_efficiency": 0.1,
+    "evidence_support": 0.1,
+    "final_burden_inverse": 0.2,
+    "relative_reduction": 0.45,
+    "toxicity_inverse": 0.15
+  }
+}

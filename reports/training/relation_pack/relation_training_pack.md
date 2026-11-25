@@ -5,10 +5,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Input: `data\training\gold_seed\gold_relations.jsonl`
 - Output directory: `data\training\relation_pack`
 - Reports directory: `reports\training\relation_pack`
-- Relation examples: 48
-- Positive examples: 32
-- Negative examples: 16
-- Ready: True
+- Relation examples: 313
+- Positive examples: 239
+- Negative examples: 74
+- Ready: False
 
 ## Artifacts
 - Annotation dataset: `data\training\relation_pack\annotation_dataset`
@@ -25,4 +25,6 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - training_readiness_md: `reports\training\relation_pack\relation_training_pack_readiness.md`
 
 ## Warnings
-- none
+- 1 relation example(s) have identical head and tail endpoints
+- 7 duplicate relation example(s)
+- relation: 7 duplicate example(s)

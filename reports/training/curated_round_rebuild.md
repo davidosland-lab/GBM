@@ -4,10 +4,10 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 Observe-only research rebuild of the curated-fixture report chain. It does not promote a dataset, train a model, or claim a validated GBM-BERT model exists. Run `gbmbert-verify-local` and the CI summary afterward for platform verification.
 
-- Created UTC: 2026-06-28T09:41:04.867178+00:00
+- Created UTC: 2026-07-23T07:32:49.584797+00:00
 - Curated dir: `data\training\curated_expansion`
 - Import dir: `data\training\curated_import`
-- Rounds: 7
+- Rounds: 33
 - Passed: True
 - Steps: 20/20 passed
 
@@ -19,6 +19,32 @@ Observe-only research rebuild of the curated-fixture report chain. It does not p
 - Round 5: `data\training\curated_expansion\evidence_round5.jsonl`
 - Round 6: `data\training\curated_expansion\evidence_round6.jsonl`
 - Round 7: `data\training\curated_expansion\evidence_round7.jsonl`
+- Round 8: `data\training\curated_expansion\evidence_round8.jsonl`
+- Round 9: `data\training\curated_expansion\evidence_round9.jsonl`
+- Round 10: `data\training\curated_expansion\evidence_round10.jsonl`
+- Round 11: `data\training\curated_expansion\evidence_round11.jsonl`
+- Round 12: `data\training\curated_expansion\evidence_round12.jsonl`
+- Round 13: `data\training\curated_expansion\evidence_round13.jsonl`
+- Round 14: `data\training\curated_expansion\evidence_round14.jsonl`
+- Round 15: `data\training\curated_expansion\evidence_round15.jsonl`
+- Round 16: `data\training\curated_expansion\evidence_round16.jsonl`
+- Round 17: `data\training\curated_expansion\evidence_round17.jsonl`
+- Round 18: `data\training\curated_expansion\evidence_round18.jsonl`
+- Round 19: `data\training\curated_expansion\evidence_round19.jsonl`
+- Round 20: `data\training\curated_expansion\evidence_round20.jsonl`
+- Round 21: `data\training\curated_expansion\evidence_round21.jsonl`
+- Round 22: `data\training\curated_expansion\evidence_round22.jsonl`
+- Round 23: `data\training\curated_expansion\evidence_round23.jsonl`
+- Round 24: `data\training\curated_expansion\evidence_round24.jsonl`
+- Round 25: `data\training\curated_expansion\evidence_round25.jsonl`
+- Round 26: `data\training\curated_expansion\evidence_round26.jsonl`
+- Round 27: `data\training\curated_expansion\evidence_round27.jsonl`
+- Round 28: `data\training\curated_expansion\evidence_round28.jsonl`
+- Round 29: `data\training\curated_expansion\evidence_round29.jsonl`
+- Round 30: `data\training\curated_expansion\evidence_round30.jsonl`
+- Round 31: `data\training\curated_expansion\evidence_round31.jsonl`
+- Round 32: `data\training\curated_expansion\evidence_round32.jsonl`
+- Round 34: `data\training\curated_expansion\evidence_round34.jsonl`
 
 ## Ordered Steps
 ### curated_fixture_import
@@ -29,7 +55,7 @@ Observe-only research rebuild of the curated-fixture report chain. It does not p
 ### curated_provenance_diff
 - Status: pass
 - Return code: 0
-- Detail: - Review statuses: accepted=12 | ## Findings | - none
+- Detail: - [error] changed: curated observation changed across batches (reviewer) for reviewed_queue|relation:42399440:3 | - `data\training\curated_expansion\gold_reviewed_queue_round14.jsonl` row 53; PMID `42399440`; task `relation`; label `IMPROVES`; reviewer `agent-curation`; status `accepted` | - `data\training\curated_expansion\gold_reviewed_queue_round34.jsonl` row 184; PMID `42399440`; task `relation`; label `IMPROVES`; reviewer `david`; status `accepted`
 
 ### gold_seed
 - Status: pass
@@ -39,22 +65,22 @@ Observe-only research rebuild of the curated-fixture report chain. It does not p
 ### gold_training_pack
 - Status: pass
 - Return code: 0
-- Detail: - training_readiness_md: `reports\training\gold_pack\training_readiness.md` | ## Warnings | - none
+- Detail: ## Warnings | - evidence: 86 duplicate example(s) | - relation: 7 duplicate example(s)
 
 ### evidence_training_pack
 - Status: pass
 - Return code: 0
-- Detail: - Label maps: `data\training\evidence_pack\label_maps` | ## Warnings | - none
+- Detail: - Label maps: `data\training\evidence_pack\label_maps` | ## Warnings | - evidence: 86 duplicate example(s)
 
 ### relation_training_pack
 - Status: pass
 - Return code: 0
-- Detail: - training_readiness_md: `reports\training\relation_pack\relation_training_pack_readiness.md` | ## Warnings | - none
+- Detail: - 1 relation example(s) have identical head and tail endpoints | - 7 duplicate relation example(s) | - relation: 7 duplicate example(s)
 
 ### relation_dataset_quality
 - Status: pass
 - Return code: 0
-- Detail: - PREDICTS: 16 | ## Warnings | - none
+- Detail: ## Warnings | - 1 relation example(s) have identical head and tail endpoints | - 7 duplicate relation example(s)
 
 ### training_config_suite_review
 - Status: pass
@@ -69,12 +95,12 @@ Observe-only research rebuild of the curated-fixture report chain. It does not p
 ### training_pack_leakage_audit
 - Status: pass
 - Return code: 0
-- Detail: - evidence/gold: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586 | - evidence/relation: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586 | - gold/relation: 42 shared PMID(s): 15758010, 23209033, 26109046, 27475281, 28967586
+- Detail: - evidence/gold: 898 shared PMID(s): 10853323, 11138924, 11717820, 11939587, 12124496 | - evidence/relation: 154 shared PMID(s): 15758010, 18676355, 18752056, 18757334, 19269895 | - gold/relation: 159 shared PMID(s): 15758010, 16944365, 17325429, 18665745, 18676355
 
 ### training_pack_comparison
 - Status: pass
 - Return code: 0
-- Detail: - none | - Warnings: | - none
+- Detail: - Warnings: | - evidence: 86 duplicate example(s) | - relation: 7 duplicate example(s)
 
 ### training_provenance_audit
 - Status: pass
@@ -84,22 +110,22 @@ Observe-only research rebuild of the curated-fixture report chain. It does not p
 ### training_readiness_snapshot
 - Status: pass
 - Return code: 0
-- Detail: - Dashboard reports: 13 | ## Warnings | - none
+- Detail: - Dashboard reports: 14 | ## Warnings | - none
 
 ### dashboard_training_manifest
 - Status: pass
 - Return code: 0
-- Detail: - Current config failed: 0 | - Scaffold configs: 2 | - Registry audit passed: True
+- Detail: - Current config failed: 0 | - Scaffold configs: 5 | - Registry audit passed: True
 
 ### gold_pack_promotion_review
 - Status: pass
 - Return code: 0
-- Detail: - ner labels below 10 examples: BIOMARKER=8, CELL_STATE=8, CELL_TYPE=8, DELIVERY_MODIFIER=8, DISEASE=8, DRUG=7, GENE=9, OUTCOME=8, PATHWAY=8, TREATMENT=9, TRIAL_PHASE=8, UNKNOWN=7 | - relation has 48 examples; needs at least 100 | - source PMID count is 42; needs at least 50
+- Detail: ## Blockers | - gold pack readiness report is not ready | - relation labels below 20 examples: ENHANCES_DELIVERY_OF=2, SYNERGIZES_WITH=5, TARGETS=2
 
 ### gold_pack_promotion_plan
 - Status: pass
 - Return code: 0
-- Detail: - `relation-volume-003` (task_volume, relation): 4 example(s), 0 new PMID(s); balanced/general. Add balanced reviewed examples for the task-volume delta remaining after label-floor batches. | - `source-pmid-expansion-001` (source_pmid_expansion, all): 0 example(s), 6 new PMID(s); balanced/general. Select additional source PMIDs for future reviewed curation batches. | - `source-pmid-expansion-002` (source_pmid_expansion, all): 0 example(s), 2 new PMID(s); balanced/general. Select additional source PMIDs for future reviewed curation batches.
+- Detail: - relation: 0 example(s) | ## Suggested Batches | - `relation-label-balance-001` (label_balance, relation): 51 example(s), 0 new PMID(s); ENHANCES_DELIVERY_OF +18, SYNERGIZES_WITH +15, TARGETS +18. Prioritize labels still below the configured per-label floor; these examples also count toward the task-volume delta.
 
 ### training_governance_suite
 - Status: pass
@@ -109,7 +135,7 @@ Observe-only research rebuild of the curated-fixture report chain. It does not p
 ### strict_training_governance
 - Status: pass
 - Return code: 0
-- Detail: - registry_remediation: `reports\training\governance_strict\model_registry_remediation_plan.json` | ## Warnings | - strict audit includes 2 scaffold config(s) that are not promotion-ready by default
+- Detail: - registry_remediation: `reports\training\governance_strict\model_registry_remediation_plan.json` | ## Warnings | - strict audit includes 5 scaffold config(s) that are not promotion-ready by default
 
 ### governance_detail_export
 - Status: pass

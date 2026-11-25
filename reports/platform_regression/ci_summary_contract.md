@@ -14,6 +14,7 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Strict governance audit
 - Gold-pack promotion
 - Governance detail contract
+- Curated round rebuild
 
 ## Missing Families
 - none

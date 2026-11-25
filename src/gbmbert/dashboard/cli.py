@@ -1,4 +1,4 @@
-"""Launcher for the GBM-AI Streamlit dashboard skeleton."""
+"""Launcher for the GBM-AI Streamlit research operations console."""
 
 from __future__ import annotations
 
@@ -27,7 +27,9 @@ def build_streamlit_command(*, host: str, port: int) -> list[str]:
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Launch the GBM-AI Streamlit dashboard skeleton.")
+    parser = argparse.ArgumentParser(
+        description="Launch the GBM-AI Streamlit research operations console (live in-process runners)."
+    )
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8501)
     parser.add_argument("--print-command", action="store_true", help="Print the Streamlit command without running it.")

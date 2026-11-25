@@ -13,13 +13,17 @@
   },
   "input_path": "data\\training\\gold_seed\\gold_relations.jsonl",
   "label_map_dir": "data\\training\\relation_pack\\label_maps",
-  "negative_rows": 16,
+  "negative_rows": 74,
   "output_dir": "data\\training\\relation_pack",
-  "positive_rows": 32,
-  "ready": true,
-  "relation_rows": 48,
+  "positive_rows": 239,
+  "ready": false,
+  "relation_rows": 313,
   "reports_dir": "reports\\training\\relation_pack",
   "split_dataset_dir": "data\\training\\relation_pack\\annotation_splits",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": []
+  "warnings": [
+    "1 relation example(s) have identical head and tail endpoints",
+    "7 duplicate relation example(s)",
+    "relation: 7 duplicate example(s)"
+  ]
 }

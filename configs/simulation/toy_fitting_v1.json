@@ -1,0 +1,46 @@
+{
+  "name": "toy_fitting_v1",
+  "description": "Phase 5 research stub: approximate posterior-style sampling against toy scenario final_total targets. Not PK/PD. Not clinically calibrated posteriors. Not a digital twin.",
+  "scenario_config": "data/examples/simulation_scenario_pack.json",
+  "targets": {
+    "baseline": 1.15,
+    "tmz": 1.05,
+    "tmz_fus": 0.95
+  },
+  "n_draws": 80,
+  "n_keep": 12,
+  "seed": 17,
+  "relative_tolerance": 0.35,
+  "graph_constraint_weight": 0.05,
+  "graph_jsonl": "data/examples/graph_records_sample.jsonl",
+  "parameters": [
+    {
+      "name": "intrinsic_growth_rate",
+      "dist": "normal",
+      "mean": 0.08,
+      "std": 0.02,
+      "low": 0.02,
+      "high": 0.16
+    },
+    {
+      "name": "carrying_capacity",
+      "dist": "normal",
+      "mean": 4.0,
+      "std": 0.6,
+      "low": 2.0,
+      "high": 6.0
+    },
+    {
+      "name": "transition_rate",
+      "dist": "uniform",
+      "mean": 0.02,
+      "low": 0.005,
+      "high": 0.05
+    }
+  ],
+  "assumptions": [
+    "Targets are synthetic research set-points for the offline fixture pack, not clinical observations.",
+    "Accepted particles are toy approximate-posterior samples only.",
+    "Explicitly not pharmacokinetics/pharmacodynamics and not spatial biophysics."
+  ]
+}

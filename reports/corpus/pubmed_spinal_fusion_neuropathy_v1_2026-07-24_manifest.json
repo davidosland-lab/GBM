@@ -1,0 +1,25 @@
+{
+  "command": "gbmbert-search-pubmed --query-pack pubmed_spinal_fusion_neuropathy_v1 --output data/raw/pubmed_spinal_fusion_neuropathy_v1_2026-07-24.jsonl --retmax-per-query 8 --sort relevance",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 195130,
+      "line_count": 84,
+      "non_empty_line_count": 84,
+      "path": "data\\raw\\pubmed_spinal_fusion_neuropathy_v1_2026-07-24.jsonl",
+      "sha256": "54E5AC28FC8226219DA545A1A59445308FF93E0C9A018F383821C228E831C4CB"
+    }
+  ],
+  "generated_at_utc": "2026-07-23T22:34:14+00:00",
+  "name": "spinal_fusion_neuropathy_v1",
+  "notes": [
+    "Research-grade literature triage only; no patient-specific claims."
+  ],
+  "query_pack": "pubmed_spinal_fusion_neuropathy_v1",
+  "record_count": 84,
+  "source": "PubMed"
+}

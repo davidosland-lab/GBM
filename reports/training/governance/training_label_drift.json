@@ -9,12 +9,16 @@
         "4",
         "5"
       ],
-      "config_path": "configs\\training\\gbmbert_evidence_pubmedbert.json",
+      "config_path": "configs\\training\\gbmbert_evidence_experiment_pubmedbert.json",
       "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
+          "0",
+          "1",
           "2",
-          "3"
+          "3",
+          "4",
+          "5"
         ],
         "train": [
           "0",
@@ -25,6 +29,51 @@
           "5"
         ],
         "validation": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "governance_profile": "scaffold",
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gbmbert_evidence_experiment_pubmedbert"
+    },
+    {
+      "config_labels": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "config_path": "configs\\training\\gbmbert_evidence_pubmedbert.json",
+      "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+      "dataset_labels": {
+        "test": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "train": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "validation": [
+          "0",
+          "1",
+          "2",
           "3",
           "4",
           "5"
@@ -61,6 +110,116 @@
     },
     {
       "config_labels": [
+        "O",
+        "B-BIOMARKER",
+        "B-CELL_STATE",
+        "B-CELL_TYPE",
+        "B-DELIVERY_MODIFIER",
+        "B-DISEASE",
+        "B-DRUG",
+        "B-GENE",
+        "B-OUTCOME",
+        "B-PATHWAY",
+        "B-TREATMENT",
+        "B-TRIAL_PHASE",
+        "I-BIOMARKER",
+        "I-CELL_STATE",
+        "I-CELL_TYPE",
+        "I-DELIVERY_MODIFIER",
+        "I-DISEASE",
+        "I-DRUG",
+        "I-GENE",
+        "I-OUTCOME",
+        "I-PATHWAY",
+        "I-TREATMENT",
+        "I-TRIAL_PHASE"
+      ],
+      "config_path": "configs\\training\\gbmbert_ner_bio_pubmedbert.json",
+      "dataset_dir": "data\\training\\ner_bio_pack\\annotation_splits",
+      "dataset_labels": {
+        "test": [
+          "B-BIOMARKER",
+          "B-CELL_STATE",
+          "B-CELL_TYPE",
+          "B-DELIVERY_MODIFIER",
+          "B-DISEASE",
+          "B-DRUG",
+          "B-GENE",
+          "B-OUTCOME",
+          "B-PATHWAY",
+          "B-TREATMENT",
+          "B-TRIAL_PHASE",
+          "I-BIOMARKER",
+          "I-CELL_STATE",
+          "I-CELL_TYPE",
+          "I-DELIVERY_MODIFIER",
+          "I-DISEASE",
+          "I-DRUG",
+          "I-GENE",
+          "I-OUTCOME",
+          "I-PATHWAY",
+          "I-TREATMENT",
+          "I-TRIAL_PHASE",
+          "O"
+        ],
+        "train": [
+          "B-BIOMARKER",
+          "B-CELL_STATE",
+          "B-CELL_TYPE",
+          "B-DELIVERY_MODIFIER",
+          "B-DISEASE",
+          "B-DRUG",
+          "B-GENE",
+          "B-OUTCOME",
+          "B-PATHWAY",
+          "B-TREATMENT",
+          "B-TRIAL_PHASE",
+          "I-BIOMARKER",
+          "I-CELL_STATE",
+          "I-CELL_TYPE",
+          "I-DELIVERY_MODIFIER",
+          "I-DISEASE",
+          "I-DRUG",
+          "I-GENE",
+          "I-OUTCOME",
+          "I-PATHWAY",
+          "I-TREATMENT",
+          "I-TRIAL_PHASE",
+          "O"
+        ],
+        "validation": [
+          "B-BIOMARKER",
+          "B-CELL_STATE",
+          "B-CELL_TYPE",
+          "B-DELIVERY_MODIFIER",
+          "B-DISEASE",
+          "B-DRUG",
+          "B-GENE",
+          "B-OUTCOME",
+          "B-PATHWAY",
+          "B-TREATMENT",
+          "B-TRIAL_PHASE",
+          "I-BIOMARKER",
+          "I-CELL_STATE",
+          "I-CELL_TYPE",
+          "I-DELIVERY_MODIFIER",
+          "I-DISEASE",
+          "I-DRUG",
+          "I-GENE",
+          "I-OUTCOME",
+          "I-PATHWAY",
+          "I-TREATMENT",
+          "I-TRIAL_PHASE",
+          "O"
+        ]
+      },
+      "governance_profile": "scaffold",
+      "missing_from_config": [],
+      "missing_from_dataset": [],
+      "name": "gbmbert_ner_bio_pubmedbert"
+    },
+    {
+      "config_labels": [
         "GENE",
         "DRUG",
         "DISEASE",
@@ -78,10 +237,17 @@
       "dataset_dir": "data\\training\\gold_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
+          "BIOMARKER",
           "CELL_STATE",
+          "CELL_TYPE",
+          "DELIVERY_MODIFIER",
           "DISEASE",
           "DRUG",
+          "GENE",
+          "OUTCOME",
+          "PATHWAY",
           "TREATMENT",
+          "TRIAL_PHASE",
           "UNKNOWN"
         ],
         "train": [
@@ -100,11 +266,16 @@
         ],
         "validation": [
           "BIOMARKER",
+          "CELL_STATE",
+          "CELL_TYPE",
           "DELIVERY_MODIFIER",
           "DISEASE",
           "DRUG",
           "GENE",
           "OUTCOME",
+          "PATHWAY",
+          "TREATMENT",
+          "TRIAL_PHASE",
           "UNKNOWN"
         ]
       },
@@ -166,29 +337,44 @@
     {
       "config_labels": [
         "ASSOCIATED_WITH",
+        "ENHANCES_DELIVERY_OF",
+        "IMPROVES",
         "NO_RELATION",
-        "PREDICTS"
+        "PREDICTS",
+        "SYNERGIZES_WITH",
+        "TARGETS",
+        "WORSENS"
       ],
       "config_path": "configs\\training\\gbmbert_relation_biobert.json",
       "dataset_dir": "data\\training\\relation_pack\\annotation_splits",
       "dataset_labels": {
         "test": [
           "ASSOCIATED_WITH",
+          "IMPROVES",
           "NO_RELATION",
-          "PREDICTS"
+          "PREDICTS",
+          "SYNERGIZES_WITH",
+          "WORSENS"
         ],
         "train": [
           "ASSOCIATED_WITH",
+          "ENHANCES_DELIVERY_OF",
+          "IMPROVES",
           "NO_RELATION",
-          "PREDICTS"
+          "PREDICTS",
+          "TARGETS",
+          "WORSENS"
         ],
         "validation": [
           "ASSOCIATED_WITH",
+          "IMPROVES",
           "NO_RELATION",
-          "PREDICTS"
+          "PREDICTS",
+          "SYNERGIZES_WITH",
+          "WORSENS"
         ]
       },
-      "governance_profile": "current",
+      "governance_profile": "scaffold",
       "missing_from_config": [],
       "missing_from_dataset": [],
       "name": "gbmbert_relation_biobert"

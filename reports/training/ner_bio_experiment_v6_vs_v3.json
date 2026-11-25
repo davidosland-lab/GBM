@@ -1,0 +1,16 @@
+{
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "note": "Not a freeze-split compare: v6 uses cleaned BIO pack (UNKNOWN dropped, PATHWAY gene-symbols remapped to GENE, stratified sparse PMID split, tempered class weights, max_steps=800). v3 used prior noisy pack.",
+  "v3_accuracy": 0.9582608695652174,
+  "v3_macro_f1": 0.30139216620271353,
+  "v6_accuracy": 0.9870759289176091,
+  "v6_macro_f1": 0.6905681278348426,
+  "delta_accuracy": 0.0288150593523917,
+  "delta_macro_f1": 0.3891759616321291,
+  "preferred_checkpoint": "gbmbert_ner_bio_pubmedbert_v6",
+  "sparse_residual": {
+    "CELL_STATE": {"support": 2, "f1": 0.0},
+    "PATHWAY": {"support": 1, "f1": 0.0},
+    "TRIAL_PHASE": {"support": 1, "f1": 0.091}
+  }
+}

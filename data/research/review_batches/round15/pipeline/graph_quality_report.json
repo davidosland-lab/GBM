@@ -1,0 +1,184 @@
+{
+  "evidence_tier_counts": [
+    {
+      "count": 11,
+      "key": "3"
+    },
+    {
+      "count": 1,
+      "key": "4"
+    }
+  ],
+  "invalid_record_count": 0,
+  "label_counts": [
+    {
+      "count": 66,
+      "key": "Outcome"
+    },
+    {
+      "count": 52,
+      "key": "Disease"
+    },
+    {
+      "count": 16,
+      "key": "Treatment"
+    },
+    {
+      "count": 14,
+      "key": "Gene"
+    },
+    {
+      "count": 9,
+      "key": "Drug"
+    },
+    {
+      "count": 8,
+      "key": "CellType"
+    },
+    {
+      "count": 8,
+      "key": "Biomarker"
+    },
+    {
+      "count": 7,
+      "key": "DeliveryModifier"
+    }
+  ],
+  "node_mention_count": 180,
+  "paper_only_record_count": 1,
+  "record_count": 55,
+  "relation_count": 12,
+  "relation_type_counts": [
+    {
+      "count": 8,
+      "key": "ASSOCIATED_WITH"
+    },
+    {
+      "count": 2,
+      "key": "IMPROVES"
+    },
+    {
+      "count": 2,
+      "key": "WORSENS"
+    }
+  ],
+  "source_path": "data\\research\\review_batches\\round15\\pipeline\\graph_records.jsonl",
+  "top_entities": [
+    {
+      "count": 35,
+      "key_value": "survival",
+      "label": "Outcome"
+    },
+    {
+      "count": 33,
+      "key_value": "glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 19,
+      "key_value": "Glioblastoma",
+      "label": "Disease"
+    },
+    {
+      "count": 17,
+      "key_value": "response",
+      "label": "Outcome"
+    },
+    {
+      "count": 10,
+      "key_value": "immunotherapy",
+      "label": "Treatment"
+    },
+    {
+      "count": 8,
+      "key_value": "recurrence",
+      "label": "Outcome"
+    },
+    {
+      "count": 8,
+      "key_value": "temozolomide",
+      "label": "Drug"
+    },
+    {
+      "count": 7,
+      "key_value": "EGFR",
+      "label": "Gene"
+    },
+    {
+      "count": 7,
+      "key_value": "MGMT",
+      "label": "Gene"
+    },
+    {
+      "count": 5,
+      "key_value": "blood-brain barrier",
+      "label": "DeliveryModifier"
+    }
+  ],
+  "top_relation_pairs": [
+    {
+      "count": 3,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:CAR-T",
+      "relation": "IMPROVES",
+      "tail": "Outcome:survival"
+    },
+    {
+      "count": 1,
+      "head": "Treatment:Immunotherapy",
+      "relation": "IMPROVES",
+      "tail": "Outcome:survival"
+    },
+    {
+      "count": 1,
+      "head": "Biomarker:EGFR amplification",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Outcome:survival"
+    },
+    {
+      "count": 1,
+      "head": "Biomarker:EGFR amplification",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Disease:glioblastoma"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Outcome:survival"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Outcome:response"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "WORSENS",
+      "tail": "Outcome:recurrence"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "ASSOCIATED_WITH",
+      "tail": "Outcome:temozolomide resistance"
+    },
+    {
+      "count": 1,
+      "head": "Gene:MGMT",
+      "relation": "WORSENS",
+      "tail": "Outcome:temozolomide resistance"
+    }
+  ],
+  "unique_nct_count": 0,
+  "unique_node_count": 18,
+  "unique_pmid_count": 55,
+  "warnings": []
+}

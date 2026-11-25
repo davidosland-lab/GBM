@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-07-21T01:13:33Z",
+  "csv_output": "data\\research\\review_batches\\round33\\span_review_dual_round33.csv",
+  "document_count": 27,
+  "instructions_path": "data\\research\\review_batches\\round33\\INSTRUCTIONS.md",
+  "label_counts": {
+    "CELL_STATE": 12,
+    "PATHWAY": 12,
+    "TRIAL_PHASE": 12,
+    "UNKNOWN": 12
+  },
+  "notes": [
+    "All rows left pending for human dual-review; no labels invented.",
+    "After adjudication, write consensus JSONL and promote via curated_expansion + rebuild."
+  ],
+  "output_dir": "data\\research\\review_batches\\round33",
+  "pending_for_human": true,
+  "r1_jsonl": "data\\research\\review_batches\\round33\\span_review_r1_round33.jsonl",
+  "r2_jsonl": "data\\research\\review_batches\\round33\\span_review_r2_round33.jsonl",
+  "round_id": 33,
+  "span_count": 48,
+  "target_labels": [
+    "CELL_STATE",
+    "PATHWAY",
+    "TRIAL_PHASE",
+    "UNKNOWN"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

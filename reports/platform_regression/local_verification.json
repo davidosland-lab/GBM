@@ -1,5 +1,5 @@
 {
-  "created_at_utc": "2026-06-29T03:49:53.005593+00:00",
+  "created_at_utc": "2026-06-29T10:05:36.063642+00:00",
   "failed_step_count": 0,
   "passed": true,
   "passed_step_count": 8,
@@ -12,7 +12,7 @@
         "pytest",
         "-q"
       ],
-      "detail": "........................................................................ [ 59%] | ........................................................................ [ 88%] | ............................                                             [100%] | 244 passed in 19.90s",
+      "detail": "........................................................................ [ 58%] | ........................................................................ [ 87%] | ................................                                         [100%] | 248 passed in 23.15s",
       "name": "pytest",
       "passed": true,
       "returncode": 0
@@ -87,7 +87,7 @@
         "--json-output",
         "reports\\platform_regression\\artifact_policy.json"
       ],
-      "detail": "- Tracked paths checked: 655 | - Findings: 0 | ## Findings | - none",
+      "detail": "- Tracked paths checked: 657 | - Findings: 0 | ## Findings | - none",
       "name": "artifact_policy",
       "passed": true,
       "returncode": 0

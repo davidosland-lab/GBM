@@ -60,8 +60,11 @@ def test_adjudication_report_flags_conflicting_review_decisions(tmp_path: Path) 
     markdown = format_adjudication_markdown(report)
 
     assert report.conflict_count == 2
+    assert report.conflicted_item_count == 1
+    assert report.agreement_rate == 0.0
     assert {conflict.field for conflict in report.conflicts} == {"review_status", "evidence_tier"}
     assert "Annotation Adjudication Report" in markdown
+    assert "Agreement rate" in markdown
 
 
 def test_entity_normalization_adds_canonical_properties_to_nodes_and_relation_endpoints(tmp_path: Path) -> None:

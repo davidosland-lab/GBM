@@ -1,0 +1,57 @@
+{
+  "dataset_dir": "data\\training\\gold_pack_backfill_batch1\\annotation_splits",
+  "leakage_warnings": [],
+  "min_examples_per_label": 2,
+  "min_examples_per_task": 10,
+  "ready": false,
+  "task_reports": [
+    {
+      "dominant_label_fraction": null,
+      "duplicate_count": 0,
+      "example_count": 0,
+      "invalid_ner_span_count": 0,
+      "label_counts": {},
+      "ready": false,
+      "task": "ner",
+      "warnings": [
+        "fewer than 10 examples"
+      ]
+    },
+    {
+      "dominant_label_fraction": 0.5714285714285714,
+      "duplicate_count": 0,
+      "example_count": 7,
+      "invalid_ner_span_count": 0,
+      "label_counts": {
+        "0": 4,
+        "1": 2,
+        "3": 1
+      },
+      "ready": false,
+      "task": "evidence",
+      "warnings": [
+        "fewer than 10 examples",
+        "label 3 has fewer than 2 examples"
+      ]
+    },
+    {
+      "dominant_label_fraction": 1.0,
+      "duplicate_count": 0,
+      "example_count": 12,
+      "invalid_ner_span_count": 0,
+      "label_counts": {
+        "ASSOCIATED_WITH": 12
+      },
+      "ready": true,
+      "task": "relation",
+      "warnings": []
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warning_count": 3,
+  "warnings": [
+    "ner: fewer than 10 examples",
+    "evidence: fewer than 10 examples",
+    "evidence: label 3 has fewer than 2 examples"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checkpoint_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v7",
+  "completed_at": "2026-07-19T14:22:32.438562+00:00",
+  "config_sha256": "B89DF118D56A683CC039F38C665CA2D027D60B6BE162497CB9DD38255934B795",
+  "dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
+  "dataset_hashes": {
+    "test": "BDF6835C8F9A6BFC6F83590788DCA5CB4169ACD6EB5A17949469F222BB91BF70",
+    "train": "8A1AC799132166715A87E896931B6ED2316CEA4ABDBC42CD4DEDE7E8FB9DE454",
+    "validation": "21AF9116A03ED99B86E972F9B4CC64988FFF13CC3D288E2CDFD1708E899C4B1B"
+  },
+  "evaluation_markdown_path": "reports\\training\\evidence_experiment_v7_metrics.md",
+  "label_map_dir": "data\\training\\evidence_pack\\label_maps",
+  "label_map_sha256": "EC12DACC60C2BF167E1E07A397794EEB977D34083DA79F87A938D477E8C3ABFE",
+  "metrics_path": "reports\\training\\evidence_experiment_v7_metrics.json",
+  "output_dir": "models\\checkpoints\\gbmbert_evidence_experiment_pubmedbert_v7",
+  "run_name": "gbmbert_evidence_experiment_pubmedbert",
+  "started_at": "2026-07-19T14:01:18.207871+00:00",
+  "task": "evidence_classification",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

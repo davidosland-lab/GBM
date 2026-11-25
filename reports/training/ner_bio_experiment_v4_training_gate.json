@@ -1,0 +1,329 @@
+{
+  "checks": {
+    "config_exists": true,
+    "dataset_dir_exists": true,
+    "experiment_manifest_exists": true,
+    "label_map_exists": true,
+    "test_split_has_rows": true,
+    "train_split_has_rows": true,
+    "training_enabled_by_config": true,
+    "validation_split_has_rows": true
+  },
+  "config_path": "configs\\training\\gbmbert_ner_bio_pubmedbert.json",
+  "dataset_dir": "data\\training\\ner_bio_pack\\annotation_splits",
+  "dataset_splits": {
+    "test": 75,
+    "train": 596,
+    "validation": 74
+  },
+  "dry_run": false,
+  "execute_training_requested": true,
+  "execution": {
+    "checkpoint_dir": "models\\checkpoints\\gbmbert_ner_bio_pubmedbert_v4",
+    "evaluation": {
+      "accuracy": 0.9106830122591943,
+      "confusion_matrix": {
+        "BIOMARKER": {
+          "BIOMARKER": 24,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 5
+        },
+        "CELL_STATE": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 0
+        },
+        "CELL_TYPE": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 19,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 6
+        },
+        "DELIVERY_MODIFIER": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 19,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 4
+        },
+        "DISEASE": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 267,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 4
+        },
+        "DRUG": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 44,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 0
+        },
+        "GENE": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 49,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 3
+        },
+        "OUTCOME": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 69,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 3
+        },
+        "PATHWAY": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 1,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 5
+        },
+        "TREATMENT": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 27,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 18
+        },
+        "TRIAL_PHASE": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 0,
+          "__MISS__": 1
+        },
+        "UNKNOWN": {
+          "BIOMARKER": 0,
+          "CELL_STATE": 0,
+          "CELL_TYPE": 0,
+          "DELIVERY_MODIFIER": 0,
+          "DISEASE": 0,
+          "DRUG": 0,
+          "GENE": 0,
+          "OUTCOME": 0,
+          "PATHWAY": 0,
+          "TREATMENT": 0,
+          "TRIAL_PHASE": 0,
+          "UNKNOWN": 1,
+          "__MISS__": 2
+        },
+        "__MISS__": {
+          "BIOMARKER": 105,
+          "CELL_STATE": 82,
+          "CELL_TYPE": 112,
+          "DELIVERY_MODIFIER": 49,
+          "DISEASE": 207,
+          "DRUG": 36,
+          "GENE": 185,
+          "OUTCOME": 501,
+          "PATHWAY": 107,
+          "TREATMENT": 503,
+          "TRIAL_PHASE": 72,
+          "UNKNOWN": 60,
+          "__MISS__": 0
+        }
+      },
+      "examples": 571,
+      "labels": [
+        {
+          "f1": 0.3037974683544304,
+          "label": "BIOMARKER",
+          "precision": 0.18604651162790697,
+          "recall": 0.8275862068965517,
+          "support": 29
+        },
+        {
+          "f1": 0.0,
+          "label": "CELL_STATE",
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 0
+        },
+        {
+          "f1": 0.24358974358974358,
+          "label": "CELL_TYPE",
+          "precision": 0.1450381679389313,
+          "recall": 0.76,
+          "support": 25
+        },
+        {
+          "f1": 0.4175824175824176,
+          "label": "DELIVERY_MODIFIER",
+          "precision": 0.27941176470588236,
+          "recall": 0.8260869565217391,
+          "support": 23
+        },
+        {
+          "f1": 0.7167785234899328,
+          "label": "DISEASE",
+          "precision": 0.5632911392405063,
+          "recall": 0.985239852398524,
+          "support": 271
+        },
+        {
+          "f1": 0.7096774193548387,
+          "label": "DRUG",
+          "precision": 0.55,
+          "recall": 1.0,
+          "support": 44
+        },
+        {
+          "f1": 0.3426573426573427,
+          "label": "GENE",
+          "precision": 0.2094017094017094,
+          "recall": 0.9423076923076923,
+          "support": 52
+        },
+        {
+          "f1": 0.21495327102803738,
+          "label": "OUTCOME",
+          "precision": 0.12105263157894737,
+          "recall": 0.9583333333333334,
+          "support": 72
+        },
+        {
+          "f1": 0.017543859649122806,
+          "label": "PATHWAY",
+          "precision": 0.009259259259259259,
+          "recall": 0.16666666666666666,
+          "support": 6
+        },
+        {
+          "f1": 0.09391304347826088,
+          "label": "TREATMENT",
+          "precision": 0.0509433962264151,
+          "recall": 0.6,
+          "support": 45
+        },
+        {
+          "f1": 0.0,
+          "label": "TRIAL_PHASE",
+          "precision": 0.0,
+          "recall": 0.0,
+          "support": 1
+        },
+        {
+          "f1": 0.03125,
+          "label": "UNKNOWN",
+          "precision": 0.01639344262295082,
+          "recall": 0.3333333333333333,
+          "support": 3
+        }
+      ],
+      "macro_f1": 0.25764525743201055,
+      "task": "ner",
+      "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+      "warnings": [
+        "BIO exact-span metrics (token indices); research scaffold only"
+      ]
+    },
+    "metrics_path": "reports\\training\\ner_bio_experiment_v4_metrics.json",
+    "registry_path": "models\\checkpoint_registry.json",
+    "run_manifest_path": "reports\\training\\ner_bio_experiment_v4_run_manifest.json",
+    "status": "completed",
+    "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+  },
+  "experiment_manifest_path": "reports\\training\\ner_bio_experiment_v4_manifest.json",
+  "label_map_dir": "data\\training\\ner_bio_pack\\label_maps",
+  "status": "training_completed",
+  "task": "ner",
+  "tokenization": null,
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

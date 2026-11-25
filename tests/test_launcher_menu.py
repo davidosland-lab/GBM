@@ -83,6 +83,27 @@ def test_launcher_menu_lists_operational_commands() -> None:
     assert "gbmbert-export-governance-detail-links.exe" in text
     assert "gbmbert-check-ci-summary-contract.exe" in text
     assert "gbmbert-run-smoke-baseline.exe" in text
+    assert "gbmbert-prep-review-batch.exe" in text
+    assert "gbmbert-finalize-review-batch.exe" in text
+    assert "gbmbert-export-entity-span-review.exe" in text
+    assert "gbmbert-apply-entity-span-review.exe" in text
+    assert "16BT" in text
+    assert "16BU" in text
+    assert "16BV" in text
+    assert "16BW" in text
+    assert "16BX" in text
+    assert "16BY" in text
+    assert "16BZ" in text
+    assert "16CA" in text
+    assert "16CB" in text
+    assert "16CC" in text
+    assert "gbmbert-gold-pack-ops-status.exe" in text
+    assert "gbmbert-run-tumour-simulation.exe" in text
+    assert "gbmbert-run-simulation-monte-carlo.exe" in text
+    assert "gbmbert-rank-treatment-scenarios.exe" in text
+    assert "gbmbert-fit-simulation-parameters.exe" in text
+    assert "Tumour simulation (research)" in text
+    assert "not span-reviewed" in text
     assert "Setup and environment" in text
     assert "Verify, reports, and handoff checks" in text
     assert "Training data and governance" in text

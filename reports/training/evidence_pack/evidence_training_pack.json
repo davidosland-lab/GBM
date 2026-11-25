@@ -1,13 +1,15 @@
 {
   "annotation_dataset_dir": "data\\training\\evidence_pack\\annotation_dataset",
-  "evidence_rows": 48,
+  "evidence_rows": 1016,
   "input_dir": "data\\training\\curated_import\\combined_evidence.jsonl",
   "label_map_dir": "data\\training\\evidence_pack\\label_maps",
   "output_dir": "data\\training\\evidence_pack",
-  "ready": true,
+  "ready": false,
   "repaired_dataset_dir": "data\\training\\evidence_pack\\annotation_dataset_repaired",
   "reports_dir": "reports\\training\\evidence_pack",
   "split_dataset_dir": "data\\training\\evidence_pack\\annotation_splits",
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warnings": []
+  "warnings": [
+    "evidence: 86 duplicate example(s)"
+  ]
 }

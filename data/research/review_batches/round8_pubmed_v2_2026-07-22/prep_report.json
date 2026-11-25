@@ -1,0 +1,61 @@
+{
+  "created_at_utc": "2026-07-22T07:02:59.420217+00:00",
+  "entities_path": "data\\research\\review_batches\\round8\\gold_entities_round8.jsonl",
+  "instructions_path": "data\\research\\review_batches\\round8\\INSTRUCTIONS.md",
+  "passed": true,
+  "pubmed_jsonl": "data\\research\\round8_pubmed_v2_2026-07-22.jsonl",
+  "reviewed_queue_path": "data\\research\\review_batches\\round8\\gold_reviewed_queue_round8.jsonl",
+  "round_number": 8,
+  "staging_dir": "data\\research\\review_batches\\round8",
+  "step_count": 3,
+  "steps": [
+    {
+      "command": [
+        "gbmbert-run-pipeline",
+        "data\\research\\round8_pubmed_v2_2026-07-22.jsonl",
+        "--output-dir",
+        "data\\research\\review_batches\\round8\\pipeline",
+        "--entity-mode",
+        "lexicon",
+        "--lexicon",
+        "configs\\extraction\\lexicon_gbm_v1.json"
+      ],
+      "detail": "INFO:__main__:Saved quality reports to data\\research\\review_batches\\round8\\pipeline\\graph_quality_report.json and data\\research\\review_batches\\round8\\pipeline\\graph_quality_report.md | INFO:__main__:Saved pipeline manifests to data\\research\\review_batches\\round8\\pipeline\\pipeline_manifest.json and data\\research\\review_batches\\round8\\pipeline\\pipeline_manifest.md | INFO:__main__:Validated 69 graph records with 0 invalid records",
+      "name": "literature_pipeline_lexicon",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gbmbert-export-review-queue",
+        "--evidence-jsonl",
+        "data\\research\\review_batches\\round8\\pipeline\\evidence_claims.jsonl",
+        "--graph-jsonl",
+        "data\\research\\review_batches\\round8\\pipeline\\graph_records.jsonl",
+        "--output",
+        "data\\research\\review_batches\\round8\\review_queue.jsonl",
+        "--max-confidence",
+        "0.95"
+      ],
+      "detail": "INFO:__main__:Saved review queue JSONL to data\\research\\review_batches\\round8\\review_queue.jsonl | INFO:__main__:Queued 76 item(s) for review",
+      "name": "export_review_queue",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "command": [
+        "gbmbert-init-reviewed-queue",
+        "data\\research\\review_batches\\round8\\review_queue.jsonl",
+        "data\\research\\review_batches\\round8\\gold_reviewed_queue_round8.jsonl",
+        "--reviewer",
+        "david"
+      ],
+      "detail": "INFO:gbmbert.extraction.review_queue:Saved review queue JSONL to data\\research\\review_batches\\round8\\gold_reviewed_queue_round8.jsonl | INFO:gbmbert.extraction.review_queue:Initialized 76 reviewed queue item(s)",
+      "name": "init_reviewed_queue",
+      "passed": true,
+      "returncode": 0
+    }
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

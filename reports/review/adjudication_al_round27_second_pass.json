@@ -1,0 +1,47 @@
+{
+  "agreement_rate": 0.96,
+  "compared_item_count": 100,
+  "conflict_count": 4,
+  "conflicted_item_count": 4,
+  "conflicts": [
+    {
+      "field": "review_status",
+      "item_id": "prediction:20367199:26",
+      "values_by_source": {
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_consensus.jsonl": "corrected",
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_r3.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "prediction:24180571:57",
+      "values_by_source": {
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_consensus.jsonl": "corrected",
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_r3.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "review_status",
+      "item_id": "prediction:24241205:59",
+      "values_by_source": {
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_consensus.jsonl": "corrected",
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_r3.jsonl": "rejected"
+      }
+    },
+    {
+      "field": "corrected_evidence_tier",
+      "item_id": "prediction:28274144:133",
+      "values_by_source": {
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_consensus.jsonl": "5",
+        "data\\research\\review_batches\\round27\\al_prediction_reviewed_r3.jsonl": "4"
+      }
+    }
+  ],
+  "item_count": 100,
+  "source_paths": [
+    "data\\research\\review_batches\\round27\\al_prediction_reviewed_consensus.jsonl",
+    "data\\research\\review_batches\\round27\\al_prediction_reviewed_r3.jsonl"
+  ],
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

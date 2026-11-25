@@ -4,8 +4,8 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 
 - Output directory: `data\training\gold_pack`
 - Reports directory: `reports\training\gold_pack`
-- Ready: True
-- Warnings: 0
+- Ready: False
+- Warnings: 2
 
 ## Artifacts
 - baseline_json: `reports\training\gold_pack\baseline_report.json`
@@ -22,4 +22,5 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - training_readiness_md: `reports\training\gold_pack\training_readiness.md`
 
 ## Warnings
-- none
+- evidence: 86 duplicate example(s)
+- relation: 7 duplicate example(s)

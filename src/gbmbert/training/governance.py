@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import shutil
+import sys
 import tempfile
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass
@@ -448,14 +449,17 @@ def audit_training_provenance(dataset_path: str | Path = Path("data/training/rel
     rows = _read_jsonl(path)
     missing_warning_count = sum(1 for row in rows if row.get("warning") != RESEARCH_WARNING)
     missing_pmid_count = sum(1 for row in rows if not str(row.get("source_pmid") or row.get("pmid") or "").strip())
-    source_type_counts = dict(sorted(Counter(str(row.get("relation_pack_source_type") or "<missing>") for row in rows).items()))
+    # Accept either relation-pack provenance or external/human source_type (PR165 combined packs).
+    source_type_counts = dict(sorted(Counter(_provenance_source_key(row) for row in rows).items()))
     warnings: list[str] = []
     if missing_warning_count:
         warnings.append(f"{missing_warning_count} row(s) missing required research-use warning")
     if missing_pmid_count:
         warnings.append(f"{missing_pmid_count} row(s) missing source PMID")
     if source_type_counts.get("<missing>"):
-        warnings.append(f"{source_type_counts['<missing>']} row(s) missing relation pack source type")
+        warnings.append(
+            f"{source_type_counts['<missing>']} row(s) missing relation pack source type or source_type"
+        )
     return TrainingProvenanceAuditReport(
         dataset_path=str(path),
         row_count=len(rows),
@@ -465,6 +469,14 @@ def audit_training_provenance(dataset_path: str | Path = Path("data/training/rel
         warnings=warnings,
         safe=not warnings,
     )
+
+
+def _provenance_source_key(row: dict[str, Any]) -> str:
+    if row.get("relation_pack_source_type"):
+        return str(row["relation_pack_source_type"])
+    if row.get("source_type"):
+        return str(row["source_type"])
+    return "<missing>"
 
 
 def build_training_readiness_snapshot(root: str | Path = ".") -> TrainingReadinessSnapshotReport:
@@ -904,7 +916,7 @@ def config_suite_main(argv: list[str] | None = None) -> int:
         save_config_suite_review_json(report, args.json_output)
     if args.markdown_output:
         save_config_suite_review_markdown(report, args.markdown_output)
-    print(json.dumps(report.to_dict(), indent=2, sort_keys=True) if args.json else _format_tmp_markdown(report, save_config_suite_review_markdown))
+    _safe_print(json.dumps(report.to_dict(), indent=2, sort_keys=True) if args.json else _format_tmp_markdown(report, save_config_suite_review_markdown))
     has_findings = report.failed_count > 0 or (args.strict_scaffolds and bool(report.scaffold_warnings))
     return 0 if not has_findings or args.allow_failed else 1
 
@@ -1062,8 +1074,21 @@ def _prepared_task_for_config_task(task: str) -> str:
 
 def _labels_by_split(dataset_dir: Path, prepared_task: str) -> dict[str, list[str]]:
     labels: dict[str, list[str]] = {}
+    bio_labels = _bio_labels_from_label_map(dataset_dir)
     for split in ("train", "validation", "test"):
         rows = _read_jsonl(dataset_dir / f"{prepared_task}_{split}.jsonl")
+        if bio_labels is not None and any(str(row.get("ner_encoding") or "").casefold() == "bio" for row in rows):
+            labels[split] = list(bio_labels)
+            continue
+        if rows and any(str(row.get("ner_encoding") or "").casefold() == "bio" for row in rows):
+            entity_types = {
+                str(entity.get("label")).strip()
+                for row in rows
+                for entity in (row.get("entities") or [])
+                if entity.get("label") is not None and str(entity.get("label")).strip()
+            }
+            labels[split] = sorted({"O", *[f"B-{label}" for label in entity_types], *[f"I-{label}" for label in entity_types]})
+            continue
         labels[split] = sorted(
             {
                 str(row.get("label")).strip()
@@ -1072,6 +1097,22 @@ def _labels_by_split(dataset_dir: Path, prepared_task: str) -> dict[str, list[st
             }
         )
     return labels
+
+
+def _bio_labels_from_label_map(dataset_dir: Path) -> list[str] | None:
+    path = dataset_dir.parent / "label_maps" / "ner_label_map.json"
+    if not path.exists():
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    if str(payload.get("encoding") or "").casefold() != "bio":
+        return None
+    label_to_id = payload.get("label_to_id")
+    if isinstance(label_to_id, dict) and label_to_id:
+        return sorted(str(label) for label in label_to_id)
+    return None
 
 
 def _config_governance_metadata(path: str | Path) -> dict[str, str]:
@@ -1190,3 +1231,11 @@ def _format_tmp_markdown(report: object, writer: Any) -> str:
     text = tmp.read_text(encoding="utf-8")
     tmp.unlink(missing_ok=True)
     return text
+
+
+def _safe_print(text: str) -> None:
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        payload = (text + "\n").encode("utf-8", errors="replace")
+        sys.stdout.buffer.write(payload)

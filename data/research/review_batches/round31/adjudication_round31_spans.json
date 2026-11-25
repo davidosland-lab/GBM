@@ -1,0 +1,12 @@
+{
+  "round": 31,
+  "compared_spans": 50,
+  "conflicts": 1,
+  "agreement": 0.98,
+  "label_counts": {
+    "PATHWAY": 24,
+    "CELL_STATE": 26
+  },
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "notes": "Light dual-review for research densify; consensus promoted to curated_expansion."
+}

@@ -5,17 +5,17 @@
   "queries": [
     "glioblastoma focused ultrasound blood brain barrier opening",
     "glioblastoma MR-guided focused ultrasound microbubble",
-    "glioblastoma SonoCloud Exablate Neuro",
-    "glioblastoma oncolytic virus DNX-2401 CAN-3110 G47",
+    "glioblastoma (SonoCloud OR Exablate)",
+    "glioblastoma (\"oncolytic virus\" OR DNX-2401 OR CAN-3110 OR \"G47Delta\" OR G47)",
     "glioblastoma perampanel AMPA receptor antagonist",
     "glioblastoma CSF1R inhibitor pexidartinib BLZ945",
     "glioblastoma tumor-associated macrophage microglia polarization",
     "IDH-mutant glioma vorasidenib D-2-hydroxyglutarate",
     "glioblastoma ferroptosis GPX4 SLC7A11",
-    "glioblastoma GD2 CAR-T chlorotoxin CAR-T",
-    "glioblastoma neoantigen vaccine NeoVax GAPVAC",
+    "glioblastoma (GD2 OR chlorotoxin) (CAR-T OR \"chimeric antigen receptor\")",
+    "glioblastoma (neoantigen OR NeoVax OR GAPVAC) vaccine",
     "glioblastoma chronotherapy temozolomide",
-    "glioblastoma Neftel cell states MES NPC OPC AC",
+    "glioblastoma Neftel (mesenchymal OR \"neural progenitor\" OR OPC OR \"astrocyte-like\")",
     "glioblastoma BMP differentiation therapy",
     "glioblastoma TTFields temozolomide synergy"
   ]

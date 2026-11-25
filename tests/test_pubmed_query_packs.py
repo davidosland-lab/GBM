@@ -23,6 +23,35 @@ def test_list_query_packs_returns_available_pack_names() -> None:
 
     assert "pubmed_gbm_v1" in packs
     assert "pubmed_gbm_v2" in packs
+    assert "pubmed_spinal_fusion_neuropathy_v1" in packs
+    assert "pubmed_gallbladder_v1" in packs
+
+
+def test_spinal_fusion_neuropathy_pack_is_research_scoped() -> None:
+    pack = load_query_pack("pubmed_spinal_fusion_neuropathy_v1")
+
+    assert "Research-use only" in pack.description
+    assert pack.source == "docs/SPINAL_FUSION_NEUROPATHY_REVIEW.md"
+    assert any("neuropath" in query.lower() for query in pack.queries)
+    assert any("spinal fusion" in query.lower() for query in pack.queries)
+
+
+def test_gallbladder_pack_is_research_scoped() -> None:
+    pack = load_query_pack("pubmed_gallbladder_v1")
+
+    assert "Research-use only" in pack.description
+    assert pack.source == "docs/GALLBLADDER_REVIEW.md"
+    assert any("gallstone" in query.lower() for query in pack.queries)
+    assert any("cholecystectomy" in query.lower() for query in pack.queries)
+
+
+def test_gallbladder_pack_covers_removal_and_recovery() -> None:
+    queries = [query.lower() for query in load_query_pack("pubmed_gallbladder_v1").queries]
+
+    assert any("cholecystectomy" in query and "complication" in query for query in queries)
+    assert any("recovery" in query for query in queries)
+    assert any("post-cholecystectomy" in query for query in queries)
+    assert any("conservative management" in query or "guideline" in query for query in queries)
 
 
 def test_search_query_pack_uses_supplied_search_function() -> None:

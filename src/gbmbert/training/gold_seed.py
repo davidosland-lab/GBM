@@ -217,8 +217,19 @@ def _relation_row_from_review_item(item: ReviewQueueItem) -> dict[str, Any]:
 
 def _ner_rows(entity_jsonl: str | Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
+    seen: set[tuple[str, int, int, str, str]] = set()
     for result in load_entity_jsonl(entity_jsonl):
         for entity in result.entities:
+            key = (
+                str(result.pmid or ""),
+                int(entity.start),
+                int(entity.end),
+                str(entity.label.value),
+                str(entity.text or ""),
+            )
+            if key in seen:
+                continue
+            seen.add(key)
             rows.append(
                 {
                     "task": "ner",

@@ -1,0 +1,39 @@
+{
+  "name": "monte_carlo_v1",
+  "description": "Phase 5 Monte Carlo sweeps over toy growth parameters for baseline/TMZ/TMZ+FUS scenarios. Research prototype only — not clinical uncertainty quantification.",
+  "scenario_config": "configs/simulation/compartment_toy_v1.json",
+  "n_samples": 40,
+  "seed": 7,
+  "quantiles": [0.05, 0.5, 0.95],
+  "parameters": [
+    {
+      "name": "intrinsic_growth_rate",
+      "dist": "normal",
+      "mean": 0.08,
+      "std": 0.015,
+      "low": 0.02,
+      "high": 0.16
+    },
+    {
+      "name": "carrying_capacity",
+      "dist": "uniform",
+      "mean": 4.0,
+      "std": 0.5,
+      "low": 3.0,
+      "high": 5.0
+    },
+    {
+      "name": "transition_rate",
+      "dist": "normal",
+      "mean": 0.02,
+      "std": 0.005,
+      "low": 0.005,
+      "high": 0.05
+    }
+  ],
+  "assumptions": [
+    "Parameter distributions are explicit research priors, not fitted patient posteriors.",
+    "Each draw reruns the deterministic toy scenario pack.",
+    "Quantile bands summarize in-silico outcome spread only."
+  ]
+}

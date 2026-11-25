@@ -1,0 +1,21 @@
+{
+  "base_model": "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext",
+  "checkpoint_dir": "models\\checkpoints\\gbmbert_ner_bio_pubmedbert_v6",
+  "completed_at": "2026-07-20T08:38:16.664230+00:00",
+  "config_sha256": "2E70F0261730C75B39C1C9731F64E22F41E1D4BEADB260A3A0DA06A9457D8EDD",
+  "dataset_dir": "data\\training\\ner_bio_pack\\annotation_splits",
+  "dataset_hashes": {
+    "test": "2DE69907E62DBBCC5F77B65BB8E27725B932A898768F280F60D3748E4BDD62D5",
+    "train": "35C40027284C58040960B7F90C90A9E8530ADC5E8B01D0683AFFA1474216DBB9",
+    "validation": "9D13B9F2313B83AF4E7BB4DD51F2A6C90626AF20EE2A83DEFB8CFC017B199755"
+  },
+  "evaluation_markdown_path": "reports\\training\\ner_bio_experiment_v6_metrics.md",
+  "label_map_dir": "data\\training\\ner_bio_pack\\label_maps",
+  "label_map_sha256": "8470D25DD710CA1DED45A386225443DCA12F9D6DC3C8DD68ACB09B0B39F719A4",
+  "metrics_path": "reports\\training\\ner_bio_experiment_v6_metrics.json",
+  "output_dir": "models\\checkpoints\\gbmbert_ner_bio_pubmedbert_v6",
+  "run_name": "gbmbert_ner_bio_pubmedbert",
+  "started_at": "2026-07-20T07:50:33.798206+00:00",
+  "task": "ner",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making."
+}

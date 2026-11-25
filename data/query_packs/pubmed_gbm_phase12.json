@@ -1,0 +1,12 @@
+{
+  "name": "pubmed_gbm_phase12",
+  "description": "Focused PubMed queries for early-phase (I/II) glioblastoma clinical studies to refill evidence tier 4.",
+  "source": "research curation Round 21",
+  "queries": [
+    "glioblastoma \"phase I\" OR \"phase 1\" clinical trial",
+    "glioblastoma \"phase II\" OR \"phase 2\" clinical trial",
+    "glioblastoma \"dose-escalation\" OR \"first-in-human\"",
+    "glioblastoma \"phase I/II\" OR \"phase 1/2\"",
+    "glioblastoma \"early-phase\" clinical trial temozolomide OR bevacizumab OR immunotherapy"
+  ]
+}

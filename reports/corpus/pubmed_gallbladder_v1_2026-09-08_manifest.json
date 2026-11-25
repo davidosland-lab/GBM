@@ -1,0 +1,25 @@
+{
+  "command": "gbmbert-search-pubmed --query-pack pubmed_gallbladder_v1 --retmax-per-query 8 --sort relevance",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 361781,
+      "line_count": 158,
+      "non_empty_line_count": 158,
+      "path": "data\\raw\\pubmed_gallbladder_v1_2026-09-08.jsonl",
+      "sha256": "814048B3AD954C9AC0A2745DE2E0F8EDA51CD00ACADF4701A8D9AE8ADF0A024F"
+    }
+  ],
+  "generated_at_utc": "2026-09-08T06:26:16+00:00",
+  "name": "gallbladder_v1",
+  "notes": [
+    "Research-grade literature triage only; no patient-specific claims."
+  ],
+  "query_pack": "pubmed_gallbladder_v1",
+  "record_count": 158,
+  "source": "PubMed"
+}

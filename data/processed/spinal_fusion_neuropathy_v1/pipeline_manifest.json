@@ -1,0 +1,62 @@
+{
+  "command": "gbmbert-run-pipeline data\\raw\\pubmed_spinal_fusion_neuropathy_v1_2026-07-24.jsonl --output-dir data\\processed\\spinal_fusion_neuropathy_v1 --entity-mode lexicon",
+  "environment": {
+    "NCBI_API_KEY_set": true,
+    "NCBI_EMAIL_set": true,
+    "NCBI_TOOL_set": true
+  },
+  "files": [
+    {
+      "byte_count": 195130,
+      "line_count": 84,
+      "non_empty_line_count": 84,
+      "path": "data\\raw\\pubmed_spinal_fusion_neuropathy_v1_2026-07-24.jsonl",
+      "sha256": "54E5AC28FC8226219DA545A1A59445308FF93E0C9A018F383821C228E831C4CB"
+    },
+    {
+      "byte_count": 53783,
+      "line_count": 84,
+      "non_empty_line_count": 84,
+      "path": "data\\processed\\spinal_fusion_neuropathy_v1\\entities.jsonl",
+      "sha256": "8ABDFED29CF1E83F5726B6B38AF6D1C5FC8BD930B41F2F2E797F08029D5AA50A"
+    },
+    {
+      "byte_count": 24752,
+      "line_count": 84,
+      "non_empty_line_count": 84,
+      "path": "data\\processed\\spinal_fusion_neuropathy_v1\\evidence_claims.jsonl",
+      "sha256": "7AA8011CC5C1E2E52E734436F13E0AF53F5952E9A59D4E5B44F4B4ADE2B15163"
+    },
+    {
+      "byte_count": 265238,
+      "line_count": 84,
+      "non_empty_line_count": 84,
+      "path": "data\\processed\\spinal_fusion_neuropathy_v1\\graph_records.jsonl",
+      "sha256": "0A71016256B969F93B9951EC9DA288F2E9594960BC18DCE8B35AAF7559618BFB"
+    },
+    {
+      "byte_count": 2222,
+      "line_count": 116,
+      "non_empty_line_count": 116,
+      "path": "data\\processed\\spinal_fusion_neuropathy_v1\\graph_quality_report.json",
+      "sha256": "552EB95FA831A2CFCC988834DBFD4B7231D9A280DB06C4D6965E7AA657FBBCB3"
+    },
+    {
+      "byte_count": 1093,
+      "line_count": 46,
+      "non_empty_line_count": 38,
+      "path": "data\\processed\\spinal_fusion_neuropathy_v1\\graph_quality_report.md",
+      "sha256": "60248C2C972F2338A98616D19F1DCD6761050C277302BF95BC4EE383B1D2571B"
+    }
+  ],
+  "generated_at_utc": "2026-07-23T22:34:41+00:00",
+  "name": "spinal_fusion_neuropathy_v1",
+  "notes": [
+    "Pipeline artifact bundle: input PubMed JSONL, entity JSONL, evidence JSONL, graph JSONL, and quality reports.",
+    "Entity mode: lexicon",
+    "Lexicon: configs\\extraction\\lexicon_spinal_fusion_neuropathy_v1.json"
+  ],
+  "query_pack": null,
+  "record_count": 336,
+  "source": "GBM-AI literature pipeline"
+}

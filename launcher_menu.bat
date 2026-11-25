@@ -28,6 +28,7 @@ echo C. Literature and graph pipeline
 echo D. Review and curation workflow
 echo E. Training data and governance
 echo F. Knowledge Graph Explorer
+echo H. Tumour simulation (research)
 echo G. Advanced command index
 echo Q. Exit
 echo.
@@ -41,6 +42,7 @@ if /I "%choice%"=="C" goto pipeline_menu
 if /I "%choice%"=="D" goto curation_menu
 if /I "%choice%"=="E" goto training_menu
 if /I "%choice%"=="F" goto explorer_menu
+if /I "%choice%"=="H" goto simulation_menu
 if /I "%choice%"=="G" goto advanced_menu
 if /I "%choice%"=="Q" goto end
 if "%choice%"=="1" goto create_venv
@@ -135,6 +137,16 @@ if /I "%choice%"=="16BP" goto governance_detail_export
 if /I "%choice%"=="16BQ" goto ci_summary_contract
 if /I "%choice%"=="16BR" goto curated_fixture_import_multibatch
 if /I "%choice%"=="16BS" goto curated_round_rebuild
+if /I "%choice%"=="16BT" goto prep_review_batch
+if /I "%choice%"=="16BU" goto finalize_review_batch
+if /I "%choice%"=="16BV" goto export_entity_span_review
+if /I "%choice%"=="16BW" goto apply_entity_span_review
+if /I "%choice%"=="16BX" goto run_tumour_simulation
+if /I "%choice%"=="16BY" goto run_simulation_monte_carlo
+if /I "%choice%"=="16BZ" goto run_treatment_strategy
+if /I "%choice%"=="16CA" goto run_dashboard
+if /I "%choice%"=="16CB" goto run_simulation_fitting
+if /I "%choice%"=="16CC" goto gold_pack_ops_status
 if "%choice%"=="17" goto run_explorer_sample
 if /I "%choice%"=="17A" goto run_explorer_artifact
 if /I "%choice%"=="17B" goto run_explorer_baseline
@@ -274,6 +286,10 @@ echo 16S. Apply curated evidence overlay to graph
 echo 16Z. Run curation smoke workflow
 echo 16AA. Build curation handoff bundle
 echo 16AG. Run curation regression pack
+echo 16BT. Prep real PubMed review batch (lexicon; entity spans not span-reviewed)
+echo 16BU. Finalize reviewed batch into curated rounds
+echo 16BV. Export entity-span review queue (JSONL/CSV)
+echo 16BW. Apply entity-span reviews into gold_entities JSONL
 echo M. Main menu
 echo Q. Exit
 echo.
@@ -291,6 +307,10 @@ if /I "%choice%"=="16S" goto apply_evidence_overlay
 if /I "%choice%"=="16Z" goto curation_smoke_workflow
 if /I "%choice%"=="16AA" goto curation_handoff_bundle
 if /I "%choice%"=="16AG" goto curation_regression_pack
+if /I "%choice%"=="16BT" goto prep_review_batch
+if /I "%choice%"=="16BU" goto finalize_review_batch
+if /I "%choice%"=="16BV" goto export_entity_span_review
+if /I "%choice%"=="16BW" goto apply_entity_span_review
 if /I "%choice%"=="M" goto menu
 if /I "%choice%"=="Q" goto end
 echo.
@@ -322,6 +342,7 @@ echo 16BL. Import curated training fixture
 echo 16BM. Review gold-pack promotion thresholds
 echo 16BN. Diff curated batch provenance
 echo 16BO. Plan gold-pack promotion curation batches
+echo 16CC. Gold-pack ops status (health + backlog + next actions)
 echo 16BP. Export governance detail links
 echo 16BQ. Check CI summary artifact contract
 echo 16BR. Import all curated rounds (multi-batch)
@@ -346,6 +367,7 @@ if /I "%choice%"=="16BL" goto curated_fixture_import
 if /I "%choice%"=="16BM" goto gold_pack_promotion_review
 if /I "%choice%"=="16BN" goto curated_provenance_diff
 if /I "%choice%"=="16BO" goto promotion_planning_report
+if /I "%choice%"=="16CC" goto gold_pack_ops_status
 if /I "%choice%"=="16BP" goto governance_detail_export
 if /I "%choice%"=="16BQ" goto ci_summary_contract
 if /I "%choice%"=="16BR" goto curated_fixture_import_multibatch
@@ -435,6 +457,36 @@ echo Invalid choice.
 pause
 goto explorer_menu
 
+:simulation_menu
+cls
+echo ============================================================
+echo Tumour Simulation (Research Prototype)
+echo ============================================================
+echo.
+echo Phase 5/6 research prototypes only. Not clinical advice. Not for
+echo diagnosis, treatment selection, or clinical decision-making.
+echo.
+echo 16BX. Run Phase 5 compartment toy simulation
+echo 16BY. Run Phase 5 Monte Carlo parameter sweeps
+echo 16BZ. Rank Phase 6 treatment scenarios (research only, not CDS)
+echo 16CA. Launch Phase 7 research console (live lit/entity/graph/curation/train/sim runners)
+echo 16CB. Run Phase 5 toy parameter fitting stub (not PK/PD)
+echo M. Main menu
+echo Q. Exit
+echo.
+set /p "choice=Choose an option: "
+if /I "%choice%"=="16BX" goto run_tumour_simulation
+if /I "%choice%"=="16BY" goto run_simulation_monte_carlo
+if /I "%choice%"=="16BZ" goto run_treatment_strategy
+if /I "%choice%"=="16CA" goto run_dashboard
+if /I "%choice%"=="16CB" goto run_simulation_fitting
+if /I "%choice%"=="M" goto menu
+if /I "%choice%"=="Q" goto end
+echo.
+echo Invalid choice.
+pause
+goto simulation_menu
+
 :advanced_menu
 cls
 echo ============================================================
@@ -451,6 +503,7 @@ echo Curation: 16O-16AG, plus 16AH-16AM for run/batch operations
 echo Training: 16C-16N and 16AQ-16BQ
 echo Verification: 15, 16, 16AO, 16AP, 16BI, 16BJ, 16BK
 echo Explorer: 17, 17A, 17B, 18
+echo Simulation/Treatment/Dashboard: 16BX, 16BY, 16BZ, 16CA, 16CB
 echo.
 echo Old shortcuts still work from the main menu prompt.
 echo Press M to return to the main menu.
@@ -1879,6 +1932,125 @@ echo Adjudication report complete.
 pause
 goto menu
 
+:prep_review_batch
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Prep a real PubMed review batch via offline lexicon mode.
+echo Entity spans are lexicon-suggested and NOT span-reviewed; evidence tiers
+echo and relations are the human-reviewed signal. Research-use only.
+echo.
+set /p "round_number=Round number: "
+set /p "pubmed_jsonl=PubMed JSONL path: "
+set /p "reviewer=Reviewer id [agent-curation]: "
+set /p "staging_dir=Staging dir [data\research\review_batches\roundN]: "
+if "%round_number%"=="" (
+    echo Round number is required.
+    pause
+    goto curation_menu
+)
+if "%pubmed_jsonl%"=="" (
+    echo PubMed JSONL path is required.
+    pause
+    goto curation_menu
+)
+if "%reviewer%"=="" set "reviewer=agent-curation"
+if "%staging_dir%"=="" set "staging_dir=data\research\review_batches\round%round_number%"
+"%VENV_DIR%\Scripts\gbmbert-prep-review-batch.exe" --round %round_number% --pubmed-jsonl "%pubmed_jsonl%" --reviewer "%reviewer%" --staging-dir "%staging_dir%"
+if errorlevel 1 goto command_failed
+echo.
+echo Review batch prep complete. Annotate the reviewed queue, then run 16BU.
+pause
+goto curation_menu
+
+:finalize_review_batch
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Finalize a reviewed batch into curated_expansion. Requires no pending rows.
+echo Entity spans remain lexicon-suggested unless separately span-reviewed.
+echo.
+set /p "round_number=Round number: "
+set /p "staging_dir=Staging dir [data\research\review_batches\roundN]: "
+if "%round_number%"=="" (
+    echo Round number is required.
+    pause
+    goto curation_menu
+)
+if "%staging_dir%"=="" set "staging_dir=data\research\review_batches\round%round_number%"
+"%VENV_DIR%\Scripts\gbmbert-finalize-review-batch.exe" --round %round_number% --staging-dir "%staging_dir%"
+if errorlevel 1 goto command_failed
+echo.
+echo Finalize complete. Run 16BS to rebuild curated-round reports.
+pause
+goto curation_menu
+
+:export_entity_span_review
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Export entity spans from a gold_entities JSONL into a review queue.
+echo.
+set /p "entities_jsonl=Entities JSONL: "
+set /p "jsonl_output=Span review JSONL output: "
+set /p "csv_output=Span review CSV output [optional]: "
+set /p "reviewer=Reviewer [agent-curation]: "
+if "%entities_jsonl%"=="" (
+    echo Entities JSONL is required.
+    pause
+    goto curation_menu
+)
+if "%jsonl_output%"=="" (
+    echo Span review JSONL output is required.
+    pause
+    goto curation_menu
+)
+if "%reviewer%"=="" set "reviewer=agent-curation"
+if "%csv_output%"=="" (
+    "%VENV_DIR%\Scripts\gbmbert-export-entity-span-review.exe" --entities-jsonl "%entities_jsonl%" --jsonl-output "%jsonl_output%" --reviewer "%reviewer%"
+) else (
+    "%VENV_DIR%\Scripts\gbmbert-export-entity-span-review.exe" --entities-jsonl "%entities_jsonl%" --jsonl-output "%jsonl_output%" --csv-output "%csv_output%" --reviewer "%reviewer%"
+)
+if errorlevel 1 goto command_failed
+echo.
+echo Entity-span review export complete. Annotate statuses, then run 16BW.
+pause
+goto curation_menu
+
+:apply_entity_span_review
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Apply accepted/corrected entity-span reviews into gold_entities JSONL.
+echo Requires no pending rows unless you intentionally allow them.
+echo.
+set /p "review_jsonl=Span review JSONL: "
+set /p "entities_output=Entities output JSONL: "
+if "%review_jsonl%"=="" (
+    echo Span review JSONL is required.
+    pause
+    goto curation_menu
+)
+if "%entities_output%"=="" (
+    echo Entities output JSONL is required.
+    pause
+    goto curation_menu
+)
+"%VENV_DIR%\Scripts\gbmbert-apply-entity-span-review.exe" --review-jsonl "%review_jsonl%" --entities-output "%entities_output%"
+if errorlevel 1 goto command_failed
+echo.
+echo Entity-span apply complete. Promote via curated round files + 16BS rebuild as needed.
+pause
+goto curation_menu
+
 :normalize_graph_entities
 call :ensure_venv
 if errorlevel 1 goto menu
@@ -2282,6 +2454,20 @@ echo Promotion planning report complete.
 pause
 goto menu
 
+:gold_pack_ops_status
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Building gold-pack ops status (research governance; not clinical validation)...
+"%VENV_DIR%\Scripts\gbmbert-gold-pack-ops-status.exe" --markdown-output reports\training\gold_pack\gold_pack_ops_status.md --json-output reports\training\gold_pack\gold_pack_ops_status.json
+if errorlevel 1 goto command_failed
+echo.
+echo Gold-pack ops status complete.
+pause
+goto menu
+
 :governance_detail_export
 call :ensure_venv
 if errorlevel 1 goto menu
@@ -2309,6 +2495,125 @@ echo.
 echo CI summary contract check complete.
 pause
 goto menu
+
+:run_tumour_simulation
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Phase 5 research prototype tumour simulation.
+echo Research-use only. Not medical advice. Not intended for
+echo diagnosis, treatment selection, or clinical decision-making.
+echo.
+set /p "config_path=Config JSON [configs\simulation\compartment_toy_v1.json]: "
+set /p "graph_path=Optional graph JSONL [data\examples\graph_records_sample.jsonl]: "
+set /p "use_mod=Apply graph modulation? Y/N [N]: "
+set /p "md_path=Markdown output [reports\simulation\phase5_mvp_example.md]: "
+set /p "json_path=JSON output [reports\simulation\phase5_mvp_example.json]: "
+if "%config_path%"=="" set "config_path=configs\simulation\compartment_toy_v1.json"
+if "%graph_path%"=="" set "graph_path=data\examples\graph_records_sample.jsonl"
+if "%md_path%"=="" set "md_path=reports\simulation\phase5_mvp_example.md"
+if "%json_path%"=="" set "json_path=reports\simulation\phase5_mvp_example.json"
+set "mod_flag="
+if /I "%use_mod%"=="Y" set "mod_flag=--use-graph-modulation"
+"%VENV_DIR%\Scripts\gbmbert-run-tumour-simulation.exe" --config "%config_path%" --graph-jsonl "%graph_path%" %mod_flag% --markdown-output "%md_path%" --json-output "%json_path%"
+if errorlevel 1 goto command_failed
+echo.
+echo Tumour simulation report written. Research prototype only — not clinically validated.
+pause
+goto simulation_menu
+
+:run_simulation_monte_carlo
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Phase 5 Monte Carlo research sweeps.
+echo Research-use only. Not medical advice. Not intended for
+echo diagnosis, treatment selection, or clinical decision-making.
+echo.
+set /p "config_path=Monte Carlo config [configs\simulation\monte_carlo_v1.json]: "
+set /p "md_path=Markdown output [reports\simulation\phase5_monte_carlo_example.md]: "
+set /p "json_path=JSON output [reports\simulation\phase5_monte_carlo_example.json]: "
+if "%config_path%"=="" set "config_path=configs\simulation\monte_carlo_v1.json"
+if "%md_path%"=="" set "md_path=reports\simulation\phase5_monte_carlo_example.md"
+if "%json_path%"=="" set "json_path=reports\simulation\phase5_monte_carlo_example.json"
+"%VENV_DIR%\Scripts\gbmbert-run-simulation-monte-carlo.exe" --config "%config_path%" --markdown-output "%md_path%" --json-output "%json_path%"
+if errorlevel 1 goto command_failed
+echo.
+echo Monte Carlo report written. Research quantiles only — not clinical intervals.
+pause
+goto simulation_menu
+
+:run_treatment_strategy
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Phase 6 treatment scenario ranking (research prototype).
+echo NOT clinical decision support. NOT prescriptions. NOT medical advice.
+echo Research-use only. Not intended for diagnosis, treatment selection,
+echo or clinical decision-making.
+echo.
+set /p "config_path=Strategy config [configs\treatment\strategy_research_v1.json]: "
+set /p "graph_path=Optional graph JSONL [data\examples\graph_records_sample.jsonl]: "
+set /p "md_path=Markdown output [reports\treatment\phase6_strategy_example.md]: "
+set /p "json_path=JSON output [reports\treatment\phase6_strategy_example.json]: "
+if "%config_path%"=="" set "config_path=configs\treatment\strategy_research_v1.json"
+if "%graph_path%"=="" set "graph_path=data\examples\graph_records_sample.jsonl"
+if "%md_path%"=="" set "md_path=reports\treatment\phase6_strategy_example.md"
+if "%json_path%"=="" set "json_path=reports\treatment\phase6_strategy_example.json"
+"%VENV_DIR%\Scripts\gbmbert-rank-treatment-scenarios.exe" --config "%config_path%" --graph-jsonl "%graph_path%" --markdown-output "%md_path%" --json-output "%json_path%"
+if errorlevel 1 goto command_failed
+echo.
+echo Treatment scenario ranking written. Research comparison only — not CDS.
+pause
+goto simulation_menu
+
+:run_simulation_fitting
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Phase 5 toy parameter fitting stub.
+echo Research-use only. Not PK/PD. Not clinically validated posteriors.
+echo Not intended for diagnosis, treatment selection, or clinical decision-making.
+echo.
+set /p "config_path=Fitting config [configs\simulation\toy_fitting_v1.json]: "
+set /p "md_path=Markdown output [reports\simulation\phase5_fitting_example.md]: "
+set /p "json_path=JSON output [reports\simulation\phase5_fitting_example.json]: "
+if "%config_path%"=="" set "config_path=configs\simulation\toy_fitting_v1.json"
+if "%md_path%"=="" set "md_path=reports\simulation\phase5_fitting_example.md"
+if "%json_path%"=="" set "json_path=reports\simulation\phase5_fitting_example.json"
+"%VENV_DIR%\Scripts\gbmbert-fit-simulation-parameters.exe" --config "%config_path%" --markdown-output "%md_path%" --json-output "%json_path%"
+if errorlevel 1 goto command_failed
+echo.
+echo Toy fitting report written. Not PK/PD — research stub only.
+pause
+goto simulation_menu
+
+:run_dashboard
+call :ensure_venv
+if errorlevel 1 goto menu
+call :check_venv
+if errorlevel 1 goto menu
+echo.
+echo Phase 7 research operations console with live literature/entity/graph/curation/train/sim runners.
+echo Research-use only. Not medical advice. Not intended for
+echo diagnosis, treatment selection, or clinical decision-making.
+echo.
+set /p "host=Host [127.0.0.1]: "
+set /p "port=Port [8501]: "
+if "%host%"=="" set "host=127.0.0.1"
+if "%port%"=="" set "port=8501"
+echo Starting Streamlit dashboard at http://%host%:%port%/
+start "GBM-AI Dashboard" powershell.exe -NoExit -ExecutionPolicy Bypass -Command "Set-Location -LiteralPath '%CD%'; . '.\.venv\Scripts\Activate.ps1'; gbmbert-dashboard --host '%host%' --port %port%"
+pause
+goto simulation_menu
 
 :run_explorer_sample
 call :ensure_venv

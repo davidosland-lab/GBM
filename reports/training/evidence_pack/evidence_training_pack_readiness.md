@@ -3,30 +3,30 @@
 Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.
 
 - Dataset directory: `data\training\evidence_pack\annotation_splits`
-- Ready: True
-- Warnings: 0
+- Ready: False
+- Warnings: 1
 - Minimum examples per task: 10
 - Minimum examples per label: 2
 
 ## Tasks
 ### evidence
-- Ready: True
-- Examples: 48
-- Duplicates: 0
+- Ready: False
+- Examples: 1016
+- Duplicates: 86
 - Invalid NER spans: 0
-- Dominant label fraction: 0.167
+- Dominant label fraction: 0.387
 - Labels:
-- 0: 8
-- 1: 8
-- 2: 8
-- 3: 8
-- 4: 8
-- 5: 8
+- 0: 175
+- 1: 114
+- 2: 115
+- 3: 393
+- 4: 111
+- 5: 108
 - Warnings:
-- none
+- 86 duplicate example(s)
 
 ## Leakage
 - none
 
 ## Warnings
-- none
+- evidence: 86 duplicate example(s)

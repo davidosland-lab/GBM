@@ -1,0 +1,21 @@
+{
+  "corpus": "ebm_nlp",
+  "document_count": 4980,
+  "dropped_entity_label_counts": {},
+  "dropped_relation_label_counts": {},
+  "entity_count": 68554,
+  "input_path": "data\\raw\\ebm_nlp\\ebm_nlp_2_00",
+  "license": "EBM-NLP corpus (Nye et al., ACL 2018); PubMed abstracts with PICO span annotations. Research-use only.",
+  "output_path": "data\\training\\external_corpus\\ebm_nlp\\gold_entities.jsonl",
+  "project_entity_label_counts": {
+    "OUTCOME": 34508,
+    "TREATMENT": 34046
+  },
+  "project_relation_label_counts": {},
+  "reader": "ebm_nlp",
+  "relation_count": 0,
+  "relations_output_path": "",
+  "source_type": "external_corpus",
+  "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
+  "warnings": []
+}

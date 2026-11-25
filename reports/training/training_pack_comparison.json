@@ -4,12 +4,12 @@
       "dataset_dir": "data\\training\\evidence_pack\\annotation_dataset",
       "label_counts": {
         "evidence": {
-          "0": 8,
-          "1": 8,
-          "2": 8,
-          "3": 8,
-          "4": 8,
-          "5": 8
+          "0": 175,
+          "1": 114,
+          "2": 115,
+          "3": 393,
+          "4": 111,
+          "5": 108
         },
         "ner": {},
         "relation": {}
@@ -18,14 +18,16 @@
       "leakage_warnings": [],
       "name": "evidence",
       "pack_report_path": "reports\\training\\evidence_pack\\evidence_training_pack.json",
-      "ready": true,
+      "ready": false,
       "row_counts": {
-        "evidence": 48,
+        "evidence": 1016,
         "ner": 0,
         "relation": 0
       },
       "split_dir": "data\\training\\evidence_pack\\annotation_splits",
-      "warnings": []
+      "warnings": [
+        "evidence: 86 duplicate example(s)"
+      ]
     },
     {
       "dataset_dir": "data\\training\\relation_pack\\annotation_dataset",
@@ -33,70 +35,87 @@
         "evidence": {},
         "ner": {},
         "relation": {
-          "ASSOCIATED_WITH": 16,
-          "NO_RELATION": 16,
-          "PREDICTS": 16
+          "ASSOCIATED_WITH": 82,
+          "ENHANCES_DELIVERY_OF": 2,
+          "IMPROVES": 44,
+          "NO_RELATION": 74,
+          "PREDICTS": 46,
+          "SYNERGIZES_WITH": 5,
+          "TARGETS": 2,
+          "WORSENS": 58
         }
       },
       "label_map_dir": "data\\training\\relation_pack\\label_maps",
       "leakage_warnings": [],
       "name": "relation",
       "pack_report_path": "reports\\training\\relation_pack\\relation_training_pack.json",
-      "ready": true,
+      "ready": false,
       "row_counts": {
         "evidence": 0,
         "ner": 0,
-        "relation": 48
+        "relation": 313
       },
       "split_dir": "data\\training\\relation_pack\\annotation_splits",
-      "warnings": []
+      "warnings": [
+        "1 relation example(s) have identical head and tail endpoints",
+        "7 duplicate relation example(s)",
+        "relation: 7 duplicate example(s)"
+      ]
     },
     {
       "dataset_dir": "data\\training\\gold_pack\\annotation_dataset",
       "label_counts": {
         "evidence": {
-          "0": 8,
-          "1": 8,
-          "2": 8,
-          "3": 8,
-          "4": 8,
-          "5": 8
+          "0": 175,
+          "1": 114,
+          "2": 115,
+          "3": 393,
+          "4": 111,
+          "5": 108
         },
         "ner": {
-          "BIOMARKER": 8,
-          "CELL_STATE": 8,
-          "CELL_TYPE": 8,
-          "DELIVERY_MODIFIER": 8,
-          "DISEASE": 8,
-          "DRUG": 7,
-          "GENE": 9,
-          "OUTCOME": 8,
-          "PATHWAY": 8,
-          "TREATMENT": 9,
-          "TRIAL_PHASE": 8,
-          "UNKNOWN": 7
+          "BIOMARKER": 320,
+          "CELL_STATE": 131,
+          "CELL_TYPE": 212,
+          "DELIVERY_MODIFIER": 290,
+          "DISEASE": 3738,
+          "DRUG": 928,
+          "GENE": 672,
+          "OUTCOME": 1424,
+          "PATHWAY": 93,
+          "TREATMENT": 638,
+          "TRIAL_PHASE": 71,
+          "UNKNOWN": 59
         },
         "relation": {
-          "ASSOCIATED_WITH": 16,
-          "NO_RELATION": 16,
-          "PREDICTS": 16
+          "ASSOCIATED_WITH": 82,
+          "ENHANCES_DELIVERY_OF": 2,
+          "IMPROVES": 44,
+          "NO_RELATION": 74,
+          "PREDICTS": 46,
+          "SYNERGIZES_WITH": 5,
+          "TARGETS": 2,
+          "WORSENS": 58
         }
       },
       "label_map_dir": "data\\training\\gold_pack\\label_maps",
       "leakage_warnings": [],
       "name": "gold",
       "pack_report_path": "reports\\training\\gold_pack\\gold_training_pack.json",
-      "ready": true,
+      "ready": false,
       "row_counts": {
-        "evidence": 48,
-        "ner": 96,
-        "relation": 48
+        "evidence": 1016,
+        "ner": 8576,
+        "relation": 313
       },
       "split_dir": "data\\training\\gold_pack\\annotation_splits",
-      "warnings": []
+      "warnings": [
+        "evidence: 86 duplicate example(s)",
+        "relation: 7 duplicate example(s)"
+      ]
     }
   ],
-  "ready_count": 3,
+  "ready_count": 0,
   "warning": "Research-use only. Not medical advice. Not intended for diagnosis, treatment selection, or clinical decision-making.",
-  "warning_count": 0
+  "warning_count": 6
 }
