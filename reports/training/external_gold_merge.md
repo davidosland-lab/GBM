@@ -6,11 +6,11 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - Keywords: `configs\extraction\gbm_relevance_keywords.json`
 - External entities: `data\training\external_corpus\biored_all\gold_entities.jsonl`
 - External relations: `data\training\external_corpus\biored_all\gold_relations.jsonl`
-- External documents: 500 total, 6 kept, 494 dropped
-- Entity documents (combined): 563
-- NER rows: 6072
-- Relation rows: 288
-- Evidence rows: 498
+- External documents: 500 total, 118 kept, 382 dropped
+- Entity documents (combined): 1256
+- NER rows: 13543
+- Relation rows: 1723
+- Evidence rows: 1016
 
 ## Curated Inputs
 - entities: `data\training\curated_import\combined_entities.jsonl`
@@ -21,35 +21,53 @@ Research-use only. Not medical advice. Not intended for diagnosis, treatment sel
 - `U87MG`: 1
 - `\bT98G\b`: 1
 - `blood-brain barrier`: 2
+- `brain (?:tumou?rs?|cancers?|neoplasms?|metastas[ie]s)`: 3
+- `cancers?\b`: 75
+- `carcinomas?\b`: 19
+- `chemotherap`: 19
 - `glioblastoma`: 1
 - `glioma`: 3
+- `leuka?emi`: 8
+- `lymphomas?\b`: 12
+- `malignan`: 18
+- `melanomas?\b`: 3
+- `metasta`: 13
+- `myelomas?\b`: 1
+- `neoplas(?:m|ms|tic|ia)\b`: 3
+- `oncogen`: 9
+- `oncolog`: 3
+- `sarcomas?\b`: 3
+- `tumou?r(?!\s*necrosis)`: 63
 
 ## Provenance
 - curated_no_relation: 74
-- external_corpus: 286
-- human_or_curated_positive: 137
-- human_reviewed: 6924
+- external_corpus: 5669
+- human_or_curated_positive: 239
+- human_reviewed: 11556
 
 ## Entity Labels
-- BIOMARKER: 261
-- CELL_STATE: 20
-- CELL_TYPE: 162
-- DELIVERY_MODIFIER: 154
-- DISEASE: 2576
-- DRUG: 791
-- GENE: 609
-- OUTCOME: 1052
-- PATHWAY: 20
-- TREATMENT: 387
-- TRIAL_PHASE: 20
-- UNKNOWN: 20
+- BIOMARKER: 524
+- CELL_STATE: 131
+- CELL_TYPE: 327
+- DELIVERY_MODIFIER: 347
+- DISEASE: 5439
+- DRUG: 1681
+- GENE: 2602
+- OUTCOME: 1574
+- PATHWAY: 93
+- TREATMENT: 695
+- TRIAL_PHASE: 71
+- UNKNOWN: 59
 
 ## Relation Labels
-- ASSOCIATED_WITH: 138
-- IMPROVES: 20
+- ASSOCIATED_WITH: 1140
+- ENHANCES_DELIVERY_OF: 2
+- IMPROVES: 44
 - NO_RELATION: 74
-- PREDICTS: 36
-- WORSENS: 20
+- PREDICTS: 364
+- SYNERGIZES_WITH: 16
+- TARGETS: 25
+- WORSENS: 58
 
 ## Files
 - entities: `data\training\gold_pack_combined\gold_entities.jsonl`

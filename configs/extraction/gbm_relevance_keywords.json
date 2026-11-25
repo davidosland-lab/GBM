@@ -1,5 +1,5 @@
 {
-  "description": "Keyword patterns for filtering external biomedical corpora to GBM-adjacent documents before merging into the combined gold pack (PR165). Case-insensitive substring / word-boundary match against document text. Research-use only.",
+  "description": "Keyword patterns for filtering external biomedical corpora to GBM-adjacent and oncology documents before merging into the combined gold pack (PR165; widened 2026-11-25 to glioma, brain tumour and general oncology terms). Case-insensitive regex search against document text; a document is kept if any pattern matches. Research-use only.",
   "match_mode": "any",
   "patterns": [
     "glioblastoma",
@@ -19,6 +19,29 @@
     "\\bT98G\\b",
     "glioblastoma stem",
     "neuron-glioma",
-    "blood-brain barrier"
+    "blood-brain barrier",
+    "glioneuronal",
+    "brain (?:tumou?rs?|cancers?|neoplasms?|metastas[ie]s)",
+    "\\bCNS (?:tumou?rs?|neoplasms?|lymphomas?)",
+    "intracranial (?:tumou?rs?|neoplasms?)",
+    "medulloblastoma",
+    "ependymoma",
+    "meningioma",
+    "neuroblastoma",
+    "cancers?\\b",
+    "tumou?r(?!\\s*necrosis)",
+    "carcinomas?\\b",
+    "neoplas(?:m|ms|tic|ia)\\b",
+    "oncogen",
+    "oncolog",
+    "malignan",
+    "metasta",
+    "sarcomas?\\b",
+    "leuka?emi",
+    "lymphomas?\\b",
+    "melanomas?\\b",
+    "myelomas?\\b",
+    "chemotherap",
+    "antineoplastic"
   ]
 }
